@@ -1,0 +1,514 @@
+{
+  "report_name": "poc_validation_report",
+  "generated_at": "2026-09-16T10:39:26",
+  "scope": {
+    "league": "premier",
+    "seasons": [
+      "2020-2021",
+      "2021-2022",
+      "2022-2023",
+      "2023-2024",
+      "2024-2025",
+      "2025-2026"
+    ],
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ]
+  },
+  "overall": {
+    "errors": 0,
+    "warnings": 2,
+    "pass": 0,
+    "categories": [
+      "cross_endpoint",
+      "file_completeness",
+      "historical",
+      "match_identity",
+      "response_structure",
+      "results",
+      "table",
+      "team_references",
+      "teams"
+    ]
+  },
+  "checks": {
+    "response_structure": {
+      "status": "WARNING",
+      "leagues": {
+        "status": "WARNING",
+        "declared_seasons": [
+          "2026-2027",
+          "2025-2026"
+        ]
+      },
+      "seasonal": {
+        "status": "WARNING"
+      }
+    },
+    "file_completeness": {
+      "status": "PASS",
+      "expected_count": 31,
+      "present_count": 31,
+      "missing_files": []
+    },
+    "teams": {
+      "status": "PASS",
+      "per_season": {
+        "2020-2021": {
+          "teams": null,
+          "n_teams": 20
+        },
+        "2021-2022": {
+          "teams": null,
+          "n_teams": 20
+        },
+        "2022-2023": {
+          "teams": null,
+          "n_teams": 20
+        },
+        "2023-2024": {
+          "teams": null,
+          "n_teams": 20
+        },
+        "2024-2025": {
+          "teams": null,
+          "n_teams": 20
+        },
+        "2025-2026": {
+          "teams": null,
+          "n_teams": 20
+        }
+      },
+      "field_sets": [
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ]
+      ]
+    },
+    "results": {
+      "status": "PASS",
+      "per_season": {
+        "2020-2021": {
+          "n_matches": 380
+        },
+        "2021-2022": {
+          "n_matches": 380
+        },
+        "2022-2023": {
+          "n_matches": 380
+        },
+        "2023-2024": {
+          "n_matches": 380
+        },
+        "2024-2025": {
+          "n_matches": 380
+        },
+        "2025-2026": {
+          "n_matches": 380
+        }
+      },
+      "field_sets": [
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ]
+      ]
+    },
+    "team_references": {
+      "status": "PASS"
+    },
+    "match_identity": {
+      "status": "PASS",
+      "per_season": {
+        "2020-2021": {
+          "n_matches": 380,
+          "id_min": 161341,
+          "id_max": 161720,
+          "game_index_min": 1,
+          "game_index_max": 380
+        },
+        "2021-2022": {
+          "n_matches": 380,
+          "id_min": 160201,
+          "id_max": 160580,
+          "game_index_min": 1,
+          "game_index_max": 380
+        },
+        "2022-2023": {
+          "n_matches": 380,
+          "id_min": 160581,
+          "id_max": 160960,
+          "game_index_min": 1,
+          "game_index_max": 380
+        },
+        "2023-2024": {
+          "n_matches": 380,
+          "id_min": 160961,
+          "id_max": 161340,
+          "game_index_min": 1,
+          "game_index_max": 380
+        },
+        "2024-2025": {
+          "n_matches": 380,
+          "id_min": 161721,
+          "id_max": 162100,
+          "game_index_min": 1,
+          "game_index_max": 380
+        },
+        "2025-2026": {
+          "n_matches": 380,
+          "id_min": 160082,
+          "id_max": 212123,
+          "game_index_min": 1,
+          "game_index_max": 380
+        }
+      }
+    },
+    "table": {
+      "status": "WARNING",
+      "per_season": {
+        "2020-2021": {
+          "classic": {
+            "rows": 20,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 20,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 20,
+            "view": "goals"
+          }
+        },
+        "2021-2022": {
+          "classic": {
+            "rows": 20,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 20,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 20,
+            "view": "goals"
+          }
+        },
+        "2022-2023": {
+          "classic": {
+            "rows": 20,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 20,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 20,
+            "view": "goals"
+          }
+        },
+        "2023-2024": {
+          "classic": {
+            "rows": 20,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 20,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 20,
+            "view": "goals"
+          }
+        },
+        "2024-2025": {
+          "classic": {
+            "rows": 20,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 20,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 20,
+            "view": "goals"
+          }
+        },
+        "2025-2026": {
+          "classic": {
+            "rows": 20,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 20,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 20,
+            "view": "goals"
+          }
+        }
+      }
+    },
+    "cross_endpoint": {
+      "status": "PASS"
+    },
+    "historical": {
+      "status": "PASS",
+      "team_counts": {
+        "2020-2021": 20,
+        "2021-2022": 20,
+        "2022-2023": 20,
+        "2023-2024": 20,
+        "2024-2025": 20,
+        "2025-2026": 20
+      },
+      "match_counts": {
+        "2020-2021": 380,
+        "2021-2022": 380,
+        "2022-2023": 380,
+        "2023-2024": 380,
+        "2024-2025": 380,
+        "2025-2026": 380
+      },
+      "roster_churn": {
+        "2021-2022": {
+          "added": [
+            "Brentford",
+            "Norwich",
+            "Watford"
+          ],
+          "removed": [
+            "Fulham",
+            "Sheffield Utd",
+            "West Brom"
+          ]
+        },
+        "2022-2023": {
+          "added": [
+            "Bournemouth",
+            "Fulham",
+            "Nottingham"
+          ],
+          "removed": [
+            "Burnley",
+            "Norwich",
+            "Watford"
+          ]
+        },
+        "2023-2024": {
+          "added": [
+            "Burnley",
+            "Luton",
+            "Sheffield Utd"
+          ],
+          "removed": [
+            "Leeds",
+            "Leicester",
+            "Southampton"
+          ]
+        },
+        "2024-2025": {
+          "added": [
+            "Ipswich",
+            "Leicester",
+            "Southampton"
+          ],
+          "removed": [
+            "Burnley",
+            "Luton",
+            "Sheffield Utd"
+          ]
+        },
+        "2025-2026": {
+          "added": [
+            "Burnley",
+            "Leeds",
+            "Sunderland"
+          ],
+          "removed": [
+            "Ipswich",
+            "Leicester",
+            "Southampton"
+          ]
+        }
+      },
+      "recurring_issues": [
+        {
+          "code": "SEASON_NOT_DECLARED",
+          "severity": "WARNING",
+          "n": 1
+        },
+        {
+          "code": "TABLE_ID_SEASON_SCOPED",
+          "severity": "WARNING",
+          "n": 1
+        }
+      ]
+    }
+  },
+  "issues": [
+    {
+      "category": "response_structure",
+      "code": "SEASON_NOT_DECLARED",
+      "severity": "WARNING",
+      "league": "premier",
+      "season": null,
+      "file": "data/raw/premier/leagues.json",
+      "message": "Historical seasons are fetched directly but not declared by /leagues/ (expected API behaviour: current + previous only)",
+      "details": {
+        "declared_seasons": [
+          "2026-2027",
+          "2025-2026"
+        ],
+        "undeclared_seasons": [
+          "2020-2021",
+          "2021-2022",
+          "2022-2023",
+          "2023-2024",
+          "2024-2025"
+        ]
+      },
+      "examples": []
+    },
+    {
+      "category": "table",
+      "code": "TABLE_ID_SEASON_SCOPED",
+      "severity": "WARNING",
+      "league": "premier",
+      "season": null,
+      "file": "data/raw/premier/2020-2021/table_classic.json",
+      "message": "Table row 'id' is not a stable team identifier: only 0 of 120 distinct ids appear in every collected season",
+      "details": {
+        "n_seasons": 6,
+        "distinct_ids_overall": 120,
+        "ids_in_all_seasons": 0
+      },
+      "examples": []
+    }
+  ]
+}
