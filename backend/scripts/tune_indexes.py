@@ -5,9 +5,11 @@ uses them on representative analytical queries via EXPLAIN (ANALYZE, BUFFERS).
 
 Usage:
     python backend/scripts/tune_indexes.py
+    python backend/scripts/tune_indexes.py --league spain1
 """
 from __future__ import annotations
 
+import argparse
 import sys
 
 from db_common import LEAGUE, apply_sql, get_conn
@@ -64,7 +66,17 @@ QUERIES = [
 ]
 
 
-def main() -> int:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="tune_indexes",
+        description="Apply analytical indexes and verify planner usage.",
+    )
+    parser.add_argument("--league", default=LEAGUE, help="league slug (default: premier)")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    league = parse_args(argv).league
     conn = get_conn()
     try:
         apply_sql(conn, "06_index_tuning.sql")
@@ -78,7 +90,7 @@ def main() -> int:
             for label, sql in QUERIES:
                 n_params = sql.count("%s")
                 plan = f"EXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT) {sql}"
-                cur.execute(plan, (LEAGUE,) * n_params)
+                cur.execute(plan, (league,) * n_params)
                 lines = [row[0] for row in cur.fetchall()]
                 plan_line = lines[0] if lines else ""
                 joined = "\n".join(lines)

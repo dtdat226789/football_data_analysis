@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football Charts - Common Data Analysis Framework</title>
+<script src="vendor/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Football Charts</h1>
+    <p class="sub">Common Data Analysis Framework &middot; interactive report dashboard</p>
+  </div>
+  <div class="controls">
+    <label for="league">League</label>
+    <select id="league"></select>
+    <span id="gen"></span>
+  </div>
+</header>
+<main>
+  <section id="kpis" class="kpi-row"></section>
+  <section id="charts" class="chart-grid"></section>
+  <section id="findings-card" class="card">
+    <h2>Key findings</h2>
+    <ol id="findings"></ol>
+  </section>
+  <section id="empty" class="empty hidden">
+    <h2>No analysis reports for this league yet</h2>
+    <p>Run the data collection and <code>run_analysis.py --league <span id="empty-league"></span></code> to generate reports for this league.</p>
+  </section>
+  <footer>Built at <span id="built"></span> &middot; Chart.js v<span id="chartjs-ver"></span></footer>
+</main>
+<script>
+const DATA = {"leagues": [{"slug": "algir1", "name": "Ligue 1", "country": "Algeria", "teams": 14, "format": "round-robin", "has_data": false}, {"slug": "australia", "name": "A-League", "country": "Australia", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "austria1", "name": "Bundesliga", "country": "Austria", "teams": 12, "format": "split", "has_data": false}, {"slug": "austria2", "name": "2. Liga", "country": "Austria", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "azer", "name": "Premier League", "country": "Azerbaijan", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "belgium1", "name": "Jupiler Pro League", "country": "Belgium", "teams": 18, "format": "playoff", "has_data": false}, {"slug": "brazil1", "name": "Serie A Betano", "country": "Brazil", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "brazil2", "name": "Serie B", "country": "Brazil", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "bulgaria1", "name": "efbet League", "country": "Bulgaria", "teams": 14, "format": "round-robin", "has_data": false}, {"slug": "cha", "name": "Championship", "country": "England", "teams": 24, "format": "round-robin", "has_data": false}, {"slug": "china", "name": "Super League", "country": "China", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "czech1", "name": "Chance Liga", "country": "Czech Republic", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "czech2", "name": "ChNL", "country": "Czech Republic", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "czech3a", "name": "3. CFL - Group A", "country": "Czech Republic", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "czech3b", "name": "3. CFL - Group B", "country": "Czech Republic", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "denmark1", "name": "Superliga", "country": "Denmark", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "denmark2", "name": "1st Division", "country": "Denmark", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "develop21", "name": "Professional Development League", "country": "England", "teams": 17, "format": "round-robin", "has_data": false}, {"slug": "egypt", "name": "Premier League", "country": "Egypt", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "eng1", "name": "League One", "country": "England", "teams": 24, "format": "round-robin", "has_data": false}, {"slug": "eng2", "name": "League Two", "country": "England", "teams": 24, "format": "round-robin", "has_data": false}, {"slug": "estonia", "name": "Meistriliiga", "country": "Estonia", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "finland1", "name": "Veikkausliiga", "country": "Finland", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "finland2", "name": "Ykkosliiga", "country": "Finland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "france1", "name": "Ligue 1", "country": "France", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "france2", "name": "Ligue 2", "country": "France", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "france3", "name": "Ligue 3", "country": "France", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "germany-north", "name": "Regionalliga North", "country": "Germany", "teams": 19, "format": "round-robin", "has_data": false}, {"slug": "germany1", "name": "Bundesliga", "country": "Germany", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "germany2", "name": "2. Bundesliga", "country": "Germany", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "germany3", "name": "3. Liga", "country": "Germany", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "greece1", "name": "Super League", "country": "Greece", "teams": 14, "format": "playoff", "has_data": false}, {"slug": "greece2", "name": "Super League 2", "country": "Greece", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "holland1", "name": "Eredivisie", "country": "Netherlands", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "holland2", "name": "Eerste Divisie", "country": "Netherlands", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "holland3", "name": "Tweede Divisie", "country": "Netherlands", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "hungary1", "name": "NB I.", "country": "Hungary", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "hungary2", "name": "NB II.", "country": "Hungary", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "india1", "name": "ISL", "country": "India", "teams": 14, "format": "round-robin", "has_data": false}, {"slug": "ireland1", "name": "Premier Division", "country": "Ireland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "ireland2", "name": "Division 1", "country": "Ireland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "italy1", "name": "Serie A", "country": "Italy", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "italy19", "name": "Primavera 1", "country": "Italy", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "italy2", "name": "Serie B", "country": "Italy", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "italy3a", "name": "Serie C - Group A", "country": "Italy", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "italy3b", "name": "Serie C - Group B", "country": "Italy", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "japan1", "name": "J1 League", "country": "Japan", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "japan2", "name": "J2 League", "country": "Japan", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "korea1", "name": "K League 1", "country": "South Korea", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "korea2", "name": "K League 2", "country": "South Korea", "teams": 17, "format": "round-robin", "has_data": false}, {"slug": "kuwait", "name": "Premier League", "country": "Kuwait", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "latvia", "name": "Virsliga", "country": "Latvia", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "lithuania", "name": "TOPLYGA", "country": "Lithuania", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "morocco", "name": "Botola Pro", "country": "Morocco", "teams": 17, "format": "round-robin", "has_data": false}, {"slug": "national", "name": "National League", "country": "England", "teams": 24, "format": "round-robin", "has_data": false}, {"slug": "north", "name": "National League North", "country": "England", "teams": 24, "format": "round-robin", "has_data": false}, {"slug": "norway", "name": "Eliteserien", "country": "Norway", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "poland1", "name": "Ekstraklasa", "country": "Poland", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "poland2", "name": "Division 1", "country": "Poland", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "portugal1", "name": "Liga Portugal", "country": "Portugal", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "portugal2", "name": "Liga Portugal 2", "country": "Portugal", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "premier", "name": "Premier League", "country": "England", "teams": 20, "format": "round-robin", "has_data": true, "stats": {"n_matches": 2280, "home_win_pct": 43.1, "draw_pct": 23.6, "away_win_pct": 33.3, "total_goals": 6585, "avg_goals": 2.75, "n_seasons": 6}, "charts": {"outcome": {"labels": ["Home wins", "Draws", "Away wins"], "values": [983, 537, 760]}, "avg_goals": {"labels": ["2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2025-2026"], "home": [1.353, 1.513, 1.634, 1.8, 1.513, 1.526], "away": [1.342, 1.305, 1.218, 1.479, 1.421, 1.224], "avg": [2.695, 2.818, 2.853, 3.279, 2.934, 2.75]}, "goals_dist": {"labels": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "values": [129, 356, 530, 514, 374, 219, 94, 47, 10, 7]}, "scorelines": {"labels": ["1-1", "1-0", "2-1", "0-1", "1-2", "2-0", "2-2", "0-0", "0-2", "3-1"], "values": [250, 189, 187, 167, 159, 154, 131, 129, 126, 111]}, "champions": {"labels": ["2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025", "2025-2026"], "values": [86, 93, 89, 91, 84, 85], "names": ["Manchester City", "Manchester City", "Manchester City", "Manchester City", "Liverpool", "Arsenal"]}, "top_teams": {"labels": ["Manchester City", "Arsenal", "Liverpool", "Manchester Utd", "Chelsea", "Aston Villa", "Newcastle", "Tottenham", "Brighton", "West Ham"], "values": [508, 462, 454, 380, 369, 360, 340, 338, 316, 295]}}, "chart_order": ["outcome", "avg_goals", "goals_dist", "scorelines", "champions", "top_teams"], "findings": [{"source": "matches_analysis", "finding": "Outcome split across all seasons", "detail": "2280 matches: home wins 43.1%, draws 23.6%, away wins 33.3% (983H / 537D / 760A)", "importance": "medium", "id": "F1"}, {"source": "matches_analysis", "finding": "Comeback wins", "detail": "69 home and 63 away comebacks (trailing at HT but winning at FT)", "importance": "medium", "id": "F2"}, {"source": "matches_analysis", "finding": "Most common HT/FT flow", "detail": "home lead at HT -> home win occurred 607 times", "importance": "low", "id": "F3"}, {"source": "goals_analysis", "finding": "Average goals per match", "detail": "2280 matches produced 6585 goals (avg 2.888 per match)", "importance": "medium", "id": "F4"}, {"source": "goals_analysis", "finding": "Home goal share", "detail": "home 53.9% vs away 46.1% of 6585 goals in total (home/away ratio 1.17)", "importance": "medium", "id": "F5"}, {"source": "goals_analysis", "finding": "Both teams to score", "detail": "1237 of 2280 matches (54.3%)", "importance": "medium", "id": "F6"}, {"source": "goals_analysis", "finding": "Most common first-goal bucket", "detail": "minute 1-15 (first goal in 737 scoring matches, 34.3% of scoring)", "importance": "low", "id": "F7"}, {"source": "goals_analysis", "finding": "Average first goal minute", "detail": "mean 29.88, median 25.0", "importance": "low", "id": "F8"}, {"source": "teams_analysis", "finding": "Dominant team by lifetime points", "detail": "Manchester City leads with 508 points across 6 seasons (4 title(s), GD 317)", "importance": "high", "id": "F9"}, {"source": "teams_analysis", "finding": "Team consistency", "detail": "13 teams present in every one of the 6 seasons (Arsenal, Aston Villa, Brighton, Chelsea, Crystal Palace...)", "importance": "medium", "id": "F10"}, {"source": "teams_analysis", "finding": "Biggest home advantage", "detail": "Newcastle earns 64 more points at home than away (202 home vs 138 away)", "importance": "medium", "id": "F11"}, {"source": "season_trends", "finding": "Champion with most titles", "detail": "Manchester City won 4 of 6 championship(s) on record", "importance": "high", "id": "F12"}, {"source": "season_trends", "finding": "Tightest title race", "detail": "2021-2022: Manchester City beat Liverpool by 1 pt", "importance": "medium", "id": "F13"}, {"source": "season_trends", "finding": "Average-goals trend", "detail": "up (+0.199 per match): first half 2.789 vs last half 2.988 across 6 seasons", "importance": "medium", "id": "F14"}, {"source": "season_trends", "finding": "Largest view divergence", "detail": "2024-2025 (goals view, avg abs position diff 7.100)", "importance": "low", "id": "F15"}, {"source": "season_trends", "finding": "Smallest view divergence", "detail": "2023-2024 (luck view, avg abs position diff 3.600)", "importance": "low", "id": "F16"}, {"source": "scoreline_analysis", "finding": "Most common scoreline", "detail": "1-1 in 250 matches (11.0%)", "importance": "medium", "id": "F17"}, {"source": "scoreline_analysis", "finding": "Most common home-win scoreline", "detail": "1-0 (189 of 983 home matches, 19.2%)", "importance": "low", "id": "F18"}, {"source": "scoreline_analysis", "finding": "Most common draw scoreline", "detail": "1-1 (250 of 537 draw matches, 46.6%)", "importance": "low", "id": "F19"}, {"source": "scoreline_analysis", "finding": "Most common away-win scoreline", "detail": "0-1 (167 of 760 away matches, 22.0%)", "importance": "low", "id": "F20"}, {"source": "scoreline_analysis", "finding": "Extreme scorelines", "detail": "64 match(es) with >= 7 total goals", "importance": "low", "id": "F21"}, {"source": "relationships", "finding": "Strongest correlation with total goals", "detail": "home_position_before_match |corr| = -0.076 (n=2280 leakage-safe rows)", "importance": "medium", "id": "F22"}, {"source": "relationships", "finding": "Most outcome-separating feature", "detail": "points_difference spreads group means over 11.426: home 5.189, draw -1.125, away -6.237", "importance": "medium", "id": "F23"}, {"source": "database_profile", "finding": "Data-quality warnings (10)", "detail": "Anomaly codes: GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_REGISTERED_NO_DATA", "importance": "high", "id": "F24"}, {"source": "database_profile", "finding": "Data coverage", "detail": "6 of 7 registered seasons populated (85.7%); 2280 matches observed", "importance": "medium", "id": "F25"}], "generated_at": "2026-09-19T08:55:07+00:00", "reports": ["database_profile", "findings", "goals_analysis", "matches_analysis", "relationships", "scoreline_analysis", "season_trends", "teams_analysis"]}, {"slug": "primera1", "name": "Primera RFEF - Group 1", "country": "Spain", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "primera2", "name": "Primera RFEF - Group 2", "country": "Spain", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "romania1", "name": "Superliga", "country": "Romania", "teams": 16, "format": "playoff", "has_data": false}, {"slug": "russia", "name": "Premier League", "country": "Russia", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "saudi1", "name": "Saudi Professional League", "country": "Saudi Arabia", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "saudi2", "name": "Division 1", "country": "Saudi Arabia", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "scot-champ", "name": "Championship", "country": "Scotland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "scot-premier", "name": "Premiership", "country": "Scotland", "teams": 12, "format": "split", "has_data": false}, {"slug": "scot1", "name": "League One", "country": "Scotland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "scot2", "name": "League Two", "country": "Scotland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "segunda1", "name": "Segunda RFEF - Group 1", "country": "Spain", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "segunda2", "name": "Segunda RFEF - Group 2", "country": "Spain", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "segunda3", "name": "Segunda RFEF - Group 3", "country": "Spain", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "segunda4", "name": "Segunda RFEF - Group 4", "country": "Spain", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "segunda5", "name": "Segunda RFEF - Group 5", "country": "Spain", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "serbia1", "name": "Mozzart Bet Super Liga", "country": "Serbia", "teams": 14, "format": "round-robin", "has_data": false}, {"slug": "slovenia1", "name": "Prva liga", "country": "Slovenia", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "south", "name": "National League South", "country": "England", "teams": 24, "format": "round-robin", "has_data": false}, {"slug": "spain1", "name": "LaLiga", "country": "Spain", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "spain2", "name": "LaLiga2", "country": "Spain", "teams": 22, "format": "round-robin", "has_data": false}, {"slug": "sweden1", "name": "Allsvenskan", "country": "Sweden", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "sweden2", "name": "Superettan", "country": "Sweden", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "swiss1", "name": "Super League", "country": "Switzerland", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "swiss2", "name": "Challenge League", "country": "Switzerland", "teams": 10, "format": "round-robin", "has_data": false}, {"slug": "thai1", "name": "Thai League 1", "country": "Thailand", "teams": 16, "format": "round-robin", "has_data": false}, {"slug": "turkey1", "name": "Super Lig", "country": "Turkey", "teams": 18, "format": "round-robin", "has_data": false}, {"slug": "turkey2", "name": "1. Lig", "country": "Turkey", "teams": 20, "format": "round-robin", "has_data": false}, {"slug": "wbelgium1", "name": "Super League Women", "country": "Belgium", "teams": 8, "format": "round-robin", "has_data": false}, {"slug": "wfrance1", "name": "Premiere Ligue Women", "country": "France", "teams": 12, "format": "round-robin", "has_data": false}, {"slug": "wgermany1", "name": "Bundesliga Women", "country": "Germany", "teams": 14, "format": "round-robin", "has_data": false}, {"slug": "wsweden", "name": "Allsvenskan Women", "country": "Sweden", "teams": 14, "format": "round-robin", "has_data": false}], "chartjs": true, "chartjs_version": "4.4.7", "built_at": "2026-09-19T14:44:01+00:00"};
+const LEAGUES = DATA["leagues"];
+const map = Object.fromEntries(LEAGUES.map(l => [l["slug"], l]));
+const sel = document.getElementById("league");
+for (const l of LEAGUES) {
+  const opt = document.createElement("option");
+  opt.value = l["slug"];
+  opt.textContent = l["slug"] + " - " + l["name"] + (l["country"] ? " (" + l["country"] + ")" : "") + (l["has_data"] ? "" : " (no data)");
+  sel.appendChild(opt);
+}
+const chartEls = {
+  "outcome": "chart-outcome", "avg_goals": "chart-avg-goals", "goals_dist": "chart-goals-dist",
+  "scorelines": "chart-scorelines", "champions": "chart-champions", "top_teams": "chart-top-teams"
+};
+const emptyKeys = ["outcome", "avg_goals", "goals_dist", "scorelines", "champions", "top_teams"];
+function chartSpec(key, entry) {
+  const c = entry["charts"][key];
+  if (key === "outcome") return {type: "doughnut", data: {
+      labels: c["labels"], datasets: [{data: c["values"], backgroundColor: ["#34d399", "#94a3b8", "#f87171"]}]},
+      options: {responsive: true, plugins: {legend: {position: "bottom"}}}};
+  if (key === "avg_goals") return {type: "line", data: {
+      labels: c["labels"],
+      datasets: [
+        {label: "Total", data: c["avg"], borderColor: "#38bdf8", tension: .3, fill: false},
+        {label: "Home", data: c["home"], borderColor: "#34d399", tension: .3, fill: false},
+        {label: "Away", data: c["away"], borderColor: "#f87171", tension: .3, fill: false}]},
+      options: {responsive: true, plugins: {legend: {position: "bottom"}}}};
+  if (key === "goals_dist") return {type: "bar", data: {
+      labels: c["labels"], datasets: [{label: "Matches", data: c["values"], backgroundColor: "#38bdf8"}]},
+      options: {responsive: true, plugins: {legend: {display: false}}, scales: {x: {title: {display: true, text: "Goals"}}}}};
+  if (key === "scorelines") return {type: "bar", data: {
+      labels: c["labels"], datasets: [{label: "Matches", data: c["values"], backgroundColor: "#a78bfa"}]},
+      options: {indexAxis: "y", responsive: true, plugins: {legend: {display: false}}}};
+  if (key === "champions") return {type: "line", data: {
+      labels: c["labels"], datasets: [{label: "Champion points", data: c["values"], borderColor: "#fbbf24", tension: .3, fill: false}]},
+      options: {responsive: true, plugins: {legend: {display: false},
+        tooltip: {callbacks: {title: (items) => c["labels"][items[0]["dataIndex"]], label: (i) => c["names"][i["dataIndex"]] + " - " + c["values"][i["dataIndex"]] + " pts"}}}};
+  if (key === "top_teams") return {type: "bar", data: {
+      labels: c["labels"], datasets: [{label: "Points", data: c["values"], backgroundColor: "#34d399"}]},
+      options: {indexAxis: "y", responsive: true, plugins: {legend: {display: false}}}};
+  return null;
+}
+let charts = {};
+function render(slug) {
+  const entry = map[slug];
+  const empty = document.getElementById("empty");
+  const chGrid = document.getElementById("charts");
+  const findCard = document.getElementById("findings-card");
+  document.getElementById("kpis").innerHTML = "";
+  chGrid.innerHTML = "";
+  document.getElementById("findings").innerHTML = "";
+  document.getElementById("gen").textContent = "";
+  if (!entry || !entry["has_data"]) {
+    document.getElementById("empty-league").textContent = slug;
+    empty.classList.remove("hidden");
+    chGrid.classList.add("hidden"); findCard.classList.add("hidden");
+    return;
+  }
+  empty.classList.add("hidden"); chGrid.classList.remove("hidden"); findCard.classList.remove("hidden");
+  document.getElementById("gen").textContent = "generated " + (entry["generated_at"] || "").slice(0, 19).replace("T", " ");
+  for (const c of Object.values(charts)) { if (c) c.destroy(); }
+  charts = {};
+  const s = entry["stats"] || {};
+  const kpis = [
+    ["Matches", s["n_matches"]], ["Home win", fmtPct(s["home_win_pct"])],
+    ["Draw", fmtPct(s["draw_pct"])], ["Away win", fmtPct(s["away_win_pct"])],
+    ["Goals total", s["total_goals"]], ["Avg goals/game", s["avg_goals"]], ["Seasons", s["n_seasons"]]];
+  const kpiRow = document.getElementById("kpis");
+  for (const [k, v] of kpis) {
+    if (v === null || v === undefined || v === "") continue;
+    const cell = document.createElement("div"); cell.className = "kpi";
+    cell.innerHTML = "<span class="kpi-v">" + v + "</span><span class="kpi-k">" + k + "</span>";
+    kpiRow.appendChild(cell);
+  }
+  if (DATA["chartjs"]) {
+    for (const key of (entry["chart_order"] || emptyKeys)) {
+      const spec = chartSpec(key, entry);
+      if (!spec) continue;
+      const div = document.createElement("div"); div.className = "card chart";
+      div.id = "wrap-" + chartEls[key];
+      div.innerHTML = "<h2>" + chartTitle(key) + "</h2><canvas id="" + chartEls[key] + ""></canvas>";
+      chGrid.appendChild(div);
+      charts[key] = new Chart(document.getElementById(chartEls[key]), spec);
+    }
+  } else {
+    chGrid.appendChild(placeholderCard("Chart.js unavailable", "The build ran offline; run build_dashboard.py with network access to vendor Chart.js."));
+  }
+  const list = document.getElementById("findings");
+  for (const f of (entry["findings"] || [])) {
+    const li = document.createElement("li");
+    const imp = f["importance"] || "info";
+    li.innerHTML = "<span class="badge " + imp + "">" + imp + "</span> <b>" +
+      escapeHtml(String(f["finding"] || "")) + "</b> <span class="det">" +
+      escapeHtml(String(f["detail"] || "")) + "</span>";
+    list.appendChild(li);
+  }
+  if ((entry["findings"] || []).length === 0) {
+    const li = document.createElement("li"); li.textContent = "No findings compiled.";
+    list.appendChild(li);
+  }
+}
+function chartTitle(key) {
+  return {"outcome": "Result split", "avg_goals": "Goals per season", "goals_dist": "Goals per match",
+    "scorelines": "Most common scorelines", "champions": "Champion points", "top_teams": "Top teams by points"}[key] || key;
+}
+function fmtPct(v) { return (v === null || v === undefined) ? "-" : v + "%"; }
+function placeholderCard(title, msg) {
+  const div = document.createElement("div"); div.className = "card";
+  div.innerHTML = "<h2>" + title + "</h2><p class="det">" + msg + "</p>";
+  return div;
+}
+function escapeHtml(s) { return s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+sel.addEventListener("change", () => render(sel.value));
+document.getElementById("built").textContent = DATA["built_at"];
+document.getElementById("chartjs-ver").textContent = DATA["chartjs_version"];
+render(sel.value);
+</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; background: #0f172a; color: #e2e8f0; }
+header.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 20px 28px; background: #0b1120; border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 5; }
+header.top h1 { margin: 0; font-size: 22px; letter-spacing: .5px; }
+.sub { margin: 2px 0 0; color: #94a3b8; font-size: 13px; }
+.controls { display: flex; align-items: center; gap: 8px; }
+.controls label { color: #94a3b8; font-size: 13px; }
+select { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; border-radius: 6px; padding: 7px 10px; font-size: 14px; max-width: 320px; }
+#gen { color: #64748b; font-size: 12px; }
+main { max-width: 1200px; margin: 0 auto; padding: 24px 28px 40px; }
+.kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.kpi { background: #111c33; border: 1px solid #1e293b; border-radius: 10px; padding: 14px 16px; }
+.kpi-v { display: block; font-size: 22px; font-weight: 700; color: #38bdf8; }
+.kpi-k { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: .5px; }
+.chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
+.card { background: #111c33; border: 1px solid #1e293b; border-radius: 10px; padding: 16px 18px; }
+.card h2 { margin: 0 0 12px; font-size: 15px; color: #cbd5e1; }
+.chart canvas { max-height: 300px; }
+#findings-card { margin-top: 20px; }
+#findings { padding-left: 20px; line-height: 1.55; }
+#findings li { margin-bottom: 8px; }
+.det { color: #94a3b8; font-size: 13px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; text-transform: uppercase; vertical-align: 1px; }
+.badge.critical, .badge.high { background: #7f1d1d; color: #fca5a5; }
+.badge.medium { background: #713f12; color: #fcd34d; }
+.badge.low, .badge.info { background: #1e3a5f; color: #93c5fd; }
+.empty { background: #111c33; border: 1px dashed #334155; border-radius: 10px; padding: 40px; text-align: center; }
+.empty h2 { margin-top: 0; }
+.hidden { display: none !important; }
+code { background: #1e293b; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+footer { margin-top: 28px; color: #475569; font-size: 12px; }
+</style>
+</body>
+</html>

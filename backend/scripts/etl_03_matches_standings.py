@@ -11,19 +11,21 @@ goal in normal time). No NULL->0 conversion.
 
 Usage:
     python backend/scripts/etl_03_matches_standings.py
+    python backend/scripts/etl_03_matches_standings.py --league spain1
 """
 from __future__ import annotations
 
+import argparse
 import sys
 from datetime import date, time as dtime
 
 import psycopg2.extras
 
 from db_common import (
-    COLLECTED_SEASONS,
     LEAGUE,
     VIEWS,
     apply_sql,
+    collected_seasons,
     get_conn,
     load_json,
     parse_score,
@@ -44,7 +46,7 @@ CORE_STANDING_KEYS = {
 }
 
 
-def league_season_lookup(cur) -> dict[str, int]:
+def league_season_lookup(cur, league: str) -> dict[str, int]:
     """Map season name -> league_seasons.id for the current league."""
     cur.execute(
         """
@@ -53,7 +55,7 @@ def league_season_lookup(cur) -> dict[str, int]:
         JOIN seasons s ON s.id = ls.season_id
         WHERE ls.league_id = (SELECT id FROM leagues WHERE api_key = %s)
         """,
-        (LEAGUE,),
+        (league,),
     )
     return {name: lsid for name, lsid in cur.fetchall()}
 
@@ -67,8 +69,8 @@ def team_lookup(cur, league_season_id: int) -> dict[str, int]:
     return {name: tid for name, tid in cur.fetchall()}
 
 
-def load_matches(cur, league_season_id: int, season: str) -> int:
-    path = raw_file(season, "results.json")
+def load_matches(cur, league_season_id: int, season: str, league: str) -> int:
+    path = raw_file(season, "results.json", league)
     results_json = load_json(path)
     team_ids = team_lookup(cur, league_season_id)
 
@@ -118,12 +120,12 @@ def load_matches(cur, league_season_id: int, season: str) -> int:
     return n
 
 
-def load_standings(cur, league_season_id: int, season: str) -> int:
+def load_standings(cur, league_season_id: int, season: str, league: str) -> int:
     team_ids = team_lookup(cur, league_season_id)
 
     total = 0
     for view in VIEWS:
-        path = raw_file(season, f"table_{view}.json")
+        path = raw_file(season, f"table_{view}.json", league)
         table_json = load_json(path)
         for row in table_json["table"]:
             team_name = row["team"]
@@ -173,21 +175,34 @@ def load_standings(cur, league_season_id: int, season: str) -> int:
     return total
 
 
-def main() -> int:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="etl_03_matches_standings",
+        description="Load matches and standings for one league.",
+    )
+    parser.add_argument("--league", default=LEAGUE, help="league slug (default: premier)")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    league = args.league
+    seasons = collected_seasons(league)
+
     conn = get_conn()
     try:
         apply_sql(conn, "04_matches_standings.sql")
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
-            ls_ids = league_season_lookup(cur)
+            ls_ids = league_season_lookup(cur, league)
             n_matches = 0
             n_standings = 0
-            for season in COLLECTED_SEASONS:
+            for season in seasons:
                 if season not in ls_ids:
                     print(f"[04] WARN: no registry pair for {season}; skipping")
                     continue
                 ls_id = ls_ids[season]
-                m = load_matches(cur, ls_id, season)
-                s = load_standings(cur, ls_id, season)
+                m = load_matches(cur, ls_id, season, league)
+                s = load_standings(cur, ls_id, season, league)
                 print(f"[04] {season}: +{m} matches, +{s} standings rows")
                 n_matches += m
                 n_standings += s
