@@ -12,17 +12,19 @@ A spelling that maps to a different team than expected raises a clear error
 
 Usage:
     python backend/scripts/etl_02_identity.py
+    python backend/scripts/etl_02_identity.py --league spain1
 """
 from __future__ import annotations
 
+import argparse
 import sys
 
 import psycopg2.extras
 
 from db_common import (
-    COLLECTED_SEASONS,
     LEAGUE,
     apply_sql,
+    collected_seasons,
     get_conn,
     load_json,
     raw_file,
@@ -82,14 +84,27 @@ def resolve_team(cur, slug: str, name: str) -> int:
     return team_id
 
 
-def main() -> int:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="etl_02_identity",
+        description="Load identity schema and match teams for one league.",
+    )
+    parser.add_argument("--league", default=LEAGUE, help="league slug (default: premier)")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    league = args.league
+    seasons = collected_seasons(league)
+
     conn = get_conn()
     try:
         apply_sql(conn, "02_identity.sql")
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
             n_memberships = 0
-            for season in COLLECTED_SEASONS:
-                path = raw_file(season, "teams.json")
+            for season in seasons:
+                path = raw_file(season, "teams.json", league)
                 teams_json = load_json(path)
 
                 cur.execute(
@@ -100,7 +115,7 @@ def main() -> int:
                     WHERE ls.league_id = (SELECT id FROM leagues WHERE api_key = %s)
                       AND s.name = %s
                     """,
-                    (LEAGUE, season),
+                    (league, season),
                 )
                 row = cur.fetchone()
                 if row is None:

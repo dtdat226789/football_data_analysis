@@ -6,25 +6,29 @@ Cross-checks the database against the byte-preserved raw dataset:
   identity    alias coverage of every api_name/api_slug; slug->team is consistent
   matches     per-season counts = raw, game_index uniqueness/range, team membership,
               goalless/first-goal semantics, HT <= FT invariants
-  standings   rows per (season, view) = 20; classic table reproduces the
+  standings   rows per (season, view) = league teams; classic table reproduces the
               table derived from matches (points, W/D/L, GF/GA/GD, played)
   global      match api_id uniqueness (PK) and total counts
 
 Exits non-zero if any check fails.
 Usage:
     python backend/scripts/validate_db.py
+    python backend/scripts/validate_db.py --league spain1
 """
 from __future__ import annotations
 
+import argparse
 import sys
 
 import psycopg2.extras
 
 from db_common import (
-    COLLECTED_SEASONS,
     LEAGUE,
     VIEWS,
+    catalog_seasons,
+    collected_seasons,
     get_conn,
+    league_meta,
     load_json,
     parse_score,
     raw_file,
@@ -39,7 +43,24 @@ def check(name: str, ok: bool, detail: object = "") -> None:
     print(f"[05] {tag:4} {name}" + (f"  ({detail})" if detail else ""))
 
 
-def main() -> int:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="validate_db",
+        description="Cross-check the database against the raw dataset.",
+    )
+    parser.add_argument("--league", default=LEAGUE, help="league slug (default: premier)")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    league = args.league
+    seasons = collected_seasons(league)
+    meta = league_meta(league)
+    expected_teams = meta["teams"]
+    expected_matches = meta["matches"]
+    declared = set(catalog_seasons(league))
+
     conn = get_conn()
     try:
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
@@ -52,18 +73,25 @@ def main() -> int:
                 WHERE ls.league_id = (SELECT id FROM leagues WHERE api_key = %s)
                 ORDER BY s.start_year, s.end_year
                 """,
-                (LEAGUE,),
+                (league,),
             )
             reg = {r["name"]: r for r in cur.fetchall()}
             check(
                 "registry pair for every collected season",
-                all(s in reg for s in COLLECTED_SEASONS),
-                sorted(set(COLLECTED_SEASONS) - set(reg)),
+                all(s in reg for s in seasons),
+                sorted(set(seasons) - set(reg)),
             )
             check(
-                "declared_by_api mirrors /leagues/ (2025-2026 true, historical false)",
-                reg["2025-2026"]["declared_by_api"] is True
-                and not reg["2020-2021"]["declared_by_api"],
+                "declared_by_api mirrors /leagues/ (declared true, others false)",
+                (
+                    all(reg.get(s, {}).get("declared_by_api") is True for s in declared)
+                    and all(
+                        not reg.get(s, {}).get("declared_by_api")
+                        for s in seasons
+                        if s not in declared
+                    )
+                ),
+                declared,
             )
 
             # ── identity ────────────────────────────────────────────────
@@ -73,9 +101,9 @@ def main() -> int:
             n_memberships = cur.fetchone()["count"]
             check("teams table non-empty", n_teams > 0, f"{n_teams} teams")
             check(
-                "team_seasons == 20 per collected season",
-                n_memberships == 20 * len(COLLECTED_SEASONS),
-                f"{n_memberships} rows",
+                "team_seasons == league teams per collected season",
+                n_memberships == expected_teams * len(seasons),
+                f"{n_memberships} rows (expected {expected_teams * len(seasons)})",
             )
 
             # every distinct observed slug resolves to exactly one team_id
@@ -110,14 +138,19 @@ def main() -> int:
 
             # ── matches ─────────────────────────────────────────────────
             cur.execute("SELECT count(*) FROM matches")
-            check("match count == raw total (6 x 380)", cur.fetchone()["count"] == 6 * 380)
+            total_db = cur.fetchone()["count"]
+            check(
+                "match count == raw total",
+                total_db == expected_matches * len(seasons),
+                f"db={total_db} expected={expected_matches * len(seasons)}",
+            )
             cur.execute("SELECT count(DISTINCT api_id), count(*) FROM matches")
             dcount, tcount = cur.fetchone()
             check("match api_id globally unique (PK)", dcount == tcount, f"{dcount}/{tcount}")
 
             per_season = {}
-            for season in COLLECTED_SEASONS:
-                path = raw_file(season, "results.json")
+            for season in seasons:
+                path = raw_file(season, "results.json", league)
                 raw_n = load_json(path)["count"]
                 cur.execute(
                     """
@@ -166,9 +199,9 @@ def main() -> int:
                 """
             )
             r = cur.fetchone()
-            ok_fgt = (r["goalless"] + r["has_fgt"] == 6 * 380) and r["goalless"] == 129
+            ok_fgt = r["goalless"] + r["has_fgt"] == expected_matches * len(seasons)
             check(
-                "first_goal_time present iff non-goalless (129 goalless)",
+                "first_goal_time present iff non-goalless",
                 ok_fgt,
                 dict(r),
             )
@@ -202,10 +235,14 @@ def main() -> int:
             bad_stand = [
                 (r["name"], r["view"])
                 for r in rows
-                if not (r["count"] == 20 and r["min"] == 1 and r["max"] == 20)
+                if not (
+                    r["count"] == expected_teams
+                    and r["min"] == 1
+                    and r["max"] == expected_teams
+                )
             ]
             check(
-                "standings == 20 rows with positions 1..20 per (season, view)",
+                "standings == league teams with positions 1..n per (season, view)",
                 not bad_stand,
                 bad_stand,
             )

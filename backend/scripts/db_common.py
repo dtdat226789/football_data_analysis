@@ -30,6 +30,138 @@ COLLECTED_SEASONS = [
 ]
 VIEWS = ["classic", "luck", "goals"]
 
+# Leagues whose format is not a plain full double round-robin. Matches for a
+# split/playoff league are still stored as the formula value; analyses that
+# care about format can branch on this flag.
+FORMAT_OVERRIDES = {
+    "scot-premier": "split",
+    "austria1": "split",
+    "belgium1": "playoff",
+    "greece1": "playoff",
+    "romania1": "playoff",
+}
+
+# Fallback entries used only when data/raw/league_teams.json is unavailable
+# (e.g. tests that build the DB before the config probe has run).
+_FALLBACK_CONFIG = {
+    "premier": {"name": "Premier League", "country": "England", "teams": 20},
+    "spain1": {"name": "LaLiga", "country": "Spain", "teams": 20},
+    "germany1": {"name": "Bundesliga", "country": "Germany", "teams": 18},
+    "italy1": {"name": "Serie A", "country": "Italy", "teams": 20},
+    "france1": {"name": "Ligue 1", "country": "France", "teams": 18},
+}
+
+
+def _load_league_config() -> dict:
+    """Build LEAGUE_CONFIG from the probed league table when it exists.
+
+    Source of truth is data/raw/league_teams.json (written by
+    backend/scripts/build_league_config.py): every catalog league gets a row
+    with name/country/teams/url. match counts default to the formula
+    teams*(teams-1) and are overrideable per league.
+    """
+    path = RAW_DIR / "league_teams.json"
+    if not path.exists():
+        rows = _FALLBACK_CONFIG
+    else:
+        try:
+            rows = json.loads(path.read_bytes())
+        except ValueError:
+            rows = _FALLBACK_CONFIG
+
+    config: dict = {}
+    for slug, meta in rows.items():
+        teams = int(meta.get("teams", 20))
+        config[slug] = {
+            "name": meta.get("name", slug),
+            "country": meta.get("country", ""),
+            "teams": teams,
+            "matches": meta.get("matches", teams * (teams - 1)),
+            "views": meta.get("views", VIEWS),
+            "format": FORMAT_OVERRIDES.get(slug, meta.get("format", "round-robin")),
+            "url": meta.get("url", ""),
+        }
+    return config
+
+
+# Per-league expectations. Kept in one place so the whole pipeline (build,
+# profile, analysis) can adapt to a country/format just by adding a row to
+# data/raw/league_teams.json and re-running build_league_config.py.
+#   teams / matches   flagship full-season format (double round-robin)
+#   name, country     display metadata from the /leagues/ catalog
+LEAGUE_CONFIG = _load_league_config()
+
+
+def league_meta(league: str) -> dict:
+    """Per-league config with safe defaults for leagues not yet registered."""
+    meta = LEAGUE_CONFIG.get(league, {})
+    return {
+        "name": meta.get("name", league),
+        "country": meta.get("country", ""),
+        "teams": meta.get("teams", 20),
+        "matches": meta.get("matches", 380),
+        "views": meta.get("views", VIEWS),
+        "format": meta.get("format", "round-robin"),
+        "url": meta.get("url", ""),
+    }
+
+
+def catalog_seasons(league: str | None = None) -> list[str]:
+    """Declared seasons for a league from its local /leagues/ catalog.
+
+    Reads data/raw/{league}/leagues.json (the raw catalog file) and returns the
+    seasons the API declares for that league, in catalog order. Returns []
+    when the file or league entry is missing.
+    """
+    lg = league or LEAGUE
+    path = RAW_DIR / lg / "leagues.json"
+    if not path.exists():
+        return []
+    data = load_json(path)
+    entry = next((e for e in data.get("leagues", []) if e.get("league") == lg), None)
+    if entry is None:
+        return []
+    return list(entry.get("seasons", []))
+
+
+def _season_sort_key(name: str) -> tuple[int, int]:
+    start, end = parse_season_years(name)
+    if start is None or end is None:
+        return (0, 0)
+    return (start, end)
+
+
+def league_season_dirs(league: str | None = None) -> list[str]:
+    """Season names that exist as directories under data/raw/{league}/."""
+    lg = league or LEAGUE
+    base = RAW_DIR / lg
+    if not base.is_dir():
+        return []
+    return sorted(
+        (d.name for d in base.iterdir() if d.is_dir()),
+        key=_season_sort_key,
+    )
+
+
+def collected_seasons(league: str | None = None) -> list[str]:
+    """Seasons with collected raw data for a league.
+
+    A season counts as collected when its data/raw/{league}/{season}/ directory
+    contains teams.json, results.json and the three table views. Falls back to
+    COLLECTED_SEASONS only when the league directory is entirely absent and the
+    league is the default (the historical set remains authoritative for it).
+    """
+    lg = league or LEAGUE
+    dirs = league_season_dirs(lg)
+    if not dirs:
+        return list(COLLECTED_SEASONS) if lg == LEAGUE else []
+    return [
+        s for s in dirs
+        if (RAW_DIR / lg / s / "teams.json").exists()
+        and (RAW_DIR / lg / s / "results.json").exists()
+        and all((RAW_DIR / lg / s / f"table_{v}.json").exists() for v in VIEWS)
+    ]
+
 
 def get_conn() -> psycopg2.extensions.connection:
     dsn = os.getenv("DATABASE_URL")
@@ -49,8 +181,9 @@ def apply_sql(conn, filename: str) -> None:
     print(f"[schema] applied {filename}")
 
 
-def raw_file(season: str, name: str) -> Path:
-    return RAW_DIR / LEAGUE / season / name
+def raw_file(season: str, name: str, league: str | None = None) -> Path:
+    lg = league or LEAGUE
+    return RAW_DIR / lg / season / name
 
 
 def load_json(path: Path) -> dict:
