@@ -238,3 +238,112 @@ def team_standings(
         "view": view,
         "row": dict(row) if row else None,
     }
+
+
+def _team_stats_data(cur, slug: str, league: str, view: str) -> dict:
+    """Aggregate a team's per-season tables and home/away splits for a league."""
+    team_id = _require_team(cur, slug)
+    cur.execute("SELECT id FROM leagues WHERE api_key = %s", (league,))
+    league_row = cur.fetchone()
+    if league_row is None:
+        raise HTTPException(status_code=404, detail=f"unknown league '{league}'")
+    league_id = league_row[0]
+
+    cur.execute(
+        """
+        SELECT s.name AS season, st.position, st.played, st.won, st.drawn,
+               st.lost, st.goals_for, st.goals_against, st.goal_difference,
+               st.points
+        FROM standings st
+        JOIN league_seasons ls ON ls.id = st.league_season_id
+        JOIN seasons s ON s.id = ls.season_id
+        JOIN leagues l ON l.id = ls.league_id
+        WHERE l.api_key = %s AND st.team_id = %s AND st.view = %s
+        ORDER BY s.start_year, s.end_year
+        """,
+        (league, team_id, view),
+    )
+    seasons = [dict(r) for r in cur.fetchall()]
+
+    cur.execute(
+        """
+        SELECT m.home_team_id = %(team)s AS is_home,
+               count(*) AS played,
+               count(*) FILTER (
+                   WHERE m.home_score > m.away_score
+               ) AS home_won,
+               count(*) FILTER (
+                   WHERE m.away_score > m.home_score
+               ) AS away_won,
+               count(*) FILTER (WHERE m.home_score = m.away_score) AS drawn,
+               count(*) FILTER (WHERE m.home_score < m.away_score) AS home_lost,
+               count(*) FILTER (WHERE m.away_score < m.home_score) AS away_lost,
+               sum(CASE WHEN m.home_team_id = %(team)s THEN m.home_score ELSE m.away_score END) AS gf,
+               sum(CASE WHEN m.home_team_id = %(team)s THEN m.away_score ELSE m.home_score END) AS ga
+        FROM matches m
+        JOIN league_seasons ls ON ls.id = m.league_season_id
+        JOIN leagues l ON l.id = ls.league_id
+        WHERE l.api_key = %(league)s
+          AND (m.home_team_id = %(team)s OR m.away_team_id = %(team)s)
+        GROUP BY m.home_team_id = %(team)s
+        """,
+        {"league": league, "team": team_id},
+    )
+    sides: dict = {}
+    for r in cur.fetchall():
+        is_home = bool(r["is_home"])
+        won = r["home_won"] if is_home else r["away_won"]
+        lost = r["home_lost"] if is_home else r["away_lost"]
+        played = r["played"]
+        point = 3 * won + r["drawn"]
+        sides["home" if is_home else "away"] = {
+            "played": played,
+            "won": won,
+            "drawn": r["drawn"],
+            "lost": lost,
+            "goals_for": r["gf"] or 0,
+            "goals_against": r["ga"] or 0,
+            "points": point,
+            "win_pct": round(100 * won / played, 1) if played else 0.0,
+        }
+
+    played = sum(s["played"] for s in seasons)
+    totals = {
+        "played": played,
+        "won": sum(s["won"] for s in seasons),
+        "drawn": sum(s["drawn"] for s in seasons),
+        "lost": sum(s["lost"] for s in seasons),
+        "goals_for": sum(s["goals_for"] for s in seasons),
+        "goals_against": sum(s["goals_against"] for s in seasons),
+        "points": sum(s["points"] for s in seasons),
+        "ppg": round(sum(s["points"] for s in seasons) / played, 2) if played else 0.0,
+    }
+    totals["goal_difference"] = totals["goals_for"] - totals["goals_against"]
+    positions = [s["position"] for s in seasons if s["position"] is not None]
+    return {
+        "team": slug,
+        "league": league,
+        "view": view,
+        "seasons": seasons,
+        "totals": totals,
+        "home_away": sides,
+        "best": {
+            "position": min(positions) if positions else None,
+            "position_season": next(
+                (s["season"] for s in seasons if s["position"] == min(positions)),
+                None,
+            ) if positions else None,
+            "points": max((s["points"] for s in seasons), default=None),
+        },
+    }
+
+
+@router.get("/teams/{slug}/stats")
+def team_stats(
+    slug: str,
+    league: str = common.DEFAULT_LEAGUE,
+    view: Literal["classic", "luck", "goals"] = "classic",
+) -> dict:
+    require_league(league)
+    with fetched_cursor() as cur:
+        return _team_stats_data(cur, slug, league, view)

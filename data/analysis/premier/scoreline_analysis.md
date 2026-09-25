@@ -1,34 +1,34 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-19T08:55:04+00:00
+- Generated: 2026-09-23T13:42:14+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
 
 ## 1. Scoreline frequency
-- Matches analysed: **2280** across **6** seasons.
+- Matches analysed: **2330** across **7** seasons.
 - Distinct scorelines seen: **46**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 250 | 11.0% |
-| 1-0 | 189 | 8.3% |
-| 2-1 | 187 | 8.2% |
-| 0-1 | 167 | 7.3% |
-| 1-2 | 159 | 7.0% |
-| 2-0 | 154 | 6.8% |
-| 2-2 | 131 | 5.7% |
-| 0-0 | 129 | 5.7% |
-| 0-2 | 126 | 5.5% |
-| 3-1 | 111 | 4.9% |
-| 3-0 | 103 | 4.5% |
-| 1-3 | 71 | 3.1% |
-| 0-3 | 65 | 2.9% |
+| 1-1 | 255 | 10.9% |
+| 1-0 | 192 | 8.2% |
+| 2-1 | 191 | 8.2% |
+| 0-1 | 173 | 7.4% |
+| 1-2 | 160 | 6.9% |
+| 2-0 | 156 | 6.7% |
+| 2-2 | 137 | 5.9% |
+| 0-0 | 134 | 5.8% |
+| 0-2 | 129 | 5.5% |
+| 3-1 | 111 | 4.8% |
+| 3-0 | 107 | 4.6% |
+| 1-3 | 71 | 3.0% |
+| 0-3 | 65 | 2.8% |
 | 3-2 | 58 | 2.5% |
-| 2-3 | 50 | 2.2% |
-| 4-1 | 45 | 2.0% |
-| 4-0 | 36 | 1.6% |
-| 1-4 | 33 | 1.4% |
+| 2-3 | 54 | 2.3% |
+| 4-1 | 46 | 2.0% |
+| 4-0 | 37 | 1.6% |
+| 1-4 | 34 | 1.5% |
 | 0-4 | 25 | 1.1% |
 | 4-2 | 23 | 1.0% |
 
@@ -88,25 +88,34 @@
 | 2-0 | 29 | 7.6% |
 | 0-0 | 27 | 7.1% |
 
+### 2026-2027
+| scoreline | count | pct |
+|---|---|---|
+| 0-1 | 6 | 12.0% |
+| 2-2 | 6 | 12.0% |
+| 1-1 | 5 | 10.0% |
+| 0-0 | 5 | 10.0% |
+| 3-0 | 4 | 8.0% |
+
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 129 | 5.7% |
-| 1 | 356 | 15.6% |
-| 2 | 530 | 23.2% |
-| 3 | 514 | 22.5% |
-| 4 | 374 | 16.4% |
-| 5 | 219 | 9.6% |
-| 6 | 94 | 4.1% |
-| 7 | 47 | 2.1% |
-| 8 | 10 | 0.4% |
+| 0 | 134 | 5.8% |
+| 1 | 365 | 15.7% |
+| 2 | 540 | 23.2% |
+| 3 | 523 | 22.4% |
+| 4 | 381 | 16.4% |
+| 5 | 226 | 9.7% |
+| 6 | 94 | 4.0% |
+| 7 | 49 | 2.1% |
+| 8 | 11 | 0.5% |
 | 9 | 7 | 0.3% |
 | 10+ | 0 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **64**
+- Matches with 7+ total goals: **67**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
@@ -127,6 +136,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2024-2025 | 2024-08-25 | 2-6 | 8 |
 | 2024-2025 | 2024-10-05 | 5-3 | 8 |
 | 2025-2026 | 2025-12-15 | 4-4 | 8 |
+| 2026-2027 | 2026-09-20 | 5-3 | 8 |
 | 2020-2021 | 2020-09-12 | 4-3 | 7 |
 | 2020-2021 | 2020-09-19 | 5-2 | 7 |
 | 2020-2021 | 2020-09-19 | 4-3 | 7 |
@@ -174,49 +184,51 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-02-28 | 3-4 | 7 |
 | 2025-2026 | 2026-02-28 | 5-2 | 7 |
 | 2025-2026 | 2026-04-19 | 4-3 | 7 |
+| 2026-2027 | 2026-08-30 | 4-3 | 7 |
+| 2026-2027 | 2026-08-30 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1743** (draws: **537**)
+- Decided matches: **1777** (draws: **553**)
 - Average winning margin: **1.88**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 834 | 47.8% |
-| 2 | 504 | 28.9% |
-| 3+ | 405 | 23.2% |
+| 1 | 853 | 48.0% |
+| 2 | 510 | 28.7% |
+| 3+ | 414 | 23.3% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **983** | avg margin: **1.93** | max margin: **9**
+- Matches: **1001** | avg margin: **1.93** | max margin: **9**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 450 | 45.8% |
-| 2 | 290 | 29.5% |
-| 3+ | 243 | 24.7% |
+| 1 | 458 | 45.8% |
+| 2 | 293 | 29.3% |
+| 3+ | 250 | 25.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **760** | avg margin: **1.82** | max margin: **8**
+- Matches: **776** | avg margin: **1.82** | max margin: **8**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 384 | 50.5% |
-| 2 | 214 | 28.2% |
-| 3+ | 162 | 21.3% |
+| 1 | 395 | 50.9% |
+| 2 | 217 | 28.0% |
+| 3+ | 164 | 21.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 983 | 1-0 | 189 | 19.2% |
-| draw | 537 | 1-1 | 250 | 46.6% |
-| away | 760 | 0-1 | 167 | 22.0% |
+| home | 1001 | 1-0 | 192 | 19.2% |
+| draw | 553 | 1-1 | 255 | 46.1% |
+| away | 776 | 0-1 | 173 | 22.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](/mnt/e/football_data_analysis/data/analysis/charts/scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](/mnt/e/football_data_analysis/data/analysis/charts/scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\premier\charts\scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\premier\charts\scoreline_analysis_total_goals.png)
 

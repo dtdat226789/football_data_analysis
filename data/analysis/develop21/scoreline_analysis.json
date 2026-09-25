@@ -1,0 +1,583 @@
+{
+  "report_name": "scoreline_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_scorelines.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:57:22+00:00",
+  "config": {
+    "league": "develop21",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\develop21",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Professional Development League",
+    "country": "England",
+    "teams": 17,
+    "matches": 272,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/professional-development-league"
+  },
+  "scoreline_frequency": {
+    "n_matches": 34,
+    "n_distinct_scorelines": 22,
+    "top": [
+      {
+        "scoreline": "2-2",
+        "count": 4,
+        "pct": 11.8
+      },
+      {
+        "scoreline": "3-1",
+        "count": 4,
+        "pct": 11.8
+      },
+      {
+        "scoreline": "0-2",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "scoreline": "2-0",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "scoreline": "1-2",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "scoreline": "1-1",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "scoreline": "3-3",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "scoreline": "4-1",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "scoreline": "0-4",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "0-1",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "2-3",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "2-5",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "2-4",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "7-0",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "1-0",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "0-0",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "3-4",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "5-3",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "0-3",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "scoreline": "6-4",
+        "count": 1,
+        "pct": 2.9
+      }
+    ]
+  },
+  "scoreline_per_season": [
+    {
+      "season": "2026-2027",
+      "top": [
+        {
+          "scoreline": "2-2",
+          "count": 4,
+          "pct": 11.8
+        },
+        {
+          "scoreline": "3-1",
+          "count": 4,
+          "pct": 11.8
+        },
+        {
+          "scoreline": "0-2",
+          "count": 2,
+          "pct": 5.9
+        },
+        {
+          "scoreline": "2-0",
+          "count": 2,
+          "pct": 5.9
+        },
+        {
+          "scoreline": "1-2",
+          "count": 2,
+          "pct": 5.9
+        }
+      ]
+    }
+  ],
+  "total_goal_histogram": {
+    "n_matches": 34,
+    "cap": 10,
+    "buckets": [
+      {
+        "goals": 0,
+        "label": "0",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "goals": 1,
+        "label": "1",
+        "count": 2,
+        "pct": 5.9
+      },
+      {
+        "goals": 2,
+        "label": "2",
+        "count": 6,
+        "pct": 17.6
+      },
+      {
+        "goals": 3,
+        "label": "3",
+        "count": 4,
+        "pct": 11.8
+      },
+      {
+        "goals": 4,
+        "label": "4",
+        "count": 9,
+        "pct": 26.5
+      },
+      {
+        "goals": 5,
+        "label": "5",
+        "count": 3,
+        "pct": 8.8
+      },
+      {
+        "goals": 6,
+        "label": "6",
+        "count": 4,
+        "pct": 11.8
+      },
+      {
+        "goals": 7,
+        "label": "7",
+        "count": 3,
+        "pct": 8.8
+      },
+      {
+        "goals": 8,
+        "label": "8",
+        "count": 1,
+        "pct": 2.9
+      },
+      {
+        "goals": 9,
+        "label": "9",
+        "count": 0,
+        "pct": 0.0
+      },
+      {
+        "goals": 10,
+        "label": "10+",
+        "count": 1,
+        "pct": 2.9
+      }
+    ]
+  },
+  "extreme_scorelines": {
+    "min_total": 7,
+    "count": 5,
+    "matches": [
+      {
+        "season": "2026-2027",
+        "home_score": 6,
+        "away_score": 4,
+        "scoreline": "6-4",
+        "total_goals": 10,
+        "match_date": "2026-09-15"
+      },
+      {
+        "season": "2026-2027",
+        "home_score": 5,
+        "away_score": 3,
+        "scoreline": "5-3",
+        "total_goals": 8,
+        "match_date": "2026-09-15"
+      },
+      {
+        "season": "2026-2027",
+        "home_score": 2,
+        "away_score": 5,
+        "scoreline": "2-5",
+        "total_goals": 7,
+        "match_date": "2026-08-25"
+      },
+      {
+        "season": "2026-2027",
+        "home_score": 7,
+        "away_score": 0,
+        "scoreline": "7-0",
+        "total_goals": 7,
+        "match_date": "2026-08-25"
+      },
+      {
+        "season": "2026-2027",
+        "home_score": 3,
+        "away_score": 4,
+        "scoreline": "3-4",
+        "total_goals": 7,
+        "match_date": "2026-09-01"
+      }
+    ]
+  },
+  "margin_distribution": {
+    "n_decided": 25,
+    "n_draws": 9,
+    "avg_margin": 2.32,
+    "distribution": [
+      {
+        "margin": 1,
+        "label": "1",
+        "count": 7,
+        "pct": 28.0
+      },
+      {
+        "margin": 2,
+        "label": "2",
+        "count": 11,
+        "pct": 44.0
+      },
+      {
+        "margin": 3,
+        "label": "3+",
+        "count": 7,
+        "pct": 28.0
+      }
+    ]
+  },
+  "margin_by_outcome": {
+    "home": {
+      "n_matches": 14,
+      "matches": [
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-08-18"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 7,
+          "away_score": 0,
+          "scoreline": "7-0",
+          "margin": 7,
+          "match_date": "2026-08-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-08-31"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-01"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-01"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-09-01"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 4,
+          "away_score": 1,
+          "scoreline": "4-1",
+          "margin": 3,
+          "match_date": "2026-09-04"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 4,
+          "away_score": 1,
+          "scoreline": "4-1",
+          "margin": 3,
+          "match_date": "2026-09-13"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-09-14"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 5,
+          "away_score": 3,
+          "scoreline": "5-3",
+          "margin": 2,
+          "match_date": "2026-09-15"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 6,
+          "away_score": 4,
+          "scoreline": "6-4",
+          "margin": 2,
+          "match_date": "2026-09-15"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-09-18"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 6,
+          "away_score": 0,
+          "scoreline": "6-0",
+          "margin": 6,
+          "match_date": "2026-09-18"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-21"
+        }
+      ],
+      "distribution": [
+        {
+          "margin": 1,
+          "label": "1",
+          "count": 2,
+          "pct": 14.3
+        },
+        {
+          "margin": 2,
+          "label": "2",
+          "count": 8,
+          "pct": 57.1
+        },
+        {
+          "margin": 3,
+          "label": "3+",
+          "count": 4,
+          "pct": 28.6
+        }
+      ],
+      "avg_margin": 2.64,
+      "max_margin": 7
+    },
+    "away": {
+      "n_matches": 11,
+      "matches": [
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 4,
+          "scoreline": "0-4",
+          "margin": 4,
+          "match_date": "2026-08-14"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-08-17"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-18"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-08-18"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 3,
+          "scoreline": "2-3",
+          "margin": 1,
+          "match_date": "2026-08-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 5,
+          "scoreline": "2-5",
+          "margin": 3,
+          "match_date": "2026-08-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 4,
+          "scoreline": "2-4",
+          "margin": 2,
+          "match_date": "2026-08-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-09-01"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 4,
+          "scoreline": "3-4",
+          "margin": 1,
+          "match_date": "2026-09-01"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-09-15"
+        }
+      ],
+      "distribution": [
+        {
+          "margin": 1,
+          "label": "1",
+          "count": 5,
+          "pct": 45.5
+        },
+        {
+          "margin": 2,
+          "label": "2",
+          "count": 3,
+          "pct": 27.3
+        },
+        {
+          "margin": 3,
+          "label": "3+",
+          "count": 3,
+          "pct": 27.3
+        }
+      ],
+      "avg_margin": 1.91,
+      "max_margin": 4
+    }
+  },
+  "common_scorelines": {
+    "home": {
+      "n_matches": 14,
+      "scoreline": "3-1",
+      "count": 4,
+      "pct": 28.6
+    },
+    "draw": {
+      "n_matches": 9,
+      "scoreline": "2-2",
+      "count": 4,
+      "pct": 44.4
+    },
+    "away": {
+      "n_matches": 11,
+      "scoreline": "0-2",
+      "count": 2,
+      "pct": 18.2
+    }
+  }
+}

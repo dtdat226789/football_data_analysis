@@ -1,0 +1,338 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:03:05+00:00",
+  "config": {
+    "league": "kuwait",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\kuwait",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier League",
+    "country": "Kuwait",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/kuwait/premier-league"
+  },
+  "overall": {
+    "n_matches": 116,
+    "home_wins": 48,
+    "draws": 29,
+    "away_wins": 39,
+    "home_win_pct": 41.4,
+    "draw_pct": 25.0,
+    "away_win_pct": 33.6,
+    "home_goals": 174,
+    "away_goals": 137,
+    "total_goals": 311,
+    "avg_goals": 2.681,
+    "goalless": 8,
+    "goalless_pct": 6.9
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 98,
+      "home_wins": 40,
+      "draws": 25,
+      "away_wins": 33,
+      "home_win_pct": 40.8,
+      "draw_pct": 25.5,
+      "away_win_pct": 33.7,
+      "home_goals": 145,
+      "away_goals": 112,
+      "total_goals": 257,
+      "avg_goals": 2.622,
+      "goalless": 7,
+      "goalless_pct": 7.1
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 18,
+      "home_wins": 8,
+      "draws": 4,
+      "away_wins": 6,
+      "home_win_pct": 44.4,
+      "draw_pct": 22.2,
+      "away_win_pct": 33.3,
+      "home_goals": 29,
+      "away_goals": 25,
+      "total_goals": 54,
+      "avg_goals": 3.0,
+      "goalless": 1,
+      "goalless_pct": 5.6
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 33,
+        "draw": 7,
+        "away": 0
+      },
+      "draw": {
+        "home": 13,
+        "draw": 15,
+        "away": 15
+      },
+      "away": {
+        "home": 2,
+        "draw": 7,
+        "away": 24
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 82.5,
+        "draw": 17.5,
+        "away": 0.0
+      },
+      "draw": {
+        "home": 30.2,
+        "draw": 34.9,
+        "away": 34.9
+      },
+      "away": {
+        "home": 6.1,
+        "draw": 21.2,
+        "away": 72.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 2,
+      "pct": 1.7,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Kazma SC",
+          "away_team": "Al Qadisiya",
+          "ht_score": "1-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Al Jahra",
+          "away_team": "Al Arabi",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 0,
+      "pct": 0.0,
+      "matches": []
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 40,
+      "home": {
+        "count": 33,
+        "pct": 82.5
+      },
+      "draw": {
+        "count": 7,
+        "pct": 17.5
+      },
+      "away": {
+        "count": 0,
+        "pct": 0.0
+      }
+    },
+    "ht_draw": {
+      "n_matches": 43,
+      "home": {
+        "count": 13,
+        "pct": 30.2
+      },
+      "draw": {
+        "count": 15,
+        "pct": 34.9
+      },
+      "away": {
+        "count": 15,
+        "pct": 34.9
+      }
+    },
+    "away_lead": {
+      "n_matches": 33,
+      "home": {
+        "count": 2,
+        "pct": 6.1
+      },
+      "draw": {
+        "count": 7,
+        "pct": 21.2
+      },
+      "away": {
+        "count": 24,
+        "pct": 72.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 116,
+    "n_with_first_goal": 108,
+    "n_goalless": 8,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 30,
+        "home": {
+          "count": 19,
+          "pct": 63.3
+        },
+        "draw": {
+          "count": 5,
+          "pct": 16.7
+        },
+        "away": {
+          "count": 6,
+          "pct": 20.0
+        },
+        "pct_of_matches": 25.9
+      },
+      "16-30": {
+        "n_matches": 26,
+        "home": {
+          "count": 10,
+          "pct": 38.5
+        },
+        "draw": {
+          "count": 6,
+          "pct": 23.1
+        },
+        "away": {
+          "count": 10,
+          "pct": 38.5
+        },
+        "pct_of_matches": 22.4
+      },
+      "31-45": {
+        "n_matches": 21,
+        "home": {
+          "count": 6,
+          "pct": 28.6
+        },
+        "draw": {
+          "count": 5,
+          "pct": 23.8
+        },
+        "away": {
+          "count": 10,
+          "pct": 47.6
+        },
+        "pct_of_matches": 18.1
+      },
+      "46-60": {
+        "n_matches": 19,
+        "home": {
+          "count": 7,
+          "pct": 36.8
+        },
+        "draw": {
+          "count": 4,
+          "pct": 21.1
+        },
+        "away": {
+          "count": 8,
+          "pct": 42.1
+        },
+        "pct_of_matches": 16.4
+      },
+      "61-75": {
+        "n_matches": 7,
+        "home": {
+          "count": 3,
+          "pct": 42.9
+        },
+        "draw": {
+          "count": 1,
+          "pct": 14.3
+        },
+        "away": {
+          "count": 3,
+          "pct": 42.9
+        },
+        "pct_of_matches": 6.0
+      },
+      "76-90": {
+        "n_matches": 4,
+        "home": {
+          "count": 2,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 2,
+          "pct": 50.0
+        },
+        "pct_of_matches": 3.4
+      },
+      "91-120": {
+        "n_matches": 1,
+        "home": {
+          "count": 1,
+          "pct": 100.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "pct_of_matches": 0.9
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 116,
+      "count": 8,
+      "pct": 6.9
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 98,
+        "count": 7,
+        "pct": 7.1
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 18,
+        "count": 1,
+        "pct": 5.6
+      }
+    ]
+  }
+}

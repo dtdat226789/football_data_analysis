@@ -81,8 +81,13 @@ def analysis_chart(league: str, chart: str) -> FileResponse:
     report_dir = common.league_report_dir(league)
     if report_dir is None:
         raise HTTPException(status_code=404, detail=f"no data for league '{league}'")
-    path = report_dir / "charts" / chart
-    if not (path.is_file() and chart.endswith(".png")):
+    charts_dir = (report_dir / "charts").resolve()
+    path = (charts_dir / chart).resolve()
+    if not (
+        path.is_file()
+        and chart.endswith(".png")
+        and path.is_relative_to(charts_dir)
+    ):
         raise HTTPException(status_code=404, detail=f"chart '{chart}' not found")
     return FileResponse(path, media_type="image/png")
 

@@ -1,0 +1,467 @@
+{
+  "report_name": "findings",
+  "script": {
+    "name": "backend/scripts/compile_findings.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:50:27+00:00",
+  "config": {
+    "league": "turkey2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\turkey2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "1. Lig",
+    "country": "Turkey",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/turkey/1-lig"
+  },
+  "sources": [
+    {
+      "report_name": "database_profile",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\database_profile.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 29.95
+    },
+    {
+      "report_name": "matches_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\matches_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 10.11
+    },
+    {
+      "report_name": "goals_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\goals_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 6.32
+    },
+    {
+      "report_name": "teams_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\teams_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 36.69
+    },
+    {
+      "report_name": "season_trends",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\season_trends.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 3.93
+    },
+    {
+      "report_name": "scoreline_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\scoreline_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 79.01
+    },
+    {
+      "report_name": "relationships",
+      "path": "E:\\football_data_analysis\\data\\analysis\\turkey2\\relationships.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 14.35
+    }
+  ],
+  "coverage": {
+    "found": 7,
+    "total": 7,
+    "missing": []
+  },
+  "key_findings": [
+    {
+      "source": "matches_analysis",
+      "finding": "Outcome split across all seasons",
+      "detail": "465 matches: home wins 43.7%, draws 26.5%, away wins 29.9% (203H / 123D / 139A)",
+      "importance": "medium",
+      "id": "F1"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Comeback wins",
+      "detail": "10 home and 11 away comebacks (trailing at HT but winning at FT)",
+      "importance": "medium",
+      "id": "F2"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Most common HT/FT flow",
+      "detail": "home lead at HT -> home win occurred 119 times",
+      "importance": "low",
+      "id": "F3"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average goals per match",
+      "detail": "465 matches produced 1332 goals (avg 2.865 per match)",
+      "importance": "medium",
+      "id": "F4"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Home goal share",
+      "detail": "home 57.1% vs away 42.9% of 1332 goals in total (home/away ratio 1.33)",
+      "importance": "medium",
+      "id": "F5"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Both teams to score",
+      "detail": "235 of 465 matches (50.5%)",
+      "importance": "medium",
+      "id": "F6"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Most common first-goal bucket",
+      "detail": "minute 1-15 (first goal in 140 scoring matches, 32.6% of scoring)",
+      "importance": "low",
+      "id": "F7"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average first goal minute",
+      "detail": "mean 30.48, median 26.5",
+      "importance": "low",
+      "id": "F8"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Dominant team by lifetime points",
+      "detail": "Erzurumspor leads with 81 points across 1 seasons (1 title(s), GD 55)",
+      "importance": "high",
+      "id": "F9"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Team consistency",
+      "detail": "13 teams present in every one of the 2 seasons (Bandirmaspor, Bodrumspor, Boluspor, Erokspor, Igdir FK...)",
+      "importance": "medium",
+      "id": "F10"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Biggest home advantage",
+      "detail": "Amedspor earns 20 more points at home than away (47 home vs 27 away)",
+      "importance": "medium",
+      "id": "F11"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Champion with most titles",
+      "detail": "Erzurumspor won 1 of 2 championship(s) on record",
+      "importance": "high",
+      "id": "F12"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Tightest title race",
+      "detail": "2026-2027: Kayserispor beat Bursaspor by 0 pts",
+      "importance": "medium",
+      "id": "F13"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Average-goals trend",
+      "detail": "down (-0.335 per match): first half 2.922 vs last half 2.587 across 2 seasons",
+      "importance": "medium",
+      "id": "F14"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Largest view divergence",
+      "detail": "2025-2026 (goals view, avg abs position diff 7.300)",
+      "importance": "low",
+      "id": "F15"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Smallest view divergence",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.700)",
+      "importance": "low",
+      "id": "F16"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common scoreline",
+      "detail": "1-1 in 66 matches (14.2%)",
+      "importance": "medium",
+      "id": "F17"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common home-win scoreline",
+      "detail": "2-0 (38 of 203 home matches, 18.7%)",
+      "importance": "low",
+      "id": "F18"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common draw scoreline",
+      "detail": "1-1 (66 of 123 draw matches, 53.7%)",
+      "importance": "low",
+      "id": "F19"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common away-win scoreline",
+      "detail": "1-2 (31 of 139 away matches, 22.3%)",
+      "importance": "low",
+      "id": "F20"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Extreme scorelines",
+      "detail": "18 match(es) with >= 7 total goals",
+      "importance": "low",
+      "id": "F21"
+    },
+    {
+      "source": "relationships",
+      "finding": "Strongest correlation with total goals",
+      "detail": "away_team_goals_conceded_last_5 |corr| = 0.2214 (n=465 leakage-safe rows)",
+      "importance": "medium",
+      "id": "F22"
+    },
+    {
+      "source": "relationships",
+      "finding": "Most outcome-separating feature",
+      "detail": "points_difference spreads group means over 12.221: home 5.005, draw -0.528, away -7.216",
+      "importance": "medium",
+      "id": "F23"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data-quality warnings (8)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE",
+      "importance": "high",
+      "id": "F24"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data coverage",
+      "detail": "2 of 2 registered seasons populated (100.0%); 465 matches observed",
+      "importance": "medium",
+      "id": "F25"
+    }
+  ],
+  "headline_stats": {
+    "n_matches": 465,
+    "avg_goals": 2.865,
+    "home_win_pct": 43.7,
+    "draw_pct": 26.5,
+    "away_win_pct": 29.9,
+    "most_common_scoreline": "1-1",
+    "dominant_team": "Erzurumspor",
+    "champion_most_titles": "Erzurumspor",
+    "btts_rate_pct": 50.5
+  },
+  "comparison": [
+    {
+      "module": "database_profile",
+      "report_name": "database_profile",
+      "sections": [
+        "observed",
+        "calculated",
+        "warnings"
+      ],
+      "size_kb": 29.95
+    },
+    {
+      "module": "matches_analysis",
+      "report_name": "matches_analysis",
+      "sections": [
+        "overall",
+        "per_season",
+        "ht_ft_matrix",
+        "comebacks",
+        "ht_lead_conversion",
+        "first_goal_timing",
+        "goalless"
+      ],
+      "size_kb": 10.11
+    },
+    {
+      "module": "goals_analysis",
+      "report_name": "goals_analysis",
+      "sections": [
+        "goals_distribution",
+        "goals_per_season",
+        "goal_share",
+        "btts",
+        "clean_sheets",
+        "scoring_intensity",
+        "first_goal_timing"
+      ],
+      "size_kb": 6.32
+    },
+    {
+      "module": "teams_analysis",
+      "report_name": "teams_analysis",
+      "sections": [
+        "teams",
+        "home_away",
+        "top_performers",
+        "consistent_teams",
+        "head_to_head",
+        "position_table"
+      ],
+      "size_kb": 36.69
+    },
+    {
+      "module": "season_trends",
+      "report_name": "season_trends",
+      "sections": [
+        "champions",
+        "title_race",
+        "points_thresholds",
+        "relegation_battle",
+        "league_trends",
+        "view_divergence"
+      ],
+      "size_kb": 3.93
+    },
+    {
+      "module": "scoreline_analysis",
+      "report_name": "scoreline_analysis",
+      "sections": [
+        "scoreline_frequency",
+        "scoreline_per_season",
+        "total_goal_histogram",
+        "extreme_scorelines",
+        "margin_distribution",
+        "margin_by_outcome",
+        "common_scorelines"
+      ],
+      "size_kb": 79.01
+    },
+    {
+      "module": "relationships",
+      "report_name": "relationships",
+      "sections": [
+        "n_matches",
+        "feature_count",
+        "correlation_matrix",
+        "form_vs_outcome",
+        "position_vs_outcome",
+        "rest_advantage",
+        "home_quality",
+        "feature_by_result"
+      ],
+      "size_kb": 14.35
+    }
+  ],
+  "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 385 matches, expected 380",
+      "details": {
+        "season": "2025-2026",
+        "n_matches": 385,
+        "expected": 380
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 80 matches, expected 380",
+      "details": {
+        "season": "2026-2027",
+        "n_matches": 80,
+        "expected": 380
+      }
+    },
+    {
+      "code": "SEASON_STATE_NOT_COMPLETE",
+      "severity": "warning",
+      "message": "Season 2026-2027 has data but state is 'in_progress'",
+      "details": {
+        "season": "2026-2027",
+        "season_state": "in_progress"
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 35.0% vs overall 43.7%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "home",
+        "season_share": 35.0,
+        "overall_share": 43.7
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 draw outcome share 35.0% vs overall 26.5%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "draw",
+        "season_share": 35.0,
+        "overall_share": 26.5
+      }
+    },
+    {
+      "code": "HIGH_SCORING_MATCHES",
+      "severity": "warning",
+      "message": "4 match(es) with >= 8 total goals (extreme scorelines)",
+      "details": {
+        "n_matches": 4,
+        "threshold": 8,
+        "examples": [
+          {
+            "scoreline": "8-1",
+            "total_goals": 9,
+            "count": 2
+          },
+          {
+            "scoreline": "2-7",
+            "total_goals": 9,
+            "count": 1
+          },
+          {
+            "scoreline": "1-8",
+            "total_goals": 9,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "code": "DUPLICATE_ROWS",
+      "severity": "warning",
+      "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
+      "details": {
+        "check": "matches same fixture on same date (league_season, home, away, match_date)",
+        "rows": 34497,
+        "distinct": 34452,
+        "duplicates": 45
+      }
+    },
+    {
+      "code": "FIRST_GOAL_NULL_INCONSISTENCY",
+      "severity": "warning",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=31, fgte=31 rows)",
+      "details": {
+        "total": 34497,
+        "fgt_inconsistent": 31,
+        "fgte_inconsistent": 31,
+        "n_with_fgt": 32035
+      }
+    }
+  ],
+  "methodology": "Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power."
+}

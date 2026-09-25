@@ -1,0 +1,535 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:57:38+00:00",
+  "config": {
+    "league": "eng1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\eng1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "League One",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/league-one"
+  },
+  "overall": {
+    "n_matches": 640,
+    "home_wins": 286,
+    "draws": 166,
+    "away_wins": 188,
+    "home_win_pct": 44.7,
+    "draw_pct": 25.9,
+    "away_win_pct": 29.4,
+    "home_goals": 952,
+    "away_goals": 753,
+    "total_goals": 1705,
+    "avg_goals": 2.664,
+    "goalless": 41,
+    "goalless_pct": 6.4
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 557,
+      "home_wins": 257,
+      "draws": 139,
+      "away_wins": 161,
+      "home_win_pct": 46.1,
+      "draw_pct": 25.0,
+      "away_win_pct": 28.9,
+      "home_goals": 823,
+      "away_goals": 639,
+      "total_goals": 1462,
+      "avg_goals": 2.625,
+      "goalless": 33,
+      "goalless_pct": 5.9
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 83,
+      "home_wins": 29,
+      "draws": 27,
+      "away_wins": 27,
+      "home_win_pct": 34.9,
+      "draw_pct": 32.5,
+      "away_win_pct": 32.5,
+      "home_goals": 129,
+      "away_goals": 114,
+      "total_goals": 243,
+      "avg_goals": 2.928,
+      "goalless": 8,
+      "goalless_pct": 9.6
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 169,
+        "draw": 40,
+        "away": 11
+      },
+      "draw": {
+        "home": 98,
+        "draw": 90,
+        "away": 76
+      },
+      "away": {
+        "home": 19,
+        "draw": 36,
+        "away": 101
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 76.8,
+        "draw": 18.2,
+        "away": 5.0
+      },
+      "draw": {
+        "home": 37.1,
+        "draw": 34.1,
+        "away": 28.8
+      },
+      "away": {
+        "home": 12.2,
+        "draw": 23.1,
+        "away": 64.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 19,
+      "pct": 3.0,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Cardiff",
+          "away_team": "Peterborough",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Barnsley",
+          "away_team": "Burton",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Stockport County",
+          "away_team": "Burton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "AFC Wimbledon",
+          "away_team": "Rotherham",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Mansfield",
+          "away_team": "Rotherham",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Cardiff",
+          "away_team": "Reading",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Northampton",
+          "away_team": "Mansfield",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Leyton Orient",
+          "away_team": "Exeter",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Bolton",
+          "away_team": "Exeter",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Barnsley",
+          "away_team": "Leyton Orient",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Port Vale",
+          "away_team": "Blackpool",
+          "ht_score": "0-1",
+          "ft_score": "5-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Rotherham",
+          "away_team": "Northampton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Stockport County",
+          "away_team": "Plymouth",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Huddersfield",
+          "away_team": "Barnsley",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Bolton",
+          "away_team": "Wycombe",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Blackpool",
+          "away_team": "Port Vale",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Plymouth",
+          "away_team": "Huddersfield",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Notts County",
+          "away_team": "Burton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Cambridge Utd",
+          "away_team": "Reading",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 11,
+      "pct": 1.7,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Stockport County",
+          "away_team": "Bradford City",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Port Vale",
+          "away_team": "Stevenage",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Northampton",
+          "away_team": "Rotherham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Huddersfield",
+          "away_team": "Bolton",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Doncaster",
+          "away_team": "Northampton",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Barnsley",
+          "away_team": "Mansfield",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Rotherham",
+          "away_team": "Doncaster",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "AFC Wimbledon",
+          "away_team": "Leyton Orient",
+          "ht_score": "2-1",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Wycombe",
+          "away_team": "Bradford City",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Bolton",
+          "away_team": "Luton",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Reading",
+          "away_team": "Luton",
+          "ht_score": "3-1",
+          "ft_score": "3-4"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 220,
+      "home": {
+        "count": 169,
+        "pct": 76.8
+      },
+      "draw": {
+        "count": 40,
+        "pct": 18.2
+      },
+      "away": {
+        "count": 11,
+        "pct": 5.0
+      }
+    },
+    "ht_draw": {
+      "n_matches": 264,
+      "home": {
+        "count": 98,
+        "pct": 37.1
+      },
+      "draw": {
+        "count": 90,
+        "pct": 34.1
+      },
+      "away": {
+        "count": 76,
+        "pct": 28.8
+      }
+    },
+    "away_lead": {
+      "n_matches": 156,
+      "home": {
+        "count": 19,
+        "pct": 12.2
+      },
+      "draw": {
+        "count": 36,
+        "pct": 23.1
+      },
+      "away": {
+        "count": 101,
+        "pct": 64.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 640,
+    "n_with_first_goal": 599,
+    "n_goalless": 41,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 196,
+        "home": {
+          "count": 93,
+          "pct": 47.4
+        },
+        "draw": {
+          "count": 47,
+          "pct": 24.0
+        },
+        "away": {
+          "count": 56,
+          "pct": 28.6
+        },
+        "pct_of_matches": 30.6
+      },
+      "16-30": {
+        "n_matches": 139,
+        "home": {
+          "count": 69,
+          "pct": 49.6
+        },
+        "draw": {
+          "count": 32,
+          "pct": 23.0
+        },
+        "away": {
+          "count": 38,
+          "pct": 27.3
+        },
+        "pct_of_matches": 21.7
+      },
+      "31-45": {
+        "n_matches": 100,
+        "home": {
+          "count": 48,
+          "pct": 48.0
+        },
+        "draw": {
+          "count": 19,
+          "pct": 19.0
+        },
+        "away": {
+          "count": 33,
+          "pct": 33.0
+        },
+        "pct_of_matches": 15.6
+      },
+      "46-60": {
+        "n_matches": 79,
+        "home": {
+          "count": 36,
+          "pct": 45.6
+        },
+        "draw": {
+          "count": 14,
+          "pct": 17.7
+        },
+        "away": {
+          "count": 29,
+          "pct": 36.7
+        },
+        "pct_of_matches": 12.3
+      },
+      "61-75": {
+        "n_matches": 47,
+        "home": {
+          "count": 18,
+          "pct": 38.3
+        },
+        "draw": {
+          "count": 12,
+          "pct": 25.5
+        },
+        "away": {
+          "count": 17,
+          "pct": 36.2
+        },
+        "pct_of_matches": 7.3
+      },
+      "76-90": {
+        "n_matches": 28,
+        "home": {
+          "count": 16,
+          "pct": 57.1
+        },
+        "draw": {
+          "count": 1,
+          "pct": 3.6
+        },
+        "away": {
+          "count": 11,
+          "pct": 39.3
+        },
+        "pct_of_matches": 4.4
+      },
+      "91-120": {
+        "n_matches": 10,
+        "home": {
+          "count": 6,
+          "pct": 60.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 4,
+          "pct": 40.0
+        },
+        "pct_of_matches": 1.6
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 640,
+      "count": 41,
+      "pct": 6.4
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 557,
+        "count": 33,
+        "pct": 5.9
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 83,
+        "count": 8,
+        "pct": 9.6
+      }
+    ]
+  }
+}

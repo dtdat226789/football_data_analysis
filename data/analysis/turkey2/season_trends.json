@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:50:21+00:00",
+  "config": {
+    "league": "turkey2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\turkey2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "1. Lig",
+    "country": "Turkey",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/turkey/1-lig"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Erzurumspor",
+      "champion_id": 1792,
+      "champion_pts": 81,
+      "runner_up": "Corum",
+      "runner_up_id": 1791,
+      "margin_pts": 4
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Kayserispor",
+      "champion_id": 1789,
+      "champion_pts": 19,
+      "runner_up": "Bursaspor",
+      "runner_up_id": 1810,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 4,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "Kayserispor",
+      "runner_up": "Bursaspor"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 81,
+        "2": 77,
+        "4": 74,
+        "6": 63,
+        "17": 39,
+        "20": 6
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 19,
+        "2": 19,
+        "4": 16,
+        "6": 13,
+        "17": 6,
+        "20": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 17,
+      "safe_pts": 39,
+      "drop_position": 18,
+      "drop_pts": 34,
+      "gap": 5,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 34
+        },
+        {
+          "position": 19,
+          "points": 14
+        },
+        {
+          "position": 20,
+          "points": 6
+        }
+      ],
+      "bottom3_range": 28
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 17,
+      "safe_pts": 6,
+      "drop_position": 18,
+      "drop_pts": 5,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 5
+        },
+        {
+          "position": 19,
+          "points": 5
+        },
+        {
+          "position": 20,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 385,
+      "total_goals": 1125,
+      "avg_goals": 2.922,
+      "home_wins": 175,
+      "draws": 95,
+      "away_wins": 115,
+      "home_win_pct": 45.5,
+      "draw_pct": 24.7,
+      "away_win_pct": 29.9,
+      "goalless": 28,
+      "goalless_pct": 7.3,
+      "total_points": 1057,
+      "avg_points_per_team": 52.85,
+      "n_teams": 20
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 80,
+      "total_goals": 207,
+      "avg_goals": 2.587,
+      "home_wins": 28,
+      "draws": 28,
+      "away_wins": 24,
+      "home_win_pct": 35.0,
+      "draw_pct": 35.0,
+      "away_win_pct": 30.0,
+      "goalless": 6,
+      "goalless_pct": 7.5,
+      "total_points": 212,
+      "avg_points_per_team": 10.6,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 4.3,
+        "goals": 7.3
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.7,
+        "goals": 6.3
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 7.3
+    }
+  }
+}

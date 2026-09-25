@@ -1,0 +1,2861 @@
+{
+  "report_name": "scoreline_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_scorelines.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:02:04+00:00",
+  "config": {
+    "league": "italy2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\italy2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie B",
+    "country": "Italy",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/italy/serie-b"
+  },
+  "scoreline_frequency": {
+    "n_matches": 440,
+    "n_distinct_scorelines": 27,
+    "top": [
+      {
+        "scoreline": "1-1",
+        "count": 69,
+        "pct": 15.7
+      },
+      {
+        "scoreline": "1-0",
+        "count": 49,
+        "pct": 11.1
+      },
+      {
+        "scoreline": "2-1",
+        "count": 39,
+        "pct": 8.9
+      },
+      {
+        "scoreline": "2-0",
+        "count": 32,
+        "pct": 7.3
+      },
+      {
+        "scoreline": "1-2",
+        "count": 32,
+        "pct": 7.3
+      },
+      {
+        "scoreline": "0-0",
+        "count": 31,
+        "pct": 7.0
+      },
+      {
+        "scoreline": "2-2",
+        "count": 30,
+        "pct": 6.8
+      },
+      {
+        "scoreline": "0-1",
+        "count": 28,
+        "pct": 6.4
+      },
+      {
+        "scoreline": "3-1",
+        "count": 24,
+        "pct": 5.5
+      },
+      {
+        "scoreline": "3-0",
+        "count": 23,
+        "pct": 5.2
+      },
+      {
+        "scoreline": "0-2",
+        "count": 16,
+        "pct": 3.6
+      },
+      {
+        "scoreline": "1-3",
+        "count": 12,
+        "pct": 2.7
+      },
+      {
+        "scoreline": "3-2",
+        "count": 11,
+        "pct": 2.5
+      },
+      {
+        "scoreline": "0-3",
+        "count": 9,
+        "pct": 2.0
+      },
+      {
+        "scoreline": "5-0",
+        "count": 5,
+        "pct": 1.1
+      },
+      {
+        "scoreline": "4-0",
+        "count": 4,
+        "pct": 0.9
+      },
+      {
+        "scoreline": "4-1",
+        "count": 4,
+        "pct": 0.9
+      },
+      {
+        "scoreline": "3-3",
+        "count": 4,
+        "pct": 0.9
+      },
+      {
+        "scoreline": "2-3",
+        "count": 4,
+        "pct": 0.9
+      },
+      {
+        "scoreline": "0-4",
+        "count": 3,
+        "pct": 0.7
+      }
+    ]
+  },
+  "scoreline_per_season": [
+    {
+      "season": "2025-2026",
+      "top": [
+        {
+          "scoreline": "1-1",
+          "count": 60,
+          "pct": 15.4
+        },
+        {
+          "scoreline": "1-0",
+          "count": 43,
+          "pct": 11.0
+        },
+        {
+          "scoreline": "2-1",
+          "count": 34,
+          "pct": 8.7
+        },
+        {
+          "scoreline": "2-0",
+          "count": 30,
+          "pct": 7.7
+        },
+        {
+          "scoreline": "0-0",
+          "count": 30,
+          "pct": 7.7
+        }
+      ]
+    },
+    {
+      "season": "2026-2027",
+      "top": [
+        {
+          "scoreline": "1-1",
+          "count": 9,
+          "pct": 18.0
+        },
+        {
+          "scoreline": "1-0",
+          "count": 6,
+          "pct": 12.0
+        },
+        {
+          "scoreline": "1-2",
+          "count": 6,
+          "pct": 12.0
+        },
+        {
+          "scoreline": "0-1",
+          "count": 5,
+          "pct": 10.0
+        },
+        {
+          "scoreline": "3-1",
+          "count": 5,
+          "pct": 10.0
+        }
+      ]
+    }
+  ],
+  "total_goal_histogram": {
+    "n_matches": 440,
+    "cap": 10,
+    "buckets": [
+      {
+        "goals": 0,
+        "label": "0",
+        "count": 31,
+        "pct": 7.0
+      },
+      {
+        "goals": 1,
+        "label": "1",
+        "count": 77,
+        "pct": 17.5
+      },
+      {
+        "goals": 2,
+        "label": "2",
+        "count": 117,
+        "pct": 26.6
+      },
+      {
+        "goals": 3,
+        "label": "3",
+        "count": 103,
+        "pct": 23.4
+      },
+      {
+        "goals": 4,
+        "label": "4",
+        "count": 73,
+        "pct": 16.6
+      },
+      {
+        "goals": 5,
+        "label": "5",
+        "count": 26,
+        "pct": 5.9
+      },
+      {
+        "goals": 6,
+        "label": "6",
+        "count": 8,
+        "pct": 1.8
+      },
+      {
+        "goals": 7,
+        "label": "7",
+        "count": 5,
+        "pct": 1.1
+      },
+      {
+        "goals": 8,
+        "label": "8",
+        "count": 0,
+        "pct": 0.0
+      },
+      {
+        "goals": 9,
+        "label": "9",
+        "count": 0,
+        "pct": 0.0
+      },
+      {
+        "goals": 10,
+        "label": "10+",
+        "count": 0,
+        "pct": 0.0
+      }
+    ]
+  },
+  "extreme_scorelines": {
+    "min_total": 7,
+    "count": 5,
+    "matches": [
+      {
+        "season": "2025-2026",
+        "home_score": 3,
+        "away_score": 4,
+        "scoreline": "3-4",
+        "total_goals": 7,
+        "match_date": "2025-09-21"
+      },
+      {
+        "season": "2025-2026",
+        "home_score": 4,
+        "away_score": 3,
+        "scoreline": "4-3",
+        "total_goals": 7,
+        "match_date": "2025-11-01"
+      },
+      {
+        "season": "2025-2026",
+        "home_score": 2,
+        "away_score": 5,
+        "scoreline": "2-5",
+        "total_goals": 7,
+        "match_date": "2026-01-24"
+      },
+      {
+        "season": "2025-2026",
+        "home_score": 6,
+        "away_score": 1,
+        "scoreline": "6-1",
+        "total_goals": 7,
+        "match_date": "2026-04-18"
+      },
+      {
+        "season": "2025-2026",
+        "home_score": 3,
+        "away_score": 4,
+        "scoreline": "3-4",
+        "total_goals": 7,
+        "match_date": "2026-05-08"
+      }
+    ]
+  },
+  "margin_distribution": {
+    "n_decided": 306,
+    "n_draws": 134,
+    "avg_margin": 1.7,
+    "distribution": [
+      {
+        "margin": 1,
+        "label": "1",
+        "count": 166,
+        "pct": 54.2
+      },
+      {
+        "margin": 2,
+        "label": "2",
+        "count": 87,
+        "pct": 28.4
+      },
+      {
+        "margin": 3,
+        "label": "3+",
+        "count": 53,
+        "pct": 17.3
+      }
+    ]
+  },
+  "margin_by_outcome": {
+    "home": {
+      "n_matches": 196,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-08-23"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-08-23"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-08-23"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-08-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-08-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-08-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-08-30"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-08-31"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-09-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-09-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-09-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-09-19"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-09-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 0,
+          "scoreline": "4-0",
+          "margin": 4,
+          "match_date": "2025-09-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-09-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-09-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-09-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-09-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-09-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-09-30"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-09-30"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-10-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-10-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-10-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-10-05"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 1,
+          "scoreline": "4-1",
+          "margin": 3,
+          "match_date": "2025-10-05"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-10-05"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-10-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-10-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-10-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-10-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-10-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2025-10-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-10-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-10-26"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-10-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 0,
+          "scoreline": "4-0",
+          "margin": 4,
+          "match_date": "2025-10-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-10-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-10-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 3,
+          "scoreline": "4-3",
+          "margin": 1,
+          "match_date": "2025-11-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 5,
+          "away_score": 0,
+          "scoreline": "5-0",
+          "margin": 5,
+          "match_date": "2025-11-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-02"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-11-02"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-11-02"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-02"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-11-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-11-09"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 1,
+          "scoreline": "4-1",
+          "margin": 3,
+          "match_date": "2025-11-23"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-23"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 5,
+          "away_score": 0,
+          "scoreline": "5-0",
+          "margin": 5,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 5,
+          "away_score": 0,
+          "scoreline": "5-0",
+          "margin": 5,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-11-30"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2025-12-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2025-12-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-12-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-12-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-12-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-12-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2025-12-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2025-12-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 1,
+          "scoreline": "4-1",
+          "margin": 3,
+          "match_date": "2025-12-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-12-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-12-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-12-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2025-12-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-12-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2025-12-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-12-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2025-12-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-01-11"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-01-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-01-23"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-01-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-01-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-01-31"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-01-31"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-01-31"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-01-31"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-02-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-02-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-02-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-02-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-02-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-02-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-02-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-02-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-02-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-02-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-02-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-02-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-02-15"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-02-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-02-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-02-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-02-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-03"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 0,
+          "scoreline": "4-0",
+          "margin": 4,
+          "match_date": "2026-03-03"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 2,
+          "scoreline": "4-2",
+          "margin": 2,
+          "match_date": "2026-03-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-03-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-03-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-03-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-03-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-03-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 0,
+          "scoreline": "4-0",
+          "margin": 4,
+          "match_date": "2026-03-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-03-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 1,
+          "scoreline": "4-1",
+          "margin": 3,
+          "match_date": "2026-03-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-03-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-03-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-03-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-03-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-03-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-03-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-03-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-03-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 2,
+          "scoreline": "4-2",
+          "margin": 2,
+          "match_date": "2026-03-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-03-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-03-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-05"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-05"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-04-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-04-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-04-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-04-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-04-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-11"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-11"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-04-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 6,
+          "away_score": 1,
+          "scoreline": "6-1",
+          "margin": 5,
+          "match_date": "2026-04-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-04-19"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-04-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 4,
+          "away_score": 2,
+          "scoreline": "4-2",
+          "margin": 2,
+          "match_date": "2026-04-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-04-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-04-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-04-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 5,
+          "away_score": 0,
+          "scoreline": "5-0",
+          "margin": 5,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-05-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-05-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-05-19"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-05-20"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 2,
+          "scoreline": "3-2",
+          "margin": 1,
+          "match_date": "2026-08-21"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-08-22"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-08-22"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-08-23"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 0,
+          "scoreline": "3-0",
+          "margin": 3,
+          "match_date": "2026-08-29"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-08-30"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-08-30"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-09-05"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-09-05"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 5,
+          "away_score": 0,
+          "scoreline": "5-0",
+          "margin": 5,
+          "match_date": "2026-09-06"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-06"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-07"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-11"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-09-12"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-09-12"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-09-13"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-09-19"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-09-19"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 3,
+          "away_score": 1,
+          "scoreline": "3-1",
+          "margin": 2,
+          "match_date": "2026-09-19"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-09-20"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-09-20"
+        }
+      ],
+      "distribution": [
+        {
+          "margin": 1,
+          "label": "1",
+          "count": 100,
+          "pct": 51.0
+        },
+        {
+          "margin": 2,
+          "label": "2",
+          "count": 59,
+          "pct": 30.1
+        },
+        {
+          "margin": 3,
+          "label": "3+",
+          "count": 37,
+          "pct": 18.9
+        }
+      ],
+      "avg_margin": 1.76,
+      "max_margin": 5
+    },
+    "away": {
+      "n_matches": 110,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2025-08-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-08-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-08-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-09-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-09-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-09-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-09-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2025-09-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2025-09-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 4,
+          "scoreline": "3-4",
+          "margin": 1,
+          "match_date": "2025-09-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 5,
+          "scoreline": "1-5",
+          "margin": 4,
+          "match_date": "2025-09-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-09-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-10-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-10-04"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-10-05"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-10-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-10-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-10-19"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-10-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 4,
+          "scoreline": "0-4",
+          "margin": 4,
+          "match_date": "2025-10-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2025-10-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2025-10-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-11-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-11-02"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-11-09"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2025-11-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-11-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 3,
+          "scoreline": "2-3",
+          "margin": 1,
+          "match_date": "2025-11-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-11-29"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2025-12-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-12-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-12-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-12-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-12-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2025-12-13"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-12-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-12-19"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-12-20"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2025-12-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2025-12-26"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-01-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-01-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-01-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-01-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-01-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-01-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-01-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 5,
+          "scoreline": "2-5",
+          "margin": 3,
+          "match_date": "2026-01-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-01-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-01-30"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-02-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-02-10"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-02-11"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-11"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 4,
+          "scoreline": "0-4",
+          "margin": 4,
+          "match_date": "2026-02-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-02-15"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-15"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-02-15"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-02-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 3,
+          "scoreline": "2-3",
+          "margin": 1,
+          "match_date": "2026-02-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-02-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-02-27"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-02-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-02-28"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 4,
+          "scoreline": "0-4",
+          "margin": 4,
+          "match_date": "2026-03-03"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-03-03"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-03-07"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-03-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-03-14"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-03-15"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-03-21"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-03-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-03-22"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 3,
+          "scoreline": "1-3",
+          "margin": 2,
+          "match_date": "2026-04-06"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-04-11"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-04-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-04-17"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-04-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-04-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-04-18"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-04-25"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-05-01"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 3,
+          "away_score": 4,
+          "scoreline": "3-4",
+          "margin": 1,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 2,
+          "away_score": 3,
+          "scoreline": "2-3",
+          "margin": 1,
+          "match_date": "2026-05-08"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-05-12"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-05-24"
+        },
+        {
+          "season": "2025-2026",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-05-29"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-22"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-22"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-22"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-23"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-08-23"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-08-28"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-29"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 2,
+          "scoreline": "1-2",
+          "margin": 1,
+          "match_date": "2026-08-29"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 3,
+          "scoreline": "2-3",
+          "margin": 1,
+          "match_date": "2026-08-30"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-09-05"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-09-06"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
+          "match_date": "2026-09-06"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-09-11"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 4,
+          "scoreline": "1-4",
+          "margin": 3,
+          "match_date": "2026-09-11"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
+          "match_date": "2026-09-19"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 4,
+          "scoreline": "1-4",
+          "margin": 3,
+          "match_date": "2026-09-20"
+        }
+      ],
+      "distribution": [
+        {
+          "margin": 1,
+          "label": "1",
+          "count": 66,
+          "pct": 60.0
+        },
+        {
+          "margin": 2,
+          "label": "2",
+          "count": 28,
+          "pct": 25.5
+        },
+        {
+          "margin": 3,
+          "label": "3+",
+          "count": 16,
+          "pct": 14.5
+        }
+      ],
+      "avg_margin": 1.58,
+      "max_margin": 4
+    }
+  },
+  "common_scorelines": {
+    "home": {
+      "n_matches": 196,
+      "scoreline": "1-0",
+      "count": 49,
+      "pct": 25.0
+    },
+    "draw": {
+      "n_matches": 134,
+      "scoreline": "1-1",
+      "count": 69,
+      "pct": 51.5
+    },
+    "away": {
+      "n_matches": 110,
+      "scoreline": "1-2",
+      "count": 32,
+      "pct": 29.1
+    }
+  }
+}

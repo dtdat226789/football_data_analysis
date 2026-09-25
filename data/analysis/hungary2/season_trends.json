@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:01:07+00:00",
+  "config": {
+    "league": "hungary2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\hungary2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "NB II.",
+    "country": "Hungary",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/hungary/nb-ii"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Vasas",
+      "champion_id": 781,
+      "champion_pts": 64,
+      "runner_up": "Honved",
+      "runner_up_id": 782,
+      "margin_pts": 5
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Soroksar",
+      "champion_id": 792,
+      "champion_pts": 20,
+      "runner_up": "Kecskemeti TE",
+      "runner_up_id": 783,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 5,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 3,
+      "champion": "Soroksar",
+      "runner_up": "Kecskemeti TE"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 64,
+        "2": 59,
+        "4": 48,
+        "6": 46,
+        "13": 33,
+        "16": 28
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 20,
+        "2": 17,
+        "4": 14,
+        "6": 13,
+        "13": 6,
+        "16": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 33,
+      "drop_position": 14,
+      "drop_pts": 33,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 33
+        },
+        {
+          "position": 15,
+          "points": 29
+        },
+        {
+          "position": 16,
+          "points": 28
+        }
+      ],
+      "bottom3_range": 5
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 6,
+      "drop_position": 14,
+      "drop_pts": 4,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 4
+        },
+        {
+          "position": 15,
+          "points": 4
+        },
+        {
+          "position": 16,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 0
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 240,
+      "total_goals": 602,
+      "avg_goals": 2.508,
+      "home_wins": 105,
+      "draws": 60,
+      "away_wins": 75,
+      "home_win_pct": 43.8,
+      "draw_pct": 25.0,
+      "away_win_pct": 31.2,
+      "goalless": 15,
+      "goalless_pct": 6.2,
+      "total_points": 660,
+      "avg_points_per_team": 41.25,
+      "n_teams": 16
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 61,
+      "total_goals": 172,
+      "avg_goals": 2.82,
+      "home_wins": 32,
+      "draws": 14,
+      "away_wins": 15,
+      "home_win_pct": 52.5,
+      "draw_pct": 23.0,
+      "away_win_pct": 24.6,
+      "goalless": 2,
+      "goalless_pct": 3.3,
+      "total_points": 169,
+      "avg_points_per_team": 10.56,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.875,
+        "goals": 4.375
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.5,
+        "goals": 3.75
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 4.375
+    }
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "report_name": "findings",
+  "script": {
+    "name": "backend/scripts/compile_findings.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:46:28+00:00",
+  "config": {
+    "league": "segunda4",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\segunda4",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Segunda RFEF - Group 4",
+    "country": "Spain",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/segunda-rfef-group-4"
+  },
+  "sources": [
+    {
+      "report_name": "database_profile",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\database_profile.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 31.53
+    },
+    {
+      "report_name": "matches_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\matches_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 9.39
+    },
+    {
+      "report_name": "goals_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\goals_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 6.17
+    },
+    {
+      "report_name": "teams_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\teams_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 40.29
+    },
+    {
+      "report_name": "season_trends",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\season_trends.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 3.98
+    },
+    {
+      "report_name": "scoreline_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\scoreline_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 58.89
+    },
+    {
+      "report_name": "relationships",
+      "path": "E:\\football_data_analysis\\data\\analysis\\segunda4\\relationships.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 14.36
+    }
+  ],
+  "coverage": {
+    "found": 7,
+    "total": 7,
+    "missing": []
+  },
+  "key_findings": [
+    {
+      "source": "matches_analysis",
+      "finding": "Outcome split across all seasons",
+      "detail": "350 matches: home wins 48.9%, draws 26.3%, away wins 24.9% (171H / 92D / 87A)",
+      "importance": "medium",
+      "id": "F1"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Comeback wins",
+      "detail": "10 home and 7 away comebacks (trailing at HT but winning at FT)",
+      "importance": "medium",
+      "id": "F2"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Most common HT/FT flow",
+      "detail": "home lead at HT -> home win occurred 95 times",
+      "importance": "low",
+      "id": "F3"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average goals per match",
+      "detail": "350 matches produced 804 goals (avg 2.297 per match)",
+      "importance": "medium",
+      "id": "F4"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Home goal share",
+      "detail": "home 58.5% vs away 41.5% of 804 goals in total (home/away ratio 1.41)",
+      "importance": "medium",
+      "id": "F5"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Both teams to score",
+      "detail": "177 of 350 matches (50.6%)",
+      "importance": "medium",
+      "id": "F6"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Most common first-goal bucket",
+      "detail": "minute 1-15 (first goal in 86 scoring matches, 27.0% of scoring)",
+      "importance": "low",
+      "id": "F7"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average first goal minute",
+      "detail": "mean 34.94, median 30.0",
+      "importance": "low",
+      "id": "F8"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Dominant team by lifetime points",
+      "detail": "Deportiva Minera leads with 66 points across 1 seasons (1 title(s), GD 19)",
+      "importance": "high",
+      "id": "F9"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Team consistency",
+      "detail": "6 teams present in every one of the 2 seasons (Antoniano, CD Estepona, Linares, Puente Genil, Recreativo Huelva...)",
+      "importance": "medium",
+      "id": "F10"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Biggest home advantage",
+      "detail": "Antoniano earns 31 more points at home than away (40 home vs 9 away)",
+      "importance": "medium",
+      "id": "F11"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Champion with most titles",
+      "detail": "Deportiva Minera won 1 of 2 championship(s) on record",
+      "importance": "high",
+      "id": "F12"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Tightest title race",
+      "detail": "2025-2026: Deportiva Minera beat CD Extremadura by 0 pts",
+      "importance": "medium",
+      "id": "F13"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Average-goals trend",
+      "detail": "up (+0.159 per match): first half 2.285 vs last half 2.444 across 2 seasons",
+      "importance": "medium",
+      "id": "F14"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Largest view divergence",
+      "detail": "2025-2026 (goals view, avg abs position diff 6.632)",
+      "importance": "low",
+      "id": "F15"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Smallest view divergence",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.889)",
+      "importance": "low",
+      "id": "F16"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common scoreline",
+      "detail": "1-0 in 60 matches (17.1%)",
+      "importance": "medium",
+      "id": "F17"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common home-win scoreline",
+      "detail": "1-0 (60 of 171 home matches, 35.1%)",
+      "importance": "low",
+      "id": "F18"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common draw scoreline",
+      "detail": "1-1 (50 of 92 draw matches, 54.3%)",
+      "importance": "low",
+      "id": "F19"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common away-win scoreline",
+      "detail": "1-2 (27 of 87 away matches, 31.0%)",
+      "importance": "low",
+      "id": "F20"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Extreme scorelines",
+      "detail": "1 match(es) with >= 7 total goals",
+      "importance": "low",
+      "id": "F21"
+    },
+    {
+      "source": "relationships",
+      "finding": "Strongest correlation with total goals",
+      "detail": "home_team_home_conceded_avg |corr| = 0.0853 (n=350 leakage-safe rows)",
+      "importance": "medium",
+      "id": "F22"
+    },
+    {
+      "source": "relationships",
+      "finding": "Most outcome-separating feature",
+      "detail": "home_points_before_match spreads group means over 8.046: home 24.977, draw 19.283, away 16.931",
+      "importance": "medium",
+      "id": "F23"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data-quality warnings (16)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "importance": "high",
+      "id": "F24"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data coverage",
+      "detail": "2 of 2 registered seasons populated (100.0%); 350 matches observed",
+      "importance": "medium",
+      "id": "F25"
+    }
+  ],
+  "headline_stats": {
+    "n_matches": 350,
+    "avg_goals": 2.297,
+    "home_win_pct": 48.9,
+    "draw_pct": 26.3,
+    "away_win_pct": 24.9,
+    "most_common_scoreline": "1-0",
+    "dominant_team": "Deportiva Minera",
+    "champion_most_titles": "Deportiva Minera",
+    "btts_rate_pct": 50.6
+  },
+  "comparison": [
+    {
+      "module": "database_profile",
+      "report_name": "database_profile",
+      "sections": [
+        "observed",
+        "calculated",
+        "warnings"
+      ],
+      "size_kb": 31.53
+    },
+    {
+      "module": "matches_analysis",
+      "report_name": "matches_analysis",
+      "sections": [
+        "overall",
+        "per_season",
+        "ht_ft_matrix",
+        "comebacks",
+        "ht_lead_conversion",
+        "first_goal_timing",
+        "goalless"
+      ],
+      "size_kb": 9.39
+    },
+    {
+      "module": "goals_analysis",
+      "report_name": "goals_analysis",
+      "sections": [
+        "goals_distribution",
+        "goals_per_season",
+        "goal_share",
+        "btts",
+        "clean_sheets",
+        "scoring_intensity",
+        "first_goal_timing"
+      ],
+      "size_kb": 6.17
+    },
+    {
+      "module": "teams_analysis",
+      "report_name": "teams_analysis",
+      "sections": [
+        "teams",
+        "home_away",
+        "top_performers",
+        "consistent_teams",
+        "head_to_head",
+        "position_table"
+      ],
+      "size_kb": 40.29
+    },
+    {
+      "module": "season_trends",
+      "report_name": "season_trends",
+      "sections": [
+        "champions",
+        "title_race",
+        "points_thresholds",
+        "relegation_battle",
+        "league_trends",
+        "view_divergence"
+      ],
+      "size_kb": 3.98
+    },
+    {
+      "module": "scoreline_analysis",
+      "report_name": "scoreline_analysis",
+      "sections": [
+        "scoreline_frequency",
+        "scoreline_per_season",
+        "total_goal_histogram",
+        "extreme_scorelines",
+        "margin_distribution",
+        "margin_by_outcome",
+        "common_scorelines"
+      ],
+      "size_kb": 58.89
+    },
+    {
+      "module": "relationships",
+      "report_name": "relationships",
+      "sections": [
+        "n_matches",
+        "feature_count",
+        "correlation_matrix",
+        "form_vs_outcome",
+        "position_vs_outcome",
+        "rest_advantage",
+        "home_quality",
+        "feature_by_result"
+      ],
+      "size_kb": 14.36
+    }
+  ],
+  "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 323 matches, expected 380",
+      "details": {
+        "season": "2025-2026",
+        "n_matches": 323,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 19 teams, expected 20",
+      "details": {
+        "season": "2025-2026",
+        "n_teams": 19,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 27 matches, expected 380",
+      "details": {
+        "season": "2026-2027",
+        "n_matches": 27,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 18 teams, expected 20",
+      "details": {
+        "season": "2026-2027",
+        "n_teams": 18,
+        "expected": 20
+      }
+    },
+    {
+      "code": "SEASON_STATE_NOT_COMPLETE",
+      "severity": "warning",
+      "message": "Season 2026-2027 has data but state is 'in_progress'",
+      "details": {
+        "season": "2026-2027",
+        "season_state": "in_progress"
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 11.1% vs overall 8.9% (deviation 2.2 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 11.1,
+        "overall_goalless_pct": 8.9,
+        "deviation_pp": 2.2
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 33.3% vs overall 48.9%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "home",
+        "season_share": 33.3,
+        "overall_share": 48.9
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 away outcome share 37.0% vs overall 24.9%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "away",
+        "season_share": 37.0,
+        "overall_share": 24.9
+      }
+    },
+    {
+      "code": "DUPLICATE_ROWS",
+      "severity": "warning",
+      "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (24 extra rows)",
+      "details": {
+        "check": "matches same fixture on same date (league_season, home, away, match_date)",
+        "rows": 29377,
+        "distinct": 29353,
+        "duplicates": 24
+      }
+    },
+    {
+      "code": "FIRST_GOAL_NULL_INCONSISTENCY",
+      "severity": "warning",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=27, fgte=27 rows)",
+      "details": {
+        "total": 29377,
+        "fgt_inconsistent": 27,
+        "fgte_inconsistent": 27,
+        "n_with_fgt": 27277
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2025-2026/classic rows=19 positions=1..19 teams=19",
+      "details": {
+        "season": "2025-2026",
+        "view": "classic",
+        "n_rows": 19,
+        "min_pos": 1,
+        "max_pos": 19,
+        "distinct_teams": 19
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2025-2026/goals rows=19 positions=1..19 teams=19",
+      "details": {
+        "season": "2025-2026",
+        "view": "goals",
+        "n_rows": 19,
+        "min_pos": 1,
+        "max_pos": 19,
+        "distinct_teams": 19
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2025-2026/luck rows=19 positions=1..19 teams=19",
+      "details": {
+        "season": "2025-2026",
+        "view": "luck",
+        "n_rows": 19,
+        "min_pos": 1,
+        "max_pos": 19,
+        "distinct_teams": 19
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/classic rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2026-2027",
+        "view": "classic",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/goals rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2026-2027",
+        "view": "goals",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/luck rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2026-2027",
+        "view": "luck",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    }
+  ],
+  "methodology": "Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power."
+}

@@ -1,0 +1,535 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:55:25+00:00",
+  "config": {
+    "league": "brazil1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\brazil1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie A Betano",
+    "country": "Brazil",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/brazil/serie-a-betano"
+  },
+  "overall": {
+    "n_matches": 657,
+    "home_wins": 321,
+    "draws": 176,
+    "away_wins": 160,
+    "home_win_pct": 48.9,
+    "draw_pct": 26.8,
+    "away_win_pct": 24.4,
+    "home_goals": 1001,
+    "away_goals": 697,
+    "total_goals": 1698,
+    "avg_goals": 2.584,
+    "goalless": 43,
+    "goalless_pct": 6.5
+  },
+  "per_season": [
+    {
+      "season": "2025",
+      "n_matches": 380,
+      "home_wins": 191,
+      "draws": 99,
+      "away_wins": 90,
+      "home_win_pct": 50.3,
+      "draw_pct": 26.1,
+      "away_win_pct": 23.7,
+      "home_goals": 580,
+      "away_goals": 379,
+      "total_goals": 959,
+      "avg_goals": 2.524,
+      "goalless": 27,
+      "goalless_pct": 7.1
+    },
+    {
+      "season": "2026",
+      "n_matches": 277,
+      "home_wins": 130,
+      "draws": 77,
+      "away_wins": 70,
+      "home_win_pct": 46.9,
+      "draw_pct": 27.8,
+      "away_win_pct": 25.3,
+      "home_goals": 421,
+      "away_goals": 318,
+      "total_goals": 739,
+      "avg_goals": 2.668,
+      "goalless": 16,
+      "goalless_pct": 5.8
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 203,
+        "draw": 47,
+        "away": 11
+      },
+      "draw": {
+        "home": 99,
+        "draw": 95,
+        "away": 66
+      },
+      "away": {
+        "home": 19,
+        "draw": 34,
+        "away": 83
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 77.8,
+        "draw": 18.0,
+        "away": 4.2
+      },
+      "draw": {
+        "home": 38.1,
+        "draw": 36.5,
+        "away": 25.4
+      },
+      "away": {
+        "home": 14.0,
+        "draw": 25.0,
+        "away": 61.0
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 19,
+      "pct": 2.9,
+      "matches": [
+        {
+          "season": "2025",
+          "home_team": "Vasco",
+          "away_team": "Santos",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Corinthians",
+          "away_team": "Sport Recife",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Corinthians",
+          "away_team": "Internacional",
+          "ht_score": "1-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Fluminense",
+          "away_team": "Sport Recife",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Mirassol",
+          "away_team": "Corinthians",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Vitoria",
+          "away_team": "Vasco",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Sao Paulo",
+          "away_team": "Gremio",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Vasco",
+          "away_team": "Vitoria",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2025",
+          "home_team": "Bahia",
+          "away_team": "Bragantino",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Botafogo RJ",
+          "away_team": "Sport Recife",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Gremio",
+          "away_team": "Botafogo RJ",
+          "ht_score": "1-2",
+          "ft_score": "5-3"
+        },
+        {
+          "season": "2026",
+          "home_team": "Vasco",
+          "away_team": "Palmeiras",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Vasco",
+          "away_team": "Fluminense",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Vasco",
+          "away_team": "Sao Paulo",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Coritiba",
+          "away_team": "Bahia",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Bahia",
+          "away_team": "Botafogo RJ",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Gremio",
+          "away_team": "Sao Paulo",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Fluminense",
+          "away_team": "Remo",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Cruzeiro",
+          "away_team": "Flamengo RJ",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 11,
+      "pct": 1.7,
+      "matches": [
+        {
+          "season": "2025",
+          "home_team": "Bragantino",
+          "away_team": "Palmeiras",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Cruzeiro",
+          "away_team": "Santos",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Sao Paulo",
+          "away_team": "Palmeiras",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025",
+          "home_team": "Juventude",
+          "away_team": "Fortaleza",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Sport Recife",
+          "away_team": "Atletico-MG",
+          "ht_score": "1-0",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2026",
+          "home_team": "Bragantino",
+          "away_team": "Sao Paulo",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Mirassol",
+          "away_team": "Bahia",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Botafogo RJ",
+          "away_team": "Remo",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Sao Paulo",
+          "away_team": "Athletico-PR",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Gremio",
+          "away_team": "Vasco",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Vitoria",
+          "away_team": "Cruzeiro",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 261,
+      "home": {
+        "count": 203,
+        "pct": 77.8
+      },
+      "draw": {
+        "count": 47,
+        "pct": 18.0
+      },
+      "away": {
+        "count": 11,
+        "pct": 4.2
+      }
+    },
+    "ht_draw": {
+      "n_matches": 260,
+      "home": {
+        "count": 99,
+        "pct": 38.1
+      },
+      "draw": {
+        "count": 95,
+        "pct": 36.5
+      },
+      "away": {
+        "count": 66,
+        "pct": 25.4
+      }
+    },
+    "away_lead": {
+      "n_matches": 136,
+      "home": {
+        "count": 19,
+        "pct": 14.0
+      },
+      "draw": {
+        "count": 34,
+        "pct": 25.0
+      },
+      "away": {
+        "count": 83,
+        "pct": 61.0
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 657,
+    "n_with_first_goal": 614,
+    "n_goalless": 43,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 184,
+        "home": {
+          "count": 95,
+          "pct": 51.6
+        },
+        "draw": {
+          "count": 45,
+          "pct": 24.5
+        },
+        "away": {
+          "count": 44,
+          "pct": 23.9
+        },
+        "pct_of_matches": 28.0
+      },
+      "16-30": {
+        "n_matches": 158,
+        "home": {
+          "count": 88,
+          "pct": 55.7
+        },
+        "draw": {
+          "count": 34,
+          "pct": 21.5
+        },
+        "away": {
+          "count": 36,
+          "pct": 22.8
+        },
+        "pct_of_matches": 24.0
+      },
+      "31-45": {
+        "n_matches": 107,
+        "home": {
+          "count": 57,
+          "pct": 53.3
+        },
+        "draw": {
+          "count": 21,
+          "pct": 19.6
+        },
+        "away": {
+          "count": 29,
+          "pct": 27.1
+        },
+        "pct_of_matches": 16.3
+      },
+      "46-60": {
+        "n_matches": 85,
+        "home": {
+          "count": 42,
+          "pct": 49.4
+        },
+        "draw": {
+          "count": 23,
+          "pct": 27.1
+        },
+        "away": {
+          "count": 20,
+          "pct": 23.5
+        },
+        "pct_of_matches": 12.9
+      },
+      "61-75": {
+        "n_matches": 48,
+        "home": {
+          "count": 22,
+          "pct": 45.8
+        },
+        "draw": {
+          "count": 7,
+          "pct": 14.6
+        },
+        "away": {
+          "count": 19,
+          "pct": 39.6
+        },
+        "pct_of_matches": 7.3
+      },
+      "76-90": {
+        "n_matches": 18,
+        "home": {
+          "count": 7,
+          "pct": 38.9
+        },
+        "draw": {
+          "count": 3,
+          "pct": 16.7
+        },
+        "away": {
+          "count": 8,
+          "pct": 44.4
+        },
+        "pct_of_matches": 2.7
+      },
+      "91-120": {
+        "n_matches": 14,
+        "home": {
+          "count": 10,
+          "pct": 71.4
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 4,
+          "pct": 28.6
+        },
+        "pct_of_matches": 2.1
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 657,
+      "count": 43,
+      "pct": 6.5
+    },
+    "per_season": [
+      {
+        "season": "2025",
+        "n_matches": 380,
+        "count": 27,
+        "pct": 7.1
+      },
+      {
+        "season": "2026",
+        "n_matches": 277,
+        "count": 16,
+        "pct": 5.8
+      }
+    ]
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:43:05+00:00",
+  "config": {
+    "league": "romania1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\romania1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Superliga",
+    "country": "Romania",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "playoff",
+    "url": "https://www.football-charts.com/leagues/romania/superliga"
+  },
+  "overall": {
+    "n_matches": 429,
+    "home_wins": 199,
+    "draws": 117,
+    "away_wins": 113,
+    "home_win_pct": 46.4,
+    "draw_pct": 27.3,
+    "away_win_pct": 26.3,
+    "home_goals": 645,
+    "away_goals": 450,
+    "total_goals": 1095,
+    "avg_goals": 2.552,
+    "goalless": 32,
+    "goalless_pct": 7.5
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 350,
+      "home_wins": 155,
+      "draws": 96,
+      "away_wins": 99,
+      "home_win_pct": 44.3,
+      "draw_pct": 27.4,
+      "away_win_pct": 28.3,
+      "home_goals": 504,
+      "away_goals": 383,
+      "total_goals": 887,
+      "avg_goals": 2.534,
+      "goalless": 25,
+      "goalless_pct": 7.1
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 79,
+      "home_wins": 44,
+      "draws": 21,
+      "away_wins": 14,
+      "home_win_pct": 55.7,
+      "draw_pct": 26.6,
+      "away_win_pct": 17.7,
+      "home_goals": 141,
+      "away_goals": 67,
+      "total_goals": 208,
+      "avg_goals": 2.633,
+      "goalless": 7,
+      "goalless_pct": 8.9
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 123,
+        "draw": 23,
+        "away": 4
+      },
+      "draw": {
+        "home": 65,
+        "draw": 73,
+        "away": 50
+      },
+      "away": {
+        "home": 11,
+        "draw": 21,
+        "away": 59
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 82.0,
+        "draw": 15.3,
+        "away": 2.7
+      },
+      "draw": {
+        "home": 34.6,
+        "draw": 38.8,
+        "away": 26.6
+      },
+      "away": {
+        "home": 12.1,
+        "draw": 23.1,
+        "away": 64.8
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 11,
+      "pct": 2.6,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Univ. Craiova",
+          "away_team": "U. Cluj",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Unirea Slobozia",
+          "away_team": "Metaloglobus Bucharest",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Metaloglobus Bucharest",
+          "away_team": "FCSB",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Petrolul",
+          "away_team": "FC Arges",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Univ. Craiova",
+          "away_team": "Metaloglobus Bucharest",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "FC Botosani",
+          "away_team": "Unirea Slobozia",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "FC Botosani",
+          "away_team": "FCSB",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Farul Constanta",
+          "away_team": "Chindia Targoviste",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "U. Cluj",
+          "away_team": "FC Botosani",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Sepsi Sf. Gheorghe",
+          "away_team": "CFR Cluj",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "FC Rapid Bucuresti",
+          "away_team": "FC Voluntari",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 4,
+      "pct": 0.9,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "FCSB",
+          "away_team": "Farul Constanta",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "FC Rapid Bucuresti",
+          "away_team": "U. Cluj",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Unirea Slobozia",
+          "away_team": "Petrolul",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Farul Constanta",
+          "away_team": "FCSB",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 150,
+      "home": {
+        "count": 123,
+        "pct": 82.0
+      },
+      "draw": {
+        "count": 23,
+        "pct": 15.3
+      },
+      "away": {
+        "count": 4,
+        "pct": 2.7
+      }
+    },
+    "ht_draw": {
+      "n_matches": 188,
+      "home": {
+        "count": 65,
+        "pct": 34.6
+      },
+      "draw": {
+        "count": 73,
+        "pct": 38.8
+      },
+      "away": {
+        "count": 50,
+        "pct": 26.6
+      }
+    },
+    "away_lead": {
+      "n_matches": 91,
+      "home": {
+        "count": 11,
+        "pct": 12.1
+      },
+      "draw": {
+        "count": 21,
+        "pct": 23.1
+      },
+      "away": {
+        "count": 59,
+        "pct": 64.8
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 429,
+    "n_with_first_goal": 397,
+    "n_goalless": 32,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 112,
+        "home": {
+          "count": 59,
+          "pct": 52.7
+        },
+        "draw": {
+          "count": 21,
+          "pct": 18.8
+        },
+        "away": {
+          "count": 32,
+          "pct": 28.6
+        },
+        "pct_of_matches": 26.1
+      },
+      "16-30": {
+        "n_matches": 97,
+        "home": {
+          "count": 50,
+          "pct": 51.5
+        },
+        "draw": {
+          "count": 21,
+          "pct": 21.6
+        },
+        "away": {
+          "count": 26,
+          "pct": 26.8
+        },
+        "pct_of_matches": 22.6
+      },
+      "31-45": {
+        "n_matches": 70,
+        "home": {
+          "count": 37,
+          "pct": 52.9
+        },
+        "draw": {
+          "count": 19,
+          "pct": 27.1
+        },
+        "away": {
+          "count": 14,
+          "pct": 20.0
+        },
+        "pct_of_matches": 16.3
+      },
+      "46-60": {
+        "n_matches": 50,
+        "home": {
+          "count": 21,
+          "pct": 42.0
+        },
+        "draw": {
+          "count": 15,
+          "pct": 30.0
+        },
+        "away": {
+          "count": 14,
+          "pct": 28.0
+        },
+        "pct_of_matches": 11.7
+      },
+      "61-75": {
+        "n_matches": 46,
+        "home": {
+          "count": 18,
+          "pct": 39.1
+        },
+        "draw": {
+          "count": 7,
+          "pct": 15.2
+        },
+        "away": {
+          "count": 21,
+          "pct": 45.7
+        },
+        "pct_of_matches": 10.7
+      },
+      "76-90": {
+        "n_matches": 15,
+        "home": {
+          "count": 9,
+          "pct": 60.0
+        },
+        "draw": {
+          "count": 2,
+          "pct": 13.3
+        },
+        "away": {
+          "count": 4,
+          "pct": 26.7
+        },
+        "pct_of_matches": 3.5
+      },
+      "91-120": {
+        "n_matches": 7,
+        "home": {
+          "count": 5,
+          "pct": 71.4
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 2,
+          "pct": 28.6
+        },
+        "pct_of_matches": 1.6
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 429,
+      "count": 32,
+      "pct": 7.5
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 350,
+        "count": 25,
+        "pct": 7.1
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 79,
+        "count": 7,
+        "pct": 8.9
+      }
+    ]
+  }
+}

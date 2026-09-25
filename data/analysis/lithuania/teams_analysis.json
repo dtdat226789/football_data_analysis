@@ -1,0 +1,995 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:03:26+00:00",
+  "config": {
+    "league": "lithuania",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\lithuania",
+    "out_stem": null
+  },
+  "league": {
+    "name": "TOPLYGA",
+    "country": "Lithuania",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/lithuania/toplyga"
+  },
+  "teams": [
+    {
+      "team_id": 1069,
+      "team": "Kauno Zalgiris",
+      "slug": "kauno-zalgiris",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 38,
+      "draws": 18,
+      "losses": 10,
+      "points": 132,
+      "goals_for": 129,
+      "goals_against": 47,
+      "goal_difference": 82,
+      "avg_points_per_season": 66.0,
+      "best_position": 1,
+      "worst_position": 1,
+      "titles": 2
+    },
+    {
+      "team_id": 1072,
+      "team": "Suduva",
+      "slug": "suduva",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 30,
+      "draws": 25,
+      "losses": 11,
+      "points": 115,
+      "goals_for": 95,
+      "goals_against": 61,
+      "goal_difference": 34,
+      "avg_points_per_season": 57.5,
+      "best_position": 2,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 1071,
+      "team": "Zalgiris",
+      "slug": "zalgiris",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 31,
+      "draws": 17,
+      "losses": 18,
+      "points": 110,
+      "goals_for": 98,
+      "goals_against": 77,
+      "goal_difference": 21,
+      "avg_points_per_season": 55.0,
+      "best_position": 3,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 1070,
+      "team": "Hegelmann",
+      "slug": "hegelmann",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 25,
+      "draws": 19,
+      "losses": 22,
+      "points": 94,
+      "goals_for": 87,
+      "goals_against": 91,
+      "goal_difference": -4,
+      "avg_points_per_season": 47.0,
+      "best_position": 2,
+      "worst_position": 8,
+      "titles": 0
+    },
+    {
+      "team_id": 1075,
+      "team": "Dziugas Telsiai",
+      "slug": "dziugas-telsiai",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 25,
+      "draws": 15,
+      "losses": 26,
+      "points": 90,
+      "goals_for": 76,
+      "goals_against": 85,
+      "goal_difference": -9,
+      "avg_points_per_season": 45.0,
+      "best_position": 6,
+      "worst_position": 7,
+      "titles": 0
+    },
+    {
+      "team_id": 1076,
+      "team": "Banga",
+      "slug": "banga",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 24,
+      "draws": 17,
+      "losses": 25,
+      "points": 89,
+      "goals_for": 79,
+      "goals_against": 64,
+      "goal_difference": 15,
+      "avg_points_per_season": 44.5,
+      "best_position": 5,
+      "worst_position": 8,
+      "titles": 0
+    },
+    {
+      "team_id": 1074,
+      "team": "FK Panevezys",
+      "slug": "fk-panevezys",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 25,
+      "draws": 12,
+      "losses": 29,
+      "points": 87,
+      "goals_for": 90,
+      "goals_against": 93,
+      "goal_difference": -3,
+      "avg_points_per_season": 43.5,
+      "best_position": 6,
+      "worst_position": 7,
+      "titles": 0
+    },
+    {
+      "team_id": 1073,
+      "team": "Siauliai FA",
+      "slug": "siauliai-fa",
+      "seasons_played": 1,
+      "total_matches": 36,
+      "wins": 14,
+      "draws": 10,
+      "losses": 12,
+      "points": 52,
+      "goals_for": 59,
+      "goals_against": 53,
+      "goal_difference": 6,
+      "avg_points_per_season": 52.0,
+      "best_position": 5,
+      "worst_position": 5,
+      "titles": 0
+    },
+    {
+      "team_id": 1079,
+      "team": "Transinvest",
+      "slug": "transinvest",
+      "seasons_played": 1,
+      "total_matches": 30,
+      "wins": 15,
+      "draws": 6,
+      "losses": 9,
+      "points": 51,
+      "goals_for": 51,
+      "goals_against": 35,
+      "goal_difference": 16,
+      "avg_points_per_season": 51.0,
+      "best_position": 3,
+      "worst_position": 3,
+      "titles": 0
+    },
+    {
+      "team_id": 1077,
+      "team": "Riteriai",
+      "slug": "riteriai",
+      "seasons_played": 2,
+      "total_matches": 53,
+      "wins": 6,
+      "draws": 11,
+      "losses": 36,
+      "points": 29,
+      "goals_for": 42,
+      "goals_against": 119,
+      "goal_difference": -77,
+      "avg_points_per_season": 14.5,
+      "best_position": 9,
+      "worst_position": 10,
+      "titles": 0
+    },
+    {
+      "team_id": 1080,
+      "team": "FA Siauliai",
+      "slug": "fa-siauliai",
+      "seasons_played": 1,
+      "total_matches": 31,
+      "wins": 4,
+      "draws": 9,
+      "losses": 18,
+      "points": 21,
+      "goals_for": 27,
+      "goals_against": 59,
+      "goal_difference": -32,
+      "avg_points_per_season": 21.0,
+      "best_position": 9,
+      "worst_position": 9,
+      "titles": 0
+    },
+    {
+      "team_id": 1078,
+      "team": "Dainava Alytus",
+      "slug": "dainava-alytus",
+      "seasons_played": 1,
+      "total_matches": 36,
+      "wins": 3,
+      "draws": 9,
+      "losses": 24,
+      "points": 18,
+      "goals_for": 27,
+      "goals_against": 76,
+      "goal_difference": -49,
+      "avg_points_per_season": 18.0,
+      "best_position": 10,
+      "worst_position": 10,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 1071,
+      "team": "Zalgiris",
+      "home": {
+        "matches": 33,
+        "wins": 19,
+        "draws": 6,
+        "losses": 8,
+        "points": 63,
+        "goals_for": 55,
+        "goals_against": 35
+      },
+      "away": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 11,
+        "losses": 10,
+        "points": 47,
+        "goals_for": 43,
+        "goals_against": 42
+      },
+      "home_advantage": 16
+    },
+    {
+      "team_id": 1070,
+      "team": "Hegelmann",
+      "home": {
+        "matches": 34,
+        "wins": 14,
+        "draws": 13,
+        "losses": 7,
+        "points": 55,
+        "goals_for": 53,
+        "goals_against": 40
+      },
+      "away": {
+        "matches": 32,
+        "wins": 11,
+        "draws": 6,
+        "losses": 15,
+        "points": 39,
+        "goals_for": 34,
+        "goals_against": 51
+      },
+      "home_advantage": 16
+    },
+    {
+      "team_id": 1072,
+      "team": "Suduva",
+      "home": {
+        "matches": 32,
+        "wins": 17,
+        "draws": 13,
+        "losses": 2,
+        "points": 64,
+        "goals_for": 50,
+        "goals_against": 22
+      },
+      "away": {
+        "matches": 34,
+        "wins": 13,
+        "draws": 12,
+        "losses": 9,
+        "points": 51,
+        "goals_for": 45,
+        "goals_against": 39
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 1074,
+      "team": "FK Panevezys",
+      "home": {
+        "matches": 32,
+        "wins": 14,
+        "draws": 6,
+        "losses": 12,
+        "points": 48,
+        "goals_for": 41,
+        "goals_against": 32
+      },
+      "away": {
+        "matches": 34,
+        "wins": 11,
+        "draws": 6,
+        "losses": 17,
+        "points": 39,
+        "goals_for": 49,
+        "goals_against": 61
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 1069,
+      "team": "Kauno Zalgiris",
+      "home": {
+        "matches": 34,
+        "wins": 21,
+        "draws": 7,
+        "losses": 6,
+        "points": 70,
+        "goals_for": 79,
+        "goals_against": 23
+      },
+      "away": {
+        "matches": 32,
+        "wins": 17,
+        "draws": 11,
+        "losses": 4,
+        "points": 62,
+        "goals_for": 50,
+        "goals_against": 24
+      },
+      "home_advantage": 8
+    },
+    {
+      "team_id": 1077,
+      "team": "Riteriai",
+      "home": {
+        "matches": 26,
+        "wins": 4,
+        "draws": 6,
+        "losses": 16,
+        "points": 18,
+        "goals_for": 23,
+        "goals_against": 54
+      },
+      "away": {
+        "matches": 27,
+        "wins": 2,
+        "draws": 5,
+        "losses": 20,
+        "points": 11,
+        "goals_for": 19,
+        "goals_against": 65
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 1080,
+      "team": "FA Siauliai",
+      "home": {
+        "matches": 16,
+        "wins": 4,
+        "draws": 2,
+        "losses": 10,
+        "points": 14,
+        "goals_for": 14,
+        "goals_against": 32
+      },
+      "away": {
+        "matches": 15,
+        "wins": 0,
+        "draws": 7,
+        "losses": 8,
+        "points": 7,
+        "goals_for": 13,
+        "goals_against": 27
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 1073,
+      "team": "Siauliai FA",
+      "home": {
+        "matches": 18,
+        "wins": 7,
+        "draws": 7,
+        "losses": 4,
+        "points": 28,
+        "goals_for": 37,
+        "goals_against": 29
+      },
+      "away": {
+        "matches": 18,
+        "wins": 7,
+        "draws": 3,
+        "losses": 8,
+        "points": 24,
+        "goals_for": 22,
+        "goals_against": 24
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 1078,
+      "team": "Dainava Alytus",
+      "home": {
+        "matches": 18,
+        "wins": 1,
+        "draws": 5,
+        "losses": 12,
+        "points": 8,
+        "goals_for": 12,
+        "goals_against": 38
+      },
+      "away": {
+        "matches": 18,
+        "wins": 2,
+        "draws": 4,
+        "losses": 12,
+        "points": 10,
+        "goals_for": 15,
+        "goals_against": 38
+      },
+      "home_advantage": -2
+    },
+    {
+      "team_id": 1076,
+      "team": "Banga",
+      "home": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 7,
+        "losses": 14,
+        "points": 43,
+        "goals_for": 42,
+        "goals_against": 36
+      },
+      "away": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 10,
+        "losses": 11,
+        "points": 46,
+        "goals_for": 37,
+        "goals_against": 28
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 1079,
+      "team": "Transinvest",
+      "home": {
+        "matches": 15,
+        "wins": 7,
+        "draws": 3,
+        "losses": 5,
+        "points": 24,
+        "goals_for": 21,
+        "goals_against": 15
+      },
+      "away": {
+        "matches": 15,
+        "wins": 8,
+        "draws": 3,
+        "losses": 4,
+        "points": 27,
+        "goals_for": 30,
+        "goals_against": 20
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 1075,
+      "team": "Dziugas Telsiai",
+      "home": {
+        "matches": 33,
+        "wins": 10,
+        "draws": 9,
+        "losses": 14,
+        "points": 39,
+        "goals_for": 37,
+        "goals_against": 40
+      },
+      "away": {
+        "matches": 33,
+        "wins": 15,
+        "draws": 6,
+        "losses": 12,
+        "points": 51,
+        "goals_for": 39,
+        "goals_against": 45
+      },
+      "home_advantage": -12
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 1069,
+        "team": "Kauno Zalgiris",
+        "value": 2.0
+      },
+      {
+        "rank": 2,
+        "team_id": 1072,
+        "team": "Suduva",
+        "value": 1.742
+      },
+      {
+        "rank": 3,
+        "team_id": 1079,
+        "team": "Transinvest",
+        "value": 1.7
+      },
+      {
+        "rank": 4,
+        "team_id": 1071,
+        "team": "Zalgiris",
+        "value": 1.667
+      },
+      {
+        "rank": 5,
+        "team_id": 1073,
+        "team": "Siauliai FA",
+        "value": 1.444
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 1069,
+        "team": "Kauno Zalgiris",
+        "value": 129
+      },
+      {
+        "rank": 2,
+        "team_id": 1071,
+        "team": "Zalgiris",
+        "value": 98
+      },
+      {
+        "rank": 3,
+        "team_id": 1072,
+        "team": "Suduva",
+        "value": 95
+      },
+      {
+        "rank": 4,
+        "team_id": 1074,
+        "team": "FK Panevezys",
+        "value": 90
+      },
+      {
+        "rank": 5,
+        "team_id": 1070,
+        "team": "Hegelmann",
+        "value": 87
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 1069,
+        "team": "Kauno Zalgiris",
+        "value": 82
+      },
+      {
+        "rank": 2,
+        "team_id": 1072,
+        "team": "Suduva",
+        "value": 34
+      },
+      {
+        "rank": 3,
+        "team_id": 1071,
+        "team": "Zalgiris",
+        "value": 21
+      },
+      {
+        "rank": 4,
+        "team_id": 1079,
+        "team": "Transinvest",
+        "value": 16
+      },
+      {
+        "rank": 5,
+        "team_id": 1076,
+        "team": "Banga",
+        "value": 15
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 1069,
+        "team": "Kauno Zalgiris",
+        "value": 0.712
+      },
+      {
+        "rank": 2,
+        "team_id": 1072,
+        "team": "Suduva",
+        "value": 0.924
+      },
+      {
+        "rank": 3,
+        "team_id": 1076,
+        "team": "Banga",
+        "value": 0.97
+      },
+      {
+        "rank": 4,
+        "team_id": 1071,
+        "team": "Zalgiris",
+        "value": 1.167
+      },
+      {
+        "rank": 5,
+        "team_id": 1079,
+        "team": "Transinvest",
+        "value": 1.167
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 2,
+    "n_teams": 8,
+    "teams": [
+      {
+        "team_id": 1076,
+        "team": "Banga"
+      },
+      {
+        "team_id": 1075,
+        "team": "Dziugas Telsiai"
+      },
+      {
+        "team_id": 1074,
+        "team": "FK Panevezys"
+      },
+      {
+        "team_id": 1070,
+        "team": "Hegelmann"
+      },
+      {
+        "team_id": 1069,
+        "team": "Kauno Zalgiris"
+      },
+      {
+        "team_id": 1077,
+        "team": "Riteriai"
+      },
+      {
+        "team_id": 1072,
+        "team": "Suduva"
+      },
+      {
+        "team_id": 1071,
+        "team": "Zalgiris"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 62,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 1071,
+        "team_b_id": 1074,
+        "team_a": "Zalgiris",
+        "team_b": "FK Panevezys",
+        "meetings": 8,
+        "home_wins": 6,
+        "draws": 0,
+        "away_wins": 2,
+        "home_win_pct": 75.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 1069,
+        "team_b_id": 1074,
+        "team_a": "Kauno Zalgiris",
+        "team_b": "FK Panevezys",
+        "meetings": 8,
+        "home_wins": 5,
+        "draws": 1,
+        "away_wins": 2,
+        "home_win_pct": 62.5,
+        "draw_pct": 12.5,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 1070,
+        "team_b_id": 1076,
+        "team_a": "Hegelmann",
+        "team_b": "Banga",
+        "meetings": 8,
+        "home_wins": 4,
+        "draws": 2,
+        "away_wins": 2,
+        "home_win_pct": 50.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 1070,
+        "team_b_id": 1074,
+        "team_a": "Hegelmann",
+        "team_b": "FK Panevezys",
+        "meetings": 8,
+        "home_wins": 4,
+        "draws": 2,
+        "away_wins": 2,
+        "home_win_pct": 50.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 1070,
+        "team_b_id": 1072,
+        "team_a": "Hegelmann",
+        "team_b": "Suduva",
+        "meetings": 8,
+        "home_wins": 4,
+        "draws": 3,
+        "away_wins": 1,
+        "home_win_pct": 50.0,
+        "draw_pct": 37.5,
+        "away_win_pct": 12.5
+      },
+      {
+        "team_a_id": 1070,
+        "team_b_id": 1075,
+        "team_a": "Hegelmann",
+        "team_b": "Dziugas Telsiai",
+        "meetings": 8,
+        "home_wins": 3,
+        "draws": 3,
+        "away_wins": 2,
+        "home_win_pct": 37.5,
+        "draw_pct": 37.5,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 1072,
+        "team_b_id": 1074,
+        "team_a": "Suduva",
+        "team_b": "FK Panevezys",
+        "meetings": 8,
+        "home_wins": 3,
+        "draws": 3,
+        "away_wins": 2,
+        "home_win_pct": 37.5,
+        "draw_pct": 37.5,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 1071,
+        "team_b_id": 1075,
+        "team_a": "Zalgiris",
+        "team_b": "Dziugas Telsiai",
+        "meetings": 8,
+        "home_wins": 3,
+        "draws": 2,
+        "away_wins": 3,
+        "home_win_pct": 37.5,
+        "draw_pct": 25.0,
+        "away_win_pct": 37.5
+      },
+      {
+        "team_a_id": 1075,
+        "team_b_id": 1076,
+        "team_a": "Dziugas Telsiai",
+        "team_b": "Banga",
+        "meetings": 8,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 5,
+        "home_win_pct": 25.0,
+        "draw_pct": 12.5,
+        "away_win_pct": 62.5
+      },
+      {
+        "team_a_id": 1069,
+        "team_b_id": 1075,
+        "team_a": "Kauno Zalgiris",
+        "team_b": "Dziugas Telsiai",
+        "meetings": 8,
+        "home_wins": 2,
+        "draws": 2,
+        "away_wins": 4,
+        "home_win_pct": 25.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 50.0
+      },
+      {
+        "team_a_id": 1069,
+        "team_b_id": 1076,
+        "team_a": "Kauno Zalgiris",
+        "team_b": "Banga",
+        "meetings": 8,
+        "home_wins": 1,
+        "draws": 4,
+        "away_wins": 3,
+        "home_win_pct": 12.5,
+        "draw_pct": 50.0,
+        "away_win_pct": 37.5
+      },
+      {
+        "team_a_id": 1069,
+        "team_b_id": 1070,
+        "team_a": "Kauno Zalgiris",
+        "team_b": "Hegelmann",
+        "meetings": 7,
+        "home_wins": 4,
+        "draws": 2,
+        "away_wins": 1,
+        "home_win_pct": 57.1,
+        "draw_pct": 28.6,
+        "away_win_pct": 14.3
+      },
+      {
+        "team_a_id": 1069,
+        "team_b_id": 1072,
+        "team_a": "Kauno Zalgiris",
+        "team_b": "Suduva",
+        "meetings": 7,
+        "home_wins": 3,
+        "draws": 4,
+        "away_wins": 0,
+        "home_win_pct": 42.9,
+        "draw_pct": 57.1,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1072,
+        "team_b_id": 1076,
+        "team_a": "Suduva",
+        "team_b": "Banga",
+        "meetings": 7,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 3,
+        "home_win_pct": 42.9,
+        "draw_pct": 14.3,
+        "away_win_pct": 42.9
+      },
+      {
+        "team_a_id": 1071,
+        "team_b_id": 1076,
+        "team_a": "Zalgiris",
+        "team_b": "Banga",
+        "meetings": 7,
+        "home_wins": 3,
+        "draws": 2,
+        "away_wins": 2,
+        "home_win_pct": 42.9,
+        "draw_pct": 28.6,
+        "away_win_pct": 28.6
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2025",
+      "2026"
+    ],
+    "teams": [
+      {
+        "team_id": 1069,
+        "team": "Kauno Zalgiris",
+        "positions": [
+          1,
+          1
+        ]
+      },
+      {
+        "team_id": 1072,
+        "team": "Suduva",
+        "positions": [
+          4,
+          2
+        ]
+      },
+      {
+        "team_id": 1071,
+        "team": "Zalgiris",
+        "positions": [
+          3,
+          4
+        ]
+      },
+      {
+        "team_id": 1070,
+        "team": "Hegelmann",
+        "positions": [
+          2,
+          8
+        ]
+      },
+      {
+        "team_id": 1075,
+        "team": "Dziugas Telsiai",
+        "positions": [
+          7,
+          6
+        ]
+      },
+      {
+        "team_id": 1076,
+        "team": "Banga",
+        "positions": [
+          8,
+          5
+        ]
+      },
+      {
+        "team_id": 1074,
+        "team": "FK Panevezys",
+        "positions": [
+          6,
+          7
+        ]
+      },
+      {
+        "team_id": 1073,
+        "team": "Siauliai FA",
+        "positions": [
+          5,
+          null
+        ]
+      },
+      {
+        "team_id": 1079,
+        "team": "Transinvest",
+        "positions": [
+          null,
+          3
+        ]
+      },
+      {
+        "team_id": 1077,
+        "team": "Riteriai",
+        "positions": [
+          9,
+          10
+        ]
+      },
+      {
+        "team_id": 1080,
+        "team": "FA Siauliai",
+        "positions": [
+          null,
+          9
+        ]
+      },
+      {
+        "team_id": 1078,
+        "team": "Dainava Alytus",
+        "positions": [
+          10,
+          null
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:57:21+00:00",
+  "config": {
+    "league": "develop21",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\develop21",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Professional Development League",
+    "country": "England",
+    "teams": 17,
+    "matches": 272,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/professional-development-league"
+  },
+  "champions": [
+    {
+      "season": "2026-2027",
+      "champion": "Bolton U21",
+      "champion_id": 362,
+      "champion_pts": 15,
+      "runner_up": "Fleetwood U21",
+      "runner_up_id": 363,
+      "margin_pts": 6
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2026-2027",
+        "margin": 6,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 1,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 6,
+      "champion": "Bolton U21",
+      "runner_up": "Fleetwood U21"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 9,
+        "4": 7,
+        "6": 6,
+        "14": 3,
+        "17": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2026-2027",
+      "safe_position": 14,
+      "safe_pts": 3,
+      "drop_position": 15,
+      "drop_pts": 3,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 15,
+          "points": 3
+        },
+        {
+          "position": 16,
+          "points": 1
+        },
+        {
+          "position": 17,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2026-2027",
+      "n_matches": 34,
+      "total_goals": 140,
+      "avg_goals": 4.118,
+      "home_wins": 14,
+      "draws": 9,
+      "away_wins": 11,
+      "home_win_pct": 41.2,
+      "draw_pct": 26.5,
+      "away_win_pct": 32.4,
+      "goalless": 1,
+      "goalless_pct": 2.9,
+      "total_points": 93,
+      "avg_points_per_team": 5.47,
+      "n_teams": 17
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2026-2027",
+        "luck": 2.235,
+        "goals": 6.0
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 6.0
+    }
+  }
+}

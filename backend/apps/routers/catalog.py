@@ -61,6 +61,7 @@ def league_detail(league: str) -> dict:
     return {
         "league": league,
         **meta,
+        "region": common.regions.league_region(meta.get("country", "")),
         "has_data": common.league_report_dir(league) is not None,
         "seasons": seasons,
     }

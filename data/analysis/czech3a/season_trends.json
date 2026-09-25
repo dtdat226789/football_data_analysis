@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:56:39+00:00",
+  "config": {
+    "league": "czech3a",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\czech3a",
+    "out_stem": null
+  },
+  "league": {
+    "name": "3. CFL - Group A",
+    "country": "Czech Republic",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/czech-republic/3-cfl-group-a"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "SK Kladno",
+      "champion_id": 298,
+      "champion_pts": 72,
+      "runner_up": "Domazlice",
+      "runner_up_id": 301,
+      "margin_pts": 3
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Ceske Budejovice",
+      "champion_id": 294,
+      "champion_pts": 16,
+      "runner_up": "Kraluv Dvur",
+      "runner_up_id": 304,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 3,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "Ceske Budejovice",
+      "runner_up": "Kraluv Dvur"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 72,
+        "2": 69,
+        "4": 52,
+        "6": 48,
+        "13": 38,
+        "16": 28
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 16,
+        "2": 16,
+        "4": 14,
+        "6": 13,
+        "13": 7,
+        "16": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 38,
+      "drop_position": 14,
+      "drop_pts": 34,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 34
+        },
+        {
+          "position": 15,
+          "points": 34
+        },
+        {
+          "position": 16,
+          "points": 28
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 7,
+      "drop_position": 14,
+      "drop_pts": 7,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 7
+        },
+        {
+          "position": 15,
+          "points": 3
+        },
+        {
+          "position": 16,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 272,
+      "total_goals": 869,
+      "avg_goals": 3.195,
+      "home_wins": 124,
+      "draws": 57,
+      "away_wins": 91,
+      "home_win_pct": 45.6,
+      "draw_pct": 21.0,
+      "away_win_pct": 33.5,
+      "goalless": 17,
+      "goalless_pct": 6.2,
+      "total_points": 759,
+      "avg_points_per_team": 44.65,
+      "n_teams": 17
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 58,
+      "total_goals": 187,
+      "avg_goals": 3.224,
+      "home_wins": 23,
+      "draws": 17,
+      "away_wins": 18,
+      "home_win_pct": 39.7,
+      "draw_pct": 29.3,
+      "away_win_pct": 31.0,
+      "goalless": 7,
+      "goalless_pct": 12.1,
+      "total_points": 157,
+      "avg_points_per_team": 9.81,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.059,
+        "goals": 4.471
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.125,
+        "goals": 4.375
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 4.471
+    }
+  }
+}

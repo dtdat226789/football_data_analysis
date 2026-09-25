@@ -98,6 +98,39 @@ def test_matches_ht_null_vs_null_ok_but_non_null_detected():
     assert not issues
 
 
+def test_matches_unplayed_rows_are_skipped_not_reported_missing():
+    issues = []
+    raw = {
+        "matches": [
+            raw_match(mid=101),
+            {**raw_match(mid=102), "score": "CAN."},
+            {**raw_match(mid=103), "score": "AWA."},
+            {**raw_match(mid=104), "score": "2:0CAN."},
+        ]
+    }
+    db = {101: db_match()}
+    reconcile_matches(issues, LEAGUE, SEASON, raw, db, team_ids())
+    assert not issues
+    assert "MATCH_NOT_IN_DB" not in codes(issues)
+    assert "EXTRA_MATCH_IN_DB" not in codes(issues)
+
+
+def test_matches_suffix_scores_and_absent_ht_roundtrip():
+    issues = []
+    raw = {
+        "matches": [
+            {**raw_match(mid=101, hs=2, as_=1, ht=None), "score": "2:1AfP", "ht_result": "Not found"},
+            {**raw_match(mid=102, hs=1, as_=3, ht=None), "score": "1:3AET", "ht_result": "N/A"},
+        ]
+    }
+    db = {
+        101: db_match(mid=101, hs=2, as_=1, ht=(None, None)),
+        102: db_match(mid=102, hs=1, as_=3, ht=(None, None)),
+    }
+    reconcile_matches(issues, LEAGUE, SEASON, raw, db, team_ids())
+    assert not issues
+
+
 def test_matches_missing_from_db():
     issues = []
     raw = {"matches": [raw_match(mid=999)]}

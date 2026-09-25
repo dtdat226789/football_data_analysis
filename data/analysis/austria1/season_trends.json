@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:54:47+00:00",
+  "config": {
+    "league": "austria1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\austria1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Bundesliga",
+    "country": "Austria",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "split",
+    "url": "https://www.football-charts.com/leagues/austria/bundesliga"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "LASK",
+      "champion_id": 33,
+      "champion_pts": 58,
+      "runner_up": "Sturm Graz",
+      "runner_up_id": 34,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026-2027",
+      "champion": "SK Rapid",
+      "champion_id": 37,
+      "champion_pts": 18,
+      "runner_up": "Salzburg",
+      "runner_up_id": 35,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 1,
+      "champion": "SK Rapid",
+      "runner_up": "Salzburg"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 58,
+        "2": 56,
+        "4": 48,
+        "6": 47,
+        "9": 41,
+        "12": 29
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 18,
+        "2": 17,
+        "4": 11,
+        "6": 8,
+        "9": 8,
+        "12": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 9,
+      "safe_pts": 41,
+      "drop_position": 10,
+      "drop_pts": 40,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 40
+        },
+        {
+          "position": 11,
+          "points": 37
+        },
+        {
+          "position": 12,
+          "points": 29
+        }
+      ],
+      "bottom3_range": 11
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 9,
+      "safe_pts": 8,
+      "drop_position": 10,
+      "drop_pts": 7,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 7
+        },
+        {
+          "position": 11,
+          "points": 5
+        },
+        {
+          "position": 12,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 195,
+      "total_goals": 527,
+      "avg_goals": 2.703,
+      "home_wins": 84,
+      "draws": 50,
+      "away_wins": 61,
+      "home_win_pct": 43.1,
+      "draw_pct": 25.6,
+      "away_win_pct": 31.3,
+      "goalless": 12,
+      "goalless_pct": 6.2,
+      "total_points": 535,
+      "avg_points_per_team": 44.58,
+      "n_teams": 12
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 42,
+      "total_goals": 129,
+      "avg_goals": 3.071,
+      "home_wins": 22,
+      "draws": 9,
+      "away_wins": 11,
+      "home_win_pct": 52.4,
+      "draw_pct": 21.4,
+      "away_win_pct": 26.2,
+      "goalless": 1,
+      "goalless_pct": 2.4,
+      "total_points": 117,
+      "avg_points_per_team": 9.75,
+      "n_teams": 12
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.167,
+        "goals": 3.667
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.333,
+        "goals": 2.0
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 3.667
+    }
+  }
+}

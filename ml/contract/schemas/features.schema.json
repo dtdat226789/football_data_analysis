@@ -1,0 +1,209 @@
+{
+  "properties": {
+    "api_id": {
+      "title": "Api Id",
+      "type": "integer"
+    },
+    "league": {
+      "title": "League",
+      "type": "string"
+    },
+    "season": {
+      "title": "Season",
+      "type": "string"
+    },
+    "game_index": {
+      "title": "Game Index",
+      "type": "integer"
+    },
+    "home_team_id": {
+      "title": "Home Team Id",
+      "type": "integer"
+    },
+    "home_team": {
+      "title": "Home Team",
+      "type": "string"
+    },
+    "away_team_id": {
+      "title": "Away Team Id",
+      "type": "integer"
+    },
+    "away_team": {
+      "title": "Away Team",
+      "type": "string"
+    },
+    "match_date": {
+      "title": "Match Date",
+      "type": "string"
+    },
+    "home_team_games_before": {
+      "title": "Home Team Games Before",
+      "type": "integer"
+    },
+    "away_team_games_before": {
+      "title": "Away Team Games Before",
+      "type": "integer"
+    },
+    "home_team_points_last_5": {
+      "title": "Home Team Points Last 5",
+      "type": "number"
+    },
+    "away_team_points_last_5": {
+      "title": "Away Team Points Last 5",
+      "type": "number"
+    },
+    "home_team_wins_last_5": {
+      "title": "Home Team Wins Last 5",
+      "type": "number"
+    },
+    "away_team_wins_last_5": {
+      "title": "Away Team Wins Last 5",
+      "type": "number"
+    },
+    "home_team_goals_scored_last_5": {
+      "title": "Home Team Goals Scored Last 5",
+      "type": "number"
+    },
+    "away_team_goals_scored_last_5": {
+      "title": "Away Team Goals Scored Last 5",
+      "type": "number"
+    },
+    "home_team_goals_conceded_last_5": {
+      "title": "Home Team Goals Conceded Last 5",
+      "type": "number"
+    },
+    "away_team_goals_conceded_last_5": {
+      "title": "Away Team Goals Conceded Last 5",
+      "type": "number"
+    },
+    "home_team_home_win_rate": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Home Team Home Win Rate",
+      "type": "number"
+    },
+    "home_team_home_goals_avg": {
+      "minimum": 0.0,
+      "title": "Home Team Home Goals Avg",
+      "type": "number"
+    },
+    "home_team_home_conceded_avg": {
+      "minimum": 0.0,
+      "title": "Home Team Home Conceded Avg",
+      "type": "number"
+    },
+    "away_team_away_win_rate": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Away Team Away Win Rate",
+      "type": "number"
+    },
+    "away_team_away_goals_avg": {
+      "minimum": 0.0,
+      "title": "Away Team Away Goals Avg",
+      "type": "number"
+    },
+    "away_team_away_conceded_avg": {
+      "minimum": 0.0,
+      "title": "Away Team Away Conceded Avg",
+      "type": "number"
+    },
+    "home_position_before_match": {
+      "minimum": 1,
+      "title": "Home Position Before Match",
+      "type": "number"
+    },
+    "away_position_before_match": {
+      "minimum": 1,
+      "title": "Away Position Before Match",
+      "type": "number"
+    },
+    "position_difference": {
+      "title": "Position Difference",
+      "type": "number"
+    },
+    "home_points_before_match": {
+      "title": "Home Points Before Match",
+      "type": "number"
+    },
+    "away_points_before_match": {
+      "title": "Away Points Before Match",
+      "type": "number"
+    },
+    "points_difference": {
+      "title": "Points Difference",
+      "type": "number"
+    },
+    "home_rest_days": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Home Rest Days"
+    },
+    "away_rest_days": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Away Rest Days"
+    },
+    "rest_days_difference": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Rest Days Difference"
+    }
+  },
+  "required": [
+    "api_id",
+    "league",
+    "season",
+    "game_index",
+    "home_team_id",
+    "home_team",
+    "away_team_id",
+    "away_team",
+    "match_date",
+    "home_team_games_before",
+    "away_team_games_before",
+    "home_team_points_last_5",
+    "away_team_points_last_5",
+    "home_team_wins_last_5",
+    "away_team_wins_last_5",
+    "home_team_goals_scored_last_5",
+    "away_team_goals_scored_last_5",
+    "home_team_goals_conceded_last_5",
+    "away_team_goals_conceded_last_5",
+    "home_team_home_win_rate",
+    "home_team_home_goals_avg",
+    "home_team_home_conceded_avg",
+    "away_team_away_win_rate",
+    "away_team_away_goals_avg",
+    "away_team_away_conceded_avg",
+    "home_position_before_match",
+    "away_position_before_match",
+    "position_difference",
+    "home_points_before_match",
+    "away_points_before_match",
+    "points_difference",
+    "home_rest_days",
+    "away_rest_days",
+    "rest_days_difference"
+  ],
+  "title": "MatchFeatures",
+  "type": "object"
+}

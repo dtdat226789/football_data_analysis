@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:56:19+00:00",
+  "config": {
+    "league": "czech1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\czech1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Chance Liga",
+    "country": "Czech Republic",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/czech-republic/chance-liga"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Slavia Prague",
+      "champion_id": 266,
+      "champion_pts": 80,
+      "runner_up": "Sparta Prague",
+      "runner_up_id": 267,
+      "margin_pts": 4
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Slavia Prague",
+      "champion_id": 266,
+      "champion_pts": 23,
+      "runner_up": "Liberec",
+      "runner_up_id": 272,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 4,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 3,
+      "champion": "Slavia Prague",
+      "runner_up": "Liberec"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 80,
+        "2": 76,
+        "4": 56,
+        "6": 52,
+        "13": 36,
+        "16": 26
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 23,
+        "2": 20,
+        "4": 16,
+        "6": 16,
+        "13": 8,
+        "16": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 36,
+      "drop_position": 14,
+      "drop_pts": 36,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 36
+        },
+        {
+          "position": 15,
+          "points": 35
+        },
+        {
+          "position": 16,
+          "points": 26
+        }
+      ],
+      "bottom3_range": 10
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 8,
+      "drop_position": 14,
+      "drop_pts": 5,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 5
+        },
+        {
+          "position": 15,
+          "points": 4
+        },
+        {
+          "position": 16,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 280,
+      "total_goals": 740,
+      "avg_goals": 2.643,
+      "home_wins": 118,
+      "draws": 67,
+      "away_wins": 95,
+      "home_win_pct": 42.1,
+      "draw_pct": 23.9,
+      "away_win_pct": 33.9,
+      "goalless": 23,
+      "goalless_pct": 8.2,
+      "total_points": 767,
+      "avg_points_per_team": 42.61,
+      "n_teams": 18
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 71,
+      "total_goals": 201,
+      "avg_goals": 2.831,
+      "home_wins": 32,
+      "draws": 15,
+      "away_wins": 24,
+      "home_win_pct": 45.1,
+      "draw_pct": 21.1,
+      "away_win_pct": 33.8,
+      "goalless": 4,
+      "goalless_pct": 5.6,
+      "total_points": 198,
+      "avg_points_per_team": 12.38,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.333,
+        "goals": 5.889
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.875,
+        "goals": 4.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 5.889
+    }
+  }
+}

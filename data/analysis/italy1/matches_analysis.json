@@ -1,0 +1,416 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:01:40+00:00",
+  "config": {
+    "league": "italy1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\italy1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie A",
+    "country": "Italy",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/italy/serie-a"
+  },
+  "overall": {
+    "n_matches": 430,
+    "home_wins": 170,
+    "draws": 108,
+    "away_wins": 152,
+    "home_win_pct": 39.5,
+    "draw_pct": 25.1,
+    "away_win_pct": 35.3,
+    "home_goals": 559,
+    "away_goals": 508,
+    "total_goals": 1067,
+    "avg_goals": 2.481,
+    "goalless": 36,
+    "goalless_pct": 8.4
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 380,
+      "home_wins": 148,
+      "draws": 99,
+      "away_wins": 133,
+      "home_win_pct": 38.9,
+      "draw_pct": 26.1,
+      "away_win_pct": 35.0,
+      "home_goals": 485,
+      "away_goals": 437,
+      "total_goals": 922,
+      "avg_goals": 2.426,
+      "goalless": 36,
+      "goalless_pct": 9.5
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 50,
+      "home_wins": 22,
+      "draws": 9,
+      "away_wins": 19,
+      "home_win_pct": 44.0,
+      "draw_pct": 18.0,
+      "away_win_pct": 38.0,
+      "home_goals": 74,
+      "away_goals": 71,
+      "total_goals": 145,
+      "avg_goals": 2.9,
+      "goalless": 0,
+      "goalless_pct": 0.0
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 101,
+        "draw": 18,
+        "away": 6
+      },
+      "draw": {
+        "home": 62,
+        "draw": 65,
+        "away": 62
+      },
+      "away": {
+        "home": 7,
+        "draw": 25,
+        "away": 84
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 80.8,
+        "draw": 14.4,
+        "away": 4.8
+      },
+      "draw": {
+        "home": 32.8,
+        "draw": 34.4,
+        "away": 32.8
+      },
+      "away": {
+        "home": 6.0,
+        "draw": 21.6,
+        "away": 72.4
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 7,
+      "pct": 1.6,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Napoli",
+          "away_team": "Genoa",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Torino",
+          "away_team": "Genoa",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Genoa",
+          "away_team": "Bologna",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Atalanta",
+          "away_team": "Napoli",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Napoli",
+          "away_team": "Lecce",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Como",
+          "away_team": "AS Roma",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Sassuolo",
+          "away_team": "Cagliari",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 6,
+      "pct": 1.4,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Fiorentina",
+          "away_team": "Como",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Torino",
+          "away_team": "AC Milan",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Lecce",
+          "away_team": "Parma",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Udinese",
+          "away_team": "Sassuolo",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Como",
+          "away_team": "Inter",
+          "ht_score": "2-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Cremonese",
+          "away_team": "Lazio",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 125,
+      "home": {
+        "count": 101,
+        "pct": 80.8
+      },
+      "draw": {
+        "count": 18,
+        "pct": 14.4
+      },
+      "away": {
+        "count": 6,
+        "pct": 4.8
+      }
+    },
+    "ht_draw": {
+      "n_matches": 189,
+      "home": {
+        "count": 62,
+        "pct": 32.8
+      },
+      "draw": {
+        "count": 65,
+        "pct": 34.4
+      },
+      "away": {
+        "count": 62,
+        "pct": 32.8
+      }
+    },
+    "away_lead": {
+      "n_matches": 116,
+      "home": {
+        "count": 7,
+        "pct": 6.0
+      },
+      "draw": {
+        "count": 25,
+        "pct": 21.6
+      },
+      "away": {
+        "count": 84,
+        "pct": 72.4
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 430,
+    "n_with_first_goal": 394,
+    "n_goalless": 36,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 128,
+        "home": {
+          "count": 58,
+          "pct": 45.3
+        },
+        "draw": {
+          "count": 26,
+          "pct": 20.3
+        },
+        "away": {
+          "count": 44,
+          "pct": 34.4
+        },
+        "pct_of_matches": 29.8
+      },
+      "16-30": {
+        "n_matches": 88,
+        "home": {
+          "count": 34,
+          "pct": 38.6
+        },
+        "draw": {
+          "count": 19,
+          "pct": 21.6
+        },
+        "away": {
+          "count": 35,
+          "pct": 39.8
+        },
+        "pct_of_matches": 20.5
+      },
+      "31-45": {
+        "n_matches": 58,
+        "home": {
+          "count": 27,
+          "pct": 46.6
+        },
+        "draw": {
+          "count": 9,
+          "pct": 15.5
+        },
+        "away": {
+          "count": 22,
+          "pct": 37.9
+        },
+        "pct_of_matches": 13.5
+      },
+      "46-60": {
+        "n_matches": 55,
+        "home": {
+          "count": 24,
+          "pct": 43.6
+        },
+        "draw": {
+          "count": 9,
+          "pct": 16.4
+        },
+        "away": {
+          "count": 22,
+          "pct": 40.0
+        },
+        "pct_of_matches": 12.8
+      },
+      "61-75": {
+        "n_matches": 39,
+        "home": {
+          "count": 17,
+          "pct": 43.6
+        },
+        "draw": {
+          "count": 5,
+          "pct": 12.8
+        },
+        "away": {
+          "count": 17,
+          "pct": 43.6
+        },
+        "pct_of_matches": 9.1
+      },
+      "76-90": {
+        "n_matches": 21,
+        "home": {
+          "count": 7,
+          "pct": 33.3
+        },
+        "draw": {
+          "count": 4,
+          "pct": 19.0
+        },
+        "away": {
+          "count": 10,
+          "pct": 47.6
+        },
+        "pct_of_matches": 4.9
+      },
+      "91-120": {
+        "n_matches": 5,
+        "home": {
+          "count": 3,
+          "pct": 60.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 2,
+          "pct": 40.0
+        },
+        "pct_of_matches": 1.2
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 430,
+      "count": 36,
+      "pct": 8.4
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 380,
+        "count": 36,
+        "pct": 9.5
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 50,
+        "count": 0,
+        "pct": 0.0
+      }
+    ]
+  }
+}

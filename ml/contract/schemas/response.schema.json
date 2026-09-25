@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "MatchResult": {
+      "description": "Label of a match result (matches the dataset's ``match_result``).",
+      "enum": [
+        "HOME_WIN",
+        "DRAW",
+        "AWAY_WIN"
+      ],
+      "title": "MatchResult",
+      "type": "string"
+    }
+  },
+  "description": "The model's prediction for a single fixture, with consistency invariants.\n\nInvariants enforced on construction:\n\n* ``probabilities`` holds exactly the keys ``HOME_WIN``, ``DRAW``,\n  ``AWAY_WIN``, each in ``[0, 1]``;\n* probabilities sum to 1 (within ``PROB_SUM_TOLERANCE``);\n* ``confidence`` is in ``[0, 1]`` and equals the probability of the\n  predicted result (within ``CONFIDENCE_TOLERANCE``).",
+  "properties": {
+    "probabilities": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Probabilities",
+      "type": "object"
+    },
+    "predicted_match_result": {
+      "$ref": "#/$defs/MatchResult"
+    },
+    "confidence": {
+      "title": "Confidence",
+      "type": "number"
+    },
+    "model_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Id"
+    },
+    "feature_version": {
+      "default": "1.0.0",
+      "title": "Feature Version",
+      "type": "string"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "probabilities",
+    "predicted_match_result",
+    "confidence"
+  ],
+  "title": "PredictionResponse",
+  "type": "object"
+}

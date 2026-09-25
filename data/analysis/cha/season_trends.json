@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:55:59+00:00",
+  "config": {
+    "league": "cha",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\cha",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Championship",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/championship"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Coventry",
+      "champion_id": 218,
+      "champion_pts": 95,
+      "runner_up": "Ipswich",
+      "runner_up_id": 219,
+      "margin_pts": 11
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Swansea",
+      "champion_id": 228,
+      "champion_pts": 17,
+      "runner_up": "West Ham",
+      "runner_up_id": 242,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 11,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "Swansea",
+      "runner_up": "West Ham"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 95,
+        "2": 84,
+        "4": 81,
+        "6": 80,
+        "21": 53,
+        "24": 18
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 17,
+        "2": 15,
+        "4": 14,
+        "6": 14,
+        "21": 7,
+        "24": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 21,
+      "safe_pts": 53,
+      "drop_position": 22,
+      "drop_pts": 52,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 52
+        },
+        {
+          "position": 23,
+          "points": 47
+        },
+        {
+          "position": 24,
+          "points": 18
+        }
+      ],
+      "bottom3_range": 34
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 21,
+      "safe_pts": 7,
+      "drop_position": 22,
+      "drop_pts": 5,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 5
+        },
+        {
+          "position": 23,
+          "points": 4
+        },
+        {
+          "position": 24,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 559,
+      "total_goals": 1445,
+      "avg_goals": 2.585,
+      "home_wins": 233,
+      "draws": 149,
+      "away_wins": 177,
+      "home_win_pct": 41.7,
+      "draw_pct": 26.7,
+      "away_win_pct": 31.7,
+      "goalless": 37,
+      "goalless_pct": 6.6,
+      "total_points": 1525,
+      "avg_points_per_team": 63.54,
+      "n_teams": 24
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 95,
+      "total_goals": 277,
+      "avg_goals": 2.916,
+      "home_wins": 39,
+      "draws": 29,
+      "away_wins": 27,
+      "home_win_pct": 41.1,
+      "draw_pct": 30.5,
+      "away_win_pct": 28.4,
+      "goalless": 7,
+      "goalless_pct": 7.4,
+      "total_points": 256,
+      "avg_points_per_team": 10.67,
+      "n_teams": 24
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 4.083,
+        "goals": 4.583
+      },
+      {
+        "season": "2026-2027",
+        "luck": 3.417,
+        "goals": 6.75
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 6.75
+    }
+  }
+}

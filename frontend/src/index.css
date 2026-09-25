@@ -445,6 +445,329 @@ th.num {
   gap: 16px;
 }
 
+/* ── chart lightbox (fit-to-view) ─────────────────────────── */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(4, 8, 14, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  animation: fade-in 0.15s ease;
+}
+
+.lightbox-frame {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lightbox-frame img {
+  max-width: 96vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  background: #fff;
+}
+
+.lightbox-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lightbox-close {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── clickable chart cards ────────────────────────────────── */
+.chart-card {
+  cursor: zoom-in;
+}
+
+/* ── lightweight inline charts ────────────────────────────── */
+.chart-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(84px, 30%) 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 40px;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  min-width: 2px;
+}
+
+.bar-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 28px;
+  text-align: right;
+}
+
+.donut-wrap .chart-title {
+  text-align: center;
+}
+
+.donut-inline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+}
+
+.donut-center {
+  fill: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.donut-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.donut-legend .swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+.stat-card .value {
+  font-size: 22px;
+}
+
+.team-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.team-stats .panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── dashboard / league cards ─────────────────────────────────────────── */
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.card.mini,
+.card.league-card {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card.mini:hover {
+  border-color: var(--accent);
+}
+
+.mini-name {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+section > h3 {
+  margin: 24px 0 4px;
+}
+
+/* ── prediction chips ─────────────────────────────────────────────────── */
+.pred-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.pred-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: var(--muted, #888);
+  background: var(--card, #fff);
+  white-space: nowrap;
+}
+
+.pred-chip b {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.pred-chip.chip-lean {
+  border-color: var(--brand, var(--accent));
+  color: var(--brand, var(--accent));
+}
+
+.pred-chip.chip-lean b {
+  color: var(--brand, var(--accent));
+}
+
+.pred-chip.chip-strong {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.pred-chip.chip-strong b {
+  color: var(--green);
+}
+
+.pred-chip.chip-mid {
+  border-color: var(--amber);
+}
+
+.pred-chip.chip-mid b {
+  color: var(--amber);
+}
+
+.pred-chip.chip-weak {
+  border-color: var(--border);
+}
+
+.pred-meta {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 6px;
+  font-size: 12px;
+  color: var(--muted, #888);
+  white-space: nowrap;
+}
+
+/* ── skeletons ────────────────────────────────────────────────────────── */
+.skeleton-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--border, #d0d7de);
+}
+
+.skeleton-block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ── league detail header tabs ────────────────────────────────────────── */
+.tab-spacer {
+  flex: 1;
+}
+
+/* ── date presets (Matches) ───────────────────────────────────────────── */
+.date-presets {
+  display: inline-flex;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.preset {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.preset:hover {
+  border-color: var(--accent);
+}
+
 @media (max-width: 760px) {
   .two-col {
     grid-template-columns: 1fr;

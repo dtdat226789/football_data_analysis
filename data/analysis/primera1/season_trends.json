@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:42:31+00:00",
+  "config": {
+    "league": "primera1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\primera1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Primera RFEF - Group 1",
+    "country": "Spain",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/primera-rfef-group-1"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Tenerife",
+      "champion_id": 1268,
+      "champion_pts": 79,
+      "runner_up": "Celta Vigo B",
+      "runner_up_id": 1269,
+      "margin_pts": 11
+    },
+    {
+      "season": "2026-2027",
+      "champion": "UD Logrones",
+      "champion_id": 1289,
+      "champion_pts": 10,
+      "runner_up": "Cacereno",
+      "runner_up_id": 1281,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 11,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "UD Logrones",
+      "runner_up": "Cacereno"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 79,
+        "2": 68,
+        "4": 61,
+        "6": 59,
+        "17": 43,
+        "20": 28
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 10,
+        "2": 10,
+        "4": 8,
+        "6": 7,
+        "17": 3,
+        "20": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 17,
+      "safe_pts": 43,
+      "drop_position": 18,
+      "drop_pts": 41,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 41
+        },
+        {
+          "position": 19,
+          "points": 40
+        },
+        {
+          "position": 20,
+          "points": 28
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 17,
+      "safe_pts": 3,
+      "drop_position": 18,
+      "drop_pts": 3,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 3
+        },
+        {
+          "position": 19,
+          "points": 1
+        },
+        {
+          "position": 20,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 398,
+      "total_goals": 974,
+      "avg_goals": 2.447,
+      "home_wins": 182,
+      "draws": 113,
+      "away_wins": 103,
+      "home_win_pct": 45.7,
+      "draw_pct": 28.4,
+      "away_win_pct": 25.9,
+      "goalless": 39,
+      "goalless_pct": 9.8,
+      "total_points": 1081,
+      "avg_points_per_team": 51.48,
+      "n_teams": 21
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 40,
+      "total_goals": 105,
+      "avg_goals": 2.625,
+      "home_wins": 20,
+      "draws": 9,
+      "away_wins": 11,
+      "home_win_pct": 50.0,
+      "draw_pct": 22.5,
+      "away_win_pct": 27.5,
+      "goalless": 2,
+      "goalless_pct": 5.0,
+      "total_points": 111,
+      "avg_points_per_team": 5.55,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.857,
+        "goals": 6.857
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.0,
+        "goals": 6.2
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.857
+    }
+  }
+}

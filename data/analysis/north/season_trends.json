@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:03:57+00:00",
+  "config": {
+    "league": "north",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\north",
+    "out_stem": null
+  },
+  "league": {
+    "name": "National League North",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/national-league-north"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "AFC Fylde",
+      "champion_id": 1124,
+      "champion_pts": 100,
+      "runner_up": "South Shields",
+      "runner_up_id": 1127,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Hereford",
+      "champion_id": 1144,
+      "champion_pts": 22,
+      "runner_up": "Oxford City",
+      "runner_up_id": 1141,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 2,
+      "champion": "AFC Fylde",
+      "runner_up": "South Shields"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 100,
+        "2": 98,
+        "4": 82,
+        "6": 76,
+        "21": 52,
+        "24": 29
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 22,
+        "2": 19,
+        "4": 18,
+        "6": 17,
+        "21": 8,
+        "24": 6
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 21,
+      "safe_pts": 52,
+      "drop_position": 22,
+      "drop_pts": 50,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 50
+        },
+        {
+          "position": 23,
+          "points": 39
+        },
+        {
+          "position": 24,
+          "points": 29
+        }
+      ],
+      "bottom3_range": 21
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 21,
+      "safe_pts": 8,
+      "drop_position": 22,
+      "drop_pts": 6,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 6
+        },
+        {
+          "position": 23,
+          "points": 6
+        },
+        {
+          "position": 24,
+          "points": 6
+        }
+      ],
+      "bottom3_range": 0
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 560,
+      "total_goals": 1707,
+      "avg_goals": 3.048,
+      "home_wins": 239,
+      "draws": 126,
+      "away_wins": 195,
+      "home_win_pct": 42.7,
+      "draw_pct": 22.5,
+      "away_win_pct": 34.8,
+      "goalless": 23,
+      "goalless_pct": 4.1,
+      "total_points": 1554,
+      "avg_points_per_team": 64.75,
+      "n_teams": 24
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 108,
+      "total_goals": 290,
+      "avg_goals": 2.685,
+      "home_wins": 53,
+      "draws": 21,
+      "away_wins": 34,
+      "home_win_pct": 49.1,
+      "draw_pct": 19.4,
+      "away_win_pct": 31.5,
+      "goalless": 5,
+      "goalless_pct": 4.6,
+      "total_points": 303,
+      "avg_points_per_team": 12.62,
+      "n_teams": 24
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.333,
+        "goals": 7.417
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.333,
+        "goals": 9.333
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 9.333
+    }
+  }
+}

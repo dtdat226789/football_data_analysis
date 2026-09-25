@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:46:39+00:00",
+  "config": {
+    "league": "segunda5",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\segunda5",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Segunda RFEF - Group 5",
+    "country": "Spain",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/segunda-rfef-group-5"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Rayo Majadahonda",
+      "champion_id": 1321,
+      "champion_pts": 70,
+      "runner_up": "San Sebastian Reyes",
+      "runner_up_id": 1535,
+      "margin_pts": 0
+    },
+    {
+      "season": "2026-2027",
+      "champion": "San Sebastian Reyes",
+      "champion_id": 1535,
+      "champion_pts": 10,
+      "runner_up": "RSD Alcala",
+      "runner_up_id": 1538,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "Rayo Majadahonda",
+      "runner_up": "San Sebastian Reyes"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 70,
+        "2": 70,
+        "4": 57,
+        "6": 51,
+        "15": 37,
+        "18": 30
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 10,
+        "2": 9,
+        "4": 9,
+        "6": 7,
+        "15": 2,
+        "18": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 37,
+      "drop_position": 16,
+      "drop_pts": 34,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 34
+        },
+        {
+          "position": 17,
+          "points": 31
+        },
+        {
+          "position": 18,
+          "points": 30
+        }
+      ],
+      "bottom3_range": 4
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 2,
+      "drop_position": 16,
+      "drop_pts": 1,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 1
+        },
+        {
+          "position": 17,
+          "points": 1
+        },
+        {
+          "position": 18,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 0
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 306,
+      "total_goals": 783,
+      "avg_goals": 2.559,
+      "home_wins": 138,
+      "draws": 77,
+      "away_wins": 91,
+      "home_win_pct": 45.1,
+      "draw_pct": 25.2,
+      "away_win_pct": 29.7,
+      "goalless": 27,
+      "goalless_pct": 8.8,
+      "total_points": 841,
+      "avg_points_per_team": 46.72,
+      "n_teams": 18
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 33,
+      "total_goals": 89,
+      "avg_goals": 2.697,
+      "home_wins": 16,
+      "draws": 8,
+      "away_wins": 9,
+      "home_win_pct": 48.5,
+      "draw_pct": 24.2,
+      "away_win_pct": 27.3,
+      "goalless": 5,
+      "goalless_pct": 15.2,
+      "total_points": 91,
+      "avg_points_per_team": 5.06,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.111,
+        "goals": 6.444
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.333,
+        "goals": 5.333
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.444
+    }
+  }
+}

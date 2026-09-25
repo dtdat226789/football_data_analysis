@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:47:38+00:00",
+  "config": {
+    "league": "south",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\south",
+    "out_stem": null
+  },
+  "league": {
+    "name": "National League South",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/national-league-south"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Worthing",
+      "champion_id": 1126,
+      "champion_pts": 84,
+      "runner_up": "Hornchurch",
+      "runner_up_id": 1125,
+      "margin_pts": 0
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Maidstone",
+      "champion_id": 1586,
+      "champion_pts": 22,
+      "runner_up": "Tonbridge",
+      "runner_up_id": 1592,
+      "margin_pts": 5
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 5,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "Worthing",
+      "runner_up": "Hornchurch"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 84,
+        "2": 84,
+        "4": 82,
+        "6": 78,
+        "21": 48,
+        "24": 40
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 22,
+        "2": 17,
+        "4": 17,
+        "6": 16,
+        "21": 8,
+        "24": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 21,
+      "safe_pts": 48,
+      "drop_position": 22,
+      "drop_pts": 43,
+      "gap": 5,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 43
+        },
+        {
+          "position": 23,
+          "points": 42
+        },
+        {
+          "position": 24,
+          "points": 40
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 21,
+      "safe_pts": 8,
+      "drop_position": 22,
+      "drop_pts": 8,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 8
+        },
+        {
+          "position": 23,
+          "points": 3
+        },
+        {
+          "position": 24,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 7
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 605,
+      "total_goals": 1709,
+      "avg_goals": 2.825,
+      "home_wins": 289,
+      "draws": 135,
+      "away_wins": 181,
+      "home_win_pct": 47.8,
+      "draw_pct": 22.3,
+      "away_win_pct": 29.9,
+      "goalless": 39,
+      "goalless_pct": 6.4,
+      "total_points": 1671,
+      "avg_points_per_team": 23.21,
+      "n_teams": 72
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 111,
+      "total_goals": 318,
+      "avg_goals": 2.865,
+      "home_wins": 38,
+      "draws": 31,
+      "away_wins": 42,
+      "home_win_pct": 34.2,
+      "draw_pct": 27.9,
+      "away_win_pct": 37.8,
+      "goalless": 5,
+      "goalless_pct": 4.5,
+      "total_points": 302,
+      "avg_points_per_team": 12.58,
+      "n_teams": 24
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 17.0,
+        "goals": 21.083
+      },
+      {
+        "season": "2026-2027",
+        "luck": 3.417,
+        "goals": 8.333
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 21.083
+    }
+  }
+}

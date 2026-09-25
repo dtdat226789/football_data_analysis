@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:55:48+00:00",
+  "config": {
+    "league": "bulgaria1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\bulgaria1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "efbet League",
+    "country": "Bulgaria",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/bulgaria/efbet-league"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Levski Sofia",
+      "champion_id": 200,
+      "champion_pts": 81,
+      "runner_up": "Ludogorets",
+      "runner_up_id": 201,
+      "margin_pts": 14
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Levski Sofia",
+      "champion_id": 200,
+      "champion_pts": 25,
+      "runner_up": "CSKA Sofia",
+      "runner_up_id": 203,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 14,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 1,
+      "champion": "Levski Sofia",
+      "runner_up": "CSKA Sofia"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 81,
+        "2": 67,
+        "4": 63,
+        "6": 54,
+        "11": 46,
+        "14": 34
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 25,
+        "2": 24,
+        "4": 22,
+        "6": 16,
+        "11": 7,
+        "14": 5
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 11,
+      "safe_pts": 46,
+      "drop_position": 12,
+      "drop_pts": 39,
+      "gap": 7,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 39
+        },
+        {
+          "position": 13,
+          "points": 37
+        },
+        {
+          "position": 14,
+          "points": 34
+        }
+      ],
+      "bottom3_range": 5
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 11,
+      "safe_pts": 7,
+      "drop_position": 12,
+      "drop_pts": 7,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 7
+        },
+        {
+          "position": 13,
+          "points": 6
+        },
+        {
+          "position": 14,
+          "points": 5
+        }
+      ],
+      "bottom3_range": 2
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 294,
+      "total_goals": 677,
+      "avg_goals": 2.303,
+      "home_wins": 125,
+      "draws": 82,
+      "away_wins": 87,
+      "home_win_pct": 42.5,
+      "draw_pct": 27.9,
+      "away_win_pct": 29.6,
+      "goalless": 36,
+      "goalless_pct": 12.2,
+      "total_points": 797,
+      "avg_points_per_team": 46.88,
+      "n_teams": 17
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 69,
+      "total_goals": 184,
+      "avg_goals": 2.667,
+      "home_wins": 31,
+      "draws": 17,
+      "away_wins": 21,
+      "home_win_pct": 44.9,
+      "draw_pct": 24.6,
+      "away_win_pct": 30.4,
+      "goalless": 3,
+      "goalless_pct": 4.3,
+      "total_points": 190,
+      "avg_points_per_team": 13.57,
+      "n_teams": 14
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 4.235,
+        "goals": 6.235
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.0,
+        "goals": 4.429
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.235
+    }
+  }
+}

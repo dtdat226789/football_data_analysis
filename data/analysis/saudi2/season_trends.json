@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:44:04+00:00",
+  "config": {
+    "league": "saudi2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\saudi2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Division 1",
+    "country": "Saudi Arabia",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/saudi-arabia/division-1"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Abha",
+      "champion_id": 1382,
+      "champion_pts": 77,
+      "runner_up": "Al Diriyah",
+      "runner_up_id": 1380,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Al-Ula",
+      "champion_id": 1383,
+      "champion_pts": 15,
+      "runner_up": "Al Zulfi",
+      "runner_up_id": 1387,
+      "margin_pts": 5
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 5,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 2,
+      "champion": "Abha",
+      "runner_up": "Al Diriyah"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 77,
+        "2": 75,
+        "4": 71,
+        "6": 59,
+        "15": 32,
+        "18": 14
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 10,
+        "4": 9,
+        "6": 9,
+        "15": 6,
+        "18": 2
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 32,
+      "drop_position": 16,
+      "drop_pts": 22,
+      "gap": 10,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 22
+        },
+        {
+          "position": 17,
+          "points": 21
+        },
+        {
+          "position": 18,
+          "points": 14
+        }
+      ],
+      "bottom3_range": 8
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 6,
+      "drop_position": 16,
+      "drop_pts": 5,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 5
+        },
+        {
+          "position": 17,
+          "points": 2
+        },
+        {
+          "position": 18,
+          "points": 2
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 309,
+      "total_goals": 917,
+      "avg_goals": 2.968,
+      "home_wins": 128,
+      "draws": 72,
+      "away_wins": 109,
+      "home_win_pct": 41.4,
+      "draw_pct": 23.3,
+      "away_win_pct": 35.3,
+      "goalless": 16,
+      "goalless_pct": 5.2,
+      "total_points": 849,
+      "avg_points_per_team": 47.17,
+      "n_teams": 18
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 53,
+      "total_goals": 112,
+      "avg_goals": 2.113,
+      "home_wins": 16,
+      "draws": 24,
+      "away_wins": 13,
+      "home_win_pct": 30.2,
+      "draw_pct": 45.3,
+      "away_win_pct": 24.5,
+      "goalless": 11,
+      "goalless_pct": 20.8,
+      "total_points": 135,
+      "avg_points_per_team": 7.5,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.333,
+        "goals": 5.444
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.889,
+        "goals": 6.222
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 6.222
+    }
+  }
+}

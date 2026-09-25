@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:55:29+00:00",
+  "config": {
+    "league": "brazil1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\brazil1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie A Betano",
+    "country": "Brazil",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/brazil/serie-a-betano"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Flamengo RJ",
+      "champion_id": 99,
+      "champion_pts": 78,
+      "runner_up": "Palmeiras",
+      "runner_up_id": 100,
+      "margin_pts": 5
+    },
+    {
+      "season": "2026",
+      "champion": "Flamengo RJ",
+      "champion_id": 99,
+      "champion_pts": 60,
+      "runner_up": "Palmeiras",
+      "runner_up_id": 100,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 5,
+        "tight": false
+      },
+      {
+        "season": "2026",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026",
+      "margin": 3,
+      "champion": "Flamengo RJ",
+      "runner_up": "Palmeiras"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 78,
+        "2": 73,
+        "4": 67,
+        "6": 63,
+        "17": 42,
+        "20": 17
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 60,
+        "2": 57,
+        "4": 48,
+        "6": 45,
+        "17": 29,
+        "20": 18
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 17,
+      "safe_pts": 42,
+      "drop_position": 18,
+      "drop_pts": 35,
+      "gap": 7,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 35
+        },
+        {
+          "position": 19,
+          "points": 34
+        },
+        {
+          "position": 20,
+          "points": 17
+        }
+      ],
+      "bottom3_range": 18
+    },
+    {
+      "season": "2026",
+      "safe_position": 17,
+      "safe_pts": 29,
+      "drop_position": 18,
+      "drop_pts": 28,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 28
+        },
+        {
+          "position": 19,
+          "points": 23
+        },
+        {
+          "position": 20,
+          "points": 18
+        }
+      ],
+      "bottom3_range": 10
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 380,
+      "total_goals": 959,
+      "avg_goals": 2.524,
+      "home_wins": 191,
+      "draws": 99,
+      "away_wins": 90,
+      "home_win_pct": 50.3,
+      "draw_pct": 26.1,
+      "away_win_pct": 23.7,
+      "goalless": 27,
+      "goalless_pct": 7.1,
+      "total_points": 1041,
+      "avg_points_per_team": 26.02,
+      "n_teams": 40
+    },
+    {
+      "season": "2026",
+      "n_matches": 277,
+      "total_goals": 739,
+      "avg_goals": 2.668,
+      "home_wins": 130,
+      "draws": 77,
+      "away_wins": 70,
+      "home_win_pct": 46.9,
+      "draw_pct": 27.8,
+      "away_win_pct": 25.3,
+      "goalless": 16,
+      "goalless_pct": 5.8,
+      "total_points": 754,
+      "avg_points_per_team": 37.7,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 9.75,
+        "goals": 12.55
+      },
+      {
+        "season": "2026",
+        "luck": 2.4,
+        "goals": 6.1
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "goals",
+      "avg_abs_diff": 12.55
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:56:49+00:00",
+  "config": {
+    "league": "czech3b",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\czech3b",
+    "out_stem": null
+  },
+  "league": {
+    "name": "3. CFL - Group B",
+    "country": "Czech Republic",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/czech-republic/3-cfl-group-b"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "FK Ceska Lipa",
+      "champion_id": 299,
+      "champion_pts": 88,
+      "runner_up": "Zapy",
+      "runner_up_id": 319,
+      "margin_pts": 14
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Zapy",
+      "champion_id": 319,
+      "champion_pts": 17,
+      "runner_up": "Jablonec B",
+      "runner_up_id": 325,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 14,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "Zapy",
+      "runner_up": "Jablonec B"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 88,
+        "2": 74,
+        "4": 61,
+        "6": 44,
+        "13": 34,
+        "16": 25
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 17,
+        "2": 15,
+        "4": 13,
+        "6": 12,
+        "13": 6,
+        "16": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 34,
+      "drop_position": 14,
+      "drop_pts": 31,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 31
+        },
+        {
+          "position": 15,
+          "points": 31
+        },
+        {
+          "position": 16,
+          "points": 25
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 6,
+      "drop_position": 14,
+      "drop_pts": 5,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 5
+        },
+        {
+          "position": 15,
+          "points": 5
+        },
+        {
+          "position": 16,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 272,
+      "total_goals": 912,
+      "avg_goals": 3.353,
+      "home_wins": 120,
+      "draws": 60,
+      "away_wins": 92,
+      "home_win_pct": 44.1,
+      "draw_pct": 22.1,
+      "away_win_pct": 33.8,
+      "goalless": 7,
+      "goalless_pct": 2.6,
+      "total_points": 756,
+      "avg_points_per_team": 44.47,
+      "n_teams": 17
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 54,
+      "total_goals": 167,
+      "avg_goals": 3.093,
+      "home_wins": 20,
+      "draws": 16,
+      "away_wins": 18,
+      "home_win_pct": 37.0,
+      "draw_pct": 29.6,
+      "away_win_pct": 33.3,
+      "goalless": 5,
+      "goalless_pct": 9.3,
+      "total_points": 146,
+      "avg_points_per_team": 9.12,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.235,
+        "goals": 5.529
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.125,
+        "goals": 4.25
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 5.529
+    }
+  }
+}

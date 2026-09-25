@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:54:28+00:00",
+  "config": {
+    "league": "algir1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\algir1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Ligue 1",
+    "country": "Algeria",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/algeria/ligue-1"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "MC Alger",
+      "champion_id": 1,
+      "champion_pts": 65,
+      "runner_up": "Saoura",
+      "runner_up_id": 2,
+      "margin_pts": 10
+    },
+    {
+      "season": "2026-2027",
+      "champion": "CR Belouizdad",
+      "champion_id": 3,
+      "champion_pts": 8,
+      "runner_up": "USM Alger",
+      "runner_up_id": 10,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 10,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 1,
+      "champion": "CR Belouizdad",
+      "runner_up": "USM Alger"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 65,
+        "2": 55,
+        "4": 49,
+        "6": 45,
+        "11": 39,
+        "14": 24
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 8,
+        "2": 7,
+        "4": 5,
+        "6": 5,
+        "11": 3,
+        "14": 2
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 11,
+      "safe_pts": 39,
+      "drop_position": 12,
+      "drop_pts": 36,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 36
+        },
+        {
+          "position": 13,
+          "points": 34
+        },
+        {
+          "position": 14,
+          "points": 24
+        }
+      ],
+      "bottom3_range": 12
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 11,
+      "safe_pts": 3,
+      "drop_position": 12,
+      "drop_pts": 3,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 3
+        },
+        {
+          "position": 13,
+          "points": 2
+        },
+        {
+          "position": 14,
+          "points": 2
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 240,
+      "total_goals": 544,
+      "avg_goals": 2.267,
+      "home_wins": 120,
+      "draws": 70,
+      "away_wins": 50,
+      "home_win_pct": 50.0,
+      "draw_pct": 29.2,
+      "away_win_pct": 20.8,
+      "goalless": 20,
+      "goalless_pct": 8.3,
+      "total_points": 650,
+      "avg_points_per_team": 40.62,
+      "n_teams": 16
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 22,
+      "total_goals": 56,
+      "avg_goals": 2.545,
+      "home_wins": 10,
+      "draws": 7,
+      "away_wins": 5,
+      "home_win_pct": 45.5,
+      "draw_pct": 31.8,
+      "away_win_pct": 22.7,
+      "goalless": 1,
+      "goalless_pct": 4.5,
+      "total_points": 59,
+      "avg_points_per_team": 3.69,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 1.5,
+        "goals": 4.625
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.375,
+        "goals": 5.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 5.5
+    }
+  }
+}

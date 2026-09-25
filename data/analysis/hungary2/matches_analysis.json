@@ -1,0 +1,381 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:01:03+00:00",
+  "config": {
+    "league": "hungary2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\hungary2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "NB II.",
+    "country": "Hungary",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/hungary/nb-ii"
+  },
+  "overall": {
+    "n_matches": 301,
+    "home_wins": 137,
+    "draws": 74,
+    "away_wins": 90,
+    "home_win_pct": 45.5,
+    "draw_pct": 24.6,
+    "away_win_pct": 29.9,
+    "home_goals": 426,
+    "away_goals": 348,
+    "total_goals": 774,
+    "avg_goals": 2.571,
+    "goalless": 17,
+    "goalless_pct": 5.6
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 240,
+      "home_wins": 105,
+      "draws": 60,
+      "away_wins": 75,
+      "home_win_pct": 43.8,
+      "draw_pct": 25.0,
+      "away_win_pct": 31.2,
+      "home_goals": 322,
+      "away_goals": 280,
+      "total_goals": 602,
+      "avg_goals": 2.508,
+      "goalless": 15,
+      "goalless_pct": 6.2
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 61,
+      "home_wins": 32,
+      "draws": 14,
+      "away_wins": 15,
+      "home_win_pct": 52.5,
+      "draw_pct": 23.0,
+      "away_win_pct": 24.6,
+      "home_goals": 104,
+      "away_goals": 68,
+      "total_goals": 172,
+      "avg_goals": 2.82,
+      "goalless": 2,
+      "goalless_pct": 3.3
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 80,
+        "draw": 18,
+        "away": 2
+      },
+      "draw": {
+        "home": 51,
+        "draw": 36,
+        "away": 42
+      },
+      "away": {
+        "home": 6,
+        "draw": 20,
+        "away": 46
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 80.0,
+        "draw": 18.0,
+        "away": 2.0
+      },
+      "draw": {
+        "home": 39.5,
+        "draw": 27.9,
+        "away": 32.6
+      },
+      "away": {
+        "home": 8.3,
+        "draw": 27.8,
+        "away": 63.9
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 6,
+      "pct": 2.0,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "BVSC-Zuglo",
+          "away_team": "Szentlorinc",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Karcagi",
+          "away_team": "Bekescsaba 1912",
+          "ht_score": "0-1",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Karcagi",
+          "away_team": "Budafoki",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Szentlorinc",
+          "away_team": "Videoton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Kozarmisleny SE",
+          "away_team": "Karcagi",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Videoton",
+          "away_team": "DVTK",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 2,
+      "pct": 0.7,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Szentlorinc",
+          "away_team": "Kecskemeti TE",
+          "ht_score": "2-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Kozarmisleny SE",
+          "away_team": "Szeged",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 100,
+      "home": {
+        "count": 80,
+        "pct": 80.0
+      },
+      "draw": {
+        "count": 18,
+        "pct": 18.0
+      },
+      "away": {
+        "count": 2,
+        "pct": 2.0
+      }
+    },
+    "ht_draw": {
+      "n_matches": 129,
+      "home": {
+        "count": 51,
+        "pct": 39.5
+      },
+      "draw": {
+        "count": 36,
+        "pct": 27.9
+      },
+      "away": {
+        "count": 42,
+        "pct": 32.6
+      }
+    },
+    "away_lead": {
+      "n_matches": 72,
+      "home": {
+        "count": 6,
+        "pct": 8.3
+      },
+      "draw": {
+        "count": 20,
+        "pct": 27.8
+      },
+      "away": {
+        "count": 46,
+        "pct": 63.9
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 301,
+    "n_with_first_goal": 284,
+    "n_goalless": 17,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 95,
+        "home": {
+          "count": 44,
+          "pct": 46.3
+        },
+        "draw": {
+          "count": 24,
+          "pct": 25.3
+        },
+        "away": {
+          "count": 27,
+          "pct": 28.4
+        },
+        "pct_of_matches": 31.6
+      },
+      "16-30": {
+        "n_matches": 62,
+        "home": {
+          "count": 34,
+          "pct": 54.8
+        },
+        "draw": {
+          "count": 12,
+          "pct": 19.4
+        },
+        "away": {
+          "count": 16,
+          "pct": 25.8
+        },
+        "pct_of_matches": 20.6
+      },
+      "31-45": {
+        "n_matches": 55,
+        "home": {
+          "count": 28,
+          "pct": 50.9
+        },
+        "draw": {
+          "count": 13,
+          "pct": 23.6
+        },
+        "away": {
+          "count": 14,
+          "pct": 25.5
+        },
+        "pct_of_matches": 18.3
+      },
+      "46-60": {
+        "n_matches": 34,
+        "home": {
+          "count": 14,
+          "pct": 41.2
+        },
+        "draw": {
+          "count": 6,
+          "pct": 17.6
+        },
+        "away": {
+          "count": 14,
+          "pct": 41.2
+        },
+        "pct_of_matches": 11.3
+      },
+      "61-75": {
+        "n_matches": 16,
+        "home": {
+          "count": 7,
+          "pct": 43.8
+        },
+        "draw": {
+          "count": 1,
+          "pct": 6.2
+        },
+        "away": {
+          "count": 8,
+          "pct": 50.0
+        },
+        "pct_of_matches": 5.3
+      },
+      "76-90": {
+        "n_matches": 20,
+        "home": {
+          "count": 9,
+          "pct": 45.0
+        },
+        "draw": {
+          "count": 1,
+          "pct": 5.0
+        },
+        "away": {
+          "count": 10,
+          "pct": 50.0
+        },
+        "pct_of_matches": 6.6
+      },
+      "91-120": {
+        "n_matches": 2,
+        "home": {
+          "count": 1,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 1,
+          "pct": 50.0
+        },
+        "pct_of_matches": 0.7
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 301,
+      "count": 17,
+      "pct": 5.6
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 240,
+        "count": 15,
+        "pct": 6.2
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 61,
+        "count": 2,
+        "pct": 3.3
+      }
+    ]
+  }
+}

@@ -1,160 +1,195 @@
-import { useLeagues } from "../state/LeaguesContext.jsx";
+import { Link } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
-import { ErrorBox, Empty, Loading } from "../components/State.jsx";
+import { ErrorBox, ListSkeleton, Skeleton } from "../components/State.jsx";
+import { TeamLink } from "../components/TeamLink.jsx";
+import PredictionChips from "../components/PredictionChips.jsx";
 
-function fmt(v, digits) {
-  if (typeof v !== "number") return v ?? "—";
-  return digits != null ? v.toFixed(digits) : v.toLocaleString();
+const REGION_LABELS = {
+  europe: "Europe",
+  asia: "Asia",
+  america: "Americas",
+  other: "Other",
+};
+
+function LeagueCard({ item }) {
+  return (
+    <Link to={`/leagues/${item.slug}`} className="card league-card" style={{ textDecoration: "none" }}>
+      <div className="league-card-name">{item.name}</div>
+      <div className="muted" style={{ fontSize: 13 }}>
+        {item.country}
+      </div>
+      <div className="muted" style={{ fontSize: 12, marginTop: 6 }}>
+        {item.matches > 0 ? `${item.matches.toLocaleString("en-US")} matches` : "no data"}
+      </div>
+    </Link>
+  );
+}
+
+function RegionSection({ region, leagues }) {
+  return (
+    <section>
+      <h3>
+        {REGION_LABELS[region] ?? region}
+        <span className="badge">{leagues.length}</span>
+      </h3>
+      <div className="mini-grid">
+        {leagues.slice(0, 8).map((item) => (
+          <Link key={item.slug} to={`/leagues/${item.slug}`} className="card mini" style={{ textDecoration: "none" }}>
+            <div className="mini-name">{item.name}</div>
+            <div className="muted" style={{ fontSize: 12 }}>
+              {item.country} · {item.matches > 0 ? `${item.matches} m` : "no data"}
+            </div>
+          </Link>
+        ))}
+        {leagues.length > 8 && (
+          <div className="muted" style={{ alignSelf: "center" }}>
+            +{leagues.length - 8} more
+          </div>
+        )}
+      </div>
+    </section>
+  );
 }
 
 export default function Dashboard() {
-  const { league, detail, latestSeason } = useLeagues();
-  const { data, loading, error } = useApi(() => (league ? api.analysis(league) : null), [league]);
+  const { data, loading, error } = useApi(() => api.dashboard(), []);
 
-  if (loading) return <Loading label="Loading analysis bundle…" />;
-  if (error) return <ErrorBox error={error} />;
-  if (!data || !data.has_data) {
+  if (loading)
     return (
-      <Empty>
-        No analysis reports for {league}. Run <code>run_analysis.py --league {league}</code> first.
-      </Empty>
+      <div>
+        <div className="page-head">
+          <Skeleton height={34} width="30%" />
+          <Skeleton height={14} width="55%" />
+        </div>
+        <Skeleton height={120} />
+        <div className="two-col" style={{ marginTop: 16 }}>
+          <ListSkeleton items={4} />
+          <ListSkeleton items={4} />
+        </div>
+      </div>
     );
-  }
+  if (error) return <ErrorBox error={error} />;
+  if (!data) return <ErrorBox error="No dashboard data returned." />;
 
-  const { reports, charts, meta } = data;
-  const ma = reports.matches_analysis;
-  const overall = ma?.overall;
-  const head = reports.findings?.headline_stats;
-  const findings = reports.findings?.key_findings || [];
-  const anomalies = reports.findings?.anomalies || [];
-  const champions = reports.season_trends?.champions || [];
-  const comparison = reports.findings?.comparison || [];
-
-  const kpis = [
-    { label: "Total matches", value: fmt(overall?.n_matches) },
-    { label: "Avg goals / match", value: fmt(overall?.avg_goals, 2) },
-    { label: "Home win %", value: `${fmt(overall?.home_win_pct, 1)}%` },
-    { label: "Draw %", value: `${fmt(overall?.draw_pct, 1)}%` },
-    { label: "Away win %", value: `${fmt(overall?.away_win_pct, 1)}%` },
-    { label: "Most common scoreline", value: head?.most_common_scoreline ?? fmt(overall?.goalless ? `0-0` : "—") },
-    { label: "Dominant team", value: head?.dominant_team ?? "—" },
-    { label: "Champion (most titles)", value: head?.champion_most_titles ?? "—" },
-  ];
+  const { top_leagues: topLeagues, top_clubs: topClubs, recent_matches: recent, upcoming_matches: upcoming, leagues_by_region: byRegion } = data;
 
   return (
     <div>
       <div className="page-head">
-        <h2>Dashboard — {meta?.name}</h2>
+        <h2>Dashboard</h2>
         <p>
-          {meta?.country} · {meta?.format} · {detail?.seasons?.length ?? "—"} seasons · latest: {latestSeason}
+          {data.meta?.n_leagues} leagues · {recent.length} recent results · {upcoming.length} upcoming
+          matches with model predictions
         </p>
       </div>
 
-      <div className="kpi-row">
-        {kpis.map((k) => (
-          <div key={k.label} className="kpi">
-            <div className="label">{k.label}</div>
-            <div className="value">{k.value}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid" style={{ gridTemplateColumns: "2fr 1fr" }}>
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>Key findings</h3>
-          {findings.length === 0 ? (
-            <p className="muted">No findings recorded.</p>
-          ) : (
-            <ol style={{ paddingLeft: 20, lineHeight: 1.6 }}>
-              {findings.map((f, i) => (
-                <li key={i}>
-                  <strong>
-                    <span className="badge green">F{f.id}</span> {f.finding}
-                  </strong>
-                  <div className="muted" style={{ fontSize: 13 }}>
-                    {f.detail}
-                  </div>
-                </li>
-              ))}
-            </ol>
-          )}
-        </section>
-
-        <div className="grid">
-          <section className="card">
-            <h3 style={{ marginTop: 0 }}>Champions</h3>
-            {champions.length === 0 ? (
-              <p className="muted">—</p>
-            ) : (
-              <ul style={{ paddingLeft: 18, lineHeight: 1.8, margin: 0 }}>
-                {champions
-                  .slice()
-                  .reverse()
-                  .map((c) => (
-                    <li key={c.season}>
-                      <strong>{c.season}</strong>: {c.champion} ({c.champion_pts} pts,
-                      margin {c.margin_pts})
-                    </li>
-                  ))}
-              </ul>
-            )}
-          </section>
-
-          {anomalies.length > 0 && (
-            <section className="card">
-              <h3 style={{ marginTop: 0 }}>
-                Anomalies <span className="badge amber">{anomalies.length}</span>
-              </h3>
-              <ul style={{ paddingLeft: 18, lineHeight: 1.5, margin: 0, fontSize: 13 }}>
-                {anomalies.map((a, i) => (
-                  <li key={i}>
-                    <span className="muted">{a.code}</span>: {a.message}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+      <section>
+        <h3>
+          Top leagues <span className="badge">by matches</span>
+        </h3>
+        <div className="mini-grid">
+          {topLeagues.map((item) => (
+            <LeagueCard key={item.slug} item={item} />
+          ))}
         </div>
+      </section>
+
+      <div className="two-col">
+        <section className="card">
+          <h3 style={{ marginTop: 0 }}>Upcoming · top picks</h3>
+          <Link className="link" to="/matches" style={{ fontSize: 13 }}>
+            View all matches →
+          </Link>
+          {upcoming.length === 0 ? (
+            <p className="muted">No collected fixtures. Run <code>fetch_fixtures.py</code> first.</p>
+          ) : (
+            <div className="event-list" style={{ marginTop: 10 }}>
+              {upcoming.map((m, i) => (
+                <div key={i} className="event">
+                  <div className="teams">
+                    <span className="muted" style={{ fontSize: 12 }}>
+                      {m.match_date} {m.time}
+                    </span>
+                    <span>
+                      <TeamLink name={m.home_team} /> vs <TeamLink name={m.away_team} />
+                    </span>
+                  </div>
+                  <div className="muted" style={{ fontSize: 12 }}>
+                    {m.league} · {m.country}
+                  </div>
+                  <PredictionChips
+                    predictions={m.predictions}
+                    compact
+                    confidence={m.predictions?.confidence}
+                    dataThrough={m.predictions?.data_through}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="card">
+          <h3 style={{ marginTop: 0 }}>Recent results</h3>
+          <Link className="link" to="/matches" style={{ fontSize: 13 }}>
+            View all matches →
+          </Link>
+          {recent.length === 0 ? (
+            <p className="muted">No results collected.</p>
+          ) : (
+            <div className="event-list" style={{ marginTop: 10 }}>
+              {recent.map((m) => (
+                <div key={m.api_id} className="event">
+                  <div className="teams">
+                    <span className="muted" style={{ fontSize: 12 }}>
+                      {m.match_date} · {m.league}
+                    </span>
+                    <span>
+                      <TeamLink name={m.home_team} /> <strong>{m.home_score}–{m.away_score}</strong>{" "}
+                      <TeamLink name={m.away_team} />{" "}
+                      <Link className="link" to={`/match/${m.api_id}`} style={{ fontSize: 12 }}>
+                        view
+                      </Link>
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="card">
+          <h3 style={{ marginTop: 0 }}>Top clubs · current leaders</h3>
+          {topClubs.length === 0 ? (
+            <p className="muted">No leaders.</p>
+          ) : (
+            <div className="event-list" style={{ marginTop: 10 }}>
+              {topClubs.map((c, i) => (
+                <div key={i} className="event">
+                  <div className="teams">
+                    <span>
+                      <TeamLink name={c.team} /> <span className="muted">· {c.league_name}</span>
+                    </span>
+                  </div>
+                  <div className="score">
+                    {c.points} pts · #{c.position} · {c.season}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
       </div>
 
-      {comparison.length > 0 && (
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>Data health</h3>
-          <table className="data">
-            <thead>
-              <tr>
-                <th>Report</th>
-                <th className="num">Size (kb)</th>
-                <th>Sections</th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparison.map((c) => (
-                <tr key={c.module}>
-                  <td>{c.module}</td>
-                  <td className="num">{typeof c.size_kb === "number" ? c.size_kb.toFixed(1) : "—"}</td>
-                  <td>{Array.isArray(c.sections) ? c.sections.join(", ") : "—"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      )}
-
-      {charts.length > 0 && (
-        <section style={{ marginTop: 16 }}>
-          <h3>Charts</h3>
-          <div className="chart-grid">
-            {charts.map((c) => (
-              <div key={c} className="card chart-card">
-                <img src={api.chartUrl(league, c)} alt={c} loading="lazy" />
-                <div className="caption">{c.replace(/\.png$/, "").replace(/_/g, " ")}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <section>
+        <h3>Leagues by region</h3>
+        <div className="grid regions">
+          <RegionSection region="europe" leagues={byRegion?.europe || []} />
+          <RegionSection region="asia" leagues={byRegion?.asia || []} />
+          <RegionSection region="america" leagues={byRegion?.america || []} />
+        </div>
+      </section>
     </div>
   );
 }

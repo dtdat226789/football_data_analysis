@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:46:58+00:00",
+  "config": {
+    "league": "serbia1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\serbia1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Mozzart Bet Super Liga",
+    "country": "Serbia",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/serbia/mozzart-bet-super-liga"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Crvena zvezda",
+      "champion_id": 1551,
+      "champion_pts": 86,
+      "runner_up": "Vojvodina",
+      "runner_up_id": 1552,
+      "margin_pts": 10
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Crvena zvezda",
+      "champion_id": 1551,
+      "champion_pts": 28,
+      "runner_up": "Vojvodina",
+      "runner_up_id": 1552,
+      "margin_pts": 6
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 10,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 6,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 6,
+      "champion": "Crvena zvezda",
+      "runner_up": "Vojvodina"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 86,
+        "2": 76,
+        "4": 59,
+        "6": 50,
+        "11": 46,
+        "14": 42
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 28,
+        "2": 22,
+        "4": 16,
+        "6": 14,
+        "11": 8,
+        "14": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 11,
+      "safe_pts": 46,
+      "drop_position": 12,
+      "drop_pts": 45,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 45
+        },
+        {
+          "position": 13,
+          "points": 45
+        },
+        {
+          "position": 14,
+          "points": 42
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 11,
+      "safe_pts": 8,
+      "drop_position": 12,
+      "drop_pts": 8,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 8
+        },
+        {
+          "position": 13,
+          "points": 8
+        },
+        {
+          "position": 14,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 5
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 297,
+      "total_goals": 790,
+      "avg_goals": 2.66,
+      "home_wins": 124,
+      "draws": 86,
+      "away_wins": 87,
+      "home_win_pct": 41.8,
+      "draw_pct": 29.0,
+      "away_win_pct": 29.3,
+      "goalless": 36,
+      "goalless_pct": 12.1,
+      "total_points": 805,
+      "avg_points_per_team": 50.31,
+      "n_teams": 16
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 68,
+      "total_goals": 182,
+      "avg_goals": 2.676,
+      "home_wins": 35,
+      "draws": 18,
+      "away_wins": 15,
+      "home_win_pct": 51.5,
+      "draw_pct": 26.5,
+      "away_win_pct": 22.1,
+      "goalless": 6,
+      "goalless_pct": 8.8,
+      "total_points": 186,
+      "avg_points_per_team": 13.29,
+      "n_teams": 14
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.375,
+        "goals": 4.375
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.857,
+        "goals": 4.714
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 4.714
+    }
+  }
+}

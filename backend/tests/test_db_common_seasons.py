@@ -17,6 +17,7 @@ PREMIER_SEASONS = [
     "2023-2024",
     "2024-2025",
     "2025-2026",
+    "2026-2027",
 ]
 
 
@@ -60,7 +61,7 @@ def test_league_season_dirs_unknown_league_is_empty():
 
 
 # ── collected_seasons ────────────────────────────────────────────────────────
-def test_collected_seasons_premier_full_six():
+def test_collected_seasons_premier_all():
     seasons = db_common.collected_seasons("premier")
     assert seasons == PREMIER_SEASONS
 

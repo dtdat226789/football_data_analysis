@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:45:44+00:00",
+  "config": {
+    "league": "segunda2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\segunda2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Segunda RFEF - Group 2",
+    "country": "Spain",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/segunda-rfef-group-2"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "R. Union",
+      "champion_id": 1290,
+      "champion_pts": 69,
+      "runner_up": "Alaves B",
+      "runner_up_id": 1462,
+      "margin_pts": 7
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Osasuna B",
+      "champion_id": 1286,
+      "champion_pts": 9,
+      "runner_up": "Barcelona B",
+      "runner_up_id": 1480,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "Osasuna B",
+      "runner_up": "Barcelona B"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 69,
+        "2": 62,
+        "4": 58,
+        "6": 50,
+        "15": 35,
+        "18": 25
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 9,
+        "2": 7,
+        "4": 6,
+        "6": 5,
+        "15": 2,
+        "18": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 35,
+      "drop_position": 16,
+      "drop_pts": 30,
+      "gap": 5,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 30
+        },
+        {
+          "position": 17,
+          "points": 28
+        },
+        {
+          "position": 18,
+          "points": 25
+        }
+      ],
+      "bottom3_range": 5
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 2,
+      "drop_position": 16,
+      "drop_pts": 2,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 2
+        },
+        {
+          "position": 17,
+          "points": 0
+        },
+        {
+          "position": 18,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 2
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 306,
+      "total_goals": 769,
+      "avg_goals": 2.513,
+      "home_wins": 130,
+      "draws": 89,
+      "away_wins": 87,
+      "home_win_pct": 42.5,
+      "draw_pct": 29.1,
+      "away_win_pct": 28.4,
+      "goalless": 28,
+      "goalless_pct": 9.2,
+      "total_points": 829,
+      "avg_points_per_team": 46.06,
+      "n_teams": 18
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 27,
+      "total_goals": 73,
+      "avg_goals": 2.704,
+      "home_wins": 12,
+      "draws": 7,
+      "away_wins": 8,
+      "home_win_pct": 44.4,
+      "draw_pct": 25.9,
+      "away_win_pct": 29.6,
+      "goalless": 3,
+      "goalless_pct": 11.1,
+      "total_points": 74,
+      "avg_points_per_team": 4.11,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.778,
+        "goals": 5.556
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.778,
+        "goals": 6.0
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 6.0
+    }
+  }
+}

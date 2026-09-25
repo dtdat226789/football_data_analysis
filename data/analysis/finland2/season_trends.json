@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:58:29+00:00",
+  "config": {
+    "league": "finland2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\finland2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Ykkosliiga",
+    "country": "Finland",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/finland/ykkosliiga"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Lahti",
+      "champion_id": 474,
+      "champion_pts": 57,
+      "runner_up": "TPS",
+      "runner_up_id": 475,
+      "margin_pts": 7
+    },
+    {
+      "season": "2026",
+      "champion": "KTP",
+      "champion_id": 473,
+      "champion_pts": 57,
+      "runner_up": "PK-35",
+      "runner_up_id": 481,
+      "margin_pts": 9
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2026",
+        "margin": 9,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025",
+      "margin": 7,
+      "champion": "Lahti",
+      "runner_up": "TPS"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 57,
+        "2": 50,
+        "4": 37,
+        "6": 31,
+        "7": 29,
+        "10": 19
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 57,
+        "2": 48,
+        "4": 40,
+        "6": 28,
+        "7": 28,
+        "10": 13
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 7,
+      "safe_pts": 29,
+      "drop_position": 8,
+      "drop_pts": 22,
+      "gap": 7,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 22
+        },
+        {
+          "position": 9,
+          "points": 20
+        },
+        {
+          "position": 10,
+          "points": 19
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026",
+      "safe_position": 7,
+      "safe_pts": 28,
+      "drop_position": 8,
+      "drop_pts": 21,
+      "gap": 7,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 21
+        },
+        {
+          "position": 9,
+          "points": 20
+        },
+        {
+          "position": 10,
+          "points": 13
+        }
+      ],
+      "bottom3_range": 8
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 135,
+      "total_goals": 443,
+      "avg_goals": 3.281,
+      "home_wins": 58,
+      "draws": 35,
+      "away_wins": 42,
+      "home_win_pct": 43.0,
+      "draw_pct": 25.9,
+      "away_win_pct": 31.1,
+      "goalless": 5,
+      "goalless_pct": 3.7,
+      "total_points": 370,
+      "avg_points_per_team": 18.5,
+      "n_teams": 20
+    },
+    {
+      "season": "2026",
+      "n_matches": 120,
+      "total_goals": 309,
+      "avg_goals": 2.575,
+      "home_wins": 50,
+      "draws": 26,
+      "away_wins": 44,
+      "home_win_pct": 41.7,
+      "draw_pct": 21.7,
+      "away_win_pct": 36.7,
+      "goalless": 8,
+      "goalless_pct": 6.7,
+      "total_points": 334,
+      "avg_points_per_team": 33.4,
+      "n_teams": 10
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 5.7,
+        "goals": 5.4
+      },
+      {
+        "season": "2026",
+        "luck": 1.0,
+        "goals": 3.2
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "luck",
+      "avg_abs_diff": 5.7
+    }
+  }
+}

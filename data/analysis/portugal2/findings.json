@@ -1,0 +1,479 @@
+{
+  "report_name": "findings",
+  "script": {
+    "name": "backend/scripts/compile_findings.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:41:59+00:00",
+  "config": {
+    "league": "portugal2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\portugal2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Liga Portugal 2",
+    "country": "Portugal",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/portugal/liga-portugal-2"
+  },
+  "sources": [
+    {
+      "report_name": "database_profile",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\database_profile.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 30.01
+    },
+    {
+      "report_name": "matches_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\matches_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 10.13
+    },
+    {
+      "report_name": "goals_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\goals_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 6.18
+    },
+    {
+      "report_name": "teams_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\teams_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 33.54
+    },
+    {
+      "report_name": "season_trends",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\season_trends.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 3.96
+    },
+    {
+      "report_name": "scoreline_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\scoreline_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 63.26
+    },
+    {
+      "report_name": "relationships",
+      "path": "E:\\football_data_analysis\\data\\analysis\\portugal2\\relationships.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 14.34
+    }
+  ],
+  "coverage": {
+    "found": 7,
+    "total": 7,
+    "missing": []
+  },
+  "key_findings": [
+    {
+      "source": "matches_analysis",
+      "finding": "Outcome split across all seasons",
+      "detail": "363 matches: home wins 42.1%, draws 24.2%, away wins 33.6% (153H / 88D / 122A)",
+      "importance": "medium",
+      "id": "F1"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Comeback wins",
+      "detail": "9 home and 12 away comebacks (trailing at HT but winning at FT)",
+      "importance": "medium",
+      "id": "F2"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Most common HT/FT flow",
+      "detail": "home lead at HT -> home win occurred 90 times",
+      "importance": "low",
+      "id": "F3"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average goals per match",
+      "detail": "363 matches produced 874 goals (avg 2.408 per match)",
+      "importance": "medium",
+      "id": "F4"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Home goal share",
+      "detail": "home 52.1% vs away 47.9% of 874 goals in total (home/away ratio 1.09)",
+      "importance": "medium",
+      "id": "F5"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Both teams to score",
+      "detail": "164 of 363 matches (45.2%)",
+      "importance": "medium",
+      "id": "F6"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Most common first-goal bucket",
+      "detail": "minute 1-15 (first goal in 86 scoring matches, 26.4% of scoring)",
+      "importance": "low",
+      "id": "F7"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average first goal minute",
+      "detail": "mean 34.61, median 30.5",
+      "importance": "low",
+      "id": "F8"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Dominant team by lifetime points",
+      "detail": "Maritimo leads with 66 points across 1 seasons (1 title(s), GD 21)",
+      "importance": "high",
+      "id": "F9"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Team consistency",
+      "detail": "14 teams present in every one of the 2 seasons (Benfica B, Chaves, FC Porto B, Feirense, Felgueiras...)",
+      "importance": "medium",
+      "id": "F10"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Biggest home advantage",
+      "detail": "Academico Viseu earns 13 more points at home than away (36 home vs 23 away)",
+      "importance": "medium",
+      "id": "F11"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Champion with most titles",
+      "detail": "Maritimo won 1 of 2 championship(s) on record",
+      "importance": "high",
+      "id": "F12"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Tightest title race",
+      "detail": "2026-2027: Lusitania FC beat Penafiel by 3 pts",
+      "importance": "medium",
+      "id": "F13"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Average-goals trend",
+      "detail": "down (-0.102 per match): first half 2.423 vs last half 2.321 across 2 seasons",
+      "importance": "medium",
+      "id": "F14"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Largest view divergence",
+      "detail": "2025-2026 (luck view, avg abs position diff 5.600)",
+      "importance": "low",
+      "id": "F15"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Smallest view divergence",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.444)",
+      "importance": "low",
+      "id": "F16"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common scoreline",
+      "detail": "1-0 in 51 matches (14.0%)",
+      "importance": "medium",
+      "id": "F17"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common home-win scoreline",
+      "detail": "1-0 (51 of 153 home matches, 33.3%)",
+      "importance": "low",
+      "id": "F18"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common draw scoreline",
+      "detail": "0-0 (37 of 88 draw matches, 42.0%)",
+      "importance": "low",
+      "id": "F19"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common away-win scoreline",
+      "detail": "0-1 (33 of 122 away matches, 27.0%)",
+      "importance": "low",
+      "id": "F20"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Extreme scorelines",
+      "detail": "6 match(es) with >= 7 total goals",
+      "importance": "low",
+      "id": "F21"
+    },
+    {
+      "source": "relationships",
+      "finding": "Strongest correlation with total goals",
+      "detail": "away_team_away_conceded_avg |corr| = 0.0953 (n=363 leakage-safe rows)",
+      "importance": "medium",
+      "id": "F22"
+    },
+    {
+      "source": "relationships",
+      "finding": "Most outcome-separating feature",
+      "detail": "away_points_before_match spreads group means over 3.635: home 21.340, draw 17.705, away 19.516",
+      "importance": "medium",
+      "id": "F23"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data-quality warnings (10)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "importance": "high",
+      "id": "F24"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data coverage",
+      "detail": "2 of 2 registered seasons populated (100.0%); 363 matches observed",
+      "importance": "medium",
+      "id": "F25"
+    }
+  ],
+  "headline_stats": {
+    "n_matches": 363,
+    "avg_goals": 2.408,
+    "home_win_pct": 42.1,
+    "draw_pct": 24.2,
+    "away_win_pct": 33.6,
+    "most_common_scoreline": "1-0",
+    "dominant_team": "Maritimo",
+    "champion_most_titles": "Maritimo",
+    "btts_rate_pct": 45.2
+  },
+  "comparison": [
+    {
+      "module": "database_profile",
+      "report_name": "database_profile",
+      "sections": [
+        "observed",
+        "calculated",
+        "warnings"
+      ],
+      "size_kb": 30.01
+    },
+    {
+      "module": "matches_analysis",
+      "report_name": "matches_analysis",
+      "sections": [
+        "overall",
+        "per_season",
+        "ht_ft_matrix",
+        "comebacks",
+        "ht_lead_conversion",
+        "first_goal_timing",
+        "goalless"
+      ],
+      "size_kb": 10.13
+    },
+    {
+      "module": "goals_analysis",
+      "report_name": "goals_analysis",
+      "sections": [
+        "goals_distribution",
+        "goals_per_season",
+        "goal_share",
+        "btts",
+        "clean_sheets",
+        "scoring_intensity",
+        "first_goal_timing"
+      ],
+      "size_kb": 6.18
+    },
+    {
+      "module": "teams_analysis",
+      "report_name": "teams_analysis",
+      "sections": [
+        "teams",
+        "home_away",
+        "top_performers",
+        "consistent_teams",
+        "head_to_head",
+        "position_table"
+      ],
+      "size_kb": 33.54
+    },
+    {
+      "module": "season_trends",
+      "report_name": "season_trends",
+      "sections": [
+        "champions",
+        "title_race",
+        "points_thresholds",
+        "relegation_battle",
+        "league_trends",
+        "view_divergence"
+      ],
+      "size_kb": 3.96
+    },
+    {
+      "module": "scoreline_analysis",
+      "report_name": "scoreline_analysis",
+      "sections": [
+        "scoreline_frequency",
+        "scoreline_per_season",
+        "total_goal_histogram",
+        "extreme_scorelines",
+        "margin_distribution",
+        "margin_by_outcome",
+        "common_scorelines"
+      ],
+      "size_kb": 63.26
+    },
+    {
+      "module": "relationships",
+      "report_name": "relationships",
+      "sections": [
+        "n_matches",
+        "feature_count",
+        "correlation_matrix",
+        "form_vs_outcome",
+        "position_vs_outcome",
+        "rest_advantage",
+        "home_quality",
+        "feature_by_result"
+      ],
+      "size_kb": 14.34
+    }
+  ],
+  "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 310 matches, expected 380",
+      "details": {
+        "season": "2025-2026",
+        "n_matches": 310,
+        "expected": 380
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 53 matches, expected 380",
+      "details": {
+        "season": "2026-2027",
+        "n_matches": 53,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 18 teams, expected 20",
+      "details": {
+        "season": "2026-2027",
+        "n_teams": 18,
+        "expected": 20
+      }
+    },
+    {
+      "code": "SEASON_STATE_NOT_COMPLETE",
+      "severity": "warning",
+      "message": "Season 2026-2027 has data but state is 'in_progress'",
+      "details": {
+        "season": "2026-2027",
+        "season_state": "in_progress"
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 7.5% vs overall 10.2% (deviation 2.7 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 7.5,
+        "overall_goalless_pct": 10.2,
+        "deviation_pp": 2.7
+      }
+    },
+    {
+      "code": "DUPLICATE_ROWS",
+      "severity": "warning",
+      "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
+      "details": {
+        "check": "matches same fixture on same date (league_season, home, away, match_date)",
+        "rows": 22388,
+        "distinct": 22374,
+        "duplicates": 14
+      }
+    },
+    {
+      "code": "FIRST_GOAL_NULL_INCONSISTENCY",
+      "severity": "warning",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
+      "details": {
+        "total": 22388,
+        "fgt_inconsistent": 24,
+        "fgte_inconsistent": 24,
+        "n_with_fgt": 20819
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/classic rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2026-2027",
+        "view": "classic",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/goals rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2026-2027",
+        "view": "goals",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/luck rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2026-2027",
+        "view": "luck",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    }
+  ],
+  "methodology": "Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power."
+}

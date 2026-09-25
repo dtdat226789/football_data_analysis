@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:01:25+00:00",
+  "config": {
+    "league": "ireland1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\ireland1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier Division",
+    "country": "Ireland",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/ireland/premier-division"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Shamrock Rovers",
+      "champion_id": 814,
+      "champion_pts": 66,
+      "runner_up": "Derry City",
+      "runner_up_id": 815,
+      "margin_pts": 3
+    },
+    {
+      "season": "2026",
+      "champion": "St. Patricks",
+      "champion_id": 817,
+      "champion_pts": 59,
+      "runner_up": "Shamrock Rovers",
+      "runner_up_id": 814,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 3,
+        "tight": true
+      },
+      {
+        "season": "2026",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026",
+      "margin": 0,
+      "champion": "St. Patricks",
+      "runner_up": "Shamrock Rovers"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 66,
+        "2": 63,
+        "4": 54,
+        "6": 51,
+        "7": 41,
+        "10": 24
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 59,
+        "2": 59,
+        "4": 41,
+        "6": 39,
+        "7": 37,
+        "10": 23
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 7,
+      "safe_pts": 41,
+      "drop_position": 8,
+      "drop_pts": 39,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 39
+        },
+        {
+          "position": 9,
+          "points": 39
+        },
+        {
+          "position": 10,
+          "points": 24
+        }
+      ],
+      "bottom3_range": 15
+    },
+    {
+      "season": "2026",
+      "safe_position": 7,
+      "safe_pts": 37,
+      "drop_position": 8,
+      "drop_pts": 34,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 34
+        },
+        {
+          "position": 9,
+          "points": 34
+        },
+        {
+          "position": 10,
+          "points": 23
+        }
+      ],
+      "bottom3_range": 11
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 180,
+      "total_goals": 437,
+      "avg_goals": 2.428,
+      "home_wins": 77,
+      "draws": 52,
+      "away_wins": 51,
+      "home_win_pct": 42.8,
+      "draw_pct": 28.9,
+      "away_win_pct": 28.3,
+      "goalless": 15,
+      "goalless_pct": 8.3,
+      "total_points": 488,
+      "avg_points_per_team": 48.8,
+      "n_teams": 10
+    },
+    {
+      "season": "2026",
+      "n_matches": 158,
+      "total_goals": 438,
+      "avg_goals": 2.772,
+      "home_wins": 60,
+      "draws": 51,
+      "away_wins": 47,
+      "home_win_pct": 38.0,
+      "draw_pct": 32.3,
+      "away_win_pct": 29.7,
+      "goalless": 15,
+      "goalless_pct": 9.5,
+      "total_points": 423,
+      "avg_points_per_team": 42.3,
+      "n_teams": 10
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 2.6,
+        "goals": 4.0
+      },
+      {
+        "season": "2026",
+        "luck": 2.8,
+        "goals": 3.6
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "goals",
+      "avg_abs_diff": 4.0
+    }
+  }
+}

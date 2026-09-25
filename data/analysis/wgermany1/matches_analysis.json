@@ -1,0 +1,423 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:51:08+00:00",
+  "config": {
+    "league": "wgermany1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\wgermany1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Bundesliga Women",
+    "country": "Germany",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/germany/bundesliga-women"
+  },
+  "overall": {
+    "n_matches": 217,
+    "home_wins": 98,
+    "draws": 37,
+    "away_wins": 82,
+    "home_win_pct": 45.2,
+    "draw_pct": 17.1,
+    "away_win_pct": 37.8,
+    "home_goals": 389,
+    "away_goals": 359,
+    "total_goals": 748,
+    "avg_goals": 3.447,
+    "goalless": 7,
+    "goalless_pct": 3.2
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 182,
+      "home_wins": 81,
+      "draws": 32,
+      "away_wins": 69,
+      "home_win_pct": 44.5,
+      "draw_pct": 17.6,
+      "away_win_pct": 37.9,
+      "home_goals": 325,
+      "away_goals": 302,
+      "total_goals": 627,
+      "avg_goals": 3.445,
+      "goalless": 7,
+      "goalless_pct": 3.8
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 35,
+      "home_wins": 17,
+      "draws": 5,
+      "away_wins": 13,
+      "home_win_pct": 48.6,
+      "draw_pct": 14.3,
+      "away_win_pct": 37.1,
+      "home_goals": 64,
+      "away_goals": 57,
+      "total_goals": 121,
+      "avg_goals": 3.457,
+      "goalless": 0,
+      "goalless_pct": 0.0
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 71,
+        "draw": 8,
+        "away": 9
+      },
+      "draw": {
+        "home": 22,
+        "draw": 18,
+        "away": 21
+      },
+      "away": {
+        "home": 5,
+        "draw": 11,
+        "away": 52
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 80.7,
+        "draw": 9.1,
+        "away": 10.2
+      },
+      "draw": {
+        "home": 36.1,
+        "draw": 29.5,
+        "away": 34.4
+      },
+      "away": {
+        "home": 7.4,
+        "draw": 16.2,
+        "away": 76.5
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 5,
+      "pct": 2.3,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Freiburg W",
+          "away_team": "Eintracht Frankfurt W",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Wolfsburg W",
+          "away_team": "Freiburg W",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Bayern Munich W",
+          "away_team": "Wolfsburg W",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Wolfsburg W",
+          "away_team": "RB Leipzig W",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Wolfsburg W",
+          "away_team": "Werder Bremen W",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        }
+      ]
+    },
+    "away": {
+      "count": 9,
+      "pct": 4.1,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Union Berlin W",
+          "away_team": "Wolfsburg W",
+          "ht_score": "1-0",
+          "ft_score": "1-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Hamburger SV W",
+          "away_team": "1.FC Nurnberg W",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Union Berlin W",
+          "away_team": "Bayer Leverkusen W",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "SGS Essen W",
+          "away_team": "Union Berlin W",
+          "ht_score": "2-1",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Koln W",
+          "away_team": "Eintracht Frankfurt W",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "1.FC Nurnberg W",
+          "away_team": "Wolfsburg W",
+          "ht_score": "2-0",
+          "ft_score": "2-8"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Bayer Leverkusen W",
+          "away_team": "Bayern Munich W",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Mainz W",
+          "away_team": "Eintracht Frankfurt W",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Freiburg W",
+          "away_team": "Bayer Leverkusen W",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 88,
+      "home": {
+        "count": 71,
+        "pct": 80.7
+      },
+      "draw": {
+        "count": 8,
+        "pct": 9.1
+      },
+      "away": {
+        "count": 9,
+        "pct": 10.2
+      }
+    },
+    "ht_draw": {
+      "n_matches": 61,
+      "home": {
+        "count": 22,
+        "pct": 36.1
+      },
+      "draw": {
+        "count": 18,
+        "pct": 29.5
+      },
+      "away": {
+        "count": 21,
+        "pct": 34.4
+      }
+    },
+    "away_lead": {
+      "n_matches": 68,
+      "home": {
+        "count": 5,
+        "pct": 7.4
+      },
+      "draw": {
+        "count": 11,
+        "pct": 16.2
+      },
+      "away": {
+        "count": 52,
+        "pct": 76.5
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 217,
+    "n_with_first_goal": 210,
+    "n_goalless": 7,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 90,
+        "home": {
+          "count": 44,
+          "pct": 48.9
+        },
+        "draw": {
+          "count": 8,
+          "pct": 8.9
+        },
+        "away": {
+          "count": 38,
+          "pct": 42.2
+        },
+        "pct_of_matches": 41.5
+      },
+      "16-30": {
+        "n_matches": 60,
+        "home": {
+          "count": 25,
+          "pct": 41.7
+        },
+        "draw": {
+          "count": 11,
+          "pct": 18.3
+        },
+        "away": {
+          "count": 24,
+          "pct": 40.0
+        },
+        "pct_of_matches": 27.6
+      },
+      "31-45": {
+        "n_matches": 24,
+        "home": {
+          "count": 12,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 5,
+          "pct": 20.8
+        },
+        "away": {
+          "count": 7,
+          "pct": 29.2
+        },
+        "pct_of_matches": 11.1
+      },
+      "46-60": {
+        "n_matches": 20,
+        "home": {
+          "count": 12,
+          "pct": 60.0
+        },
+        "draw": {
+          "count": 1,
+          "pct": 5.0
+        },
+        "away": {
+          "count": 7,
+          "pct": 35.0
+        },
+        "pct_of_matches": 9.2
+      },
+      "61-75": {
+        "n_matches": 9,
+        "home": {
+          "count": 3,
+          "pct": 33.3
+        },
+        "draw": {
+          "count": 3,
+          "pct": 33.3
+        },
+        "away": {
+          "count": 3,
+          "pct": 33.3
+        },
+        "pct_of_matches": 4.1
+      },
+      "76-90": {
+        "n_matches": 6,
+        "home": {
+          "count": 2,
+          "pct": 33.3
+        },
+        "draw": {
+          "count": 2,
+          "pct": 33.3
+        },
+        "away": {
+          "count": 2,
+          "pct": 33.3
+        },
+        "pct_of_matches": 2.8
+      },
+      "91-120": {
+        "n_matches": 1,
+        "home": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 1,
+          "pct": 100.0
+        },
+        "pct_of_matches": 0.5
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 217,
+      "count": 7,
+      "pct": 3.2
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 182,
+        "count": 7,
+        "pct": 3.8
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 35,
+        "count": 0,
+        "pct": 0.0
+      }
+    ]
+  }
+}

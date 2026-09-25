@@ -1,0 +1,291 @@
+{
+  "report_name": "goals_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_goals.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:00:54+00:00",
+  "config": {
+    "league": "hungary1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\hungary1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "NB I.",
+    "country": "Hungary",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/hungary/nb-i"
+  },
+  "goals_distribution": {
+    "n_matches": 245,
+    "max_goals": 9,
+    "buckets": [
+      {
+        "goals": 0,
+        "count": 10,
+        "pct": 4.1
+      },
+      {
+        "goals": 1,
+        "count": 36,
+        "pct": 14.7
+      },
+      {
+        "goals": 2,
+        "count": 51,
+        "pct": 20.8
+      },
+      {
+        "goals": 3,
+        "count": 58,
+        "pct": 23.7
+      },
+      {
+        "goals": 4,
+        "count": 49,
+        "pct": 20.0
+      },
+      {
+        "goals": 5,
+        "count": 20,
+        "pct": 8.2
+      },
+      {
+        "goals": 6,
+        "count": 13,
+        "pct": 5.3
+      },
+      {
+        "goals": 7,
+        "count": 5,
+        "pct": 2.0
+      },
+      {
+        "goals": 8,
+        "count": 1,
+        "pct": 0.4
+      },
+      {
+        "goals": 9,
+        "count": 2,
+        "pct": 0.8
+      }
+    ]
+  },
+  "goals_per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 198,
+      "total_goals": 594,
+      "avg_goals": 3.0,
+      "avg_home": 1.556,
+      "avg_away": 1.444,
+      "home_goals": 308,
+      "away_goals": 286
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 47,
+      "total_goals": 153,
+      "avg_goals": 3.255,
+      "avg_home": 1.809,
+      "avg_away": 1.447,
+      "home_goals": 85,
+      "away_goals": 68
+    }
+  ],
+  "goal_share": {
+    "home_goals": 393,
+    "away_goals": 354,
+    "total_goals": 747,
+    "home_pct": 52.6,
+    "away_pct": 47.4,
+    "home_away_ratio": 1.11,
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "home_goals": 308,
+        "away_goals": 286,
+        "total_goals": 594,
+        "home_pct": 51.9,
+        "away_pct": 48.1
+      },
+      {
+        "season": "2026-2027",
+        "home_goals": 85,
+        "away_goals": 68,
+        "total_goals": 153,
+        "home_pct": 55.6,
+        "away_pct": 44.4
+      }
+    ]
+  },
+  "btts": {
+    "overall": {
+      "n_matches": 245,
+      "count": 150,
+      "pct": 61.2
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 198,
+        "count": 119,
+        "pct": 60.1
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 47,
+        "count": 31,
+        "pct": 66.0
+      }
+    ]
+  },
+  "clean_sheets": {
+    "overall": {
+      "n_matches": 245,
+      "home_clean_sheets": 55,
+      "away_clean_sheets": 50,
+      "total_clean_sheets": 105,
+      "home_cs_pct": 22.4,
+      "away_cs_pct": 20.4,
+      "matches_with_clean_sheet": 95,
+      "matches_with_clean_sheet_pct": 38.8,
+      "both_clean_sheet_matches": 10
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 198,
+        "home_clean_sheets": 45,
+        "away_clean_sheets": 42,
+        "total_clean_sheets": 87,
+        "home_cs_pct": 22.7,
+        "away_cs_pct": 21.2,
+        "matches_with_clean_sheet": 79,
+        "matches_with_clean_sheet_pct": 39.9,
+        "both_clean_sheet_matches": 8
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 47,
+        "home_clean_sheets": 10,
+        "away_clean_sheets": 8,
+        "total_clean_sheets": 18,
+        "home_cs_pct": 21.3,
+        "away_cs_pct": 17.0,
+        "matches_with_clean_sheet": 16,
+        "matches_with_clean_sheet_pct": 34.0,
+        "both_clean_sheet_matches": 2
+      }
+    ]
+  },
+  "scoring_intensity": {
+    "overall": {
+      "n_matches": 245,
+      "n_with_ht": 245,
+      "first_half_goals": 327,
+      "second_half_goals": 420,
+      "split_total_goals": 747,
+      "first_half_pct": 43.8,
+      "second_half_pct": 56.2,
+      "avg_first_half": 1.335,
+      "avg_second_half": 1.714,
+      "second_half_only": {
+        "count": 64,
+        "pct": 26.1
+      }
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 198,
+        "n_with_ht": 198,
+        "first_half_goals": 259,
+        "second_half_goals": 335,
+        "split_total_goals": 594,
+        "first_half_pct": 43.6,
+        "second_half_pct": 56.4,
+        "avg_first_half": 1.308,
+        "avg_second_half": 1.692,
+        "second_half_only": {
+          "count": 52,
+          "pct": 26.3
+        }
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 47,
+        "n_with_ht": 47,
+        "first_half_goals": 68,
+        "second_half_goals": 85,
+        "split_total_goals": 153,
+        "first_half_pct": 44.4,
+        "second_half_pct": 55.6,
+        "avg_first_half": 1.447,
+        "avg_second_half": 1.809,
+        "second_half_only": {
+          "count": 12,
+          "pct": 25.5
+        }
+      }
+    ]
+  },
+  "first_goal_timing": {
+    "n_total": 245,
+    "n_with_first_goal": 235,
+    "n_goalless": 10,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "count": 74,
+        "pct_of_matches": 30.2,
+        "pct_of_scoring": 31.5
+      },
+      "16-30": {
+        "count": 63,
+        "pct_of_matches": 25.7,
+        "pct_of_scoring": 26.8
+      },
+      "31-45": {
+        "count": 31,
+        "pct_of_matches": 12.7,
+        "pct_of_scoring": 13.2
+      },
+      "46-60": {
+        "count": 45,
+        "pct_of_matches": 18.4,
+        "pct_of_scoring": 19.1
+      },
+      "61-75": {
+        "count": 11,
+        "pct_of_matches": 4.5,
+        "pct_of_scoring": 4.7
+      },
+      "76-90": {
+        "count": 10,
+        "pct_of_matches": 4.1,
+        "pct_of_scoring": 4.3
+      },
+      "91-120": {
+        "count": 1,
+        "pct_of_matches": 0.4,
+        "pct_of_scoring": 0.4
+      }
+    },
+    "summary": {
+      "n": 235,
+      "min": 1,
+      "max": 93,
+      "mean": 30.78,
+      "p50": 23
+    }
+  }
+}

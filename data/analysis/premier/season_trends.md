@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-19T08:55:04+00:00
+- Generated: 2026-09-23T13:42:12+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
@@ -14,9 +14,10 @@
 | 2023-2024 | Manchester City | 91 | Arsenal | 2 pts |
 | 2024-2025 | Liverpool | 84 | Arsenal | 10 pts |
 | 2025-2026 | Arsenal | 85 | Manchester City | 7 pts |
+| 2026-2027 | Manchester City | 15 | Arsenal | 3 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **2** of 6 seasons
+- Tight races (margin <= 3 pts): **3** of 7 seasons
 - Tightest race: **2021-2022** - Manchester City beat Liverpool by **1** pts
 
 | season | margin | tight |
@@ -27,6 +28,7 @@
 | 2023-2024 | 2 pts | yes |
 | 2024-2025 | 10 pts |  |
 | 2025-2026 | 7 pts |  |
+| 2026-2027 | 3 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 17 = last safe, 20 = bottom._
@@ -39,6 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 91 | 89 | 68 | 63 | 36 | 16 |
 | 2024-2025 | 84 | 74 | 69 | 66 | 38 | 12 |
 | 2025-2026 | 85 | 78 | 65 | 57 | 41 | 20 |
+| 2026-2027 | 15 | 12 | 9 | 9 | 3 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -49,6 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 17 | 36 | 18 | 26 | 10 pts |
 | 2024-2025 | 17 | 38 | 18 | 25 | 13 pts |
 | 2025-2026 | 17 | 41 | 18 | 39 | 2 pts |
+| 2026-2027 | 17 | 3 | 18 | 3 | 0 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -59,6 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 1246 | 3.279 | 46.1% | 21.6% | 32.4% | 2.9% | 52.9 |
 | 2024-2025 | 380 | 1115 | 2.934 | 40.8% | 24.5% | 34.7% | 4.2% | 52.35 |
 | 2025-2026 | 380 | 1045 | 2.75 | 42.6% | 27.4% | 30.0% | 7.1% | 51.8 |
+| 2026-2027 | 50 | 141 | 2.82 | 36.0% | 32.0% | 32.0% | 10.0% | 6.7 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 7.100)
@@ -73,12 +78,13 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.600 | 5.700 |
 | 2024-2025 | 4.600 | 7.100 |
 | 2025-2026 | 4.300 | 5.400 |
+| 2026-2027 | 2.200 | 6.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*
 
 ## Charts
 
-![season_trends_champion_points](/mnt/e/football_data_analysis/data/analysis/charts/season_trends_champion_points.png)
-![season_trends_avg_goals](/mnt/e/football_data_analysis/data/analysis/charts/season_trends_avg_goals.png)
+![season_trends_champion_points](E:\football_data_analysis\data\analysis\premier\charts\season_trends_champion_points.png)
+![season_trends_avg_goals](E:\football_data_analysis\data\analysis\premier\charts\season_trends_avg_goals.png)
 

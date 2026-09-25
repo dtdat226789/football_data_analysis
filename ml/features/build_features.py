@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import sys
 from collections import defaultdict
+from datetime import date, time
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -29,6 +30,7 @@ import psycopg2.extras  # noqa: E402
 
 from ml import db  # noqa: E402
 from ml.features import form, home_away, rest, standings  # noqa: E402
+from ml.features.fixtures import Fixture, score_fixtures, seed_season  # noqa: E402
 from ml.features.records import Match, TeamRecord  # noqa: E402
 from ml.features.standings import StandingsRow  # noqa: E402
 
@@ -273,3 +275,116 @@ def build_rows(conn, league: str = "premier") -> list[dict]:
     for season in season_names(matches):
         rows.extend(process_season([m for m in matches if m.season == season], league=league))
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Scheduled (upcoming) fixtures
+# ---------------------------------------------------------------------------
+
+def resolve_team_alias(cur, value: str, forms=("name", "slug")) -> int | None:
+    """Map a display name or slug to a canonical team id via team_aliases."""
+    for form in forms:
+        cur.execute(
+            "SELECT team_id FROM team_aliases WHERE form = %s AND value = %s",
+            (form, value),
+        )
+        row = cur.fetchone()
+        if row is not None:
+            return row[0]
+    return None
+
+
+def _parse_kickoff(value: str) -> time | None:
+    """Parse a fixture kickoff like '14:00' into a TIME (lenient on bad input)."""
+    try:
+        hh, mm = value.split(":", 1)
+        return time(int(hh), int(mm[:2]))
+    except (ValueError, TypeError):
+        return None
+
+
+def latest_season_with_matches(cur, league: str) -> str | None:
+    """The most recent season that actually has matches for `league`."""
+    cur.execute(
+        """
+        SELECT s.name
+        FROM league_seasons ls
+        JOIN seasons s ON s.id = ls.season_id
+        WHERE ls.league_id = (SELECT id FROM leagues WHERE api_key = %s)
+          AND EXISTS (SELECT 1 FROM matches m WHERE m.league_season_id = ls.id)
+        ORDER BY s.start_year DESC, s.end_year DESC
+        LIMIT 1
+        """,
+        (league,),
+    )
+    row = cur.fetchone()
+    return row[0] if row else None
+
+
+def build_fixture_rows(
+    conn, fixtures: list[dict], league: str = "premier"
+) -> tuple[list[dict], list[dict]]:
+    """Build leakage-safe feature rows for scheduled fixtures.
+
+    ``fixtures`` is a list of ``{"home_team", "away_team", "match_date"}``
+    dicts (optionally ``time``). Returns ``(rows, skipped)`` where:
+
+      * ``rows``    are feature rows scorable by a trained model (histories +
+                    running table come from `league`'s latest season *before*
+                    the fixtures, whose own results are never applied);
+      * ``skipped`` are fixtures whose teams could not be resolved against
+                    ``team_aliases`` (the identity bridge), each with a
+                    ``reason``, so callers can report — not silently drop —
+                    pathological inputs.
+    """
+    resolved: list[dict] = []
+    skipped: list[dict] = []
+    with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+        season = latest_season_with_matches(cur, league)
+        if season is None:
+            raise ValueError(f"league '{league}' has no completed matches in the database")
+
+        for fixture in fixtures:
+            home_id = resolve_team_alias(cur, fixture["home_team"])
+            away_id = resolve_team_alias(cur, fixture["away_team"])
+            if home_id is None or away_id is None:
+                skipped.append(
+                    {
+                        **fixture,
+                        "league": league,
+                        "reason": "team identity not in team_aliases "
+                        f"(home={home_id is None}, away={away_id is None})",
+                    }
+                )
+                continue
+            kickoff = None
+            if fixture.get("time"):
+                kickoff = _parse_kickoff(str(fixture["time"]))
+            resolved.append(
+                {
+                    "home_team_id": home_id,
+                    "away_team_id": away_id,
+                    "home_team": fixture["home_team"],
+                    "away_team": fixture["away_team"],
+                    "match_date": date.fromisoformat(fixture["match_date"]),
+                    "kickoff_time": kickoff,
+                }
+            )
+
+        matches = [m for m in load_matches(conn, league) if m.season == season]
+
+    history, table, roster = seed_season(matches)
+    fixtures_scored: list[Fixture] = [
+        Fixture(
+            home_team_id=f["home_team_id"],
+            away_team_id=f["away_team_id"],
+            match_date=f["match_date"],
+            kickoff_time=f["kickoff_time"],
+        )
+        for f in resolved
+    ]
+    rows = score_fixtures(history, table, roster, fixtures_scored, league=league)
+    for row, original in zip(rows, resolved):
+        row["home_team"] = original["home_team"]
+        row["away_team"] = original["away_team"]
+    return rows, skipped

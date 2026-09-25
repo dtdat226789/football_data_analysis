@@ -124,23 +124,52 @@ ml/
 ├── db.py                 re-exports the project DB helper (single source of truth)
 ├── validation.py         in-process dataset checks
 ├── sql_check.py          independent SQL cross-check vs PostgreSQL
+├── scoring.py            metrics (accuracy / macro-F1 / log-loss / Brier / ECE) +
+│                         majority & always-home baselines + season split + impute
+├── model_store.py        artifact save/load (joblib), selected model, list models
 ├── features/
 │   ├── records.py        Match / TeamRecord dataclasses
 │   ├── form.py           group A
 │   ├── home_away.py      group B
 │   ├── standings.py      group C (running table, no leak)
 │   ├── rest.py           group D
+│   ├── fixtures.py       upcoming-fixture feature rows (no result applied)
 │   └── build_features.py orchestrator + column registry + SQL loader
 ├── datasets/             versioned artifacts (JSON + CSV + manifests)
-├── models/               reserved for trained models
+├── models/               trained models + selected_model.json (gitignored)
 ├── notebooks/            reserved for EDA
-├── train.py / evaluate.py / predict.py   stubs (next phase)
+├── train.py              fit logistic + HistGB on dev, select by dev log-loss,
+│                         retrain on full train, persist both + selected_model.json
+├── evaluate.py           holdout-season report vs baselines -> models/evaluation_report.json
+├── predict.py            CLI: --features <json> or --league <leagues> using
+│                         data/raw/fixtures/*.json, emits contract-valid predictions
 └── tests/
 ```
 
+## Train / evaluate / predict
+
+```bash
+python3 ml/train.py          # dev split, selects best by dev log-loss, saves to ml/models/
+python3 ml/evaluate.py       # report on the held-out season vs baselines
+python3 ml/predict.py --features rows.json          # score hand-built feature rows
+python3 ml/predict.py --league premier              # upcoming fixtures from data/raw/fixtures
+```
+
+- `train.py` also fits an imputer + scaler as part of the pipeline (rest-day
+  columns are `None` on season openers and get constant `0`), so raw
+  multi-feature rows are accepted straight from `--features`.
+- After joblib reload, a pipeline trained on integer-coded labels exposes
+  `classes_ == [0, 1, 2]`; `predict.py` maps those codes back to
+  `HOME_WIN / DRAW / AWAY_WIN` (see `_class_facing_labels`).
+- Fixture mode is meaningful for leagues whose teams are resolvable via the
+  `team_aliases` table (currently premier). Unresolvable matchups are listed
+  under `skipped` rather than failing the whole run.
+- Refs: first real dev/holdout results are logged in `ml/datasets/validation_report.json`
+  and reproduced by `pytest`; nothing in `ml/models/` is committed.
+
 ## Next steps (out of scope for this step)
 
-- `ml/train.py` baseline classifier, `evaluate.py` on the holdout season,
-  `predict.py` for a fixture list
-- new feature groups (H2H, opponent strength, home/away calendars) — each
-  must go through the same strictly-prior pipeline
+- better classifiers / feature engineering (H2H, opponent strength, home/away
+  calendars) — each must go through the same strictly-prior pipeline
+- calibration curves and threshold choice on the dev season
+- odds / bookmaker drift experiments

@@ -51,9 +51,13 @@ def test_league_detail(client):
     assert body["has_data"] is True
     assert body["seasons"]
     by_season = {s["season"]: s for s in body["seasons"]}
-    assert sum(s["matches"] for s in body["seasons"]) == 2280
     assert by_season["2025-2026"]["matches"] == 380
     assert by_season["2020-2021"]["declared_by_api"] is False
+    assert {s["season"] for s in body["seasons"] if s["matches"] == 380} >= {
+        "2020-2021", "2021-2022", "2022-2023",
+        "2023-2024", "2024-2025", "2025-2026",
+    }
+    assert 0 < by_season["2026-2027"]["matches"] < 380  # in-progress season
 
 
 def test_league_seasons_endpoint(client):
@@ -71,7 +75,7 @@ def test_standings_default_season(client):
     r = client.get("/api/v1/leagues/premier/standings")
     assert r.status_code == 200
     body = r.json()
-    assert body["season"] == "2025-2026"
+    assert body["season"] == "2026-2027"  # latest season with collected data
     assert body["view"] == "classic"
     assert len(body["rows"]) == 20
     assert [row["position"] for row in body["rows"]] == list(range(1, 21))
@@ -202,3 +206,41 @@ def test_team_standings(client):
     row = r.json()["row"]
     assert row is not None
     assert 1 <= row["position"] <= 20
+
+
+def test_team_stats(client):
+    r = client.get(
+        "/api/v1/teams/arsenal/stats",
+        params={"league": "premier", "view": "classic"},
+    )
+    assert r.status_code == 200
+    body = r.json()
+    assert body["team"] == "arsenal"
+    assert body["league"] == "premier"
+    assert body["view"] == "classic"
+    assert len(body["seasons"]) >= 6
+    seasons = body["seasons"]
+    assert all(
+        set(keys) <= set(s)
+        for s in seasons
+        for keys in [("season", "position", "played", "points")]
+    )
+    assert body["totals"]["played"] == sum(s["played"] for s in seasons)
+    assert body["best"]["position"] == min(s["position"] for s in seasons)
+    for venue in body["home_away"]:
+        assert set(body["home_away"][venue]) >= {"played", "won", "points"}
+
+
+def test_team_stats_with_view(client):
+    r = client.get(
+        "/api/v1/teams/arsenal/stats",
+        params={"league": "premier", "view": "luck"},
+    )
+    assert r.status_code == 200
+    body = r.json()
+    assert body["view"] == "luck"
+    assert all("points" in s for s in body["seasons"])
+
+
+def test_team_stats_unknown_404(client):
+    assert client.get("/api/v1/teams/no-such-team/stats").status_code == 404

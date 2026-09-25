@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:50:39+00:00",
+  "config": {
+    "league": "wbelgium1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\wbelgium1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Super League Women",
+    "country": "Belgium",
+    "teams": 8,
+    "matches": 56,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/belgium/super-league-women"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Leuven W",
+      "champion_id": 1814,
+      "champion_pts": 70,
+      "runner_up": "RSC Anderlecht W",
+      "runner_up_id": 1815,
+      "margin_pts": 15
+    },
+    {
+      "season": "2026-2027",
+      "champion": "RSC Anderlecht W",
+      "champion_id": 1815,
+      "champion_pts": 9,
+      "runner_up": "Club Brugge W",
+      "runner_up_id": 1817,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 15,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "RSC Anderlecht W",
+      "runner_up": "Club Brugge W"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 70,
+        "2": 55,
+        "4": 39,
+        "6": 29,
+        "5": 31,
+        "8": 16
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 9,
+        "2": 9,
+        "4": 6,
+        "6": 1,
+        "5": 3,
+        "8": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 5,
+      "safe_pts": 31,
+      "drop_position": 6,
+      "drop_pts": 29,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 6,
+          "points": 29
+        },
+        {
+          "position": 7,
+          "points": 20
+        },
+        {
+          "position": 8,
+          "points": 16
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 5,
+      "safe_pts": 3,
+      "drop_position": 6,
+      "drop_pts": 1,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 6,
+          "points": 1
+        },
+        {
+          "position": 7,
+          "points": 0
+        },
+        {
+          "position": 8,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 108,
+      "total_goals": 324,
+      "avg_goals": 3.0,
+      "home_wins": 44,
+      "draws": 25,
+      "away_wins": 39,
+      "home_win_pct": 40.7,
+      "draw_pct": 23.1,
+      "away_win_pct": 36.1,
+      "goalless": 6,
+      "goalless_pct": 5.6,
+      "total_points": 299,
+      "avg_points_per_team": 37.38,
+      "n_teams": 8
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 12,
+      "total_goals": 35,
+      "avg_goals": 2.917,
+      "home_wins": 8,
+      "draws": 1,
+      "away_wins": 3,
+      "home_win_pct": 66.7,
+      "draw_pct": 8.3,
+      "away_win_pct": 25.0,
+      "goalless": 1,
+      "goalless_pct": 8.3,
+      "total_points": 35,
+      "avg_points_per_team": 4.38,
+      "n_teams": 8
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 1.75,
+        "goals": 3.25
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.25,
+        "goals": 2.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 3.25
+    }
+  }
+}

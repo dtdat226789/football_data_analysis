@@ -1,0 +1,1851 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:02:29+00:00",
+  "config": {
+    "league": "japan1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\japan1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "J1 League",
+    "country": "Japan",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/japan/j1-league"
+  },
+  "teams": [
+    {
+      "team_id": 946,
+      "team": "FC Tokyo",
+      "slug": "fc-tokyo",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 17,
+      "draws": 2,
+      "losses": 5,
+      "points": 53,
+      "goals_for": 45,
+      "goals_against": 25,
+      "goal_difference": 20,
+      "avg_points_per_season": 26.5,
+      "best_position": 2,
+      "worst_position": 5,
+      "titles": 0
+    },
+    {
+      "team_id": 949,
+      "team": "Machida",
+      "slug": "machida",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 17,
+      "draws": 2,
+      "losses": 5,
+      "points": 53,
+      "goals_for": 47,
+      "goals_against": 30,
+      "goal_difference": 17,
+      "avg_points_per_season": 26.5,
+      "best_position": 4,
+      "worst_position": 5,
+      "titles": 0
+    },
+    {
+      "team_id": 945,
+      "team": "Kashima Antlers",
+      "slug": "kashima-antlers",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 17,
+      "draws": 1,
+      "losses": 6,
+      "points": 52,
+      "goals_for": 45,
+      "goals_against": 27,
+      "goal_difference": 18,
+      "avg_points_per_season": 26.0,
+      "best_position": 1,
+      "worst_position": 8,
+      "titles": 1
+    },
+    {
+      "team_id": 947,
+      "team": "Vissel Kobe",
+      "slug": "vissel-kobe",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 16,
+      "draws": 1,
+      "losses": 7,
+      "points": 49,
+      "goals_for": 38,
+      "goals_against": 27,
+      "goal_difference": 11,
+      "avg_points_per_season": 24.5,
+      "best_position": 1,
+      "worst_position": 3,
+      "titles": 1
+    },
+    {
+      "team_id": 954,
+      "team": "Sanfrecce Hiroshima",
+      "slug": "sanfrecce-hiroshima",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 13,
+      "draws": 2,
+      "losses": 9,
+      "points": 41,
+      "goals_for": 43,
+      "goals_against": 27,
+      "goal_difference": 16,
+      "avg_points_per_season": 20.5,
+      "best_position": 3,
+      "worst_position": 10,
+      "titles": 0
+    },
+    {
+      "team_id": 953,
+      "team": "Cerezo Osaka",
+      "slug": "cerezo-osaka",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 12,
+      "draws": 2,
+      "losses": 10,
+      "points": 38,
+      "goals_for": 28,
+      "goals_against": 30,
+      "goal_difference": -2,
+      "avg_points_per_season": 19.0,
+      "best_position": 9,
+      "worst_position": 11,
+      "titles": 0
+    },
+    {
+      "team_id": 952,
+      "team": "Kawasaki Frontale",
+      "slug": "kawasaki-frontale",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 11,
+      "draws": 4,
+      "losses": 9,
+      "points": 37,
+      "goals_for": 37,
+      "goals_against": 38,
+      "goal_difference": -1,
+      "avg_points_per_season": 18.5,
+      "best_position": 7,
+      "worst_position": 8,
+      "titles": 0
+    },
+    {
+      "team_id": 950,
+      "team": "Nagoya Grampus",
+      "slug": "nagoya-grampus",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 12,
+      "draws": 0,
+      "losses": 12,
+      "points": 36,
+      "goals_for": 37,
+      "goals_against": 35,
+      "goal_difference": 2,
+      "avg_points_per_season": 18.0,
+      "best_position": 6,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 965,
+      "team": "Shimizu S-Pulse",
+      "slug": "shimizu-s-pulse",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 11,
+      "draws": 1,
+      "losses": 12,
+      "points": 34,
+      "goals_for": 28,
+      "goals_against": 29,
+      "goal_difference": -1,
+      "avg_points_per_season": 17.0,
+      "best_position": 12,
+      "worst_position": 21,
+      "titles": 0
+    },
+    {
+      "team_id": 955,
+      "team": "Okayama",
+      "slug": "okayama",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 11,
+      "draws": 1,
+      "losses": 12,
+      "points": 34,
+      "goals_for": 33,
+      "goals_against": 36,
+      "goal_difference": -3,
+      "avg_points_per_season": 17.0,
+      "best_position": 9,
+      "worst_position": 11,
+      "titles": 0
+    },
+    {
+      "team_id": 948,
+      "team": "Urawa Reds",
+      "slug": "urawa-reds",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 11,
+      "draws": 0,
+      "losses": 13,
+      "points": 33,
+      "goals_for": 41,
+      "goals_against": 38,
+      "goal_difference": 3,
+      "avg_points_per_season": 16.5,
+      "best_position": 4,
+      "worst_position": 10,
+      "titles": 0
+    },
+    {
+      "team_id": 958,
+      "team": "Kashiwa Reysol",
+      "slug": "kashiwa-reysol",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 11,
+      "draws": 0,
+      "losses": 13,
+      "points": 33,
+      "goals_for": 34,
+      "goals_against": 34,
+      "goal_difference": 0,
+      "avg_points_per_season": 16.5,
+      "best_position": 2,
+      "worst_position": 14,
+      "titles": 0
+    },
+    {
+      "team_id": 957,
+      "team": "Gamba Osaka",
+      "slug": "gamba-osaka",
+      "seasons_played": 2,
+      "total_matches": 25,
+      "wins": 10,
+      "draws": 3,
+      "losses": 12,
+      "points": 33,
+      "goals_for": 37,
+      "goals_against": 38,
+      "goal_difference": -1,
+      "avg_points_per_season": 16.5,
+      "best_position": 13,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 951,
+      "team": "Verdy",
+      "slug": "verdy",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 9,
+      "draws": 4,
+      "losses": 11,
+      "points": 31,
+      "goals_for": 25,
+      "goals_against": 32,
+      "goal_difference": -7,
+      "avg_points_per_season": 15.5,
+      "best_position": 7,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 956,
+      "team": "Yokohama F. Marinos",
+      "slug": "yokohama-f-marinos",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 9,
+      "draws": 2,
+      "losses": 13,
+      "points": 29,
+      "goals_for": 35,
+      "goals_against": 39,
+      "goal_difference": -4,
+      "avg_points_per_season": 14.5,
+      "best_position": 6,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 960,
+      "team": "Kyoto",
+      "slug": "kyoto",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 9,
+      "draws": 2,
+      "losses": 13,
+      "points": 29,
+      "goals_for": 32,
+      "goals_against": 39,
+      "goal_difference": -7,
+      "avg_points_per_season": 14.5,
+      "best_position": 14,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 966,
+      "team": "Mito",
+      "slug": "mito",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 8,
+      "draws": 3,
+      "losses": 13,
+      "points": 27,
+      "goals_for": 33,
+      "goals_against": 46,
+      "goal_difference": -13,
+      "avg_points_per_season": 13.5,
+      "best_position": 13,
+      "worst_position": 22,
+      "titles": 0
+    },
+    {
+      "team_id": 961,
+      "team": "V-Varen Nagasaki",
+      "slug": "v-varen-nagasaki",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 8,
+      "draws": 2,
+      "losses": 14,
+      "points": 26,
+      "goals_for": 28,
+      "goals_against": 41,
+      "goal_difference": -13,
+      "avg_points_per_season": 13.0,
+      "best_position": 15,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 962,
+      "team": "Avispa Fukuoka",
+      "slug": "avispa-fukuoka",
+      "seasons_played": 2,
+      "total_matches": 25,
+      "wins": 8,
+      "draws": 1,
+      "losses": 16,
+      "points": 25,
+      "goals_for": 30,
+      "goals_against": 42,
+      "goal_difference": -12,
+      "avg_points_per_season": 12.5,
+      "best_position": 18,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 963,
+      "team": "Chiba",
+      "slug": "chiba",
+      "seasons_played": 2,
+      "total_matches": 24,
+      "wins": 4,
+      "draws": 1,
+      "losses": 19,
+      "points": 13,
+      "goals_for": 23,
+      "goals_against": 46,
+      "goal_difference": -23,
+      "avg_points_per_season": 6.5,
+      "best_position": 19,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 971,
+      "team": "Pulse-Avispa Fukuoka",
+      "slug": "pulse-avispa-fukuoka",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 27,
+      "worst_position": 27,
+      "titles": 0
+    },
+    {
+      "team_id": 972,
+      "team": "Pulse-Cerezo Osaka",
+      "slug": "pulse-cerezo-osaka",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 28,
+      "worst_position": 28,
+      "titles": 0
+    },
+    {
+      "team_id": 973,
+      "team": "Pulse-Kyoto",
+      "slug": "pulse-kyoto",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 29,
+      "worst_position": 29,
+      "titles": 0
+    },
+    {
+      "team_id": 968,
+      "team": "Pulse-Nagoya Grampus",
+      "slug": "pulse-nagoya-grampus",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 24,
+      "worst_position": 24,
+      "titles": 0
+    },
+    {
+      "team_id": 974,
+      "team": "Pulse-Okayama",
+      "slug": "pulse-okayama",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 30,
+      "worst_position": 30,
+      "titles": 0
+    },
+    {
+      "team_id": 980,
+      "team": "Pulse-Sanfrecce Hiroshima",
+      "slug": "pulse-sanfrecce-hiroshima",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 36,
+      "worst_position": 36,
+      "titles": 0
+    },
+    {
+      "team_id": 977,
+      "team": "Pulse-Vissel Kobe",
+      "slug": "pulse-vissel-kobe",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 33,
+      "worst_position": 33,
+      "titles": 0
+    },
+    {
+      "team_id": 964,
+      "team": "Shimizu S",
+      "slug": "shimizu-s",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 959,
+      "team": "V",
+      "slug": "v",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 15,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 978,
+      "team": "Varen Nagasaki-Avispa Fukuoka",
+      "slug": "varen-nagasaki-avispa-fukuoka",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 34,
+      "worst_position": 34,
+      "titles": 0
+    },
+    {
+      "team_id": 979,
+      "team": "Varen Nagasaki-Cerezo Osaka",
+      "slug": "varen-nagasaki-cerezo-osaka",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 35,
+      "worst_position": 35,
+      "titles": 0
+    },
+    {
+      "team_id": 975,
+      "team": "Varen Nagasaki-Gamba Osaka",
+      "slug": "varen-nagasaki-gamba-osaka",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 31,
+      "worst_position": 31,
+      "titles": 0
+    },
+    {
+      "team_id": 969,
+      "team": "Varen Nagasaki-Kyoto",
+      "slug": "varen-nagasaki-kyoto",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 25,
+      "worst_position": 25,
+      "titles": 0
+    },
+    {
+      "team_id": 970,
+      "team": "Varen Nagasaki-Nagoya Grampus",
+      "slug": "varen-nagasaki-nagoya-grampus",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 26,
+      "worst_position": 26,
+      "titles": 0
+    },
+    {
+      "team_id": 976,
+      "team": "Varen Nagasaki-Okayama",
+      "slug": "varen-nagasaki-okayama",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 32,
+      "worst_position": 32,
+      "titles": 0
+    },
+    {
+      "team_id": 967,
+      "team": "Varen Nagasaki-Sanfrecce Hiroshima",
+      "slug": "varen-nagasaki-sanfrecce-hiroshima",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 23,
+      "worst_position": 23,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 951,
+      "team": "Verdy",
+      "home": {
+        "matches": 13,
+        "wins": 7,
+        "draws": 2,
+        "losses": 4,
+        "points": 23,
+        "goals_for": 15,
+        "goals_against": 15
+      },
+      "away": {
+        "matches": 11,
+        "wins": 2,
+        "draws": 2,
+        "losses": 7,
+        "points": 8,
+        "goals_for": 10,
+        "goals_against": 17
+      },
+      "home_advantage": 15
+    },
+    {
+      "team_id": 962,
+      "team": "Avispa Fukuoka",
+      "home": {
+        "matches": 13,
+        "wins": 6,
+        "draws": 1,
+        "losses": 6,
+        "points": 19,
+        "goals_for": 19,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 12,
+        "wins": 2,
+        "draws": 0,
+        "losses": 10,
+        "points": 6,
+        "goals_for": 11,
+        "goals_against": 21
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 953,
+      "team": "Cerezo Osaka",
+      "home": {
+        "matches": 12,
+        "wins": 8,
+        "draws": 1,
+        "losses": 3,
+        "points": 25,
+        "goals_for": 18,
+        "goals_against": 10
+      },
+      "away": {
+        "matches": 12,
+        "wins": 4,
+        "draws": 1,
+        "losses": 7,
+        "points": 13,
+        "goals_for": 10,
+        "goals_against": 20
+      },
+      "home_advantage": 12
+    },
+    {
+      "team_id": 950,
+      "team": "Nagoya Grampus",
+      "home": {
+        "matches": 13,
+        "wins": 8,
+        "draws": 0,
+        "losses": 5,
+        "points": 24,
+        "goals_for": 22,
+        "goals_against": 18
+      },
+      "away": {
+        "matches": 11,
+        "wins": 4,
+        "draws": 0,
+        "losses": 7,
+        "points": 12,
+        "goals_for": 15,
+        "goals_against": 17
+      },
+      "home_advantage": 12
+    },
+    {
+      "team_id": 965,
+      "team": "Shimizu S-Pulse",
+      "home": {
+        "matches": 13,
+        "wins": 7,
+        "draws": 1,
+        "losses": 5,
+        "points": 22,
+        "goals_for": 16,
+        "goals_against": 14
+      },
+      "away": {
+        "matches": 11,
+        "wins": 4,
+        "draws": 0,
+        "losses": 7,
+        "points": 12,
+        "goals_for": 12,
+        "goals_against": 15
+      },
+      "home_advantage": 10
+    },
+    {
+      "team_id": 954,
+      "team": "Sanfrecce Hiroshima",
+      "home": {
+        "matches": 12,
+        "wins": 8,
+        "draws": 1,
+        "losses": 3,
+        "points": 25,
+        "goals_for": 25,
+        "goals_against": 10
+      },
+      "away": {
+        "matches": 12,
+        "wins": 5,
+        "draws": 1,
+        "losses": 6,
+        "points": 16,
+        "goals_for": 18,
+        "goals_against": 17
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 952,
+      "team": "Kawasaki Frontale",
+      "home": {
+        "matches": 12,
+        "wins": 7,
+        "draws": 2,
+        "losses": 3,
+        "points": 23,
+        "goals_for": 27,
+        "goals_against": 25
+      },
+      "away": {
+        "matches": 12,
+        "wins": 4,
+        "draws": 2,
+        "losses": 6,
+        "points": 14,
+        "goals_for": 10,
+        "goals_against": 13
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 945,
+      "team": "Kashima Antlers",
+      "home": {
+        "matches": 11,
+        "wins": 10,
+        "draws": 0,
+        "losses": 1,
+        "points": 30,
+        "goals_for": 19,
+        "goals_against": 6
+      },
+      "away": {
+        "matches": 13,
+        "wins": 7,
+        "draws": 1,
+        "losses": 5,
+        "points": 22,
+        "goals_for": 26,
+        "goals_against": 21
+      },
+      "home_advantage": 8
+    },
+    {
+      "team_id": 961,
+      "team": "V-Varen Nagasaki",
+      "home": {
+        "matches": 13,
+        "wins": 5,
+        "draws": 2,
+        "losses": 6,
+        "points": 17,
+        "goals_for": 15,
+        "goals_against": 20
+      },
+      "away": {
+        "matches": 11,
+        "wins": 3,
+        "draws": 0,
+        "losses": 8,
+        "points": 9,
+        "goals_for": 13,
+        "goals_against": 21
+      },
+      "home_advantage": 8
+    },
+    {
+      "team_id": 947,
+      "team": "Vissel Kobe",
+      "home": {
+        "matches": 13,
+        "wins": 9,
+        "draws": 1,
+        "losses": 3,
+        "points": 28,
+        "goals_for": 22,
+        "goals_against": 15
+      },
+      "away": {
+        "matches": 11,
+        "wins": 7,
+        "draws": 0,
+        "losses": 4,
+        "points": 21,
+        "goals_for": 16,
+        "goals_against": 12
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 966,
+      "team": "Mito",
+      "home": {
+        "matches": 11,
+        "wins": 5,
+        "draws": 2,
+        "losses": 4,
+        "points": 17,
+        "goals_for": 17,
+        "goals_against": 16
+      },
+      "away": {
+        "matches": 13,
+        "wins": 3,
+        "draws": 1,
+        "losses": 9,
+        "points": 10,
+        "goals_for": 16,
+        "goals_against": 30
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 957,
+      "team": "Gamba Osaka",
+      "home": {
+        "matches": 13,
+        "wins": 6,
+        "draws": 1,
+        "losses": 6,
+        "points": 19,
+        "goals_for": 21,
+        "goals_against": 17
+      },
+      "away": {
+        "matches": 12,
+        "wins": 4,
+        "draws": 2,
+        "losses": 6,
+        "points": 14,
+        "goals_for": 16,
+        "goals_against": 21
+      },
+      "home_advantage": 5
+    },
+    {
+      "team_id": 963,
+      "team": "Chiba",
+      "home": {
+        "matches": 11,
+        "wins": 3,
+        "draws": 0,
+        "losses": 8,
+        "points": 9,
+        "goals_for": 12,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 13,
+        "wins": 1,
+        "draws": 1,
+        "losses": 11,
+        "points": 4,
+        "goals_for": 11,
+        "goals_against": 25
+      },
+      "home_advantage": 5
+    },
+    {
+      "team_id": 955,
+      "team": "Okayama",
+      "home": {
+        "matches": 11,
+        "wins": 6,
+        "draws": 1,
+        "losses": 4,
+        "points": 19,
+        "goals_for": 13,
+        "goals_against": 12
+      },
+      "away": {
+        "matches": 13,
+        "wins": 5,
+        "draws": 0,
+        "losses": 8,
+        "points": 15,
+        "goals_for": 20,
+        "goals_against": 24
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 946,
+      "team": "FC Tokyo",
+      "home": {
+        "matches": 13,
+        "wins": 9,
+        "draws": 0,
+        "losses": 4,
+        "points": 27,
+        "goals_for": 22,
+        "goals_against": 16
+      },
+      "away": {
+        "matches": 11,
+        "wins": 8,
+        "draws": 2,
+        "losses": 1,
+        "points": 26,
+        "goals_for": 23,
+        "goals_against": 9
+      },
+      "home_advantage": 1
+    },
+    {
+      "team_id": 960,
+      "team": "Kyoto",
+      "home": {
+        "matches": 10,
+        "wins": 5,
+        "draws": 0,
+        "losses": 5,
+        "points": 15,
+        "goals_for": 19,
+        "goals_against": 16
+      },
+      "away": {
+        "matches": 14,
+        "wins": 4,
+        "draws": 2,
+        "losses": 8,
+        "points": 14,
+        "goals_for": 13,
+        "goals_against": 23
+      },
+      "home_advantage": 1
+    },
+    {
+      "team_id": 949,
+      "team": "Machida",
+      "home": {
+        "matches": 12,
+        "wins": 8,
+        "draws": 1,
+        "losses": 3,
+        "points": 25,
+        "goals_for": 19,
+        "goals_against": 17
+      },
+      "away": {
+        "matches": 12,
+        "wins": 9,
+        "draws": 1,
+        "losses": 2,
+        "points": 28,
+        "goals_for": 28,
+        "goals_against": 13
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 958,
+      "team": "Kashiwa Reysol",
+      "home": {
+        "matches": 11,
+        "wins": 5,
+        "draws": 0,
+        "losses": 6,
+        "points": 15,
+        "goals_for": 15,
+        "goals_against": 13
+      },
+      "away": {
+        "matches": 13,
+        "wins": 6,
+        "draws": 0,
+        "losses": 7,
+        "points": 18,
+        "goals_for": 19,
+        "goals_against": 21
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 948,
+      "team": "Urawa Reds",
+      "home": {
+        "matches": 12,
+        "wins": 5,
+        "draws": 0,
+        "losses": 7,
+        "points": 15,
+        "goals_for": 21,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 12,
+        "wins": 6,
+        "draws": 0,
+        "losses": 6,
+        "points": 18,
+        "goals_for": 20,
+        "goals_against": 17
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 956,
+      "team": "Yokohama F. Marinos",
+      "home": {
+        "matches": 12,
+        "wins": 4,
+        "draws": 1,
+        "losses": 7,
+        "points": 13,
+        "goals_for": 18,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 12,
+        "wins": 5,
+        "draws": 1,
+        "losses": 6,
+        "points": 16,
+        "goals_for": 17,
+        "goals_against": 18
+      },
+      "home_advantage": -3
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 946,
+        "team": "FC Tokyo",
+        "value": 2.208
+      },
+      {
+        "rank": 2,
+        "team_id": 949,
+        "team": "Machida",
+        "value": 2.208
+      },
+      {
+        "rank": 3,
+        "team_id": 945,
+        "team": "Kashima Antlers",
+        "value": 2.167
+      },
+      {
+        "rank": 4,
+        "team_id": 947,
+        "team": "Vissel Kobe",
+        "value": 2.042
+      },
+      {
+        "rank": 5,
+        "team_id": 954,
+        "team": "Sanfrecce Hiroshima",
+        "value": 1.708
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 949,
+        "team": "Machida",
+        "value": 47
+      },
+      {
+        "rank": 2,
+        "team_id": 946,
+        "team": "FC Tokyo",
+        "value": 45
+      },
+      {
+        "rank": 3,
+        "team_id": 945,
+        "team": "Kashima Antlers",
+        "value": 45
+      },
+      {
+        "rank": 4,
+        "team_id": 954,
+        "team": "Sanfrecce Hiroshima",
+        "value": 43
+      },
+      {
+        "rank": 5,
+        "team_id": 948,
+        "team": "Urawa Reds",
+        "value": 41
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 946,
+        "team": "FC Tokyo",
+        "value": 20
+      },
+      {
+        "rank": 2,
+        "team_id": 945,
+        "team": "Kashima Antlers",
+        "value": 18
+      },
+      {
+        "rank": 3,
+        "team_id": 949,
+        "team": "Machida",
+        "value": 17
+      },
+      {
+        "rank": 4,
+        "team_id": 954,
+        "team": "Sanfrecce Hiroshima",
+        "value": 16
+      },
+      {
+        "rank": 5,
+        "team_id": 947,
+        "team": "Vissel Kobe",
+        "value": 11
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 968,
+        "team": "Pulse-Nagoya Grampus",
+        "value": 0.0
+      },
+      {
+        "rank": 2,
+        "team_id": 954,
+        "team": "Sanfrecce Hiroshima",
+        "value": 0.889
+      },
+      {
+        "rank": 3,
+        "team_id": 947,
+        "team": "Vissel Kobe",
+        "value": 1.0
+      },
+      {
+        "rank": 4,
+        "team_id": 964,
+        "team": "Shimizu S",
+        "value": 1.0
+      },
+      {
+        "rank": 5,
+        "team_id": 967,
+        "team": "Varen Nagasaki-Sanfrecce Hiroshima",
+        "value": 1.0
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 2,
+    "n_teams": 20,
+    "teams": [
+      {
+        "team_id": 962,
+        "team": "Avispa Fukuoka"
+      },
+      {
+        "team_id": 953,
+        "team": "Cerezo Osaka"
+      },
+      {
+        "team_id": 963,
+        "team": "Chiba"
+      },
+      {
+        "team_id": 946,
+        "team": "FC Tokyo"
+      },
+      {
+        "team_id": 957,
+        "team": "Gamba Osaka"
+      },
+      {
+        "team_id": 945,
+        "team": "Kashima Antlers"
+      },
+      {
+        "team_id": 958,
+        "team": "Kashiwa Reysol"
+      },
+      {
+        "team_id": 952,
+        "team": "Kawasaki Frontale"
+      },
+      {
+        "team_id": 960,
+        "team": "Kyoto"
+      },
+      {
+        "team_id": 949,
+        "team": "Machida"
+      },
+      {
+        "team_id": 966,
+        "team": "Mito"
+      },
+      {
+        "team_id": 950,
+        "team": "Nagoya Grampus"
+      },
+      {
+        "team_id": 955,
+        "team": "Okayama"
+      },
+      {
+        "team_id": 954,
+        "team": "Sanfrecce Hiroshima"
+      },
+      {
+        "team_id": 965,
+        "team": "Shimizu S-Pulse"
+      },
+      {
+        "team_id": 948,
+        "team": "Urawa Reds"
+      },
+      {
+        "team_id": 961,
+        "team": "V-Varen Nagasaki"
+      },
+      {
+        "team_id": 951,
+        "team": "Verdy"
+      },
+      {
+        "team_id": 947,
+        "team": "Vissel Kobe"
+      },
+      {
+        "team_id": 956,
+        "team": "Yokohama F. Marinos"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 124,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 953,
+        "team_b_id": 965,
+        "team_a": "Cerezo Osaka",
+        "team_b": "Shimizu S-Pulse",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 945,
+        "team_b_id": 966,
+        "team_a": "Kashima Antlers",
+        "team_b": "Mito",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 958,
+        "team_b_id": 966,
+        "team_a": "Kashiwa Reysol",
+        "team_b": "Mito",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 960,
+        "team_b_id": 962,
+        "team_a": "Kyoto",
+        "team_b": "Avispa Fukuoka",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 954,
+        "team_b_id": 955,
+        "team_a": "Sanfrecce Hiroshima",
+        "team_b": "Okayama",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 962,
+        "team_b_id": 965,
+        "team_a": "Avispa Fukuoka",
+        "team_b": "Shimizu S-Pulse",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 953,
+        "team_b_id": 962,
+        "team_a": "Cerezo Osaka",
+        "team_b": "Avispa Fukuoka",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 953,
+        "team_b_id": 954,
+        "team_a": "Cerezo Osaka",
+        "team_b": "Sanfrecce Hiroshima",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 953,
+        "team_b_id": 961,
+        "team_a": "Cerezo Osaka",
+        "team_b": "V-Varen Nagasaki",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 945,
+        "team_b_id": 951,
+        "team_a": "Kashima Antlers",
+        "team_b": "Verdy",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 952,
+        "team_b_id": 963,
+        "team_a": "Kawasaki Frontale",
+        "team_b": "Chiba",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 950,
+        "team_b_id": 957,
+        "team_a": "Nagoya Grampus",
+        "team_b": "Gamba Osaka",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 950,
+        "team_b_id": 955,
+        "team_a": "Nagoya Grampus",
+        "team_b": "Okayama",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 955,
+        "team_b_id": 960,
+        "team_a": "Okayama",
+        "team_b": "Kyoto",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 955,
+        "team_b_id": 961,
+        "team_a": "Okayama",
+        "team_b": "V-Varen Nagasaki",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2026",
+      "2026-2027"
+    ],
+    "teams": [
+      {
+        "team_id": 946,
+        "team": "FC Tokyo",
+        "positions": [
+          2,
+          5
+        ]
+      },
+      {
+        "team_id": 949,
+        "team": "Machida",
+        "positions": [
+          5,
+          4
+        ]
+      },
+      {
+        "team_id": 945,
+        "team": "Kashima Antlers",
+        "positions": [
+          1,
+          8
+        ]
+      },
+      {
+        "team_id": 947,
+        "team": "Vissel Kobe",
+        "positions": [
+          3,
+          1
+        ]
+      },
+      {
+        "team_id": 954,
+        "team": "Sanfrecce Hiroshima",
+        "positions": [
+          10,
+          3
+        ]
+      },
+      {
+        "team_id": 953,
+        "team": "Cerezo Osaka",
+        "positions": [
+          9,
+          11
+        ]
+      },
+      {
+        "team_id": 952,
+        "team": "Kawasaki Frontale",
+        "positions": [
+          8,
+          7
+        ]
+      },
+      {
+        "team_id": 950,
+        "team": "Nagoya Grampus",
+        "positions": [
+          6,
+          17
+        ]
+      },
+      {
+        "team_id": 965,
+        "team": "Shimizu S-Pulse",
+        "positions": [
+          21,
+          12
+        ]
+      },
+      {
+        "team_id": 955,
+        "team": "Okayama",
+        "positions": [
+          11,
+          9
+        ]
+      },
+      {
+        "team_id": 948,
+        "team": "Urawa Reds",
+        "positions": [
+          4,
+          10
+        ]
+      },
+      {
+        "team_id": 958,
+        "team": "Kashiwa Reysol",
+        "positions": [
+          14,
+          2
+        ]
+      },
+      {
+        "team_id": 957,
+        "team": "Gamba Osaka",
+        "positions": [
+          13,
+          16
+        ]
+      },
+      {
+        "team_id": 951,
+        "team": "Verdy",
+        "positions": [
+          7,
+          19
+        ]
+      },
+      {
+        "team_id": 956,
+        "team": "Yokohama F. Marinos",
+        "positions": [
+          12,
+          6
+        ]
+      },
+      {
+        "team_id": 960,
+        "team": "Kyoto",
+        "positions": [
+          16,
+          14
+        ]
+      },
+      {
+        "team_id": 966,
+        "team": "Mito",
+        "positions": [
+          22,
+          13
+        ]
+      },
+      {
+        "team_id": 961,
+        "team": "V-Varen Nagasaki",
+        "positions": [
+          17,
+          15
+        ]
+      },
+      {
+        "team_id": 962,
+        "team": "Avispa Fukuoka",
+        "positions": [
+          18,
+          18
+        ]
+      },
+      {
+        "team_id": 963,
+        "team": "Chiba",
+        "positions": [
+          19,
+          20
+        ]
+      },
+      {
+        "team_id": 971,
+        "team": "Pulse-Avispa Fukuoka",
+        "positions": [
+          27,
+          null
+        ]
+      },
+      {
+        "team_id": 972,
+        "team": "Pulse-Cerezo Osaka",
+        "positions": [
+          28,
+          null
+        ]
+      },
+      {
+        "team_id": 973,
+        "team": "Pulse-Kyoto",
+        "positions": [
+          29,
+          null
+        ]
+      },
+      {
+        "team_id": 968,
+        "team": "Pulse-Nagoya Grampus",
+        "positions": [
+          24,
+          null
+        ]
+      },
+      {
+        "team_id": 974,
+        "team": "Pulse-Okayama",
+        "positions": [
+          30,
+          null
+        ]
+      },
+      {
+        "team_id": 980,
+        "team": "Pulse-Sanfrecce Hiroshima",
+        "positions": [
+          36,
+          null
+        ]
+      },
+      {
+        "team_id": 977,
+        "team": "Pulse-Vissel Kobe",
+        "positions": [
+          33,
+          null
+        ]
+      },
+      {
+        "team_id": 964,
+        "team": "Shimizu S",
+        "positions": [
+          20,
+          null
+        ]
+      },
+      {
+        "team_id": 959,
+        "team": "V",
+        "positions": [
+          15,
+          null
+        ]
+      },
+      {
+        "team_id": 978,
+        "team": "Varen Nagasaki-Avispa Fukuoka",
+        "positions": [
+          34,
+          null
+        ]
+      },
+      {
+        "team_id": 979,
+        "team": "Varen Nagasaki-Cerezo Osaka",
+        "positions": [
+          35,
+          null
+        ]
+      },
+      {
+        "team_id": 975,
+        "team": "Varen Nagasaki-Gamba Osaka",
+        "positions": [
+          31,
+          null
+        ]
+      },
+      {
+        "team_id": 969,
+        "team": "Varen Nagasaki-Kyoto",
+        "positions": [
+          25,
+          null
+        ]
+      },
+      {
+        "team_id": 970,
+        "team": "Varen Nagasaki-Nagoya Grampus",
+        "positions": [
+          26,
+          null
+        ]
+      },
+      {
+        "team_id": 976,
+        "team": "Varen Nagasaki-Okayama",
+        "positions": [
+          32,
+          null
+        ]
+      },
+      {
+        "team_id": 967,
+        "team": "Varen Nagasaki-Sanfrecce Hiroshima",
+        "positions": [
+          23,
+          null
+        ]
+      }
+    ]
+  }
+}

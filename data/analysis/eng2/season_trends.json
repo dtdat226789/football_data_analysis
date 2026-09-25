@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T10:57:54+00:00",
+  "config": {
+    "league": "eng2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\eng2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "League Two",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/league-two"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Notts Co",
+      "champion_id": 428,
+      "champion_pts": 87,
+      "runner_up": "Bromley",
+      "runner_up_id": 425,
+      "margin_pts": 0
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Barnet",
+      "champion_id": 432,
+      "champion_pts": 15,
+      "runner_up": "Walsall",
+      "runner_up_id": 437,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "Notts Co",
+      "runner_up": "Bromley"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 87,
+        "2": 87,
+        "4": 84,
+        "6": 80,
+        "21": 41,
+        "24": 36
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 13,
+        "4": 12,
+        "6": 12,
+        "21": 6,
+        "24": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 21,
+      "safe_pts": 41,
+      "drop_position": 22,
+      "drop_pts": 40,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 40
+        },
+        {
+          "position": 23,
+          "points": 39
+        },
+        {
+          "position": 24,
+          "points": 36
+        }
+      ],
+      "bottom3_range": 4
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 21,
+      "safe_pts": 6,
+      "drop_position": 22,
+      "drop_pts": 6,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 6
+        },
+        {
+          "position": 23,
+          "points": 5
+        },
+        {
+          "position": 24,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 2
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 557,
+      "total_goals": 1434,
+      "avg_goals": 2.575,
+      "home_wins": 233,
+      "draws": 139,
+      "away_wins": 185,
+      "home_win_pct": 41.8,
+      "draw_pct": 25.0,
+      "away_win_pct": 33.2,
+      "goalless": 37,
+      "goalless_pct": 6.6,
+      "total_points": 1530,
+      "avg_points_per_team": 63.75,
+      "n_teams": 24
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 84,
+      "total_goals": 212,
+      "avg_goals": 2.524,
+      "home_wins": 43,
+      "draws": 30,
+      "away_wins": 11,
+      "home_win_pct": 51.2,
+      "draw_pct": 35.7,
+      "away_win_pct": 13.1,
+      "goalless": 8,
+      "goalless_pct": 9.5,
+      "total_points": 222,
+      "avg_points_per_team": 9.25,
+      "n_teams": 24
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.5,
+        "goals": 7.333
+      },
+      {
+        "season": "2026-2027",
+        "luck": 3.167,
+        "goals": 6.0
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 7.333
+    }
+  }
+}

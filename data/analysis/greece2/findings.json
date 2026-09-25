@@ -1,0 +1,490 @@
+{
+  "report_name": "findings",
+  "script": {
+    "name": "backend/scripts/compile_findings.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T11:00:18+00:00",
+  "config": {
+    "league": "greece2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\greece2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Super League 2",
+    "country": "Greece",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/greece/super-league-2"
+  },
+  "sources": [
+    {
+      "report_name": "database_profile",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\database_profile.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 29.91
+    },
+    {
+      "report_name": "matches_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\matches_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 7.49
+    },
+    {
+      "report_name": "goals_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\goals_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 6.16
+    },
+    {
+      "report_name": "teams_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\teams_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 35.32
+    },
+    {
+      "report_name": "season_trends",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\season_trends.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 3.93
+    },
+    {
+      "report_name": "scoreline_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\scoreline_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 52.01
+    },
+    {
+      "report_name": "relationships",
+      "path": "E:\\football_data_analysis\\data\\analysis\\greece2\\relationships.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 14.34
+    }
+  ],
+  "coverage": {
+    "found": 7,
+    "total": 7,
+    "missing": []
+  },
+  "key_findings": [
+    {
+      "source": "matches_analysis",
+      "finding": "Outcome split across all seasons",
+      "detail": "289 matches: home wins 45.3%, draws 23.2%, away wins 31.5% (131H / 67D / 91A)",
+      "importance": "medium",
+      "id": "F1"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Comeback wins",
+      "detail": "4 home and 3 away comebacks (trailing at HT but winning at FT)",
+      "importance": "medium",
+      "id": "F2"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Most common HT/FT flow",
+      "detail": "home lead at HT -> home win occurred 79 times",
+      "importance": "low",
+      "id": "F3"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average goals per match",
+      "detail": "289 matches produced 661 goals (avg 2.287 per match)",
+      "importance": "medium",
+      "id": "F4"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Home goal share",
+      "detail": "home 57.3% vs away 42.7% of 661 goals in total (home/away ratio 1.34)",
+      "importance": "medium",
+      "id": "F5"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Both teams to score",
+      "detail": "117 of 289 matches (40.5%)",
+      "importance": "medium",
+      "id": "F6"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Most common first-goal bucket",
+      "detail": "minute 1-15 (first goal in 81 scoring matches, 30.5% of scoring)",
+      "importance": "low",
+      "id": "F7"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average first goal minute",
+      "detail": "mean 34.61, median 31.0",
+      "importance": "low",
+      "id": "F8"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Dominant team by lifetime points",
+      "detail": "Kalamata leads with 66 points across 1 seasons (1 title(s), GD 40)",
+      "importance": "high",
+      "id": "F9"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Team consistency",
+      "detail": "10 teams present in every one of the 2 seasons (Asteras Tripolis B, Athens Kallithea, Chrisoupolis, Ellas Syrou, Karditsa...)",
+      "importance": "medium",
+      "id": "F10"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Biggest home advantage",
+      "detail": "Giannina earns 15 more points at home than away (18 home vs 3 away)",
+      "importance": "medium",
+      "id": "F11"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Champion with most titles",
+      "detail": "Kalamata won 1 of 2 championship(s) on record",
+      "importance": "high",
+      "id": "F12"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Tightest title race",
+      "detail": "2026-2027: Marko beat Ellas Syrou by 2 pts",
+      "importance": "medium",
+      "id": "F13"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Average-goals trend",
+      "detail": "stable (-0.041 per match): first half 2.291 vs last half 2.25 across 2 seasons",
+      "importance": "medium",
+      "id": "F14"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Largest view divergence",
+      "detail": "2025-2026 (goals view, avg abs position diff 7.500)",
+      "importance": "low",
+      "id": "F15"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Smallest view divergence",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.625)",
+      "importance": "low",
+      "id": "F16"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common scoreline",
+      "detail": "1-0 in 46 matches (15.9%)",
+      "importance": "medium",
+      "id": "F17"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common home-win scoreline",
+      "detail": "1-0 (46 of 131 home matches, 35.1%)",
+      "importance": "low",
+      "id": "F18"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common draw scoreline",
+      "detail": "1-1 (35 of 67 draw matches, 52.2%)",
+      "importance": "low",
+      "id": "F19"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common away-win scoreline",
+      "detail": "0-1 (31 of 91 away matches, 34.1%)",
+      "importance": "low",
+      "id": "F20"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Extreme scorelines",
+      "detail": "3 match(es) with >= 7 total goals",
+      "importance": "low",
+      "id": "F21"
+    },
+    {
+      "source": "relationships",
+      "finding": "Strongest correlation with total goals",
+      "detail": "away_team_goals_conceded_last_5 |corr| = 0.1193 (n=289 leakage-safe rows)",
+      "importance": "medium",
+      "id": "F22"
+    },
+    {
+      "source": "relationships",
+      "finding": "Most outcome-separating feature",
+      "detail": "points_difference spreads group means over 13.038: home 5.038, draw 0.328, away -8.000",
+      "importance": "medium",
+      "id": "F23"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data-quality warnings (11)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "importance": "high",
+      "id": "F24"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data coverage",
+      "detail": "2 of 2 registered seasons populated (100.0%); 289 matches observed",
+      "importance": "medium",
+      "id": "F25"
+    }
+  ],
+  "headline_stats": {
+    "n_matches": 289,
+    "avg_goals": 2.287,
+    "home_win_pct": 45.3,
+    "draw_pct": 23.2,
+    "away_win_pct": 31.5,
+    "most_common_scoreline": "1-0",
+    "dominant_team": "Kalamata",
+    "champion_most_titles": "Kalamata",
+    "btts_rate_pct": 40.5
+  },
+  "comparison": [
+    {
+      "module": "database_profile",
+      "report_name": "database_profile",
+      "sections": [
+        "observed",
+        "calculated",
+        "warnings"
+      ],
+      "size_kb": 29.91
+    },
+    {
+      "module": "matches_analysis",
+      "report_name": "matches_analysis",
+      "sections": [
+        "overall",
+        "per_season",
+        "ht_ft_matrix",
+        "comebacks",
+        "ht_lead_conversion",
+        "first_goal_timing",
+        "goalless"
+      ],
+      "size_kb": 7.49
+    },
+    {
+      "module": "goals_analysis",
+      "report_name": "goals_analysis",
+      "sections": [
+        "goals_distribution",
+        "goals_per_season",
+        "goal_share",
+        "btts",
+        "clean_sheets",
+        "scoring_intensity",
+        "first_goal_timing"
+      ],
+      "size_kb": 6.16
+    },
+    {
+      "module": "teams_analysis",
+      "report_name": "teams_analysis",
+      "sections": [
+        "teams",
+        "home_away",
+        "top_performers",
+        "consistent_teams",
+        "head_to_head",
+        "position_table"
+      ],
+      "size_kb": 35.32
+    },
+    {
+      "module": "season_trends",
+      "report_name": "season_trends",
+      "sections": [
+        "champions",
+        "title_race",
+        "points_thresholds",
+        "relegation_battle",
+        "league_trends",
+        "view_divergence"
+      ],
+      "size_kb": 3.93
+    },
+    {
+      "module": "scoreline_analysis",
+      "report_name": "scoreline_analysis",
+      "sections": [
+        "scoreline_frequency",
+        "scoreline_per_season",
+        "total_goal_histogram",
+        "extreme_scorelines",
+        "margin_distribution",
+        "margin_by_outcome",
+        "common_scorelines"
+      ],
+      "size_kb": 52.01
+    },
+    {
+      "module": "relationships",
+      "report_name": "relationships",
+      "sections": [
+        "n_matches",
+        "feature_count",
+        "correlation_matrix",
+        "form_vs_outcome",
+        "position_vs_outcome",
+        "rest_advantage",
+        "home_quality",
+        "feature_by_result"
+      ],
+      "size_kb": 14.34
+    }
+  ],
+  "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 265 matches, expected 380",
+      "details": {
+        "season": "2025-2026",
+        "n_matches": 265,
+        "expected": 380
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 24 matches, expected 380",
+      "details": {
+        "season": "2026-2027",
+        "n_matches": 24,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 16 teams, expected 20",
+      "details": {
+        "season": "2026-2027",
+        "n_teams": 16,
+        "expected": 20
+      }
+    },
+    {
+      "code": "SEASON_STATE_NOT_COMPLETE",
+      "severity": "warning",
+      "message": "Season 2026-2027 has data but state is 'in_progress'",
+      "details": {
+        "season": "2026-2027",
+        "season_state": "in_progress"
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 58.3% vs overall 45.3%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "home",
+        "season_share": 58.3,
+        "overall_share": 45.3
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 away outcome share 16.7% vs overall 31.5%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "away",
+        "season_share": 16.7,
+        "overall_share": 31.5
+      }
+    },
+    {
+      "code": "DUPLICATE_ROWS",
+      "severity": "warning",
+      "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
+      "details": {
+        "check": "matches same fixture on same date (league_season, home, away, match_date)",
+        "rows": 11516,
+        "distinct": 11506,
+        "duplicates": 10
+      }
+    },
+    {
+      "code": "FIRST_GOAL_NULL_INCONSISTENCY",
+      "severity": "warning",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=6, fgte=6 rows)",
+      "details": {
+        "total": 11516,
+        "fgt_inconsistent": 6,
+        "fgte_inconsistent": 6,
+        "n_with_fgt": 10703
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/classic rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2026-2027",
+        "view": "classic",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/goals rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2026-2027",
+        "view": "goals",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/luck rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2026-2027",
+        "view": "luck",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    }
+  ],
+  "methodology": "Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power."
+}

@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:44:20+00:00",
+  "config": {
+    "league": "scot-champ",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot-champ",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Championship",
+    "country": "Scotland",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/scotland/championship"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "St Johnstone",
+      "champion_id": 1400,
+      "champion_pts": 77,
+      "runner_up": "Partick Thistle",
+      "runner_up_id": 1401,
+      "margin_pts": 7
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Stenhousemuir",
+      "champion_id": 1411,
+      "champion_pts": 19,
+      "runner_up": "Partick Thistle",
+      "runner_up_id": 1401,
+      "margin_pts": 4
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 4,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 4,
+      "champion": "Stenhousemuir",
+      "runner_up": "Partick Thistle"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 77,
+        "2": 70,
+        "4": 53,
+        "6": 41,
+        "7": 39,
+        "10": 34
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 19,
+        "2": 15,
+        "4": 12,
+        "6": 8,
+        "7": 8,
+        "10": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 7,
+      "safe_pts": 39,
+      "drop_position": 8,
+      "drop_pts": 38,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 38
+        },
+        {
+          "position": 9,
+          "points": 36
+        },
+        {
+          "position": 10,
+          "points": 34
+        }
+      ],
+      "bottom3_range": 4
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 7,
+      "safe_pts": 8,
+      "drop_position": 8,
+      "drop_pts": 7,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 7
+        },
+        {
+          "position": 9,
+          "points": 7
+        },
+        {
+          "position": 10,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 6
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 190,
+      "total_goals": 460,
+      "avg_goals": 2.421,
+      "home_wins": 74,
+      "draws": 64,
+      "away_wins": 52,
+      "home_win_pct": 38.9,
+      "draw_pct": 33.7,
+      "away_win_pct": 27.4,
+      "goalless": 25,
+      "goalless_pct": 13.2,
+      "total_points": 503,
+      "avg_points_per_team": 38.69,
+      "n_teams": 13
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 37,
+      "total_goals": 72,
+      "avg_goals": 1.946,
+      "home_wins": 17,
+      "draws": 10,
+      "away_wins": 10,
+      "home_win_pct": 45.9,
+      "draw_pct": 27.0,
+      "away_win_pct": 27.0,
+      "goalless": 4,
+      "goalless_pct": 10.8,
+      "total_points": 101,
+      "avg_points_per_team": 10.1,
+      "n_teams": 10
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.385,
+        "goals": 2.462
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.4,
+        "goals": 4.4
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 4.4
+    }
+  }
+}

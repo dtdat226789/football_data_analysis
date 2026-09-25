@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:49:46+00:00",
+  "config": {
+    "league": "thai1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\thai1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Thai League 1",
+    "country": "Thailand",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/thailand/thai-league-1"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Buriram",
+      "champion_id": 1753,
+      "champion_pts": 70,
+      "runner_up": "Port MTI FC",
+      "runner_up_id": 1754,
+      "margin_pts": 10
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Buriram",
+      "champion_id": 1753,
+      "champion_pts": 7,
+      "runner_up": "Rayong FC",
+      "runner_up_id": 1761,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 10,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "Buriram",
+      "runner_up": "Rayong FC"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 70,
+        "2": 60,
+        "4": 52,
+        "6": 45,
+        "13": 28,
+        "16": 23
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 7,
+        "2": 7,
+        "4": 6,
+        "6": 6,
+        "13": 3,
+        "16": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 28,
+      "drop_position": 14,
+      "drop_pts": 26,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 26
+        },
+        {
+          "position": 15,
+          "points": 24
+        },
+        {
+          "position": 16,
+          "points": 23
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 3,
+      "drop_position": 14,
+      "drop_pts": 1,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 1
+        },
+        {
+          "position": 15,
+          "points": 1
+        },
+        {
+          "position": 16,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 240,
+      "total_goals": 642,
+      "avg_goals": 2.675,
+      "home_wins": 104,
+      "draws": 75,
+      "away_wins": 61,
+      "home_win_pct": 43.3,
+      "draw_pct": 31.2,
+      "away_win_pct": 25.4,
+      "goalless": 17,
+      "goalless_pct": 7.1,
+      "total_points": 645,
+      "avg_points_per_team": 40.31,
+      "n_teams": 16
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 24,
+      "total_goals": 62,
+      "avg_goals": 2.583,
+      "home_wins": 10,
+      "draws": 4,
+      "away_wins": 10,
+      "home_win_pct": 41.7,
+      "draw_pct": 16.7,
+      "away_win_pct": 41.7,
+      "goalless": 1,
+      "goalless_pct": 4.2,
+      "total_points": 68,
+      "avg_points_per_team": 4.25,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.125,
+        "goals": 4.625
+      },
+      {
+        "season": "2026-2027",
+        "luck": 3.25,
+        "goals": 4.875
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 4.875
+    }
+  }
+}

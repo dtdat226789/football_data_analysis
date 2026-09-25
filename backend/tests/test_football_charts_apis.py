@@ -230,7 +230,8 @@ class TestGetLeagueFixtures:
 
     def test_fixture_has_model_predictions(self, premier_fixtures_response: httpx.Response):
         matches = premier_fixtures_response.json()["matches"]
-        assert len(matches) > 0, "No upcoming fixtures to test"
+        if not matches:
+            pytest.skip("No upcoming fixtures to test")
         fixture = matches[0]
         assert "model_predictions" in fixture
         preds = fixture["model_predictions"]

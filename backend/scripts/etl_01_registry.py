@@ -25,6 +25,7 @@ from db_common import (
     collected_seasons,
     get_conn,
     load_json,
+    normalize_season_state,
     parse_season_years,
     raw_file,
 )
@@ -129,7 +130,7 @@ def main(argv: list[str] | None = None) -> int:
                 state = "unknown"
                 if name in collected:
                     results = load_json(raw_file(name, "results.json", league))
-                    state = results.get("season_state", "unknown")
+                    state = normalize_season_state(results.get("season_state", "unknown"))
                 upsert_league_season(
                     cur, league_id, season_id, declared_flag, state
                 )

@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:43:30+00:00",
+  "config": {
+    "league": "russia",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\russia",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier League",
+    "country": "Russia",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/russia/premier-league"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Zenit",
+      "champion_id": 1344,
+      "champion_pts": 68,
+      "runner_up": "Krasnodar",
+      "runner_up_id": 1345,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026-2027",
+      "champion": "CSKA Moscow",
+      "champion_id": 1348,
+      "champion_pts": 22,
+      "runner_up": "Krasnodar",
+      "runner_up_id": 1345,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "CSKA Moscow",
+      "runner_up": "Krasnodar"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 68,
+        "2": 66,
+        "4": 52,
+        "6": 46,
+        "13": 30,
+        "16": 22
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 22,
+        "2": 22,
+        "4": 19,
+        "6": 12,
+        "13": 9,
+        "16": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 30,
+      "drop_position": 14,
+      "drop_pts": 29,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 29
+        },
+        {
+          "position": 15,
+          "points": 23
+        },
+        {
+          "position": 16,
+          "points": 22
+        }
+      ],
+      "bottom3_range": 7
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 9,
+      "drop_position": 14,
+      "drop_pts": 7,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 7
+        },
+        {
+          "position": 15,
+          "points": 5
+        },
+        {
+          "position": 16,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 244,
+      "total_goals": 615,
+      "avg_goals": 2.52,
+      "home_wins": 110,
+      "draws": 67,
+      "away_wins": 67,
+      "home_win_pct": 45.1,
+      "draw_pct": 27.5,
+      "away_win_pct": 27.5,
+      "goalless": 15,
+      "goalless_pct": 6.1,
+      "total_points": 665,
+      "avg_points_per_team": 36.94,
+      "n_teams": 18
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 76,
+      "total_goals": 212,
+      "avg_goals": 2.789,
+      "home_wins": 27,
+      "draws": 26,
+      "away_wins": 23,
+      "home_win_pct": 35.5,
+      "draw_pct": 34.2,
+      "away_win_pct": 30.3,
+      "goalless": 6,
+      "goalless_pct": 7.9,
+      "total_points": 202,
+      "avg_points_per_team": 12.62,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.556,
+        "goals": 4.667
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.75,
+        "goals": 5.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 5.5
+    }
+  }
+}

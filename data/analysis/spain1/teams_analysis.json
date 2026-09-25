@@ -1,0 +1,1570 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:47:54+00:00",
+  "config": {
+    "league": "spain1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\spain1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "LaLiga",
+    "country": "Spain",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/laliga"
+  },
+  "teams": [
+    {
+      "team_id": 1655,
+      "team": "Barcelona",
+      "slug": "barcelona",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 38,
+      "draws": 1,
+      "losses": 6,
+      "points": 115,
+      "goals_for": 126,
+      "goals_against": 43,
+      "goal_difference": 83,
+      "avg_points_per_season": 57.5,
+      "best_position": 1,
+      "worst_position": 1,
+      "titles": 2
+    },
+    {
+      "team_id": 1656,
+      "team": "Real Madrid",
+      "slug": "real-madrid",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 32,
+      "draws": 5,
+      "losses": 8,
+      "points": 101,
+      "goals_for": 95,
+      "goals_against": 43,
+      "goal_difference": 52,
+      "avg_points_per_season": 50.5,
+      "best_position": 2,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 1658,
+      "team": "Atl. Madrid",
+      "slug": "atl-madrid",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 26,
+      "draws": 7,
+      "losses": 12,
+      "points": 85,
+      "goals_for": 78,
+      "goals_against": 51,
+      "goal_difference": 27,
+      "avg_points_per_season": 42.5,
+      "best_position": 2,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 1657,
+      "team": "Villarreal",
+      "slug": "villarreal",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 24,
+      "draws": 8,
+      "losses": 13,
+      "points": 80,
+      "goals_for": 85,
+      "goals_against": 58,
+      "goal_difference": 27,
+      "avg_points_per_season": 40.0,
+      "best_position": 3,
+      "worst_position": 9,
+      "titles": 0
+    },
+    {
+      "team_id": 1659,
+      "team": "Betis",
+      "slug": "betis",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 20,
+      "draws": 16,
+      "losses": 9,
+      "points": 76,
+      "goals_for": 68,
+      "goals_against": 55,
+      "goal_difference": 13,
+      "avg_points_per_season": 38.0,
+      "best_position": 3,
+      "worst_position": 5,
+      "titles": 0
+    },
+    {
+      "team_id": 1660,
+      "team": "Celta Vigo",
+      "slug": "celta-vigo",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 15,
+      "draws": 16,
+      "losses": 14,
+      "points": 61,
+      "goals_for": 61,
+      "goals_against": 54,
+      "goal_difference": 7,
+      "avg_points_per_season": 30.5,
+      "best_position": 6,
+      "worst_position": 14,
+      "titles": 0
+    },
+    {
+      "team_id": 1661,
+      "team": "Getafe",
+      "slug": "getafe",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 17,
+      "draws": 8,
+      "losses": 20,
+      "points": 59,
+      "goals_for": 36,
+      "goals_against": 45,
+      "goal_difference": -9,
+      "avg_points_per_season": 29.5,
+      "best_position": 7,
+      "worst_position": 11,
+      "titles": 0
+    },
+    {
+      "team_id": 1662,
+      "team": "Rayo Vallecano",
+      "slug": "rayo-vallecano",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 14,
+      "draws": 16,
+      "losses": 15,
+      "points": 58,
+      "goals_for": 52,
+      "goals_against": 60,
+      "goal_difference": -8,
+      "avg_points_per_season": 29.0,
+      "best_position": 8,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 1664,
+      "team": "Real Sociedad",
+      "slug": "real-sociedad",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 14,
+      "draws": 14,
+      "losses": 17,
+      "points": 56,
+      "goals_for": 68,
+      "goals_against": 74,
+      "goal_difference": -6,
+      "avg_points_per_season": 28.0,
+      "best_position": 8,
+      "worst_position": 10,
+      "titles": 0
+    },
+    {
+      "team_id": 1669,
+      "team": "Sevilla",
+      "slug": "sevilla",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 16,
+      "draws": 8,
+      "losses": 21,
+      "points": 56,
+      "goals_for": 56,
+      "goals_against": 69,
+      "goal_difference": -13,
+      "avg_points_per_season": 28.0,
+      "best_position": 5,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 1668,
+      "team": "Alaves",
+      "slug": "alaves",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 14,
+      "draws": 12,
+      "losses": 19,
+      "points": 54,
+      "goals_for": 55,
+      "goals_against": 62,
+      "goal_difference": -7,
+      "avg_points_per_season": 27.0,
+      "best_position": 6,
+      "worst_position": 14,
+      "titles": 0
+    },
+    {
+      "team_id": 1665,
+      "team": "Espanyol",
+      "slug": "espanyol",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 14,
+      "draws": 11,
+      "losses": 20,
+      "points": 53,
+      "goals_for": 53,
+      "goals_against": 65,
+      "goal_difference": -12,
+      "avg_points_per_season": 26.5,
+      "best_position": 11,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 1666,
+      "team": "Ath Bilbao",
+      "slug": "ath-bilbao",
+      "seasons_played": 2,
+      "total_matches": 44,
+      "wins": 15,
+      "draws": 8,
+      "losses": 21,
+      "points": 53,
+      "goals_for": 50,
+      "goals_against": 64,
+      "goal_difference": -14,
+      "avg_points_per_season": 26.5,
+      "best_position": 10,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 1663,
+      "team": "Valencia",
+      "slug": "valencia",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 14,
+      "draws": 11,
+      "losses": 20,
+      "points": 53,
+      "goals_for": 50,
+      "goals_against": 68,
+      "goal_difference": -18,
+      "avg_points_per_season": 26.5,
+      "best_position": 9,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 1670,
+      "team": "Osasuna",
+      "slug": "osasuna",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 13,
+      "draws": 11,
+      "losses": 21,
+      "points": 50,
+      "goals_for": 50,
+      "goals_against": 63,
+      "goal_difference": -13,
+      "avg_points_per_season": 25.0,
+      "best_position": 13,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 1667,
+      "team": "Elche",
+      "slug": "elche",
+      "seasons_played": 2,
+      "total_matches": 45,
+      "wins": 11,
+      "draws": 15,
+      "losses": 19,
+      "points": 48,
+      "goals_for": 60,
+      "goals_against": 74,
+      "goal_difference": -14,
+      "avg_points_per_season": 24.0,
+      "best_position": 13,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 1672,
+      "team": "Levante",
+      "slug": "levante",
+      "seasons_played": 2,
+      "total_matches": 44,
+      "wins": 12,
+      "draws": 11,
+      "losses": 21,
+      "points": 47,
+      "goals_for": 55,
+      "goals_against": 73,
+      "goal_difference": -18,
+      "avg_points_per_season": 23.5,
+      "best_position": 17,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 1671,
+      "team": "Mallorca",
+      "slug": "mallorca",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 11,
+      "draws": 9,
+      "losses": 18,
+      "points": 42,
+      "goals_for": 47,
+      "goals_against": 57,
+      "goal_difference": -10,
+      "avg_points_per_season": 42.0,
+      "best_position": 17,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 1673,
+      "team": "Girona",
+      "slug": "girona",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 9,
+      "draws": 14,
+      "losses": 15,
+      "points": 41,
+      "goals_for": 39,
+      "goals_against": 55,
+      "goal_difference": -16,
+      "avg_points_per_season": 41.0,
+      "best_position": 19,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 1674,
+      "team": "Oviedo",
+      "slug": "oviedo",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 6,
+      "draws": 11,
+      "losses": 21,
+      "points": 29,
+      "goals_for": 26,
+      "goals_against": 60,
+      "goal_difference": -34,
+      "avg_points_per_season": 29.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 1675,
+      "team": "Dep. A Coruna",
+      "slug": "dep-a-coruna",
+      "seasons_played": 1,
+      "total_matches": 7,
+      "wins": 2,
+      "draws": 4,
+      "losses": 1,
+      "points": 10,
+      "goals_for": 10,
+      "goals_against": 8,
+      "goal_difference": 2,
+      "avg_points_per_season": 10.0,
+      "best_position": 7,
+      "worst_position": 7,
+      "titles": 0
+    },
+    {
+      "team_id": 1676,
+      "team": "Racing Santander",
+      "slug": "racing-santander",
+      "seasons_played": 1,
+      "total_matches": 7,
+      "wins": 2,
+      "draws": 1,
+      "losses": 4,
+      "points": 7,
+      "goals_for": 11,
+      "goals_against": 21,
+      "goal_difference": -10,
+      "avg_points_per_season": 7.0,
+      "best_position": 16,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 1677,
+      "team": "Malaga",
+      "slug": "malaga",
+      "seasons_played": 1,
+      "total_matches": 7,
+      "wins": 0,
+      "draws": 3,
+      "losses": 4,
+      "points": 3,
+      "goals_for": 3,
+      "goals_against": 12,
+      "goal_difference": -9,
+      "avg_points_per_season": 3.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 1658,
+      "team": "Atl. Madrid",
+      "home": {
+        "matches": 23,
+        "wins": 18,
+        "draws": 2,
+        "losses": 3,
+        "points": 56,
+        "goals_for": 49,
+        "goals_against": 20
+      },
+      "away": {
+        "matches": 22,
+        "wins": 8,
+        "draws": 5,
+        "losses": 9,
+        "points": 29,
+        "goals_for": 29,
+        "goals_against": 31
+      },
+      "home_advantage": 27
+    },
+    {
+      "team_id": 1670,
+      "team": "Osasuna",
+      "home": {
+        "matches": 23,
+        "wins": 10,
+        "draws": 7,
+        "losses": 6,
+        "points": 37,
+        "goals_for": 33,
+        "goals_against": 27
+      },
+      "away": {
+        "matches": 22,
+        "wins": 3,
+        "draws": 4,
+        "losses": 15,
+        "points": 13,
+        "goals_for": 17,
+        "goals_against": 36
+      },
+      "home_advantage": 24
+    },
+    {
+      "team_id": 1671,
+      "team": "Mallorca",
+      "home": {
+        "matches": 19,
+        "wins": 9,
+        "draws": 6,
+        "losses": 4,
+        "points": 33,
+        "goals_for": 31,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 3,
+        "losses": 14,
+        "points": 9,
+        "goals_for": 16,
+        "goals_against": 36
+      },
+      "home_advantage": 24
+    },
+    {
+      "team_id": 1667,
+      "team": "Elche",
+      "home": {
+        "matches": 22,
+        "wins": 9,
+        "draws": 8,
+        "losses": 5,
+        "points": 35,
+        "goals_for": 34,
+        "goals_against": 30
+      },
+      "away": {
+        "matches": 23,
+        "wins": 2,
+        "draws": 7,
+        "losses": 14,
+        "points": 13,
+        "goals_for": 26,
+        "goals_against": 44
+      },
+      "home_advantage": 22
+    },
+    {
+      "team_id": 1657,
+      "team": "Villarreal",
+      "home": {
+        "matches": 22,
+        "wins": 16,
+        "draws": 1,
+        "losses": 5,
+        "points": 49,
+        "goals_for": 54,
+        "goals_against": 25
+      },
+      "away": {
+        "matches": 23,
+        "wins": 8,
+        "draws": 7,
+        "losses": 8,
+        "points": 31,
+        "goals_for": 31,
+        "goals_against": 33
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 1662,
+      "team": "Rayo Vallecano",
+      "home": {
+        "matches": 22,
+        "wins": 9,
+        "draws": 11,
+        "losses": 2,
+        "points": 38,
+        "goals_for": 30,
+        "goals_against": 19
+      },
+      "away": {
+        "matches": 23,
+        "wins": 5,
+        "draws": 5,
+        "losses": 13,
+        "points": 20,
+        "goals_for": 22,
+        "goals_against": 41
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 1668,
+      "team": "Alaves",
+      "home": {
+        "matches": 23,
+        "wins": 10,
+        "draws": 6,
+        "losses": 7,
+        "points": 36,
+        "goals_for": 34,
+        "goals_against": 28
+      },
+      "away": {
+        "matches": 22,
+        "wins": 4,
+        "draws": 6,
+        "losses": 12,
+        "points": 18,
+        "goals_for": 21,
+        "goals_against": 34
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 1655,
+      "team": "Barcelona",
+      "home": {
+        "matches": 22,
+        "wins": 22,
+        "draws": 0,
+        "losses": 0,
+        "points": 66,
+        "goals_for": 71,
+        "goals_against": 14
+      },
+      "away": {
+        "matches": 23,
+        "wins": 16,
+        "draws": 1,
+        "losses": 6,
+        "points": 49,
+        "goals_for": 55,
+        "goals_against": 29
+      },
+      "home_advantage": 17
+    },
+    {
+      "team_id": 1666,
+      "team": "Ath Bilbao",
+      "home": {
+        "matches": 23,
+        "wins": 10,
+        "draws": 5,
+        "losses": 8,
+        "points": 35,
+        "goals_for": 27,
+        "goals_against": 25
+      },
+      "away": {
+        "matches": 21,
+        "wins": 5,
+        "draws": 3,
+        "losses": 13,
+        "points": 18,
+        "goals_for": 23,
+        "goals_against": 39
+      },
+      "home_advantage": 17
+    },
+    {
+      "team_id": 1656,
+      "team": "Real Madrid",
+      "home": {
+        "matches": 22,
+        "wins": 19,
+        "draws": 1,
+        "losses": 2,
+        "points": 58,
+        "goals_for": 57,
+        "goals_against": 18
+      },
+      "away": {
+        "matches": 23,
+        "wins": 13,
+        "draws": 4,
+        "losses": 6,
+        "points": 43,
+        "goals_for": 38,
+        "goals_against": 25
+      },
+      "home_advantage": 15
+    },
+    {
+      "team_id": 1659,
+      "team": "Betis",
+      "home": {
+        "matches": 22,
+        "wins": 13,
+        "draws": 6,
+        "losses": 3,
+        "points": 45,
+        "goals_for": 37,
+        "goals_against": 19
+      },
+      "away": {
+        "matches": 23,
+        "wins": 7,
+        "draws": 10,
+        "losses": 6,
+        "points": 31,
+        "goals_for": 31,
+        "goals_against": 36
+      },
+      "home_advantage": 14
+    },
+    {
+      "team_id": 1661,
+      "team": "Getafe",
+      "home": {
+        "matches": 23,
+        "wins": 10,
+        "draws": 5,
+        "losses": 8,
+        "points": 35,
+        "goals_for": 22,
+        "goals_against": 18
+      },
+      "away": {
+        "matches": 22,
+        "wins": 7,
+        "draws": 3,
+        "losses": 12,
+        "points": 24,
+        "goals_for": 14,
+        "goals_against": 27
+      },
+      "home_advantage": 11
+    },
+    {
+      "team_id": 1672,
+      "team": "Levante",
+      "home": {
+        "matches": 21,
+        "wins": 8,
+        "draws": 5,
+        "losses": 8,
+        "points": 29,
+        "goals_for": 33,
+        "goals_against": 34
+      },
+      "away": {
+        "matches": 23,
+        "wins": 4,
+        "draws": 6,
+        "losses": 13,
+        "points": 18,
+        "goals_for": 22,
+        "goals_against": 39
+      },
+      "home_advantage": 11
+    },
+    {
+      "team_id": 1664,
+      "team": "Real Sociedad",
+      "home": {
+        "matches": 22,
+        "wins": 9,
+        "draws": 6,
+        "losses": 7,
+        "points": 33,
+        "goals_for": 39,
+        "goals_against": 35
+      },
+      "away": {
+        "matches": 23,
+        "wins": 5,
+        "draws": 8,
+        "losses": 10,
+        "points": 23,
+        "goals_for": 29,
+        "goals_against": 39
+      },
+      "home_advantage": 10
+    },
+    {
+      "team_id": 1663,
+      "team": "Valencia",
+      "home": {
+        "matches": 23,
+        "wins": 8,
+        "draws": 7,
+        "losses": 8,
+        "points": 31,
+        "goals_for": 29,
+        "goals_against": 32
+      },
+      "away": {
+        "matches": 22,
+        "wins": 6,
+        "draws": 4,
+        "losses": 12,
+        "points": 22,
+        "goals_for": 21,
+        "goals_against": 36
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 1674,
+      "team": "Oviedo",
+      "home": {
+        "matches": 19,
+        "wins": 4,
+        "draws": 7,
+        "losses": 8,
+        "points": 19,
+        "goals_for": 9,
+        "goals_against": 18
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 4,
+        "losses": 13,
+        "points": 10,
+        "goals_for": 17,
+        "goals_against": 42
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 1665,
+      "team": "Espanyol",
+      "home": {
+        "matches": 23,
+        "wins": 8,
+        "draws": 6,
+        "losses": 9,
+        "points": 30,
+        "goals_for": 27,
+        "goals_against": 30
+      },
+      "away": {
+        "matches": 22,
+        "wins": 6,
+        "draws": 5,
+        "losses": 11,
+        "points": 23,
+        "goals_for": 26,
+        "goals_against": 35
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 1673,
+      "team": "Girona",
+      "home": {
+        "matches": 19,
+        "wins": 6,
+        "draws": 6,
+        "losses": 7,
+        "points": 24,
+        "goals_for": 21,
+        "goals_against": 27
+      },
+      "away": {
+        "matches": 19,
+        "wins": 3,
+        "draws": 8,
+        "losses": 8,
+        "points": 17,
+        "goals_for": 18,
+        "goals_against": 28
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 1676,
+      "team": "Racing Santander",
+      "home": {
+        "matches": 3,
+        "wins": 2,
+        "draws": 1,
+        "losses": 0,
+        "points": 7,
+        "goals_for": 7,
+        "goals_against": 5
+      },
+      "away": {
+        "matches": 4,
+        "wins": 0,
+        "draws": 0,
+        "losses": 4,
+        "points": 0,
+        "goals_for": 4,
+        "goals_against": 16
+      },
+      "home_advantage": 7
+    },
+    {
+      "team_id": 1669,
+      "team": "Sevilla",
+      "home": {
+        "matches": 23,
+        "wins": 9,
+        "draws": 4,
+        "losses": 10,
+        "points": 31,
+        "goals_for": 29,
+        "goals_against": 32
+      },
+      "away": {
+        "matches": 22,
+        "wins": 7,
+        "draws": 4,
+        "losses": 11,
+        "points": 25,
+        "goals_for": 27,
+        "goals_against": 37
+      },
+      "home_advantage": 6
+    },
+    {
+      "team_id": 1677,
+      "team": "Malaga",
+      "home": {
+        "matches": 3,
+        "wins": 0,
+        "draws": 2,
+        "losses": 1,
+        "points": 2,
+        "goals_for": 2,
+        "goals_against": 4
+      },
+      "away": {
+        "matches": 4,
+        "wins": 0,
+        "draws": 1,
+        "losses": 3,
+        "points": 1,
+        "goals_for": 1,
+        "goals_against": 8
+      },
+      "home_advantage": 1
+    },
+    {
+      "team_id": 1675,
+      "team": "Dep. A Coruna",
+      "home": {
+        "matches": 4,
+        "wins": 1,
+        "draws": 2,
+        "losses": 1,
+        "points": 5,
+        "goals_for": 5,
+        "goals_against": 4
+      },
+      "away": {
+        "matches": 3,
+        "wins": 1,
+        "draws": 2,
+        "losses": 0,
+        "points": 5,
+        "goals_for": 5,
+        "goals_against": 4
+      },
+      "home_advantage": 0
+    },
+    {
+      "team_id": 1660,
+      "team": "Celta Vigo",
+      "home": {
+        "matches": 23,
+        "wins": 7,
+        "draws": 6,
+        "losses": 10,
+        "points": 27,
+        "goals_for": 36,
+        "goals_against": 33
+      },
+      "away": {
+        "matches": 22,
+        "wins": 8,
+        "draws": 10,
+        "losses": 4,
+        "points": 34,
+        "goals_for": 25,
+        "goals_against": 21
+      },
+      "home_advantage": -7
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 1655,
+        "team": "Barcelona",
+        "value": 2.556
+      },
+      {
+        "rank": 2,
+        "team_id": 1656,
+        "team": "Real Madrid",
+        "value": 2.244
+      },
+      {
+        "rank": 3,
+        "team_id": 1658,
+        "team": "Atl. Madrid",
+        "value": 1.889
+      },
+      {
+        "rank": 4,
+        "team_id": 1657,
+        "team": "Villarreal",
+        "value": 1.778
+      },
+      {
+        "rank": 5,
+        "team_id": 1659,
+        "team": "Betis",
+        "value": 1.689
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 1655,
+        "team": "Barcelona",
+        "value": 126
+      },
+      {
+        "rank": 2,
+        "team_id": 1656,
+        "team": "Real Madrid",
+        "value": 95
+      },
+      {
+        "rank": 3,
+        "team_id": 1657,
+        "team": "Villarreal",
+        "value": 85
+      },
+      {
+        "rank": 4,
+        "team_id": 1658,
+        "team": "Atl. Madrid",
+        "value": 78
+      },
+      {
+        "rank": 5,
+        "team_id": 1659,
+        "team": "Betis",
+        "value": 68
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 1655,
+        "team": "Barcelona",
+        "value": 83
+      },
+      {
+        "rank": 2,
+        "team_id": 1656,
+        "team": "Real Madrid",
+        "value": 52
+      },
+      {
+        "rank": 3,
+        "team_id": 1658,
+        "team": "Atl. Madrid",
+        "value": 27
+      },
+      {
+        "rank": 4,
+        "team_id": 1657,
+        "team": "Villarreal",
+        "value": 27
+      },
+      {
+        "rank": 5,
+        "team_id": 1659,
+        "team": "Betis",
+        "value": 13
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 1655,
+        "team": "Barcelona",
+        "value": 0.956
+      },
+      {
+        "rank": 2,
+        "team_id": 1656,
+        "team": "Real Madrid",
+        "value": 0.956
+      },
+      {
+        "rank": 3,
+        "team_id": 1661,
+        "team": "Getafe",
+        "value": 1.0
+      },
+      {
+        "rank": 4,
+        "team_id": 1658,
+        "team": "Atl. Madrid",
+        "value": 1.133
+      },
+      {
+        "rank": 5,
+        "team_id": 1675,
+        "team": "Dep. A Coruna",
+        "value": 1.143
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 2,
+    "n_teams": 17,
+    "teams": [
+      {
+        "team_id": 1668,
+        "team": "Alaves"
+      },
+      {
+        "team_id": 1666,
+        "team": "Ath Bilbao"
+      },
+      {
+        "team_id": 1658,
+        "team": "Atl. Madrid"
+      },
+      {
+        "team_id": 1655,
+        "team": "Barcelona"
+      },
+      {
+        "team_id": 1659,
+        "team": "Betis"
+      },
+      {
+        "team_id": 1660,
+        "team": "Celta Vigo"
+      },
+      {
+        "team_id": 1667,
+        "team": "Elche"
+      },
+      {
+        "team_id": 1665,
+        "team": "Espanyol"
+      },
+      {
+        "team_id": 1661,
+        "team": "Getafe"
+      },
+      {
+        "team_id": 1672,
+        "team": "Levante"
+      },
+      {
+        "team_id": 1670,
+        "team": "Osasuna"
+      },
+      {
+        "team_id": 1662,
+        "team": "Rayo Vallecano"
+      },
+      {
+        "team_id": 1656,
+        "team": "Real Madrid"
+      },
+      {
+        "team_id": 1664,
+        "team": "Real Sociedad"
+      },
+      {
+        "team_id": 1669,
+        "team": "Sevilla"
+      },
+      {
+        "team_id": 1663,
+        "team": "Valencia"
+      },
+      {
+        "team_id": 1657,
+        "team": "Villarreal"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 210,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 1658,
+        "team_b_id": 1666,
+        "team_a": "Atl. Madrid",
+        "team_b": "Ath Bilbao",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1659,
+        "team_b_id": 1661,
+        "team_a": "Betis",
+        "team_b": "Getafe",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1661,
+        "team_b_id": 1670,
+        "team_a": "Getafe",
+        "team_b": "Osasuna",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1662,
+        "team_b_id": 1665,
+        "team_a": "Rayo Vallecano",
+        "team_b": "Espanyol",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1656,
+        "team_b_id": 1658,
+        "team_a": "Real Madrid",
+        "team_b": "Atl. Madrid",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1668,
+        "team_b_id": 1670,
+        "team_a": "Alaves",
+        "team_b": "Osasuna",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1666,
+        "team_b_id": 1669,
+        "team_a": "Ath Bilbao",
+        "team_b": "Sevilla",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 1658,
+        "team_b_id": 1670,
+        "team_a": "Atl. Madrid",
+        "team_b": "Osasuna",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 1658,
+        "team_b_id": 1669,
+        "team_a": "Atl. Madrid",
+        "team_b": "Sevilla",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 1655,
+        "team_b_id": 1666,
+        "team_a": "Barcelona",
+        "team_b": "Ath Bilbao",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 1655,
+        "team_b_id": 1662,
+        "team_a": "Barcelona",
+        "team_b": "Rayo Vallecano",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1655,
+        "team_b_id": 1669,
+        "team_a": "Barcelona",
+        "team_b": "Sevilla",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 1655,
+        "team_b_id": 1663,
+        "team_a": "Barcelona",
+        "team_b": "Valencia",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 1659,
+        "team_b_id": 1672,
+        "team_a": "Betis",
+        "team_b": "Levante",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 1659,
+        "team_b_id": 1664,
+        "team_a": "Betis",
+        "team_b": "Real Sociedad",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2025-2026",
+      "2026-2027"
+    ],
+    "teams": [
+      {
+        "team_id": 1655,
+        "team": "Barcelona",
+        "positions": [
+          1,
+          1
+        ]
+      },
+      {
+        "team_id": 1656,
+        "team": "Real Madrid",
+        "positions": [
+          2,
+          4
+        ]
+      },
+      {
+        "team_id": 1658,
+        "team": "Atl. Madrid",
+        "positions": [
+          4,
+          2
+        ]
+      },
+      {
+        "team_id": 1657,
+        "team": "Villarreal",
+        "positions": [
+          3,
+          9
+        ]
+      },
+      {
+        "team_id": 1659,
+        "team": "Betis",
+        "positions": [
+          5,
+          3
+        ]
+      },
+      {
+        "team_id": 1660,
+        "team": "Celta Vigo",
+        "positions": [
+          6,
+          14
+        ]
+      },
+      {
+        "team_id": 1661,
+        "team": "Getafe",
+        "positions": [
+          7,
+          11
+        ]
+      },
+      {
+        "team_id": 1662,
+        "team": "Rayo Vallecano",
+        "positions": [
+          8,
+          12
+        ]
+      },
+      {
+        "team_id": 1664,
+        "team": "Real Sociedad",
+        "positions": [
+          10,
+          8
+        ]
+      },
+      {
+        "team_id": 1669,
+        "team": "Sevilla",
+        "positions": [
+          15,
+          5
+        ]
+      },
+      {
+        "team_id": 1668,
+        "team": "Alaves",
+        "positions": [
+          14,
+          6
+        ]
+      },
+      {
+        "team_id": 1665,
+        "team": "Espanyol",
+        "positions": [
+          11,
+          15
+        ]
+      },
+      {
+        "team_id": 1666,
+        "team": "Ath Bilbao",
+        "positions": [
+          12,
+          10
+        ]
+      },
+      {
+        "team_id": 1663,
+        "team": "Valencia",
+        "positions": [
+          9,
+          19
+        ]
+      },
+      {
+        "team_id": 1670,
+        "team": "Osasuna",
+        "positions": [
+          16,
+          13
+        ]
+      },
+      {
+        "team_id": 1667,
+        "team": "Elche",
+        "positions": [
+          13,
+          18
+        ]
+      },
+      {
+        "team_id": 1672,
+        "team": "Levante",
+        "positions": [
+          18,
+          17
+        ]
+      },
+      {
+        "team_id": 1671,
+        "team": "Mallorca",
+        "positions": [
+          17,
+          null
+        ]
+      },
+      {
+        "team_id": 1673,
+        "team": "Girona",
+        "positions": [
+          19,
+          null
+        ]
+      },
+      {
+        "team_id": 1674,
+        "team": "Oviedo",
+        "positions": [
+          20,
+          null
+        ]
+      },
+      {
+        "team_id": 1675,
+        "team": "Dep. A Coruna",
+        "positions": [
+          null,
+          7
+        ]
+      },
+      {
+        "team_id": 1676,
+        "team": "Racing Santander",
+        "positions": [
+          null,
+          16
+        ]
+      },
+      {
+        "team_id": 1677,
+        "team": "Malaga",
+        "positions": [
+          null,
+          20
+        ]
+      }
+    ]
+  }
+}

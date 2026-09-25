@@ -1,0 +1,493 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-23T13:47:50+00:00",
+  "config": {
+    "league": "spain1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\spain1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "LaLiga",
+    "country": "Spain",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/laliga"
+  },
+  "overall": {
+    "n_matches": 449,
+    "home_wins": 217,
+    "draws": 110,
+    "away_wins": 122,
+    "home_win_pct": 48.3,
+    "draw_pct": 24.5,
+    "away_win_pct": 27.2,
+    "home_goals": 716,
+    "away_goals": 518,
+    "total_goals": 1234,
+    "avg_goals": 2.748,
+    "goalless": 20,
+    "goalless_pct": 4.5
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 380,
+      "home_wins": 186,
+      "draws": 93,
+      "away_wins": 101,
+      "home_win_pct": 48.9,
+      "draw_pct": 24.5,
+      "away_win_pct": 26.6,
+      "home_goals": 598,
+      "away_goals": 426,
+      "total_goals": 1024,
+      "avg_goals": 2.695,
+      "goalless": 15,
+      "goalless_pct": 3.9
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 69,
+      "home_wins": 31,
+      "draws": 17,
+      "away_wins": 21,
+      "home_win_pct": 44.9,
+      "draw_pct": 24.6,
+      "away_win_pct": 30.4,
+      "home_goals": 118,
+      "away_goals": 92,
+      "total_goals": 210,
+      "avg_goals": 3.043,
+      "goalless": 5,
+      "goalless_pct": 7.2
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 122,
+        "draw": 20,
+        "away": 15
+      },
+      "draw": {
+        "home": 86,
+        "draw": 61,
+        "away": 46
+      },
+      "away": {
+        "home": 9,
+        "draw": 29,
+        "away": 61
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 77.7,
+        "draw": 12.7,
+        "away": 9.6
+      },
+      "draw": {
+        "home": 44.6,
+        "draw": 31.6,
+        "away": 23.8
+      },
+      "away": {
+        "home": 9.1,
+        "draw": 29.3,
+        "away": 61.6
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 9,
+      "pct": 2.0,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Espanyol",
+          "away_team": "Atl. Madrid",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Villarreal",
+          "away_team": "Osasuna",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Levante",
+          "away_team": "Elche",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Valencia",
+          "away_team": "Alaves",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Mallorca",
+          "away_team": "Espanyol",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Real Madrid",
+          "away_team": "Atl. Madrid",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Alaves",
+          "away_team": "Mallorca",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Atl. Madrid",
+          "away_team": "Ath Bilbao",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Sevilla",
+          "away_team": "Rayo Vallecano",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 15,
+      "pct": 3.3,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Levante",
+          "away_team": "Barcelona",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Oviedo",
+          "away_team": "Barcelona",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Valencia",
+          "away_team": "Oviedo",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Espanyol",
+          "away_team": "Betis",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Sevilla",
+          "away_team": "Mallorca",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Osasuna",
+          "away_team": "Celta Vigo",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Osasuna",
+          "away_team": "Real Sociedad",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Real Sociedad",
+          "away_team": "Girona",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Oviedo",
+          "away_team": "Ath Bilbao",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Girona",
+          "away_team": "Celta Vigo",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Celta Vigo",
+          "away_team": "Alaves",
+          "ht_score": "3-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Valencia",
+          "away_team": "Celta Vigo",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Alaves",
+          "away_team": "Ath Bilbao",
+          "ht_score": "1-0",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Alaves",
+          "away_team": "Rayo Vallecano",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Celta Vigo",
+          "away_team": "Osasuna",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 157,
+      "home": {
+        "count": 122,
+        "pct": 77.7
+      },
+      "draw": {
+        "count": 20,
+        "pct": 12.7
+      },
+      "away": {
+        "count": 15,
+        "pct": 9.6
+      }
+    },
+    "ht_draw": {
+      "n_matches": 193,
+      "home": {
+        "count": 86,
+        "pct": 44.6
+      },
+      "draw": {
+        "count": 61,
+        "pct": 31.6
+      },
+      "away": {
+        "count": 46,
+        "pct": 23.8
+      }
+    },
+    "away_lead": {
+      "n_matches": 99,
+      "home": {
+        "count": 9,
+        "pct": 9.1
+      },
+      "draw": {
+        "count": 29,
+        "pct": 29.3
+      },
+      "away": {
+        "count": 61,
+        "pct": 61.6
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 449,
+    "n_with_first_goal": 429,
+    "n_goalless": 20,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 123,
+        "home": {
+          "count": 62,
+          "pct": 50.4
+        },
+        "draw": {
+          "count": 21,
+          "pct": 17.1
+        },
+        "away": {
+          "count": 40,
+          "pct": 32.5
+        },
+        "pct_of_matches": 27.4
+      },
+      "16-30": {
+        "n_matches": 97,
+        "home": {
+          "count": 52,
+          "pct": 53.6
+        },
+        "draw": {
+          "count": 20,
+          "pct": 20.6
+        },
+        "away": {
+          "count": 25,
+          "pct": 25.8
+        },
+        "pct_of_matches": 21.6
+      },
+      "31-45": {
+        "n_matches": 80,
+        "home": {
+          "count": 40,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 20,
+          "pct": 25.0
+        },
+        "away": {
+          "count": 20,
+          "pct": 25.0
+        },
+        "pct_of_matches": 17.8
+      },
+      "46-60": {
+        "n_matches": 66,
+        "home": {
+          "count": 31,
+          "pct": 47.0
+        },
+        "draw": {
+          "count": 20,
+          "pct": 30.3
+        },
+        "away": {
+          "count": 15,
+          "pct": 22.7
+        },
+        "pct_of_matches": 14.7
+      },
+      "61-75": {
+        "n_matches": 33,
+        "home": {
+          "count": 18,
+          "pct": 54.5
+        },
+        "draw": {
+          "count": 6,
+          "pct": 18.2
+        },
+        "away": {
+          "count": 9,
+          "pct": 27.3
+        },
+        "pct_of_matches": 7.3
+      },
+      "76-90": {
+        "n_matches": 28,
+        "home": {
+          "count": 13,
+          "pct": 46.4
+        },
+        "draw": {
+          "count": 3,
+          "pct": 10.7
+        },
+        "away": {
+          "count": 12,
+          "pct": 42.9
+        },
+        "pct_of_matches": 6.2
+      },
+      "91-120": {
+        "n_matches": 2,
+        "home": {
+          "count": 1,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 1,
+          "pct": 50.0
+        },
+        "pct_of_matches": 0.4
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 449,
+      "count": 20,
+      "pct": 4.5
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 380,
+        "count": 15,
+        "pct": 3.9
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 69,
+        "count": 5,
+        "pct": 7.2
+      }
+    ]
+  }
+}
