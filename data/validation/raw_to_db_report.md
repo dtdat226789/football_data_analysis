@@ -1,8 +1,8 @@
 # Football Charts — Raw-to-Database Reconciliation Report
 
-- Generated: 2026-09-19T08:53:48
-- Scope: league `premier`; seasons 2020-2021, 2021-2022, 2022-2023, 2023-2024, 2024-2025, 2025-2026; table views classic, luck, goals
-- Overall: **0 errors**, **0 warnings** | compared=registry=13, identity=120, matches=2280, standings=360
+- Generated: 2026-09-23T20:51:24
+- Scope: league `wsweden`; seasons 2025, 2026; table views classic, luck, goals
+- Overall: **0 errors**, **0 warnings** | compared=registry=4, identity=28, matches=315, standings=84
 
 ## Findings
 
@@ -13,10 +13,10 @@
 
 | Check | Status | Compared |
 |-------|--------|----------|
-| registry | PASS | 13 |
-| identity | PASS | 120 |
-| matches | PASS | 2280 |
-| standings | PASS | 360 |
+| registry | PASS | 4 |
+| identity | PASS | 28 |
+| matches | PASS | 315 |
+| standings | PASS | 84 |
 
 ## Methodology
 

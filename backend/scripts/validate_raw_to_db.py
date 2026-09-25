@@ -49,10 +49,13 @@ from db_common import (
     collected_seasons,
     LEAGUE,
     RAW_DIR,
+    SENTINEL_KICKOFF,
     VIEWS,
     get_conn,
     load_json,
-    parse_score,
+    normalize_season_state,
+    score_status,
+    split_score,
 )
 
 VALIDATION_DIR = RAW_DIR.parent / "validation"
@@ -181,7 +184,7 @@ def reconcile_registry(
             )
             continue
         n_compared += 1
-        if row.get("season_state") != raw_state:
+        if row.get("season_state") != normalize_season_state(raw_state):
             add_issue(
                 issues, "registry", "SEASON_STATE_MISMATCH", SEVERITY_ERROR,
                 f"league_seasons.season_state={row.get('season_state')} but results.json "
@@ -271,11 +274,18 @@ def reconcile_matches(
     db: dict[int, dict],
     team_ids: dict[tuple[str, str], int],
 ) -> dict:
-    """Every raw match must be reproduced exactly in the matches table."""
+    """Every playable raw match must be reproduced exactly in the matches table.
+
+    Cancelled/awarded ('CAN.'/'AWA.') and unparseable raw matches are skipped by
+    the ETL and logged to data/validation/skipped_matches/, so they are ignored
+    here (and never reported as MATCH_NOT_IN_DB).
+    """
     n_compared = 0
     raw_ids: set[int] = set()
     for m in raw.get("matches", []):
         if not isinstance(m, dict):
+            continue
+        if score_status(m.get("score")) != "playable":
             continue
         mid = m.get("id")
         raw_ids.add(mid)
@@ -290,8 +300,8 @@ def reconcile_matches(
             continue
         n_compared += 1
         mismatches: list[tuple[str, object, object]] = []
-        ft = parse_score(m.get("score"))
-        ht = parse_score(m.get("ht_result"))
+        ft = split_score(m.get("score"))
+        ht = split_score(m.get("ht_result"))
         if row.get("season") != season:
             mismatches.append(("season", row.get("season"), season))
         for field, raw_val in (
@@ -311,8 +321,15 @@ def reconcile_matches(
             mismatches.append(("ht", list(db_ht), list(raw_ht)))
         if row.get("match_date") is not None and row["match_date"].isoformat() != m.get("date"):
             mismatches.append(("date", row["match_date"].isoformat(), m.get("date")))
-        if row.get("kickoff_time") is not None and row["kickoff_time"].strftime("%H:%M:%S") != m.get("time"):
-            mismatches.append(("time", row["kickoff_time"].strftime("%H:%M:%S"), m.get("time")))
+        raw_time = m.get("time")
+        if row.get("kickoff_time") is not None:
+            db_time = row["kickoff_time"].strftime("%H:%M:%S")
+            if raw_time is None:
+                # etl_03 stores a 00:00:00 sentinel when the raw kickoff time is absent
+                if db_time != SENTINEL_KICKOFF:
+                    mismatches.append(("time", db_time, raw_time))
+            elif db_time != raw_time:
+                mismatches.append(("time", db_time, raw_time))
         home_tid = team_ids.get((season, m.get("homeTeam")))
         away_tid = team_ids.get((season, m.get("awayTeam")))
         if home_tid is None or away_tid is None:

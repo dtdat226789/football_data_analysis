@@ -52,6 +52,13 @@ def test_health(app_client):
     assert body["n_leagues"] == len(common.league_config())
 
 
+def test_health_v1_alias(app_client):
+    client, _ = app_client
+    r = client.get("/api/v1/health")
+    assert r.status_code == 200
+    assert r.json()["status"] == "ok"
+
+
 # ── /leagues ────────────────────────────────────────────────────────────────
 def test_leagues_lists_config_with_data_flag(app_client):
     client, tmp_path = app_client
@@ -154,6 +161,28 @@ def test_charts_missing_chart_404(app_client):
     make_league_dir(tmp_path, "premier", ["matches_analysis"])
     r = client.get("/leagues/premier/charts/nope.png")
     assert r.status_code == 404
+
+
+def test_chart_traversal_escapes_blocked(app_client):
+    client, tmp_path = app_client
+    make_league_dir(tmp_path, "premier", ["matches_analysis"])
+    outside = tmp_path / "escapee.png"
+    outside.write_bytes(b"\x89PNG\r\n\x1a\noutside")
+    for path in (
+        "/api/v1/analysis/premier/charts/..%2Fescapee.png",
+        "/api/v1/analysis/premier/charts/..%2F..%2Fescapee.png",
+        "/api/v1/analysis/premier/charts/sibling..png",
+    ):
+        r = client.get(path)
+        assert r.status_code == 404, path
+
+
+def test_chart_v1_ok(app_client):
+    client, tmp_path = app_client
+    make_league_dir(tmp_path, "premier", ["matches_analysis"])
+    r = client.get("/api/v1/analysis/premier/charts/premier_top.png")
+    assert r.status_code == 200
+    assert r.content == b"\x89PNG\r\n\x1a\nfake"
 
 
 def test_charts_no_data_league_404(app_client):

@@ -17,13 +17,8 @@ from __future__ import annotations
 
 from datetime import date
 
-from ml.features.build_features import (
-    CONTEXT_COLUMNS,
-    FEATURE_COLUMNS,
-    MATERIALIZED_COLUMNS,
-    MATCH_RESULTS,
-    OUTCOME_COLUMNS,
-)
+from ml.contract import CONTEXT_COLUMNS, FEATURE_COLUMNS
+from ml.features.build_features import MATERIALIZED_COLUMNS, MATCH_RESULTS, OUTCOME_COLUMNS
 
 # Rest-days are the only features legitimately absent before a season opener.
 NULLABLE = {"home_rest_days", "away_rest_days", "rest_days_difference"}

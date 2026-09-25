@@ -35,6 +35,8 @@ from db_common import (  # noqa: E402
     league_meta,
 )
 
+from . import regions  # noqa: E402
+
 ANALYSIS_DIR = ROOT_DIR / "data" / "analysis"
 
 MODULES = [
@@ -56,9 +58,14 @@ def league_config() -> dict[str, dict]:
 
 
 def league_listing() -> list[dict]:
-    """Every league with its config and whether analysis reports exist."""
+    """Every league with its config, region and whether analysis reports exist."""
     return [
-        {"slug": slug, **meta, "has_data": league_report_dir(slug) is not None}
+        {
+            "slug": slug,
+            **meta,
+            "region": regions.league_region(meta.get("country", "")),
+            "has_data": league_report_dir(slug) is not None,
+        }
         for slug, meta in LEAGUE_CONFIG.items()
     ]
 

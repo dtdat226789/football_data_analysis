@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
-import { ErrorBox, Loading } from "../components/State.jsx";
+import { ErrorBox, TableSkeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 
 const PAGE_SIZE = 50;
@@ -41,7 +41,7 @@ export default function Teams() {
         />
       </div>
 
-      {loading && <Loading label="Loading teams…" />}
+      {loading && <div className="card"><TableSkeleton rows={10} cols={3} /></div>}
       {error && <ErrorBox error={error} />}
       {!loading && !error && (
         <>

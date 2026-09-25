@@ -180,6 +180,42 @@ def test_invalid_score_is_error(dataset):
     assert "RESULTS_INVALID_SCORE" in codes()
 
 
+def test_penalty_and_extra_time_suffixes_accepted(dataset):
+    p = dataset / LEAGUE / "2020-2021" / "results.json"
+    data = json.loads(p.read_bytes())
+    data["matches"][0]["score"] = "2:1AfP"
+    data["matches"][1]["score"] = "1:3AET"
+    p.write_text(json.dumps(data), encoding="utf-8")
+    report = run_convenience()
+    assert "RESULTS_INVALID_SCORE" not in codes()
+    assert report["overall"]["errors"] == 0
+
+
+def test_cancelled_match_is_warning_not_error(dataset):
+    p = dataset / LEAGUE / "2020-2021" / "results.json"
+    data = json.loads(p.read_bytes())
+    data["matches"][0]["score"] = "CAN."
+    data["matches"][0]["goalless"] = True
+    data["matches"][0]["first_goal_time"] = None
+    p.write_text(json.dumps(data), encoding="utf-8")
+    report = run_convenience()
+    assert "RESULTS_UNPLAYED" in codes()
+    assert "RESULTS_INVALID_SCORE" not in codes()
+    assert "RESULTS_GOALLESS_SCORE" not in codes()
+    assert report["overall"]["errors"] == 0
+
+
+def test_absent_ht_marker_is_not_invalid(dataset):
+    p = dataset / LEAGUE / "2020-2021" / "results.json"
+    data = json.loads(p.read_bytes())
+    data["matches"][0]["ht_result"] = "Not found"
+    p.write_text(json.dumps(data), encoding="utf-8")
+    report = run_convenience()
+    assert "RESULTS_INVALID_HT" not in codes()
+    assert "RESULTS_HT_NULL" in codes()
+    assert report["overall"]["errors"] == 0
+
+
 def test_goalless_score_mismatch_is_error(dataset):
     p = dataset / LEAGUE / "2020-2021" / "results.json"
     data = json.loads(p.read_bytes())

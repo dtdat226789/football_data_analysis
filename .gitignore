@@ -1,4 +1,6 @@
 # =========================
+# Python
+# =========================
 __pycache__/
 *.py[cod]
 *.pyo
@@ -33,5 +35,36 @@ build/
 # =========================
 .DS_Store
 Thumbs.db
+
+# =========================
+# Test / tooling
+# =========================
 .pytest_cache/
 
+# =========================
+# Trained ML artifacts (ml/models)
+# =========================
+# Regenerable via ml/train.py + ml/evaluate.py; datasets and code stay tracked.
+ml/models/*.joblib
+ml/models/*.meta.json
+ml/models/selected_model.json
+ml/models/evaluation_report.json
+
+# =========================
+# Raw API dumps (data/raw)
+# =========================
+# The per-(league, season) dumps produced by collect_all_leagues.py are
+# byte-for-byte regenerable from the Football Charts API unseen/rebuildable;
+# only the premier historical fixture set (six complete seasons used by the
+# database build and the test suite) and the catalog files are committed.
+data/raw/*/
+!data/raw/premier/
+data/raw/premier/*/
+!data/raw/premier/2020-2021/
+!data/raw/premier/2021-2022/
+!data/raw/premier/2022-2023/
+!data/raw/premier/2023-2024/
+!data/raw/premier/2024-2025/
+!data/raw/premier/2025-2026/
+!data/raw/leagues.json
+!data/raw/league_teams.json

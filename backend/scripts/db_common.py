@@ -203,11 +203,64 @@ def parse_season_years(name: str) -> tuple[int | None, int | None]:
     return min(start, end), max(start, end)
 
 
-def parse_score(raw: str | None) -> tuple[int, int] | None:
-    """Parse an upstream 'H:A' score string into (home, away), or None."""
-    if not isinstance(raw, str) or raw.count(":") != 1:
+# Half-time result strings the API uses when a HT score is unavailable.
+HT_ABSENT_MARKERS = {"", "not found", "n/a", "none", "null"}
+
+SENTINEL_KICKOFF = "00:00:00"
+
+
+def split_score(raw: str | None) -> tuple[int, int] | None:
+    """Split an upstream score string into a regulation (home, away) result.
+
+    Trailing outcome suffixes are stripped: '2:1AfP' (after penalties) and
+    '1:3AET' (after extra time) yield the regulation score used for the table.
+    Cancelled / awarded markers ('CAN.', 'AWA.', '2:0CAN.') and non-scores
+    return None.
+    """
+    if not isinstance(raw, str):
         return None
-    a, b = raw.split(":")
+    if "CAN" in raw.upper() or "AWA" in raw.upper():
+        return None
+    base = raw.strip()
+    while base and not base[-1].isdigit():
+        base = base[:-1]
+    if base.count(":") != 1:
+        return None
+    a, b = base.split(":")
     if not a.isdigit() or not b.isdigit():
         return None
     return int(a), int(b)
+
+
+def score_status(raw: str | None) -> str:
+    """Classify a raw score string for the ETL and the validators.
+
+    'playable'      a regulation result is present ('1:0', '2:1AfP', '1:3AET')
+    'unplayed'      cancelled or awarded match ('CAN.', 'AWA.', '2:0CAN.');
+                    the matches schema cannot represent these (no status
+                    column), so the ETL skips them.
+    'unparseable'   anything else, including a missing score.
+    """
+    if not isinstance(raw, str):
+        return "unparseable"
+    marker = raw.upper()
+    if "CAN" in marker or "AWA" in marker:
+        return "unplayed"
+    return "playable" if split_score(raw) is not None else "unparseable"
+
+
+_SEASON_STATES = {"complete", "in_progress", "unknown"}
+_SEASON_STATE_VARIANTS = {"in_season": "in_progress"}
+
+
+def normalize_season_state(raw: str | None) -> str:
+    """Map an upstream season_state onto the DB enum ('complete'|'in_progress'|'unknown').
+
+    The API reports an ongoing season as 'in_season'; the registry constraint
+    (01_registry.sql) uses 'in_progress'. Unknown variants fall back to
+    'unknown' so a new API value can never violate the CHECK constraint.
+    """
+    value = (raw or "unknown").strip().lower()
+    if value in _SEASON_STATES:
+        return value
+    return _SEASON_STATE_VARIANTS.get(value, "unknown")

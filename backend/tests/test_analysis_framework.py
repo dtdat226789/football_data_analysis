@@ -81,7 +81,7 @@ def test_args_roundtrip_defaults():
     args = ac.parse_args("desc", ["--out-dir", "/tmp/x"])
     cfg = ac.args_to_config(args)
     assert cfg["league"] == ac.LEAGUE
-    assert cfg["out_dir"] == "/tmp/x"
+    assert cfg["out_dir"] == str(Path("/tmp/x").resolve())
 
 
 def test_args_allow_customisation():

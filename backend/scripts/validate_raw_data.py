@@ -38,6 +38,11 @@ from scripts.collect_raw_data import (  # noqa: E402
     DEFAULT_VIEWS,
     OUTPUT_DIR,
 )
+from scripts.db_common import (  # noqa: E402
+    HT_ABSENT_MARKERS,
+    score_status,
+    split_score,
+)
 
 VALIDATION_DIR = ROOT_DIR / "data" / "validation"
 REPORT_JSON = VALIDATION_DIR / "poc_validation_report.json"
@@ -423,15 +428,6 @@ def check_teams(league: str, seasons: list[str]) -> dict:
 
 
 # ── 4. results ────────────────────────────────────────────────────────────────
-def parse_score(raw: str) -> tuple[int, int] | None:
-    if not isinstance(raw, str) or raw.count(":") != 1:
-        return None
-    a, b = raw.split(":")
-    if not a.isdigit() or not b.isdigit():
-        return None
-    return int(a), int(b)
-
-
 def season_window(season: str) -> tuple[date, date]:
     start_year, end_year = (int(x) for x in season.split("-"))
     return date(start_year, 6, 1), date(end_year, 8, 15)
@@ -501,21 +497,31 @@ def check_results(league: str, seasons: list[str]) -> dict:
                         raise ValueError("non HH:MM:SS")
                 except ValueError:
                     add_issue("results", "RESULTS_INVALID_TIME", SEVERITY_ERROR, f"Match {mid} has invalid time '{t}'", league=league, season=season, file=rel(path), details={"match_id": mid, "time": t})
-            score = parse_score(m.get("score"))
+            score_status_ = score_status(m.get("score"))
+            if score_status_ == "unplayed":
+                add_issue(
+                    "results", "RESULTS_UNPLAYED", SEVERITY_WARNING,
+                    f"Match {mid} is cancelled/awarded ('{m.get('score')}') and cannot be represented",
+                    league=league, season=season, file=rel(path),
+                    details={"match_id": mid, "score": m.get("score")},
+                )
+                continue
+            score = split_score(m.get("score"))
             if score is None:
                 add_issue("results", "RESULTS_INVALID_SCORE", SEVERITY_ERROR, f"Match {mid} has invalid score '{m.get('score')}'", league=league, season=season, file=rel(path), details={"match_id": mid, "score": m.get("score")})
-            ht = parse_score(m.get("ht_result"))
-            if m.get("ht_result") is None:
+            raw_ht = m.get("ht_result")
+            if raw_ht is None or str(raw_ht).strip().lower() in HT_ABSENT_MARKERS:
                 add_issue(
                     "results", "RESULTS_HT_NULL", SEVERITY_WARNING,
-                    f"Match {mid} has a null half-time score",
-                    league=league, season=season, file=rel(path), details={"match_id": mid},
+                    f"Match {mid} has no half-time score",
+                    league=league, season=season, file=rel(path), details={"match_id": mid, "ht_result": raw_ht},
                 )
-            elif ht is None:
-                add_issue("results", "RESULTS_INVALID_HT", SEVERITY_ERROR, f"Match {mid} has invalid half-time score '{m.get('ht_result')}'", league=league, season=season, file=rel(path), details={"match_id": mid, "ht_result": m.get("ht_result")})
             else:
-                if score and (ht[0] > score[0] or ht[1] > score[1]):
-                    add_issue("results", "RESULTS_HT_FT_INCONSISTENT", SEVERITY_ERROR, f"Match {mid}: half-time {ht} exceeds full-time {score}", league=league, season=season, file=rel(path), details={"match_id": mid, "ht_result": m.get("ht_result"), "score": m.get("score")})
+                ht = split_score(raw_ht)
+                if ht is None:
+                    add_issue("results", "RESULTS_INVALID_HT", SEVERITY_ERROR, f"Match {mid} has invalid half-time score '{raw_ht}'", league=league, season=season, file=rel(path), details={"match_id": mid, "ht_result": raw_ht})
+                elif score and (ht[0] > score[0] or ht[1] > score[1]):
+                    add_issue("results", "RESULTS_HT_FT_INCONSISTENT", SEVERITY_ERROR, f"Match {mid}: half-time {ht} exceeds full-time {score}", league=league, season=season, file=rel(path), details={"match_id": mid, "ht_result": raw_ht, "score": m.get("score")})
             goal = m.get("goalless")
             if goal is not None and not isinstance(goal, bool):
                 add_issue("results", "RESULTS_GOALLESS_TYPE", SEVERITY_WARNING, f"Match {mid} 'goalless' is not boolean", league=league, season=season, file=rel(path), details={"match_id": mid, "goalless": goal})

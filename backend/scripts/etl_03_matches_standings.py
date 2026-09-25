@@ -16,21 +16,28 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
-from datetime import date, time as dtime
+from datetime import date, datetime, time as dtime
 
 import psycopg2.extras
 
 from db_common import (
+    HT_ABSENT_MARKERS,
     LEAGUE,
+    RAW_DIR,
+    SENTINEL_KICKOFF,
     VIEWS,
     apply_sql,
     collected_seasons,
     get_conn,
     load_json,
-    parse_score,
     raw_file,
+    score_status,
+    split_score,
 )
+
+SKIP_DIR = RAW_DIR.parent / "validation" / "skipped_matches"
 
 CORE_STANDING_KEYS = {
     "team",
@@ -69,12 +76,14 @@ def team_lookup(cur, league_season_id: int) -> dict[str, int]:
     return {name: tid for name, tid in cur.fetchall()}
 
 
-def load_matches(cur, league_season_id: int, season: str, league: str) -> int:
+def load_matches(cur, league_season_id: int, season: str, league: str) -> tuple[int, list[dict], list[dict]]:
     path = raw_file(season, "results.json", league)
     results_json = load_json(path)
     team_ids = team_lookup(cur, league_season_id)
 
     n = 0
+    skips: list[dict] = []
+    time_unknown: list[dict] = []
     for m in results_json["matches"]:
         home_name = m["homeTeam"]
         away_name = m["awayTeam"]
@@ -82,14 +91,42 @@ def load_matches(cur, league_season_id: int, season: str, league: str) -> int:
             raise KeyError(
                 f"match {m['id']}: team not in {season} membership: {home_name}/{away_name}"
             )
-        ft = parse_score(m["score"])
-        ht = parse_score(m.get("ht_result"))
-        if ft is None:
-            raise ValueError(f"match {m['id']}: unparseable score {m['score']!r}")
-        if m.get("ht_result") is not None and ht is None:
-            raise ValueError(f"match {m['id']}: unparseable ht_result {m['ht_result']!r}")
+        status = score_status(m.get("score"))
+        if status != "playable":
+            skips.append(
+                {
+                    "match_id": m.get("id"),
+                    "league": league,
+                    "season": season,
+                    "score": m.get("score"),
+                    "reason": (
+                        "cancelled/awarded"
+                        if status == "unplayed"
+                        else "unparseable score"
+                    ),
+                }
+            )
+            continue
+        ft = split_score(m["score"])
+        raw_ht = m.get("ht_result")
+        ht = None
+        if raw_ht is not None and str(raw_ht).strip().lower() not in HT_ABSENT_MARKERS:
+            ht = split_score(raw_ht)
+            if ht is None:
+                raise ValueError(f"match {m['id']}: unparseable ht_result {raw_ht!r}")
 
-        kickoff = dtime.fromisoformat(m["time"])
+        raw_time = m.get("time")
+        if isinstance(raw_time, str) and raw_time:
+            kickoff = dtime.fromisoformat(raw_time)
+        else:
+            kickoff = dtime.fromisoformat(SENTINEL_KICKOFF)
+            time_unknown.append(
+                {
+                    "match_id": m.get("id"),
+                    "league": league,
+                    "season": season,
+                }
+            )
         cur.execute(
             """
             INSERT INTO matches (
@@ -117,7 +154,7 @@ def load_matches(cur, league_season_id: int, season: str, league: str) -> int:
             ),
         )
         n += cur.rowcount
-    return n
+    return n, skips, time_unknown
 
 
 def load_standings(cur, league_season_id: int, season: str, league: str) -> int:
@@ -184,6 +221,30 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+def write_skip_report(league: str, skips: list[dict], time_unknown: list[dict]) -> None:
+    path = SKIP_DIR / f"{league}.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "league": league,
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "n_skipped": len(skips),
+        "skipped": skips,
+        "n_kickoff_time_unknown": len(time_unknown),
+        "kickoff_time_unknown": time_unknown,
+    }
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    if skips:
+        print(
+            f"[04] {len(skips)} unplayed/unparseable match(es) skipped; "
+            f"report at {path}"
+        )
+    if time_unknown:
+        print(
+            f"[04] {len(time_unknown)} match(es) loaded with sentinel kickoff time "
+            f"(00:00:00); record at {path}"
+        )
+
+
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     league = args.league
@@ -196,18 +257,25 @@ def main(argv: list[str] | None = None) -> int:
             ls_ids = league_season_lookup(cur, league)
             n_matches = 0
             n_standings = 0
+            skips: list[dict] = []
+            time_unknown: list[dict] = []
             for season in seasons:
                 if season not in ls_ids:
                     print(f"[04] WARN: no registry pair for {season}; skipping")
                     continue
                 ls_id = ls_ids[season]
-                m = load_matches(cur, ls_id, season, league)
+                m, season_skips, season_time_unknown = load_matches(
+                    cur, ls_id, season, league
+                )
+                skips += season_skips
+                time_unknown += season_time_unknown
                 s = load_standings(cur, ls_id, season, league)
                 print(f"[04] {season}: +{m} matches, +{s} standings rows")
                 n_matches += m
                 n_standings += s
             print(f"[04] total loaded: {n_matches} matches, {n_standings} standings rows")
         conn.commit()
+        write_skip_report(league, skips, time_unknown)
     finally:
         conn.close()
     return 0

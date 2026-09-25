@@ -92,6 +92,70 @@ def list_matches(
     }
 
 
+@router.get("/matches/recent")
+def recent_matches(
+    league: str | None = None,
+    from_date: str | None = None,
+    to_date: str | None = None,
+    limit: int = 20,
+    offset: int = 0,
+) -> dict:
+    """Most recently finished matches across leagues (paginated, read-only)."""
+    from ..common import regions
+
+    limit = min(max(limit, 1), 200)
+    offset = max(offset, 0)
+    filters: list[str] = ["m.home_score IS NOT NULL"]
+    params: list = []
+    if league is not None:
+        require_league(league)
+        filters.append("l.api_key = %s")
+        params.append(league)
+    if from_date:
+        filters.append("m.match_date >= %s")
+        params.append(from_date)
+    if to_date:
+        filters.append("m.match_date <= %s")
+        params.append(to_date)
+    where = " AND ".join(filters)
+
+    with fetched_cursor() as cur:
+        cur.execute(
+            f"""
+            SELECT count(*)
+            FROM matches m
+            JOIN league_seasons ls ON ls.id = m.league_season_id
+            JOIN leagues l ON l.id = ls.league_id
+            WHERE {where}
+            """,
+            params,
+        )
+        total = cur.fetchone()[0]
+        cur.execute(
+            f"""
+            SELECT m.api_id, {_MATCH_COLUMNS}, l.api_key AS league,
+                   l.name AS league_name, l.country, l.url
+            {_MATCH_JOINS}
+            JOIN leagues l ON l.id = ls.league_id
+            WHERE {where}
+            ORDER BY m.match_date DESC, m.kickoff_time DESC, m.game_index DESC
+            LIMIT %s OFFSET %s
+            """,
+            params + [limit, offset],
+        )
+        rows = [dict(r) for r in cur.fetchall()]
+    for row in rows:
+        row["region"] = regions.league_region(row.get("country") or "")
+    return {
+        "count": len(rows),
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "league": league,
+        "matches": rows,
+    }
+
+
 @router.get("/matches/{api_id}")
 def get_match(api_id: int) -> dict:
     with fetched_cursor() as cur:

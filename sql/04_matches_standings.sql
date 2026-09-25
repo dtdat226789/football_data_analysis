@@ -10,9 +10,9 @@
 -- analytical fields are real columns; everything else from the upstream row
 -- is preserved verbatim in metrics (JSONB) for reproducibility.
 --
--- first_goal_time_extra keeps NULL semantics verified against the data:
--- NULL = goalless (no first goal exists); 0 = first goal in normal time.
--- No NULL->0 conversion is applied.
+-- first_goal_time is NULL whenever no goal is recorded or the fixture API
+-- omitted it; the CHECK only forbids a first-goal time on a goalless match.
+-- first_goal_time_extra mirrors it. No NULL->0 conversion is applied.
 --
 -- Idempotent; safe to re-run.
 
@@ -37,7 +37,9 @@ CREATE TABLE IF NOT EXISTS matches (
     CONSTRAINT matches_ht_pairs CHECK ((home_ht IS NULL) = (away_ht IS NULL)),
     CONSTRAINT matches_ht_le_ft CHECK (home_ht IS NULL OR home_ht <= home_score),
     CONSTRAINT matches_at_le_ft CHECK (away_ht IS NULL OR away_ht <= away_score),
-    CONSTRAINT matches_fgt_goalless CHECK ((first_goal_time IS NULL) = (home_score = 0 AND away_score = 0)),
+    CONSTRAINT matches_fgt_none_when_goalless CHECK (
+        first_goal_time IS NULL OR home_score > 0 OR away_score > 0
+    ),
     CONSTRAINT matches_fgt_range CHECK (first_goal_time IS NULL OR first_goal_time BETWEEN 1 AND 120),
     CONSTRAINT matches_fgte_mirrors_fgt CHECK ((first_goal_time IS NULL) = (first_goal_time_extra IS NULL)),
     CONSTRAINT matches_fgte_range CHECK (first_goal_time_extra IS NULL OR first_goal_time_extra >= 0),
