@@ -6,6 +6,7 @@ import Matches from "./pages/Matches.jsx";
 import Teams from "./pages/Teams.jsx";
 import TeamDetail from "./pages/TeamDetail.jsx";
 import MatchDetail from "./pages/MatchDetail.jsx";
+import FixtureDetail from "./pages/FixtureDetail.jsx";
 
 export default function App() {
   return (
@@ -35,6 +36,9 @@ export default function App() {
           <Route path="/teams/:slug" element={<TeamDetail />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/match/:id" element={<MatchDetail />} />
+          {/* Splat route: the trailing fixture id is the `date-home-vs-away`
+              segment of the upstream slug. */}
+          <Route path="/fixture/:league/*" element={<FixtureDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

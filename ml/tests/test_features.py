@@ -59,8 +59,15 @@ def test_as_records_home_win():
 
 def test_as_records_draw():
     home, away = mk(1, 1, 2, 1, 1, D1).as_records()
-    assert (home.points, home.is_win) == (1, 1)
-    assert (away.points, away.is_win) == (1, 1)
+    assert (home.points, home.is_win) == (1, 0)
+    assert (away.points, away.is_win) == (1, 0)
+
+
+def test_draw_is_not_counted_as_a_win_by_form():
+    records = [rec(D1, 1, 0, 1, 1, True)]
+    assert form.wins_last(records) == 0
+    assert form.points_last(records) == 1
+    assert home_away.win_rate(records, is_home=True) == 0.0
 
 
 def test_as_records_away_win():
@@ -245,3 +252,52 @@ def test_validation_allows_rest_nulls_but_flags_them():
     report = check_dataset(rows)
     assert report["ok"]
     assert any("home_rest_days" in w for w in report["warnings"])
+
+
+def test_validation_detects_out_of_order_rows():
+    rows = process_season(make_season())
+    rows.reverse()
+    report = check_dataset(rows)
+    assert not report["ok"]
+    assert any("chronological" in e for e in report["errors"])
+
+
+def test_validation_detects_label_disagreeing_with_the_score():
+    rows = process_season(make_season())
+    draw = next(r for r in rows if r["home_score"] == r["away_score"])
+    draw["match_result"] = "HOME_WIN"
+    report = check_dataset(rows)
+    assert not report["ok"]
+    assert any("inconsistent with the score" in e for e in report["errors"])
+
+
+def test_validation_detects_null_context_column():
+    rows = process_season(make_season())
+    rows[0]["home_team"] = None
+    report = check_dataset(rows)
+    assert not report["ok"]
+    assert any("home_team" in e for e in report["errors"])
+
+
+def test_every_result_label_is_derived_from_the_scoreline():
+    for home_score, away_score, label in [
+        (2, 0, "HOME_WIN"), (1, 1, "DRAW"), (0, 1, "AWAY_WIN"),
+    ]:
+        row = next(
+            r for r in process_season(make_season())
+            if (r["home_score"], r["away_score"]) == (home_score, away_score)
+        )
+        assert row["match_result"] == label
+
+
+def test_wins_last_5_never_exceeds_points_last_5():
+    # A win is worth 3 points and counts once; a draw is worth 1 point and
+    # counts as no win. So points - 3*wins is exactly the number of draws in
+    # the window. Counting draws as wins (the bug this guards) makes it
+    # negative: each draw contributed 3*1 - 1 = 2 too many.
+    for row in process_season(make_season()):
+        for side in ("home_team", "away_team"):
+            points = row[f"{side}_points_last_5"]
+            wins = row[f"{side}_wins_last_5"]
+            games_in_window = min(row[f"{side}_games_before"], 5)
+            assert 0 <= points - 3 * wins <= games_in_window

@@ -27,8 +27,8 @@ information available **before** the match.
 ```
 PostgreSQL
    -> ml.features.build_features.build_rows(conn)   (pure, per-season)
-   -> ml.ml.validation.check_dataset(rows)          (in-process checks)
-   -> ml.sql_check.run(rows)                        (independent SQL cross-check)
+   -> ml.validation.check_dataset(rows)             (in-process checks)
+   -> ml.sql_check.run(rows, league)                (independent SQL cross-check)
    -> ml/datasets/match_result_dataset.{json,csv}
    -> ml/datasets/split_manifest.json
    -> ml/datasets/validation_report.json
@@ -40,6 +40,21 @@ Run the build:
 python3 ml/build_dataset.py            # -> exit 0 iff all checks pass
 python3 ml/build_dataset.py --league premier
 ```
+
+The dataset covers **complete seasons only** (`league_seasons.season_state =
+'complete'`). A part-played season is excluded on purpose: its rows belong to no
+train or holdout window, so including them would only be discarded at split time.
+Fixture scoring is the deliberate exception — `build_fixture_rows` passes
+`complete_seasons_only=False` so the in-progress season still supplies form
+history, otherwise every upcoming fixture would be scored with no form at all.
+
+`--league` must be passed through to `ml/sql_check.run`, which cross-checks
+the built rows against the DB for *that* league and the same season scope. If
+the two disagree on either, the check reports a row-count mismatch.
+
+Model ids embed `FEATURE_VERSION`, and the version is recorded in every
+`evaluation_report.json`. Bumping a feature changes the id, so a stale
+`ml/models/` directory is never silently reused.
 
 ## Features (all pre-match)
 
@@ -155,9 +170,10 @@ python3 ml/predict.py --features rows.json          # score hand-built feature r
 python3 ml/predict.py --league premier              # upcoming fixtures from data/raw/fixtures
 ```
 
-- `train.py` also fits an imputer + scaler as part of the pipeline (rest-day
-  columns are `None` on season openers and get constant `0`), so raw
-  multi-feature rows are accepted straight from `--features`.
+- `train.py` fits an imputer as part of every pipeline (rest-day columns are
+  `None` on season openers and get constant `0`), so raw multi-feature rows are
+  accepted straight from `--features`. Only the `logistic` pipeline also adds a
+  `StandardScaler`; `hist_gb` is imputer-only, since trees do not need scaling.
 - After joblib reload, a pipeline trained on integer-coded labels exposes
   `classes_ == [0, 1, 2]`; `predict.py` maps those codes back to
   `HOME_WIN / DRAW / AWAY_WIN` (see `_class_facing_labels`).
@@ -166,6 +182,27 @@ python3 ml/predict.py --league premier              # upcoming fixtures from dat
   under `skipped` rather than failing the whole run.
 - Refs: first real dev/holdout results are logged in `ml/datasets/validation_report.json`
   and reproduced by `pytest`; nothing in `ml/models/` is committed.
+
+## Backfilled predictions (match detail page)
+
+```bash
+python3 -m ml.backfill_predictions     # -> ml/datasets/match_predictions.json
+```
+
+Scores every row of `match_result_dataset.json` and writes
+`{api_id -> probabilities, predicted/actual result, confidence, in_sample}`.
+`GET /api/v1/matches/{api_id}/insights` serves it to the match detail page
+alongside the pre-match feature row and a head-to-head list.
+
+- The API never loads a model: `ml/models/` is gitignored, so the page reads a
+  committed JSON artifact instead, and renders nothing model-related when the
+  artifact is absent. Same pattern as `/fixtures` reading `data/raw/fixtures/`.
+- **Training-season rows are in-sample.** The model was fitted on them, so their
+  confidence is optimistic; only `holdout_seasons` is genuinely out-of-sample.
+  Each entry carries `in_sample` and the UI badges it, because showing a
+  confident "correct" prediction from the training set as if it were a real
+  forecast would be misleading.
+- Re-run after retraining to keep the artifact in sync with the model id.
 
 ## Next steps (out of scope for this step)
 

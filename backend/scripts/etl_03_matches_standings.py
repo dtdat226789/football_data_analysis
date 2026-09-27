@@ -9,6 +9,12 @@ first_goal_time_extra is stored with its validated semantics: NULL when the
 match is goalless (no first goal exists), an integer >= 0 otherwise (0 = first
 goal in normal time). No NULL->0 conversion.
 
+Re-running refreshes rows: the matches upsert is DO UPDATE (matching the other
+five), so a corrected upstream result replaces the stale one. Cancelled and
+awarded matches are skipped before insert, so a match that *becomes* one is
+neither updated nor removed - the schema has no status column to represent it.
+That is a pre-existing gap, not a consequence of the upsert.
+
 Usage:
     python backend/scripts/etl_03_matches_standings.py
     python backend/scripts/etl_03_matches_standings.py --league spain1
@@ -135,7 +141,19 @@ def load_matches(cur, league_season_id: int, season: str, league: str) -> tuple[
                 home_score, away_score, home_ht, away_ht,
                 first_goal_time, first_goal_time_extra
             ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (api_id) DO NOTHING
+            ON CONFLICT (api_id) DO UPDATE SET
+                league_season_id = EXCLUDED.league_season_id,
+                game_index = EXCLUDED.game_index,
+                home_team_id = EXCLUDED.home_team_id,
+                away_team_id = EXCLUDED.away_team_id,
+                match_date = EXCLUDED.match_date,
+                kickoff_time = EXCLUDED.kickoff_time,
+                home_score = EXCLUDED.home_score,
+                away_score = EXCLUDED.away_score,
+                home_ht = EXCLUDED.home_ht,
+                away_ht = EXCLUDED.away_ht,
+                first_goal_time = EXCLUDED.first_goal_time,
+                first_goal_time_extra = EXCLUDED.first_goal_time_extra
             """,
             (
                 m["id"],

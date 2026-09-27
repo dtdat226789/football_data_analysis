@@ -19,7 +19,7 @@ async function request(path, params = {}) {
   try {
     res = await fetch(url.toString());
   } catch {
-    throw new ApiError(0, "Cannot reach the API server. Is uvicorn running on :8000?");
+    throw new ApiError(0, "Cannot reach the API server. Is the backend running?");
   }
   if (!res.ok) {
     let detail = res.statusText;
@@ -44,10 +44,14 @@ export const api = {
     request(`/leagues/${league}/standings`, { season, view }),
   matches: (league, params = {}) => request(`/leagues/${league}/matches`, params),
   match: (apiId) => request(`/matches/${apiId}`),
+  matchInsights: (apiId, params = {}) => request(`/matches/${apiId}/insights`, params),
   matchesRecent: (params = {}) => request("/matches/recent", params),
   dashboard: () => request("/dashboard"),
   fixtures: (params = {}) => request("/fixtures", params),
   leagueFixtures: (league) => request(`/fixtures/${league}`),
+  // matchId is the trailing `date-home-vs-away` slug segment, or the full
+  // upstream slug when the caller has it; the route accepts either.
+  fixtureDetail: (league, matchId) => request(`/fixtures/${league}/${matchId}`),
   teams: ({ limit, offset } = {}) => request("/teams", { limit, offset }),
   team: (slug) => request(`/teams/${slug}`),
   teamMatches: (slug, params = {}) => request(`/teams/${slug}/matches`, params),

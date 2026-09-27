@@ -67,7 +67,7 @@ def main(argv: list[str] | None = None) -> int:
         conn.close()
 
     report = check_dataset(rows)
-    sql_report = run_sql_check(rows)
+    sql_report = run_sql_check(rows, args.league)
 
     json_path, csv_path = materialize(rows)
 

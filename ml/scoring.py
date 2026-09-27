@@ -124,13 +124,14 @@ def metrics_report(y_true: Sequence[int], y_score: np.ndarray) -> dict:
     yt, ys = _as_matrix(y_true, y_score)
     y_pred = ys.argmax(axis=1).tolist()
     return {
-        "accuracy": accuracy(yt, yt if len(np.unique(yt)) == 1 else y_pred),
+        "accuracy": accuracy(yt, y_pred),
         "macro_f1": macro_f1(yt, y_pred),
         "log_loss": log_loss(yt, ys),
         "brier": brier(yt, ys),
         "ece": ece(yt, ys),
         "per_class": per_class_metrics(yt, y_pred),
         "confusion_matrix": confusion_matrix(yt, y_pred),
+        "degenerate_label_set": len(np.unique(yt)) == 1,
         "n": int(len(yt)),
     }
 

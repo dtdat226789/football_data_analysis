@@ -237,3 +237,127 @@ def test_envelope_shape():
     assert env["model_id"] == "m-test"
     assert env["predictions"][0]["match_date"] == "2021-01-05"
     assert set(env["predictions"][0]["prediction"]) >= {"probabilities", "predicted_match_result", "confidence"}
+
+# ---------------------------------------------------------------------------
+# load_matches: which seasons each call site is allowed to see
+# ---------------------------------------------------------------------------
+
+class _RecordingCursor:
+    def __init__(self, calls):
+        self._calls = calls
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def execute(self, sql, params=None):
+        self._calls.append((sql, params))
+
+    def fetchall(self):
+        return []
+
+
+class _RecordingConn:
+    def __init__(self):
+        self.calls = []
+
+    def cursor(self, cursor_factory=None):
+        return _RecordingCursor(self.calls)
+
+
+class _SeasonAwareConn:
+    """Fake conn that answers the fixture-scoring query sequence."""
+
+    def __init__(self):
+        self.calls = []
+        self.seasons_requested = []
+
+    def cursor(self, cursor_factory=None):
+        return _FixtureCursor(self)
+
+    def record(self, sql, params):
+        self.calls.append((sql, params))
+
+
+class _FixtureCursor:
+    def __init__(self, conn):
+        self._conn = conn
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def execute(self, sql, params=None):
+        self._conn.record(sql, params)
+
+    def fetchone(self):
+        for sql, params in reversed(self._conn.calls):
+            if "league_seasons ls" in sql and "EXISTS" in sql:
+                self._conn.seasons_requested.append("2026-2027")
+                return ["2026-2027"]
+            if "team_aliases" in sql:
+                return [7]
+        return None
+
+    def fetchall(self):
+        return []
+
+
+def test_load_matches_restricts_to_complete_seasons_by_default():
+    from ml.features.build_features import load_matches
+
+    conn = _RecordingConn()
+    load_matches(conn, "premier")
+    sql, params = conn.calls[0]
+    assert "season_state" in sql
+    assert params == ("premier", True)
+    # The flag is negated inside the predicate. Asserting only the recorded
+    # param missed the case where the SQL was written as
+    # `(%s OR season_state = 'complete')`: with True that is plain TRUE, so
+    # the in-progress season was never actually filtered out.
+    assert _season_filter_is_correct(sql), "season filter predicate is inverted"
+
+
+def _season_filter_is_correct(sql: str) -> bool:
+    """True when complete_seasons_only=True actually excludes non-complete rows."""
+    import re
+
+    m = re.search(
+        r"AND\s*\(\s*(NOT\s+)?%s\s+OR\s+ls\.season_state\s*=\s*'complete'\s*\)",
+        sql,
+    )
+    if m is None:
+        return False
+    # The placeholder must be negated so that True reduces to the season_state
+    # test, and False short-circuits to "all seasons".
+    return m.group(1) is not None
+
+
+def test_load_matches_can_include_in_progress_seasons_for_fixtures():
+    from ml.features.build_features import load_matches
+
+    conn = _RecordingConn()
+    load_matches(conn, "premier", complete_seasons_only=False)
+    _sql, params = conn.calls[0]
+    assert params == ("premier", False)
+
+
+def test_fixture_scoring_seeds_from_the_in_progress_season():
+    # A part-played season is excluded from the training dataset but must still
+    # supply fixture history, or Mode B would score every fixture with no form.
+    from ml.features.build_features import build_fixture_rows
+
+    conn = _SeasonAwareConn()
+    build_fixture_rows(
+        conn,
+        [{"home_team": "Arsenal", "away_team": "Chelsea", "match_date": "2026-11-01"}],
+        league="premier",
+    )
+    load_calls = [params for _sql, params in conn.calls if params and params[0] == "premier"]
+    assert ("premier", False) in load_calls
+    assert ("premier", True) not in load_calls
+    assert conn.seasons_requested == ["2026-2027"]

@@ -36,7 +36,6 @@ from db_common import (
     catalog_seasons,
     collected_seasons,
     get_conn,
-    league_meta,
     load_json,
     raw_file,
     score_status,
@@ -66,11 +65,47 @@ def playable_count(raw: dict) -> int:
     )
 
 
+GAME_INDEX_QUERY = """
+SELECT s.name AS season,
+       min(m.game_index) AS gmin,
+       max(m.game_index) AS gmax,
+       count(*) AS cnt,
+       count(DISTINCT m.game_index) AS distinct
+FROM matches m
+JOIN league_seasons ls ON ls.id = m.league_season_id
+JOIN seasons s ON s.id = ls.season_id
+JOIN leagues l ON l.id = ls.league_id
+WHERE l.api_key = %s
+GROUP BY s.name, s.start_year
+ORDER BY s.start_year
+"""
+
+
+def game_index_problems(cur, league: str, clean_seasons: set[str]) -> list[tuple]:
+    """Seasons whose game_index is duplicated, or gapped inside a clean season.
+
+    A clean season (every raw match playable) must carry game_index 1..n with no
+    holes. A season with skipped or awarded matches legitimately has gaps, but
+    must still never reuse a game_index.
+    """
+    cur.execute(GAME_INDEX_QUERY, (league,))
+    problems: list[tuple] = []
+    for row in cur.fetchall():
+        season = row["season"]
+        gmin, gmax, cnt, distinct = (
+            row["gmin"], row["gmax"], row["cnt"], row["distinct"],
+        )
+        duplicate = distinct != cnt
+        contiguous = gmin == 1 and gmax == cnt == distinct
+        if duplicate or (season in clean_seasons and not contiguous):
+            problems.append((season, gmin, gmax, cnt, distinct))
+    return problems
+
+
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     league = args.league
     seasons = collected_seasons(league)
-    meta = league_meta(league)
     declared = set(catalog_seasons(league))
 
     conn = get_conn()
@@ -127,7 +162,6 @@ def main(argv: list[str] | None = None) -> int:
                 (league,),
             )
             n_memberships = {r["name"]: r["n"] for r in cur.fetchall()}
-            expected_memberships = sum(season_teams[s] for s in seasons)
             check("teams table non-empty", n_teams > 0, f"{n_teams} teams")
             check(
                 "team_seasons == league teams per collected season",
@@ -200,7 +234,6 @@ def main(argv: list[str] | None = None) -> int:
             dcount, tcount = cur.fetchone()
             check("match api_id globally unique (PK)", dcount == tcount, f"{dcount}/{tcount}")
 
-            per_season = {}
             for season in seasons:
                 raw_n = raw_counts[season]
                 cur.execute(
@@ -214,21 +247,13 @@ def main(argv: list[str] | None = None) -> int:
                     (season, league),
                 )
                 db_n = cur.fetchone()["count"]
-                per_season[season] = (raw_n, db_n)
                 check(
                     f"{season}: match count == playable raw",
                     raw_n == db_n,
                     f"raw={raw_n} db={db_n}",
                 )
 
-            # game_index is contiguous 1..n for clean seasons; otherwise playable
-            # matches must not collide on game_index (skips leave legitimate gaps)
-            gi_bad = []
-            for season, gmin, gmax, cnt, distinct in cur.fetchall():
-                duplicate = distinct != cnt
-                contiguous = gmin == 1 and gmax == cnt == distinct
-                if duplicate or (season in clean_seasons and not contiguous):
-                    gi_bad.append((season, gmin, gmax, cnt, distinct))
+            gi_bad = game_index_problems(cur, league, clean_seasons)
             check(
                 "game_index contiguous 1..n when clean, unique otherwise",
                 not gi_bad,

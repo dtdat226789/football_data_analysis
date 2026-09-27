@@ -1,0 +1,14 @@
+# Normalize line endings in the repository.
+#
+# Why: the working tree lives on a Windows drive and generated reports
+# (data/analysis/**, data/validation/**) were written with CRLF. Because the
+# index stored LF, every one of those files showed as modified even when the
+# content was byte-identical, which left `git status` permanently dirty with
+# ~1488 phantom changes and buried real work.
+#
+# `text=auto` normalizes to LF in the index; `eol=lf` checks LF back out.
+# Git auto-detects binaries and leaves them alone, but the png rule is kept
+# explicitly so image assets can never be mangled by content sniffing.
+* text=auto eol=lf
+
+*.png binary

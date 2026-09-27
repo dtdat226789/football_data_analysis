@@ -108,6 +108,19 @@ def test_metrics_report_shape():
     assert mat[2] == [0, 0, 1]
 
 
+def test_metrics_report_single_class_does_not_inflate_accuracy():
+    y_true = [0, 0, 0]
+    y_score = np.array([[0.2, 0.5, 0.3], [0.2, 0.5, 0.3], [0.2, 0.5, 0.3]])
+    report = metrics_report(y_true, y_score)
+    assert report["degenerate_label_set"] is True
+    assert report["accuracy"] == 0.0
+
+
+def test_metrics_report_multi_class_not_flagged_degenerate():
+    report = metrics_report([0, 1], np.array([[0.5, 0.3, 0.2], [0.2, 0.6, 0.2]]))
+    assert report["degenerate_label_set"] is False
+
+
 # ---------------------------------------------------------------------------
 # baselines
 # ---------------------------------------------------------------------------

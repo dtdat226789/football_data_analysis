@@ -11,6 +11,7 @@ import numpy as np
 import pytest
 
 from ml.features.build_features import FEATURE_COLUMNS
+from ml.contract import FEATURE_VERSION
 from ml import model_store
 from ml import train
 
@@ -147,7 +148,6 @@ def test_train_candidates_reports_dev_metrics_and_model_ids():
 
 
 def test_model_id_contains_feature_version():
-    from ml.contract import FEATURE_VERSION
     assert model_id("hist_gb").endswith(f"-v{FEATURE_VERSION}")
 
 
@@ -164,7 +164,10 @@ def test_train_main_end_to_end(tiny_dataset, tmp_path, monkeypatch):
     assert train.main([]) == 0
 
     selected = json.loads((tmp_path / "models" / "selected_model.json").read_text())
-    assert selected["model_id"] in {"match_result_logistic-v1.0.0", "match_result_hist_gb-v1.0.0"}
+    assert selected["model_id"] in {
+        f"match_result_logistic-v{FEATURE_VERSION}",
+        f"match_result_hist_gb-v{FEATURE_VERSION}",
+    }
     artifact = tmp_path / "models" / f"{selected['model_id']}.joblib"
     assert artifact.exists()
     meta = json.loads((tmp_path / "models" / f"{selected['model_id']}.meta.json").read_text())

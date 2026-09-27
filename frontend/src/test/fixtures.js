@@ -126,7 +126,9 @@ export const dashboard = {
     ],
     asia: [{ slug: "japan1", name: "J-League", country: "Japan", region: "asia", matches: 620 }],
     america: [{ slug: "brazil1", name: "Serie A", country: "Brazil", region: "america", matches: 657 }],
-    other: [],
+    // Non-empty on purpose: the backend buckets algir1/australia/egypt/morocco
+    // here, and the dashboard used to drop this bucket entirely.
+    other: [{ slug: "australia", name: "A-League", country: "Australia", region: "other", matches: 0 }],
   },
 };
 
@@ -310,3 +312,202 @@ export function makeModuleBody() {
     ],
   };
 }
+/** Match insights: pre-match context, model view and head-to-head. */
+export const matchInsights = {
+  api_id: 1001,
+  match: {
+    api_id: 1001,
+    home_team_id: 1,
+    away_team_id: 2,
+    home_team: "Arsenal",
+    away_team: "Chelsea",
+    season: "2024-2025",
+    match_date: "2025-01-18",
+    game_index: 20,
+    home_score: 2,
+    away_score: 1,
+  },
+  pre_match: {
+    season: "2024-2025",
+    game_index: 20,
+    home_team: "Arsenal",
+    away_team: "Chelsea",
+    home_team_id: 1,
+    away_team_id: 2,
+    group_labels: {
+      form_last_5: "Form (last 5)",
+      venue: "Venue split",
+      table_before_match: "Table before match",
+      rest: "Rest",
+    },
+    groups: {
+      form_last_5: {
+        home_team_points_last_5: { label: "Home points (last 5)", value: 10 },
+        away_team_points_last_5: { label: "Away points (last 5)", value: 7 },
+      },
+      venue: {
+        home_team_home_win_rate: { label: "Home win rate (home games)", value: 0.7 },
+        away_team_away_win_rate: { label: "Away win rate (away games)", value: 0.5 },
+      },
+      table_before_match: {
+        home_position_before_match: { label: "Home position", value: 2 },
+        away_position_before_match: { label: "Away position", value: 5 },
+      },
+      rest: {
+        home_rest_days: { label: "Home rest days", value: 4 },
+        away_rest_days: { label: "Away rest days", value: 7 },
+      },
+    },
+  },
+  model: {
+    season: "2024-2025",
+    probabilities: { HOME_WIN: 0.55, DRAW: 0.25, AWAY_WIN: 0.2 },
+    predicted_match_result: "HOME_WIN",
+    confidence: 0.55,
+    actual_match_result: "HOME_WIN",
+    in_sample: true,
+    meta: {
+      model_id: "match_result_logistic-v1.1.0",
+      feature_version: "1.1.0",
+      holdout_seasons: ["2025-2026"],
+      in_sample_warning: "Training-season rows are in-sample: the model was fitted on them.",
+    },
+  },
+  head_to_head: {
+    limit: 10,
+    summary: {
+      played: 2,
+      home_team_wins: 1,
+      draws: 1,
+      away_team_wins: 0,
+      goals_for: 3,
+      goals_against: 1,
+    },
+    matches: [
+      {
+        api_id: 900,
+        match_date: "2023-12-02",
+        season: "2023-2024",
+        home_team: "Chelsea",
+        away_team: "Arsenal",
+        home_score: 2,
+        away_score: 2,
+      },
+      {
+        api_id: 901,
+        match_date: "2022-08-13",
+        season: "2022-2023",
+        home_team: "Arsenal",
+        away_team: "Chelsea",
+        home_score: 1,
+        away_score: 0,
+      },
+    ],
+  },
+};
+
+/**
+ * GET /fixtures/premier/{tail} — an unplayed fixture with everything the detail
+ * page renders: full dc_v2 block, kickoff metadata, logos, form, matchday, the
+ * pre-match panel and head-to-head.
+ */
+export const fixtureDetail = {
+  league: "premier",
+  match_id: "2026-02-01-arsenal-vs-chelsea",
+  slug: "england/premier-league/2026-02-01-arsenal-vs-chelsea",
+  country: "England",
+  real_league_name: "Premier League",
+  status: "scheduled",
+  match_date: "2026-02-01",
+  season: "2025-2026",
+  season_state: "in_progress",
+  matchday: 25,
+  detail_collected: true,
+  teams: {
+    home: {
+      name: "Arsenal",
+      team_id: 1,
+      logo: "https://cdn.example/arsenal.png",
+      form_line: ["W", "D", "W", "W", "L"],
+      rest_days: 4,
+      games_before: 24,
+      venue: { played: 12, wins: 8, draws: 2, losses: 2, goals_for: 22, goals_against: 9, win_rate: 0.6667, goals_avg: 1.833, conceded_avg: 0.75 },
+      form: [
+        { date: "2026-01-25", home_team: "Arsenal", away_team: "Liverpool", home_score: 2, away_score: 1, team_result: "W", points: 3 },
+        { date: "2026-01-18", home_team: "Everton", away_team: "Arsenal", home_score: 1, away_score: 1, team_result: "D", points: 1 },
+        { date: "2026-01-11", home_team: "Arsenal", away_team: "Newcastle", home_score: 3, away_score: 0, team_result: "W", points: 3 },
+        { date: "2026-01-04", home_team: "Arsenal", away_team: "Brighton", home_score: 2, away_score: 1, team_result: "W", points: 3 },
+        { date: "2025-12-28", home_team: "Man City", away_team: "Arsenal", home_score: 3, away_score: 0, team_result: "L", points: 0 },
+      ],
+    },
+    away: {
+      name: "Chelsea",
+      team_id: 2,
+      logo: "https://cdn.example/chelsea.png",
+      form_line: ["D", "W", "L", "D", "D"],
+      rest_days: 7,
+      games_before: 24,
+      venue: { played: 12, wins: 6, draws: 3, losses: 3, goals_for: 16, goals_against: 14, win_rate: 0.5, goals_avg: 1.333, conceded_avg: 1.167 },
+      form: [
+        { date: "2026-01-22", home_team: "Chelsea", away_team: "Wolves", home_score: 1, away_score: 1, team_result: "D", points: 1 },
+        { date: "2026-01-15", home_team: "Notts Forest", away_team: "Chelsea", home_score: 0, away_score: 2, team_result: "W", points: 3 },
+        { date: "2026-01-08", home_team: "Chelsea", away_team: "Arsenal", home_score: 1, away_score: 3, team_result: "L", points: 0 },
+      ],
+    },
+  },
+  standings: {
+    home: { position: 2, played: 24, won: 18, drawn: 3, lost: 3, goals_for: 52, goals_against: 21, goal_difference: 31, points: 57 },
+    away: { position: 5, played: 24, won: 13, drawn: 5, lost: 6, goals_for: 41, goals_against: 29, goal_difference: 12, points: 44 },
+  },
+  kickoff: {
+    time: "16:00",
+    match_datetime: "2026-02-01T16:00:00+00:00",
+    label: "Matchday 25",
+    league_phase_status: "regular_season",
+    portal_link: "https://football-charts.com/england/premier-league/2026-02-01-arsenal-vs-chelsea",
+  },
+  predictability: {
+    model: "dc_v2.0",
+    xi: 0.0019,
+    sigma: 0.5,
+    data_through: "2026-01-29",
+    computed_at: "2026-01-30T09:00:00+00:00",
+    summary: {
+      home: 0.58, away: 0.18, btts_yes: 0.55,
+      over_1_5: 0.82, over_2_5: 0.61, over_3_5: 0.3,
+      expected_home_goals: 1.82, expected_away_goals: 0.94,
+      confidence: 0.58, computed_at: "2026-01-30T09:00:00+00:00", data_through: "2026-01-29",
+    },
+    probabilities: { home: 0.58, draw: 0.24, away: 0.18 },
+    expected_goals: { home: 1.82, away: 0.94, half_time_total: 0.98 },
+    lines: [
+      { line: "over_1.5", scope: "full_time", threshold: "1.5", raw: 0.8, calibrated: 0.82 },
+      { line: "over_2.5", scope: "full_time", threshold: "2.5", raw: 0.59, calibrated: 0.61 },
+      { line: "ht_over_0.5", scope: "half_time", threshold: "0.5", raw: 0.5, calibrated: 0.51 },
+    ],
+    ratings: { home: { attack: 0.42, defence: 0.31 }, away: { attack: -0.12, defence: -0.08 } },
+    effective_matches: { home: 34.6, away: 15.6 },
+    gates: { leans: false, probabilities: true },
+    data_status: { stale: false, matches_behind: 0 },
+  },
+  pre_match: matchInsights.pre_match,
+  head_to_head: matchInsights.head_to_head,
+};
+
+/** Same fixture before any /matches/{slug}/ payload was collected. */
+export const fixtureDetailNoHistory = {
+  ...fixtureDetail,
+  detail_collected: false,
+  season: null,
+  season_state: null,
+  matchday: null,
+  pre_match: null,
+  head_to_head: null,
+  standings: { home: null, away: null },
+  teams: {
+    home: { ...fixtureDetail.teams.home, logo: null, form: [], form_line: [], rest_days: null, games_before: null, venue: null },
+    away: { ...fixtureDetail.teams.away, logo: null, form: [], form_line: [], rest_days: null, games_before: null, venue: null },
+  },
+  kickoff: { time: "16:00", match_datetime: null, label: null, league_phase_status: null, portal_link: null },
+  predictability: null,
+};

@@ -4,10 +4,14 @@ import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import DataTree from "../components/DataTree.jsx";
+import MatchInsights from "../components/MatchInsights.jsx";
 
 export default function MatchDetail() {
   const { id } = useParams();
   const { data, loading, error } = useApi(() => api.match(id), [id]);
+  // Insights are supplementary: if the artifact or endpoint is unavailable the
+  // match page must still render, so this fetch fails soft.
+  const { data: insights } = useApi(() => api.matchInsights(id), [id]);
 
   if (loading)
     return (
@@ -104,6 +108,8 @@ export default function MatchDetail() {
           </div>
         </section>
       </div>
+
+      <MatchInsights insights={insights} homeName={home} awayName={away} />
 
       <section className="card" style={{ marginTop: 16 }}>
         <h3 style={{ marginTop: 0 }}>Raw record</h3>

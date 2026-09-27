@@ -33,8 +33,8 @@ class Match:
             home_points, home_win = 3, 1
             away_points, away_win = 0, 0
         elif self.home_score == self.away_score:
-            home_points = home_win = 1
-            away_points = away_win = 1
+            home_points, home_win = 1, 0
+            away_points, away_win = 1, 0
         else:
             home_points, home_win = 0, 0
             away_points, away_win = 3, 1
