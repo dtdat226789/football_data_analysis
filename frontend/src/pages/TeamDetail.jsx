@@ -12,7 +12,7 @@ const POSITION_COLOR = "var(--green)";
 const POINTS_COLOR = "var(--accent)";
 const WIN_COLOR = "var(--green)";
 const DRAW_COLOR = "var(--amber)";
-const LOSS_COLOR = "var(--danger)";
+const LOSS_COLOR = "var(--red)";
 
 function TeamStatsBlock({ data }) {
   const { seasons, totals, home_away: homeAway, best } = data;

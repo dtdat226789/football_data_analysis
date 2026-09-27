@@ -12,6 +12,16 @@ const REGION_LABELS = {
   other: "Other",
 };
 
+export function regionBuckets(byRegion) {
+  const buckets = byRegion ?? {};
+  const known = Object.keys(REGION_LABELS);
+  const extra = Object.keys(buckets).filter((r) => !known.includes(r));
+  return [...known, ...extra].map((region) => ({
+    region,
+    leagues: Array.isArray(buckets[region]) ? buckets[region] : [],
+  }));
+}
+
 function LeagueCard({ item }) {
   return (
     <Link to={`/leagues/${item.slug}`} className="card league-card" style={{ textDecoration: "none" }}>
@@ -72,7 +82,13 @@ export default function Dashboard() {
   if (error) return <ErrorBox error={error} />;
   if (!data) return <ErrorBox error="No dashboard data returned." />;
 
-  const { top_leagues: topLeagues, top_clubs: topClubs, recent_matches: recent, upcoming_matches: upcoming, leagues_by_region: byRegion } = data;
+  const {
+    top_leagues: topLeagues = [],
+    top_clubs: topClubs = [],
+    recent_matches: recent = [],
+    upcoming_matches: upcoming = [],
+    leagues_by_region: byRegion,
+  } = data;
 
   return (
     <div>
@@ -185,9 +201,9 @@ export default function Dashboard() {
       <section>
         <h3>Leagues by region</h3>
         <div className="grid regions">
-          <RegionSection region="europe" leagues={byRegion?.europe || []} />
-          <RegionSection region="asia" leagues={byRegion?.asia || []} />
-          <RegionSection region="america" leagues={byRegion?.america || []} />
+          {regionBuckets(byRegion).map(({ region, leagues }) => (
+            <RegionSection key={region} region={region} leagues={leagues} />
+          ))}
         </div>
       </section>
     </div>

@@ -24,6 +24,15 @@ function pageLabel(pageSize, offset, total) {
   return `${start}–${end} of ${total}`;
 }
 
+/**
+ * Route id for a fixture: the trailing `date-home-vs-away` segment of the
+ * upstream slug, which is what the detail route matches on. A slug without
+ * slashes is already its own tail.
+ */
+export function fixturePathId(slug) {
+  return String(slug || "").replace(/\/+$/, "").split("/").pop() || "";
+}
+
 export default function Matches() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [size, setSize] = useState(50);
@@ -160,6 +169,15 @@ export default function Matches() {
                     confidence={m.predictions?.confidence}
                     dataThrough={m.predictions?.data_through}
                   />
+                  {m.slug ? (
+                    <Link
+                      className="link"
+                      style={{ fontSize: 12 }}
+                      to={`/fixture/${m.league}/${fixturePathId(m.slug)}`}
+                    >
+                      detail
+                    </Link>
+                  ) : null}
                 </div>
               ))}
             </div>

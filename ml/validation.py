@@ -23,8 +23,23 @@ from ml.features.build_features import MATERIALIZED_COLUMNS, MATCH_RESULTS, OUTC
 # Rest-days are the only features legitimately absent before a season opener.
 NULLABLE = {"home_rest_days", "away_rest_days", "rest_days_difference"}
 
+# Columns that must hold a concrete value: the fixed context block (ids, team
+# names, date) plus every feature and score. The context block is included so a
+# missing team_seasons row surfaces as an error instead of a null team name
+# sneaking into a dataset that reports ok.
+REQUIRED_COLUMNS = CONTEXT_COLUMNS + MATERIALIZED_COLUMNS
+
 DEFAULT_TRAIN_SEASONS = ["2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025"]
 DEFAULT_HOLDOUT_SEASONS = ["2025-2026"]
+
+
+def expected_result(home_score: int, away_score: int) -> str:
+    """The only match_result label consistent with a given scoreline."""
+    if home_score > away_score:
+        return "HOME_WIN"
+    if home_score == away_score:
+        return "DRAW"
+    return "AWAY_WIN"
 
 
 def check_dataset(rows: list[dict]) -> dict:
@@ -54,7 +69,7 @@ def check_dataset(rows: list[dict]) -> dict:
         errors.append("duplicate api_id rows present")
 
     # --- NULL policy ---
-    for col in MATERIALIZED_COLUMNS:
+    for col in REQUIRED_COLUMNS:
         n = sum(1 for r in rows if r[col] is None)
         if col in NULLABLE:
             if n:
@@ -90,6 +105,16 @@ def check_dataset(rows: list[dict]) -> dict:
             errors.append("negative score present")
         if not all(r["match_result"] in MATCH_RESULTS for r in rows):
             errors.append("invalid match_result label")
+        else:
+            mismatched = [
+                r["api_id"] for r in rows
+                if r["match_result"] != expected_result(r["home_score"], r["away_score"])
+            ]
+            if mismatched:
+                errors.append(
+                    f"match_result inconsistent with the score for {len(mismatched)} row(s) "
+                    f"(first: {mismatched[:5]})"
+                )
         if not all(r["points_difference"] == r["home_points_before_match"] - r["away_points_before_match"] for r in rows):
             errors.append("points_difference inconsistent")
         if not all(r["position_difference"] == r["home_position_before_match"] - r["away_position_before_match"] for r in rows):
@@ -103,7 +128,7 @@ def check_dataset(rows: list[dict]) -> dict:
     bad = []
     for season, rs in by_season.items():
         prev = None
-        for r in sorted(rs, key=lambda x: (x["match_date"], x["game_index"])):
+        for r in rs:
             if prev is not None and (r["match_date"], r["game_index"]) < prev:
                 bad.append(f"{season} row {r['api_id']} out of order")
             prev = (r["match_date"], r["game_index"])

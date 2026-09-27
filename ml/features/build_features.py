@@ -86,15 +86,27 @@ OUTCOME_COLUMNS = [
 ]
 
 # Every column that must hold a concrete value (feature + outcome scores).
-MATERIALIZED_COLUMNS = FEATURE_COLUMNS + OUTCOME_COLUMNS[:2]
+SCORE_COLUMNS = ["home_score", "away_score"]
+MATERIALIZED_COLUMNS = FEATURE_COLUMNS + SCORE_COLUMNS
 
 ALL_COLUMNS = CONTEXT_COLUMNS + FEATURE_COLUMNS + OUTCOME_COLUMNS
 
 MATCH_RESULTS = {"HOME_WIN": "home", "DRAW": "draw", "AWAY_WIN": "away"}
 
 
-def load_matches(conn, league: str) -> list[Match]:
-    """Load every completed match for `league`, ordered deterministically."""
+def load_matches(
+    conn, league: str, *, complete_seasons_only: bool = True
+) -> list[Match]:
+    """Load every completed match for `league`, ordered deterministically.
+
+    With ``complete_seasons_only`` (the default, used when building the training
+    dataset) a part-played season is excluded deliberately: its rows would
+    belong to no train or holdout window, so including them would silently
+    discard them at split time.
+
+    Fixture scoring passes ``complete_seasons_only=False`` because it seeds
+    history from the *current* season, which is in progress until it finishes.
+    """
     with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
         cur.execute(
             """
@@ -112,9 +124,10 @@ def load_matches(conn, league: str) -> list[Match]:
             LEFT JOIN team_seasons ta
               ON ta.league_season_id = m.league_season_id AND ta.team_id = m.away_team_id
             WHERE l.api_key = %s
+              AND (NOT %s OR ls.season_state = 'complete')
             ORDER BY s.start_year, m.match_date, m.kickoff_time, m.game_index, m.api_id
             """,
-            (league,),
+            (league, complete_seasons_only),
         )
         raw = cur.fetchall()
     matches = [
@@ -371,7 +384,10 @@ def build_fixture_rows(
                 }
             )
 
-        matches = [m for m in load_matches(conn, league) if m.season == season]
+        matches = [
+            m for m in load_matches(conn, league, complete_seasons_only=False)
+            if m.season == season
+        ]
 
     history, table, roster = seed_season(matches)
     fixtures_scored: list[Fixture] = [

@@ -5,20 +5,36 @@ backend/scripts/fetch_fixtures.py). The endpoints never touch the API key or
 the database: they are pure file lookups, so a league with no collected
 fixtures returns an empty list rather than an error.
 
-Routes:
+Route:
     GET /api/v1/fixtures            merged, pruned upcoming matches (all leagues)
     GET /api/v1/fixtures/{league}   full stored payload for one league
+
+Single-fixture detail is the one exception: head-to-head, matchday and form
+cannot be answered from a fixtures file, so it additionally reads history from
+PostgreSQL through the same read-only cursor the rest of the API uses.
+
+    GET /api/v1/fixtures/{league}/{match_id}
+
+Every DB-derived section is independently optional. A fixture whose teams are
+not in the analytics database (a brand-new season, a league never collected)
+still serves predictions, form and kickoff metadata from the file dump alone,
+and `detail_collected` reports whether the richer /matches/{slug}/ payload from
+backend/scripts/fetch_fixture_details.py is on disk.
 """
 from __future__ import annotations
 
 import json
+import re
+from datetime import date
 from pathlib import Path
 from typing import Literal
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 
 from .. import common
-from ..deps import require_league
+from ..deps import fetched_cursor, require_league, resolve_team_id
+from .matches import build_pre_match, head_to_head
+from .teams import _form_result
 
 router = APIRouter(tags=["fixtures"])
 
@@ -26,6 +42,22 @@ FIXTURES_DIR = common.ROOT_DIR / "data" / "raw" / "fixtures"
 
 DEFAULT_LIMIT = 20
 MAX_LIMIT = 200
+
+FORM_LIMIT = 5
+H2H_LIMIT = 10
+
+# Goal lines the dc_v2 model reports, e.g. `over_2.5` and `ht_over_1.5`. The
+# prefix marks the scope; the remainder is the line the market is quoted at.
+_GOAL_LINE = re.compile(r"^(ht_)?over_(\d+(?:\.\d+)?)$")
+
+
+def details_dir() -> Path:
+    """Where per-fixture /matches/{slug}/ payloads live.
+
+    Derived from FIXTURES_DIR on every call rather than captured at import, so
+    tests that relocate FIXTURES_DIR relocate the detail files with it.
+    """
+    return FIXTURES_DIR / "details"
 
 
 def _load_payload(path: Path) -> dict:
@@ -35,6 +67,22 @@ def _load_payload(path: Path) -> dict:
     except (OSError, ValueError):
         return {}
     return payload if isinstance(payload, dict) else {}
+
+
+def _as_date(value) -> date | None:
+    """Fixture dates arrive as JSON strings; the database hands back `date`.
+
+    Normalising here means every query parameter is the same type and the
+    rest-day arithmetic is real date subtraction rather than string subtraction.
+    """
+    if isinstance(value, date):
+        return value
+    if isinstance(value, str) and value:
+        try:
+            return date.fromisoformat(value[:10])
+        except ValueError:
+            return None
+    return None
 
 
 def _prediction_summary(match: dict) -> dict:
@@ -78,7 +126,7 @@ def _prune(match: dict, league: str) -> dict:
 
 
 def list_fixture_files() -> list[Path]:
-    """Every league fixtures file (ignores the manifest)."""
+    """Every league fixtures file (ignores the manifest and details dir)."""
     if not FIXTURES_DIR.is_dir():
         return []
     return sorted(
@@ -96,7 +144,8 @@ def league_fixture_file(league: str) -> Path | None:
 def fixture_rows(league: str | None = None) -> list[dict]:
     """Pruned match rows for one league, or for every collected league."""
     if league is not None:
-        paths = [league_fixture_file(league)] if league_fixture_file(league) else []
+        path = league_fixture_file(league)
+        paths = [path] if path else []
     else:
         paths = list_fixture_files()
     rows: list[dict] = []
@@ -106,6 +155,412 @@ def fixture_rows(league: str | None = None) -> list[dict]:
         for match in payload.get("matches") or []:
             rows.append(_prune(match, lg))
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Single-fixture detail
+# ---------------------------------------------------------------------------
+
+
+def slug_tail(slug: str) -> str:
+    """Last segment of an upstream slug: `a/b/2026-01-01-x-vs-y` -> `2026-01-01-x-vs-y`.
+
+    Upstream slugs embed slashes, so the tail is what the detail files are named
+    after and what a UI puts in a route.
+    """
+    return (slug or "").rstrip("/").rsplit("/", 1)[-1]
+
+
+def detail_file(league: str, slug: str) -> Path:
+    """Path to a collected /matches/{slug}/ payload for a fixture."""
+    return details_dir() / f"{league}__{slug_tail(slug)}.json"
+
+
+def find_fixture(league: str, match_id: str) -> dict | None:
+    """One fixture row from a league's dump, addressed by slug or slug tail.
+
+    Accepts the full upstream slug, the trailing `date-home-vs-away` segment, or
+    either with a `.json` suffix, so callers are not forced to know the storage
+    convention.
+    """
+    path = league_fixture_file(league)
+    if path is None:
+        return None
+    wanted = (match_id or "").strip().strip("/")
+    if wanted.endswith(".json"):
+        wanted = wanted[: -len(".json")]
+    tail = slug_tail(wanted)
+    for match in _load_payload(path).get("matches") or []:
+        slug = match.get("slug") or ""
+        if wanted in (slug, slug_tail(slug)):
+            return match
+    # A bare tail that matches nothing exactly is still worth one look: two
+    # fixtures can share a date-and-teams tail across competition rounds.
+    if tail and tail != wanted:
+        for match in _load_payload(path).get("matches") or []:
+            if slug_tail(match.get("slug") or "") == tail:
+                return match
+    return None
+
+
+def _load_detail(league: str, slug: str) -> dict:
+    """The collected /matches/{slug}/ payload for a fixture, or {}."""
+    path = detail_file(league, slug)
+    if not path.exists():
+        return {}
+    payload = _load_payload(path)
+    match = payload.get("match")
+    return match if isinstance(match, dict) else {}
+
+
+def _probability_triple(calibrated: dict) -> dict:
+    """Home/draw/away from the calibrated block.
+
+    dc_v2 calibrates home and away independently and lets the remainder be the
+    draw, so draw is derived rather than read. When the two do not sum to <= 1
+    (an unrounded or partially published block) nothing is inferred and draw is
+    null, because a negative probability would be worse than a missing one.
+    """
+    home, away = calibrated.get("home"), calibrated.get("away")
+    if not isinstance(home, (int, float)) or not isinstance(away, (int, float)):
+        return {"home": home, "draw": None, "away": away}
+    total = home + away
+    draw = round(1.0 - total, 4) if 0.0 < total <= 1.0 else None
+    return {"home": home, "draw": draw, "away": away}
+
+
+def _goal_lines(raw: dict, calibrated: dict) -> list[dict]:
+    """Every over/under line the model priced, full time and half time.
+
+    Both blocks are walked so the table can show the model's uncalibrated and
+    calibrated read of the same line side by side.
+    """
+    lines: list[dict] = []
+    for source, block in (("raw", raw), ("calibrated", calibrated)):
+        for key, value in block.items():
+            match = _GOAL_LINE.match(key or "")
+            if not match or not isinstance(value, (int, float)):
+                continue
+            entry = next((row for row in lines if row["line"] == key), None)
+            if entry is None:
+                lines.append({
+                    "line": key,
+                    "scope": "half_time" if match.group(1) else "full_time",
+                    "threshold": match.group(2),
+                    "raw": None,
+                    "calibrated": None,
+                })
+                entry = lines[-1]
+            entry[source] = value
+    lines.sort(key=lambda row: (row["scope"] != "full_time", float(row["threshold"])))
+    return lines
+
+
+def predictability(match: dict) -> dict | None:
+    """The full dc_v2 block for a fixture, not just the chip summary.
+
+    `summary` is the same object the list feed renders, so a detail view and a
+    row in /fixtures never disagree about the headline numbers.
+    """
+    preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
+    if not preds:
+        return None
+    raw = preds.get("raw") or {}
+    calibrated = preds.get("calibrated") or {}
+    return {
+        "model": preds.get("model"),
+        # xi is the draw-inflation parameter and sigma the goal-model spread.
+        # Both are the difference between "the model said 50%" and "the model
+        # said 50% with this much smoothing and this much uncertainty".
+        "xi": preds.get("xi"),
+        "sigma": preds.get("sigma"),
+        "summary": _prediction_summary(match),
+        "probabilities": _probability_triple(calibrated),
+        "expected_goals": {
+            "home": raw.get("expected_home_goals"),
+            "away": raw.get("expected_away_goals"),
+            "half_time_total": raw.get("expected_ht_goals"),
+        },
+        "lines": _goal_lines(raw, calibrated),
+        "ratings": preds.get("ratings") or {},
+        "effective_matches": preds.get("effective_matches") or {},
+        "gates": preds.get("gates") or {},
+        "data_status": preds.get("data_status") or {},
+        "data_through": preds.get("data_through"),
+        "computed_at": preds.get("computed_at"),
+        "raw": raw,
+        "calibrated": calibrated,
+    }
+
+
+# Venue-conditioned goal expressions. Selected by a literal, never by input, so
+# no user-supplied value reaches the SQL string.
+_VENUE_COLUMNS = {
+    "home": ("m.home_team_id", "m.home_score", "m.away_score"),
+    "away": ("m.away_team_id", "m.away_score", "m.home_score"),
+}
+
+
+def _venue_split(cur, league_season_id: int, team_id: int, venue: str, before_date) -> dict | None:
+    """A team's home (or away) record before a date, inside one league season."""
+    team_column, goals_for, goals_against = _VENUE_COLUMNS[venue]
+    cur.execute(
+        f"""
+        SELECT count(*) AS played,
+               sum(CASE WHEN {goals_for} > {goals_against} THEN 1 ELSE 0 END) AS wins,
+               sum(CASE WHEN {goals_for} = {goals_against} THEN 1 ELSE 0 END) AS draws,
+               sum(CASE WHEN {goals_for} < {goals_against} THEN 1 ELSE 0 END) AS losses,
+               sum({goals_for}) AS goals_for,
+               sum({goals_against}) AS goals_against
+        FROM matches m
+        WHERE m.league_season_id = %s
+          AND m.match_date < %s
+          AND {team_column} = %s
+        """,
+        (league_season_id, before_date, team_id),
+    )
+    row = cur.fetchone()
+    if not row or not row["played"]:
+        return None
+    played = int(row["played"])
+    scored = int(row["goals_for"] or 0)
+    conceded = int(row["goals_against"] or 0)
+    return {
+        "played": played,
+        "wins": int(row["wins"] or 0),
+        "draws": int(row["draws"] or 0),
+        "losses": int(row["losses"] or 0),
+        "goals_for": scored,
+        "goals_against": conceded,
+        "win_rate": round(int(row["wins"] or 0) / played, 4),
+        "goals_avg": round(scored / played, 3),
+        "conceded_avg": round(conceded / played, 3),
+    }
+
+
+def _team_matches_before(
+    cur, league_season_id: int, team_id: int, before_date, limit: int
+) -> list[dict]:
+    """A team's most recent matches before a date, newest first."""
+    cur.execute(
+        """
+        SELECT m.api_id, m.match_date, m.kickoff_time, m.game_index,
+               th.api_name AS home_team, ta.api_name AS away_team,
+               m.home_score, m.away_score, m.home_team_id, m.away_team_id
+        FROM matches m
+        JOIN team_seasons th
+          ON th.league_season_id = m.league_season_id AND th.team_id = m.home_team_id
+        JOIN team_seasons ta
+          ON ta.league_season_id = m.league_season_id AND ta.team_id = m.away_team_id
+        WHERE m.league_season_id = %s
+          AND m.match_date < %s
+          AND (m.home_team_id = %s OR m.away_team_id = %s)
+        ORDER BY m.match_date DESC, m.kickoff_time DESC, m.game_index DESC
+        LIMIT %s
+        """,
+        (league_season_id, before_date, team_id, team_id, limit),
+    )
+    return [dict(r) for r in cur.fetchall()]
+
+
+def _team_context(
+    cur, league_season_id: int, team_id: int, side: str, before_date, limit: int
+) -> dict:
+    """Form, venue split, rest and load for one side of an unplayed fixture.
+
+    The last-`limit` aggregates are computed here rather than in the caller
+    because the goals a team scored depend on which side it was playing: summing
+    `home_score` blindly would credit an away side with its opponent's goals.
+    """
+    rows = _team_matches_before(cur, league_season_id, team_id, before_date, limit)
+    results = [_form_result(r, team_id) for r in rows]
+    scored = sum(
+        r["home_score"] if r["home_team_id"] == team_id else r["away_score"] for r in rows
+    )
+    conceded = sum(
+        r["away_score"] if r["home_team_id"] == team_id else r["home_score"] for r in rows
+    )
+    return {
+        "team_id": team_id,
+        "venue_side": side,
+        "form": results,
+        "form_line": [r["team_result"] for r in results],
+        "points": sum(r["points"] for r in results),
+        "wins": sum(1 for r in results if r["team_result"] == "W"),
+        "goals_scored": scored,
+        "goals_conceded": conceded,
+        "rest_days": (before_date - rows[0]["match_date"]).days if rows else None,
+        "games_before": _played_total(cur, league_season_id, team_id, before_date),
+        "venue": _venue_split(cur, league_season_id, team_id, side, before_date),
+    }
+
+
+def _played_total(cur, league_season_id: int, team_id: int, before_date) -> int:
+    cur.execute(
+        """
+        SELECT count(*) AS played
+        FROM matches m
+        WHERE m.league_season_id = %s
+          AND m.match_date < %s
+          AND (m.home_team_id = %s OR m.away_team_id = %s)
+        """,
+        (league_season_id, before_date, team_id, team_id),
+    )
+    row = cur.fetchone()
+    return int(row["played"]) if row and row["played"] else 0
+
+
+def _season_for_date(cur, league: str, match_date) -> dict | None:
+    """The league season a fixture belongs to, chosen by date.
+
+    Picks the latest registered season that already has matches before the
+    fixture, so a fixture in a season that has not been collected yet falls back
+    to the previous one instead of being scored against the wrong table.
+    """
+    cur.execute(
+        """
+        SELECT ls.id, s.name AS season, ls.season_state
+        FROM league_seasons ls
+        JOIN seasons s ON s.id = ls.season_id
+        JOIN leagues l ON l.id = ls.league_id
+        LEFT JOIN matches m ON m.league_season_id = ls.id AND m.match_date < %s
+        WHERE l.api_key = %s
+        GROUP BY ls.id, s.name, ls.season_state, s.start_year, s.end_year
+        HAVING count(m.api_id) > 0
+        ORDER BY s.start_year DESC, s.end_year DESC
+        LIMIT 1
+        """,
+        (match_date, league),
+    )
+    row = cur.fetchone()
+    return dict(row) if row else None
+
+
+def _matchday(cur, league_season_id: int, match_date) -> int | None:
+    """League-wide round number for an unplayed fixture.
+
+    `game_index` is unique per league season, so the next round after the last
+    match played before the fixture is its matchday. A fixture in round 1 has
+    no predecessor, which is the count of 0 plus 1.
+    """
+    cur.execute(
+        """
+        SELECT max(game_index) AS last_round
+        FROM matches
+        WHERE league_season_id = %s AND match_date < %s
+        """,
+        (league_season_id, match_date),
+    )
+    row = cur.fetchone()
+    if row is None or row["last_round"] is None:
+        return 1
+    return int(row["last_round"]) + 1
+
+
+def _standings_row(cur, league_season_id: int, team_id: int) -> dict | None:
+    """A team's classic-table row, used as the pre-match table for a fixture."""
+    cur.execute(
+        """
+        SELECT position, played, won, drawn, lost,
+               goals_for, goals_against, goal_difference, points
+        FROM standings
+        WHERE league_season_id = %s AND team_id = %s AND view = 'classic'
+        """,
+        (league_season_id, team_id),
+    )
+    row = cur.fetchone()
+    return dict(row) if row else None
+
+
+def _feature_row(
+    home: dict, away: dict, standings: dict, matchday: int | None, season: str | None
+) -> dict:
+    """Assemble a dataset-shaped row so build_pre_match can group it unchanged.
+
+    The keys are the real ml.features.build_features column names, which is what
+    lets the fixture detail page reuse the finished-match pre-match panel instead
+    of growing a second, near-identical component. The naming is not uniform —
+    form and load keep a `_team_` infix while rest and the table do not — so the
+    mapping is written out rather than generated.
+
+    The table columns are the current standings for the fixture's season. For a
+    match that has not been played that snapshot genuinely is the state before
+    it, which is why it is safe to present here and not a peek at the result.
+    """
+    row: dict = {"season": season, "game_index": matchday}
+    for prefix, side in (("home", home), ("away", away)):
+        suffix = side.get("venue_side") or prefix
+        venue = side.get("venue") or {}
+        table = (standings or {}).get(prefix) or {}
+        # The panel's caption reads these back, so they travel with the numbers.
+        row[f"{prefix}_team"] = side.get("name")
+        row[f"{prefix}_team_id"] = side.get("team_id")
+        row[f"{prefix}_team_points_last_5"] = side.get("points") or None
+        row[f"{prefix}_team_wins_last_5"] = side.get("wins") or None
+        row[f"{prefix}_team_goals_scored_last_5"] = side.get("goals_scored") or None
+        row[f"{prefix}_team_goals_conceded_last_5"] = side.get("goals_conceded") or None
+        row[f"{prefix}_team_{suffix}_win_rate"] = venue.get("win_rate")
+        row[f"{prefix}_team_{suffix}_goals_avg"] = venue.get("goals_avg")
+        row[f"{prefix}_team_{suffix}_conceded_avg"] = venue.get("conceded_avg")
+        row[f"{prefix}_team_games_before"] = side.get("games_before")
+        row[f"{prefix}_rest_days"] = side.get("rest_days")
+        row[f"{prefix}_position_before_match"] = table.get("position")
+        row[f"{prefix}_points_before_match"] = table.get("points")
+
+    home_rest, away_rest = home.get("rest_days"), away.get("rest_days")
+    row["rest_days_difference"] = (
+        home_rest - away_rest if home_rest is not None and away_rest is not None else None
+    )
+    home_row = (standings or {}).get("home") or {}
+    away_row = (standings or {}).get("away") or {}
+    if home_row and away_row:
+        row["position_difference"] = home_row["position"] - away_row["position"]
+        row["points_difference"] = home_row["points"] - away_row["points"]
+    return row
+
+
+def _context(cur, league: str, home_name: str, away_name: str, match_date) -> dict:
+    """Everything the database knows about an unplayed fixture.
+
+    Returns a dict of independent sections; any of them may be empty when the
+    league or the teams are not in the analytics database.
+    """
+    home_id = resolve_team_id(cur, home_name)
+    away_id = resolve_team_id(cur, away_name)
+    season = _season_for_date(cur, league, match_date)
+    out: dict = {
+        "season": season,
+        "matchday": None,
+        "home_team_id": home_id,
+        "away_team_id": away_id,
+        "pre_match": None,
+        "head_to_head": None,
+        "standings": {"home": None, "away": None},
+    }
+    if season is None:
+        return out
+
+    league_season_id = season["id"]
+    out["matchday"] = _matchday(cur, league_season_id, match_date)
+    out["standings"] = {
+        "home": _standings_row(cur, league_season_id, home_id) if home_id else None,
+        "away": _standings_row(cur, league_season_id, away_id) if away_id else None,
+    }
+    if home_id is None or away_id is None:
+        return out
+
+    home = _team_context(cur, league_season_id, home_id, "home", match_date, FORM_LIMIT)
+    away = _team_context(cur, league_season_id, away_id, "away", match_date, FORM_LIMIT)
+    home["name"], away["name"] = home_name, away_name
+    out["home"] = home
+    out["away"] = away
+    out["pre_match"] = build_pre_match(
+        _feature_row(home, away, out["standings"], out["matchday"], season["season"])
+    )
+    out["head_to_head"] = head_to_head(
+        cur, home_id, away_id, match_date, limit=H2H_LIMIT
+    )
+    return out
 
 
 @router.get("/fixtures")
@@ -145,3 +600,88 @@ def league_fixtures(league: str) -> dict:
     payload.setdefault("count", len(payload.get("matches") or []))
     payload.setdefault("league", league)
     return payload
+
+
+@router.get("/fixtures/{league}/{match_id:path}")
+def fixture_detail(league: str, match_id: str) -> dict:
+    """Everything known about one upcoming fixture, before it is played.
+
+    Layered so the page degrades instead of erroring: the fixture row, the
+    model's full prediction block and the collected /matches/{slug}/ payload come
+    from files, and matchday, form, the pre-match table and head-to-head come
+    from the analytics database. The database sections are only meaningful once
+    the fixture is inside a collected season, which `season`/`matchday` report
+    so a caller can tell derived data from assumed data.
+    """
+    require_league(league)
+    fixture = find_fixture(league, match_id)
+    if fixture is None:
+        raise HTTPException(
+            status_code=404, detail=f"fixture '{match_id}' not found for league '{league}'"
+        )
+
+    slug = fixture.get("slug") or ""
+    detail = _load_detail(league, slug)
+    # A collected payload is the richer copy of the same fixture: prefer it for
+    # anything it carries and the fixtures file for anything it does not.
+    merged = {**fixture, **detail} if detail else fixture
+    match_date = merged.get("match_date")
+    match_day = _as_date(match_date)
+
+    context: dict = {}
+    if match_day is not None:
+        try:
+            with fetched_cursor() as cur:
+                context = _context(cur, league, merged.get("home_team"), merged.get("away_team"), match_day)
+        except (Exception, SystemExit):  # noqa: BLE001
+            # A fixture must still render when the analytics database is absent or
+            # unreachable: every section derived from it is optional by design.
+            # SystemExit is listed because db_common.get_conn() reports a
+            # missing DATABASE_URL that way, which is a BaseException and would
+            # otherwise escape the request.
+            context = {}
+
+    season = context.get("season") or {}
+    home = context.get("home") or {}
+    away = context.get("away") or {}
+    for side, name in (("home", merged.get("home_team")), ("away", merged.get("away_team"))):
+        side_data = context.get(side) or {}
+        context[side] = {
+            "name": name,
+            "team_id": side_data.get("team_id"),
+            "logo": merged.get(f"{side}_team_logo"),
+            "form": side_data.get("form") or [],
+            "form_line": side_data.get("form_line") or [],
+            "rest_days": side_data.get("rest_days"),
+            "games_before": side_data.get("games_before"),
+            "venue": side_data.get("venue"),
+        }
+    context.pop("season", None)
+
+    return {
+        "league": league,
+        "match_id": slug_tail(slug) or match_id,
+        "slug": slug,
+        "country": merged.get("country"),
+        "real_league_name": merged.get("real_league_name"),
+        "status": merged.get("status") or merged.get("match_status"),
+        "match_date": match_date,
+        # The season comes from the database when the fixture sits inside a
+        # collected one, and from the collected detail payload otherwise.
+        "season": season.get("season") or merged.get("season"),
+        "season_state": season.get("season_state"),
+        "matchday": context.get("matchday"),
+        "teams": {"home": context["home"], "away": context["away"]},
+        "standings": context.get("standings") or {"home": None, "away": None},
+        "kickoff": {
+            "time": merged.get("time"),
+            "match_datetime": merged.get("match_datetime"),
+            "label": merged.get("label"),
+            "league_phase_status": merged.get("league_phase_status"),
+            "portal_link": merged.get("portal_link"),
+        },
+        "predictability": predictability(fixture),
+        "pre_match": context.get("pre_match"),
+        "head_to_head": context.get("head_to_head"),
+        "detail_collected": bool(detail),
+    }

@@ -79,6 +79,18 @@ describe("Matches", () => {
     expect(screen.getAllByText("2 – 1").length).toBeGreaterThanOrEqual(1);
   });
 
+  it("links every upcoming fixture to its detail page using the slug tail", async () => {
+    renderPage(<Matches />);
+    await screen.findByRole("heading", { name: /Upcoming/ });
+
+    const upcoming = screen.getByRole("heading", { name: /Upcoming/ }).closest("section");
+    const links = within(upcoming).getAllByRole("link", { name: "detail" });
+    expect(links.map((l) => l.getAttribute("href"))).toEqual([
+      "/fixture/premier/2026-02-01-arsenal-vs-chelsea",
+      "/fixture/spain1/2026-02-02-barcelona-vs-madrid",
+    ]);
+  });
+
   it("refetches fixtures and results when a league is picked", async () => {
     renderPage(<Matches />);
     await screen.findByRole("heading", { name: /Upcoming/ });

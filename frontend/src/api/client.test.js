@@ -62,7 +62,7 @@ describe("request", () => {
 
     await expect(api.health()).rejects.toMatchObject({
       status: 0,
-      message: "Cannot reach the API server. Is uvicorn running on :8000?",
+      message: "Cannot reach the API server. Is the backend running?",
     });
   });
 
@@ -92,5 +92,32 @@ describe("teamStats", () => {
     expect(url.pathname).toBe("/api/v1/teams/spurs/stats");
     expect(url.searchParams.get("league")).toBe("premier");
     expect(url.searchParams.get("view")).toBe("classic");
+  });
+});
+describe("api.matchInsights", () => {
+  beforeEach(() => {
+    globalThis.fetch = vi.fn();
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it("requests the insights sub-resource for the match", async () => {
+    mockFetch(new Response(JSON.stringify({ api_id: 1001 }), { status: 200 }));
+
+    await api.matchInsights(1001);
+
+    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    expect(url.pathname).toBe("/api/v1/matches/1001/insights");
+  });
+
+  it("passes the h2h limit through as a query param", async () => {
+    mockFetch(new Response(JSON.stringify({}), { status: 200 }));
+
+    await api.matchInsights(1001, { limit: 5 });
+
+    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    expect(url.searchParams.get("limit")).toBe("5");
   });
 });

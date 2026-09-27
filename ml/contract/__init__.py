@@ -34,7 +34,7 @@ from ml.features.build_features import CONTEXT_COLUMNS, FEATURE_COLUMNS
 
 # Explicit version of the feature set/semantics. Bump whenever a feature is
 # added, renamed, or its meaning changes (this also bumps every PredictionResponse).
-FEATURE_VERSION = "1.0.0"
+FEATURE_VERSION = "1.1.0"
 
 # Prediction invariants: probabilities and confidence live in [0, 1]; the
 # probabilities sum to 1 within this tolerance and confidence equals the
