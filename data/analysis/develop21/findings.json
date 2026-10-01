@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:57:24+00:00",
+  "generated_at": "2026-09-29T15:48:22+00:00",
   "config": {
     "league": "develop21",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\develop21",
@@ -43,35 +43,35 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 5.09
+      "size_kb": 5.08
     },
     {
       "report_name": "teams_analysis",
       "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 26.48
+      "size_kb": 26.5
     },
     {
       "report_name": "season_trends",
       "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 2.57
+      "size_kb": 2.58
     },
     {
       "report_name": "scoreline_analysis",
       "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 12.21
+      "size_kb": 13.22
     },
     {
       "report_name": "relationships",
       "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.25
+      "size_kb": 12.18
     }
   ],
   "coverage": {
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "34 matches: home wins 41.2%, draws 26.5%, away wins 32.4% (14H / 9D / 11A)",
+      "detail": "40 matches: home wins 45.0%, draws 25.0%, away wins 30.0% (18H / 10D / 12A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,42 +97,42 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 10 times",
+      "detail": "home lead at HT -> home win occurred 13 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "34 matches produced 140 goals (avg 4.118 per match)",
+      "detail": "40 matches produced 164 goals (avg 4.100 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 55.7% vs away 44.3% of 140 goals in total (home/away ratio 1.26)",
+      "detail": "home 56.7% vs away 43.3% of 164 goals in total (home/away ratio 1.31)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "23 of 34 matches (67.6%)",
+      "detail": "28 of 40 matches (70.0%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 16-30 (first goal in 13 scoring matches, 39.4% of scoring)",
+      "detail": "minute 16-30 (first goal in 16 scoring matches, 41.0% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 22.70, median 19.0",
+      "detail": "mean 23.56, median 20.0",
       "importance": "low",
       "id": "F8"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Sheffield Wed U21 earns 4 more points at home than away (5 home vs 1 away)",
+      "detail": "Bristol City U21 earns 5 more points at home than away (7 home vs 2 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -167,49 +167,49 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Bolton U21 beat Fleetwood U21 by 6 pts",
+      "detail": "2026-2027: Bolton U21 beat Bristol City U21 by 6 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2026-2027 (goals view, avg abs position diff 6.000)",
+      "detail": "2026-2027 (goals view, avg abs position diff 7.176)",
       "importance": "low",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 2.235)",
+      "detail": "2026-2027 (luck view, avg abs position diff 2.824)",
       "importance": "low",
       "id": "F15"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "2-2 in 4 matches (11.8%)",
+      "detail": "2-2 in 5 matches (12.5%)",
       "importance": "medium",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "3-1 (4 of 14 home matches, 28.6%)",
+      "detail": "3-1 (5 of 18 home matches, 27.8%)",
       "importance": "low",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "2-2 (4 of 9 draw matches, 44.4%)",
+      "detail": "2-2 (5 of 10 draw matches, 50.0%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-2 (2 of 11 away matches, 18.2%)",
+      "detail": "0-2 (3 of 12 away matches, 25.0%)",
       "importance": "low",
       "id": "F19"
     },
@@ -221,44 +221,30 @@
       "id": "F20"
     },
     {
-      "source": "relationships",
-      "finding": "Strongest correlation with total goals",
-      "detail": "away_team_away_conceded_avg |corr| = 0.4016 (n=34 leakage-safe rows)",
-      "importance": "medium",
-      "id": "F21"
-    },
-    {
-      "source": "relationships",
-      "finding": "Most outcome-separating feature",
-      "detail": "position_difference spreads group means over 3.535: home 0.357, draw -2.444, away 1.091",
-      "importance": "medium",
-      "id": "F22"
-    },
-    {
       "source": "database_profile",
       "finding": "Data-quality warnings (9)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
-      "id": "F23"
+      "id": "F21"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "1 of 1 registered seasons populated (100.0%); 34 matches observed",
+      "detail": "1 of 1 registered seasons populated (100.0%); 40 matches observed",
       "importance": "medium",
-      "id": "F24"
+      "id": "F22"
     }
   ],
   "headline_stats": {
-    "n_matches": 34,
-    "avg_goals": 4.118,
-    "home_win_pct": 41.2,
-    "draw_pct": 26.5,
-    "away_win_pct": 32.4,
+    "n_matches": 40,
+    "avg_goals": 4.1,
+    "home_win_pct": 45.0,
+    "draw_pct": 25.0,
+    "away_win_pct": 30.0,
     "most_common_scoreline": "2-2",
     "dominant_team": "Bolton U21",
     "champion_most_titles": "Bolton U21",
-    "btts_rate_pct": 67.6
+    "btts_rate_pct": 70.0
   },
   "comparison": [
     {
@@ -297,7 +283,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 5.09
+      "size_kb": 5.08
     },
     {
       "module": "teams_analysis",
@@ -310,7 +296,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 26.48
+      "size_kb": 26.5
     },
     {
       "module": "season_trends",
@@ -323,7 +309,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 2.57
+      "size_kb": 2.58
     },
     {
       "module": "scoreline_analysis",
@@ -337,7 +323,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 12.21
+      "size_kb": 13.22
     },
     {
       "module": "relationships",
@@ -345,6 +331,7 @@
       "sections": [
         "n_matches",
         "feature_count",
+        "data_warning",
         "correlation_matrix",
         "form_vs_outcome",
         "position_vs_outcome",
@@ -352,17 +339,17 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.25
+      "size_kb": 12.18
     }
   ],
   "anomalies": [
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 34 matches, expected 380",
+      "message": "Season 2026-2027 has 40 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 34,
+        "n_matches": 40,
         "expected": 380
       }
     },
@@ -412,8 +399,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 6120,
-        "distinct": 6115,
+        "rows": 6151,
+        "distinct": 6146,
         "duplicates": 5
       }
     },
@@ -422,10 +409,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
       "details": {
-        "total": 6120,
+        "total": 6151,
         "fgt_inconsistent": 5,
         "fgte_inconsistent": 5,
-        "n_with_fgt": 5699
+        "n_with_fgt": 5728
       }
     },
     {

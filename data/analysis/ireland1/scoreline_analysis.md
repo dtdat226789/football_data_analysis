@@ -1,27 +1,27 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:01:26+00:00
+- Generated: 2026-09-29T15:55:41+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **338** across **2** seasons.
+- Matches analysed: **339** across **2** seasons.
 - Distinct scorelines seen: **27**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 46 | 13.6% |
-| 1-0 | 35 | 10.4% |
-| 2-1 | 33 | 9.8% |
-| 0-0 | 30 | 8.9% |
-| 1-2 | 30 | 8.9% |
+| 1-1 | 47 | 13.9% |
+| 1-0 | 35 | 10.3% |
+| 2-1 | 33 | 9.7% |
+| 0-0 | 30 | 8.8% |
+| 1-2 | 30 | 8.8% |
 | 0-1 | 26 | 7.7% |
 | 2-0 | 26 | 7.7% |
 | 2-2 | 24 | 7.1% |
-| 2-3 | 12 | 3.6% |
-| 0-2 | 11 | 3.3% |
-| 3-0 | 10 | 3.0% |
+| 2-3 | 12 | 3.5% |
+| 0-2 | 11 | 3.2% |
+| 3-0 | 10 | 2.9% |
 | 3-2 | 8 | 2.4% |
 | 3-1 | 7 | 2.1% |
 | 1-3 | 7 | 2.1% |
@@ -46,23 +46,23 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 21 | 13.3% |
-| 0-0 | 15 | 9.5% |
+| 1-1 | 22 | 13.8% |
+| 0-0 | 15 | 9.4% |
 | 2-1 | 13 | 8.2% |
 | 2-0 | 13 | 8.2% |
-| 1-0 | 13 | 8.2% |
+| 1-2 | 13 | 8.2% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 30 | 8.9% |
+| 0 | 30 | 8.8% |
 | 1 | 61 | 18.0% |
-| 2 | 83 | 24.6% |
-| 3 | 75 | 22.2% |
+| 2 | 84 | 24.8% |
+| 3 | 75 | 22.1% |
 | 4 | 45 | 13.3% |
-| 5 | 30 | 8.9% |
+| 5 | 30 | 8.8% |
 | 6 | 8 | 2.4% |
 | 7 | 4 | 1.2% |
 | 8 | 1 | 0.3% |
@@ -82,7 +82,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-04-24 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **235** (draws: **103**)
+- Decided matches: **235** (draws: **104**)
 - Average winning margin: **1.54**
 
 | margin | matches | pct |
@@ -115,7 +115,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 137 | 1-0 | 35 | 25.5% |
-| draw | 103 | 1-1 | 46 | 44.7% |
+| draw | 104 | 1-1 | 47 | 45.2% |
 | away | 98 | 1-2 | 30 | 30.6% |
 
 ---

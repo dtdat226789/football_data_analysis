@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T13:43:59+00:00
+- Generated: 2026-09-29T16:05:32+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Division 1 (Saudi Arabia)
 - Scope: league `saudi2`

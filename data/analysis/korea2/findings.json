@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:03:02+00:00",
+  "generated_at": "2026-09-29T16:00:47+00:00",
   "config": {
     "league": "korea2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\korea2",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\korea2\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.36
+      "size_kb": 14.32
     }
   ],
   "coverage": {
@@ -132,7 +132,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 34.80, median 30.0",
+      "detail": "mean 34.81, median 30.0",
       "importance": "low",
       "id": "F8"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_rest_days |corr| = 0.1014 (n=478 leakage-safe rows)",
+      "detail": "home_team_points_last_5 |corr| = 0.1405 (n=273 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 7.915: home 3.711, draw -0.412, away -4.204",
+      "detail": "points_difference spreads group means over 9.368: home 4.698, draw -0.200, away -4.670",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.36
+      "size_kb": 14.32
     }
   ],
   "anomalies": [
@@ -434,8 +434,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 18242,
-        "distinct": 18228,
+        "rows": 18368,
+        "distinct": 18354,
         "duplicates": 14
       }
     },
@@ -444,10 +444,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)",
       "details": {
-        "total": 18242,
+        "total": 18368,
         "fgt_inconsistent": 17,
         "fgte_inconsistent": 17,
-        "n_with_fgt": 16942
+        "n_with_fgt": 17058
       }
     },
     {

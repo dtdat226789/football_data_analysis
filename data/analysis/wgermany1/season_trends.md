@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T13:51:14+00:00
+- Generated: 2026-09-29T16:24:21+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Bundesliga Women (Germany)
 - Scope: league `wgermany1`
@@ -48,7 +48,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 2.429 | 4.286 |
-| 2026-2027 | 1.714 | 3.714 |
+| 2026-2027 | 2.000 | 3.714 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -32,6 +32,7 @@ def analysis_bundle(league: str) -> dict:
     if report_dir is None:
         return {
             "league": league,
+            "league_name": common.league_name(league),
             "meta": common.LEAGUE_CONFIG[league],
             "has_data": False,
             "reports": {},
@@ -48,6 +49,7 @@ def analysis_bundle(league: str) -> dict:
             reports[module] = payload
     return {
         "league": league,
+        "league_name": common.league_name(league),
         "meta": common.LEAGUE_CONFIG[league],
         "has_data": True,
         "reports": reports,
@@ -74,7 +76,11 @@ def analysis_charts(league: str) -> dict:
     report_dir = common.league_report_dir(league)
     if report_dir is None:
         raise HTTPException(status_code=404, detail=f"no data for league '{league}'")
-    return {"league": league, "charts": common.list_charts(report_dir)}
+    return {
+        "league": league,
+        "league_name": common.league_name(league),
+        "charts": common.list_charts(report_dir),
+    }
 
 
 def analysis_chart(league: str, chart: str) -> FileResponse:

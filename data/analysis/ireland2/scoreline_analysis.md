@@ -1,31 +1,31 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:01:35+00:00
+- Generated: 2026-09-29T15:56:10+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Division 1 (Ireland)
 - Scope: league `ireland2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **339** across **2** seasons.
+- Matches analysed: **344** across **2** seasons.
 - Distinct scorelines seen: **31**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 39 | 11.5% |
-| 1-1 | 36 | 10.6% |
-| 0-1 | 34 | 10.0% |
-| 1-0 | 28 | 8.3% |
-| 2-0 | 25 | 7.4% |
-| 2-2 | 23 | 6.8% |
-| 1-2 | 20 | 5.9% |
-| 0-0 | 19 | 5.6% |
-| 3-1 | 18 | 5.3% |
+| 2-1 | 41 | 11.9% |
+| 1-1 | 36 | 10.5% |
+| 0-1 | 34 | 9.9% |
+| 1-0 | 29 | 8.4% |
+| 2-0 | 25 | 7.3% |
+| 2-2 | 23 | 6.7% |
+| 1-2 | 20 | 5.8% |
+| 0-0 | 19 | 5.5% |
+| 3-1 | 18 | 5.2% |
 | 0-2 | 15 | 4.4% |
 | 3-2 | 12 | 3.5% |
-| 3-0 | 9 | 2.7% |
-| 4-0 | 9 | 2.7% |
-| 0-3 | 9 | 2.7% |
-| 1-3 | 6 | 1.8% |
+| 3-0 | 9 | 2.6% |
+| 4-0 | 9 | 2.6% |
+| 0-3 | 9 | 2.6% |
+| 1-3 | 7 | 2.0% |
 | 2-3 | 4 | 1.2% |
 | 5-0 | 4 | 1.2% |
 | 4-2 | 4 | 1.2% |
@@ -46,25 +46,25 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 23 | 14.4% |
-| 1-1 | 15 | 9.4% |
-| 1-0 | 15 | 9.4% |
-| 0-1 | 15 | 9.4% |
-| 2-0 | 15 | 9.4% |
+| 2-1 | 25 | 15.2% |
+| 1-0 | 16 | 9.7% |
+| 1-1 | 15 | 9.1% |
+| 0-1 | 15 | 9.1% |
+| 2-0 | 15 | 9.1% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 19 | 5.6% |
-| 1 | 62 | 18.3% |
-| 2 | 76 | 22.4% |
-| 3 | 77 | 22.7% |
-| 4 | 59 | 17.4% |
-| 5 | 27 | 8.0% |
-| 6 | 10 | 2.9% |
-| 7 | 8 | 2.4% |
+| 0 | 19 | 5.5% |
+| 1 | 63 | 18.3% |
+| 2 | 76 | 22.1% |
+| 3 | 79 | 23.0% |
+| 4 | 60 | 17.4% |
+| 5 | 27 | 7.8% |
+| 6 | 11 | 3.2% |
+| 7 | 8 | 2.3% |
 | 8 | 0 | 0.0% |
 | 9 | 1 | 0.3% |
 | 10+ | 0 | 0.0% |
@@ -85,41 +85,41 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-07-24 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **260** (draws: **79**)
-- Average winning margin: **1.79**
+- Decided matches: **264** (draws: **80**)
+- Average winning margin: **1.78**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 142 | 54.6% |
-| 2 | 68 | 26.2% |
-| 3+ | 50 | 19.2% |
+| 1 | 145 | 54.9% |
+| 2 | 69 | 26.1% |
+| 3+ | 50 | 18.9% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **162** | avg margin: **1.87** | max margin: **6**
+- Matches: **165** | avg margin: **1.85** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 81 | 50.0% |
-| 2 | 47 | 29.0% |
-| 3+ | 34 | 21.0% |
+| 1 | 84 | 50.9% |
+| 2 | 47 | 28.5% |
+| 3+ | 34 | 20.6% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **98** | avg margin: **1.65** | max margin: **7**
+- Matches: **99** | avg margin: **1.66** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 61 | 62.2% |
-| 2 | 21 | 21.4% |
-| 3+ | 16 | 16.3% |
+| 1 | 61 | 61.6% |
+| 2 | 22 | 22.2% |
+| 3+ | 16 | 16.2% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 162 | 2-1 | 39 | 24.1% |
-| draw | 79 | 1-1 | 36 | 45.6% |
-| away | 98 | 0-1 | 34 | 34.7% |
+| home | 165 | 2-1 | 41 | 24.8% |
+| draw | 80 | 1-1 | 36 | 45.0% |
+| away | 99 | 0-1 | 34 | 34.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

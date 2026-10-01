@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T10:59:50+00:00
+- Generated: 2026-09-29T15:51:25+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`
 
-- Teams: **26** | Seasons: **2** | Matches: **449**
+- Teams: **26** | Seasons: **2** | Matches: **450**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -20,28 +20,28 @@
 | Viktoria Koln | 2 | 45 | 20 | 6 | 19 | 66 | 70 | 62 | 8 | 33.0 | 2 | 11 | 0 |
 | Mannheim | 2 | 45 | 18 | 8 | 19 | 62 | 70 | 82 | -12 | 31.0 | 9 | 10 | 0 |
 | Wehen | 2 | 45 | 16 | 10 | 19 | 58 | 59 | 65 | -6 | 29.0 | 9 | 19 | 0 |
-| Ingolstadt | 2 | 45 | 15 | 12 | 18 | 57 | 72 | 67 | 5 | 28.5 | 12 | 13 | 0 |
+| Ingolstadt | 2 | 45 | 15 | 12 | 18 | 57 | 72 | 67 | 5 | 28.5 | 12 | 14 | 0 |
 | Saarbrucken | 2 | 45 | 14 | 15 | 16 | 57 | 70 | 69 | 1 | 28.5 | 4 | 15 | 0 |
 | Munich 1860 | 1 | 38 | 15 | 11 | 12 | 56 | 54 | 53 | 1 | 56.0 | 8 | 8 | 0 |
 | Hoffenheim II | 2 | 45 | 16 | 8 | 21 | 56 | 79 | 79 | 0 | 28.0 | 5 | 16 | 0 |
 | Regensburg | 2 | 45 | 15 | 9 | 21 | 54 | 67 | 75 | -8 | 27.0 | 13 | 18 | 0 |
-| Stuttgart II | 2 | 45 | 15 | 8 | 22 | 53 | 69 | 84 | -15 | 26.5 | 14 | 14 | 0 |
-| TSV Havelse | 2 | 44 | 10 | 9 | 25 | 39 | 66 | 101 | -35 | 19.5 | 17 | 20 | 0 |
+| Stuttgart II | 2 | 45 | 15 | 8 | 22 | 53 | 69 | 84 | -15 | 26.5 | 14 | 15 | 0 |
+| TSV Havelse | 2 | 45 | 10 | 9 | 26 | 39 | 67 | 104 | -37 | 19.5 | 17 | 20 | 0 |
 | Aue | 1 | 38 | 7 | 13 | 18 | 34 | 51 | 70 | -19 | 34.0 | 18 | 18 | 0 |
 | Ulm | 1 | 38 | 9 | 6 | 23 | 33 | 49 | 78 | -29 | 33.0 | 19 | 19 | 0 |
 | Schweinfurt | 1 | 38 | 5 | 6 | 27 | 21 | 38 | 87 | -49 | 21.0 | 20 | 20 | 0 |
 | Preussen Munster | 1 | 7 | 3 | 2 | 2 | 11 | 12 | 13 | -1 | 11.0 | 8 | 8 | 0 |
 | Dusseldorf | 1 | 7 | 3 | 1 | 3 | 10 | 6 | 7 | -1 | 10.0 | 10 | 10 | 0 |
-| Grossaspach | 1 | 7 | 2 | 2 | 3 | 8 | 6 | 9 | -3 | 8.0 | 12 | 12 | 0 |
-| Wurzburger Kickers | 1 | 7 | 2 | 1 | 4 | 7 | 11 | 15 | -4 | 7.0 | 15 | 15 | 0 |
-| Fortuna Koln | 1 | 6 | 1 | 3 | 2 | 6 | 5 | 7 | -2 | 6.0 | 16 | 16 | 0 |
+| Fortuna Koln | 1 | 7 | 2 | 3 | 2 | 9 | 8 | 8 | 0 | 9.0 | 12 | 12 | 0 |
+| Grossaspach | 1 | 7 | 2 | 2 | 3 | 8 | 6 | 9 | -3 | 8.0 | 13 | 13 | 0 |
+| Wurzburger Kickers | 1 | 7 | 2 | 1 | 4 | 7 | 11 | 15 | -4 | 7.0 | 16 | 16 | 0 |
 | Meppen | 1 | 7 | 2 | 0 | 5 | 6 | 8 | 15 | -7 | 6.0 | 17 | 17 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Duisburg | 22 | 17 | 5 | 0 | 56 | 23 | 8 | 6 | 9 | 30 | 26 |
-| TSV Havelse | 22 | 8 | 5 | 9 | 29 | 22 | 2 | 4 | 16 | 10 | 19 |
+| TSV Havelse | 23 | 8 | 5 | 10 | 29 | 22 | 2 | 4 | 16 | 10 | 19 |
 | Verl | 23 | 14 | 4 | 5 | 46 | 22 | 7 | 7 | 8 | 28 | 18 |
 | Mannheim | 23 | 12 | 4 | 7 | 40 | 22 | 6 | 4 | 12 | 22 | 18 |
 | Saarbrucken | 23 | 10 | 7 | 6 | 37 | 22 | 4 | 8 | 10 | 20 | 17 |
@@ -61,10 +61,10 @@
 | Dusseldorf | 3 | 2 | 0 | 1 | 6 | 4 | 1 | 1 | 2 | 4 | 2 |
 | Meppen | 3 | 1 | 0 | 2 | 3 | 4 | 1 | 0 | 3 | 3 | 0 |
 | Preussen Munster | 3 | 1 | 2 | 0 | 5 | 4 | 2 | 0 | 2 | 6 | -1 |
-| Fortuna Koln | 3 | 0 | 2 | 1 | 2 | 3 | 1 | 1 | 1 | 4 | -2 |
 | Alemannia Aachen | 23 | 11 | 3 | 9 | 36 | 22 | 11 | 6 | 5 | 39 | -3 |
 | VfL Osnabruck | 19 | 11 | 5 | 3 | 38 | 19 | 13 | 3 | 3 | 42 | -4 |
 | Hansa Rostock | 22 | 10 | 7 | 5 | 37 | 23 | 11 | 9 | 3 | 42 | -5 |
+| Fortuna Koln | 3 | 0 | 2 | 1 | 2 | 4 | 2 | 1 | 1 | 7 | -5 |
 | Ingolstadt | 22 | 6 | 6 | 10 | 24 | 23 | 9 | 6 | 8 | 33 | -9 |
 
 ## 3. Top performers
@@ -100,7 +100,7 @@
 |---|---|---|
 | 1 | VfL Osnabruck | 0.895 |
 | 2 | Dusseldorf | 1.000 |
-| 3 | Fortuna Koln | 1.167 |
+| 3 | Fortuna Koln | 1.143 |
 | 4 | Duisburg | 1.244 |
 | 5 | Grossaspach | 1.286 |
 
@@ -110,7 +110,7 @@
 Alemannia Aachen, Duisburg, Hansa Rostock, Hoffenheim II, Ingolstadt, Mannheim, RW Essen, Regensburg, Saarbrucken, Stuttgart II, TSV Havelse, Verl, Viktoria Koln, Wehen
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **228** (showing the 15 most frequent)
+- Distinct fixtures: **229** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -145,21 +145,21 @@ _Cells show final position; '-' when the team was absent from that season._
 | Viktoria Koln | 11 | 2 |
 | Mannheim | 10 | 9 |
 | Wehen | 9 | 19 |
-| Ingolstadt | 12 | 13 |
+| Ingolstadt | 12 | 14 |
 | Saarbrucken | 15 | 4 |
 | Munich 1860 | 8 | - |
 | Hoffenheim II | 16 | 5 |
 | Regensburg | 13 | 18 |
-| Stuttgart II | 14 | 14 |
+| Stuttgart II | 14 | 15 |
 | TSV Havelse | 17 | 20 |
 | Aue | 18 | - |
 | Ulm | 19 | - |
 | Schweinfurt | 20 | - |
 | Preussen Munster | - | 8 |
 | Dusseldorf | - | 10 |
-| Grossaspach | - | 12 |
-| Wurzburger Kickers | - | 15 |
-| Fortuna Koln | - | 16 |
+| Fortuna Koln | - | 12 |
+| Grossaspach | - | 13 |
+| Wurzburger Kickers | - | 16 |
 | Meppen | - | 17 |
 
 ---

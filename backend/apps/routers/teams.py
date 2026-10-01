@@ -121,6 +121,7 @@ def team_matches(
     return {
         "team": slug,
         "league": league,
+        "league_name": common.league_name(league),
         "season": season,
         "total": total,
         "limit": limit,
@@ -176,6 +177,7 @@ def team_form(
     return {
         "team": slug,
         "league": league,
+        "league_name": common.league_name(league),
         "season": season,
         "context": context,
         "results": results,
@@ -234,6 +236,7 @@ def team_standings(
     return {
         "team": slug,
         "league": league,
+        "league_name": common.league_name(league),
         "season": season,
         "view": view,
         "row": dict(row) if row else None,
@@ -323,6 +326,7 @@ def _team_stats_data(cur, slug: str, league: str, view: str) -> dict:
     return {
         "team": slug,
         "league": league,
+        "league_name": common.league_name(league),
         "view": view,
         "seasons": seasons,
         "totals": totals,

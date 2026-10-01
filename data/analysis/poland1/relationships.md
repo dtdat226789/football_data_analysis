@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-23T13:41:04+00:00
+- Generated: 2026-09-29T16:03:02+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Ekstraklasa (Poland)
 - Scope: league `poland1`

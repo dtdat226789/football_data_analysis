@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T11:03:06+00:00
+- Generated: 2026-09-29T16:00:53+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Premier League (Kuwait)
 - Scope: league `kuwait`

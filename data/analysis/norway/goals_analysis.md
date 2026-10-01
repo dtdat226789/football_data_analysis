@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T11:04:05+00:00
+- Generated: 2026-09-29T16:02:39+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`

@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T10:54:37+00:00
+- Generated: 2026-09-29T15:43:53+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`

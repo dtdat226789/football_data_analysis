@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T10:56:27+00:00
+- Generated: 2026-09-29T15:47:05+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`

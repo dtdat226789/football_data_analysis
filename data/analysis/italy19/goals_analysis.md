@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T11:01:51+00:00
+- Generated: 2026-09-29T15:56:59+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -71,17 +71,17 @@
 ## 7. First-goal timing
 - Matches with first-goal time recorded: `392` of `432` (90.7%)
 - Goalless matches: `40`
-- Min `1` | Max `91` | Mean `28.35` | Median (p50) `21.5`
+- Min `1` | Max `91` | Mean `28.06` | Median (p50) `21.0`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 155 | 35.9% | 39.5% |
-| 16-30 | 79 | 18.3% | 20.2% |
-| 31-45 | 71 | 16.4% | 18.1% |
+| 1-15 | 158 | 36.6% | 40.3% |
+| 16-30 | 81 | 18.8% | 20.7% |
+| 31-45 | 65 | 15.0% | 16.6% |
 | 46-60 | 40 | 9.3% | 10.2% |
 | 61-75 | 23 | 5.3% | 5.9% |
 | 76-90 | 21 | 4.9% | 5.4% |
-| 91-120 | 3 | 0.7% | 0.8% |
+| 91-120 | 4 | 0.9% | 1.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_goals.py` to regenerate.*

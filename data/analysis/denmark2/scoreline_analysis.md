@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:57:14+00:00
+- Generated: 2026-09-29T15:48:08+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: 1st Division (Denmark)
 - Scope: league `denmark2`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T10:54:28+00:00
+- Generated: 2026-09-29T15:43:40+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`
@@ -38,17 +38,17 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025-2026 | 240 | 544 | 2.267 | 50.0% | 29.2% | 20.8% | 8.3% | 40.62 |
-| 2026-2027 | 22 | 56 | 2.545 | 45.5% | 31.8% | 22.7% | 4.5% | 3.69 |
+| 2026-2027 | 23 | 56 | 2.435 | 43.5% | 34.8% | 21.7% | 8.7% | 3.81 |
 
 ## 6. View divergence
-- Largest divergence: **2026-2027** (goals view, avg abs position diff = 5.500)
+- Largest divergence: **2025-2026** (goals view, avg abs position diff = 4.625)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 1.500 | 4.625 |
-| 2026-2027 | 2.375 | 5.500 |
+| 2026-2027 | 1.750 | 4.375 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

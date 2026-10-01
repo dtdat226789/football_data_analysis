@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:00:29+00:00
+- Generated: 2026-09-29T15:52:51+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Eredivisie (Netherlands)
 - Scope: league `holland1`
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 2-2 (41 of 100 draw matches, 41.0%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (29 of 122 away matches, 23.8%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 16 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.1246 (n=384 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.46: home 3.222, draw -0.500, away -4.238
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.1532 (n=321 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 8.353: home 3.322, draw -0.783, away -5.032
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (17)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 384 matches observed
 

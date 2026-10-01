@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:01:54+00:00
+- Generated: 2026-09-29T15:57:11+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`

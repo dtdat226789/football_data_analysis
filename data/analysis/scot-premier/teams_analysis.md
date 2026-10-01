@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T13:44:34+00:00
+- Generated: 2026-09-29T16:06:03+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`

@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T13:50:53+00:00
+- Generated: 2026-09-29T16:11:21+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Premiere Ligue Women (France)
 - Scope: league `wfrance1`

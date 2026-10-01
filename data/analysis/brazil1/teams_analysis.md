@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T10:55:27+00:00
+- Generated: 2026-09-29T15:45:21+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`

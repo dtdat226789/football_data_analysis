@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T13:51:16+00:00
+- Generated: 2026-09-29T16:24:22+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Bundesliga Women (Germany)
 - Scope: league `wgermany1`

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:03:02+00:00
+- Generated: 2026-09-29T16:00:47+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\korea2\teams_analysis.json | yes | yes | 36.23 |
 | season_trends | E:\football_data_analysis\data\analysis\korea2\season_trends.json | yes | yes | 3.90 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\korea2\scoreline_analysis.json | yes | yes | 74.64 |
-| relationships | E:\football_data_analysis\data\analysis\korea2\relationships.json | yes | yes | 14.36 |
+| relationships | E:\football_data_analysis\data\analysis\korea2\relationships.json | yes | yes | 14.32 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -25,7 +25,7 @@
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 52.0% vs away 48.0% of 1274 goals in total (home/away ratio 1.08)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 269 of 493 matches (54.6%)
 - **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 134 scoring matches, 29.7% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.80, median 30.0
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.81, median 30.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Suwon Bluewings leads with 128 points across 2 seasons (1 title(s), GD 47)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 12 teams present in every one of the 2 seasons (Ansan Greeners, Asan, Busan, Cheonan City, Cheongju...)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Asan earns 21 more points at home than away (54 home vs 33 away)
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (64 of 153 draw matches, 41.8%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (56 of 167 away matches, 33.5%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 6 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_rest_days |corr| = 0.1014 (n=478 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.915: home 3.711, draw -0.412, away -4.204
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_points_last_5 |corr| = 0.1405 (n=273 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 9.368: home 4.698, draw -0.200, away -4.670
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 493 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 36.23 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.90 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 74.64 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.36 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.32 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 273 matches, expected 380

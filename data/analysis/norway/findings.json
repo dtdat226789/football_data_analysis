@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:40:46+00:00",
+  "generated_at": "2026-09-29T16:02:50+00:00",
   "config": {
     "league": "norway",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\norway",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\norway\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.34
+      "size_kb": 14.31
     }
   ],
   "coverage": {
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_home_goals_avg |corr| = 0.1077 (n=408 leakage-safe rows)",
+      "detail": "home_rest_days |corr| = 0.1743 (n=232 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 8.51: home 3.137, draw -1.564, away -5.373",
+      "detail": "points_difference spreads group means over 11.228: home 4.085, draw -0.756, away -7.143",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.34
+      "size_kb": 14.31
     }
   ],
   "anomalies": [
@@ -469,8 +469,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 21247,
-        "distinct": 21233,
+        "rows": 21397,
+        "distinct": 21383,
         "duplicates": 14
       }
     },
@@ -479,10 +479,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=23, fgte=23 rows)",
       "details": {
-        "total": 21247,
+        "total": 21397,
         "fgt_inconsistent": 23,
         "fgte_inconsistent": 23,
-        "n_with_fgt": 19760
+        "n_with_fgt": 19900
       }
     },
     {

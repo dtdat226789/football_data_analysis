@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:00:26+00:00
+- Generated: 2026-09-29T15:52:43+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Eredivisie (Netherlands)
 - Scope: league `holland1`

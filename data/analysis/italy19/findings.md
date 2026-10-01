@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:01:56+00:00
+- Generated: 2026-09-29T15:57:19+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\italy19\teams_analysis.json | yes | yes | 32.87 |
 | season_trends | E:\football_data_analysis\data\analysis\italy19\season_trends.json | yes | yes | 3.94 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\italy19\scoreline_analysis.json | yes | yes | 69.60 |
-| relationships | E:\football_data_analysis\data\analysis\italy19\relationships.json | yes | yes | 14.35 |
+| relationships | E:\football_data_analysis\data\analysis\italy19\relationships.json | yes | yes | 14.34 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -24,8 +24,8 @@
 - **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 432 matches produced 1212 goals (avg 2.806 per match)
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 53.9% vs away 46.1% of 1212 goals in total (home/away ratio 1.17)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 257 of 432 matches (59.5%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 155 scoring matches, 39.5% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 28.35, median 21.5
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 158 scoring matches, 40.3% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 28.06, median 21.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Parma U20 leads with 79 points across 2 seasons (0 title(s), GD 27)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 17 teams present in every one of the 2 seasons (AC Milan U20, AS Roma U20, Atalanta U20, Bologna U20, Cagliari U20...)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Fiorentina U20 earns 15 more points at home than away (43 home vs 28 away)
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (58 of 133 draw matches, 43.6%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (37 of 133 away matches, 27.8%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 14 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_home_win_rate |corr| = 0.0662 (n=432 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — home_points_before_match spreads group means over 3.551: home 23.687, draw 23.301, away 20.135
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_conceded_avg |corr| = 0.1205 (n=382 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 3.852: home 1.276, draw -0.120, away -2.575
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (10)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 432 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 32.87 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.94 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 69.60 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.35 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.34 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 382 matches, expected 380

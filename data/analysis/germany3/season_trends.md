@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T10:59:51+00:00
+- Generated: 2026-09-29T15:51:27+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`
@@ -38,7 +38,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025-2026 | 380 | 1219 | 3.208 | 46.1% | 23.4% | 30.5% | 6.1% | 52.55 |
-| 2026-2027 | 69 | 225 | 3.261 | 42.0% | 20.3% | 37.7% | 2.9% | 9.65 |
+| 2026-2027 | 70 | 229 | 3.271 | 41.4% | 20.0% | 38.6% | 2.9% | 9.8 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 7.200)
@@ -48,7 +48,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 2.100 | 7.200 |
-| 2026-2027 | 2.700 | 5.900 |
+| 2026-2027 | 2.300 | 6.100 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

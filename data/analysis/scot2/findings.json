@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:45:16+00:00",
+  "generated_at": "2026-09-29T16:06:40+00:00",
   "config": {
     "league": "scot2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot2",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\scot2\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.33
+      "size_kb": 14.31
     }
   ],
   "coverage": {
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_home_win_rate |corr| = 0.1849 (n=228 leakage-safe rows)",
+      "detail": "away_team_away_win_rate |corr| = 0.1678 (n=188 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "away_points_before_match spreads group means over 3.704: home 21.323, draw 22.629, away 18.925",
+      "detail": "home_points_before_match spreads group means over 5.874: home 26.840, draw 23.309, away 20.966",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.33
+      "size_kb": 14.31
     }
   ],
   "anomalies": [
@@ -489,8 +489,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (20 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 28024,
-        "distinct": 28004,
+        "rows": 28198,
+        "distinct": 28178,
         "duplicates": 20
       }
     },
@@ -499,10 +499,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=26, fgte=26 rows)",
       "details": {
-        "total": 28024,
+        "total": 28198,
         "fgt_inconsistent": 26,
         "fgte_inconsistent": 26,
-        "n_with_fgt": 26051
+        "n_with_fgt": 26214
       }
     },
     {

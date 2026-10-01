@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T13:42:19+00:00
+- Generated: 2026-09-29T16:04:09+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (255 of 553 draw matches, 46.1%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (173 of 776 away matches, 22.3%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 67 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.074 (n=2330 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 11.233: home 5.098, draw -1.078, away -6.135
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.076 (n=2280 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 11.426: home 5.189, draw -1.125, away -6.237
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (16)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 2330 matches observed
 

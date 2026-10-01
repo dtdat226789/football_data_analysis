@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:01:10+00:00
+- Generated: 2026-09-29T15:54:50+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`
@@ -25,7 +25,7 @@
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 55.0% vs away 45.0% of 774 goals in total (home/away ratio 1.22)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 149 of 301 matches (49.5%)
 - **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 95 scoring matches, 33.5% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 31.63, median 27.0
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 31.85, median 27.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Kecskemeti TE leads with 68 points across 2 seasons (0 title(s), GD 17)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 12 teams present in every one of the 2 seasons (Ajka, BVSC-Zuglo, Csakvari, Karcagi, Kecskemeti TE...)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Soroksar earns 21 more points at home than away (37 home vs 16 away)
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (39 of 74 draw matches, 52.7%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (27 of 90 away matches, 30.0%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 7 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_rest_days |corr| = 0.1018 (n=285 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — away_points_before_match spreads group means over 5.193: home 15.051, draw 15.770, away 20.244
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_rest_days |corr| = 0.1261 (n=232 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — home_points_before_match spreads group means over 5.38: home 19.743, draw 16.567, away 21.947
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (17)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 301 matches observed
 

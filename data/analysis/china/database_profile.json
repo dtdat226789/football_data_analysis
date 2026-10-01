@@ -4,7 +4,7 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:56:05+00:00",
+  "generated_at": "2026-09-29T15:46:27+00:00",
   "config": {
     "league": "china",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\china",
@@ -30,7 +30,7 @@
       "teams": 265,
       "team_aliases": 530,
       "team_seasons": 424,
-      "matches": 4519,
+      "matches": 4530,
       "standings": 1272
     },
     "leagues": [
@@ -39,7 +39,7 @@
         "name": "Ligue 1",
         "country": "Algeria",
         "n_registered_seasons": 2,
-        "n_matches": 262
+        "n_matches": 263
       },
       {
         "api_key": "australia",
@@ -88,7 +88,7 @@
         "name": "Serie B",
         "country": "Brazil",
         "n_registered_seasons": 2,
-        "n_matches": 669
+        "n_matches": 679
       },
       {
         "api_key": "bulgaria1",
@@ -714,20 +714,20 @@
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 4519,
-        "distinct": 4519,
+        "rows": 4530,
+        "distinct": 4530,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 4519,
-        "distinct": 4519,
+        "rows": 4530,
+        "distinct": 4530,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 4519,
-        "distinct": 4517,
+        "rows": 4530,
+        "distinct": 4528,
         "duplicates": 2
       },
       {
@@ -780,65 +780,65 @@
       }
     ],
     "null_counts": {
-      "total": 4519,
+      "total": 4530,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 4519,
+          "n_not_null": 4530,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 4519,
+          "n_not_null": 4530,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 4519,
+          "n_not_null": 4530,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 4519,
+          "n_not_null": 4530,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 4519,
+          "n_not_null": 4530,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 4519,
+          "n_not_null": 4530,
           "null_pct": 0.0
         },
         "home_ht": {
           "n_null": 6,
-          "n_not_null": 4513,
+          "n_not_null": 4524,
           "null_pct": 0.1
         },
         "away_ht": {
           "n_null": 6,
-          "n_not_null": 4513,
+          "n_not_null": 4524,
           "null_pct": 0.1
         },
         "first_goal_time": {
-          "n_null": 326,
-          "n_not_null": 4193,
+          "n_null": 328,
+          "n_not_null": 4202,
           "null_pct": 7.2
         },
         "first_goal_time_extra": {
-          "n_null": 326,
-          "n_not_null": 4193,
+          "n_null": 328,
+          "n_not_null": 4202,
           "null_pct": 7.2
         }
       }
     },
     "first_goal_consistency": {
-      "total": 4519,
+      "total": 4530,
       "fgt_inconsistent": 4,
       "fgte_inconsistent": 4,
-      "n_with_fgt": 4193
+      "n_with_fgt": 4202
     },
     "value_ranges": {
       "min_home": 0,
@@ -1229,8 +1229,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 4519,
-        "distinct": 4517,
+        "rows": 4530,
+        "distinct": 4528,
         "duplicates": 2
       }
     },
@@ -1239,10 +1239,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=4, fgte=4 rows)",
       "details": {
-        "total": 4519,
+        "total": 4530,
         "fgt_inconsistent": 4,
         "fgte_inconsistent": 4,
-        "n_with_fgt": 4193
+        "n_with_fgt": 4202
       }
     },
     {

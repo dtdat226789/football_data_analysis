@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T13:43:57+00:00
+- Generated: 2026-09-29T16:05:30+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Division 1 (Saudi Arabia)
 - Scope: league `saudi2`

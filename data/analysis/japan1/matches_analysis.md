@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T11:02:27+00:00
+- Generated: 2026-09-29T15:58:56+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: J1 League (Japan)
 - Scope: league `japan1`

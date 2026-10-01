@@ -24,34 +24,66 @@ export const leagueDetail = {
 export const upcomingFixtures = {
   count: 2,
   total: 2,
+  returned: 2,
+  limit: 50,
+  offset: 0,
+  has_more: false,
+  sort: "confidence",
+  league: null,
+  league_name: null,
+  min_confidence: null,
+  from_date: null,
+  to_date: null,
+  first_date: "2026-02-01",
+  last_date: "2026-02-02",
+  dates: ["2026-02-01", "2026-02-02"],
+  day_counts: { "2026-02-01": 1, "2026-02-02": 1 },
   matches: [
     {
       slug: "england/premier-league/2026-02-01-arsenal-vs-chelsea",
       league: "premier",
+      league_name: "Premier League",
       country: "England",
       home_team: "Arsenal",
       away_team: "Chelsea",
       match_date: "2026-02-01",
       time: "16:00",
       status: "scheduled",
-      predictions: { home: 0.58, away: 0.18, btts_yes: 0.55, over_1_5: 0.82, over_2_5: 0.61, confidence: 0.58, data_through: "2026-01-29" },
+      predictions: {
+        home: 0.58, away: 0.18, btts_yes: 0.55, over_1_5: 0.82, over_2_5: 0.61,
+        confidence: 0.58, data_through: "2026-01-29",
+        selected: [
+          { key: "ft.totals.over_1.5", family: "totals", label: "O1.5", scope: "full_time", line: 1.5, selection: "over", probability: 0.8, provenance: "model", promotable: true },
+          { key: "ft.asian_handicap.-0.5_away", family: "asian_handicap", label: "Away +0.5", scope: "full_time", line: -0.5, selection: "away", probability: 0.42, provenance: "model", promotable: true },
+          { key: "ft.totals.under_2.5", family: "totals", label: "U2.5", scope: "full_time", line: 2.5, selection: "under", probability: 0.41, provenance: "model", promotable: true },
+          { key: "ht.result.home", family: "result", label: "1", scope: "half_time", line: null, selection: "home", probability: 0.62, provenance: "modelled", promotable: true },
+        ],
+      },
     },
     {
       slug: "spain/laliga/2026-02-02-barcelona-vs-madrid",
       league: "spain1",
+      league_name: "La Liga",
       country: "Spain",
       home_team: "Barcelona",
       away_team: "Real Madrid",
       match_date: "2026-02-02",
       time: "20:00",
       status: "scheduled",
-      predictions: { home: 0.44, away: 0.29, btts_yes: 0.68, over_1_5: 0.8, over_2_5: 0.57, confidence: 0.44, data_through: "2026-01-29" },
+      predictions: {
+        home: 0.44, away: 0.29, btts_yes: 0.68, over_1_5: 0.8, over_2_5: 0.57,
+        confidence: 0.44, data_through: "2026-01-29",
+        selected: [
+          { key: "ft.btts.yes", family: "btts", label: "BTTS yes", scope: "full_time", line: null, selection: "yes", probability: 0.68, provenance: "model", promotable: true },
+        ],
+      },
     },
   ],
 };
 
 export const leagueFixturesPayload = {
   league: "premier",
+  league_name: "Premier League",
   count: 1,
   matches: [
     {
@@ -224,6 +256,7 @@ export const matchList = {
 export const matchDetail = {
   api_id: 1001,
   league: "premier",
+  league_name: "Premier League",
   season: "2024-2025",
   match_date: "2025-01-18",
   kickoff_time: "15:00",
@@ -285,6 +318,7 @@ export const teamStanding = {
 export const teamStatsResponse = {
   team: "arsenal",
   league: "premier",
+  league_name: "Premier League",
   view: "classic",
   seasons: [
     { season: "2023-2024", position: 2, played: 38, won: 26, drawn: 5, lost: 7, goals_for: 88, goals_against: 36, goal_difference: 52, points: 83 },
@@ -407,12 +441,47 @@ export const matchInsights = {
 };
 
 /**
+/** The markets the backend promoted to chips, as keys into `fixtureMarkets`. */
+export const SELECTED_KEYS = [
+  "ft.totals.over_1.5",
+  "ft.asian_handicap.-0.5_away",
+  "ft.totals.under_2.5",
+  "ht_ft.home.home",
+];
+
+/** A slice of the derived menu, trimmed to what the tests assert on. */
+export const fixtureMarkets = [
+  { key: "ft.result.home", family: "result", label: "1", scope: "full_time", line: null, selection: "home", probability: 0.58, provenance: "model", promotable: true },
+  { key: "ft.result.draw", family: "result", label: "X", scope: "full_time", line: null, selection: "draw", probability: 0.24, provenance: "model", promotable: true },
+  { key: "ft.result.away", family: "result", label: "2", scope: "full_time", line: null, selection: "away", probability: 0.18, provenance: "model", promotable: true },
+  { key: "ft.double_chance.home_or_draw", family: "double_chance", label: "1X", scope: "full_time", line: null, selection: "home_or_draw", probability: 0.82, provenance: "model", promotable: true },
+  { key: "ft.totals.over_1.5", family: "totals", label: "O1.5", scope: "full_time", line: 1.5, selection: "over", probability: 0.8, provenance: "model", promotable: true },
+  { key: "ft.totals.under_1.5", family: "totals", label: "U1.5", scope: "full_time", line: 1.5, selection: "under", probability: 0.2, provenance: "model", promotable: true },
+  { key: "ft.totals.over_2.5", family: "totals", label: "O2.5", scope: "full_time", line: 2.5, selection: "over", probability: 0.59, provenance: "model", promotable: true },
+  { key: "ft.totals.under_2.5", family: "totals", label: "U2.5", scope: "full_time", line: 2.5, selection: "under", probability: 0.41, provenance: "model", promotable: true },
+  { key: "ft.btts.yes", family: "btts", label: "BTTS yes", scope: "full_time", line: null, selection: "yes", probability: 0.55, provenance: "model", promotable: true },
+  { key: "ft.btts.no", family: "btts", label: "BTTS no", scope: "full_time", line: null, selection: "no", probability: 0.45, provenance: "model", promotable: true },
+  { key: "ft.asian_handicap.-0.5_home", family: "asian_handicap", label: "Home -0.5", scope: "full_time", line: -0.5, selection: "home", probability: 0.58, push: 0, provenance: "model", promotable: true },
+  { key: "ft.asian_handicap.-0.5_away", family: "asian_handicap", label: "Away +0.5", scope: "full_time", line: -0.5, selection: "away", probability: 0.42, provenance: "model", promotable: true },
+  { key: "ft.asian_handicap.-1_home", family: "asian_handicap", label: "Home -1", scope: "full_time", line: -1, selection: "home", probability: 0.31, push: 0.27, provenance: "model", promotable: true },
+  { key: "ft.asian_handicap.-1_away", family: "asian_handicap", label: "Away +1", scope: "full_time", line: -1, selection: "away", probability: 0.42, provenance: "model", promotable: true },
+  { key: "ft.team_total.home.over_1.5", family: "team_total", label: "Home O1.5", scope: "full_time", line: 1.5, selection: "home", probability: 0.64, provenance: "model", promotable: false },
+  { key: "ft.correct_score.2_1", family: "correct_score", label: "2-1", scope: "full_time", line: null, selection: "home_away", probability: 0.09, provenance: "model", promotable: false },
+  { key: "ft.correct_score.1_1", family: "correct_score", label: "1-1", scope: "full_time", line: null, selection: "home_away", probability: 0.11, provenance: "model", promotable: false },
+  { key: "ht.result.home", family: "result", label: "1", scope: "half_time", line: null, selection: "home", probability: 0.41, provenance: "modelled", promotable: true },
+  { key: "ht.totals.over_0.5", family: "totals", label: "O0.5", scope: "half_time", line: 0.5, selection: "over", probability: 0.62, provenance: "modelled", promotable: true },
+  { key: "ht_ft.home.home", family: "ht_ft", label: "1/1", scope: "half_to_full", line: null, selection: "home_home", probability: 0.24, provenance: "modelled", promotable: false },
+  { key: "ht_ft.draw.draw", family: "ht_ft", label: "X/X", scope: "half_to_full", line: null, selection: "draw_draw", probability: 0.06, provenance: "modelled", promotable: false },
+];
+
+/**
  * GET /fixtures/premier/{tail} — an unplayed fixture with everything the detail
  * page renders: full dc_v2 block, kickoff metadata, logos, form, matchday, the
  * pre-match panel and head-to-head.
  */
 export const fixtureDetail = {
   league: "premier",
+  league_name: "Premier League",
   match_id: "2026-02-01-arsenal-vs-chelsea",
   slug: "england/premier-league/2026-02-01-arsenal-vs-chelsea",
   country: "England",
@@ -485,6 +554,8 @@ export const fixtureDetail = {
       { line: "over_2.5", scope: "full_time", threshold: "2.5", raw: 0.59, calibrated: 0.61 },
       { line: "ht_over_0.5", scope: "half_time", threshold: "0.5", raw: 0.5, calibrated: 0.51 },
     ],
+    markets: fixtureMarkets,
+    selected: fixtureMarkets.filter((m) => SELECTED_KEYS.includes(m.key)),
     ratings: { home: { attack: 0.42, defence: 0.31 }, away: { attack: -0.12, defence: -0.08 } },
     effective_matches: { home: 34.6, away: 15.6 },
     gates: { leans: false, probabilities: true },
@@ -510,4 +581,83 @@ export const fixtureDetailNoHistory = {
   },
   kickoff: { time: "16:00", match_datetime: null, label: null, league_phase_status: null, portal_link: null },
   predictability: null,
+};
+
+/**
+ * GET /fixtures/premier/{tail}?market=<key> — the mechanism behind one derived
+ * market. Two shapes are represented because they are genuinely different: a
+ * scoreline market carries the cells that pay it, and HT/FT carries the two
+ * 1X2 splits it multiplies together instead.
+ */
+export const marketDetail = {
+  league: "premier",
+  league_name: "Premier League",
+  match_id: "2026-02-01-arsenal-vs-chelsea",
+  slug: "england/premier-league/2026-02-01-arsenal-vs-chelsea",
+  market_key: "ft.asian_handicap.-1_home",
+  market: {
+    key: "ft.asian_handicap.-1_home",
+    family: "asian_handicap",
+    label: "Home -1",
+    scope: "full_time",
+    line: -1,
+    selection: "home",
+    provenance: "model",
+    promotable: true,
+    settlement: { win: 0.31, push: 0.27, lose: 0.42 },
+    cells: [
+      { home_goals: 2, away_goals: 0, score: "2-0", probability: 0.1412, share: 0.4555, outcome: "win" },
+      { home_goals: 1, away_goals: 0, score: "1-0", probability: 0.1354, share: 0.4368, outcome: "push" },
+      { home_goals: 2, away_goals: 1, score: "2-1", probability: 0.1011, share: 0.3261, outcome: "win" },
+      { home_goals: 1, away_goals: 1, score: "1-1", probability: 0.0936, share: 0.3458, outcome: "lose" },
+    ],
+    grid_cells: 81,
+    paying_cells: 4,
+    method: "the scorelines that settle this line, splitting any quarter line into its two half-stakes",
+  },
+};
+
+/** A level Asian handicap: the scorelines that pay it, and the refund. */
+export const marketDetailQuarter = {
+  ...marketDetail,
+  market_key: "ft.asian_handicap.-0.25_home",
+  market: {
+    ...marketDetail.market,
+    key: "ft.asian_handicap.-0.25_home",
+    label: "Home -0.25",
+    line: -0.25,
+    settlement: { win: 0.5, push: 0.1197, lose: 0.3803 },
+    cells: [
+      { home_goals: 1, away_goals: 0, score: "1-0", probability: 0.1354, share: 0.5, outcome: "win" },
+      { home_goals: 1, away_goals: 1, score: "1-1", probability: 0.0936, share: 0.472, outcome: "push+lose" },
+    ],
+    paying_cells: 2,
+  },
+};
+
+/** HT/FT has no scorelines: it multiplies the two halves' own 1X2 splits. */
+export const marketDetailHalfToFull = {
+  ...marketDetail,
+  market_key: "ht_ft.home.home",
+  market: {
+    ...marketDetail.market,
+    key: "ht_ft.home.home",
+    family: "ht_ft",
+    label: "1/1",
+    scope: "half_to_full",
+    line: null,
+    selection: "home_home",
+    provenance: "modelled",
+    settlement: { win: 0.24, push: 0.0, lose: 0.76 },
+    cells: [],
+    grid_cells: 0,
+    paying_cells: 0,
+    factors: {
+      half_time: { home: 0.41, draw: 0.34, away: 0.25 },
+      full_time: { home: 0.58, draw: 0.24, away: 0.18 },
+      half_time_side: "home",
+      full_time_side: "home",
+    },
+    method: "the half-time result and the full-time result, treated as independent",
+  },
 };

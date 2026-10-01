@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-23T11:01:18+00:00
+- Generated: 2026-09-29T15:55:16+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
@@ -18,10 +18,7 @@ _Pearson correlation of each pre-match feature with observed goals; sorted by |c
 | home_rest_days | 0.003 | 0.083 | 0.061 |
 | home_team_goals_conceded_last_5 | -0.039 | 0.121 | 0.058 |
 | away_team_away_conceded_avg | 0.055 | 0.015 | 0.053 |
-| away_team_away_win_rate | -0.072 | 0.143 | 0.048 |
-| home_team_home_win_rate | 0.143 | -0.085 | 0.047 |
-| home_team_wins_last_5 | 0.066 | -0.004 | 0.047 |
-| away_team_wins_last_5 | -0.102 | 0.172 | 0.046 |
+| home_team_wins_last_5 | 0.040 | -0.109 | -0.048 |
 | home_points_before_match | 0.027 | -0.084 | -0.040 |
 | away_rest_days | -0.043 | 0.088 | 0.030 |
 | away_points_before_match | -0.093 | 0.139 | 0.029 |
@@ -30,8 +27,11 @@ _Pearson correlation of each pre-match feature with observed goals; sorted by |c
 | position_difference | -0.202 | 0.245 | 0.022 |
 | rest_days_difference | 0.042 | -0.015 | 0.022 |
 | home_team_goals_scored_last_5 | 0.077 | -0.111 | -0.021 |
+| away_team_wins_last_5 | -0.086 | 0.062 | -0.021 |
 | home_team_points_last_5 | 0.054 | -0.072 | -0.011 |
+| away_team_away_win_rate | -0.028 | 0.044 | 0.010 |
 | away_team_goals_conceded_last_5 | 0.068 | -0.064 | 0.006 |
+| home_team_home_win_rate | 0.145 | -0.145 | 0.005 |
 | away_team_points_last_5 | -0.097 | 0.109 | 0.005 |
 | away_team_goals_scored_last_5 | -0.073 | 0.081 | 0.003 |
 | away_position_before_match | 0.119 | -0.130 | -0.003 |
@@ -76,14 +76,14 @@ _Home win/draw/away % per bucket of `rest_days_difference` (home rest - away res
 ## 5. Home team quality
 _Home win rate by `home_team_home_win_rate` tier (split at 0.5)._
 
-- `< 0.5` tier: **35.1%** home win (26/74)
-- `>= 0.5` tier: **43.4%** home win (75/173)
-- Home-win gap (>= split minus < split): **+8.3 pp**
+- `< 0.5` tier: **37.1%** home win (59/159)
+- `>= 0.5` tier: **47.7%** home win (42/88)
+- Home-win gap (>= split minus < split): **+10.6 pp**
 
 | tier | label | matches | home | draw | away | home % |
 |---|---|---|---|---|---|---|
-| low | < 0.5 | 74 | 26 | 19 | 29 | 35.1% |
-| high | >= 0.5 | 173 | 75 | 48 | 50 | 43.4% |
+| low | < 0.5 | 159 | 59 | 44 | 56 | 37.1% |
+| high | >= 0.5 | 88 | 42 | 23 | 23 | 47.7% |
 
 ## 6. Feature averages by result
 _Mean feature value per outcome; `range` is home-minus-away spread of the group means._
@@ -105,14 +105,14 @@ _Mean feature value per outcome; `range` is home-minus-away spread of the group 
 | home_team_goals_conceded_last_5 | 5.287 | 5.776 | 6.190 | 0.903 |
 | away_team_goals_scored_last_5 | 5.257 | 6.030 | 5.823 | 0.772 |
 | rest_days_difference | 0.312 | 0.203 | -0.333 | 0.645 |
-| away_team_wins_last_5 | 2.327 | 2.761 | 2.924 | 0.597 |
+| away_team_wins_last_5 | 1.327 | 1.746 | 1.532 | 0.420 |
 | home_team_home_goals_avg | 1.513 | 1.160 | 1.111 | 0.402 |
-| home_team_wins_last_5 | 2.851 | 2.478 | 2.532 | 0.374 |
+| home_team_wins_last_5 | 1.743 | 1.448 | 1.342 | 0.401 |
 | away_team_away_conceded_avg | 1.438 | 1.310 | 1.238 | 0.200 |
 | home_team_home_conceded_avg | 1.128 | 1.047 | 1.213 | 0.167 |
+| home_team_home_win_rate | 0.444 | 0.317 | 0.292 | 0.152 |
 | away_team_away_goals_avg | 1.035 | 1.164 | 1.152 | 0.130 |
-| home_team_home_win_rate | 0.665 | 0.573 | 0.540 | 0.125 |
-| away_team_away_win_rate | 0.456 | 0.551 | 0.562 | 0.106 |
+| away_team_away_win_rate | 0.282 | 0.325 | 0.290 | 0.043 |
 
 ---
 *All features are leakage-safe pre-match values built by `ml.features.build_features.build_rows` from strictly prior matches. Run with `python backend/scripts/analyze_relationships.py` to regenerate.*

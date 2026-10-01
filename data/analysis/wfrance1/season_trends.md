@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T13:50:57+00:00
+- Generated: 2026-09-29T16:11:29+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premiere Ligue Women (France)
 - Scope: league `wfrance1`
@@ -48,7 +48,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 2.167 | 3.333 |
-| 2026-2027 | 1.833 | 3.667 |
+| 2026-2027 | 2.333 | 3.667 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

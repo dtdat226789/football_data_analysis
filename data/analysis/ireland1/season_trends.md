@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T11:01:25+00:00
+- Generated: 2026-09-29T15:55:38+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`
@@ -26,19 +26,19 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | pos 1 | pos 2 | pos 4 | pos 6 | pos 7 | pos 10 |
 |---|---|---|---|---|---|---|
 | 2025 | 66 | 63 | 54 | 51 | 41 | 24 |
-| 2026 | 59 | 59 | 41 | 39 | 37 | 23 |
+| 2026 | 59 | 59 | 41 | 40 | 38 | 23 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
 |---|---|---|---|---|---|
 | 2025 | 7 | 41 | 8 | 39 | 2 pts |
-| 2026 | 7 | 37 | 8 | 34 | 3 pts |
+| 2026 | 7 | 38 | 8 | 34 | 4 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025 | 180 | 437 | 2.428 | 42.8% | 28.9% | 28.3% | 8.3% | 48.8 |
-| 2026 | 158 | 438 | 2.772 | 38.0% | 32.3% | 29.7% | 9.5% | 42.3 |
+| 2026 | 159 | 440 | 2.767 | 37.7% | 32.7% | 29.6% | 9.4% | 42.5 |
 
 ## 6. View divergence
 - Largest divergence: **2025** (goals view, avg abs position diff = 4.000)

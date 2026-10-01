@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T11:02:57+00:00
+- Generated: 2026-09-29T16:00:31+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -69,7 +69,7 @@
 ## 7. First-goal timing
 - Matches with first-goal time recorded: `451` of `493` (91.5%)
 - Goalless matches: `42`
-- Min `1` | Max `97` | Mean `34.8` | Median (p50) `30`
+- Min `1` | Max `97` | Mean `34.81` | Median (p50) `30`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|

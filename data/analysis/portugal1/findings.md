@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T13:41:43+00:00
+- Generated: 2026-09-29T16:03:35+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (36 of 102 draw matches, 35.3%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (34 of 117 away matches, 29.1%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 3 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_scored_last_5 |corr| = 0.1102 (n=370 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 13.9: home 6.609, draw -1.451, away -7.291
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_scored_last_5 |corr| = 0.1311 (n=308 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 16.064: home 7.559, draw -1.524, away -8.505
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 370 matches observed
 

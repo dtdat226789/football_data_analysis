@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:58:12+00:00
+- Generated: 2026-09-29T15:49:24+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\estonia\teams_analysis.json | yes | yes | 19.83 |
 | season_trends | E:\football_data_analysis\data\analysis\estonia\season_trends.json | yes | yes | 3.85 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\estonia\scoreline_analysis.json | yes | yes | 64.55 |
-| relationships | E:\football_data_analysis\data\analysis\estonia\relationships.json | yes | yes | 14.33 |
+| relationships | E:\football_data_analysis\data\analysis\estonia\relationships.json | yes | yes | 14.32 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (18 of 42 draw matches, 42.9%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (43 of 132 away matches, 32.6%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 12 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — points_difference |corr| = 0.0998 (n=325 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 14.012: home 6.808, draw -4.595, away -7.205
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_position_before_match |corr| = 0.1692 (n=180 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 18.675: home 8.869, draw -3.917, away -9.806
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 325 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 19.83 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.85 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 64.55 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.33 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.32 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 180 matches, expected 380

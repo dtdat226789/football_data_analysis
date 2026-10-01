@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T10:58:06+00:00
+- Generated: 2026-09-29T15:49:19+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`

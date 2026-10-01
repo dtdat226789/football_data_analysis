@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T10:57:31+00:00
+- Generated: 2026-09-29T15:48:33+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (Egypt)
 - Scope: league `egypt`

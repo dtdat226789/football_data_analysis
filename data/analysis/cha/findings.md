@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:56:02+00:00
+- Generated: 2026-09-29T15:46:22+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Championship (England)
 - Scope: league `cha`
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (94 of 178 draw matches, 52.8%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (59 of 204 away matches, 28.9%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 8 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_home_conceded_avg |corr| = -0.0622 (n=654 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 5.102: home 2.489, draw -1.416, away -2.613
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_wins_last_5 |corr| = 0.0668 (n=559 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 5.905: home 2.961, draw -1.725, away -2.944
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 654 matches observed
 

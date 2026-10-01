@@ -151,3 +151,32 @@ def test_probe_no_catalog_seasons():
     out = blc.probe_league(None, "demo", {"name": "Demo"}, 0)
     assert out["teams"] == 0
     assert out["seasons"] == []
+
+# ── apps.common.league_name ────────────────────────────────────────────────
+def test_league_name_resolves_every_catalog_league():
+    from apps import common
+
+    for slug in db_common.LEAGUE_CONFIG:
+        name = common.league_name(slug)
+        assert name, slug
+        assert name != slug, f"{slug} has no display name"
+
+
+def test_league_name_uses_the_canonical_catalog_spelling():
+    from apps import common
+
+    # The upstream fixtures feed spells some of these differently; the API must
+    # label them the one way the rest of the app does.
+    assert common.league_name("wsweden") == "Allsvenskan Women"
+    assert common.league_name("wgermany1") == "Bundesliga Women"
+    assert common.league_name("wbelgium1") == "Super League Women"
+    assert common.league_name("wfrance1") == "Premiere Ligue Women"
+    assert common.league_name("premier") == "Premier League"
+
+
+def test_league_name_degrades_without_raising():
+    from apps import common
+
+    assert common.league_name("not-a-league") == "not-a-league"
+    assert common.league_name(None) is None
+    assert common.league_name("") is None

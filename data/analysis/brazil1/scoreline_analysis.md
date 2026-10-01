@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:55:30+00:00
+- Generated: 2026-09-29T15:45:26+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`

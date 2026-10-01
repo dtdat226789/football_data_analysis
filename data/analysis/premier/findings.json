@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:42:19+00:00",
+  "generated_at": "2026-09-29T16:04:09+00:00",
   "config": {
     "league": "premier",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\premier",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_position_before_match |corr| = -0.074 (n=2330 leakage-safe rows)",
+      "detail": "home_position_before_match |corr| = -0.076 (n=2280 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 11.233: home 5.098, draw -1.078, away -6.135",
+      "detail": "points_difference spreads group means over 11.426: home 5.189, draw -1.125, away -6.237",
       "importance": "medium",
       "id": "F23"
     },
@@ -560,8 +560,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 24718,
-        "distinct": 24704,
+        "rows": 24868,
+        "distinct": 24854,
         "duplicates": 14
       }
     },
@@ -570,10 +570,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
       "details": {
-        "total": 24718,
+        "total": 24868,
         "fgt_inconsistent": 24,
         "fgte_inconsistent": 24,
-        "n_with_fgt": 23015
+        "n_with_fgt": 23155
       }
     }
   ],

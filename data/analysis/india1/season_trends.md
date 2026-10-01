@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T11:01:16+00:00
+- Generated: 2026-09-29T15:55:08+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`

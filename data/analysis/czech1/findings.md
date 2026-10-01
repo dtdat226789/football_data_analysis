@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:56:23+00:00
+- Generated: 2026-09-29T15:46:58+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Chance Liga (Czech Republic)
 - Scope: league `czech1`
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (37 of 82 draw matches, 45.1%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (28 of 119 away matches, 23.5%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 7 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_win_rate |corr| = -0.1197 (n=351 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.959: home 3.253, draw 1.256, away -4.706
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_wins_last_5 |corr| = 0.0844 (n=280 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 9.181: home 3.686, draw 1.746, away -5.495
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (15)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 351 matches observed
 

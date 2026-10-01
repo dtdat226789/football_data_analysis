@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:41:23+00:00",
+  "generated_at": "2026-09-29T16:03:19+00:00",
   "config": {
     "league": "poland2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\poland2",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_home_goals_avg |corr| = 0.0673 (n=408 leakage-safe rows)",
+      "detail": "home_team_home_goals_avg |corr| = 0.0735 (n=328 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 3.877: home 1.465, draw 0.884, away -2.413",
+      "detail": "points_difference spreads group means over 5.061: home 2.051, draw 0.742, away -3.010",
       "importance": "medium",
       "id": "F23"
     },
@@ -439,8 +439,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 21655,
-        "distinct": 21641,
+        "rows": 21805,
+        "distinct": 21791,
         "duplicates": 14
       }
     },
@@ -449,10 +449,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
       "details": {
-        "total": 21655,
+        "total": 21805,
         "fgt_inconsistent": 24,
         "fgte_inconsistent": 24,
-        "n_with_fgt": 20148
+        "n_with_fgt": 20288
       }
     },
     {

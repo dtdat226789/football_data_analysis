@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:00:29+00:00",
+  "generated_at": "2026-09-29T15:52:51+00:00",
   "config": {
     "league": "holland1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\holland1",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_position_before_match |corr| = -0.1246 (n=384 leakage-safe rows)",
+      "detail": "home_position_before_match |corr| = -0.1532 (n=321 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 7.46: home 3.222, draw -0.500, away -4.238",
+      "detail": "points_difference spreads group means over 8.353: home 3.322, draw -0.783, away -5.032",
       "importance": "medium",
       "id": "F23"
     },
@@ -472,8 +472,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 11900,
-        "distinct": 11890,
+        "rows": 11983,
+        "distinct": 11973,
         "duplicates": 10
       }
     },
@@ -482,10 +482,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=6, fgte=6 rows)",
       "details": {
-        "total": 11900,
+        "total": 11983,
         "fgt_inconsistent": 6,
         "fgte_inconsistent": 6,
-        "n_with_fgt": 11076
+        "n_with_fgt": 11153
       }
     },
     {

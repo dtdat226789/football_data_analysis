@@ -661,7 +661,7 @@ section > h3 {
   border-radius: 999px;
   padding: 2px 8px;
   font-size: 12px;
-  color: var(--muted, #888);
+  color: var(--muted);
   background: var(--card, #fff);
   white-space: nowrap;
 }
@@ -701,13 +701,227 @@ section > h3 {
   border-color: var(--border);
 }
 
+/* A derived market carrying an assumption the model does not publish. Dashed so
+   it is distinguishable from a measured number at a glance, not just on hover. */
+.pred-chip.chip-assumed {
+  border-style: dashed;
+}
+
 .pred-meta {
   display: inline-flex;
   gap: 8px;
   margin-left: 6px;
   font-size: 12px;
-  color: var(--muted, #888);
+  color: var(--muted);
   white-space: nowrap;
+}
+
+/* ── derived market table ─────────────────────────────────────────────── */
+.market-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.preset.on {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.market-group {
+  margin-top: 16px;
+}
+
+.market-group h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.market-group table.data tr.featured td {
+  font-weight: 600;
+}
+
+.market-flag {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.market-push {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/* ── upcoming fixtures, grouped by day ─────────────────────────────────── */
+.fixture-day {
+  margin-top: 14px;
+}
+
+.fixture-day:first-child {
+  margin-top: 0;
+}
+
+.fixture-day-head {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: 0 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* The count is the point of a day header, so it is not muted into invisibility. */
+.fixture-day-head .muted {
+  font-weight: 400;
+}
+
+.fixture-day-more {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+/* The chip/row control that opens a market's explanation. Rendered as a button
+   so it is keyboard reachable, but drawn as plain text until hovered so the
+   chip row does not read as a toolbar. */
+.pred-chip-btn {
+  font: inherit;
+  cursor: pointer;
+}
+
+.pred-chip-btn:hover,
+.pred-chip-btn:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.market-open {
+  font: inherit;
+  font-weight: 500;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+
+.market-open:hover,
+.market-open:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+/* ── market explanation modal ─────────────────────────────────────────── */
+.market-frame {
+  width: min(720px, 92vw);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg, #0b1118);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+}
+
+.market-frame .lightbox-head {
+  position: sticky;
+  top: 0;
+  padding: 14px 18px;
+  background: var(--bg, #0b1118);
+  border-bottom: 1px solid var(--border);
+}
+
+.market-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 18px 18px;
+  overflow-y: auto;
+}
+
+.market-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.market-detail-title {
+  margin: 12px 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Three fixed settlement slots so the bars stay aligned as markets change. */
+.settle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settle-row {
+  display: grid;
+  grid-template-columns: 56px 1fr 52px;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.settle-label {
+  color: var(--muted);
+}
+
+.settle-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.settle-win {
+  background: var(--green);
+}
+
+.settle-push {
+  background: var(--amber);
+}
+
+.settle-lose {
+  background: var(--red);
+}
+
+.cell-bar {
+  display: inline-block;
+  width: 64px;
+  height: 6px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.settle-cell {
+  background: var(--accent);
+}
+
+.cell-table td.num {
+  white-space: nowrap;
+}
+
+.cell-more {
+  font-size: 12px;
+  margin: 6px 0 0;
 }
 
 /* ── skeletons ────────────────────────────────────────────────────────── */

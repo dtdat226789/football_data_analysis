@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:59:00+00:00
+- Generated: 2026-09-29T15:50:26+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ligue 3 (France)
 - Scope: league `france3`
@@ -8,31 +8,31 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 371 |
-| Home wins | 135 (36.4%) |
-| Draws | 120 (32.3%) |
-| Away wins | 116 (31.3%) |
-| Total goals | 899 |
-| Average goals per match | 2.423 |
-| Goalless matches | 40 (10.8%) |
+| Matches | 388 |
+| Home wins | 140 (36.1%) |
+| Draws | 126 (32.5%) |
+| Away wins | 122 (31.4%) |
+| Total goals | 943 |
+| Average goals per match | 2.430 |
+| Goalless matches | 42 (10.8%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025-2026 | 303 | 109 (36.0%) | 100 (33.0%) | 94 (31.0%) | 738 | 2.436 | 32 (10.6%) |
-| 2026-2027 | 68 | 26 (38.2%) | 20 (29.4%) | 22 (32.4%) | 161 | 2.368 | 8 (11.8%) |
+| 2026-2027 | 85 | 31 (36.5%) | 26 (30.6%) | 28 (32.9%) | 205 | 2.412 | 10 (11.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 85 (80.2%) | 17 (16.0%) | 4 (3.8%) | 106 |
-| HT draw | 42 (26.8%) | 77 (49.0%) | 38 (24.2%) | 157 |
-| HT away lead | 8 (7.5%) | 26 (24.3%) | 73 (68.2%) | 107 |
+| HT home lead | 89 (79.5%) | 18 (16.1%) | 5 (4.5%) | 112 |
+| HT draw | 43 (26.1%) | 80 (48.5%) | 42 (25.5%) | 165 |
+| HT away lead | 8 (7.3%) | 28 (25.5%) | 74 (67.3%) | 110 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **8** (2.2%)
-- Away comebacks (trailing at HT, won at FT): **4** (1.1%)
+- Home comebacks (trailing at HT, won at FT): **8** (2.1%)
+- Away comebacks (trailing at HT, won at FT): **5** (1.3%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -52,43 +52,44 @@
 | 2025-2026 | Rouen | Chateauroux | 1-0 | 1-2 |
 | 2025-2026 | Paris 13 Atl. | Versailles | 1-0 | 1-3 |
 | 2025-2026 | Villefranche | Valenciennes | 2-1 | 2-3 |
+| 2026-2027 | Valenciennes | Fleury 91 | 1-0 | 1-2 |
 | 2026-2027 | Valenciennes | Fleury-Merogis | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 106 | 85 (80.2%) | 17 (16.0%) | 4 (3.8%) |
-| Away lead | 107 | 73 (68.2%) | 26 (24.3%) | 8 (7.5%) |
+| Home lead | 112 | 89 (79.5%) | 18 (16.1%) | 5 (4.5%) |
+| Away lead | 110 | 74 (67.3%) | 28 (25.5%) | 8 (7.3%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 42 | 26.8% |
-| Draw | 77 | 49.0% |
-| Away win | 38 | 24.2% |
+| Home win | 43 | 26.1% |
+| Draw | 80 | 48.5% |
+| Away win | 42 | 25.5% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `330` of `371` (88.9%)
+- Matches with a first-goal time recorded: `345` of `388` (88.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 115 | 31.0% | 45 (39.1%) | 35 (30.4%) | 35 (30.4%) |
-| 16-30 | 85 | 22.9% | 32 (37.6%) | 20 (23.5%) | 33 (38.8%) |
-| 31-45 | 51 | 13.7% | 24 (47.1%) | 10 (19.6%) | 17 (33.3%) |
-| 46-60 | 39 | 10.5% | 14 (35.9%) | 9 (23.1%) | 16 (41.0%) |
-| 61-75 | 26 | 7.0% | 13 (50.0%) | 5 (19.2%) | 8 (30.8%) |
-| 76-90 | 9 | 2.4% | 4 (44.4%) | 1 (11.1%) | 4 (44.4%) |
+| 1-15 | 121 | 31.2% | 47 (38.8%) | 36 (29.8%) | 38 (31.4%) |
+| 16-30 | 88 | 22.7% | 34 (38.6%) | 20 (22.7%) | 34 (38.6%) |
+| 31-45 | 53 | 13.7% | 25 (47.2%) | 10 (18.9%) | 18 (34.0%) |
+| 46-60 | 42 | 10.8% | 14 (33.3%) | 11 (26.2%) | 17 (40.5%) |
+| 61-75 | 27 | 7.0% | 13 (48.1%) | 6 (22.2%) | 8 (29.6%) |
+| 76-90 | 9 | 2.3% | 4 (44.4%) | 1 (11.1%) | 4 (44.4%) |
 | 91-120 | 5 | 1.3% | 3 (60.0%) | 0 (0.0%) | 2 (40.0%) |
 
 ## 7. Goalless matches
-- Overall: **40** of `371` (10.8%)
+- Overall: **42** of `388` (10.8%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025-2026 | 303 | 32 | 10.6% |
-| 2026-2027 | 68 | 8 | 11.8% |
+| 2026-2027 | 85 | 10 | 11.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

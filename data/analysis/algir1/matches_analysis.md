@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:54:23+00:00
+- Generated: 2026-09-29T15:43:29+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`
@@ -8,25 +8,25 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 262 |
-| Home wins | 130 (49.6%) |
-| Draws | 77 (29.4%) |
-| Away wins | 55 (21.0%) |
+| Matches | 263 |
+| Home wins | 130 (49.4%) |
+| Draws | 78 (29.7%) |
+| Away wins | 55 (20.9%) |
 | Total goals | 600 |
-| Average goals per match | 2.290 |
-| Goalless matches | 21 (8.0%) |
+| Average goals per match | 2.281 |
+| Goalless matches | 22 (8.4%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025-2026 | 240 | 120 (50.0%) | 70 (29.2%) | 50 (20.8%) | 544 | 2.267 | 20 (8.3%) |
-| 2026-2027 | 22 | 10 (45.5%) | 7 (31.8%) | 5 (22.7%) | 56 | 2.545 | 1 (4.5%) |
+| 2026-2027 | 23 | 10 (43.5%) | 8 (34.8%) | 5 (21.7%) | 56 | 2.435 | 2 (8.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 73 (83.0%) | 13 (14.8%) | 2 (2.3%) | 88 |
-| HT draw | 51 (39.2%) | 55 (42.3%) | 24 (18.5%) | 130 |
+| HT draw | 51 (38.9%) | 56 (42.7%) | 24 (18.3%) | 131 |
 | HT away lead | 6 (13.6%) | 9 (20.5%) | 29 (65.9%) | 44 |
 
 ## 4. Comeback matches
@@ -58,31 +58,31 @@
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 51 | 39.2% |
-| Draw | 55 | 42.3% |
-| Away win | 24 | 18.5% |
+| Home win | 51 | 38.9% |
+| Draw | 56 | 42.7% |
+| Away win | 24 | 18.3% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `241` of `262` (92.0%)
+- Matches with a first-goal time recorded: `241` of `263` (91.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 65 | 24.8% | 36 (55.4%) | 17 (26.2%) | 12 (18.5%) |
-| 16-30 | 64 | 24.4% | 35 (54.7%) | 11 (17.2%) | 18 (28.1%) |
+| 1-15 | 65 | 24.7% | 36 (55.4%) | 17 (26.2%) | 12 (18.5%) |
+| 16-30 | 64 | 24.3% | 35 (54.7%) | 11 (17.2%) | 18 (28.1%) |
 | 31-45 | 31 | 11.8% | 17 (54.8%) | 9 (29.0%) | 5 (16.1%) |
-| 46-60 | 33 | 12.6% | 14 (42.4%) | 12 (36.4%) | 7 (21.2%) |
-| 61-75 | 23 | 8.8% | 13 (56.5%) | 5 (21.7%) | 5 (21.7%) |
+| 46-60 | 33 | 12.5% | 14 (42.4%) | 12 (36.4%) | 7 (21.2%) |
+| 61-75 | 23 | 8.7% | 13 (56.5%) | 5 (21.7%) | 5 (21.7%) |
 | 76-90 | 20 | 7.6% | 13 (65.0%) | 1 (5.0%) | 6 (30.0%) |
 | 91-120 | 5 | 1.9% | 2 (40.0%) | 1 (20.0%) | 2 (40.0%) |
 
 ## 7. Goalless matches
-- Overall: **21** of `262` (8.0%)
+- Overall: **22** of `263` (8.4%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025-2026 | 240 | 20 | 8.3% |
-| 2026-2027 | 22 | 1 | 4.5% |
+| 2026-2027 | 23 | 2 | 8.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

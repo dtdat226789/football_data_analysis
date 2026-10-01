@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T11:00:00+00:00
+- Generated: 2026-09-29T15:51:39+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`
@@ -68,7 +68,7 @@
 ## 7. First-goal timing
 - Matches with first-goal time recorded: `257` of `281` (91.5%)
 - Goalless matches: `24`
-- Min `1` | Max `93` | Mean `31.1` | Median (p50) `27`
+- Min `1` | Max `93` | Mean `31.09` | Median (p50) `27`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:01:19+00:00",
+  "generated_at": "2026-09-29T15:55:20+00:00",
   "config": {
     "league": "india1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\india1",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\india1\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.3
+      "size_kb": 14.31
     }
   ],
   "coverage": {
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.3
+      "size_kb": 14.31
     }
   ],
   "anomalies": [
@@ -431,8 +431,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 13535,
-        "distinct": 13525,
+        "rows": 13635,
+        "distinct": 13625,
         "duplicates": 10
       }
     },
@@ -441,10 +441,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=7, fgte=7 rows)",
       "details": {
-        "total": 13535,
+        "total": 13635,
         "fgt_inconsistent": 7,
         "fgte_inconsistent": 7,
-        "n_with_fgt": 12636
+        "n_with_fgt": 12730
       }
     },
     {

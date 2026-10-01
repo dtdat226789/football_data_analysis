@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:01:19+00:00
+- Generated: 2026-09-29T15:55:20+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\india1\teams_analysis.json | yes | yes | 24.21 |
 | season_trends | E:\football_data_analysis\data\analysis\india1\season_trends.json | yes | yes | 3.93 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\india1\scoreline_analysis.json | yes | yes | 43.54 |
-| relationships | E:\football_data_analysis\data\analysis\india1\relationships.json | yes | yes | 14.30 |
+| relationships | E:\football_data_analysis\data\analysis\india1\relationships.json | yes | yes | 14.31 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 24.21 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.93 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 43.54 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.30 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.31 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2024-2025 has 156 matches, expected 380

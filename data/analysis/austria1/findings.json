@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:54:51+00:00",
+  "generated_at": "2026-09-29T15:44:15+00:00",
   "config": {
     "league": "austria1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\austria1",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\austria1\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.33
+      "size_kb": 14.31
     }
   ],
   "coverage": {
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "points_difference |corr| = -0.1284 (n=237 leakage-safe rows)",
+      "detail": "away_team_away_conceded_avg |corr| = -0.1592 (n=195 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "away_points_before_match spreads group means over 3.201: home 18.255, draw 20.729, away 17.528",
+      "detail": "away_points_before_match spreads group means over 3.473: home 21.929, draw 23.440, away 19.967",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.33
+      "size_kb": 14.31
     }
   ],
   "anomalies": [
@@ -467,8 +467,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 831,
-        "distinct": 829,
+        "rows": 832,
+        "distinct": 830,
         "duplicates": 2
       }
     },

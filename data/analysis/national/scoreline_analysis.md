@@ -1,36 +1,36 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:03:48+00:00
+- Generated: 2026-09-29T16:02:05+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
 
 ## 1. Scoreline frequency
-- Matches analysed: **665** across **2** seasons.
+- Matches analysed: **677** across **2** seasons.
 - Distinct scorelines seen: **38**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 77 | 11.6% |
-| 1-0 | 65 | 9.8% |
-| 2-1 | 64 | 9.6% |
-| 1-2 | 56 | 8.4% |
-| 0-2 | 40 | 6.0% |
-| 0-1 | 38 | 5.7% |
-| 2-0 | 35 | 5.3% |
-| 2-2 | 32 | 4.8% |
-| 0-0 | 29 | 4.4% |
-| 3-2 | 25 | 3.8% |
-| 3-0 | 24 | 3.6% |
-| 0-3 | 24 | 3.6% |
-| 1-3 | 24 | 3.6% |
-| 3-1 | 23 | 3.5% |
-| 2-3 | 19 | 2.9% |
-| 4-0 | 15 | 2.3% |
-| 4-1 | 12 | 1.8% |
-| 3-3 | 9 | 1.4% |
-| 4-2 | 9 | 1.4% |
-| 5-1 | 8 | 1.2% |
+| 1-1 | 77 | 11.4% |
+| 1-0 | 65 | 9.6% |
+| 2-1 | 65 | 9.6% |
+| 1-2 | 56 | 8.3% |
+| 0-2 | 40 | 5.9% |
+| 0-1 | 40 | 5.9% |
+| 2-0 | 35 | 5.2% |
+| 2-2 | 32 | 4.7% |
+| 0-0 | 29 | 4.3% |
+| 3-2 | 25 | 3.7% |
+| 3-0 | 25 | 3.7% |
+| 0-3 | 25 | 3.7% |
+| 1-3 | 24 | 3.5% |
+| 3-1 | 23 | 3.4% |
+| 2-3 | 19 | 2.8% |
+| 4-0 | 16 | 2.4% |
+| 4-1 | 14 | 2.1% |
+| 3-3 | 10 | 1.5% |
+| 4-2 | 9 | 1.3% |
+| 5-1 | 9 | 1.3% |
 
 ## 2. Scoreline frequency per season
 
@@ -46,31 +46,31 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 15 | 13.9% |
-| 1-1 | 13 | 12.0% |
-| 2-1 | 10 | 9.3% |
-| 1-3 | 9 | 8.3% |
-| 1-2 | 9 | 8.3% |
+| 1-0 | 15 | 12.5% |
+| 1-1 | 13 | 10.8% |
+| 2-1 | 11 | 9.2% |
+| 1-3 | 9 | 7.5% |
+| 1-2 | 9 | 7.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 29 | 4.4% |
-| 1 | 103 | 15.5% |
-| 2 | 152 | 22.9% |
-| 3 | 168 | 25.3% |
-| 4 | 96 | 14.4% |
-| 5 | 70 | 10.5% |
-| 6 | 31 | 4.7% |
-| 7 | 9 | 1.4% |
+| 0 | 29 | 4.3% |
+| 1 | 105 | 15.5% |
+| 2 | 152 | 22.5% |
+| 3 | 171 | 25.3% |
+| 4 | 97 | 14.3% |
+| 5 | 72 | 10.6% |
+| 6 | 34 | 5.0% |
+| 7 | 10 | 1.5% |
 | 8 | 6 | 0.9% |
-| 9 | 1 | 0.2% |
+| 9 | 1 | 0.1% |
 | 10+ | 0 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **16**
+- Matches with 7+ total goals: **17**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
@@ -90,43 +90,44 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-21 | 4-3 | 7 |
 | 2026-2027 | 2026-08-08 | 5-2 | 7 |
 | 2026-2027 | 2026-09-19 | 1-6 | 7 |
+| 2026-2027 | 2026-09-26 | 2-5 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **516** (draws: **149**)
-- Average winning margin: **1.78**
+- Decided matches: **527** (draws: **150**)
+- Average winning margin: **1.8**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 272 | 52.7% |
-| 2 | 135 | 26.2% |
-| 3+ | 109 | 21.1% |
+| 1 | 275 | 52.2% |
+| 2 | 136 | 25.8% |
+| 3+ | 116 | 22.0% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **293** | avg margin: **1.85** | max margin: **7**
+- Matches: **299** | avg margin: **1.87** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 156 | 53.2% |
-| 2 | 68 | 23.2% |
-| 3+ | 69 | 23.5% |
+| 1 | 157 | 52.5% |
+| 2 | 68 | 22.7% |
+| 3+ | 74 | 24.7% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **223** | avg margin: **1.7** | max margin: **5**
+- Matches: **228** | avg margin: **1.71** | max margin: **5**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 116 | 52.0% |
-| 2 | 67 | 30.0% |
-| 3+ | 40 | 17.9% |
+| 1 | 118 | 51.8% |
+| 2 | 68 | 29.8% |
+| 3+ | 42 | 18.4% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 293 | 1-0 | 65 | 22.2% |
-| draw | 149 | 1-1 | 77 | 51.7% |
-| away | 223 | 1-2 | 56 | 25.1% |
+| home | 299 | 1-0 | 65 | 21.7% |
+| draw | 150 | 1-1 | 77 | 51.3% |
+| away | 228 | 1-2 | 56 | 24.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:03:38+00:00
+- Generated: 2026-09-29T16:01:49+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`

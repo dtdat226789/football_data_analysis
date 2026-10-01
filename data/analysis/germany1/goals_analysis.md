@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T10:59:25+00:00
+- Generated: 2026-09-29T15:50:56+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Bundesliga (Germany)
 - Scope: league `germany1`

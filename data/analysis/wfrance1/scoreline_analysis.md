@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T13:50:59+00:00
+- Generated: 2026-09-29T16:11:32+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premiere Ligue Women (France)
 - Scope: league `wfrance1`

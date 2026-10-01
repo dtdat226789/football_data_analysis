@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:02:34+00:00
+- Generated: 2026-09-29T15:59:18+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: J1 League (Japan)
 - Scope: league `japan1`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\japan1\teams_analysis.json | yes | yes | 39.37 |
 | season_trends | E:\football_data_analysis\data\analysis\japan1\season_trends.json | yes | yes | 3.90 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\japan1\scoreline_analysis.json | yes | yes | 51.98 |
-| relationships | E:\football_data_analysis\data\analysis\japan1\relationships.json | yes | yes | 14.30 |
+| relationships | E:\football_data_analysis\data\analysis\japan1\relationships.json | yes | yes | 13.76 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (10 of 17 draw matches, 58.8%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (30 of 93 away matches, 32.3%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 5 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_home_conceded_avg |corr| = -0.0961 (n=241 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — away_points_before_match spreads group means over 5.042: home 9.374, draw 4.882, away 9.925
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_conceded_last_5 |corr| = -0.0788 (n=161 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — position_difference spreads group means over 2.205: home -0.862, draw -, away 1.343
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (15)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 241 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 39.37 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.90 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 51.98 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.30 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.76 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 161 matches, expected 380

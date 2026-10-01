@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:56:26+00:00
+- Generated: 2026-09-29T15:47:03+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`

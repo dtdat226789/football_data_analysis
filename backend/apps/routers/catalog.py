@@ -41,6 +41,7 @@ def meta() -> dict:
     return {
         "api_version": "1.0.0",
         "default_league": common.DEFAULT_LEAGUE,
+        "default_league_name": common.league_name(common.DEFAULT_LEAGUE),
         "n_leagues": len(common.LEAGUE_CONFIG),
         "modules": common.MODULE_NAMES,
         "database": database,
@@ -72,4 +73,4 @@ def league_seasons(league: str) -> dict:
     require_league(league)
     with fetched_cursor() as cur:
         seasons = _season_rows(cur, league)
-    return {"league": league, "seasons": seasons}
+    return {"league": league, "league_name": common.league_name(league), "seasons": seasons}

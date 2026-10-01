@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:42:39+00:00",
+  "generated_at": "2026-09-29T16:04:24+00:00",
   "config": {
     "league": "primera1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\primera1",
@@ -29,7 +29,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\primera1\\database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 30.69
+      "size_kb": 30.59
     },
     {
       "report_name": "matches_analysis",
@@ -50,28 +50,28 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\primera1\\teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 38.67
+      "size_kb": 38.68
     },
     {
       "report_name": "season_trends",
       "path": "E:\\football_data_analysis\\data\\analysis\\primera1\\season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.97
+      "size_kb": 3.96
     },
     {
       "report_name": "scoreline_analysis",
       "path": "E:\\football_data_analysis\\data\\analysis\\primera1\\scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 71.52
+      "size_kb": 72.92
     },
     {
       "report_name": "relationships",
       "path": "E:\\football_data_analysis\\data\\analysis\\primera1\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.36
+      "size_kb": 14.37
     }
   ],
   "coverage": {
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "438 matches: home wins 46.1%, draws 27.9%, away wins 26.0% (202H / 122D / 114A)",
+      "detail": "448 matches: home wins 45.8%, draws 28.1%, away wins 26.1% (205H / 126D / 117A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,42 +97,42 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 119 times",
+      "detail": "home lead at HT -> home win occurred 121 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "438 matches produced 1079 goals (avg 2.463 per match)",
+      "detail": "448 matches produced 1107 goals (avg 2.471 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 56.9% vs away 43.1% of 1079 goals in total (home/away ratio 1.32)",
+      "detail": "home 56.6% vs away 43.4% of 1107 goals in total (home/away ratio 1.31)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "219 of 438 matches (50.0%)",
+      "detail": "223 of 448 matches (49.8%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 109 scoring matches, 27.5% of scoring)",
+      "detail": "minute 1-15 (first goal in 110 scoring matches, 27.1% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 34.09, median 29.0",
+      "detail": "mean 34.13, median 29.5",
       "importance": "low",
       "id": "F8"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Barakaldo earns 28 more points at home than away (45 home vs 17 away)",
+      "detail": "Barakaldo earns 29 more points at home than away (46 home vs 17 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -167,105 +167,105 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: UD Logrones beat Cacereno by 0 pts",
+      "detail": "2026-2027: UD Logrones beat Lugo by 0 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.178 per match): first half 2.447 vs last half 2.625 across 2 seasons",
+      "detail": "up (+0.213 per match): first half 2.447 vs last half 2.66 across 2 seasons",
       "importance": "medium",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2025-2026 (goals view, avg abs position diff 6.857)",
+      "detail": "2026-2027 (goals view, avg abs position diff 7.200)",
       "importance": "low",
       "id": "F15"
     },
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.000)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.100)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-0 in 58 matches (13.2%)",
+      "detail": "1-0 in 60 matches (13.4%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (58 of 202 home matches, 28.7%)",
+      "detail": "1-0 (60 of 205 home matches, 29.3%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (56 of 122 draw matches, 45.9%)",
+      "detail": "1-1 (57 of 126 draw matches, 45.2%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (31 of 114 away matches, 27.2%)",
+      "detail": "0-1 (32 of 117 away matches, 27.4%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "6 match(es) with >= 7 total goals",
+      "detail": "7 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_goals_scored_last_5 |corr| = 0.0921 (n=438 leakage-safe rows)",
+      "detail": "away_team_away_conceded_avg |corr| = 0.1343 (n=398 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "away_points_before_match spreads group means over 3.924: home 21.772, draw 25.697, away 24.377",
+      "detail": "away_points_before_match spreads group means over 3.544: home 23.978, draw 27.522, away 26.680",
       "importance": "medium",
       "id": "F23"
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (12)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (11)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 438 matches observed",
+      "detail": "2 of 2 registered seasons populated (100.0%); 448 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 438,
-    "avg_goals": 2.463,
-    "home_win_pct": 46.1,
-    "draw_pct": 27.9,
-    "away_win_pct": 26.0,
+    "n_matches": 448,
+    "avg_goals": 2.471,
+    "home_win_pct": 45.8,
+    "draw_pct": 28.1,
+    "away_win_pct": 26.1,
     "most_common_scoreline": "1-0",
     "dominant_team": "Tenerife",
     "champion_most_titles": "Tenerife",
-    "btts_rate_pct": 50.0
+    "btts_rate_pct": 49.8
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 30.69
+      "size_kb": 30.59
     },
     {
       "module": "matches_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 38.67
+      "size_kb": 38.68
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.97
+      "size_kb": 3.96
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 71.52
+      "size_kb": 72.92
     },
     {
       "module": "relationships",
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.36
+      "size_kb": 14.37
     }
   ],
   "anomalies": [
@@ -386,10 +386,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 40 matches, expected 380",
+      "message": "Season 2026-2027 has 50 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 40,
+        "n_matches": 50,
         "expected": 380
       }
     },
@@ -405,36 +405,30 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 5.0% vs overall 9.4% (deviation 4.4 pp)",
+      "message": "Season 2026-2027 goalless share 6.0% vs overall 9.4% (deviation 3.4 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 5.0,
+        "season_goalless_pct": 6.0,
         "overall_goalless_pct": 9.4,
-        "deviation_pp": 4.4
-      }
-    },
-    {
-      "code": "OUTCOME_SHARE_OUTLIER",
-      "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 22.5% vs overall 27.9%",
-      "details": {
-        "season": "2026-2027",
-        "outcome": "draw",
-        "season_share": 22.5,
-        "overall_share": 27.9
+        "deviation_pp": 3.4
       }
     },
     {
       "code": "HIGH_SCORING_MATCHES",
       "severity": "warning",
-      "message": "1 match(es) with >= 8 total goals (extreme scorelines)",
+      "message": "2 match(es) with >= 8 total goals (extreme scorelines)",
       "details": {
-        "n_matches": 1,
+        "n_matches": 2,
         "threshold": 8,
         "examples": [
           {
             "scoreline": "6-3",
             "total_goals": 9,
+            "count": 1
+          },
+          {
+            "scoreline": "3-5",
+            "total_goals": 8,
             "count": 1
           }
         ]
@@ -446,8 +440,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 25156,
-        "distinct": 25142,
+        "rows": 25316,
+        "distinct": 25302,
         "duplicates": 14
       }
     },
@@ -456,10 +450,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
       "details": {
-        "total": 25156,
+        "total": 25316,
         "fgt_inconsistent": 24,
         "fgte_inconsistent": 24,
-        "n_with_fgt": 23412
+        "n_with_fgt": 23561
       }
     },
     {

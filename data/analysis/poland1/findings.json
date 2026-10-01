@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:41:05+00:00",
+  "generated_at": "2026-09-29T16:03:03+00:00",
   "config": {
     "league": "poland1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\poland1",
@@ -307,8 +307,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 21247,
-        "distinct": 21233,
+        "rows": 21397,
+        "distinct": 21383,
         "duplicates": 14
       }
     },
@@ -317,10 +317,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=23, fgte=23 rows)",
       "details": {
-        "total": 21247,
+        "total": 21397,
         "fgt_inconsistent": 23,
         "fgte_inconsistent": 23,
-        "n_with_fgt": 19760
+        "n_with_fgt": 19900
       }
     }
   ],

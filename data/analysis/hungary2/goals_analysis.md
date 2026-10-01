@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T11:01:05+00:00
+- Generated: 2026-09-29T15:54:31+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`
@@ -69,16 +69,16 @@
 ## 7. First-goal timing
 - Matches with first-goal time recorded: `284` of `301` (94.4%)
 - Goalless matches: `17`
-- Min `1` | Max `93` | Mean `31.63` | Median (p50) `27.0`
+- Min `1` | Max `93` | Mean `31.85` | Median (p50) `27.0`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
 | 1-15 | 95 | 31.6% | 33.5% |
 | 16-30 | 62 | 20.6% | 21.8% |
-| 31-45 | 55 | 18.3% | 19.4% |
+| 31-45 | 53 | 17.6% | 18.7% |
 | 46-60 | 34 | 11.3% | 12.0% |
-| 61-75 | 16 | 5.3% | 5.6% |
-| 76-90 | 20 | 6.6% | 7.0% |
+| 61-75 | 17 | 5.6% | 6.0% |
+| 76-90 | 21 | 7.0% | 7.4% |
 | 91-120 | 2 | 0.7% | 0.7% |
 
 ---

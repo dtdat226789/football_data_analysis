@@ -1,35 +1,35 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:58:30+00:00
+- Generated: 2026-09-29T15:49:49+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Ykkosliiga (Finland)
 - Scope: league `finland2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **255** across **2** seasons.
+- Matches analysed: **260** across **2** seasons.
 - Distinct scorelines seen: **30**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 28 | 11.0% |
-| 1-0 | 23 | 9.0% |
-| 2-1 | 22 | 8.6% |
-| 0-1 | 22 | 8.6% |
-| 3-1 | 18 | 7.1% |
-| 1-2 | 16 | 6.3% |
-| 0-2 | 16 | 6.3% |
-| 2-2 | 16 | 6.3% |
-| 0-0 | 13 | 5.1% |
-| 2-0 | 11 | 4.3% |
+| 1-1 | 30 | 11.5% |
+| 2-1 | 23 | 8.8% |
+| 1-0 | 23 | 8.8% |
+| 0-1 | 22 | 8.5% |
+| 3-1 | 18 | 6.9% |
+| 1-2 | 16 | 6.2% |
+| 0-2 | 16 | 6.2% |
+| 2-2 | 16 | 6.2% |
+| 0-0 | 14 | 5.4% |
+| 2-0 | 11 | 4.2% |
 | 0-3 | 9 | 3.5% |
 | 3-0 | 8 | 3.1% |
 | 2-3 | 7 | 2.7% |
-| 4-2 | 6 | 2.4% |
-| 3-2 | 5 | 2.0% |
-| 1-4 | 5 | 2.0% |
-| 1-3 | 4 | 1.6% |
-| 4-1 | 4 | 1.6% |
-| 3-3 | 4 | 1.6% |
+| 4-2 | 6 | 2.3% |
+| 3-2 | 6 | 2.3% |
+| 1-4 | 5 | 1.9% |
+| 1-3 | 4 | 1.5% |
+| 4-1 | 4 | 1.5% |
+| 3-3 | 4 | 1.5% |
 | 4-0 | 3 | 1.2% |
 
 ## 2. Scoreline frequency per season
@@ -46,25 +46,25 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 15 | 12.5% |
-| 0-1 | 15 | 12.5% |
-| 0-2 | 12 | 10.0% |
-| 2-1 | 10 | 8.3% |
-| 1-1 | 9 | 7.5% |
+| 1-0 | 15 | 12.0% |
+| 0-1 | 15 | 12.0% |
+| 0-2 | 12 | 9.6% |
+| 2-1 | 11 | 8.8% |
+| 1-1 | 11 | 8.8% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 13 | 5.1% |
-| 1 | 45 | 17.6% |
-| 2 | 55 | 21.6% |
-| 3 | 55 | 21.6% |
-| 4 | 41 | 16.1% |
-| 5 | 24 | 9.4% |
-| 6 | 12 | 4.7% |
-| 7 | 6 | 2.4% |
+| 0 | 14 | 5.4% |
+| 1 | 45 | 17.3% |
+| 2 | 57 | 21.9% |
+| 3 | 56 | 21.5% |
+| 4 | 41 | 15.8% |
+| 5 | 25 | 9.6% |
+| 6 | 12 | 4.6% |
+| 7 | 6 | 2.3% |
 | 8 | 3 | 1.2% |
 | 9 | 0 | 0.0% |
 | 10+ | 1 | 0.4% |
@@ -86,24 +86,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-22 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **194** (draws: **61**)
-- Average winning margin: **1.74**
+- Decided matches: **196** (draws: **64**)
+- Average winning margin: **1.73**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 100 | 51.5% |
-| 2 | 58 | 29.9% |
-| 3+ | 36 | 18.6% |
+| 1 | 102 | 52.0% |
+| 2 | 58 | 29.6% |
+| 3+ | 36 | 18.4% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **108** | avg margin: **1.73** | max margin: **5**
+- Matches: **110** | avg margin: **1.72** | max margin: **5**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 53 | 49.1% |
-| 2 | 37 | 34.3% |
-| 3+ | 18 | 16.7% |
+| 1 | 55 | 50.0% |
+| 2 | 37 | 33.6% |
+| 3+ | 18 | 16.4% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -118,8 +118,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 108 | 1-0 | 23 | 21.3% |
-| draw | 61 | 1-1 | 28 | 45.9% |
+| home | 110 | 2-1 | 23 | 20.9% |
+| draw | 64 | 1-1 | 30 | 46.9% |
 | away | 86 | 0-1 | 22 | 25.6% |
 
 ---

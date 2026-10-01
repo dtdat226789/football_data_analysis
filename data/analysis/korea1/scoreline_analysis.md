@@ -1,20 +1,20 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:02:50+00:00
+- Generated: 2026-09-29T16:00:12+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **377** across **2** seasons.
+- Matches analysed: **378** across **2** seasons.
 - Distinct scorelines seen: **30**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 54 | 14.3% |
 | 0-1 | 38 | 10.1% |
-| 0-0 | 36 | 9.5% |
-| 1-0 | 33 | 8.8% |
+| 0-0 | 37 | 9.8% |
+| 1-0 | 33 | 8.7% |
 | 2-1 | 32 | 8.5% |
 | 1-2 | 32 | 8.5% |
 | 2-0 | 22 | 5.8% |
@@ -24,7 +24,7 @@
 | 0-2 | 14 | 3.7% |
 | 2-3 | 12 | 3.2% |
 | 1-3 | 12 | 3.2% |
-| 3-0 | 10 | 2.7% |
+| 3-0 | 10 | 2.6% |
 | 0-3 | 8 | 2.1% |
 | 4-0 | 3 | 0.8% |
 | 0-4 | 2 | 0.5% |
@@ -46,9 +46,9 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 29 | 16.2% |
-| 0-0 | 20 | 11.2% |
-| 0-1 | 18 | 10.1% |
+| 1-1 | 29 | 16.1% |
+| 0-0 | 21 | 11.7% |
+| 0-1 | 18 | 10.0% |
 | 1-2 | 16 | 8.9% |
 | 1-0 | 14 | 7.8% |
 
@@ -57,10 +57,10 @@ _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 36 | 9.5% |
+| 0 | 37 | 9.8% |
 | 1 | 71 | 18.8% |
-| 2 | 90 | 23.9% |
-| 3 | 82 | 21.8% |
+| 2 | 90 | 23.8% |
+| 3 | 82 | 21.7% |
 | 4 | 52 | 13.8% |
 | 5 | 35 | 9.3% |
 | 6 | 6 | 1.6% |
@@ -81,7 +81,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-30 | 2-5 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **265** (draws: **112**)
+- Decided matches: **265** (draws: **113**)
 - Average winning margin: **1.58**
 
 | margin | matches | pct |
@@ -114,7 +114,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 137 | 1-0 | 33 | 24.1% |
-| draw | 112 | 1-1 | 54 | 48.2% |
+| draw | 113 | 1-1 | 54 | 47.8% |
 | away | 128 | 0-1 | 38 | 29.7% |
 
 ---

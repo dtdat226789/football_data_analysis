@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:41:59+00:00",
+  "generated_at": "2026-09-29T16:03:52+00:00",
   "config": {
     "league": "portugal2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\portugal2",
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.444)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.333)",
       "importance": "low",
       "id": "F16"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_away_conceded_avg |corr| = 0.0953 (n=363 leakage-safe rows)",
+      "detail": "away_team_away_conceded_avg |corr| = 0.0901 (n=310 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "away_points_before_match spreads group means over 3.635: home 21.340, draw 17.705, away 19.516",
+      "detail": "away_points_before_match spreads group means over 4.504: home 24.412, draw 19.908, away 22.340",
       "importance": "medium",
       "id": "F23"
     },
@@ -419,8 +419,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 22388,
-        "distinct": 22374,
+        "rows": 22538,
+        "distinct": 22524,
         "duplicates": 14
       }
     },
@@ -429,10 +429,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
       "details": {
-        "total": 22388,
+        "total": 22538,
         "fgt_inconsistent": 24,
         "fgte_inconsistent": 24,
-        "n_with_fgt": 20819
+        "n_with_fgt": 20959
       }
     },
     {

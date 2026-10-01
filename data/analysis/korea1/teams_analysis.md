@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T11:02:48+00:00
+- Generated: 2026-09-29T16:00:05+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`
 
-- Teams: **14** | Seasons: **2** | Matches: **377**
+- Teams: **14** | Seasons: **2** | Matches: **378**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -15,12 +15,12 @@
 | Daejeon | 2 | 63 | 25 | 20 | 18 | 95 | 94 | 78 | 16 | 47.5 | 3 | 6 | 0 |
 | Pohang | 2 | 63 | 26 | 13 | 24 | 91 | 68 | 77 | -9 | 45.5 | 4 | 7 | 0 |
 | Gimcheon Sangmu | 2 | 63 | 21 | 25 | 17 | 88 | 83 | 73 | 10 | 44.0 | 2 | 10 | 0 |
+| Gangwon | 2 | 63 | 21 | 24 | 18 | 87 | 68 | 64 | 4 | 43.5 | 5 | 6 | 0 |
 | Ulsan HD | 2 | 63 | 24 | 15 | 24 | 87 | 84 | 83 | 1 | 43.5 | 2 | 9 | 0 |
-| Gangwon | 2 | 62 | 21 | 23 | 18 | 86 | 68 | 64 | 4 | 43.0 | 5 | 6 | 0 |
 | Anyang | 2 | 63 | 21 | 17 | 25 | 80 | 80 | 88 | -8 | 40.0 | 7 | 9 | 0 |
 | Jeju SK | 2 | 63 | 20 | 18 | 25 | 78 | 70 | 76 | -6 | 39.0 | 3 | 11 | 0 |
 | Gwangju FC | 2 | 63 | 12 | 21 | 30 | 57 | 55 | 103 | -48 | 28.5 | 8 | 12 | 0 |
-| Incheon | 1 | 29 | 10 | 8 | 11 | 38 | 36 | 33 | 3 | 38.0 | 8 | 8 | 0 |
+| Incheon | 1 | 30 | 10 | 9 | 11 | 39 | 36 | 33 | 3 | 39.0 | 8 | 8 | 0 |
 | Suwon FC | 1 | 33 | 10 | 8 | 15 | 38 | 48 | 53 | -5 | 38.0 | 10 | 10 | 0 |
 | Bucheon FC 1995 | 1 | 30 | 7 | 11 | 12 | 32 | 31 | 40 | -9 | 32.0 | 11 | 11 | 0 |
 | Daegu | 1 | 33 | 6 | 9 | 18 | 27 | 41 | 62 | -21 | 27.0 | 12 | 12 | 0 |
@@ -35,9 +35,9 @@
 | Gimcheon Sangmu | 31 | 11 | 13 | 7 | 46 | 32 | 10 | 12 | 10 | 42 | 4 |
 | Anyang | 32 | 11 | 9 | 12 | 42 | 31 | 10 | 8 | 13 | 38 | 4 |
 | Jeonbuk | 32 | 17 | 8 | 7 | 59 | 31 | 15 | 11 | 5 | 56 | 3 |
-| Incheon | 15 | 5 | 4 | 6 | 19 | 14 | 5 | 4 | 5 | 19 | 0 |
 | Bucheon FC 1995 | 17 | 3 | 7 | 7 | 16 | 13 | 4 | 4 | 5 | 16 | 0 |
-| Gangwon | 31 | 9 | 15 | 7 | 42 | 31 | 12 | 8 | 11 | 44 | -2 |
+| Gangwon | 32 | 9 | 16 | 7 | 43 | 31 | 12 | 8 | 11 | 44 | -1 |
+| Incheon | 15 | 5 | 4 | 6 | 19 | 15 | 5 | 5 | 5 | 20 | -1 |
 | Daejeon | 31 | 12 | 10 | 9 | 46 | 32 | 13 | 10 | 9 | 49 | -3 |
 | Pohang | 30 | 13 | 5 | 12 | 44 | 33 | 13 | 8 | 12 | 47 | -3 |
 | Gwangju FC | 32 | 6 | 9 | 17 | 27 | 31 | 6 | 12 | 13 | 30 | -3 |
@@ -75,9 +75,9 @@
 | rank | team | GA/match |
 |---|---|---|
 | 1 | Jeonbuk | 0.873 |
-| 2 | Gangwon | 1.032 |
+| 2 | Gangwon | 1.016 |
 | 3 | Seoul | 1.063 |
-| 4 | Incheon | 1.138 |
+| 4 | Incheon | 1.100 |
 | 5 | Gimcheon Sangmu | 1.159 |
 
 ## 4. Team consistency
@@ -116,8 +116,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | Daejeon | 3 | 6 |
 | Pohang | 4 | 7 |
 | Gimcheon Sangmu | 2 | 10 |
-| Ulsan HD | 9 | 2 |
 | Gangwon | 6 | 5 |
+| Ulsan HD | 9 | 2 |
 | Anyang | 7 | 9 |
 | Jeju SK | 11 | 3 |
 | Gwangju FC | 8 | 12 |

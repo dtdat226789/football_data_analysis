@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:49:52+00:00",
+  "generated_at": "2026-09-29T16:10:24+00:00",
   "config": {
     "league": "thai1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\thai1",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\thai1\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.35
+      "size_kb": 14.33
     }
   ],
   "coverage": {
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_rest_days |corr| = -0.1145 (n=248 leakage-safe rows)",
+      "detail": "away_rest_days |corr| = -0.1222 (n=232 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 8.288: home 3.246, draw -1.797, away -5.042",
+      "detail": "points_difference spreads group means over 9.484: home 3.615, draw -1.933, away -5.869",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.35
+      "size_kb": 14.33
     }
   ],
   "anomalies": [
@@ -477,8 +477,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 33672,
-        "distinct": 33627,
+        "rows": 33914,
+        "distinct": 33869,
         "duplicates": 45
       }
     },
@@ -487,10 +487,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=30, fgte=30 rows)",
       "details": {
-        "total": 33672,
+        "total": 33914,
         "fgt_inconsistent": 30,
         "fgte_inconsistent": 30,
-        "n_with_fgt": 31275
+        "n_with_fgt": 31502
       }
     },
     {

@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:56:57+00:00
+- Generated: 2026-09-29T15:47:49+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Superliga (Denmark)
 - Scope: league `denmark1`

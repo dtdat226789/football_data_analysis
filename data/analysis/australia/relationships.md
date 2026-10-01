@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-23T10:54:40+00:00
+- Generated: 2026-09-29T15:43:58+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`
@@ -13,28 +13,28 @@ _Pearson correlation of each pre-match feature with observed goals; sorted by |c
 | feature | corr(home) | corr(away) | corr(total) |
 |---|---|---|---|
 | home_team_goals_scored_last_5 | 0.177 | 0.086 | 0.189 |
-| home_team_wins_last_5 | 0.092 | 0.068 | 0.114 |
 | home_team_home_conceded_avg | -0.003 | 0.173 | 0.114 |
 | home_team_points_last_5 | 0.126 | 0.024 | 0.109 |
 | home_team_home_goals_avg | 0.092 | 0.050 | 0.102 |
 | home_points_before_match | 0.148 | -0.013 | 0.101 |
+| home_team_wins_last_5 | 0.132 | -0.005 | 0.094 |
 | home_team_goals_conceded_last_5 | 0.009 | 0.120 | 0.088 |
 | away_position_before_match | 0.126 | -0.011 | 0.086 |
+| away_team_away_win_rate | -0.009 | 0.126 | 0.078 |
 | points_difference | 0.175 | -0.090 | 0.069 |
 | rest_days_difference | -0.035 | 0.133 | 0.065 |
 | away_team_goals_conceded_last_5 | 0.057 | 0.032 | 0.064 |
 | position_difference | -0.167 | 0.091 | -0.063 |
-| away_team_away_win_rate | -0.012 | 0.099 | 0.058 |
 | away_team_away_goals_avg | -0.006 | 0.091 | 0.057 |
 | away_points_before_match | 0.034 | 0.047 | 0.057 |
 | home_rest_days | 0.022 | 0.028 | 0.035 |
 | away_team_away_conceded_avg | -0.038 | -0.010 | -0.035 |
-| home_team_home_win_rate | -0.013 | -0.036 | -0.034 |
 | away_rest_days | 0.059 | -0.112 | -0.033 |
+| home_team_home_win_rate | 0.061 | -0.091 | -0.016 |
 | away_team_goals_scored_last_5 | -0.060 | 0.050 | -0.011 |
-| away_team_wins_last_5 | -0.079 | 0.080 | -0.004 |
 | home_position_before_match | -0.098 | 0.112 | 0.003 |
 | away_team_points_last_5 | -0.066 | 0.070 | -0.001 |
+| away_team_wins_last_5 | -0.052 | 0.058 | 0.000 |
 
 ## 2. Form vs outcome
 _Home win/draw/away % per bucket of `home_team_points_last_5 - away_team_points_last_5`._
@@ -76,14 +76,14 @@ _Home win/draw/away % per bucket of `rest_days_difference` (home rest - away res
 ## 5. Home team quality
 _Home win rate by `home_team_home_win_rate` tier (split at 0.5)._
 
-- `< 0.5` tier: **41.4%** home win (36/87)
-- `>= 0.5` tier: **34.7%** home win (85/245)
-- Home-win gap (>= split minus < split): **-6.7 pp**
+- `< 0.5` tier: **35.0%** home win (77/220)
+- `>= 0.5` tier: **39.3%** home win (44/112)
+- Home-win gap (>= split minus < split): **+4.3 pp**
 
 | tier | label | matches | home | draw | away | home % |
 |---|---|---|---|---|---|---|
-| low | < 0.5 | 87 | 36 | 18 | 33 | 41.4% |
-| high | >= 0.5 | 245 | 85 | 69 | 91 | 34.7% |
+| low | < 0.5 | 220 | 77 | 55 | 88 | 35.0% |
+| high | >= 0.5 | 112 | 44 | 32 | 36 | 39.3% |
 
 ## 6. Feature averages by result
 _Mean feature value per outcome; `range` is home-minus-away spread of the group means._
@@ -103,16 +103,16 @@ _Mean feature value per outcome; `range` is home-minus-away spread of the group 
 | away_team_points_last_5 | 5.669 | 6.023 | 6.411 | 0.742 |
 | away_rest_days | 8.078 | 7.732 | 7.385 | 0.692 |
 | home_team_points_last_5 | 6.388 | 6.333 | 5.790 | 0.598 |
-| away_team_wins_last_5 | 2.595 | 2.782 | 2.976 | 0.381 |
+| home_team_wins_last_5 | 1.752 | 1.736 | 1.492 | 0.260 |
 | home_team_home_conceded_avg | 1.209 | 1.229 | 1.450 | 0.241 |
 | home_team_goals_scored_last_5 | 6.909 | 6.885 | 6.669 | 0.240 |
+| away_team_wins_last_5 | 1.537 | 1.621 | 1.718 | 0.181 |
 | home_rest_days | 7.560 | 7.654 | 7.738 | 0.177 |
 | away_team_away_goals_avg | 1.260 | 1.340 | 1.358 | 0.098 |
 | away_team_away_conceded_avg | 1.340 | 1.431 | 1.405 | 0.091 |
-| home_team_wins_last_5 | 2.884 | 2.862 | 2.806 | 0.078 |
+| home_team_home_win_rate | 0.370 | 0.387 | 0.318 | 0.070 |
 | home_team_home_goals_avg | 1.354 | 1.397 | 1.418 | 0.064 |
-| away_team_away_win_rate | 0.552 | 0.575 | 0.598 | 0.047 |
-| home_team_home_win_rate | 0.572 | 0.591 | 0.559 | 0.032 |
+| away_team_away_win_rate | 0.337 | 0.364 | 0.374 | 0.037 |
 
 ---
 *All features are leakage-safe pre-match values built by `ml.features.build_features.build_rows` from strictly prior matches. Run with `python backend/scripts/analyze_relationships.py` to regenerate.*

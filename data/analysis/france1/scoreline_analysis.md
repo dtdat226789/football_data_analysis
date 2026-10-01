@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:58:42+00:00
+- Generated: 2026-09-29T15:50:03+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Ligue 1 (France)
 - Scope: league `france1`

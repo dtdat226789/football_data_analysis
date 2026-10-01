@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:59:30+00:00
+- Generated: 2026-09-29T15:51:03+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Bundesliga (Germany)
 - Scope: league `germany1`

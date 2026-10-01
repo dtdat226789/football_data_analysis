@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T11:01:44+00:00
+- Generated: 2026-09-29T15:56:37+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie A (Italy)
 - Scope: league `italy1`

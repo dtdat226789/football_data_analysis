@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:01:56+00:00",
+  "generated_at": "2026-09-29T15:57:19+00:00",
   "config": {
     "league": "italy19",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\italy19",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\italy19\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.35
+      "size_kb": 14.34
     }
   ],
   "coverage": {
@@ -125,14 +125,14 @@
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 155 scoring matches, 39.5% of scoring)",
+      "detail": "minute 1-15 (first goal in 158 scoring matches, 40.3% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 28.35, median 21.5",
+      "detail": "mean 28.06, median 21.0",
       "importance": "low",
       "id": "F8"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_home_win_rate |corr| = 0.0662 (n=432 leakage-safe rows)",
+      "detail": "away_team_away_conceded_avg |corr| = 0.1205 (n=382 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "home_points_before_match spreads group means over 3.551: home 23.687, draw 23.301, away 20.135",
+      "detail": "points_difference spreads group means over 3.852: home 1.276, draw -0.120, away -2.575",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.35
+      "size_kb": 14.34
     }
   ],
   "anomalies": [
@@ -483,8 +483,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 15074,
-        "distinct": 15064,
+        "rows": 15180,
+        "distinct": 15170,
         "duplicates": 10
       }
     },
@@ -493,10 +493,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)",
       "details": {
-        "total": 15074,
+        "total": 15180,
         "fgt_inconsistent": 17,
         "fgte_inconsistent": 17,
-        "n_with_fgt": 14049
+        "n_with_fgt": 14149
       }
     }
   ],

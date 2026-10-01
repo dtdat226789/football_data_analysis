@@ -5,6 +5,7 @@ from typing import Literal
 
 from fastapi import APIRouter, HTTPException
 
+from .. import common
 from ..deps import (
     ensure_season,
     fetched_cursor,
@@ -49,4 +50,10 @@ def standings(
             (league, season, view),
         )
         rows = [dict(r) for r in cur.fetchall()]
-    return {"league": league, "season": season, "view": view, "rows": rows}
+    return {
+        "league": league,
+        "league_name": common.league_name(league),
+        "season": season,
+        "view": view,
+        "rows": rows,
+    }

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:54:58+00:00
+- Generated: 2026-09-29T15:44:27+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: 2. Liga (Austria)
 - Scope: league `austria2`

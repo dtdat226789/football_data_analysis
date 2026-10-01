@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:01:28+00:00",
+  "generated_at": "2026-09-29T15:55:49+00:00",
   "config": {
     "league": "ireland1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\ireland1",
@@ -50,7 +50,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\ireland1\\teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 20.03
+      "size_kb": 20.04
     },
     {
       "report_name": "season_trends",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\ireland1\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.36
+      "size_kb": 14.35
     }
   ],
   "coverage": {
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "338 matches: home wins 40.5%, draws 30.5%, away wins 29.0% (137H / 103D / 98A)",
+      "detail": "339 matches: home wins 40.4%, draws 30.7%, away wins 28.9% (137H / 104D / 98A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,35 +104,35 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "338 matches produced 875 goals (avg 2.589 per match)",
+      "detail": "339 matches produced 877 goals (avg 2.587 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 55.2% vs away 44.8% of 875 goals in total (home/away ratio 1.23)",
+      "detail": "home 55.2% vs away 44.8% of 877 goals in total (home/away ratio 1.23)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "190 of 338 matches (56.2%)",
+      "detail": "191 of 339 matches (56.3%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 99 scoring matches, 32.1% of scoring)",
+      "detail": "minute 1-15 (first goal in 99 scoring matches, 32.0% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 30.01, median 25.0",
+      "detail": "mean 30.07, median 25.0",
       "importance": "low",
       "id": "F8"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.344 per match): first half 2.428 vs last half 2.772 across 2 seasons",
+      "detail": "up (+0.339 per match): first half 2.428 vs last half 2.767 across 2 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -195,7 +195,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 46 matches (13.6%)",
+      "detail": "1-1 in 47 matches (13.9%)",
       "importance": "medium",
       "id": "F17"
     },
@@ -209,7 +209,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (46 of 103 draw matches, 44.7%)",
+      "detail": "1-1 (47 of 104 draw matches, 45.2%)",
       "importance": "low",
       "id": "F19"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_away_conceded_avg |corr| = 0.1342 (n=338 leakage-safe rows)",
+      "detail": "home_team_goals_conceded_last_5 |corr| = -0.1389 (n=180 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 5.125: home 2.635, draw -1.709, away -2.490",
+      "detail": "points_difference spreads group means over 5.009: home 2.558, draw -2.038, away -2.451",
       "importance": "medium",
       "id": "F23"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 338 matches observed",
+      "detail": "2 of 2 registered seasons populated (100.0%); 339 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 338,
-    "avg_goals": 2.589,
-    "home_win_pct": 40.5,
-    "draw_pct": 30.5,
-    "away_win_pct": 29.0,
+    "n_matches": 339,
+    "avg_goals": 2.587,
+    "home_win_pct": 40.4,
+    "draw_pct": 30.7,
+    "away_win_pct": 28.9,
     "most_common_scoreline": "1-1",
     "dominant_team": "Shamrock Rovers",
     "champion_most_titles": "Shamrock Rovers",
-    "btts_rate_pct": 56.2
+    "btts_rate_pct": 56.3
   },
   "comparison": [
     {
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 20.03
+      "size_kb": 20.04
     },
     {
       "module": "season_trends",
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.36
+      "size_kb": 14.35
     }
   ],
   "anomalies": [
@@ -386,10 +386,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 158 matches, expected 380",
+      "message": "Season 2026 has 159 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 158,
+        "n_matches": 159,
         "expected": 380
       }
     },
@@ -439,8 +439,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 13873,
-        "distinct": 13863,
+        "rows": 13974,
+        "distinct": 13964,
         "duplicates": 10
       }
     },
@@ -449,10 +449,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=7, fgte=7 rows)",
       "details": {
-        "total": 13873,
+        "total": 13974,
         "fgt_inconsistent": 7,
         "fgte_inconsistent": 7,
-        "n_with_fgt": 12944
+        "n_with_fgt": 13039
       }
     },
     {

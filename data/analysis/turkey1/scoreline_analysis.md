@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T13:50:05+00:00
+- Generated: 2026-09-29T16:10:35+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Super Lig (Turkey)
 - Scope: league `turkey1`

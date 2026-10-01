@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:56:21+00:00
+- Generated: 2026-09-29T15:46:55+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Chance Liga (Czech Republic)
 - Scope: league `czech1`

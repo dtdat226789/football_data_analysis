@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:02:43+00:00
+- Generated: 2026-09-29T15:59:50+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: J2 League (Japan)
 - Scope: league `japan2`
@@ -39,7 +39,7 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (79 of 197 draw matches, 40.1%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (77 of 265 away matches, 29.1%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 11 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_points_last_5 |corr| = 0.0882 (n=760 leakage-safe rows)
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_wins_last_5 |corr| = 0.0992 (n=760 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.104: home 3.587, draw -0.604, away -3.517
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (3)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 760 matches observed

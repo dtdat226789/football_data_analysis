@@ -1,39 +1,40 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T10:59:03+00:00
+- Generated: 2026-09-29T15:50:29+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ligue 3 (France)
 - Scope: league `france3`
 
-- Teams: **55** | Seasons: **2** | Matches: **371**
+- Teams: **56** | Seasons: **2** | Matches: **388**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Rouen | 2 | 39 | 19 | 15 | 5 | 72 | 56 | 31 | 25 | 36.0 | 1 | 3 | 1 |
-| Fleury-Merogis | 2 | 40 | 18 | 12 | 10 | 66 | 64 | 39 | 25 | 33.0 | 4 | 5 | 0 |
+| Rouen | 2 | 40 | 19 | 15 | 6 | 72 | 58 | 34 | 24 | 36.0 | 2 | 3 | 0 |
+| Fleury-Merogis | 2 | 41 | 18 | 12 | 11 | 66 | 65 | 41 | 24 | 33.0 | 4 | 11 | 0 |
+| Versailles | 2 | 41 | 19 | 9 | 13 | 66 | 58 | 49 | 9 | 33.0 | 5 | 10 | 0 |
 | Dijon | 1 | 32 | 18 | 11 | 3 | 65 | 52 | 25 | 27 | 65.0 | 1 | 1 | 1 |
-| Versailles | 2 | 40 | 18 | 9 | 13 | 63 | 56 | 48 | 8 | 31.5 | 5 | 11 | 0 |
-| Orleans | 2 | 40 | 16 | 11 | 13 | 59 | 49 | 53 | -4 | 29.5 | 6 | 14 | 0 |
+| Orleans | 2 | 42 | 17 | 12 | 13 | 63 | 51 | 53 | -2 | 31.5 | 6 | 12 | 0 |
 | Sochaux | 1 | 32 | 16 | 10 | 6 | 58 | 51 | 26 | 25 | 58.0 | 2 | 2 | 0 |
-| Le Puy-en-Velay | 2 | 40 | 15 | 13 | 12 | 58 | 55 | 46 | 9 | 29.0 | 7 | 9 | 0 |
-| Caen | 2 | 39 | 12 | 16 | 11 | 52 | 51 | 41 | 10 | 26.0 | 6 | 8 | 0 |
-| Concarneau | 2 | 39 | 11 | 17 | 11 | 50 | 41 | 43 | -2 | 25.0 | 7 | 9 | 0 |
-| Valenciennes | 2 | 39 | 11 | 10 | 18 | 43 | 42 | 56 | -14 | 21.5 | 10 | 15 | 0 |
-| Aubagne | 2 | 40 | 10 | 12 | 18 | 42 | 41 | 54 | -13 | 21.0 | 11 | 16 | 0 |
-| Quevilly Rouen | 2 | 39 | 10 | 12 | 17 | 42 | 40 | 53 | -13 | 21.0 | 13 | 13 | 0 |
-| Paris 13 Atl. | 2 | 40 | 9 | 15 | 16 | 42 | 31 | 48 | -17 | 21.0 | 10 | 14 | 0 |
-| Villefranche | 2 | 40 | 11 | 8 | 21 | 41 | 41 | 68 | -27 | 20.5 | 12 | 18 | 0 |
-| Bourg en Bresse | 2 | 39 | 9 | 8 | 22 | 35 | 29 | 56 | -27 | 17.5 | 16 | 17 | 0 |
+| Le Puy-en-Velay | 2 | 41 | 15 | 13 | 13 | 58 | 56 | 48 | 8 | 29.0 | 7 | 13 | 0 |
+| Caen | 2 | 40 | 13 | 16 | 11 | 55 | 54 | 43 | 11 | 27.5 | 5 | 8 | 0 |
+| Concarneau | 2 | 40 | 11 | 18 | 11 | 51 | 42 | 44 | -2 | 25.5 | 6 | 9 | 0 |
+| Aubagne | 2 | 42 | 12 | 12 | 18 | 48 | 45 | 56 | -11 | 24.0 | 11 | 14 | 0 |
+| Quevilly Rouen | 2 | 41 | 11 | 13 | 17 | 46 | 43 | 55 | -12 | 23.0 | 8 | 13 | 0 |
+| Valenciennes | 2 | 41 | 12 | 10 | 19 | 46 | 45 | 59 | -14 | 23.0 | 10 | 17 | 0 |
+| Paris 13 Atl. | 2 | 41 | 10 | 15 | 16 | 45 | 32 | 48 | -16 | 22.5 | 9 | 14 | 0 |
+| Villefranche | 2 | 42 | 11 | 8 | 23 | 41 | 43 | 76 | -33 | 20.5 | 12 | 19 | 0 |
+| Bourg en Bresse | 2 | 40 | 9 | 9 | 22 | 36 | 30 | 57 | -27 | 18.0 | 16 | 18 | 0 |
 | Chateauroux | 1 | 32 | 6 | 13 | 13 | 31 | 35 | 49 | -14 | 31.0 | 15 | 15 | 0 |
 | Stade Briochin | 1 | 32 | 5 | 12 | 15 | 27 | 35 | 50 | -15 | 27.0 | 17 | 17 | 0 |
 | en-Velay | 1 | 15 | 7 | 4 | 4 | 25 | 23 | 15 | 8 | 25.0 | 18 | 18 | 0 |
 | Le Puy-en | 1 | 16 | 5 | 7 | 4 | 22 | 22 | 19 | 3 | 22.0 | 19 | 19 | 0 |
-| La Roche | 1 | 7 | 4 | 3 | 0 | 15 | 10 | 6 | 4 | 15.0 | 2 | 2 | 0 |
-| Amiens | 1 | 8 | 4 | 2 | 2 | 14 | 11 | 2 | 9 | 14.0 | 3 | 3 | 0 |
-| Cannes | 1 | 8 | 3 | 5 | 0 | 14 | 11 | 3 | 8 | 14.0 | 4 | 4 | 0 |
-| Thionville | 1 | 7 | 3 | 3 | 1 | 12 | 13 | 11 | 2 | 12.0 | 8 | 8 | 0 |
-| Bastia | 1 | 8 | 3 | 1 | 4 | 10 | 6 | 12 | -6 | 10.0 | 12 | 12 | 0 |
+| La Roche | 1 | 8 | 5 | 3 | 0 | 18 | 12 | 7 | 5 | 18.0 | 1 | 1 | 1 |
+| Amiens | 1 | 10 | 4 | 4 | 2 | 16 | 12 | 3 | 9 | 16.0 | 3 | 3 | 0 |
+| Cannes | 1 | 10 | 3 | 7 | 0 | 16 | 12 | 4 | 8 | 16.0 | 4 | 4 | 0 |
+| Thionville | 1 | 9 | 3 | 4 | 2 | 13 | 15 | 14 | 1 | 13.0 | 7 | 7 | 0 |
+| Bastia | 1 | 9 | 3 | 1 | 5 | 10 | 6 | 13 | -7 | 10.0 | 15 | 15 | 0 |
+| Fleury 91 | 1 | 8 | 2 | 3 | 3 | 9 | 12 | 10 | 2 | 9.0 | 16 | 16 | 0 |
 | Velay-Rouen | 1 | 1 | 1 | 0 | 0 | 3 | 3 | 0 | 3 | 3.0 | 20 | 20 | 0 |
 | Caen-Le Puy | 1 | 1 | 1 | 0 | 0 | 3 | 2 | 0 | 2 | 3.0 | 21 | 21 | 0 |
 | Dijon-Le Puy | 1 | 1 | 1 | 0 | 0 | 3 | 2 | 0 | 2 | 3.0 | 22 | 22 | 0 |
@@ -70,23 +71,22 @@
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Le Puy-en | 16 | 5 | 7 | 4 | 22 | 0 | 0 | 0 | 0 | 0 | 22 |
-| Villefranche | 19 | 9 | 3 | 7 | 30 | 21 | 2 | 5 | 14 | 11 | 19 |
-| Paris 13 Atl. | 21 | 7 | 9 | 5 | 30 | 19 | 2 | 6 | 11 | 12 | 18 |
-| Caen | 20 | 8 | 9 | 3 | 33 | 19 | 4 | 7 | 8 | 19 | 14 |
-| Valenciennes | 19 | 8 | 3 | 8 | 27 | 20 | 3 | 7 | 10 | 16 | 11 |
-| Bourg en Bresse | 20 | 6 | 4 | 10 | 22 | 19 | 3 | 4 | 12 | 13 | 9 |
+| Paris 13 Atl. | 22 | 8 | 9 | 5 | 33 | 19 | 2 | 6 | 11 | 12 | 21 |
+| Villefranche | 20 | 9 | 3 | 8 | 30 | 22 | 2 | 5 | 15 | 11 | 19 |
+| Caen | 21 | 9 | 9 | 3 | 36 | 19 | 4 | 7 | 8 | 19 | 17 |
+| Valenciennes | 21 | 9 | 3 | 9 | 30 | 20 | 3 | 7 | 10 | 16 | 14 |
+| Quevilly Rouen | 21 | 6 | 10 | 5 | 28 | 20 | 5 | 3 | 12 | 18 | 10 |
+| Bourg en Bresse | 21 | 6 | 5 | 10 | 23 | 19 | 3 | 4 | 12 | 13 | 10 |
 | Sochaux | 16 | 9 | 6 | 1 | 33 | 16 | 7 | 4 | 5 | 25 | 8 |
-| Fleury-Merogis | 21 | 10 | 6 | 5 | 36 | 19 | 8 | 6 | 5 | 30 | 6 |
-| Quevilly Rouen | 19 | 5 | 9 | 5 | 24 | 20 | 5 | 3 | 12 | 18 | 6 |
+| Fleury-Merogis | 22 | 10 | 6 | 6 | 36 | 19 | 8 | 6 | 5 | 30 | 6 |
 | Bourg en Bresse-Le Puy | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Caen-Le Puy | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Dijon-Le Puy | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Valenciennes-Le Puy | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
-| Rouen | 20 | 10 | 7 | 3 | 37 | 19 | 9 | 8 | 2 | 35 | 2 |
-| Le Puy-en-Velay | 20 | 7 | 9 | 4 | 30 | 20 | 8 | 4 | 8 | 28 | 2 |
-| Concarneau | 20 | 6 | 8 | 6 | 26 | 19 | 5 | 9 | 5 | 24 | 2 |
-| Versailles | 20 | 9 | 5 | 6 | 32 | 20 | 9 | 4 | 7 | 31 | 1 |
-| La Roche | 4 | 2 | 2 | 0 | 8 | 3 | 2 | 1 | 0 | 7 | 1 |
+| Rouen | 20 | 10 | 7 | 3 | 37 | 20 | 9 | 8 | 3 | 35 | 2 |
+| Le Puy-en-Velay | 20 | 7 | 9 | 4 | 30 | 21 | 8 | 4 | 9 | 28 | 2 |
+| Concarneau | 20 | 6 | 8 | 6 | 26 | 20 | 5 | 10 | 5 | 25 | 1 |
+| Fleury 91 | 5 | 1 | 2 | 2 | 5 | 3 | 1 | 1 | 1 | 4 | 1 |
 | Orleans-Le Puy | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Quevilly Rouen-Le Puy | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Rouen-Le Puy | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
@@ -112,17 +112,19 @@
 | Velay-Paris 13 Atl. | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
 | Velay-Stade Briochin | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
 | Velay-Versailles | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
-| Amiens | 3 | 2 | 0 | 1 | 6 | 5 | 2 | 2 | 1 | 8 | -2 |
+| Versailles | 20 | 9 | 5 | 6 | 32 | 21 | 10 | 4 | 7 | 34 | -2 |
+| La Roche | 4 | 2 | 2 | 0 | 8 | 4 | 3 | 1 | 0 | 10 | -2 |
 | Velay-Aubagne | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Velay-Dijon | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Velay-Rouen | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Velay-Sochaux | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
-| Aubagne | 20 | 4 | 7 | 9 | 19 | 20 | 6 | 5 | 9 | 23 | -4 |
-| Cannes | 3 | 1 | 2 | 0 | 5 | 5 | 2 | 3 | 0 | 9 | -4 |
-| Thionville | 3 | 1 | 1 | 1 | 4 | 4 | 2 | 2 | 0 | 8 | -4 |
+| Amiens | 3 | 2 | 0 | 1 | 6 | 7 | 2 | 4 | 1 | 10 | -4 |
+| Cannes | 4 | 1 | 3 | 0 | 6 | 6 | 2 | 4 | 0 | 10 | -4 |
 | Chateauroux | 16 | 3 | 4 | 9 | 13 | 16 | 3 | 9 | 4 | 18 | -5 |
-| Orleans | 19 | 7 | 5 | 7 | 26 | 21 | 9 | 6 | 6 | 33 | -7 |
-| Bastia | 5 | 0 | 1 | 4 | 1 | 3 | 3 | 0 | 0 | 9 | -8 |
+| Thionville | 4 | 1 | 1 | 2 | 4 | 5 | 2 | 3 | 0 | 9 | -5 |
+| Bastia | 5 | 0 | 1 | 4 | 1 | 4 | 3 | 0 | 1 | 9 | -8 |
+| Orleans | 20 | 7 | 6 | 7 | 27 | 22 | 10 | 6 | 6 | 36 | -9 |
+| Aubagne | 20 | 4 | 7 | 9 | 19 | 22 | 8 | 5 | 9 | 29 | -10 |
 | en-Velay | 0 | 0 | 0 | 0 | 0 | 15 | 7 | 4 | 4 | 25 | -25 |
 
 ## 3. Top performers
@@ -138,20 +140,20 @@
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Fleury-Merogis | 64 |
-| 2 | Rouen | 56 |
-| 3 | Versailles | 56 |
-| 4 | Le Puy-en-Velay | 55 |
-| 5 | Dijon | 52 |
+| 1 | Fleury-Merogis | 65 |
+| 2 | Rouen | 58 |
+| 3 | Versailles | 58 |
+| 4 | Le Puy-en-Velay | 56 |
+| 5 | Caen | 54 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
 | 1 | Dijon | 27 |
-| 2 | Rouen | 25 |
-| 3 | Fleury-Merogis | 25 |
-| 4 | Sochaux | 25 |
-| 5 | Caen | 10 |
+| 2 | Sochaux | 25 |
+| 3 | Rouen | 24 |
+| 4 | Fleury-Merogis | 24 |
+| 5 | Caen | 11 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
@@ -168,7 +170,7 @@
 Aubagne, Bourg en Bresse, Caen, Concarneau, Fleury-Merogis, Le Puy-en-Velay, Orleans, Paris 13 Atl., Quevilly Rouen, Rouen, Valenciennes, Versailles, Villefranche
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **197** (showing the 15 most frequent)
+- Distinct fixtures: **209** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -176,6 +178,7 @@ Aubagne, Bourg en Bresse, Caen, Concarneau, Fleury-Merogis, Le Puy-en-Velay, Orl
 | Aubagne vs Paris 13 Atl. | 4 | 0 | 4 | 0 | 0.0% | 100.0% | 0.0% |
 | Orleans vs Le Puy-en-Velay | 4 | 0 | 4 | 0 | 0.0% | 100.0% | 0.0% |
 | Caen vs Aubagne | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
+| Le Puy-en-Velay vs Valenciennes | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
 | Quevilly Rouen vs Paris 13 Atl. | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
 | Valenciennes vs Bourg en Bresse | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
 | Villefranche vs Paris 13 Atl. | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
@@ -186,37 +189,37 @@ Aubagne, Bourg en Bresse, Caen, Concarneau, Fleury-Merogis, Le Puy-en-Velay, Orl
 | Fleury-Merogis vs Quevilly Rouen | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
 | Le Puy-en-Velay vs Quevilly Rouen | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
 | Le Puy-en-Velay vs Villefranche | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Paris 13 Atl. vs Bourg en Bresse | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
 | team | 2025-2026 | 2026-2027 |
 |---|---|---|
-| Rouen | 3 | 1 |
-| Fleury-Merogis | 4 | 5 |
+| Rouen | 3 | 2 |
+| Fleury-Merogis | 4 | 11 |
+| Versailles | 5 | 10 |
 | Dijon | 1 | - |
-| Versailles | 5 | 11 |
-| Orleans | 6 | 14 |
+| Orleans | 6 | 12 |
 | Sochaux | 2 | - |
-| Le Puy-en-Velay | 7 | 9 |
-| Caen | 8 | 6 |
-| Concarneau | 9 | 7 |
-| Valenciennes | 10 | 15 |
-| Aubagne | 11 | 16 |
-| Quevilly Rouen | 13 | 13 |
-| Paris 13 Atl. | 14 | 10 |
-| Villefranche | 12 | 18 |
-| Bourg en Bresse | 16 | 17 |
+| Le Puy-en-Velay | 7 | 13 |
+| Caen | 8 | 5 |
+| Concarneau | 9 | 6 |
+| Aubagne | 11 | 14 |
+| Quevilly Rouen | 13 | 8 |
+| Valenciennes | 10 | 17 |
+| Paris 13 Atl. | 14 | 9 |
+| Villefranche | 12 | 19 |
+| Bourg en Bresse | 16 | 18 |
 | Chateauroux | 15 | - |
 | Stade Briochin | 17 | - |
 | en-Velay | 18 | - |
 | Le Puy-en | 19 | - |
-| La Roche | - | 2 |
+| La Roche | - | 1 |
 | Amiens | - | 3 |
 | Cannes | - | 4 |
-| Thionville | - | 8 |
-| Bastia | - | 12 |
+| Thionville | - | 7 |
+| Bastia | - | 15 |
+| Fleury 91 | - | 16 |
 | Velay-Rouen | 20 | - |
 | Caen-Le Puy | 21 | - |
 | Dijon-Le Puy | 22 | - |

@@ -1,110 +1,110 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T11:00:45+00:00
+- Generated: 2026-09-29T15:53:35+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Tweede Divisie (Netherlands)
 - Scope: league `holland3`
 
-- Teams: **27** | Seasons: **2** | Matches: **376**
+- Teams: **27** | Seasons: **2** | Matches: **385**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Quick Boys | 2 | 40 | 24 | 10 | 6 | 82 | 86 | 39 | 47 | 41.0 | 1 | 1 | 2 |
-| De Treffers | 2 | 40 | 21 | 12 | 7 | 75 | 78 | 43 | 35 | 37.5 | 2 | 3 | 0 |
-| Hoek | 2 | 40 | 20 | 9 | 11 | 69 | 68 | 46 | 22 | 34.5 | 3 | 13 | 0 |
-| Hardenberg | 2 | 40 | 20 | 7 | 13 | 67 | 71 | 53 | 18 | 33.5 | 4 | 5 | 0 |
-| Spakenburg | 2 | 40 | 19 | 9 | 12 | 66 | 81 | 66 | 15 | 33.0 | 5 | 6 | 0 |
-| Rijnsburgse Boys | 2 | 40 | 18 | 9 | 13 | 63 | 87 | 73 | 14 | 31.5 | 4 | 12 | 0 |
-| Katwijk | 2 | 40 | 17 | 9 | 14 | 60 | 69 | 63 | 6 | 30.0 | 7 | 10 | 0 |
-| Kozakken Boys | 2 | 40 | 17 | 9 | 14 | 60 | 64 | 65 | -1 | 30.0 | 2 | 10 | 0 |
-| Jong Sparta Rotterdam | 2 | 42 | 15 | 13 | 14 | 58 | 93 | 88 | 5 | 29.0 | 8 | 9 | 0 |
-| IJsselmeervogels | 2 | 46 | 17 | 5 | 24 | 56 | 68 | 73 | -5 | 28.0 | 6 | 12 | 0 |
-| AFC | 2 | 40 | 15 | 10 | 15 | 55 | 57 | 65 | -8 | 27.5 | 7 | 11 | 0 |
-| Jong Almere City | 2 | 40 | 16 | 6 | 18 | 54 | 80 | 74 | 6 | 27.0 | 8 | 17 | 0 |
-| RKAV Volendam | 2 | 40 | 15 | 6 | 19 | 51 | 57 | 72 | -15 | 25.5 | 9 | 14 | 0 |
-| Barendrecht | 2 | 40 | 15 | 6 | 19 | 51 | 70 | 93 | -23 | 25.5 | 11 | 13 | 0 |
-| GVVV | 2 | 40 | 14 | 6 | 20 | 48 | 62 | 81 | -19 | 24.0 | 14 | 15 | 0 |
-| HFC | 2 | 40 | 13 | 5 | 22 | 44 | 41 | 61 | -20 | 22.0 | 15 | 16 | 0 |
+| Quick Boys | 2 | 41 | 25 | 10 | 6 | 85 | 88 | 39 | 49 | 42.5 | 1 | 1 | 2 |
+| De Treffers | 2 | 41 | 22 | 12 | 7 | 78 | 83 | 43 | 40 | 39.0 | 2 | 2 | 0 |
+| Hoek | 2 | 41 | 20 | 9 | 12 | 69 | 68 | 49 | 19 | 34.5 | 3 | 15 | 0 |
+| Hardenberg | 2 | 41 | 20 | 7 | 14 | 67 | 71 | 55 | 16 | 33.5 | 5 | 6 | 0 |
+| Spakenburg | 2 | 41 | 19 | 9 | 13 | 66 | 81 | 71 | 10 | 33.0 | 6 | 10 | 0 |
+| Rijnsburgse Boys | 2 | 41 | 18 | 9 | 14 | 63 | 87 | 76 | 11 | 31.5 | 4 | 13 | 0 |
+| Katwijk | 2 | 41 | 18 | 9 | 14 | 63 | 70 | 63 | 7 | 31.5 | 7 | 8 | 0 |
+| Jong Sparta Rotterdam | 2 | 43 | 16 | 13 | 14 | 61 | 96 | 88 | 8 | 30.5 | 5 | 9 | 0 |
+| Kozakken Boys | 2 | 41 | 17 | 10 | 14 | 61 | 65 | 66 | -1 | 30.5 | 3 | 10 | 0 |
+| IJsselmeervogels | 2 | 47 | 18 | 5 | 24 | 59 | 71 | 73 | -2 | 29.5 | 4 | 12 | 0 |
+| AFC | 2 | 41 | 15 | 10 | 16 | 55 | 57 | 66 | -9 | 27.5 | 9 | 11 | 0 |
+| Jong Almere City | 2 | 41 | 16 | 6 | 19 | 54 | 81 | 78 | 3 | 27.0 | 8 | 17 | 0 |
+| Barendrecht | 2 | 41 | 16 | 6 | 19 | 54 | 74 | 94 | -20 | 27.0 | 7 | 13 | 0 |
+| RKAV Volendam | 2 | 41 | 15 | 6 | 20 | 51 | 59 | 75 | -16 | 25.5 | 12 | 14 | 0 |
+| GVVV | 2 | 41 | 15 | 6 | 20 | 51 | 65 | 83 | -18 | 25.5 | 11 | 15 | 0 |
+| HFC | 2 | 41 | 13 | 6 | 22 | 45 | 42 | 62 | -20 | 22.5 | 14 | 16 | 0 |
 | Excelsior Maassluis | 1 | 40 | 11 | 8 | 21 | 41 | 49 | 65 | -16 | 41.0 | 17 | 17 | 0 |
 | ACV Assen | 1 | 34 | 7 | 9 | 18 | 30 | 48 | 71 | -23 | 30.0 | 18 | 18 | 0 |
 | Rijnvogels | 1 | 4 | 2 | 1 | 1 | 7 | 6 | 6 | 0 | 7.0 | 19 | 19 | 0 |
 | ADO 20 Heemskerk | 1 | 4 | 2 | 0 | 2 | 6 | 3 | 8 | -5 | 6.0 | 20 | 20 | 0 |
-| Kloetinge | 1 | 6 | 1 | 2 | 3 | 5 | 7 | 14 | -7 | 5.0 | 16 | 16 | 0 |
+| Kloetinge | 1 | 7 | 1 | 3 | 3 | 6 | 10 | 17 | -7 | 6.0 | 16 | 16 | 0 |
 | DVS '33 Ermelo | 1 | 2 | 0 | 1 | 1 | 1 | 2 | 3 | -1 | 1.0 | 22 | 22 | 0 |
 | Groningen U21 | 1 | 2 | 0 | 1 | 1 | 1 | 3 | 4 | -1 | 1.0 | 21 | 21 | 0 |
 | VVSB | 1 | 2 | 0 | 1 | 1 | 1 | 1 | 4 | -3 | 1.0 | 23 | 23 | 0 |
+| Raalte | 1 | 7 | 0 | 1 | 6 | 1 | 6 | 20 | -14 | 1.0 | 18 | 18 | 0 |
 | Lisse | 1 | 2 | 0 | 0 | 2 | 0 | 0 | 3 | -3 | 0.0 | 24 | 24 | 0 |
 | Sparta Nijkerk | 1 | 2 | 0 | 0 | 2 | 0 | 1 | 5 | -4 | 0.0 | 25 | 25 | 0 |
-| Raalte | 1 | 6 | 0 | 0 | 6 | 0 | 3 | 17 | -14 | 0.0 | 18 | 18 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| HFC | 20 | 10 | 3 | 7 | 33 | 20 | 3 | 2 | 15 | 11 | 22 |
+| HFC | 20 | 10 | 3 | 7 | 33 | 21 | 3 | 3 | 15 | 12 | 21 |
 | Excelsior Maassluis | 20 | 9 | 3 | 8 | 30 | 20 | 2 | 5 | 13 | 11 | 19 |
-| Jong Almere City | 20 | 11 | 2 | 7 | 35 | 20 | 5 | 4 | 11 | 19 | 16 |
-| Rijnsburgse Boys | 20 | 12 | 3 | 5 | 39 | 20 | 6 | 6 | 8 | 24 | 15 |
-| Spakenburg | 20 | 12 | 2 | 6 | 38 | 20 | 7 | 7 | 6 | 28 | 10 |
-| Katwijk | 20 | 11 | 2 | 7 | 35 | 20 | 6 | 7 | 7 | 25 | 10 |
-| Hoek | 20 | 11 | 6 | 3 | 39 | 20 | 9 | 3 | 8 | 30 | 9 |
-| RKAV Volendam | 20 | 9 | 3 | 8 | 30 | 20 | 6 | 3 | 11 | 21 | 9 |
-| GVVV | 20 | 7 | 6 | 7 | 27 | 20 | 7 | 0 | 13 | 21 | 6 |
+| Jong Almere City | 21 | 11 | 2 | 8 | 35 | 20 | 5 | 4 | 11 | 19 | 16 |
+| Rijnsburgse Boys | 20 | 12 | 3 | 5 | 39 | 21 | 6 | 6 | 9 | 24 | 15 |
+| Spakenburg | 20 | 12 | 2 | 6 | 38 | 21 | 7 | 7 | 7 | 28 | 10 |
+| Hoek | 20 | 11 | 6 | 3 | 39 | 21 | 9 | 3 | 9 | 30 | 9 |
+| GVVV | 21 | 8 | 6 | 7 | 30 | 20 | 7 | 0 | 13 | 21 | 9 |
+| RKAV Volendam | 20 | 9 | 3 | 8 | 30 | 21 | 6 | 3 | 12 | 21 | 9 |
+| Quick Boys | 21 | 14 | 4 | 3 | 46 | 20 | 11 | 6 | 3 | 39 | 7 |
+| Katwijk | 20 | 11 | 2 | 7 | 35 | 21 | 7 | 7 | 7 | 28 | 7 |
+| Jong Sparta Rotterdam | 22 | 9 | 7 | 6 | 34 | 21 | 7 | 6 | 8 | 27 | 7 |
 | Rijnvogels | 2 | 2 | 0 | 0 | 6 | 2 | 0 | 1 | 1 | 1 | 5 |
-| Quick Boys | 20 | 13 | 4 | 3 | 43 | 20 | 11 | 6 | 3 | 39 | 4 |
-| Jong Sparta Rotterdam | 21 | 8 | 7 | 6 | 31 | 21 | 7 | 6 | 8 | 27 | 4 |
-| Hardenberg | 20 | 10 | 5 | 5 | 35 | 20 | 10 | 2 | 8 | 32 | 3 |
-| AFC | 20 | 8 | 5 | 7 | 29 | 20 | 7 | 5 | 8 | 26 | 3 |
-| Barendrecht | 20 | 8 | 3 | 9 | 27 | 20 | 7 | 3 | 10 | 24 | 3 |
+| De Treffers | 21 | 11 | 8 | 2 | 41 | 20 | 11 | 4 | 5 | 37 | 4 |
+| Hardenberg | 20 | 10 | 5 | 5 | 35 | 21 | 10 | 2 | 9 | 32 | 3 |
+| AFC | 21 | 8 | 5 | 8 | 29 | 20 | 7 | 5 | 8 | 26 | 3 |
 | ACV Assen | 17 | 4 | 4 | 9 | 16 | 17 | 3 | 5 | 9 | 14 | 2 |
-| De Treffers | 20 | 10 | 8 | 2 | 38 | 20 | 11 | 4 | 5 | 37 | 1 |
+| IJsselmeervogels | 24 | 9 | 3 | 12 | 30 | 23 | 9 | 2 | 12 | 29 | 1 |
 | DVS '33 Ermelo | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
 | Groningen U21 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
 | VVSB | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
+| Barendrecht | 20 | 8 | 3 | 9 | 27 | 21 | 8 | 3 | 10 | 27 | 0 |
 | ADO 20 Heemskerk | 2 | 1 | 0 | 1 | 3 | 2 | 1 | 0 | 1 | 3 | 0 |
+| Kloetinge | 4 | 0 | 3 | 1 | 3 | 3 | 1 | 0 | 2 | 3 | 0 |
 | Lisse | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
-| Raalte | 3 | 0 | 0 | 3 | 0 | 3 | 0 | 0 | 3 | 0 | 0 |
 | Sparta Nijkerk | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
-| Kloetinge | 3 | 0 | 2 | 1 | 2 | 3 | 1 | 0 | 2 | 3 | -1 |
-| IJsselmeervogels | 23 | 8 | 3 | 12 | 27 | 23 | 9 | 2 | 12 | 29 | -2 |
-| Kozakken Boys | 20 | 7 | 3 | 10 | 24 | 20 | 10 | 6 | 4 | 36 | -12 |
+| Raalte | 3 | 0 | 0 | 3 | 0 | 4 | 0 | 1 | 3 | 1 | -1 |
+| Kozakken Boys | 21 | 7 | 4 | 10 | 25 | 20 | 10 | 6 | 4 | 36 | -11 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Quick Boys | 2.05 |
-| 2 | De Treffers | 1.88 |
+| 1 | Quick Boys | 2.07 |
+| 2 | De Treffers | 1.90 |
 | 3 | Rijnvogels | 1.75 |
-| 4 | Hoek | 1.73 |
-| 5 | Hardenberg | 1.68 |
+| 4 | Hoek | 1.68 |
+| 5 | Hardenberg | 1.63 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Jong Sparta Rotterdam | 93 |
-| 2 | Rijnsburgse Boys | 87 |
-| 3 | Quick Boys | 86 |
-| 4 | Spakenburg | 81 |
-| 5 | Jong Almere City | 80 |
+| 1 | Jong Sparta Rotterdam | 96 |
+| 2 | Quick Boys | 88 |
+| 3 | Rijnsburgse Boys | 87 |
+| 4 | De Treffers | 83 |
+| 5 | Spakenburg | 81 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Quick Boys | 47 |
-| 2 | De Treffers | 35 |
-| 3 | Hoek | 22 |
-| 4 | Hardenberg | 18 |
-| 5 | Spakenburg | 15 |
+| 1 | Quick Boys | 49 |
+| 2 | De Treffers | 40 |
+| 3 | Hoek | 19 |
+| 4 | Hardenberg | 16 |
+| 5 | Rijnsburgse Boys | 11 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Quick Boys | 0.975 |
+| 1 | Quick Boys | 0.951 |
 | 2 | Rijnvogels | 1.000 |
-| 3 | De Treffers | 1.075 |
-| 4 | Hoek | 1.150 |
-| 5 | Hardenberg | 1.325 |
+| 3 | De Treffers | 1.049 |
+| 4 | Hoek | 1.195 |
+| 5 | Hardenberg | 1.341 |
 
 ## 4. Team consistency
 - Teams present in all **2** seasons: **16**
@@ -112,7 +112,7 @@
 AFC, Barendrecht, De Treffers, GVVV, HFC, Hardenberg, Hoek, IJsselmeervogels, Jong Almere City, Jong Sparta Rotterdam, Katwijk, Kozakken Boys, Quick Boys, RKAV Volendam, Rijnsburgse Boys, Spakenburg
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **172** (showing the 15 most frequent)
+- Distinct fixtures: **173** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -130,7 +130,7 @@ AFC, Barendrecht, De Treffers, GVVV, HFC, Hardenberg, Hoek, IJsselmeervogels, Jo
 | Hardenberg vs Jong Almere City | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
 | Jong Almere City vs HFC | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
 | Jong Sparta Rotterdam vs HFC | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Rijnsburgse Boys vs Kozakken Boys | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
+| Quick Boys vs Hardenberg | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
@@ -138,21 +138,21 @@ _Cells show final position; '-' when the team was absent from that season._
 | team | 2025-2026 | 2026-2027 |
 |---|---|---|
 | Quick Boys | 1 | 1 |
-| De Treffers | 2 | 3 |
-| Hoek | 3 | 13 |
-| Hardenberg | 5 | 4 |
-| Spakenburg | 6 | 5 |
-| Rijnsburgse Boys | 4 | 12 |
-| Katwijk | 7 | 10 |
-| Kozakken Boys | 10 | 2 |
-| Jong Sparta Rotterdam | 9 | 8 |
-| IJsselmeervogels | 12 | 6 |
-| AFC | 11 | 7 |
+| De Treffers | 2 | 2 |
+| Hoek | 3 | 15 |
+| Hardenberg | 5 | 6 |
+| Spakenburg | 6 | 10 |
+| Rijnsburgse Boys | 4 | 13 |
+| Katwijk | 7 | 8 |
+| Jong Sparta Rotterdam | 9 | 5 |
+| Kozakken Boys | 10 | 3 |
+| IJsselmeervogels | 12 | 4 |
+| AFC | 11 | 9 |
 | Jong Almere City | 8 | 17 |
-| RKAV Volendam | 14 | 9 |
-| Barendrecht | 13 | 11 |
-| GVVV | 15 | 14 |
-| HFC | 16 | 15 |
+| Barendrecht | 13 | 7 |
+| RKAV Volendam | 14 | 12 |
+| GVVV | 15 | 11 |
+| HFC | 16 | 14 |
 | Excelsior Maassluis | 17 | - |
 | ACV Assen | 18 | - |
 | Rijnvogels | 19 | - |
@@ -161,9 +161,9 @@ _Cells show final position; '-' when the team was absent from that season._
 | DVS '33 Ermelo | 22 | - |
 | Groningen U21 | 21 | - |
 | VVSB | 23 | - |
+| Raalte | - | 18 |
 | Lisse | 24 | - |
 | Sparta Nijkerk | 25 | - |
-| Raalte | - | 18 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*

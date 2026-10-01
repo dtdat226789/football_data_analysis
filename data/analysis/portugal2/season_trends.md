@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T13:41:54+00:00
+- Generated: 2026-09-29T16:03:47+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
@@ -48,7 +48,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 5.600 | 5.200 |
-| 2026-2027 | 1.444 | 5.222 |
+| 2026-2027 | 1.333 | 5.222 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

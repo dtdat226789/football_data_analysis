@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T11:02:49+00:00
+- Generated: 2026-09-29T16:00:09+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`
@@ -38,17 +38,17 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025 | 198 | 512 | 2.586 | 41.9% | 26.3% | 31.8% | 8.1% | 45.17 |
-| 2026 | 179 | 440 | 2.458 | 30.2% | 33.5% | 36.3% | 11.2% | 39.75 |
+| 2026 | 180 | 440 | 2.444 | 30.0% | 33.9% | 36.1% | 11.7% | 39.92 |
 
 ## 6. View divergence
-- Largest divergence: **2026** (goals view, avg abs position diff = 4.167)
+- Largest divergence: **2026** (goals view, avg abs position diff = 4.333)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025 | 1.667 | 3.333 |
-| 2026 | 2.333 | 4.167 |
+| 2026 | 2.333 | 4.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

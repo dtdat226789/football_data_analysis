@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:58:47+00:00
+- Generated: 2026-09-29T15:50:11+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ligue 2 (France)
 - Scope: league `france2`
@@ -59,8 +59,8 @@
 | 2025-2026 | Annecy | Troyes | 1-0 | 1-2 |
 | 2025-2026 | Pau FC | Nancy | 1-0 | 1-3 |
 | 2026-2027 | Nantes | Rodez | 2-1 | 2-5 |
-| 2026-2027 | Rodez | Nancy | 2-1 | 3-4 |
 | 2026-2027 | Annecy | Dijon | 1-0 | 1-2 |
+| 2026-2027 | Rodez | Nancy | 2-1 | 3-4 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:00:07+00:00
+- Generated: 2026-09-29T15:51:51+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`
@@ -25,7 +25,7 @@
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 56.0% vs away 44.0% of 712 goals in total (home/away ratio 1.27)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 134 of 281 matches (47.7%)
 - **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 75 scoring matches, 29.2% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 31.10, median 27.0
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 31.09, median 27.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — AEK Athens leads with 83 points across 2 seasons (1 title(s), GD 47)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 12 teams present in every one of the 2 seasons (AEK Athens, Aris, Asteras Tripolis, Atromitos, Kifisia...)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — PAOK earns 13 more points at home than away (46 home vs 33 away)
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (41 of 77 draw matches, 53.2%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (24 of 88 away matches, 27.3%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 3 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_scored_last_5 |corr| = 0.0962 (n=281 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 9.518: home 3.836, draw -1.571, away -5.682
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_scored_last_5 |corr| = 0.099 (n=246 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 10.481: home 4.324, draw -1.750, away -6.158
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 281 matches observed
 

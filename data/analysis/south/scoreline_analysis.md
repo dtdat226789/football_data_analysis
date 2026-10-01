@@ -1,35 +1,35 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T13:47:40+00:00
+- Generated: 2026-09-29T16:08:39+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
 
 ## 1. Scoreline frequency
-- Matches analysed: **716** across **2** seasons.
-- Distinct scorelines seen: **38**.
+- Matches analysed: **728** across **2** seasons.
+- Distinct scorelines seen: **39**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 84 | 11.7% |
-| 1-1 | 77 | 10.8% |
-| 1-2 | 72 | 10.1% |
-| 2-0 | 54 | 7.5% |
-| 2-1 | 54 | 7.5% |
-| 0-1 | 47 | 6.6% |
-| 0-0 | 44 | 6.1% |
-| 2-2 | 34 | 4.7% |
-| 3-0 | 30 | 4.2% |
-| 3-2 | 27 | 3.8% |
+| 1-0 | 85 | 11.7% |
+| 1-1 | 77 | 10.6% |
+| 1-2 | 74 | 10.2% |
+| 2-0 | 56 | 7.7% |
+| 2-1 | 54 | 7.4% |
+| 0-1 | 47 | 6.5% |
+| 0-0 | 45 | 6.2% |
+| 2-2 | 35 | 4.8% |
+| 3-0 | 31 | 4.3% |
+| 3-2 | 28 | 3.8% |
 | 3-1 | 26 | 3.6% |
-| 0-2 | 21 | 2.9% |
+| 0-2 | 22 | 3.0% |
 | 1-3 | 18 | 2.5% |
-| 2-3 | 17 | 2.4% |
+| 2-3 | 17 | 2.3% |
 | 0-3 | 15 | 2.1% |
-| 4-1 | 14 | 2.0% |
+| 4-1 | 14 | 1.9% |
 | 3-3 | 11 | 1.5% |
-| 0-4 | 9 | 1.3% |
-| 4-2 | 9 | 1.3% |
+| 0-4 | 10 | 1.4% |
+| 4-2 | 9 | 1.2% |
 | 1-4 | 7 | 1.0% |
 
 ## 2. Scoreline frequency per season
@@ -46,31 +46,31 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 18 | 16.2% |
-| 0-1 | 10 | 9.0% |
-| 1-2 | 9 | 8.1% |
-| 1-0 | 9 | 8.1% |
-| 2-0 | 8 | 7.2% |
+| 1-1 | 18 | 14.6% |
+| 1-2 | 11 | 8.9% |
+| 2-0 | 10 | 8.1% |
+| 0-1 | 10 | 8.1% |
+| 1-0 | 10 | 8.1% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 44 | 6.1% |
-| 1 | 131 | 18.3% |
-| 2 | 152 | 21.2% |
-| 3 | 171 | 23.9% |
-| 4 | 94 | 13.1% |
-| 5 | 72 | 10.1% |
-| 6 | 32 | 4.5% |
-| 7 | 12 | 1.7% |
+| 0 | 45 | 6.2% |
+| 1 | 132 | 18.1% |
+| 2 | 155 | 21.3% |
+| 3 | 174 | 23.9% |
+| 4 | 96 | 13.2% |
+| 5 | 73 | 10.0% |
+| 6 | 32 | 4.4% |
+| 7 | 13 | 1.8% |
 | 8 | 5 | 0.7% |
 | 9 | 3 | 0.4% |
 | 10+ | 0 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **20**
+- Matches with 7+ total goals: **21**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
@@ -94,43 +94,44 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-18 | 1-6 | 7 |
 | 2025-2026 | 2026-04-18 | 5-2 | 7 |
 | 2025-2026 | 2026-04-25 | 1-6 | 7 |
+| 2026-2027 | 2026-09-26 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **550** (draws: **166**)
-- Average winning margin: **1.75**
+- Decided matches: **560** (draws: **168**)
+- Average winning margin: **1.76**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 306 | 55.6% |
-| 2 | 134 | 24.4% |
-| 3+ | 110 | 20.0% |
+| 1 | 311 | 55.5% |
+| 2 | 137 | 24.5% |
+| 3+ | 112 | 20.0% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **327** | avg margin: **1.81** | max margin: **8**
+- Matches: **333** | avg margin: **1.81** | max margin: **8**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 167 | 51.1% |
-| 2 | 92 | 28.1% |
-| 3+ | 68 | 20.8% |
+| 1 | 170 | 51.1% |
+| 2 | 94 | 28.2% |
+| 3+ | 69 | 20.7% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **223** | avg margin: **1.67** | max margin: **6**
+- Matches: **227** | avg margin: **1.67** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 139 | 62.3% |
-| 2 | 42 | 18.8% |
-| 3+ | 42 | 18.8% |
+| 1 | 141 | 62.1% |
+| 2 | 43 | 18.9% |
+| 3+ | 43 | 18.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 327 | 1-0 | 84 | 25.7% |
-| draw | 166 | 1-1 | 77 | 46.4% |
-| away | 223 | 1-2 | 72 | 32.3% |
+| home | 333 | 1-0 | 85 | 25.5% |
+| draw | 168 | 1-1 | 77 | 45.8% |
+| away | 227 | 1-2 | 74 | 32.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

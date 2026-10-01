@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T13:41:59+00:00
+- Generated: 2026-09-29T16:03:52+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
@@ -33,14 +33,14 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: Lusitania FC beat Penafiel by 3 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — down (-0.102 per match): first half 2.423 vs last half 2.321 across 2 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025-2026 (luck view, avg abs position diff 5.600)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.444)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.333)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-0 in 51 matches (14.0%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (51 of 153 home matches, 33.3%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 0-0 (37 of 88 draw matches, 42.0%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (33 of 122 away matches, 27.0%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 6 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_conceded_avg |corr| = 0.0953 (n=363 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — away_points_before_match spreads group means over 3.635: home 21.340, draw 17.705, away 19.516
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_conceded_avg |corr| = 0.0901 (n=310 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — away_points_before_match spreads group means over 4.504: home 24.412, draw 19.908, away 22.340
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (10)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 363 matches observed
 

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T13:44:43+00:00
+- Generated: 2026-09-29T16:06:10+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\scot-premier\teams_analysis.json | yes | yes | 25.12 |
 | season_trends | E:\football_data_analysis\data\analysis\scot-premier\season_trends.json | yes | yes | 3.92 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\scot-premier\scoreline_analysis.json | yes | yes | 48.58 |
-| relationships | E:\football_data_analysis\data\analysis\scot-premier\relationships.json | yes | yes | 14.33 |
+| relationships | E:\football_data_analysis\data\analysis\scot-premier\relationships.json | yes | yes | 14.32 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (31 of 73 draw matches, 42.5%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (23 of 82 away matches, 28.0%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 5 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_points_before_match |corr| = 0.1526 (n=276 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — home_points_before_match spreads group means over 10.753: home 26.438, draw 15.685, away 18.854
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_points_before_match |corr| = 0.163 (n=234 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — home_points_before_match spreads group means over 12.566: home 29.848, draw 17.281, away 22.600
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (18)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 276 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 25.12 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.92 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 48.58 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.33 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.32 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 234 matches, expected 380

@@ -1,6 +1,6 @@
 # Football Charts Database Profile
 - Report: `database_profile`
-- Generated: 2026-09-23T10:54:34+00:00
+- Generated: 2026-09-29T15:43:49+00:00
 - Script: `backend/scripts/profile_database.py` v1.0.0
 - Database: `football_charts` (PostgreSQL 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
 - Scope: league `australia`
@@ -16,7 +16,7 @@
 | teams | 32 |
 | team_aliases | 64 |
 | team_seasons | 57 |
-| matches | 594 |
+| matches | 595 |
 | standings | 171 |
 
 ### 1.2 Leagues with data
@@ -24,7 +24,7 @@
 - Leagues with match data: `2`
 | api_key | name | country | registered_seasons | matches |
 |---|---|---|---|---|
-| algir1 | Ligue 1 | Algeria | 2 | 262 |
+| algir1 | Ligue 1 | Algeria | 2 | 263 |
 | australia | A-League | Australia | 2 | 332 |
 
 ### 1.3 Registered seasons vs seasons with data
@@ -40,9 +40,9 @@
 ### 1.4 Duplicate checks
 | check | rows | distinct | duplicates |
 |---|---|---|---|
-| matches.api_id (natural PK) | 594 | 594 | 0 |
-| matches (league_season_id, game_index) | 594 | 594 | 0 |
-| matches same fixture on same date (league_season, home, away, match_date) | 594 | 592 | 2 |
+| matches.api_id (natural PK) | 595 | 595 | 0 |
+| matches (league_season_id, game_index) | 595 | 595 | 0 |
+| matches same fixture on same date (league_season, home, away, match_date) | 595 | 593 | 2 |
 | team_seasons (league_season_id, team_id) | 57 | 57 | 0 |
 | team_seasons api_name within a season | 57 | 57 | 0 |
 | team_seasons api_slug within a season | 57 | 57 | 0 |
@@ -54,20 +54,20 @@
   > **WARNING:** duplicates found, see section 3.
 
 ### 1.5 NULL counts (matches, important fields)
-- Total matches: `594`
+- Total matches: `595`
 
 | field | n_null | n_not_null | null_pct |
 |---|---|---|---|
-| match_date | 0 | 594 | 0.0% |
-| kickoff_time | 0 | 594 | 0.0% |
-| home_team_id | 0 | 594 | 0.0% |
-| away_team_id | 0 | 594 | 0.0% |
-| home_score | 0 | 594 | 0.0% |
-| away_score | 0 | 594 | 0.0% |
-| home_ht | 0 | 594 | 0.0% |
-| away_ht | 0 | 594 | 0.0% |
-| first_goal_time | 38 | 556 | 6.4% |
-| first_goal_time_extra | 38 | 556 | 6.4% |
+| match_date | 0 | 595 | 0.0% |
+| kickoff_time | 0 | 595 | 0.0% |
+| home_team_id | 0 | 595 | 0.0% |
+| away_team_id | 0 | 595 | 0.0% |
+| home_score | 0 | 595 | 0.0% |
+| away_score | 0 | 595 | 0.0% |
+| home_ht | 0 | 595 | 0.0% |
+| away_ht | 0 | 595 | 0.0% |
+| first_goal_time | 39 | 556 | 6.6% |
+| first_goal_time_extra | 39 | 556 | 6.6% |
   > Semantics: `home_ht`/`away_ht` NULL together; `first_goal_time`/`first_goal_time_extra` NULL iff goalless.
 
 ### 1.6 Value ranges
@@ -200,7 +200,7 @@ Extreme scorelines (>= 8 total goals):
 - `3.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2025-2026", "n_matches": 163, "expected": 380}`
 - `4.` `TEAM_COUNT_UNEXPECTED` details: `{"season": "2025-2026", "n_teams": 12, "expected": 20}`
 - `5.` `HIGH_SCORING_MATCHES` details: `{"n_matches": 7, "threshold": 8, "examples": [{"scoreline": "4-5", "total_goals": 9, "count": 2}, {"scoreline": "6-2", "total_goals": 8, "count": 1}, {"scoreline": "5-3", "total_goals": 8, "count": 1}, {"scoreline": "4-4", "total_goals": 8, "count": 2}, {"scoreline": "2-6", "total_goals": 8, "count": 1}]}`
-- `6.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 594, "distinct": 592, "duplicates": 2}`
+- `6.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 595, "distinct": 593, "duplicates": 2}`
 - `7.` `STANDINGS_INCOMPLETE` details: `{"season": "2024-2025", "view": "classic", "n_rows": 13, "min_pos": 1, "max_pos": 13, "distinct_teams": 13}`
 - `8.` `STANDINGS_INCOMPLETE` details: `{"season": "2024-2025", "view": "goals", "n_rows": 13, "min_pos": 1, "max_pos": 13, "distinct_teams": 13}`
 - `9.` `STANDINGS_INCOMPLETE` details: `{"season": "2024-2025", "view": "luck", "n_rows": 13, "min_pos": 1, "max_pos": 13, "distinct_teams": 13}`

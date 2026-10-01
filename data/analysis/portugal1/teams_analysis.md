@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T13:41:34+00:00
+- Generated: 2026-09-29T16:03:28+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`

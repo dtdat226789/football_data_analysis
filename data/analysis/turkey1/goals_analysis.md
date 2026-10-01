@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T13:49:59+00:00
+- Generated: 2026-09-29T16:10:30+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Super Lig (Turkey)
 - Scope: league `turkey1`

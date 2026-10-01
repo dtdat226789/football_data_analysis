@@ -74,7 +74,7 @@ describe("TeamDetail", () => {
     expect(screen.getByText("Recent matches (1)")).toBeInTheDocument();
     expect(screen.getAllByText("2 – 1").length).toBeGreaterThanOrEqual(1);
 
-    expect(screen.getByText("Upcoming · premier")).toBeInTheDocument();
+    expect(screen.getByText("Upcoming · Premier League")).toBeInTheDocument();
     expect(api.leagueFixtures).toHaveBeenCalledWith("premier");
 
     const seasonsSection = screen.getByText("Seasons (2)").closest("section");
@@ -108,7 +108,9 @@ describe("TeamDetail", () => {
   it("renders the aggregated statistics section with charts", async () => {
     renderTeamDetail();
 
-    const section = (await screen.findByRole("heading", { name: /Statistics · premier/ })).closest("section");
+    const section = (await screen.findByRole("heading", { name: /Statistics · Premier League/ })).closest(
+      "section",
+    );
 
     expect(await within(section).findByText("53W-9D-14L")).toBeInTheDocument();
     expect(within(section).getByText("179 : 65")).toBeInTheDocument();

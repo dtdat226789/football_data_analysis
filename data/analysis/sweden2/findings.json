@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:48:56+00:00",
+  "generated_at": "2026-09-29T16:09:41+00:00",
   "config": {
     "league": "sweden2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\sweden2",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "points_difference |corr| = 0.1034 (n=440 leakage-safe rows)",
+      "detail": "points_difference |corr| = 0.1676 (n=240 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 5.616: home 2.854, draw -1.563, away -2.762",
+      "detail": "points_difference spreads group means over 7.307: home 3.604, draw -2.677, away -3.703",
       "importance": "medium",
       "id": "F23"
     },
@@ -439,8 +439,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 32893,
-        "distinct": 32848,
+        "rows": 33135,
+        "distinct": 33090,
         "duplicates": 45
       }
     },
@@ -449,10 +449,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=30, fgte=30 rows)",
       "details": {
-        "total": 32893,
+        "total": 33135,
         "fgt_inconsistent": 30,
         "fgte_inconsistent": 30,
-        "n_with_fgt": 30539
+        "n_with_fgt": 30766
       }
     },
     {

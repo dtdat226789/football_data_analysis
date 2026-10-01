@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:41:43+00:00",
+  "generated_at": "2026-09-29T16:03:35+00:00",
   "config": {
     "league": "portugal1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\portugal1",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_goals_scored_last_5 |corr| = 0.1102 (n=370 leakage-safe rows)",
+      "detail": "home_team_goals_scored_last_5 |corr| = 0.1311 (n=308 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 13.9: home 6.609, draw -1.451, away -7.291",
+      "detail": "points_difference spreads group means over 16.064: home 7.559, draw -1.524, away -8.505",
       "importance": "medium",
       "id": "F23"
     },
@@ -434,8 +434,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 22025,
-        "distinct": 22011,
+        "rows": 22175,
+        "distinct": 22161,
         "duplicates": 14
       }
     },
@@ -444,10 +444,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
       "details": {
-        "total": 22025,
+        "total": 22175,
         "fgt_inconsistent": 24,
         "fgte_inconsistent": 24,
-        "n_with_fgt": 20493
+        "n_with_fgt": 20633
       }
     },
     {

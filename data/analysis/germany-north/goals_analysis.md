@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T10:59:14+00:00
+- Generated: 2026-09-29T15:50:42+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
@@ -9,14 +9,14 @@
 | goals | matches | pct |
 |---|---|---|
 | 0 | 9 | 2.2% |
-| 1 | 37 | 9.1% |
-| 2 | 84 | 20.6% |
-| 3 | 58 | 14.2% |
-| 4 | 97 | 23.8% |
-| 5 | 61 | 15.0% |
-| 6 | 27 | 6.6% |
-| 7 | 15 | 3.7% |
-| 8 | 13 | 3.2% |
+| 1 | 37 | 8.9% |
+| 2 | 85 | 20.5% |
+| 3 | 61 | 14.7% |
+| 4 | 98 | 23.6% |
+| 5 | 62 | 14.9% |
+| 6 | 28 | 6.7% |
+| 7 | 15 | 3.6% |
+| 8 | 13 | 3.1% |
 | 9 | 4 | 1.0% |
 | 10 | 3 | 0.7% |
 
@@ -24,64 +24,64 @@
 | season | matches | total goals | avg home | avg away | avg total |
 |---|---|---|---|---|---|
 | 2025-2026 | 317 | 1152 | 1.927 | 1.707 | 3.634 |
-| 2026-2027 | 91 | 357 | 2.121 | 1.802 | 3.923 |
+| 2026-2027 | 98 | 383 | 2.051 | 1.857 | 3.908 |
 
 ## 3. Home vs away goal share
-- Home goals: **804** (53.3%)
-- Away goals: **705** (46.7%)
-- Home/away ratio: **1.14**
+- Home goals: **812** (52.9%)
+- Away goals: **723** (47.1%)
+- Home/away ratio: **1.123**
 
 | season | home goals | away goals | total | home pct | away pct |
 |---|---|---|---|---|---|
 | 2025-2026 | 611 | 541 | 1152 | 53.0% | 47.0% |
-| 2026-2027 | 193 | 164 | 357 | 54.1% | 45.9% |
+| 2026-2027 | 201 | 182 | 383 | 52.5% | 47.5% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **261** of `408` (64.0%)
+- Overall: **264** of `415` (63.6%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
 | 2025-2026 | 317 | 204 | 64.4% |
-| 2026-2027 | 91 | 57 | 62.6% |
+| 2026-2027 | 98 | 60 | 61.2% |
 
 ## 5. Clean sheets
-- Home clean sheets: **76** (18.6%)
-- Away clean sheets: **80** (19.6%)
-- Total clean sheets recorded: **156**
-- Matches with at least one clean sheet: **147** (36.0%)
+- Home clean sheets: **76** (18.3%)
+- Away clean sheets: **84** (20.2%)
+- Total clean sheets recorded: **160**
+- Matches with at least one clean sheet: **151** (36.4%)
 - Both teams kept clean sheets (0-0): **9**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
 |---|---|---|---|---|---|
 | 2025-2026 | 317 | 59 | 62 | 121 | 113 (35.6%) |
-| 2026-2027 | 91 | 17 | 18 | 35 | 34 (37.4%) |
+| 2026-2027 | 98 | 17 | 22 | 39 | 38 (38.8%) |
 
 ## 6. Scoring intensity
-- First-half goals: **644** (42.7%)
-- Second-half goals: **865** (57.3%)
-- Avg first-half goals per match: **1.578**
-- Avg second-half goals per match: **2.12**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **71** (17.4%)
+- First-half goals: **651** (42.4%)
+- Second-half goals: **884** (57.6%)
+- Avg first-half goals per match: **1.569**
+- Avg second-half goals per match: **2.13**
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **72** (17.3%)
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
 |---|---|---|---|---|---|
 | 2025-2026 | 317 | 504 | 648 | 43.8% | 56.2% |
-| 2026-2027 | 91 | 140 | 217 | 39.2% | 60.8% |
+| 2026-2027 | 98 | 147 | 236 | 38.4% | 61.6% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `399` of `408` (97.8%)
+- Matches with first-goal time recorded: `406` of `415` (97.8%)
 - Goalless matches: `9`
-- Min `1` | Max `94` | Mean `26.51` | Median (p50) `19`
+- Min `1` | Max `94` | Mean `26.52` | Median (p50) `19.5`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 169 | 41.4% | 42.4% |
-| 16-30 | 93 | 22.8% | 23.3% |
-| 31-45 | 61 | 15.0% | 15.3% |
-| 46-60 | 39 | 9.6% | 9.8% |
-| 61-75 | 18 | 4.4% | 4.5% |
-| 76-90 | 16 | 3.9% | 4.0% |
-| 91-120 | 3 | 0.7% | 0.8% |
+| 1-15 | 171 | 41.2% | 42.1% |
+| 16-30 | 95 | 22.9% | 23.4% |
+| 31-45 | 63 | 15.2% | 15.5% |
+| 46-60 | 40 | 9.6% | 9.9% |
+| 61-75 | 18 | 4.3% | 4.4% |
+| 76-90 | 16 | 3.9% | 3.9% |
+| 91-120 | 3 | 0.7% | 0.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_goals.py` to regenerate.*

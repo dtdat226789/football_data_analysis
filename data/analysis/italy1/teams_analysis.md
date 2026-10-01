@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T11:01:42+00:00
+- Generated: 2026-09-29T15:56:33+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Serie A (Italy)
 - Scope: league `italy1`

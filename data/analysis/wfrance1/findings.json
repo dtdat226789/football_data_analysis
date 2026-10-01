@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:51:03+00:00",
+  "generated_at": "2026-09-29T16:24:10+00:00",
   "config": {
     "league": "wfrance1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\wfrance1",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\wfrance1\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.33
+      "size_kb": 14.32
     }
   ],
   "coverage": {
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.833)",
+      "detail": "2025-2026 (luck view, avg abs position diff 2.167)",
       "importance": "low",
       "id": "F16"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_away_goals_avg |corr| = 0.25 (n=153 leakage-safe rows)",
+      "detail": "away_team_away_goals_avg |corr| = 0.2156 (n=135 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 11.963: home 6.645, draw -1.964, away -5.317",
+      "detail": "points_difference spreads group means over 13.539: home 7.679, draw -2.080, away -5.860",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.33
+      "size_kb": 14.32
     }
   ],
   "anomalies": [
@@ -481,8 +481,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 34770,
-        "distinct": 34725,
+        "rows": 35016,
+        "distinct": 34971,
         "duplicates": 45
       }
     },
@@ -491,10 +491,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=35, fgte=35 rows)",
       "details": {
-        "total": 34770,
+        "total": 35016,
         "fgt_inconsistent": 35,
         "fgte_inconsistent": 35,
-        "n_with_fgt": 32289
+        "n_with_fgt": 32520
       }
     },
     {

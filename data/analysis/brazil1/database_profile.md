@@ -1,6 +1,6 @@
 # Football Charts Database Profile
 - Report: `database_profile`
-- Generated: 2026-09-23T10:55:25+00:00
+- Generated: 2026-09-29T15:45:17+00:00
 - Script: `backend/scripts/profile_database.py` v1.0.0
 - Database: `football_charts` (PostgreSQL 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
 - Scope: league `brazil1`
@@ -16,7 +16,7 @@
 | teams | 142 |
 | team_aliases | 284 |
 | team_seasons | 236 |
-| matches | 2385 |
+| matches | 2386 |
 | standings | 708 |
 
 ### 1.2 Leagues with data
@@ -24,7 +24,7 @@
 - Leagues with match data: `7`
 | api_key | name | country | registered_seasons | matches |
 |---|---|---|---|---|
-| algir1 | Ligue 1 | Algeria | 2 | 262 |
+| algir1 | Ligue 1 | Algeria | 2 | 263 |
 | australia | A-League | Australia | 2 | 332 |
 | austria1 | Bundesliga | Austria | 2 | 237 |
 | austria2 | 2. Liga | Austria | 2 | 279 |
@@ -45,9 +45,9 @@
 ### 1.4 Duplicate checks
 | check | rows | distinct | duplicates |
 |---|---|---|---|
-| matches.api_id (natural PK) | 2385 | 2385 | 0 |
-| matches (league_season_id, game_index) | 2385 | 2385 | 0 |
-| matches same fixture on same date (league_season, home, away, match_date) | 2385 | 2383 | 2 |
+| matches.api_id (natural PK) | 2386 | 2386 | 0 |
+| matches (league_season_id, game_index) | 2386 | 2386 | 0 |
+| matches same fixture on same date (league_season, home, away, match_date) | 2386 | 2384 | 2 |
 | team_seasons (league_season_id, team_id) | 236 | 236 | 0 |
 | team_seasons api_name within a season | 236 | 236 | 0 |
 | team_seasons api_slug within a season | 236 | 236 | 0 |
@@ -59,20 +59,20 @@
   > **WARNING:** duplicates found, see section 3.
 
 ### 1.5 NULL counts (matches, important fields)
-- Total matches: `2385`
+- Total matches: `2386`
 
 | field | n_null | n_not_null | null_pct |
 |---|---|---|---|
-| match_date | 0 | 2385 | 0.0% |
-| kickoff_time | 0 | 2385 | 0.0% |
-| home_team_id | 0 | 2385 | 0.0% |
-| away_team_id | 0 | 2385 | 0.0% |
-| home_score | 0 | 2385 | 0.0% |
-| away_score | 0 | 2385 | 0.0% |
-| home_ht | 3 | 2382 | 0.1% |
-| away_ht | 3 | 2382 | 0.1% |
-| first_goal_time | 164 | 2221 | 6.9% |
-| first_goal_time_extra | 164 | 2221 | 6.9% |
+| match_date | 0 | 2386 | 0.0% |
+| kickoff_time | 0 | 2386 | 0.0% |
+| home_team_id | 0 | 2386 | 0.0% |
+| away_team_id | 0 | 2386 | 0.0% |
+| home_score | 0 | 2386 | 0.0% |
+| away_score | 0 | 2386 | 0.0% |
+| home_ht | 3 | 2383 | 0.1% |
+| away_ht | 3 | 2383 | 0.1% |
+| first_goal_time | 165 | 2221 | 6.9% |
+| first_goal_time_extra | 165 | 2221 | 6.9% |
   > Semantics: `home_ht`/`away_ht` NULL together; `first_goal_time`/`first_goal_time_extra` NULL iff goalless.
 
 ### 1.6 Value ranges
@@ -198,8 +198,8 @@ Extreme scorelines (>= 8 total goals):
 - `2.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2026", "n_matches": 277, "expected": 380}`
 - `3.` `SEASON_STATE_NOT_COMPLETE` details: `{"season": "2026", "season_state": "in_progress"}`
 - `4.` `HIGH_SCORING_MATCHES` details: `{"n_matches": 2, "threshold": 8, "examples": [{"scoreline": "8-0", "total_goals": 8, "count": 1}, {"scoreline": "5-3", "total_goals": 8, "count": 1}]}`
-- `5.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 2385, "distinct": 2383, "duplicates": 2}`
-- `6.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 2385, "fgt_inconsistent": 2, "fgte_inconsistent": 2, "n_with_fgt": 2221}`
+- `5.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 2386, "distinct": 2384, "duplicates": 2}`
+- `6.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 2386, "fgt_inconsistent": 2, "fgte_inconsistent": 2, "n_with_fgt": 2221}`
 - `7.` `STANDINGS_INCOMPLETE` details: `{"season": "2025", "view": "classic", "n_rows": 40, "min_pos": 1, "max_pos": 40, "distinct_teams": 40}`
 - `8.` `STANDINGS_INCOMPLETE` details: `{"season": "2025", "view": "goals", "n_rows": 40, "min_pos": 1, "max_pos": 40, "distinct_teams": 40}`
 - `9.` `STANDINGS_INCOMPLETE` details: `{"season": "2025", "view": "luck", "n_rows": 40, "min_pos": 1, "max_pos": 40, "distinct_teams": 40}`

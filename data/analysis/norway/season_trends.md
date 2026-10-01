@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T11:04:07+00:00
+- Generated: 2026-09-29T16:02:44+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`

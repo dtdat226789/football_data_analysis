@@ -20,6 +20,12 @@ not in the analytics database (a brand-new season, a league never collected)
 still serves predictions, form and kickoff metadata from the file dump alone,
 and `detail_collected` reports whether the richer /matches/{slug}/ payload from
 backend/scripts/fetch_fixture_details.py is on disk.
+
+Predictions carry two things beyond what the feed publishes. `markets` is the
+full derived menu — Asian handicaps, correct score, HT/FT, team totals — and
+`selected` is the confident subset, both built in apps/markets.py from the
+dc_v2 goal parameters and tagged by whether they are model output or a stated
+assumption. The list feed carries only `selected`, under `predictions`.
 """
 from __future__ import annotations
 
@@ -32,7 +38,8 @@ from typing import Literal
 from fastapi import APIRouter, HTTPException
 
 from .. import common
-from ..deps import fetched_cursor, require_league, resolve_team_id
+from ..deps import fetched_cursor, norm_pagination, require_league, resolve_team_id
+from ..markets import market_detail, markets_from_prediction
 from .matches import build_pre_match, head_to_head
 from .teams import _form_result
 
@@ -85,11 +92,38 @@ def _as_date(value) -> date | None:
     return None
 
 
-def _prediction_summary(match: dict) -> dict:
-    """Compact dc_v2 prediction summary for a fixture."""
+def _in_window(row: dict, start: date | None, end: date | None) -> bool:
+    """Whether a pruned fixture falls inside an optional [start, end] window.
+
+    A row whose date will not parse is kept when there is no lower bound and
+    dropped when there is one: the caller asked for a window, and a date-less row
+    cannot be shown to be inside it. Silently widening the window to include it
+    would be a different answer to the same question.
+    """
+    match_date = _as_date(row.get("match_date"))
+    if match_date is None:
+        return start is None and end is None
+    if start is not None and match_date < start:
+        return False
+    if end is not None and match_date > end:
+        return False
+    return True
+
+
+def _prediction_summary(match: dict, selected: list | None = None) -> dict:
+    """Compact dc_v2 prediction summary for a fixture.
+
+    `selected` is the short list of markets the model is most confident about,
+    which is what the list feed renders as chips. It is derived rather than read
+    (see apps/markets.py) and stays small so the merged feed does not carry a
+    full market table on every row. Callers that already hold the derived
+    markets pass `selected` in rather than deriving them twice.
+    """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     calibrated = preds.get("calibrated") or {}
     raw = preds.get("raw") or {}
+    if selected is None:
+        selected = markets_from_prediction(preds)["selected"]
     home = calibrated.get("home")
     away = calibrated.get("away")
     return {
@@ -101,6 +135,7 @@ def _prediction_summary(match: dict) -> dict:
         "over_3_5": calibrated.get("over_3.5"),
         "expected_home_goals": raw.get("expected_home_goals"),
         "expected_away_goals": raw.get("expected_away_goals"),
+        "selected": selected,
         "confidence": round(max(
             [p for p in (home, away) if isinstance(p, (int, float))],
             default=0.0,
@@ -115,6 +150,7 @@ def _prune(match: dict, league: str) -> dict:
     return {
         "slug": match.get("slug"),
         "league": league,
+        "league_name": common.league_name(league),
         "country": match.get("country"),
         "home_team": match.get("home_team"),
         "away_team": match.get("away_team"),
@@ -141,19 +177,32 @@ def league_fixture_file(league: str) -> Path | None:
     return path if path.exists() else None
 
 
-def fixture_rows(league: str | None = None) -> list[dict]:
-    """Pruned match rows for one league, or for every collected league."""
+def fixture_rows(league: str | None = None, today: date | None = None) -> list[dict]:
+    """Pruned match rows for one league, or for every collected league.
+
+    `today` drops anything already played, defaulting to the current date.
+    The upstream feed is a snapshot that never flips `status` off "scheduled", so
+    a dump collected days ago still describes matches that have since been kicked
+    off; the date is the only signal that is actually correct. Rows without a
+    parsable date are kept, since dropping them would silently hide a fixture
+    rather than merely demote it. Callers that genuinely want the whole stored
+    snapshot pass `date.min`.
+    """
     if league is not None:
         path = league_fixture_file(league)
         paths = [path] if path else []
     else:
         paths = list_fixture_files()
+    cutoff = date.today() if today is None else today
     rows: list[dict] = []
     for path in paths:
         lg = path.stem
         payload = _load_payload(path)
         for match in payload.get("matches") or []:
-            rows.append(_prune(match, lg))
+            row = _prune(match, lg)
+            match_date = _as_date(row.get("match_date"))
+            if match_date is None or match_date >= cutoff:
+                rows.append(row)
     return rows
 
 
@@ -261,20 +310,26 @@ def predictability(match: dict) -> dict | None:
 
     `summary` is the same object the list feed renders, so a detail view and a
     row in /fixtures never disagree about the headline numbers.
+
+    `markets` is the whole derived menu and `selected` the confident subset. Both
+    come from apps/markets.py and are omitted rather than faked when the block
+    carries no usable lambdas.
     """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     if not preds:
         return None
     raw = preds.get("raw") or {}
     calibrated = preds.get("calibrated") or {}
+    derived = markets_from_prediction(preds)
     return {
         "model": preds.get("model"),
-        # xi is the draw-inflation parameter and sigma the goal-model spread.
-        # Both are the difference between "the model said 50%" and "the model
-        # said 50% with this much smoothing and this much uncertainty".
+        # xi is a constant placeholder across every collected block and is not
+        # the correction that generated the published probabilities — the real
+        # one is solved for from the published O/U lines instead. Kept for
+        # reference; apps/markets.py explains why it is not used.
         "xi": preds.get("xi"),
         "sigma": preds.get("sigma"),
-        "summary": _prediction_summary(match),
+        "summary": _prediction_summary(match, selected=derived["selected"]),
         "probabilities": _probability_triple(calibrated),
         "expected_goals": {
             "home": raw.get("expected_home_goals"),
@@ -282,6 +337,8 @@ def predictability(match: dict) -> dict | None:
             "half_time_total": raw.get("expected_ht_goals"),
         },
         "lines": _goal_lines(raw, calibrated),
+        "markets": derived["markets"],
+        "selected": derived["selected"],
         "ratings": preds.get("ratings") or {},
         "effective_matches": preds.get("effective_matches") or {},
         "gates": preds.get("gates") or {},
@@ -568,24 +625,82 @@ def list_fixtures(
     league: str | None = None,
     sort: Literal["date", "confidence"] = "confidence",
     limit: int = DEFAULT_LIMIT,
+    offset: int = 0,
+    from_date: str | None = None,
+    to_date: str | None = None,
+    min_confidence: float | None = None,
 ) -> dict:
-    """Merged upcoming fixtures, pruned, sorted by date or model confidence."""
-    limit = min(max(limit, 1), MAX_LIMIT)
+    """Merged upcoming fixtures, pruned, sorted by date or model confidence.
+
+    Only fixtures that have not been played yet are listed. `first_date` reports
+    the soonest one, so a client can tell an empty feed ("nothing left this
+    week, re-run fetch_fixtures") from a genuinely broken one.
+
+    Filters apply before paging and `total` counts what survived them, so a
+    client can page through exactly what it asked for. `returned` is how many
+    came back in this slice: with a limit in play that is smaller than `total`,
+    and a UI rendering `total` as a count badge would otherwise claim to be
+    showing rows it is not.
+
+    `min_confidence` is the model's strongest side on a fixture, so raising it
+    answers "where does the model actually have an opinion" rather than "where
+    does it have any opinion at all" — most fixtures sit near 0.35 because
+    neither side is favoured, and that is the honest reading, not a near-miss.
+    """
+    limit, offset = norm_pagination(limit, offset, MAX_LIMIT)
     if league is not None:
         require_league(league)
     rows = fixture_rows(league)
 
-    if sort == "confidence":
-        rows.sort(key=lambda r: r["predictions"]["confidence"], reverse=True)
-    else:
+    start, end = _as_date(from_date), _as_date(to_date)
+    if start or end:
+        rows = [r for r in rows if _in_window(r, start, end)]
+
+    if min_confidence is not None:
+        rows = [
+            r for r in rows
+            if (r["predictions"].get("confidence") or 0.0) >= min_confidence
+        ]
+
+    # Date first whenever a date is in play: a paged list sorted by confidence
+    # reshuffles between pages, so walking it can show a fixture twice and skip
+    # another. Confidence stays the default for the plain view, which is a
+    # short "best picks" read rather than a list to walk.
+    effective_sort = sort
+    if sort == "date" or start or end or min_confidence is not None:
+        effective_sort = "date"
         rows.sort(key=lambda r: (r["match_date"] or "", r["time"] or ""))
+    else:
+        rows.sort(key=lambda r: r["predictions"]["confidence"], reverse=True)
+
+    page = rows[offset:offset + limit]
+    dated = sorted({r["match_date"] for r in rows if r.get("match_date")})
+    # Counts for the whole filtered set, not the page, so a client grouping rows
+    # by day can say "12 shown of 126" instead of implying a day is complete.
+    day_counts: dict[str, int] = {}
+    for r in rows:
+        if r.get("match_date"):
+            day_counts[r["match_date"]] = day_counts.get(r["match_date"], 0) + 1
     return {
-        "count": len(rows),
+        "count": len(page),
         "total": len(rows),
+        "returned": len(page),
         "limit": limit,
-        "sort": sort,
+        "offset": offset,
+        "has_more": offset + len(page) < len(rows),
+        # The order the rows are actually in, which is not always the order that
+        # was asked for: a date window or confidence floor forces date order.
+        "sort": effective_sort,
         "league": league,
-        "matches": rows[:limit],
+        "league_name": common.league_name(league),
+        "min_confidence": min_confidence,
+        "from_date": from_date,
+        "to_date": to_date,
+        "first_date": dated[0] if dated else None,
+        "last_date": dated[-1] if dated else None,
+        "dates": dated,
+        "day_counts": day_counts,
+        "matches": page,
     }
 
 
@@ -595,15 +710,42 @@ def league_fixtures(league: str) -> dict:
     require_league(league)
     path = league_fixture_file(league)
     if path is None:
-        return {"league": league, "count": 0, "matches": [], "attribution": "Data by football-charts.com"}
+        return {
+            "league": league,
+            "league_name": common.league_name(league),
+            "count": 0,
+            "matches": [],
+            "attribution": "Data by football-charts.com",
+        }
     payload = _load_payload(path)
     payload.setdefault("count", len(payload.get("matches") or []))
     payload.setdefault("league", league)
+    payload["league_name"] = common.league_name(league)
     return payload
 
 
+def _market_explanation(match: dict, market_key: str) -> dict | None:
+    """The mechanism behind one derived market, or None when it has none.
+
+    A market row is a single number; this is what produces it — how it settles
+    across win/push/lose and which scorelines in the 81-cell grid pay it.
+    Served per market rather than for all ~159 of them because the full
+    explanation of every row would dwarf the fixture it belongs to.
+
+    A key the fixture does not have is a 404, not a null: that means the caller
+    asked for something that was never there. A null is reserved for a market
+    that does exist but whose number the grid cannot rebuild.
+    """
+    preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
+    rows = {row.get("key"): row for row in markets_from_prediction(preds)["markets"]}
+    row = rows.get(market_key)
+    if row is None:
+        raise HTTPException(status_code=404, detail=f"market '{market_key}' not found")
+    return market_detail(preds.get("raw") or {}, row)
+
+
 @router.get("/fixtures/{league}/{match_id:path}")
-def fixture_detail(league: str, match_id: str) -> dict:
+def fixture_detail(league: str, match_id: str, market: str | None = None) -> dict:
     """Everything known about one upcoming fixture, before it is played.
 
     Layered so the page degrades instead of erroring: the fixture row, the
@@ -612,6 +754,9 @@ def fixture_detail(league: str, match_id: str) -> dict:
     from the analytics database. The database sections are only meaningful once
     the fixture is inside a collected season, which `season`/`matchday` report
     so a caller can tell derived data from assumed data.
+
+    Passing `market=<key>` returns only the explanation for that one derived
+    market, so a reader can drill into a chip without refetching the page.
     """
     require_league(league)
     fixture = find_fixture(league, match_id)
@@ -621,6 +766,20 @@ def fixture_detail(league: str, match_id: str) -> dict:
         )
 
     slug = fixture.get("slug") or ""
+
+    if market is not None:
+        # Before the collected payload is loaded: an explanation is a pure
+        # function of the prediction block, so nothing else on the page is
+        # needed and the file read would be wasted.
+        return {
+            "league": league,
+            "league_name": common.league_name(league),
+            "match_id": slug_tail(slug) or match_id,
+            "slug": slug,
+            "market_key": market,
+            "market": _market_explanation(fixture, market),
+        }
+
     detail = _load_detail(league, slug)
     # A collected payload is the richer copy of the same fixture: prefer it for
     # anything it carries and the fixtures file for anything it does not.
@@ -660,9 +819,12 @@ def fixture_detail(league: str, match_id: str) -> dict:
 
     return {
         "league": league,
+        "league_name": common.league_name(league),
         "match_id": slug_tail(slug) or match_id,
         "slug": slug,
         "country": merged.get("country"),
+        # The upstream feed's own spelling, which for a dozen leagues differs
+        # from the catalog name; league_name above is the canonical label.
         "real_league_name": merged.get("real_league_name"),
         "status": merged.get("status") or merged.get("match_status"),
         "match_date": match_date,

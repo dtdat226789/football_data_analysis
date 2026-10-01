@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+from datetime import date
 from pathlib import Path
 
 import psycopg2
@@ -201,6 +202,35 @@ def parse_season_years(name: str) -> tuple[int | None, int | None]:
     start = int(parts[0])
     end = int(parts[-1]) if len(parts) > 1 else start
     return min(start, end), max(start, end)
+
+
+# Kickoff/finish bounds used to turn an opaque season label into a calendar
+# window. European split seasons start in late summer and finish in May.
+SPLIT_SEASON_START = (6, 1)
+SPLIT_SEASON_END = (8, 15)
+
+
+def season_date_window(name: str) -> tuple[date, date] | None:
+    """Inclusive date window a season label is expected to cover.
+
+    '2025-2026' -> 2025-06-01 .. 2026-08-15 (split season, Europe)
+    '2026'      -> 2026-01-01 .. 2026-12-31 (calendar-year season)
+    a label with no parseable year returns None.
+    """
+    start_year, end_year = parse_season_years(name)
+    if start_year is None or end_year is None:
+        return None
+    if start_year == end_year:
+        return date(start_year, 1, 1), date(end_year, 12, 31)
+    return date(start_year, *SPLIT_SEASON_START), date(end_year, *SPLIT_SEASON_END)
+
+
+def is_season_active(name: str, today: date | None = None) -> bool:
+    """True when `today` falls inside the season's calendar window."""
+    window = season_date_window(name)
+    if window is None:
+        return False
+    return window[0] <= (today or date.today()) <= window[1]
 
 
 # Half-time result strings the API uses when a HT score is unavailable.

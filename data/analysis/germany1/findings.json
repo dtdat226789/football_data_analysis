@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:59:30+00:00",
+  "generated_at": "2026-09-29T15:51:03+00:00",
   "config": {
     "league": "germany1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\germany1",
@@ -307,8 +307,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 10133,
-        "distinct": 10123,
+        "rows": 10207,
+        "distinct": 10197,
         "duplicates": 10
       }
     },
@@ -317,10 +317,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=6, fgte=6 rows)",
       "details": {
-        "total": 10133,
+        "total": 10207,
         "fgt_inconsistent": 6,
         "fgte_inconsistent": 6,
-        "n_with_fgt": 9411
+        "n_with_fgt": 9480
       }
     }
   ],

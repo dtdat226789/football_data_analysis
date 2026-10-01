@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:59:13+00:00
+- Generated: 2026-09-29T15:50:40+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
@@ -8,11 +8,11 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 408 |
-| Home wins | 172 (42.2%) |
-| Draws | 89 (21.8%) |
-| Away wins | 147 (36.0%) |
-| Total goals | 1509 |
+| Matches | 415 |
+| Home wins | 174 (41.9%) |
+| Draws | 90 (21.7%) |
+| Away wins | 151 (36.4%) |
+| Total goals | 1535 |
 | Average goals per match | 3.699 |
 | Goalless matches | 9 (2.2%) |
 
@@ -20,17 +20,17 @@
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025-2026 | 317 | 135 (42.6%) | 69 (21.8%) | 113 (35.6%) | 1152 | 3.634 | 8 (2.5%) |
-| 2026-2027 | 91 | 37 (40.7%) | 20 (22.0%) | 34 (37.4%) | 357 | 3.923 | 1 (1.1%) |
+| 2026-2027 | 98 | 39 (39.8%) | 21 (21.4%) | 38 (38.8%) | 383 | 3.908 | 1 (1.0%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 100 (74.6%) | 23 (17.2%) | 11 (8.2%) | 134 |
-| HT draw | 53 (37.9%) | 42 (30.0%) | 45 (32.1%) | 140 |
-| HT away lead | 19 (14.2%) | 24 (17.9%) | 91 (67.9%) | 134 |
+| HT home lead | 101 (74.8%) | 23 (17.0%) | 11 (8.1%) | 135 |
+| HT draw | 53 (37.6%) | 42 (29.8%) | 46 (32.6%) | 141 |
+| HT away lead | 20 (14.4%) | 25 (18.0%) | 94 (67.6%) | 139 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **19** (4.7%)
+- Home comebacks (trailing at HT, won at FT): **20** (4.8%)
 - Away comebacks (trailing at HT, won at FT): **11** (2.7%)
 
 ### Home comebacks
@@ -55,6 +55,7 @@
 | 2026-2027 | VfB Oldenburg | Drochtersen/Assel | 0-1 | 3-1 |
 | 2026-2027 | Schoningen | St. Pauli II | 1-2 | 3-2 |
 | 2026-2027 | VfB Oldenburg | Hannover II | 0-2 | 4-3 |
+| 2026-2027 | VfB Lubeck | Todesfelde | 0-1 | 3-2 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -74,37 +75,37 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 134 | 100 (74.6%) | 23 (17.2%) | 11 (8.2%) |
-| Away lead | 134 | 91 (67.9%) | 24 (17.9%) | 19 (14.2%) |
+| Home lead | 135 | 101 (74.8%) | 23 (17.0%) | 11 (8.1%) |
+| Away lead | 139 | 94 (67.6%) | 25 (18.0%) | 20 (14.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 53 | 37.9% |
-| Draw | 42 | 30.0% |
-| Away win | 45 | 32.1% |
+| Home win | 53 | 37.6% |
+| Draw | 42 | 29.8% |
+| Away win | 46 | 32.6% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `399` of `408` (97.8%)
+- Matches with a first-goal time recorded: `406` of `415` (97.8%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 169 | 41.4% | 76 (45.0%) | 29 (17.2%) | 64 (37.9%) |
-| 16-30 | 93 | 22.8% | 41 (44.1%) | 21 (22.6%) | 31 (33.3%) |
-| 31-45 | 61 | 15.0% | 24 (39.3%) | 15 (24.6%) | 22 (36.1%) |
-| 46-60 | 39 | 9.6% | 18 (46.2%) | 6 (15.4%) | 15 (38.5%) |
-| 61-75 | 18 | 4.4% | 4 (22.2%) | 5 (27.8%) | 9 (50.0%) |
+| 1-15 | 171 | 41.2% | 76 (44.4%) | 30 (17.5%) | 65 (38.0%) |
+| 16-30 | 95 | 22.9% | 41 (43.2%) | 21 (22.1%) | 33 (34.7%) |
+| 31-45 | 63 | 15.2% | 26 (41.3%) | 15 (23.8%) | 22 (34.9%) |
+| 46-60 | 40 | 9.6% | 18 (45.0%) | 6 (15.0%) | 16 (40.0%) |
+| 61-75 | 18 | 4.3% | 4 (22.2%) | 5 (27.8%) | 9 (50.0%) |
 | 76-90 | 16 | 3.9% | 7 (43.8%) | 4 (25.0%) | 5 (31.2%) |
 | 91-120 | 3 | 0.7% | 2 (66.7%) | 0 (0.0%) | 1 (33.3%) |
 
 ## 7. Goalless matches
-- Overall: **9** of `408` (2.2%)
+- Overall: **9** of `415` (2.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025-2026 | 317 | 8 | 2.5% |
-| 2026-2027 | 91 | 1 | 1.1% |
+| 2026-2027 | 98 | 1 | 1.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

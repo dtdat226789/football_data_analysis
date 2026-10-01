@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T10:58:17+00:00
+- Generated: 2026-09-29T15:49:32+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`

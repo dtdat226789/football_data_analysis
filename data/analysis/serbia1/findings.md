@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T13:47:04+00:00
+- Generated: 2026-09-29T16:08:11+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\serbia1\teams_analysis.json | yes | yes | 27.57 |
 | season_trends | E:\football_data_analysis\data\analysis\serbia1\season_trends.json | yes | yes | 3.98 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\serbia1\scoreline_analysis.json | yes | yes | 61.03 |
-| relationships | E:\football_data_analysis\data\analysis\serbia1\relationships.json | yes | yes | 14.35 |
+| relationships | E:\football_data_analysis\data\analysis\serbia1\relationships.json | yes | yes | 14.36 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 0-0 (42 of 104 draw matches, 40.4%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (25 of 102 away matches, 24.5%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 9 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.1144 (n=365 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 9.654: home 4.409, draw -1.058, away -5.245
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_home_goals_avg |corr| = 0.1627 (n=297 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 10.958: home 5.395, draw -1.198, away -5.563
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (17)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 365 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 27.57 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.98 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 61.03 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.35 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.36 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 297 matches, expected 380

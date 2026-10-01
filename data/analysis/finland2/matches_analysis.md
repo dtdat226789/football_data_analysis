@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:58:25+00:00
+- Generated: 2026-09-29T15:49:43+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ykkosliiga (Finland)
 - Scope: league `finland2`
@@ -8,29 +8,29 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 255 |
-| Home wins | 108 (42.4%) |
-| Draws | 61 (23.9%) |
-| Away wins | 86 (33.7%) |
-| Total goals | 752 |
-| Average goals per match | 2.949 |
-| Goalless matches | 13 (5.1%) |
+| Matches | 260 |
+| Home wins | 110 (42.3%) |
+| Draws | 64 (24.6%) |
+| Away wins | 86 (33.1%) |
+| Total goals | 764 |
+| Average goals per match | 2.938 |
+| Goalless matches | 14 (5.4%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025 | 135 | 58 (43.0%) | 35 (25.9%) | 42 (31.1%) | 443 | 3.281 | 5 (3.7%) |
-| 2026 | 120 | 50 (41.7%) | 26 (21.7%) | 44 (36.7%) | 309 | 2.575 | 8 (6.7%) |
+| 2026 | 125 | 52 (41.6%) | 29 (23.2%) | 44 (35.2%) | 321 | 2.568 | 9 (7.2%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 69 (77.5%) | 12 (13.5%) | 8 (9.0%) | 89 |
-| HT draw | 32 (33.3%) | 36 (37.5%) | 28 (29.2%) | 96 |
-| HT away lead | 7 (10.0%) | 13 (18.6%) | 50 (71.4%) | 70 |
+| HT home lead | 70 (76.9%) | 13 (14.3%) | 8 (8.8%) | 91 |
+| HT draw | 32 (33.0%) | 37 (38.1%) | 28 (28.9%) | 97 |
+| HT away lead | 8 (11.1%) | 14 (19.4%) | 50 (69.4%) | 72 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **7** (2.7%)
+- Home comebacks (trailing at HT, won at FT): **8** (3.1%)
 - Away comebacks (trailing at HT, won at FT): **8** (3.1%)
 
 ### Home comebacks
@@ -43,6 +43,7 @@
 | 2026 | Haka | Jippo | 0-1 | 2-1 |
 | 2026 | KTP | JaPS | 0-1 | 4-1 |
 | 2026 | Jippo | Klubi 04 | 0-1 | 3-1 |
+| 2026 | KaPa | Haka | 0-2 | 3-2 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -59,37 +60,37 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 89 | 69 (77.5%) | 12 (13.5%) | 8 (9.0%) |
-| Away lead | 70 | 50 (71.4%) | 13 (18.6%) | 7 (10.0%) |
+| Home lead | 91 | 70 (76.9%) | 13 (14.3%) | 8 (8.8%) |
+| Away lead | 72 | 50 (69.4%) | 14 (19.4%) | 8 (11.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 32 | 33.3% |
-| Draw | 36 | 37.5% |
-| Away win | 28 | 29.2% |
+| Home win | 32 | 33.0% |
+| Draw | 37 | 38.1% |
+| Away win | 28 | 28.9% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `242` of `255` (94.9%)
+- Matches with a first-goal time recorded: `246` of `260` (94.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 92 | 36.1% | 42 (45.7%) | 15 (16.3%) | 35 (38.0%) |
-| 16-30 | 56 | 22.0% | 28 (50.0%) | 8 (14.3%) | 20 (35.7%) |
-| 31-45 | 32 | 12.5% | 15 (46.9%) | 8 (25.0%) | 9 (28.1%) |
-| 46-60 | 32 | 12.5% | 12 (37.5%) | 7 (21.9%) | 13 (40.6%) |
-| 61-75 | 19 | 7.5% | 5 (26.3%) | 8 (42.1%) | 6 (31.6%) |
+| 1-15 | 93 | 35.8% | 42 (45.2%) | 16 (17.2%) | 35 (37.6%) |
+| 16-30 | 59 | 22.7% | 30 (50.8%) | 9 (15.3%) | 20 (33.9%) |
+| 31-45 | 32 | 12.3% | 15 (46.9%) | 8 (25.0%) | 9 (28.1%) |
+| 46-60 | 32 | 12.3% | 12 (37.5%) | 7 (21.9%) | 13 (40.6%) |
+| 61-75 | 19 | 7.3% | 5 (26.3%) | 8 (42.1%) | 6 (31.6%) |
 | 76-90 | 7 | 2.7% | 3 (42.9%) | 2 (28.6%) | 2 (28.6%) |
-| 91-120 | 4 | 1.6% | 3 (75.0%) | 0 (0.0%) | 1 (25.0%) |
+| 91-120 | 4 | 1.5% | 3 (75.0%) | 0 (0.0%) | 1 (25.0%) |
 
 ## 7. Goalless matches
-- Overall: **13** of `255` (5.1%)
+- Overall: **14** of `260` (5.4%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025 | 135 | 5 | 3.7% |
-| 2026 | 120 | 8 | 6.7% |
+| 2026 | 125 | 9 | 7.2% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

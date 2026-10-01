@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:58:56+00:00",
+  "generated_at": "2026-09-29T15:50:21+00:00",
   "config": {
     "league": "france2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\france2",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\france2\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.33
+      "size_kb": 14.34
     }
   ],
   "coverage": {
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_goals_conceded_last_5 |corr| = 0.0883 (n=373 leakage-safe rows)",
+      "detail": "home_team_home_win_rate |corr| = 0.1008 (n=310 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 4.421: home 2.036, draw -0.737, away -2.385",
+      "detail": "points_difference spreads group means over 5.351: home 2.556, draw -0.947, away -2.796",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.33
+      "size_kb": 14.34
     }
   ],
   "anomalies": [
@@ -455,8 +455,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 9354,
-        "distinct": 9349,
+        "rows": 9404,
+        "distinct": 9399,
         "duplicates": 5
       }
     },
@@ -465,10 +465,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
       "details": {
-        "total": 9354,
+        "total": 9404,
         "fgt_inconsistent": 5,
         "fgte_inconsistent": 5,
-        "n_with_fgt": 8682
+        "n_with_fgt": 8729
       }
     },
     {

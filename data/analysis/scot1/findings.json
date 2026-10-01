@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:45:00+00:00",
+  "generated_at": "2026-09-29T16:06:25+00:00",
   "config": {
     "league": "scot1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot1",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_away_conceded_avg |corr| = 0.1953 (n=230 leakage-safe rows)",
+      "detail": "away_team_away_win_rate |corr| = -0.2566 (n=191 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 8.989: home 4.646, draw -3.574, away -4.343",
+      "detail": "points_difference spreads group means over 10.09: home 5.412, draw -3.750, away -4.678",
       "importance": "medium",
       "id": "F23"
     },
@@ -461,8 +461,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (20 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 27796,
-        "distinct": 27776,
+        "rows": 27970,
+        "distinct": 27950,
         "duplicates": 20
       }
     },
@@ -471,10 +471,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=26, fgte=26 rows)",
       "details": {
-        "total": 27796,
+        "total": 27970,
         "fgt_inconsistent": 26,
         "fgte_inconsistent": 26,
-        "n_with_fgt": 25832
+        "n_with_fgt": 25995
       }
     },
     {

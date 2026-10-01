@@ -1,28 +1,28 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:55:40+00:00
+- Generated: 2026-09-29T15:45:44+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **669** across **2** seasons.
+- Matches analysed: **679** across **2** seasons.
 - Distinct scorelines seen: **28**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 98 | 14.6% |
-| 1-1 | 97 | 14.5% |
-| 2-1 | 81 | 12.1% |
-| 0-1 | 59 | 8.8% |
-| 2-0 | 59 | 8.8% |
-| 0-0 | 58 | 8.7% |
-| 1-2 | 49 | 7.3% |
-| 2-2 | 35 | 5.2% |
-| 3-0 | 23 | 3.4% |
-| 0-2 | 22 | 3.3% |
+| 1-0 | 98 | 14.4% |
+| 1-1 | 97 | 14.3% |
+| 2-1 | 81 | 11.9% |
+| 0-1 | 61 | 9.0% |
+| 2-0 | 60 | 8.8% |
+| 0-0 | 59 | 8.7% |
+| 1-2 | 49 | 7.2% |
+| 2-2 | 37 | 5.4% |
+| 3-0 | 25 | 3.7% |
+| 0-2 | 23 | 3.4% |
+| 3-1 | 16 | 2.4% |
 | 1-3 | 16 | 2.4% |
-| 3-1 | 15 | 2.2% |
 | 4-0 | 8 | 1.2% |
 | 0-3 | 7 | 1.0% |
 | 3-2 | 7 | 1.0% |
@@ -46,23 +46,23 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 40 | 13.8% |
-| 1-0 | 38 | 13.1% |
-| 2-1 | 37 | 12.8% |
-| 0-1 | 27 | 9.3% |
-| 0-0 | 25 | 8.7% |
+| 1-1 | 40 | 13.4% |
+| 1-0 | 38 | 12.7% |
+| 2-1 | 37 | 12.4% |
+| 0-1 | 29 | 9.7% |
+| 0-0 | 26 | 8.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 58 | 8.7% |
-| 1 | 157 | 23.5% |
-| 2 | 178 | 26.6% |
-| 3 | 160 | 23.9% |
-| 4 | 76 | 11.4% |
-| 5 | 22 | 3.3% |
+| 0 | 59 | 8.7% |
+| 1 | 159 | 23.4% |
+| 2 | 180 | 26.5% |
+| 3 | 162 | 23.9% |
+| 4 | 79 | 11.6% |
+| 5 | 22 | 3.2% |
 | 6 | 14 | 2.1% |
 | 7 | 3 | 0.4% |
 | 8 | 1 | 0.1% |
@@ -80,41 +80,41 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-07-26 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **474** (draws: **195**)
-- Average winning margin: **1.52**
+- Decided matches: **481** (draws: **198**)
+- Average winning margin: **1.53**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 302 | 63.7% |
-| 2 | 119 | 25.1% |
-| 3+ | 53 | 11.2% |
+| 1 | 304 | 63.2% |
+| 2 | 122 | 25.4% |
+| 3+ | 55 | 11.4% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **304** | avg margin: **1.57** | max margin: **6**
+- Matches: **308** | avg margin: **1.58** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 187 | 61.5% |
-| 2 | 80 | 26.3% |
-| 3+ | 37 | 12.2% |
+| 1 | 187 | 60.7% |
+| 2 | 82 | 26.6% |
+| 3+ | 39 | 12.7% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **170** | avg margin: **1.44** | max margin: **4**
+- Matches: **173** | avg margin: **1.43** | max margin: **4**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 115 | 67.6% |
-| 2 | 39 | 22.9% |
-| 3+ | 16 | 9.4% |
+| 1 | 117 | 67.6% |
+| 2 | 40 | 23.1% |
+| 3+ | 16 | 9.2% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 304 | 1-0 | 98 | 32.2% |
-| draw | 195 | 1-1 | 97 | 49.7% |
-| away | 170 | 0-1 | 59 | 34.7% |
+| home | 308 | 1-0 | 98 | 31.8% |
+| draw | 198 | 1-1 | 97 | 49.0% |
+| away | 173 | 0-1 | 61 | 35.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

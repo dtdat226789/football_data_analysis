@@ -52,6 +52,21 @@ MODULES = [
 MODULE_NAMES = [name for name, _ in MODULES]
 
 
+def league_name(league: str | None) -> str | None:
+    """Human-readable name for a league slug.
+
+    The one place a slug is turned into something worth showing a reader, so
+    that every endpoint labels a league identically ("wsweden" is always
+    "Allsvenskan Women", never the raw upstream spelling and never the slug).
+    Falls back to the slug itself for an unregistered league and to None when
+    there is no league at all (an unscoped feed), which keeps optional filters
+    distinguishable from a real one.
+    """
+    if not league:
+        return None
+    return league_meta(league)["name"]
+
+
 def league_config() -> dict[str, dict]:
     """slug -> {name, country, teams, matches, views, format, url}."""
     return dict(LEAGUE_CONFIG)

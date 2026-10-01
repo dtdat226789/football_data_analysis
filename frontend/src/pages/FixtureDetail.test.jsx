@@ -1,16 +1,17 @@
 import { render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { api } from "../api/client.js";
-import { fixtureDetail, fixtureDetailNoHistory } from "../test/fixtures.js";
+import { fixtureDetail, fixtureDetailNoHistory, marketDetail } from "../test/fixtures.js";
 import FixtureDetail from "./FixtureDetail.jsx";
 
 vi.mock("../api/client.js", () => {
   const names = [
     "health", "meta", "listLeagues", "league", "seasons", "standings",
     "matches", "match", "matchInsights", "matchesRecent", "dashboard",
-    "fixtures", "leagueFixtures", "fixtureDetail",
+    "fixtures", "leagueFixtures", "fixtureDetail", "fixtureMarket",
     "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
     "analysis", "analysisModule",
   ];
@@ -107,6 +108,57 @@ describe("FixtureDetail", () => {
     expect(within(panel).getAllByText("Full time")).toHaveLength(2);
   });
 
+  it("renders the full derived market menu under the goal lines", async () => {
+    renderFixture();
+
+    const panel = (await screen.findByRole("heading", { name: /Markets/ })).closest("section");
+    const body = within(panel);
+    expect(body.getByText(/21 derived/)).toBeInTheDocument();
+    // Every family the engine can produce is labelled for the reader.
+    expect(body.getByRole("heading", { name: "Result" })).toBeInTheDocument();
+    expect(body.getByRole("heading", { name: "Goals (over/under)" })).toBeInTheDocument();
+    expect(body.getByRole("heading", { name: "Asian handicap" })).toBeInTheDocument();
+    expect(body.getByRole("heading", { name: "Correct score" })).toBeInTheDocument();
+    expect(body.getByRole("heading", { name: "Half time / full time" })).toBeInTheDocument();
+    // A quarter line that can refund says so rather than showing one number.
+    expect(body.getByText(/27\.0% push/)).toBeInTheDocument();
+  });
+
+  it("flags which markets are driving the chips", async () => {
+    renderFixture();
+
+    const panel = (await screen.findByRole("heading", { name: /Markets/ })).closest("section");
+    const featured = [...panel.querySelectorAll("tbody tr.featured")].map((row) =>
+      within(row).getAllByRole("cell")[0].firstChild.textContent.trim()
+    );
+    expect(featured).toEqual(["O1.5", "U2.5", "Away +0.5", "1/1"]);
+  });
+
+  it("distinguishes measured markets from assumed ones", async () => {
+    renderFixture();
+
+    const panel = (await screen.findByRole("heading", { name: /Markets/ })).closest("section");
+    expect(within(panel).getByText("4 assumed")).toBeInTheDocument();
+    // One table per family, so scope to body rows to skip the repeated headers.
+    const rows = [...panel.querySelectorAll("tbody tr")];
+    const sources = rows.map((tr) => within(tr).getAllByRole("cell")[2].textContent.trim());
+    expect(rows).toHaveLength(21);
+    expect(sources.filter((s) => s === "model").length).toBe(17);
+    expect(sources.filter((s) => s === "assumed").length).toBe(4);
+  });
+
+  it("surfaces the dynamic chips the backend selected", async () => {
+    renderFixture();
+
+    // The chips follow the model: over 1.5 and the under 2.5 both show, and the
+    // old fixed 1/X/2 set is gone.
+    const panel = (await screen.findByRole("heading", { name: /^Prediction/ })).closest("section");
+    const chips = within(panel)
+      .getAllByTitle(/goal distribution|assumed/)
+      .map((el) => el.textContent.trim());
+    expect(chips).toEqual(["O1.5 80%", "U2.5 41%", "Away +0.5 42%", "1/1 24%"]);
+  });
+
   it("renders crests, form, venue split, rest and table for both sides", async () => {
     renderFixture();
 
@@ -184,5 +236,53 @@ describe("FixtureDetail", () => {
     renderFixture();
 
     expect(await screen.findByText(/fixture not found/)).toBeInTheDocument();
+  });
+
+  it("opens a market's explanation from the featured chip", async () => {
+    api.fixtureMarket.mockResolvedValue(marketDetail);
+    renderFixture();
+    await screen.findByRole("heading", { name: "Arsenal vs Chelsea" });
+
+    await userEvent.click(screen.getByRole("button", { name: /Away \+0\.5 42%/ }));
+
+    expect(await screen.findByRole("dialog")).toBeInTheDocument();
+    expect(api.fixtureMarket).toHaveBeenCalledWith(LEAGUE, TAIL, "ft.asian_handicap.-0.5_away");
+  });
+
+  it("opens a market's explanation from a table row that is not featured", async () => {
+    const detail = { ...marketDetail, market: { ...marketDetail.market, key: "ft.correct_score.2_1", label: "2-1" } };
+    api.fixtureMarket.mockResolvedValue(detail);
+    renderFixture();
+    await screen.findByRole("heading", { name: "Arsenal vs Chelsea" });
+
+    // A correct score never reaches the chip row, but it is still a market.
+    await userEvent.click(screen.getByRole("button", { name: "2-1" }));
+
+    expect(await screen.findByRole("dialog")).toBeInTheDocument();
+    expect(api.fixtureMarket).toHaveBeenCalledWith(LEAGUE, TAIL, "ft.correct_score.2_1");
+  });
+
+  it("does not refetch the fixture to open a market", async () => {
+    api.fixtureMarket.mockResolvedValue(marketDetail);
+    renderFixture();
+    await screen.findByRole("heading", { name: "Arsenal vs Chelsea" });
+    expect(api.fixtureDetail).toHaveBeenCalledTimes(1);
+
+    await userEvent.click(screen.getByRole("button", { name: /Away \+0\.5 42%/ }));
+    await screen.findByRole("dialog");
+
+    expect(api.fixtureDetail).toHaveBeenCalledTimes(1);
+  });
+
+  it("closes the explanation and stops fetching for it", async () => {
+    api.fixtureMarket.mockResolvedValue(marketDetail);
+    renderFixture();
+    await screen.findByRole("heading", { name: "Arsenal vs Chelsea" });
+
+    await userEvent.click(screen.getByRole("button", { name: /Away \+0\.5 42%/ }));
+    await screen.findByRole("dialog");
+    await userEvent.click(screen.getByRole("button", { name: "Close" }));
+
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 });

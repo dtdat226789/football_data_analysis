@@ -40,7 +40,9 @@ from scripts.collect_raw_data import (  # noqa: E402
 )
 from scripts.db_common import (  # noqa: E402
     HT_ABSENT_MARKERS,
+    league_meta,
     score_status,
+    season_date_window,
     split_score,
 )
 
@@ -48,7 +50,10 @@ VALIDATION_DIR = ROOT_DIR / "data" / "validation"
 REPORT_JSON = VALIDATION_DIR / "poc_validation_report.json"
 REPORT_MD = VALIDATION_DIR / "poc_validation_report.md"
 
-EXPECTED_TEAMS_PER_SEASON = 20
+# Only used for leagues that are absent from data/raw/league_teams.json; every
+# catalog league takes its real team/match count from LEAGUE_CONFIG.
+FALLBACK_EXPECTED_TEAMS = 20
+
 EXPECTED_CORE_MATCH_FIELDS = [
     "id", "game_index", "date", "time",
     "homeTeam", "awayTeam", "score", "ht_result",
@@ -65,6 +70,23 @@ SEVERITY_WARNING = "WARNING"
 SEVERITY_PASS = "PASS"
 
 ISSUES: list[dict] = []
+
+
+# ── per-league expectations ───────────────────────────────────────────────────
+# Sourced from data/raw/league_teams.json via db_common.LEAGUE_CONFIG so a
+# 16- or 18-team league is checked against its own size instead of a hardcoded
+# 20, and a split/playoff league against the match count the ETL actually uses.
+def expected_teams(league: str) -> int:
+    return int(league_meta(league).get("teams") or FALLBACK_EXPECTED_TEAMS)
+
+
+def expected_matches(league: str) -> int:
+    teams = expected_teams(league)
+    return int(league_meta(league).get("matches") or teams * (teams - 1))
+
+
+def expected_format(league: str) -> str:
+    return str(league_meta(league).get("format") or "round-robin")
 
 
 # ── issue registry ────────────────────────────────────────────────────────────
@@ -367,6 +389,7 @@ def normalize_team_name(name: str) -> str:
 def check_teams(league: str, seasons: list[str]) -> dict:
     per_season: dict = {}
     field_sets: list[set] = []
+    n_expected = expected_teams(league)
     for season in seasons:
         path = http_file(league, season, "teams.json")
         data = load_json(path)
@@ -376,13 +399,13 @@ def check_teams(league: str, seasons: list[str]) -> dict:
             continue
         teams = data["teams"]
         rec["n_teams"] = len(teams)
-        if len(teams) != EXPECTED_TEAMS_PER_SEASON:
+        if len(teams) != n_expected:
             add_issue(
                 "teams", "TEAMS_COUNT",
                 SEVERITY_WARNING if len(teams) > 0 else SEVERITY_ERROR,
-                f"Team count is {len(teams)}, expected {EXPECTED_TEAMS_PER_SEASON}",
+                f"Team count is {len(teams)}, expected {n_expected}",
                 league=league, season=season, file=rel(path),
-                details={"expected": EXPECTED_TEAMS_PER_SEASON, "actual": len(teams)},
+                details={"expected": n_expected, "actual": len(teams)},
             )
         names = [t.get("team") for t in teams if isinstance(t, dict)]
         dupes = [n for n, c in Counter(n for n in names if n).items() if c > 1]
@@ -428,14 +451,21 @@ def check_teams(league: str, seasons: list[str]) -> dict:
 
 
 # ── 4. results ────────────────────────────────────────────────────────────────
-def season_window(season: str) -> tuple[date, date]:
-    start_year, end_year = (int(x) for x in season.split("-"))
-    return date(start_year, 6, 1), date(end_year, 8, 15)
+def season_window(season: str) -> tuple[date, date] | None:
+    """Calendar window for a season label, or None when it has no parseable year.
+
+    Handles both the European split form ('2025-2026') and the calendar-year
+    form ('2026') the API uses for southern-hemisphere and summer leagues.
+    """
+    return season_date_window(season)
 
 
 def check_results(league: str, seasons: list[str]) -> dict:
     per_season: dict = {}
     field_sets: list[set] = []
+    n_teams = expected_teams(league)
+    n_matches = expected_matches(league)
+    league_format = expected_format(league)
     for season in seasons:
         path = http_file(league, season, "results.json")
         data = load_json(path)
@@ -447,13 +477,12 @@ def check_results(league: str, seasons: list[str]) -> dict:
         rec["n_matches"] = len(matches)
         if len(matches) == 0:
             add_issue("results", "RESULTS_EMPTY", SEVERITY_ERROR, "No matches", league=league, season=season, file=rel(path))
-        expected = EXPECTED_TEAMS_PER_SEASON * (EXPECTED_TEAMS_PER_SEASON - 1)
-        if len(matches) != expected:
+        if len(matches) != n_matches:
             add_issue(
                 "results", "RESULTS_COUNT_UNEXPECTED", SEVERITY_WARNING,
-                f"Match count is {len(matches)}, expected {expected} for a complete {EXPECTED_TEAMS_PER_SEASON}-team double round-robin",
+                f"Match count is {len(matches)}, expected {n_matches} for a complete {n_teams}-team {league_format} season",
                 league=league, season=season, file=rel(path),
-                details={"expected": expected, "actual": len(matches)},
+                details={"expected": n_matches, "actual": len(matches)},
             )
         ids = [m.get("id") for m in matches]
         gi = [m.get("game_index") for m in matches]
@@ -471,6 +500,12 @@ def check_results(league: str, seasons: list[str]) -> dict:
                 details={"min": min(gi), "max": max(gi), "n_unique": len(set(gi))},
             )
         window = season_window(season)
+        if window is None:
+            add_issue(
+                "results", "RESULTS_SEASON_UNPARSED", SEVERITY_WARNING,
+                f"Season label '{season}' has no parseable year; date window check skipped",
+                league=league, season=season, file=rel(path),
+            )
         dates = []
         for m in matches:
             if not isinstance(m, dict):
@@ -485,7 +520,7 @@ def check_results(league: str, seasons: list[str]) -> dict:
                 try:
                     dt = date.fromisoformat(d)
                     dates.append(d)
-                    if not (window[0] <= dt <= window[1]):
+                    if window and not (window[0] <= dt <= window[1]):
                         add_issue("results", "RESULTS_DATE_OUT_OF_SEASON", SEVERITY_WARNING, f"Match {mid} date {d} outside season window", league=league, season=season, file=rel(path), details={"match_id": mid, "date": d, "window": [str(x) for x in window]})
                 except ValueError:
                     add_issue("results", "RESULTS_INVALID_DATE", SEVERITY_ERROR, f"Match {mid} has invalid date '{d}'", league=league, season=season, file=rel(path), details={"match_id": mid, "date": d})
@@ -639,6 +674,7 @@ def check_match_identity(league: str, seasons: list[str]) -> dict:
 def check_tables(league: str, seasons: list[str], views: list[str]) -> dict:
     per_season: dict = {}
     seen_ids: dict[str, set[int]] = {}
+    n_expected = expected_teams(league)
     for season in seasons:
         per_season[season] = {}
         base = http_file(league, season, "table_classic.json")
@@ -653,13 +689,13 @@ def check_tables(league: str, seasons: list[str], views: list[str]) -> dict:
                 continue
             rows = data["table"]
             rec["rows"] = len(rows)
-            if len(rows) != EXPECTED_TEAMS_PER_SEASON:
+            if len(rows) != n_expected:
                 add_issue(
                     "table", "TABLE_ROWS_UNEXPECTED",
                     SEVERITY_WARNING if len(rows) > 0 else SEVERITY_ERROR,
-                    f"table_{view} has {len(rows)} rows, expected {EXPECTED_TEAMS_PER_SEASON}",
+                    f"table_{view} has {len(rows)} rows, expected {n_expected}",
                     league=league, season=season, file=rel(path),
-                    details={"expected": EXPECTED_TEAMS_PER_SEASON, "actual": len(rows)},
+                    details={"expected": n_expected, "actual": len(rows)},
                 )
             names = [r.get("team") for r in rows]
             dupes = [n for n, c in Counter(n for n in names if n).items() if c > 1]
@@ -899,7 +935,7 @@ def render_markdown(report: dict) -> str:
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(prog="validate_raw_data", description="Validate the collected Football Charts raw dataset.")
     parser.add_argument("--league", default=DEFAULT_LEAGUE)
-    parser.add_argument("--season", action="append", metavar="YYYY-YYYY", help="season to validate; repeatable, default: all POC seasons")
+    parser.add_argument("--season", action="append", metavar="SEASON", help="season to validate, e.g. 2025-2026 or 2026; repeatable, default: all POC seasons")
     return parser.parse_args(argv)
 
 

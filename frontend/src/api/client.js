@@ -52,6 +52,11 @@ export const api = {
   // matchId is the trailing `date-home-vs-away` slug segment, or the full
   // upstream slug when the caller has it; the route accepts either.
   fixtureDetail: (league, matchId) => request(`/fixtures/${league}/${matchId}`),
+  // The mechanism behind one derived market: how it settles and which scorelines
+  // pay it. Same route as fixtureDetail, so `market` keys off the fixture rather
+  // than adding a second path that could collide with the `:path` match id.
+  fixtureMarket: (league, matchId, marketKey) =>
+    request(`/fixtures/${league}/${matchId}`, { market: marketKey }),
   teams: ({ limit, offset } = {}) => request("/teams", { limit, offset }),
   team: (slug) => request(`/teams/${slug}`),
   teamMatches: (slug, params = {}) => request(`/teams/${slug}/matches`, params),

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:43:18+00:00",
+  "generated_at": "2026-09-29T16:04:55+00:00",
   "config": {
     "league": "romania1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\romania1",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_position_before_match |corr| = 0.1688 (n=429 leakage-safe rows)",
+      "detail": "away_position_before_match |corr| = 0.1577 (n=350 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 6.623: home 2.774, draw -0.419, away -3.850",
+      "detail": "points_difference spreads group means over 7.471: home 3.310, draw -0.156, away -4.162",
       "importance": "medium",
       "id": "F23"
     },
@@ -440,8 +440,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 26004,
-        "distinct": 25990,
+        "rows": 26174,
+        "distinct": 26160,
         "duplicates": 14
       }
     },
@@ -450,10 +450,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
       "details": {
-        "total": 26004,
+        "total": 26174,
         "fgt_inconsistent": 24,
         "fgte_inconsistent": 24,
-        "n_with_fgt": 24178
+        "n_with_fgt": 24337
       }
     },
     {

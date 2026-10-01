@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T13:48:34+00:00
+- Generated: 2026-09-29T16:09:23+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`

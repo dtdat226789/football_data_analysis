@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T13:42:14+00:00
+- Generated: 2026-09-29T16:04:06+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`

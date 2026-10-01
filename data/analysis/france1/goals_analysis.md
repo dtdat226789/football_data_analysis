@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T10:58:37+00:00
+- Generated: 2026-09-29T15:49:58+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Ligue 1 (France)
 - Scope: league `france1`

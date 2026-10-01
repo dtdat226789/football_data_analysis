@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T13:49:44+00:00
+- Generated: 2026-09-29T16:10:17+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`

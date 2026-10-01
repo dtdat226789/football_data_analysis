@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:59:59+00:00
+- Generated: 2026-09-29T15:51:37+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`

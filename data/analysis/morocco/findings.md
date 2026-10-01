@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:03:40+00:00
+- Generated: 2026-09-29T16:01:52+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`
@@ -8,7 +8,7 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\morocco\database_profile.json | yes | yes | 30.70 |
+| database_profile | E:\football_data_analysis\data\analysis\morocco\database_profile.json | yes | yes | 31.47 |
 | matches_analysis | E:\football_data_analysis\data\analysis\morocco\matches_analysis.json | yes | yes | 9.48 |
 | goals_analysis | E:\football_data_analysis\data\analysis\morocco\goals_analysis.json | yes | yes | 6.18 |
 | teams_analysis | E:\football_data_analysis\data\analysis\morocco\teams_analysis.json | yes | yes | 29.88 |
@@ -41,8 +41,8 @@
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 3 match(es) with >= 7 total goals
 - **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_conceded_avg |corr| = 0.0975 (n=488 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 8.542: home 3.323, draw -0.150, away -5.219
-- **F24** · `database_profile` · *[high]* — **Data-quality warnings (12)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, MATCH_COUNT_UNEXPECTED, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 488 matches observed
+- **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, MATCH_COUNT_UNEXPECTED, SEASON_REGISTERED_NO_DATA, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
+- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 3 registered seasons populated (66.7%); 488 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
@@ -60,7 +60,7 @@
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 30.70 |
+| database_profile | database_profile | observed, calculated, warnings | 31.47 |
 | matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 9.48 |
 | goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 6.18 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 29.88 |
@@ -73,14 +73,16 @@
 - **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2024-2025 has 16 teams, expected 20
 - **3.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 248 matches, expected 380
 - **4.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 17 teams, expected 20
-- **5.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
-- **6.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=18, fgte=18 rows)
-- **7.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2024-2025/classic rows=16 positions=1..16 teams=16
-- **8.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2024-2025/goals rows=16 positions=1..16 teams=16
-- **9.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2024-2025/luck rows=16 positions=1..16 teams=16
-- **10.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025-2026/classic rows=17 positions=1..17 teams=17
-- **11.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025-2026/goals rows=17 positions=1..17 teams=17
-- **12.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025-2026/luck rows=17 positions=1..17 teams=17
+- **5.** `SEASON_REGISTERED_NO_DATA` *(warning)* — Season 2026-2027 is registered but has no match data (declared_by_api=True, state=unknown)
+- **6.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 0 matches, expected 380
+- **7.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
+- **8.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=18, fgte=18 rows)
+- **9.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2024-2025/classic rows=16 positions=1..16 teams=16
+- **10.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2024-2025/goals rows=16 positions=1..16 teams=16
+- **11.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2024-2025/luck rows=16 positions=1..16 teams=16
+- **12.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025-2026/classic rows=17 positions=1..17 teams=17
+- **13.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025-2026/goals rows=17 positions=1..17 teams=17
+- **14.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025-2026/luck rows=17 positions=1..17 teams=17
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

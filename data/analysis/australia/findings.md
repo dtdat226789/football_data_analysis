@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:54:41+00:00
+- Generated: 2026-09-29T15:44:00+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`

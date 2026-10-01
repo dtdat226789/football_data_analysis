@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T10:59:26+00:00
+- Generated: 2026-09-29T15:50:57+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Bundesliga (Germany)
 - Scope: league `germany1`

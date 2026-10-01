@@ -1,6 +1,6 @@
 # Football Charts Database Profile
 - Report: `database_profile`
-- Generated: 2026-09-23T10:55:03+00:00
+- Generated: 2026-09-29T15:44:38+00:00
 - Script: `backend/scripts/profile_database.py` v1.0.0
 - Database: `football_charts` (PostgreSQL 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
 - Scope: league `azer`
@@ -16,7 +16,7 @@
 | teams | 76 |
 | team_aliases | 152 |
 | team_seasons | 138 |
-| matches | 1344 |
+| matches | 1345 |
 | standings | 414 |
 
 ### 1.2 Leagues with data
@@ -24,7 +24,7 @@
 - Leagues with match data: `5`
 | api_key | name | country | registered_seasons | matches |
 |---|---|---|---|---|
-| algir1 | Ligue 1 | Algeria | 2 | 262 |
+| algir1 | Ligue 1 | Algeria | 2 | 263 |
 | australia | A-League | Australia | 2 | 332 |
 | austria1 | Bundesliga | Austria | 2 | 237 |
 | austria2 | 2. Liga | Austria | 2 | 279 |
@@ -43,9 +43,9 @@
 ### 1.4 Duplicate checks
 | check | rows | distinct | duplicates |
 |---|---|---|---|
-| matches.api_id (natural PK) | 1344 | 1344 | 0 |
-| matches (league_season_id, game_index) | 1344 | 1344 | 0 |
-| matches same fixture on same date (league_season, home, away, match_date) | 1344 | 1342 | 2 |
+| matches.api_id (natural PK) | 1345 | 1345 | 0 |
+| matches (league_season_id, game_index) | 1345 | 1345 | 0 |
+| matches same fixture on same date (league_season, home, away, match_date) | 1345 | 1343 | 2 |
 | team_seasons (league_season_id, team_id) | 138 | 138 | 0 |
 | team_seasons api_name within a season | 138 | 138 | 0 |
 | team_seasons api_slug within a season | 138 | 138 | 0 |
@@ -57,20 +57,20 @@
   > **WARNING:** duplicates found, see section 3.
 
 ### 1.5 NULL counts (matches, important fields)
-- Total matches: `1344`
+- Total matches: `1345`
 
 | field | n_null | n_not_null | null_pct |
 |---|---|---|---|
-| match_date | 0 | 1344 | 0.0% |
-| kickoff_time | 0 | 1344 | 0.0% |
-| home_team_id | 0 | 1344 | 0.0% |
-| away_team_id | 0 | 1344 | 0.0% |
-| home_score | 0 | 1344 | 0.0% |
-| away_score | 0 | 1344 | 0.0% |
-| home_ht | 3 | 1341 | 0.2% |
-| away_ht | 3 | 1341 | 0.2% |
-| first_goal_time | 93 | 1251 | 6.9% |
-| first_goal_time_extra | 93 | 1251 | 6.9% |
+| match_date | 0 | 1345 | 0.0% |
+| kickoff_time | 0 | 1345 | 0.0% |
+| home_team_id | 0 | 1345 | 0.0% |
+| away_team_id | 0 | 1345 | 0.0% |
+| home_score | 0 | 1345 | 0.0% |
+| away_score | 0 | 1345 | 0.0% |
+| home_ht | 3 | 1342 | 0.2% |
+| away_ht | 3 | 1342 | 0.2% |
+| first_goal_time | 94 | 1251 | 7.0% |
+| first_goal_time_extra | 94 | 1251 | 7.0% |
   > Semantics: `home_ht`/`away_ht` NULL together; `first_goal_time`/`first_goal_time_extra` NULL iff goalless.
 
 ### 1.6 Value ranges
@@ -206,8 +206,8 @@ Extreme scorelines (>= 8 total goals):
 - `6.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "home", "season_share": 52.9, "overall_share": 39.7}`
 - `7.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "away", "season_share": 26.5, "overall_share": 36.3}`
 - `8.` `HIGH_SCORING_MATCHES` details: `{"n_matches": 1, "threshold": 8, "examples": [{"scoreline": "7-1", "total_goals": 8, "count": 1}]}`
-- `9.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 1344, "distinct": 1342, "duplicates": 2}`
-- `10.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 1344, "fgt_inconsistent": 2, "fgte_inconsistent": 2, "n_with_fgt": 1251}`
+- `9.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 1345, "distinct": 1343, "duplicates": 2}`
+- `10.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 1345, "fgt_inconsistent": 2, "fgte_inconsistent": 2, "n_with_fgt": 1251}`
 - `11.` `STANDINGS_INCOMPLETE` details: `{"season": "2025-2026", "view": "classic", "n_rows": 13, "min_pos": 1, "max_pos": 13, "distinct_teams": 13}`
 - `12.` `STANDINGS_INCOMPLETE` details: `{"season": "2025-2026", "view": "goals", "n_rows": 13, "min_pos": 1, "max_pos": 13, "distinct_teams": 13}`
 - `13.` `STANDINGS_INCOMPLETE` details: `{"season": "2025-2026", "view": "luck", "n_rows": 13, "min_pos": 1, "max_pos": 13, "distinct_teams": 13}`

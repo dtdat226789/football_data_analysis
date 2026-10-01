@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-23T10:54:35+00:00
+- Generated: 2026-09-29T15:43:51+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`

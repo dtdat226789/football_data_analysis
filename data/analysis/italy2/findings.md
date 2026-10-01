@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T11:02:06+00:00
+- Generated: 2026-09-29T15:57:49+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (69 of 134 draw matches, 51.5%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (32 of 110 away matches, 29.1%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 5 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_wins_last_5 |corr| = 0.1202 (n=440 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.178: home 3.260, draw -2.216, away -3.918
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_points_last_5 |corr| = 0.1028 (n=390 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 8.23: home 3.634, draw -2.463, away -4.596
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (8)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 440 matches observed
 

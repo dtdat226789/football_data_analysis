@@ -46,10 +46,31 @@ describe("Dashboard", () => {
     expect(await screen.findByRole("heading", { name: /Upcoming · top picks/ })).toBeInTheDocument();
     expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("Chelsea").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText("58%").length).toBeGreaterThanOrEqual(1);
+    // Chips follow the markets the backend selected for each fixture.
+    const chips = [...document.querySelectorAll(".pred-chip")].map((el) => el.textContent.trim());
+    expect(chips).toEqual(["O1.5 80%", "Away +0.5 42%", "U2.5 41%", "1 62%", "BTTS yes 68%"]);
 
     expect(screen.getByRole("heading", { name: /Recent results/ })).toBeInTheDocument();
     expect(screen.getByText("2–1")).toBeInTheDocument();
+  });
+
+  it("names the league on upcoming and recent rows instead of showing the slug", async () => {
+    // Upcoming rows come from the fixtures dump, recent rows from the matches
+    // feed; both used to print "wsweden" where the name belonged.
+    api.dashboard.mockResolvedValue({
+      ...dashboard,
+      upcoming_matches: [
+        { ...dashboard.upcoming_matches[0], league: "wsweden", league_name: "Allsvenskan Women" },
+      ],
+      recent_matches: [
+        { ...dashboard.recent_matches[0], league: "wsweden", league_name: "Allsvenskan Women" },
+      ],
+    });
+    renderPage(<Dashboard />);
+
+    await screen.findByRole("heading", { name: /Recent results/ });
+    expect(screen.getAllByText(/Allsvenskan Women/).length).toBeGreaterThanOrEqual(2);
+    expect(document.body).not.toHaveTextContent("wsweden");
   });
 
   it("renders top clubs (current leaders)", async () => {

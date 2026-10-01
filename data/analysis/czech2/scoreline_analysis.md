@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:56:31+00:00
+- Generated: 2026-09-29T15:47:10+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`

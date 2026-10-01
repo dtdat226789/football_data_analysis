@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T13:49:14+00:00",
+  "generated_at": "2026-09-29T16:09:55+00:00",
   "config": {
     "league": "swiss1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\swiss1",
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_points_before_match |corr| = -0.0949 (n=284 leakage-safe rows)",
+      "detail": "home_team_home_win_rate |corr| = -0.1425 (n=230 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 6.988: home 3.658, draw -1.373, away -3.330",
+      "detail": "points_difference spreads group means over 8.081: home 4.194, draw -1.965, away -3.888",
       "importance": "medium",
       "id": "F23"
     },
@@ -493,8 +493,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 33177,
-        "distinct": 33132,
+        "rows": 33419,
+        "distinct": 33374,
         "duplicates": 45
       }
     },
@@ -503,10 +503,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=30, fgte=30 rows)",
       "details": {
-        "total": 33177,
+        "total": 33419,
         "fgt_inconsistent": 30,
         "fgte_inconsistent": 30,
-        "n_with_fgt": 30812
+        "n_with_fgt": 31039
       }
     },
     {

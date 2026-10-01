@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-23T10:57:15+00:00
+- Generated: 2026-09-29T15:48:09+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: 1st Division (Denmark)
 - Scope: league `denmark2`

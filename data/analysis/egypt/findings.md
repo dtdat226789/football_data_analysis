@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:57:35+00:00
+- Generated: 2026-09-29T15:48:38+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Premier League (Egypt)
 - Scope: league `egypt`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\egypt\teams_analysis.json | yes | yes | 33.79 |
 | season_trends | E:\football_data_analysis\data\analysis\egypt\season_trends.json | yes | yes | 3.93 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\egypt\scoreline_analysis.json | yes | yes | 55.25 |
-| relationships | E:\football_data_analysis\data\analysis\egypt\relationships.json | yes | yes | 14.35 |
+| relationships | E:\football_data_analysis\data\analysis\egypt\relationships.json | yes | yes | 14.34 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (59 of 132 draw matches, 44.7%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (35 of 112 away matches, 31.2%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 1 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_home_goals_avg |corr| = 0.1435 (n=372 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — position_difference spreads group means over 5.58: home -2.938, draw 0.485, away 2.643
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_home_goals_avg |corr| = 0.1917 (n=322 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 6.22: home 2.890, draw -0.148, away -3.330
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (12)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 372 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 33.79 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.93 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 55.25 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.35 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.34 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 322 matches, expected 380

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:01:37+00:00",
+  "generated_at": "2026-09-29T15:56:18+00:00",
   "config": {
     "league": "ireland2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\ireland2",
@@ -29,7 +29,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\ireland2\\database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 31.01
+      "size_kb": 31.02
     },
     {
       "report_name": "matches_analysis",
@@ -64,14 +64,14 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\ireland2\\scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 59.48
+      "size_kb": 60.26
     },
     {
       "report_name": "relationships",
       "path": "E:\\football_data_analysis\\data\\analysis\\ireland2\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.33
+      "size_kb": 14.32
     }
   ],
   "coverage": {
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "339 matches: home wins 47.8%, draws 23.3%, away wins 28.9% (162H / 79D / 98A)",
+      "detail": "344 matches: home wins 48.0%, draws 23.3%, away wins 28.8% (165H / 80D / 99A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 97 times",
+      "detail": "home lead at HT -> home win occurred 98 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "339 matches produced 941 goals (avg 2.776 per match)",
+      "detail": "344 matches produced 958 goals (avg 2.785 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 57.5% vs away 42.5% of 941 goals in total (home/away ratio 1.35)",
+      "detail": "home 57.4% vs away 42.6% of 958 goals in total (home/away ratio 1.35)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "180 of 339 matches (53.1%)",
+      "detail": "184 of 344 matches (53.5%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 112 scoring matches, 35.1% of scoring)",
+      "detail": "minute 1-15 (first goal in 113 scoring matches, 34.9% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 30.94, median 25.0",
+      "detail": "mean 31.07, median 25.5",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Cobh Ramblers leads with 114 points across 2 seasons (0 title(s), GD 25)",
+      "detail": "Bray leads with 115 points across 2 seasons (0 title(s), GD 29)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Bray earns 36 more points at home than away (74 home vs 38 away)",
+      "detail": "Bray earns 33 more points at home than away (74 home vs 41 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.060 per match): first half 2.804 vs last half 2.744 across 2 seasons",
+      "detail": "stable (-0.040 per match): first half 2.804 vs last half 2.764 across 2 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -195,28 +195,28 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "2-1 in 39 matches (11.5%)",
+      "detail": "2-1 in 41 matches (11.9%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "2-1 (39 of 162 home matches, 24.1%)",
+      "detail": "2-1 (41 of 165 home matches, 24.8%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (36 of 79 draw matches, 45.6%)",
+      "detail": "1-1 (36 of 80 draw matches, 45.0%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (34 of 98 away matches, 34.7%)",
+      "detail": "0-1 (34 of 99 away matches, 34.3%)",
       "importance": "low",
       "id": "F20"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_points_before_match |corr| = 0.3125 (n=339 leakage-safe rows)",
+      "detail": "home_points_before_match |corr| = 0.303 (n=179 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 7.371: home 3.463, draw -2.430, away -3.908",
+      "detail": "points_difference spreads group means over 10.481: home 4.963, draw -2.571, away -5.518",
       "importance": "medium",
       "id": "F23"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 339 matches observed",
+      "detail": "2 of 2 registered seasons populated (100.0%); 344 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 339,
-    "avg_goals": 2.776,
-    "home_win_pct": 47.8,
+    "n_matches": 344,
+    "avg_goals": 2.785,
+    "home_win_pct": 48.0,
     "draw_pct": 23.3,
-    "away_win_pct": 28.9,
+    "away_win_pct": 28.8,
     "most_common_scoreline": "2-1",
-    "dominant_team": "Cobh Ramblers",
+    "dominant_team": "Bray",
     "champion_most_titles": "Dundalk",
-    "btts_rate_pct": 53.1
+    "btts_rate_pct": 53.5
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 31.01
+      "size_kb": 31.02
     },
     {
       "module": "matches_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 59.48
+      "size_kb": 60.26
     },
     {
       "module": "relationships",
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.33
+      "size_kb": 14.32
     }
   ],
   "anomalies": [
@@ -386,10 +386,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 160 matches, expected 380",
+      "message": "Season 2026 has 165 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 160,
+        "n_matches": 165,
         "expected": 380
       }
     },
@@ -434,8 +434,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 14212,
-        "distinct": 14202,
+        "rows": 14318,
+        "distinct": 14308,
         "duplicates": 10
       }
     },
@@ -444,10 +444,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=8, fgte=8 rows)",
       "details": {
-        "total": 14212,
+        "total": 14318,
         "fgt_inconsistent": 8,
         "fgte_inconsistent": 8,
-        "n_with_fgt": 13263
+        "n_with_fgt": 13363
       }
     },
     {

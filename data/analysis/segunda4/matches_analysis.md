@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T13:46:15+00:00
+- Generated: 2026-09-29T16:07:31+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Segunda RFEF - Group 4 (Spain)
 - Scope: league `segunda4`
@@ -8,30 +8,30 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 350 |
-| Home wins | 171 (48.9%) |
-| Draws | 92 (26.3%) |
-| Away wins | 87 (24.9%) |
-| Total goals | 804 |
-| Average goals per match | 2.297 |
-| Goalless matches | 31 (8.9%) |
+| Matches | 359 |
+| Home wins | 177 (49.3%) |
+| Draws | 94 (26.2%) |
+| Away wins | 88 (24.5%) |
+| Total goals | 826 |
+| Average goals per match | 2.301 |
+| Goalless matches | 33 (9.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025-2026 | 323 | 162 (50.2%) | 84 (26.0%) | 77 (23.8%) | 738 | 2.285 | 28 (8.7%) |
-| 2026-2027 | 27 | 9 (33.3%) | 8 (29.6%) | 10 (37.0%) | 66 | 2.444 | 3 (11.1%) |
+| 2026-2027 | 36 | 15 (41.7%) | 10 (27.8%) | 11 (30.6%) | 88 | 2.444 | 5 (13.9%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 95 (81.2%) | 15 (12.8%) | 7 (6.0%) | 117 |
-| HT draw | 66 (40.2%) | 60 (36.6%) | 38 (23.2%) | 164 |
-| HT away lead | 10 (14.5%) | 17 (24.6%) | 42 (60.9%) | 69 |
+| HT home lead | 99 (81.8%) | 15 (12.4%) | 7 (5.8%) | 121 |
+| HT draw | 68 (40.5%) | 62 (36.9%) | 38 (22.6%) | 168 |
+| HT away lead | 10 (14.3%) | 17 (24.3%) | 43 (61.4%) | 70 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **10** (2.9%)
-- Away comebacks (trailing at HT, won at FT): **7** (2.0%)
+- Home comebacks (trailing at HT, won at FT): **10** (2.8%)
+- Away comebacks (trailing at HT, won at FT): **7** (1.9%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -61,37 +61,37 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 117 | 95 (81.2%) | 15 (12.8%) | 7 (6.0%) |
-| Away lead | 69 | 42 (60.9%) | 17 (24.6%) | 10 (14.5%) |
+| Home lead | 121 | 99 (81.8%) | 15 (12.4%) | 7 (5.8%) |
+| Away lead | 70 | 43 (61.4%) | 17 (24.3%) | 10 (14.3%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 66 | 40.2% |
-| Draw | 60 | 36.6% |
-| Away win | 38 | 23.2% |
+| Home win | 68 | 40.5% |
+| Draw | 62 | 36.9% |
+| Away win | 38 | 22.6% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `319` of `350` (91.1%)
+- Matches with a first-goal time recorded: `326` of `359` (90.8%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 86 | 24.6% | 56 (65.1%) | 12 (14.0%) | 18 (20.9%) |
-| 16-30 | 78 | 22.3% | 40 (51.3%) | 14 (17.9%) | 24 (30.8%) |
-| 31-45 | 55 | 15.7% | 25 (45.5%) | 16 (29.1%) | 14 (25.5%) |
-| 46-60 | 47 | 13.4% | 22 (46.8%) | 10 (21.3%) | 15 (31.9%) |
-| 61-75 | 22 | 6.3% | 11 (50.0%) | 5 (22.7%) | 6 (27.3%) |
-| 76-90 | 24 | 6.9% | 14 (58.3%) | 4 (16.7%) | 6 (25.0%) |
-| 91-120 | 7 | 2.0% | 3 (42.9%) | 0 (0.0%) | 4 (57.1%) |
+| 1-15 | 91 | 25.3% | 60 (65.9%) | 12 (13.2%) | 19 (20.9%) |
+| 16-30 | 79 | 22.0% | 41 (51.9%) | 14 (17.7%) | 24 (30.4%) |
+| 31-45 | 54 | 15.0% | 25 (46.3%) | 16 (29.6%) | 13 (24.1%) |
+| 46-60 | 47 | 13.1% | 22 (46.8%) | 10 (21.3%) | 15 (31.9%) |
+| 61-75 | 23 | 6.4% | 12 (52.2%) | 5 (21.7%) | 6 (26.1%) |
+| 76-90 | 24 | 6.7% | 14 (58.3%) | 4 (16.7%) | 6 (25.0%) |
+| 91-120 | 8 | 2.2% | 3 (37.5%) | 0 (0.0%) | 5 (62.5%) |
 
 ## 7. Goalless matches
-- Overall: **31** of `350` (8.9%)
+- Overall: **33** of `359` (9.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025-2026 | 323 | 28 | 8.7% |
-| 2026-2027 | 27 | 3 | 11.1% |
+| 2026-2027 | 36 | 5 | 13.9% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

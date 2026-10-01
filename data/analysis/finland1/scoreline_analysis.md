@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:58:19+00:00
+- Generated: 2026-09-29T15:49:35+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`

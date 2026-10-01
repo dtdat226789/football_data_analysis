@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T11:00:43+00:00
+- Generated: 2026-09-29T15:53:28+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Tweede Divisie (Netherlands)
 - Scope: league `holland3`
@@ -8,31 +8,31 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 376 |
-| Home wins | 171 (45.5%) |
-| Draws | 77 (20.5%) |
-| Away wins | 128 (34.0%) |
-| Total goals | 1255 |
-| Average goals per match | 3.338 |
-| Goalless matches | 10 (2.7%) |
+| Matches | 385 |
+| Home wins | 176 (45.7%) |
+| Draws | 79 (20.5%) |
+| Away wins | 130 (33.8%) |
+| Total goals | 1287 |
+| Average goals per match | 3.343 |
+| Goalless matches | 10 (2.6%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025-2026 | 322 | 153 (47.5%) | 63 (19.6%) | 106 (32.9%) | 1069 | 3.32 | 10 (3.1%) |
-| 2026-2027 | 54 | 18 (33.3%) | 14 (25.9%) | 22 (40.7%) | 186 | 3.444 | 0 (0.0%) |
+| 2026-2027 | 63 | 23 (36.5%) | 16 (25.4%) | 24 (38.1%) | 218 | 3.46 | 0 (0.0%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 103 (74.1%) | 22 (15.8%) | 14 (10.1%) | 139 |
-| HT draw | 55 (42.3%) | 39 (30.0%) | 36 (27.7%) | 130 |
-| HT away lead | 13 (12.3%) | 16 (15.1%) | 77 (72.6%) | 106 |
+| HT home lead | 106 (74.6%) | 22 (15.5%) | 14 (9.9%) | 142 |
+| HT draw | 57 (42.5%) | 39 (29.1%) | 38 (28.4%) | 134 |
+| HT away lead | 13 (12.0%) | 18 (16.7%) | 77 (71.3%) | 108 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **13** (3.5%)
-- Away comebacks (trailing at HT, won at FT): **14** (3.7%)
+- Home comebacks (trailing at HT, won at FT): **13** (3.4%)
+- Away comebacks (trailing at HT, won at FT): **14** (3.6%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -72,38 +72,38 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 139 | 103 (74.1%) | 22 (15.8%) | 14 (10.1%) |
-| Away lead | 106 | 77 (72.6%) | 16 (15.1%) | 13 (12.3%) |
+| Home lead | 142 | 106 (74.6%) | 22 (15.5%) | 14 (9.9%) |
+| Away lead | 108 | 77 (71.3%) | 18 (16.7%) | 13 (12.0%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 55 | 42.3% |
-| Draw | 39 | 30.0% |
-| Away win | 36 | 27.7% |
+| Home win | 57 | 42.5% |
+| Draw | 39 | 29.1% |
+| Away win | 38 | 28.4% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `365` of `376` (97.1%)
+- Matches with a first-goal time recorded: `374` of `385` (97.1%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 122 | 32.4% | 55 (45.1%) | 24 (19.7%) | 43 (35.2%) |
-| 16-30 | 102 | 27.1% | 44 (43.1%) | 17 (16.7%) | 41 (40.2%) |
-| 31-45 | 63 | 16.8% | 30 (47.6%) | 15 (23.8%) | 18 (28.6%) |
-| 46-60 | 45 | 12.0% | 26 (57.8%) | 3 (6.7%) | 16 (35.6%) |
-| 61-75 | 23 | 6.1% | 10 (43.5%) | 7 (30.4%) | 6 (26.1%) |
-| 76-90 | 6 | 1.6% | 4 (66.7%) | 0 (0.0%) | 2 (33.3%) |
-| 91-120 | 4 | 1.1% | 2 (50.0%) | 1 (25.0%) | 1 (25.0%) |
+| 1-15 | 125 | 32.5% | 57 (45.6%) | 25 (20.0%) | 43 (34.4%) |
+| 16-30 | 104 | 27.0% | 45 (43.3%) | 18 (17.3%) | 41 (39.4%) |
+| 31-45 | 63 | 16.4% | 30 (47.6%) | 15 (23.8%) | 18 (28.6%) |
+| 46-60 | 46 | 11.9% | 27 (58.7%) | 3 (6.5%) | 16 (34.8%) |
+| 61-75 | 23 | 6.0% | 10 (43.5%) | 7 (30.4%) | 6 (26.1%) |
+| 76-90 | 9 | 2.3% | 5 (55.6%) | 0 (0.0%) | 4 (44.4%) |
+| 91-120 | 4 | 1.0% | 2 (50.0%) | 1 (25.0%) | 1 (25.0%) |
 
 ## 7. Goalless matches
-- Overall: **10** of `376` (2.7%)
+- Overall: **10** of `385` (2.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025-2026 | 322 | 10 | 3.1% |
-| 2026-2027 | 54 | 0 | 0.0% |
+| 2026-2027 | 63 | 0 | 0.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-23T11:01:24+00:00
+- Generated: 2026-09-29T15:55:34+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`
 
-- Teams: **11** | Seasons: **2** | Matches: **338**
+- Teams: **11** | Seasons: **2** | Matches: **339**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -14,9 +14,9 @@
 | St. Patricks | 2 | 68 | 30 | 21 | 17 | 111 | 94 | 57 | 37 | 55.5 | 1 | 5 | 1 |
 | Bohemians | 2 | 67 | 32 | 14 | 21 | 110 | 103 | 76 | 27 | 55.0 | 3 | 4 | 0 |
 | Derry City | 2 | 68 | 27 | 23 | 18 | 104 | 97 | 81 | 16 | 52.0 | 2 | 4 | 0 |
-| Shelbourne | 2 | 67 | 24 | 26 | 17 | 98 | 89 | 81 | 8 | 49.0 | 3 | 6 | 0 |
+| Shelbourne | 2 | 68 | 24 | 27 | 17 | 99 | 90 | 82 | 8 | 49.5 | 3 | 6 | 0 |
 | Drogheda | 2 | 68 | 20 | 25 | 23 | 85 | 76 | 89 | -13 | 42.5 | 6 | 9 | 0 |
-| Galway | 2 | 67 | 18 | 22 | 27 | 76 | 78 | 91 | -13 | 38.0 | 7 | 8 | 0 |
+| Galway | 2 | 68 | 18 | 23 | 27 | 77 | 79 | 92 | -13 | 38.5 | 7 | 8 | 0 |
 | Waterford | 2 | 68 | 18 | 19 | 31 | 73 | 85 | 114 | -29 | 36.5 | 8 | 9 | 0 |
 | Sligo Rovers | 2 | 68 | 16 | 16 | 36 | 64 | 66 | 108 | -42 | 32.0 | 7 | 10 | 0 |
 | Dundalk | 1 | 32 | 10 | 11 | 11 | 41 | 49 | 53 | -4 | 41.0 | 5 | 5 | 0 |
@@ -29,13 +29,13 @@
 | St. Patricks | 34 | 18 | 11 | 5 | 65 | 34 | 12 | 10 | 12 | 46 | 19 |
 | Derry City | 34 | 16 | 12 | 6 | 60 | 34 | 11 | 11 | 12 | 44 | 16 |
 | Cork City | 18 | 4 | 8 | 6 | 20 | 18 | 0 | 4 | 14 | 4 | 16 |
-| Galway | 33 | 12 | 9 | 12 | 45 | 34 | 6 | 13 | 15 | 31 | 14 |
+| Galway | 34 | 12 | 10 | 12 | 46 | 34 | 6 | 13 | 15 | 31 | 15 |
 | Drogheda | 34 | 12 | 12 | 10 | 48 | 34 | 8 | 13 | 13 | 37 | 11 |
 | Waterford | 34 | 10 | 12 | 12 | 42 | 34 | 8 | 7 | 19 | 31 | 11 |
 | Bohemians | 34 | 17 | 8 | 9 | 59 | 33 | 15 | 6 | 12 | 51 | 8 |
 | Sligo Rovers | 34 | 8 | 11 | 15 | 35 | 34 | 8 | 5 | 21 | 29 | 6 |
 | Dundalk | 16 | 6 | 3 | 7 | 21 | 16 | 4 | 8 | 4 | 20 | 1 |
-| Shelbourne | 34 | 11 | 11 | 12 | 44 | 33 | 13 | 15 | 5 | 54 | -10 |
+| Shelbourne | 34 | 11 | 11 | 12 | 44 | 34 | 13 | 16 | 5 | 55 | -11 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
@@ -54,7 +54,7 @@
 | 2 | Bohemians | 103 |
 | 3 | Derry City | 97 |
 | 4 | St. Patricks | 94 |
-| 5 | Shelbourne | 89 |
+| 5 | Shelbourne | 90 |
 
 ### Best goal difference
 | rank | team | GD |
@@ -72,7 +72,7 @@
 | 2 | Shamrock Rovers | 0.955 |
 | 3 | Bohemians | 1.134 |
 | 4 | Derry City | 1.191 |
-| 5 | Shelbourne | 1.209 |
+| 5 | Shelbourne | 1.206 |
 
 ## 4. Team consistency
 - Teams present in all **2** seasons: **9**

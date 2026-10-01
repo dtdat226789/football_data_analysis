@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T13:43:23+00:00
+- Generated: 2026-09-29T16:04:59+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premier League (Russia)
 - Scope: league `russia`

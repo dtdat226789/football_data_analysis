@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:59:43+00:00
+- Generated: 2026-09-29T15:51:17+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: 2. Bundesliga (Germany)
 - Scope: league `germany2`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\germany2\teams_analysis.json | yes | yes | 33.66 |
 | season_trends | E:\football_data_analysis\data\analysis\germany2\season_trends.json | yes | yes | 3.94 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\germany2\scoreline_analysis.json | yes | yes | 64.77 |
-| relationships | E:\football_data_analysis\data\analysis\germany2\relationships.json | yes | yes | 14.36 |
+| relationships | E:\football_data_analysis\data\analysis\germany2\relationships.json | yes | yes | 14.34 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -39,8 +39,8 @@
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (36 of 90 draw matches, 40.0%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (29 of 109 away matches, 26.6%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 15 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.1113 (n=364 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — away_points_before_match spreads group means over 4.534: home 19.558, draw 23.222, away 18.688
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_goals_avg |corr| = 0.0908 (n=310 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — away_points_before_match spreads group means over 5.425: home 21.944, draw 27.040, away 21.615
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (11)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 364 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 33.66 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.94 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 64.77 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.36 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.34 |
 
 ## 5. Notable anomalies
 - **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 310 matches, expected 380

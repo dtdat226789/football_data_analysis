@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:03:12+00:00",
+  "generated_at": "2026-09-29T16:01:04+00:00",
   "config": {
     "league": "kuwait",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\kuwait",
@@ -71,7 +71,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\kuwait\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.32
+      "size_kb": 14.24
     }
   ],
   "coverage": {
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_home_conceded_avg |corr| = -0.2008 (n=116 leakage-safe rows)",
+      "detail": "home_position_before_match |corr| = -0.2423 (n=98 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 5.956: home 3.646, draw -2.310, away -1.795",
+      "detail": "points_difference spreads group means over 6.96: home 4.400, draw -2.560, away -2.182",
       "importance": "medium",
       "id": "F23"
     },
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.32
+      "size_kb": 14.24
     }
   ],
   "anomalies": [
@@ -434,8 +434,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 18358,
-        "distinct": 18344,
+        "rows": 18484,
+        "distinct": 18470,
         "duplicates": 14
       }
     },
@@ -444,10 +444,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)",
       "details": {
-        "total": 18358,
+        "total": 18484,
         "fgt_inconsistent": 17,
         "fgte_inconsistent": 17,
-        "n_with_fgt": 17050
+        "n_with_fgt": 17166
       }
     },
     {

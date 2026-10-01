@@ -87,6 +87,7 @@ def list_matches(
         rows = [dict(r) for r in cur.fetchall()]
     return {
         "league": league,
+        "league_name": common.league_name(league),
         "season": season,
         "total": total,
         "limit": limit,
@@ -155,6 +156,7 @@ def recent_matches(
         "limit": limit,
         "offset": offset,
         "league": league,
+        "league_name": common.league_name(league),
         "matches": rows,
     }
 
@@ -163,7 +165,8 @@ def recent_matches(
 def get_match(api_id: int) -> dict:
     with fetched_cursor() as cur:
         cur.execute(
-            f"SELECT m.api_id, {_MATCH_COLUMNS}, l.api_key AS league "
+            f"SELECT m.api_id, {_MATCH_COLUMNS}, l.api_key AS league, "
+            f"l.name AS league_name, l.country, l.url "
             f"{_MATCH_JOINS} JOIN leagues l ON l.id = ls.league_id "
             f"WHERE m.api_id = %s",
             (api_id,),
@@ -410,8 +413,9 @@ def get_match_insights(api_id: int, limit: int = H2H_LIMIT) -> dict:
             f"SELECT m.api_id, m.home_team_id, m.away_team_id, "
             f"th.api_name AS home_team, ta.api_name AS away_team, "
             f"s.name AS season, m.match_date, m.game_index, "
-            f"m.home_score, m.away_score "
-            f"{_MATCH_JOINS} WHERE m.api_id = %s",
+            f"m.home_score, m.away_score, l.api_key AS league "
+            f"{_MATCH_JOINS} JOIN leagues l ON l.id = ls.league_id "
+            f"WHERE m.api_id = %s",
             (api_id,),
         )
         match = cur.fetchone()
@@ -444,6 +448,8 @@ def get_match_insights(api_id: int, limit: int = H2H_LIMIT) -> dict:
 
     return {
         "api_id": api_id,
+        "league": match["league"],
+        "league_name": common.league_name(match["league"]),
         "match": dict(match),
         "pre_match": build_pre_match(_dataset_index().get(str(api_id))),
         "model": {**model, **({"meta": model_meta} if model_meta else {})}

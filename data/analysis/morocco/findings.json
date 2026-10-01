@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:03:40+00:00",
+  "generated_at": "2026-09-29T16:01:52+00:00",
   "config": {
     "league": "morocco",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\morocco",
@@ -29,7 +29,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\morocco\\database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 30.7
+      "size_kb": 31.47
     },
     {
       "report_name": "matches_analysis",
@@ -243,15 +243,15 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (12)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, MATCH_COUNT_UNEXPECTED, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (14)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, MATCH_COUNT_UNEXPECTED, SEASON_REGISTERED_NO_DATA, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 488 matches observed",
+      "detail": "2 of 3 registered seasons populated (66.7%); 488 matches observed",
       "importance": "medium",
       "id": "F25"
     }
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 30.7
+      "size_kb": 31.47
     },
     {
       "module": "matches_analysis",
@@ -404,13 +404,31 @@
       }
     },
     {
+      "code": "SEASON_REGISTERED_NO_DATA",
+      "severity": "warning",
+      "message": "Season 2026-2027 is registered but has no match data (declared_by_api=True, state=unknown)",
+      "details": {
+        "season": "2026-2027"
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 0 matches, expected 380",
+      "details": {
+        "season": "2026-2027",
+        "n_matches": 0,
+        "expected": 380
+      }
+    },
+    {
       "code": "DUPLICATE_ROWS",
       "severity": "warning",
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 19506,
-        "distinct": 19492,
+        "rows": 19632,
+        "distinct": 19618,
         "duplicates": 14
       }
     },
@@ -419,10 +437,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=18, fgte=18 rows)",
       "details": {
-        "total": 19506,
+        "total": 19632,
         "fgt_inconsistent": 18,
         "fgte_inconsistent": 18,
-        "n_with_fgt": 18098
+        "n_with_fgt": 18214
       }
     },
     {

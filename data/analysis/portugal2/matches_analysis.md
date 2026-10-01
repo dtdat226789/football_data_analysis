@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T13:41:48+00:00
+- Generated: 2026-09-29T16:03:40+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`

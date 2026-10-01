@@ -132,7 +132,7 @@ export default function Dashboard() {
                     </span>
                   </div>
                   <div className="muted" style={{ fontSize: 12 }}>
-                    {m.league} · {m.country}
+                    {m.league_name || m.league} · {m.country}
                   </div>
                   <PredictionChips
                     predictions={m.predictions}
@@ -159,7 +159,7 @@ export default function Dashboard() {
                 <div key={m.api_id} className="event">
                   <div className="teams">
                     <span className="muted" style={{ fontSize: 12 }}>
-                      {m.match_date} · {m.league}
+                      {m.match_date} · {m.league_name || m.league}
                     </span>
                     <span>
                       <TeamLink name={m.home_team} /> <strong>{m.home_score}–{m.away_score}</strong>{" "}

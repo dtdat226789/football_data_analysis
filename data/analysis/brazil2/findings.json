@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:55:42+00:00",
+  "generated_at": "2026-09-29T15:45:49+00:00",
   "config": {
     "league": "brazil2",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\brazil2",
@@ -57,21 +57,21 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\brazil2\\season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.88
+      "size_kb": 3.87
     },
     {
       "report_name": "scoreline_analysis",
       "path": "E:\\football_data_analysis\\data\\analysis\\brazil2\\scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 100.56
+      "size_kb": 101.93
     },
     {
       "report_name": "relationships",
       "path": "E:\\football_data_analysis\\data\\analysis\\brazil2\\relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.36
+      "size_kb": 14.34
     }
   ],
   "coverage": {
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "669 matches: home wins 45.4%, draws 29.1%, away wins 25.4% (304H / 195D / 170A)",
+      "detail": "679 matches: home wins 45.4%, draws 29.2%, away wins 25.5% (308H / 198D / 173A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 170 times",
+      "detail": "home lead at HT -> home win occurred 173 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "669 matches produced 1520 goals (avg 2.272 per match)",
+      "detail": "679 matches produced 1544 goals (avg 2.274 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 57.7% vs away 42.3% of 1520 goals in total (home/away ratio 1.36)",
+      "detail": "home 57.8% vs away 42.2% of 1544 goals in total (home/away ratio 1.37)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "328 of 669 matches (49.0%)",
+      "detail": "331 of 679 matches (48.7%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 168 scoring matches, 27.5% of scoring)",
+      "detail": "minute 1-15 (first goal in 170 scoring matches, 27.4% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 34.78, median 29.0",
+      "detail": "mean 34.81, median 29.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Novorizontino leads with 110 points across 2 seasons (0 title(s), GD 33)",
+      "detail": "Novorizontino leads with 111 points across 2 seasons (0 title(s), GD 33)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Vila Nova FC earns 36 more points at home than away (67 home vs 31 away)",
+      "detail": "Vila Nova FC earns 39 more points at home than away (70 home vs 31 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -167,14 +167,14 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026: Vila Nova FC beat Fortaleza by 0 pts",
+      "detail": "2025: Coritiba beat Criciuma by 1 pt",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.125 per match): first half 2.218 vs last half 2.343 across 2 seasons",
+      "detail": "up (+0.126 per match): first half 2.218 vs last half 2.344 across 2 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,35 +188,35 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026 (luck view, avg abs position diff 2.400)",
+      "detail": "2026 (luck view, avg abs position diff 2.100)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-0 in 98 matches (14.6%)",
+      "detail": "1-0 in 98 matches (14.4%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (98 of 304 home matches, 32.2%)",
+      "detail": "1-0 (98 of 308 home matches, 31.8%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (97 of 195 draw matches, 49.7%)",
+      "detail": "1-1 (97 of 198 draw matches, 49.0%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (59 of 170 away matches, 34.7%)",
+      "detail": "0-1 (61 of 173 away matches, 35.3%)",
       "importance": "low",
       "id": "F20"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_position_before_match |corr| = 0.1127 (n=669 leakage-safe rows)",
+      "detail": "away_position_before_match |corr| = 0.1414 (n=380 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 3.822: home 1.398, draw -1.021, away -2.424",
+      "detail": "away_points_before_match spreads group means over 3.687: home 23.305, draw 26.991, away 26.822",
       "importance": "medium",
       "id": "F23"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 669 matches observed",
+      "detail": "2 of 2 registered seasons populated (100.0%); 679 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 669,
-    "avg_goals": 2.272,
+    "n_matches": 679,
+    "avg_goals": 2.274,
     "home_win_pct": 45.4,
-    "draw_pct": 29.1,
-    "away_win_pct": 25.4,
+    "draw_pct": 29.2,
+    "away_win_pct": 25.5,
     "most_common_scoreline": "1-0",
     "dominant_team": "Novorizontino",
     "champion_most_titles": "Coritiba",
-    "btts_rate_pct": 49.0
+    "btts_rate_pct": 48.7
   },
   "comparison": [
     {
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.88
+      "size_kb": 3.87
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 100.56
+      "size_kb": 101.93
     },
     {
       "module": "relationships",
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.36
+      "size_kb": 14.34
     }
   ],
   "anomalies": [
@@ -376,10 +376,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 289 matches, expected 380",
+      "message": "Season 2026 has 299 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 289,
+        "n_matches": 299,
         "expected": 380
       }
     },
@@ -414,8 +414,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 3054,
-        "distinct": 3052,
+        "rows": 3065,
+        "distinct": 3063,
         "duplicates": 2
       }
     },
@@ -424,10 +424,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=2, fgte=2 rows)",
       "details": {
-        "total": 3054,
+        "total": 3065,
         "fgt_inconsistent": 2,
         "fgte_inconsistent": 2,
-        "n_with_fgt": 2832
+        "n_with_fgt": 2841
       }
     },
     {

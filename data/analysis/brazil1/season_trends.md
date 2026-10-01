@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T10:55:29+00:00
+- Generated: 2026-09-29T15:45:23+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`
@@ -48,7 +48,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025 | 9.750 | 12.550 |
-| 2026 | 2.400 | 6.100 |
+| 2026 | 2.500 | 6.100 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T11:01:17+00:00
+- Generated: 2026-09-29T15:55:12+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`

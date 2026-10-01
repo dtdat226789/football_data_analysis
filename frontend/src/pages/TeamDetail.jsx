@@ -7,6 +7,7 @@ import { FormPills } from "../components/FormPills.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BarList, Donut, StatCard } from "../components/Charts.jsx";
 import PredictionChips from "../components/PredictionChips.jsx";
+import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 
 const POSITION_COLOR = "var(--green)";
 const POINTS_COLOR = "var(--accent)";
@@ -100,6 +101,10 @@ export default function TeamDetail() {
       return latest.season;
     });
   }, [memberships, league, seasonParam]);
+
+  // The selected league is held as a slug; the headings below show its real name.
+  const leagueNames = useMemo(() => leagueNameMap(leagues), [leagues]);
+  const leagueName = leagueLabel(league, leagueNames) || league;
 
   const patch = (updates) => {
     const next = new URLSearchParams(searchParams);
@@ -250,7 +255,7 @@ export default function TeamDetail() {
 
       {upcoming.length > 0 && league && (
         <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>Upcoming · {league}</h3>
+          <h3 style={{ marginTop: 0 }}>Upcoming · {leagueName}</h3>
           <div className="event-list">
             {upcoming.map((m, i) => (
               <div key={i} className="event">
@@ -292,7 +297,7 @@ export default function TeamDetail() {
       )}
 
       <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>Statistics · {league}</h3>
+        <h3 style={{ marginTop: 0 }}>Statistics · {leagueName}</h3>
         {stats.error && <ErrorBox error={stats.error} />}
         {stats.loading && (
           <div className="team-stats">
@@ -306,7 +311,7 @@ export default function TeamDetail() {
         )}
         {stats.data && !stats.loading && (
           stats.data.seasons.length === 0 ? (
-            <p className="muted">No standings recorded for this team in {league}.</p>
+            <p className="muted">No standings recorded for this team in {leagueName}.</p>
           ) : (
             <TeamStatsBlock data={stats.data} />
           )
@@ -323,7 +328,7 @@ export default function TeamDetail() {
             <tbody>
               {memberships.map((m, i) => (
                 <tr key={i}>
-                  <td>{m.league} · {m.league_name}</td>
+                  <td>{m.league_name || m.league}</td>
                   <td>{m.season}</td>
                   <td>{m.api_name}</td>
                   <td className="muted">{m.api_slug}</td>

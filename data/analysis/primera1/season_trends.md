@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T13:42:31+00:00
+- Generated: 2026-09-29T16:04:19+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`
@@ -9,11 +9,11 @@
 | season | champion | pts | runner-up | margin |
 |---|---|---|---|---|
 | 2025-2026 | Tenerife | 79 | Celta Vigo B | 11 pts |
-| 2026-2027 | UD Logrones | 10 | Cacereno | 0 pts |
+| 2026-2027 | UD Logrones | 13 | Lugo | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **1** of 2 seasons
-- Tightest race: **2026-2027** - UD Logrones beat Cacereno by **0** pts
+- Tightest race: **2026-2027** - UD Logrones beat Lugo by **0** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -26,7 +26,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | pos 1 | pos 2 | pos 4 | pos 6 | pos 17 | pos 20 |
 |---|---|---|---|---|---|---|
 | 2025-2026 | 79 | 68 | 61 | 59 | 43 | 28 |
-| 2026-2027 | 10 | 10 | 8 | 7 | 3 | 0 |
+| 2026-2027 | 13 | 13 | 11 | 8 | 3 | 1 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -38,17 +38,17 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025-2026 | 398 | 974 | 2.447 | 45.7% | 28.4% | 25.9% | 9.8% | 51.48 |
-| 2026-2027 | 40 | 105 | 2.625 | 50.0% | 22.5% | 27.5% | 5.0% | 5.55 |
+| 2026-2027 | 50 | 133 | 2.66 | 46.0% | 26.0% | 28.0% | 6.0% | 6.85 |
 
 ## 6. View divergence
-- Largest divergence: **2025-2026** (goals view, avg abs position diff = 6.857)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 7.200)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 2.857 | 6.857 |
-| 2026-2027 | 1.000 | 6.200 |
+| 2026-2027 | 1.100 | 7.200 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

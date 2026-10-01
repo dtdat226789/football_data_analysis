@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T11:03:43+00:00
+- Generated: 2026-09-29T16:01:57+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -8,31 +8,31 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 665 |
-| Home wins | 293 (44.1%) |
-| Draws | 149 (22.4%) |
-| Away wins | 223 (33.5%) |
-| Total goals | 1951 |
-| Average goals per match | 2.934 |
-| Goalless matches | 29 (4.4%) |
+| Matches | 677 |
+| Home wins | 299 (44.2%) |
+| Draws | 150 (22.2%) |
+| Away wins | 228 (33.7%) |
+| Total goals | 2001 |
+| Average goals per match | 2.956 |
+| Goalless matches | 29 (4.3%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025-2026 | 557 | 242 (43.4%) | 128 (23.0%) | 187 (33.6%) | 1626 | 2.919 | 28 (5.0%) |
-| 2026-2027 | 108 | 51 (47.2%) | 21 (19.4%) | 36 (33.3%) | 325 | 3.009 | 1 (0.9%) |
+| 2026-2027 | 120 | 57 (47.5%) | 22 (18.3%) | 41 (34.2%) | 375 | 3.125 | 1 (0.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 179 (79.2%) | 30 (13.3%) | 17 (7.5%) | 226 |
-| HT draw | 97 (35.3%) | 89 (32.4%) | 89 (32.4%) | 275 |
-| HT away lead | 16 (9.8%) | 30 (18.4%) | 117 (71.8%) | 163 |
+| HT home lead | 185 (79.7%) | 30 (12.9%) | 17 (7.3%) | 232 |
+| HT draw | 97 (34.8%) | 89 (31.9%) | 93 (33.3%) | 279 |
+| HT away lead | 16 (9.7%) | 31 (18.8%) | 118 (71.5%) | 165 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **16** (2.4%)
-- Away comebacks (trailing at HT, won at FT): **17** (2.6%)
+- Away comebacks (trailing at HT, won at FT): **17** (2.5%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -71,45 +71,45 @@
 | 2026-2027 | Carlisle | Worthing | 1-0 | 2-3 |
 | 2026-2027 | Worthing | Forest Green | 1-0 | 1-2 |
 | 2026-2027 | Southend | Kidderminster | 1-0 | 1-3 |
-| 2026-2027 | Boston Utd | Hornchurch | 2-1 | 2-3 |
 | 2026-2027 | Worthing | Boreham Wood | 1-0 | 2-3 |
+| 2026-2027 | Boston Utd | Hornchurch | 2-1 | 2-3 |
 | 2026-2027 | Solihull Moors | Aldershot | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 226 | 179 (79.2%) | 30 (13.3%) | 17 (7.5%) |
-| Away lead | 163 | 117 (71.8%) | 30 (18.4%) | 16 (9.8%) |
+| Home lead | 232 | 185 (79.7%) | 30 (12.9%) | 17 (7.3%) |
+| Away lead | 165 | 118 (71.5%) | 31 (18.8%) | 16 (9.7%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 97 | 35.3% |
-| Draw | 89 | 32.4% |
-| Away win | 89 | 32.4% |
+| Home win | 97 | 34.8% |
+| Draw | 89 | 31.9% |
+| Away win | 93 | 33.3% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `635` of `665` (95.5%)
+- Matches with a first-goal time recorded: `647` of `677` (95.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 205 | 30.8% | 95 (46.3%) | 39 (19.0%) | 71 (34.6%) |
-| 16-30 | 162 | 24.4% | 82 (50.6%) | 25 (15.4%) | 55 (34.0%) |
-| 31-45 | 92 | 13.8% | 44 (47.8%) | 16 (17.4%) | 32 (34.8%) |
-| 46-60 | 87 | 13.1% | 36 (41.4%) | 20 (23.0%) | 31 (35.6%) |
-| 61-75 | 46 | 6.9% | 17 (37.0%) | 14 (30.4%) | 15 (32.6%) |
-| 76-90 | 27 | 4.1% | 11 (40.7%) | 4 (14.8%) | 12 (44.4%) |
+| 1-15 | 210 | 31.0% | 98 (46.7%) | 40 (19.0%) | 72 (34.3%) |
+| 16-30 | 164 | 24.2% | 84 (51.2%) | 25 (15.2%) | 55 (33.5%) |
+| 31-45 | 93 | 13.7% | 44 (47.3%) | 16 (17.2%) | 33 (35.5%) |
+| 46-60 | 90 | 13.3% | 37 (41.1%) | 20 (22.2%) | 33 (36.7%) |
+| 61-75 | 47 | 6.9% | 17 (36.2%) | 14 (29.8%) | 16 (34.0%) |
+| 76-90 | 27 | 4.0% | 11 (40.7%) | 4 (14.8%) | 12 (44.4%) |
 | 91-120 | 16 | 2.4% | 7 (43.8%) | 2 (12.5%) | 7 (43.8%) |
 
 ## 7. Goalless matches
-- Overall: **29** of `665` (4.4%)
+- Overall: **29** of `677` (4.3%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025-2026 | 557 | 28 | 5.0% |
-| 2026-2027 | 108 | 1 | 0.9% |
+| 2026-2027 | 120 | 1 | 0.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

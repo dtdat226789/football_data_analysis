@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T10:55:35+00:00
+- Generated: 2026-09-29T15:45:37+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`
@@ -8,26 +8,26 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 669 |
-| Home wins | 304 (45.4%) |
-| Draws | 195 (29.1%) |
-| Away wins | 170 (25.4%) |
-| Total goals | 1520 |
-| Average goals per match | 2.272 |
-| Goalless matches | 58 (8.7%) |
+| Matches | 679 |
+| Home wins | 308 (45.4%) |
+| Draws | 198 (29.2%) |
+| Away wins | 173 (25.5%) |
+| Total goals | 1544 |
+| Average goals per match | 2.274 |
+| Goalless matches | 59 (8.7%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
 | 2025 | 380 | 174 (45.8%) | 116 (30.5%) | 90 (23.7%) | 843 | 2.218 | 33 (8.7%) |
-| 2026 | 289 | 130 (45.0%) | 79 (27.3%) | 80 (27.7%) | 677 | 2.343 | 25 (8.7%) |
+| 2026 | 299 | 134 (44.8%) | 82 (27.4%) | 83 (27.8%) | 701 | 2.344 | 26 (8.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 170 (78.0%) | 36 (16.5%) | 12 (5.5%) | 218 |
-| HT draw | 113 (35.3%) | 125 (39.1%) | 82 (25.6%) | 320 |
-| HT away lead | 21 (16.0%) | 34 (26.0%) | 76 (58.0%) | 131 |
+| HT home lead | 173 (77.9%) | 37 (16.7%) | 12 (5.4%) | 222 |
+| HT draw | 114 (35.2%) | 127 (39.2%) | 83 (25.6%) | 324 |
+| HT away lead | 21 (15.8%) | 34 (25.6%) | 78 (58.6%) | 133 |
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **21** (3.1%)
@@ -77,37 +77,37 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 218 | 170 (78.0%) | 36 (16.5%) | 12 (5.5%) |
-| Away lead | 131 | 76 (58.0%) | 34 (26.0%) | 21 (16.0%) |
+| Home lead | 222 | 173 (77.9%) | 37 (16.7%) | 12 (5.4%) |
+| Away lead | 133 | 78 (58.6%) | 34 (25.6%) | 21 (15.8%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 113 | 35.3% |
-| Draw | 125 | 39.1% |
-| Away win | 82 | 25.6% |
+| Home win | 114 | 35.2% |
+| Draw | 127 | 39.2% |
+| Away win | 83 | 25.6% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `611` of `669` (91.3%)
+- Matches with a first-goal time recorded: `620` of `679` (91.3%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 168 | 25.1% | 86 (51.2%) | 43 (25.6%) | 39 (23.2%) |
-| 16-30 | 151 | 22.6% | 75 (49.7%) | 40 (26.5%) | 36 (23.8%) |
-| 31-45 | 98 | 14.6% | 48 (49.0%) | 19 (19.4%) | 31 (31.6%) |
-| 46-60 | 82 | 12.3% | 41 (50.0%) | 19 (23.2%) | 22 (26.8%) |
-| 61-75 | 60 | 9.0% | 25 (41.7%) | 11 (18.3%) | 24 (40.0%) |
-| 76-90 | 34 | 5.1% | 17 (50.0%) | 3 (8.8%) | 14 (41.2%) |
+| 1-15 | 170 | 25.0% | 87 (51.2%) | 44 (25.9%) | 39 (22.9%) |
+| 16-30 | 151 | 22.2% | 75 (49.7%) | 40 (26.5%) | 36 (23.8%) |
+| 31-45 | 101 | 14.9% | 48 (47.5%) | 20 (19.8%) | 33 (32.7%) |
+| 46-60 | 85 | 12.5% | 44 (51.8%) | 19 (22.4%) | 22 (25.9%) |
+| 61-75 | 61 | 9.0% | 25 (41.0%) | 11 (18.0%) | 25 (41.0%) |
+| 76-90 | 34 | 5.0% | 17 (50.0%) | 3 (8.8%) | 14 (41.2%) |
 | 91-120 | 18 | 2.7% | 12 (66.7%) | 2 (11.1%) | 4 (22.2%) |
 
 ## 7. Goalless matches
-- Overall: **58** of `669` (8.7%)
+- Overall: **59** of `679` (8.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
 | 2025 | 380 | 33 | 8.7% |
-| 2026 | 289 | 25 | 8.7% |
+| 2026 | 299 | 26 | 8.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

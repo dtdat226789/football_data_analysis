@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T10:59:38+00:00
+- Generated: 2026-09-29T15:51:12+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 2. Bundesliga (Germany)
 - Scope: league `germany2`

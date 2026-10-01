@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T11:00:25+00:00
+- Generated: 2026-09-29T15:52:40+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Eredivisie (Netherlands)
 - Scope: league `holland1`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-23T13:44:04+00:00
+- Generated: 2026-09-29T16:05:35+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Division 1 (Saudi Arabia)
 - Scope: league `saudi2`

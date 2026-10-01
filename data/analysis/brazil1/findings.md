@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-23T10:55:32+00:00
+- Generated: 2026-09-29T15:45:31+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`
@@ -14,7 +14,7 @@
 | teams_analysis | E:\football_data_analysis\data\analysis\brazil1\teams_analysis.json | yes | yes | 44.67 |
 | season_trends | E:\football_data_analysis\data\analysis\brazil1\season_trends.json | yes | yes | 3.89 |
 | scoreline_analysis | E:\football_data_analysis\data\analysis\brazil1\scoreline_analysis.json | yes | yes | 101.77 |
-| relationships | E:\football_data_analysis\data\analysis\brazil1\relationships.json | yes | yes | 14.37 |
+| relationships | E:\football_data_analysis\data\analysis\brazil1\relationships.json | yes | yes | 14.35 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
@@ -33,14 +33,14 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026: Flamengo RJ beat Palmeiras by 3 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.144 per match): first half 2.524 vs last half 2.668 across 2 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025 (goals view, avg abs position diff 12.550)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026 (luck view, avg abs position diff 2.400)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026 (luck view, avg abs position diff 2.500)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 87 matches (13.2%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (79 of 321 home matches, 24.6%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (87 of 176 draw matches, 49.4%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (44 of 160 away matches, 27.5%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 3 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_points_before_match |corr| = 0.0755 (n=657 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 6.55: home 2.012, draw -1.295, away -4.537
+- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_points_before_match |corr| = 0.1359 (n=380 leakage-safe rows)
+- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.903: home 2.403, draw -1.566, away -5.500
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (9)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
 - **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 657 matches observed
 
@@ -66,7 +66,7 @@
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 44.67 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.89 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 101.77 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.37 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.35 |
 
 ## 5. Notable anomalies
 - **1.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 40 teams, expected 20

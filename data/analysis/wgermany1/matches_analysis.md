@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-23T13:51:08+00:00
+- Generated: 2026-09-29T16:24:16+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Bundesliga Women (Germany)
 - Scope: league `wgermany1`

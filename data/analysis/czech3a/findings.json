@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T10:56:42+00:00",
+  "generated_at": "2026-09-29T15:47:29+00:00",
   "config": {
     "league": "czech3a",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\czech3a",
@@ -29,7 +29,7 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\czech3a\\database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 32.96
+      "size_kb": 33.17
     },
     {
       "report_name": "matches_analysis",
@@ -50,21 +50,21 @@
       "path": "E:\\football_data_analysis\\data\\analysis\\czech3a\\teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 30.63
+      "size_kb": 30.62
     },
     {
       "report_name": "season_trends",
       "path": "E:\\football_data_analysis\\data\\analysis\\czech3a\\season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.98
+      "size_kb": 3.96
     },
     {
       "report_name": "scoreline_analysis",
       "path": "E:\\football_data_analysis\\data\\analysis\\czech3a\\scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 62.3
+      "size_kb": 63.5
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "330 matches: home wins 44.5%, draws 22.4%, away wins 33.0% (147H / 74D / 109A)",
+      "detail": "337 matches: home wins 44.2%, draws 22.6%, away wins 33.2% (149H / 76D / 112A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 85 times",
+      "detail": "home lead at HT -> home win occurred 87 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "330 matches produced 1056 goals (avg 3.200 per match)",
+      "detail": "337 matches produced 1085 goals (avg 3.220 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 53.9% vs away 46.1% of 1056 goals in total (home/away ratio 1.17)",
+      "detail": "home 53.7% vs away 46.3% of 1085 goals in total (home/away ratio 1.16)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "187 of 330 matches (56.7%)",
+      "detail": "192 of 337 matches (57.0%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 127 scoring matches, 41.5% of scoring)",
+      "detail": "minute 1-15 (first goal in 130 scoring matches, 41.5% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 26.65, median 19.0",
+      "detail": "mean 26.37, median 19.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Domazlice leads with 85 points across 2 seasons (0 title(s), GD 45)",
+      "detail": "Domazlice leads with 88 points across 2 seasons (1 title(s), GD 48)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Bohemians 1905 B earns 21 more points at home than away (33 home vs 12 away)",
+      "detail": "Bohemians 1905 B earns 20 more points at home than away (33 home vs 13 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -167,14 +167,14 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Ceske Budejovice beat Kraluv Dvur by 0 pts",
+      "detail": "2026-2027: Domazlice beat Kraluv Dvur by 0 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "stable (+0.029 per match): first half 3.195 vs last half 3.224 across 2 seasons",
+      "detail": "up (+0.128 per match): first half 3.195 vs last half 3.323 across 2 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,56 +188,56 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 2.125)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.875)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 26 matches (7.9%)",
+      "detail": "1-1 in 27 matches (8.0%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (25 of 147 home matches, 17.0%)",
+      "detail": "1-0 (25 of 149 home matches, 16.8%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (26 of 74 draw matches, 35.1%)",
+      "detail": "1-1 (27 of 76 draw matches, 35.5%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (19 of 109 away matches, 17.4%)",
+      "detail": "0-1 (19 of 112 away matches, 17.0%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "21 match(es) with >= 7 total goals",
+      "detail": "22 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_rest_days |corr| = -0.1227 (n=314 leakage-safe rows)",
+      "detail": "home_rest_days |corr| = -0.1361 (n=264 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 6.04: home 1.884, draw 0.581, away -4.156",
+      "detail": "points_difference spreads group means over 6.87: home 2.177, draw 0.491, away -4.692",
       "importance": "medium",
       "id": "F23"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 330 matches observed",
+      "detail": "2 of 2 registered seasons populated (100.0%); 337 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 330,
-    "avg_goals": 3.2,
-    "home_win_pct": 44.5,
-    "draw_pct": 22.4,
-    "away_win_pct": 33.0,
+    "n_matches": 337,
+    "avg_goals": 3.22,
+    "home_win_pct": 44.2,
+    "draw_pct": 22.6,
+    "away_win_pct": 33.2,
     "most_common_scoreline": "1-1",
     "dominant_team": "Domazlice",
     "champion_most_titles": "SK Kladno",
-    "btts_rate_pct": 56.7
+    "btts_rate_pct": 57.0
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 32.96
+      "size_kb": 33.17
     },
     {
       "module": "matches_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 30.63
+      "size_kb": 30.62
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.98
+      "size_kb": 3.96
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 62.3
+      "size_kb": 63.5
     },
     {
       "module": "relationships",
@@ -386,10 +386,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 58 matches, expected 380",
+      "message": "Season 2026-2027 has 65 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 58,
+        "n_matches": 65,
         "expected": 380
       }
     },
@@ -415,46 +415,51 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 12.1% vs overall 7.3% (deviation 4.8 pp)",
+      "message": "Season 2026-2027 goalless share 10.8% vs overall 7.1% (deviation 3.7 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 12.1,
-        "overall_goalless_pct": 7.3,
-        "deviation_pp": 4.8
+        "season_goalless_pct": 10.8,
+        "overall_goalless_pct": 7.1,
+        "deviation_pp": 3.7
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 39.7% vs overall 44.5%",
+      "message": "Season 2026-2027 home outcome share 38.5% vs overall 44.2%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 39.7,
-        "overall_share": 44.5
+        "season_share": 38.5,
+        "overall_share": 44.2
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 29.3% vs overall 22.4%",
+      "message": "Season 2026-2027 draw outcome share 29.2% vs overall 22.6%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 29.3,
-        "overall_share": 22.4
+        "season_share": 29.2,
+        "overall_share": 22.6
       }
     },
     {
       "code": "HIGH_SCORING_MATCHES",
       "severity": "warning",
-      "message": "7 match(es) with >= 8 total goals (extreme scorelines)",
+      "message": "8 match(es) with >= 8 total goals (extreme scorelines)",
       "details": {
-        "n_matches": 7,
+        "n_matches": 8,
         "threshold": 8,
         "examples": [
           {
             "scoreline": "7-2",
+            "total_goals": 9,
+            "count": 1
+          },
+          {
+            "scoreline": "6-3",
             "total_goals": 9,
             "count": 1
           },
@@ -487,8 +492,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (3 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 5512,
-        "distinct": 5509,
+        "rows": 5530,
+        "distinct": 5527,
         "duplicates": 3
       }
     },
@@ -497,10 +502,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
       "details": {
-        "total": 5512,
+        "total": 5530,
         "fgt_inconsistent": 5,
         "fgte_inconsistent": 5,
-        "n_with_fgt": 5116
+        "n_with_fgt": 5132
       }
     },
     {

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-23T11:00:07+00:00",
+  "generated_at": "2026-09-29T15:51:51+00:00",
   "config": {
     "league": "greece1",
     "out_dir": "E:\\football_data_analysis\\data\\analysis\\greece1",
@@ -132,7 +132,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.10, median 27.0",
+      "detail": "mean 31.09, median 27.0",
       "importance": "low",
       "id": "F8"
     },
@@ -230,14 +230,14 @@
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_team_goals_scored_last_5 |corr| = 0.0962 (n=281 leakage-safe rows)",
+      "detail": "home_team_goals_scored_last_5 |corr| = 0.099 (n=246 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 9.518: home 3.836, draw -1.571, away -5.682",
+      "detail": "points_difference spreads group means over 10.481: home 4.324, draw -1.750, away -6.158",
       "importance": "medium",
       "id": "F23"
     },
@@ -429,8 +429,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 11227,
-        "distinct": 11217,
+        "rows": 11302,
+        "distinct": 11292,
         "duplicates": 10
       }
     },
@@ -439,10 +439,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=6, fgte=6 rows)",
       "details": {
-        "total": 11227,
+        "total": 11302,
         "fgt_inconsistent": 6,
         "fgte_inconsistent": 6,
-        "n_with_fgt": 10437
+        "n_with_fgt": 10507
       }
     },
     {

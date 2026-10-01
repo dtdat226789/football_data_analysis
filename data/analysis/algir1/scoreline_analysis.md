@@ -1,27 +1,27 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:54:29+00:00
+- Generated: 2026-09-29T15:43:41+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **262** across **2** seasons.
+- Matches analysed: **263** across **2** seasons.
 - Distinct scorelines seen: **26**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 49 | 18.7% |
-| 1-1 | 38 | 14.5% |
+| 1-0 | 49 | 18.6% |
+| 1-1 | 38 | 14.4% |
 | 2-1 | 25 | 9.5% |
-| 2-0 | 23 | 8.8% |
+| 2-0 | 23 | 8.7% |
+| 0-0 | 22 | 8.4% |
 | 0-1 | 22 | 8.4% |
-| 0-0 | 21 | 8.0% |
 | 2-2 | 16 | 6.1% |
 | 1-2 | 15 | 5.7% |
 | 3-1 | 9 | 3.4% |
-| 0-2 | 8 | 3.1% |
-| 3-0 | 8 | 3.1% |
+| 0-2 | 8 | 3.0% |
+| 3-0 | 8 | 3.0% |
 | 3-2 | 7 | 2.7% |
 | 2-3 | 3 | 1.1% |
 | 1-3 | 2 | 0.8% |
@@ -46,23 +46,23 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 2-0 | 4 | 18.2% |
-| 0-1 | 3 | 13.6% |
-| 1-0 | 3 | 13.6% |
-| 1-1 | 3 | 13.6% |
-| 3-3 | 2 | 9.1% |
+| 2-0 | 4 | 17.4% |
+| 0-1 | 3 | 13.0% |
+| 1-0 | 3 | 13.0% |
+| 1-1 | 3 | 13.0% |
+| 0-0 | 2 | 8.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 21 | 8.0% |
-| 1 | 71 | 27.1% |
-| 2 | 69 | 26.3% |
-| 3 | 50 | 19.1% |
-| 4 | 29 | 11.1% |
-| 5 | 13 | 5.0% |
+| 0 | 22 | 8.4% |
+| 1 | 71 | 27.0% |
+| 2 | 69 | 26.2% |
+| 3 | 50 | 19.0% |
+| 4 | 29 | 11.0% |
+| 5 | 13 | 4.9% |
 | 6 | 5 | 1.9% |
 | 7 | 2 | 0.8% |
 | 8 | 2 | 0.8% |
@@ -80,7 +80,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-05 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **185** (draws: **77**)
+- Decided matches: **185** (draws: **78**)
 - Average winning margin: **1.49**
 
 | margin | matches | pct |
@@ -113,7 +113,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 130 | 1-0 | 49 | 37.7% |
-| draw | 77 | 1-1 | 38 | 49.4% |
+| draw | 78 | 1-1 | 38 | 48.7% |
 | away | 55 | 0-1 | 22 | 40.0% |
 
 ---

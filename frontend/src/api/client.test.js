@@ -121,3 +121,34 @@ describe("api.matchInsights", () => {
     expect(url.searchParams.get("limit")).toBe("5");
   });
 });
+
+describe("api.fixtureMarket", () => {
+  beforeEach(() => {
+    globalThis.fetch = vi.fn();
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it("asks the fixture route for one market by key", async () => {
+    mockFetch(new Response(JSON.stringify({ market_key: "ft.result.home" }), { status: 200 }));
+
+    await api.fixtureMarket("premier", "2026-02-01-arsenal-vs-chelsea", "ft.result.home");
+
+    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    // A query, not a second path: the match id is a `:path` splat, so a nested
+    // segment would be read as part of the id.
+    expect(url.pathname).toBe("/api/v1/fixtures/premier/2026-02-01-arsenal-vs-chelsea");
+    expect(url.searchParams.get("market")).toBe("ft.result.home");
+  });
+
+  it("escapes a key containing a negative handicap line", async () => {
+    mockFetch(new Response(JSON.stringify({}), { status: 200 }));
+
+    await api.fixtureMarket("premier", "tail", "ft.asian_handicap.-0.25_home");
+
+    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    expect(url.searchParams.get("market")).toBe("ft.asian_handicap.-0.25_home");
+  });
+});

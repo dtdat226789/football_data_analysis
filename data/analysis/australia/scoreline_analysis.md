@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-23T10:54:39+00:00
+- Generated: 2026-09-29T15:43:56+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`
