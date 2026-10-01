@@ -54,8 +54,8 @@ describe("LeagueDetail", () => {
     expect(await screen.findByRole("heading", { name: "Premier League" })).toBeInTheDocument();
     expect(screen.getByText(/round-robin/)).toBeInTheDocument();
 
-    await screen.findByRole("table");
-    expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
+    // The table shell mounts before its rows resolve, so wait for the content.
+    await screen.findAllByText("Arsenal");
     expect(api.standings).toHaveBeenCalledWith("premier", { season: "2024-2025", view: "classic" });
   });
 

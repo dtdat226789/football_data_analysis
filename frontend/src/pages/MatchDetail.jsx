@@ -52,7 +52,7 @@ export default function MatchDetail() {
                 <th>League</th>
                 <td>
                   <Link className="link" to={`/leagues/${data.league}`}>
-                    {data.league}
+                    {data.league_name || data.league}
                   </Link>
                 </td>
               </tr>

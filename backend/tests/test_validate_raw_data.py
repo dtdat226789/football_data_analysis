@@ -6,6 +6,7 @@ OUTPUT_DIR is pointed at it; ISSUES are cleared per build_report() call.
 from __future__ import annotations
 
 import json
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -320,3 +321,52 @@ def test_markdown_renders(dataset):
 def test_report_json_serializable(dataset):
     report = run_convenience()
     json.dumps(report)  # must not raise
+
+
+# ── season labels ────────────────────────────────────────────────────────────
+def test_season_window_handles_split_season():
+    assert v.season_window("2025-2026") == (date(2025, 6, 1), date(2026, 8, 15))
+
+
+def test_season_window_handles_calendar_year_season():
+    # 18 catalog leagues (brazil1, norway, japan1, ...) use a bare year label;
+    # season.split('-') used to raise ValueError for them.
+    assert v.season_window("2026") == (date(2026, 1, 1), date(2026, 12, 31))
+
+
+def test_calendar_year_season_validates_without_crashing(dataset):
+    write_run(dataset, seasons=["2026"])
+    report = build_report(LEAGUE, ["2026"], VIEWS)
+    assert "RESULTS_SEASON_UNPARSED" not in codes()
+    assert "RESULTS_DATE_OUT_OF_SEASON" not in codes()
+    assert report["checks"]["results"]["status"] != SEVERITY_ERROR
+
+
+def test_unparseable_season_label_skips_date_check(dataset):
+    d = dataset / LEAGUE / "mystery"
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "results.json").write_text(
+        json.dumps(results_payload("mystery", [match_entry(1, date="2026-09-12")])),
+        encoding="utf-8",
+    )
+    assert v.season_window("mystery") is None
+    build_report(LEAGUE, ["mystery"], VIEWS)
+    assert "RESULTS_SEASON_UNPARSED" in codes()
+    assert "RESULTS_DATE_OUT_OF_SEASON" not in codes()
+
+
+# ── per-league expectations ──────────────────────────────────────────────────
+def test_expected_counts_come_from_league_config(monkeypatch):
+    monkeypatch.setattr(v, "league_meta", lambda lg: {"teams": 18, "matches": 306, "format": "round-robin"})
+    assert v.expected_teams("germany1") == 18
+    assert v.expected_matches("germany1") == 306
+
+
+def test_expected_matches_falls_back_to_double_round_robin(monkeypatch):
+    monkeypatch.setattr(v, "league_meta", lambda lg: {"teams": 18, "matches": None, "format": "round-robin"})
+    assert v.expected_matches("germany1") == 18 * 17
+
+
+def test_expected_counts_default_for_unknown_league(monkeypatch):
+    monkeypatch.setattr(v, "league_meta", lambda lg: {"teams": 0, "matches": 0, "format": None})
+    assert v.expected_teams("no-such-league") == v.FALLBACK_EXPECTED_TEAMS

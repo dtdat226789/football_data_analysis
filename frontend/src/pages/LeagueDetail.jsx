@@ -85,7 +85,7 @@ function StandingsTab({ league, season, view, setView }) {
   );
 }
 
-function AnalysisTab({ league }) {
+function AnalysisTab({ league, leagueName }) {
   const { data, loading, error } = useApi(() => api.analysis(league), [league]);
   if (loading)
     return (
@@ -105,7 +105,8 @@ function AnalysisTab({ league }) {
   if (!data || !data.has_data) {
     return (
       <Empty>
-        No analysis reports for {league}. Run <code>run_analysis.py --league {league}</code> first.
+        No analysis reports for {leagueName || league}. Run{" "}
+        <code>run_analysis.py --league {league}</code> first.
       </Empty>
     );
   }
@@ -357,7 +358,7 @@ export default function LeagueDetail() {
       </div>
 
       {tab === "standings" && <StandingsTab league={slug} season={season} view={view} setView={setView} />}
-      {tab === "analysis" && <AnalysisTab league={slug} />}
+      {tab === "analysis" && <AnalysisTab league={slug} leagueName={meta.name} />}
       {tab === "matches" && <MatchesTab league={slug} season={season} />}
       {tab === "seasons" && <SeasonsTab detail={detail.data} />}
     </div>

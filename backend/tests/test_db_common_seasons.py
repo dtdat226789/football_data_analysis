@@ -6,6 +6,7 @@ validate_raw_to_db).
 """
 from __future__ import annotations
 
+from datetime import date
 from pathlib import Path
 
 import scripts.db_common as db_common
@@ -35,6 +36,42 @@ def test_season_sort_key_orders_mixed():
         "2025-2026",
         "2026",
     ]
+
+
+# ── season_date_window ───────────────────────────────────────────────────────
+def test_season_date_window_split_season():
+    assert db_common.season_date_window("2025-2026") == (date(2025, 6, 1), date(2026, 8, 15))
+
+
+def test_season_date_window_calendar_year_spans_whole_year():
+    # 18 leagues label their season '2026'; splitting on '-' used to raise
+    # ValueError here.
+    assert db_common.season_date_window("2026") == (date(2026, 1, 1), date(2026, 12, 31))
+
+
+def test_season_date_window_unparseable_is_none():
+    assert db_common.season_date_window("bogus") is None
+    assert db_common.season_date_window("") is None
+
+
+# ── is_season_active ─────────────────────────────────────────────────────────
+def test_is_season_active_during_season():
+    assert db_common.is_season_active("2026-2027", date(2026, 9, 28)) is True
+    assert db_common.is_season_active("2026", date(2026, 9, 28)) is True
+
+
+def test_is_season_active_once_window_has_closed():
+    assert db_common.is_season_active("2025-2026", date(2026, 9, 28)) is False
+    assert db_common.is_season_active("2025", date(2026, 9, 28)) is False
+
+
+def test_is_season_active_boundaries_are_inclusive():
+    assert db_common.is_season_active("2025-2026", date(2026, 8, 15)) is True
+    assert db_common.is_season_active("2025-2026", date(2026, 8, 16)) is False
+
+
+def test_is_season_active_unparseable_is_false():
+    assert db_common.is_season_active("bogus", date(2026, 9, 28)) is False
 
 
 # ── catalog_seasons ─────────────────────────────────────────────────────────

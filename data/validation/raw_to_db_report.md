@@ -1,8 +1,8 @@
 # Football Charts — Raw-to-Database Reconciliation Report
 
-- Generated: 2026-09-23T20:51:24
+- Generated: 2026-09-29T23:24:30
 - Scope: league `wsweden`; seasons 2025, 2026; table views classic, luck, goals
-- Overall: **0 errors**, **0 warnings** | compared=registry=4, identity=28, matches=315, standings=84
+- Overall: **0 errors**, **0 warnings** | compared=registry=4, identity=28, matches=322, standings=84
 
 ## Findings
 
@@ -15,7 +15,7 @@
 |-------|--------|----------|
 | registry | PASS | 4 |
 | identity | PASS | 28 |
-| matches | PASS | 315 |
+| matches | PASS | 322 |
 | standings | PASS | 84 |
 
 ## Methodology

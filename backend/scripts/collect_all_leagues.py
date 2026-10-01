@@ -14,12 +14,17 @@ Usage:
     python backend/scripts/collect_all_leagues.py --league spain1 germany1
     python backend/scripts/collect_all_leagues.py --league italy1 --season 2025-2026
     python backend/scripts/collect_all_leagues.py --include-empty --overwrite --delay 0.5
+    python backend/scripts/collect_all_leagues.py --active-only --overwrite
 
 Overrides:
-    --league    only collect these slugs (repeatable); default: every league
-                in data/raw/league_teams.json with teams > 0.
-    --season    collect only these seasons for every league (repeatable);
-                default: each league's own catalog-declared seasons.
+    --league       only collect these slugs (repeatable); default: every league
+                   in data/raw/league_teams.json with teams > 0.
+    --season       collect only these seasons for every league (repeatable);
+                   default: each league's own catalog-declared seasons.
+    --active-only  keep only the seasons that are currently in progress, so a
+                   daily refresh stops re-downloading immutable history. If a
+                   league declares no in-progress season, its most recent one is
+                   collected instead so the run never silently no-ops.
 """
 from __future__ import annotations
 
@@ -27,11 +32,18 @@ import argparse
 import json
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from db_common import COLLECTED_SEASONS, RAW_DIR, league_season_dirs  # noqa: E402
+from db_common import (  # noqa: E402
+    COLLECTED_SEASONS,
+    RAW_DIR,
+    _season_sort_key,
+    is_season_active,
+    league_season_dirs,
+)
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -46,13 +58,34 @@ def load_catalog(path: Path) -> dict:
         return {}
 
 
-def resolve_seasons(catalog: dict, league: str, cli_seasons: list[str]) -> list[str]:
+def active_seasons(seasons: list[str], today: date | None = None) -> list[str]:
+    """Seasons still in progress, or the newest one when none are.
+
+    Closed seasons are immutable once their window has passed, so a daily
+    refresh only needs the live ones. The newest-season fallback guarantees at
+    least one season per league rather than an empty (and therefore skipped)
+    subprocess call.
+    """
+    live = [s for s in seasons if is_season_active(s, today)]
+    if live:
+        return live
+    return [max(seasons, key=_season_sort_key)] if seasons else []
+
+
+def resolve_seasons(
+    catalog: dict,
+    league: str,
+    cli_seasons: list[str],
+    *,
+    active_only: bool = False,
+    today: date | None = None,
+) -> list[str]:
     if cli_seasons:
         return cli_seasons
     catalog_seasons = list(catalog.get(league, {}).get("seasons") or [])
     already_collected = league_season_dirs(league)
-    seasons = list(dict.fromkeys(catalog_seasons + already_collected))
-    return seasons or COLLECTED_SEASONS
+    seasons = list(dict.fromkeys(catalog_seasons + already_collected)) or list(COLLECTED_SEASONS)
+    return active_seasons(seasons, today) if active_only else seasons
 
 
 def run_collect(
@@ -88,6 +121,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                         help="seconds between requests (default: 1.0)")
     parser.add_argument("--include-empty", action="store_true",
                         help="also collect leagues with teams: 0 in the catalog")
+    parser.add_argument("--active-only", action="store_true",
+                        help="collect only seasons currently in progress (daily refresh)")
     return parser.parse_args(argv)
 
 
@@ -120,12 +155,19 @@ def main(argv: list[str] | None = None) -> int:
 
     results: list[dict] = []
     python = sys.executable
+    today = date.today()
     for league in slugs:
         if league not in catalog:
             print(f"WARN  unknown league '{league}', skipping")
             results.append({"league": league, "seasons": [], "status": "skipped"})
             continue
-        seasons = resolve_seasons(catalog, league, args.season)
+        seasons = resolve_seasons(
+            catalog, league, args.season, active_only=args.active_only, today=today
+        )
+        if not seasons:
+            print(f"WARN  no season to collect for '{league}', skipping")
+            results.append({"league": league, "seasons": [], "status": "skipped"})
+            continue
         code = run_collect(python, league, seasons, flag_args)
         status = "ok" if code == 0 else "failed"
         results.append({"league": league, "seasons": seasons, "status": status})

@@ -15,7 +15,7 @@ from __future__ import annotations
 import json
 import sys
 from contextlib import contextmanager
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import pytest
@@ -32,6 +32,14 @@ from apps.main import app  # noqa: E402
 SLUG = "spain/primera-rfef-group-1/2026-09-26-a-vs-b"
 TAIL = "2026-09-26-a-vs-b"
 MATCH_DATE = "2026-09-26"
+
+# The list feed only carries fixtures that have not been played, and this sample's
+# date is fixed, so the feed needs a second, always-future match to read from.
+# FIXTURE stays on its original date: the detail endpoint is date-agnostic and
+# must keep serving a fixture that has since been kicked off.
+FUTURE_SLUG = "spain/primera-rfef-group-1/2026-09-27-c-vs-d"
+FUTURE_TAIL = "2026-09-27-c-vs-d"
+FUTURE_DATE = (date.today() + timedelta(days=1)).isoformat()
 
 DC_V2 = {
     "xi": 0.0019,
@@ -62,6 +70,17 @@ FIXTURE = {
     "slug": SLUG,
     "home_team": "A", "away_team": "B",
     "match_date": MATCH_DATE, "time": "14:30",
+    "status": "scheduled", "country": "Spain",
+    "real_league_name": "Primera RFEF",
+    "model_predictions": {"dc_v2": DC_V2},
+}
+
+# Same fixture, dated so it is still upcoming, so the list feed has a row to
+# compare the detail payload against.
+FUTURE_FIXTURE = {
+    "slug": FUTURE_SLUG,
+    "home_team": "C", "away_team": "D",
+    "match_date": FUTURE_DATE, "time": "18:00",
     "status": "scheduled", "country": "Spain",
     "real_league_name": "Primera RFEF",
     "model_predictions": {"dc_v2": DC_V2},
@@ -187,7 +206,7 @@ def fixtures_dir(tmp_path, monkeypatch):
     directory = tmp_path / "fixtures"
     directory.mkdir()
     (directory / "primera1.json").write_text(
-        json.dumps({"league": "primera1", "count": 1, "matches": [FIXTURE]}),
+        json.dumps({"league": "primera1", "count": 2, "matches": [FIXTURE, FUTURE_FIXTURE]}),
         encoding="utf-8",
     )
     monkeypatch.setattr(routers.fixtures, "FIXTURES_DIR", directory)
@@ -260,10 +279,16 @@ def test_detail_league_without_a_fixtures_file(client):
 
 
 def test_league_detail_route_still_wins(client):
-    """/fixtures/{league} must not be shadowed by the detail route."""
+    """/fixtures/{league} must not be shadowed by the detail route.
+
+    That route serves the raw stored dump, so it is not filtered by date and
+    still reports the played fixture alongside the upcoming one.
+    """
     r = client.get("/api/v1/fixtures/primera1")
     assert r.status_code == 200
-    assert r.json()["count"] == 1
+    body = r.json()
+    assert body["count"] == 2
+    assert "model_predictions" in body["matches"][0]
 
 
 # ---------------------------------------------------------------------------
@@ -320,9 +345,204 @@ def test_goal_lines_carry_raw_and_calibrated(client):
     assert [row["line"] for row in lines][:3] == ["over_0.5", "over_1.5", "over_2.5"]
 
 
+def test_detail_serves_the_whole_derived_market_menu(client):
+    """dc_v2 publishes no handicap, correct score or HT/FT; these are derived."""
+    pred = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]
+    families = {row["family"] for row in pred["markets"]}
+    assert {
+        "result", "double_chance", "totals", "btts",
+        "asian_handicap", "team_total", "correct_score", "ht_ft",
+    } <= families
+    keys = {row["key"] for row in pred["markets"]}
+    assert "ft.asian_handicap.-0.5_home" in keys
+    assert "ft.correct_score.1_0" in keys or "ft.correct_score.1-0" in keys
+
+
+def test_market_rows_carry_provenance_and_are_tagged_by_scope(client):
+    rows = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["markets"]
+    for row in rows:
+        assert row["provenance"] in ("model", "modelled")
+        assert row["scope"] in ("full_time", "half_time", "half_to_full")
+        assert 0.0 <= row["probability"] <= 1.0
+    # Full time is measured; half time carries the split assumption and is badged.
+    assert all(row["provenance"] == "model" for row in rows if row["scope"] == "full_time")
+    assert all(row["provenance"] == "modelled" for row in rows if row["scope"] != "full_time")
+
+
+def test_detail_selected_chips_respect_threshold_ceiling_and_cap(client):
+    selected = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["selected"]
+    assert 0 < len(selected) <= 6
+    for row in selected:
+        assert 0.6 <= row["probability"] <= 0.95
+        assert row["promotable"] is True
+
+
+def test_list_feed_carries_only_the_selected_chips(client):
+    """The merged feed must not carry a full market table on every row."""
+    listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
+    assert "markets" not in listed["predictions"]
+    assert 0 < len(listed["predictions"]["selected"]) <= 6
+
+
+def test_selected_chips_agree_with_the_detail_market_table(client):
+    body = client.get(f"/api/v1/fixtures/primera1/{FUTURE_TAIL}").json()
+    pred = body["predictability"]
+    listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
+    assert pred["selected"] == listed["predictions"]["selected"]
+    by_key = {row["key"]: row for row in pred["markets"]}
+    for chip in pred["selected"]:
+        assert by_key[chip["key"]]["probability"] == chip["probability"]
+
+
+def test_market_query_returns_only_that_markets_explanation(client):
+    """The point of the query: one market's arithmetic, not the whole fixture."""
+    response = client.get(f"/api/v1/fixtures/primera1/{TAIL}", params={"market": "ft.result.home"})
+    body = response.json()
+    assert response.status_code == 200
+    assert body["league"] == "primera1"
+    assert body["match_id"] == TAIL
+    assert body["market_key"] == "ft.result.home"
+    # The full payload is deliberately absent, so the page is not refetched.
+    assert "predictability" not in body
+    detail = body["market"]
+    assert detail["family"] == "result"
+    assert detail["settlement"]["push"] == 0.0
+    assert detail["settlement"]["win"] + detail["settlement"]["lose"] == pytest.approx(1.0, abs=0.001)
+    assert detail["paying_cells"] > 0
+    assert detail["grid_cells"] == 81
+    assert all(0.0 <= cell["probability"] <= 1.0 for cell in detail["cells"])
+
+
+def test_market_explanation_reproduces_the_published_probability(client):
+    """The explanation must add up to the number the chip and table already show."""
+    pred = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]
+    for row in pred["markets"]:
+        detail = client.get(
+            f"/api/v1/fixtures/primera1/{TAIL}", params={"market": row["key"]}
+        ).json()["market"]
+        if detail is None:
+            continue
+        settlement = detail["settlement"]
+        # A line that can refund is quoted at its win probability, which is what
+        # the table shows; the push is a partial refund, not a separate outcome.
+        assert settlement["win"] == pytest.approx(row["probability"], abs=0.0002), row["key"]
+        if isinstance(row.get("push"), (int, float)) and row["push"] > 0:
+            assert settlement["push"] == pytest.approx(row["push"], abs=0.0002), row["key"]
+
+
+def test_quarter_line_explains_the_half_stake_split(client):
+    """A quarter line settles on a scoreline in two ways; both must be labelled."""
+    rows = {
+        row["key"]: row
+        for row in client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["markets"]
+    }
+    key = next(k for k in rows if k.startswith("ft.asian_handicap.") and k.endswith("_home")
+               and rows[k].get("line") == -0.25)
+    detail = client.get(f"/api/v1/fixtures/primera1/{TAIL}", params={"market": key}).json()["market"]
+    assert detail["settlement"]["push"] > 0
+    # Every draw is a level result, so every drawn scoreline is the cell where
+    # the two half-stakes disagree: the model is paid half and refunded half.
+    split = [c for c in detail["cells"] if "+" in c["outcome"]]
+    assert len(split) == 9
+    assert {c["outcome"] for c in split} == {"push+lose"}
+    assert all(c["home_goals"] == c["away_goals"] for c in split)
+    # A split cell is measured against the push it feeds, and only half of a
+    # quarter-line cell pushes, so the share is half the cell over the push total.
+    assert split[0]["share"] == pytest.approx(
+        split[0]["probability"] / 2 / detail["settlement"]["push"], abs=0.001
+    )
+    # Shares are shares of an outcome, so each set has to add up.
+    assert sum(c["share"] for c in split) == pytest.approx(1.0, abs=0.01)
+    # Nothing outside the draw splits.
+    assert [c for c in detail["cells"] if c not in split] == [
+        c for c in detail["cells"] if c["outcome"] in ("win", "lose")
+    ]
+
+
+def test_market_cells_only_ever_cover_the_paying_sides(client):
+    """No cell may be listed that would not have paid the bet."""
+    detail = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"market": "ft.totals.over_2.5"}
+    ).json()["market"]
+    for cell in detail["cells"]:
+        home, away = (int(part) for part in cell["score"].split("-"))
+        assert home + away > 2.5
+    assert detail["paying_cells"] == len(
+        [c for c in detail["cells"]]  # every listed cell is a paying cell
+    )
+
+
+def test_half_time_full_time_market_explains_its_factors(client):
+    """HT/FT is a product of two 1X2 splits, so it has factors and no scorelines."""
+    keys = [
+        row["key"]
+        for row in client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["markets"]
+        if row["family"] == "ht_ft"
+    ]
+    assert keys
+    detail = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"market": keys[0]}
+    ).json()["market"]
+    assert detail["factors"]["half_time"]["home"] > 0
+    assert detail["factors"]["full_time"]["home"] > 0
+    assert detail["cells"] == []
+
+
+def test_unknown_market_key_is_a_404(client):
+    response = client.get(f"/api/v1/fixtures/primera1/{TAIL}", params={"market": "ft.result.nope"})
+    assert response.status_code == 404
+    assert "ft.result.nope" in response.json()["detail"]
+
+
+def test_market_explanation_without_a_model_block_is_a_404(tmp_path, monkeypatch):
+    """A fixture with no prediction has no markets, so no key can resolve."""
+    directory = tmp_path / "fixtures"
+    directory.mkdir()
+    (directory / "primera1.json").write_text(
+        json.dumps({"league": "primera1", "matches": [{**FIXTURE, "model_predictions": {}}]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(fixtures, "FIXTURES_DIR", directory)
+    with TestClient(app) as client:
+        response = client.get(f"/api/v1/fixtures/primera1/{TAIL}", params={"market": "ft.result.home"})
+    assert response.status_code == 404
+
+
+def test_detail_route_without_a_market_query_is_unchanged(client):
+    """The page payload must not regress: still the full fixture, no market key."""
+    body = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()
+    assert "market" not in body
+    assert "market_key" not in body
+    assert body["predictability"]["markets"]
+
+
+def test_market_table_and_selection_are_empty_without_lambdas(tmp_path, monkeypatch):
+    """No invented zeros: a block without goal expectations serves no markets."""
+    block = json.loads(json.dumps(DC_V2))
+    del block["raw"]["expected_home_goals"]
+    del block["raw"]["expected_away_goals"]
+    directory = tmp_path / "fixtures"
+    directory.mkdir()
+    (directory / "primera1.json").write_text(
+        json.dumps({"league": "primera1", "matches": [
+            {**FUTURE_FIXTURE, "model_predictions": {"dc_v2": block}},
+        ]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(fixtures, "FIXTURES_DIR", directory)
+    with TestClient(app) as client:
+        pred = client.get(f"/api/v1/fixtures/primera1/{FUTURE_TAIL}").json()["predictability"]
+        listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
+    # The published numbers are still served; only the derived menu is empty.
+    assert pred["markets"] == []
+    assert pred["selected"] == []
+    assert pred["raw"]["btts_yes"] == 0.561
+    assert listed["predictions"]["selected"] == []
+
+
 def test_summary_matches_the_list_feed(client):
     """A detail view must never disagree with the row it was opened from."""
-    detail = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()
+    detail = client.get(f"/api/v1/fixtures/primera1/{FUTURE_TAIL}").json()
     listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
     assert detail["predictability"]["summary"] == listed["predictions"]
 
@@ -563,3 +783,19 @@ def test_detail_filename_matches_the_collector():
         assert fixtures.detail_file("premier", slug) == collector.DETAILS_DIR / (
             f"premier__{collector.slug_tail(slug)}.json"
         )
+
+
+def test_detail_still_serves_a_fixture_that_has_been_played(client):
+    """Filtering is a list-feed concern; a past fixture must stay reachable.
+
+    Opening the page for a match that kicked off yesterday is a normal thing to
+    do, and the prediction block it was opened from has not expired.
+    """
+    assert MATCH_DATE < date.today().isoformat()   # the sample really is past
+    body = client.get(f"/api/v1/fixtures/primera1/{TAIL}")
+    assert body.status_code == 200
+    assert body.json()["match_date"] == MATCH_DATE
+    assert body.json()["predictability"]["markets"]
+    # ...but it is not advertised as upcoming.
+    listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()
+    assert [m["slug"] for m in listed["matches"]] == [FUTURE_SLUG]

@@ -145,7 +145,11 @@ def test_single_match(client):
     api_id = r.json()["matches"][0]["api_id"]
     r = client.get(f"/api/v1/matches/{api_id}")
     assert r.status_code == 200
-    assert r.json()["api_id"] == api_id
+    body = r.json()
+    assert body["api_id"] == api_id
+    # The page shows the name; the slug only ever feeds the link.
+    assert body["league"] == "premier"
+    assert body["league_name"] == "Premier League"
 
 
 def test_single_match_missing_404(client):

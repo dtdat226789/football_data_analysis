@@ -47,6 +47,7 @@ def create_app() -> FastAPI:
         return {
             "status": "ok",
             "default_league": common.DEFAULT_LEAGUE,
+            "default_league_name": common.league_name(common.DEFAULT_LEAGUE),
             "n_leagues": len(common.LEAGUE_CONFIG),
             "modules": common.MODULE_NAMES,
         }

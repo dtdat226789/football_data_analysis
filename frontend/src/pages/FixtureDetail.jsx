@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { FormPills } from "../components/FormPills.jsx";
+import MarketDetailModal from "../components/MarketDetailModal.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
+import MarketTable from "../components/MarketTable.jsx";
 import PredictionChips from "../components/PredictionChips.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 
@@ -31,7 +34,7 @@ function lineLabel(line) {
  * expected goals behind it, and the gates/ratings/sample-size metadata that says
  * how much to trust the number.
  */
-function PredictabilityPanel({ prediction }) {
+function PredictabilityPanel({ prediction, onSelectMarket }) {
   if (!prediction) return null;
   const probs = prediction.probabilities || {};
   const goals = prediction.expected_goals || {};
@@ -73,9 +76,10 @@ function PredictabilityPanel({ prediction }) {
       </div>
 
       <PredictionChips
-        predictions={prediction.summary}
+        predictions={{ ...prediction.summary, selected: prediction.selected }}
         confidence={prediction.summary?.confidence}
         dataThrough={prediction.data_through}
+        onSelect={onSelectMarket}
       />
 
       <table className="data" style={{ marginTop: 12 }}>
@@ -250,6 +254,9 @@ export default function FixtureDetail() {
     () => (league && matchId ? api.fixtureDetail(league, matchId) : null),
     [league, matchId],
   );
+  // One market at a time: the chips and the table hand over the row they were
+  // clicked on, and the modal fetches the explanation for that row alone.
+  const [market, setMarket] = useState(null);
 
   if (loading)
     return (
@@ -289,7 +296,7 @@ export default function FixtureDetail() {
       </div>
 
       <div className="two-col">
-        <PredictabilityPanel prediction={data.predictability} />
+        <PredictabilityPanel prediction={data.predictability} onSelectMarket={setMarket} />
         <div className="stack" style={{ display: "grid", gap: 16, alignContent: "start" }}>
           <TeamCard side="home" team={home} standings={data.standings?.home} />
           <TeamCard side="away" team={away} standings={data.standings?.away} />
@@ -298,6 +305,14 @@ export default function FixtureDetail() {
 
       <div style={{ marginTop: 16 }}>
         <GoalLinesPanel lines={data.predictability?.lines} />
+      </div>
+
+      <div style={{ marginTop: 16 }}>
+        <MarketTable
+          markets={data.predictability?.markets}
+          selected={data.predictability?.selected}
+          onSelect={setMarket}
+        />
       </div>
 
       {/* Reused verbatim: the endpoint returns these two sections in exactly the
@@ -316,7 +331,7 @@ export default function FixtureDetail() {
               <th>League</th>
               <td>
                 <Link className="link" to={`/leagues/${data.league}`}>
-                  {data.real_league_name || data.league}
+                  {data.league_name || data.real_league_name || data.league}
                 </Link>
                 {data.country ? <span className="muted"> · {data.country}</span> : null}
               </td>
@@ -361,6 +376,15 @@ export default function FixtureDetail() {
           </tbody>
         </table>
       </section>
+
+      {market && (
+        <MarketDetailModal
+          league={league}
+          matchId={data.match_id || matchId}
+          market={market}
+          onClose={() => setMarket(null)}
+        />
+      )}
     </div>
   );
 }

@@ -17,13 +17,19 @@ Layout:
 Usage:
     python backend/scripts/fetch_fixtures.py
     python backend/scripts/fetch_fixtures.py --league premier germany1
-    python backend/scripts/fetch_fixtures.py --overwrite --delay 0.5
+    python backend/scripts/fetch_fixtures.py --overwrite
+    python backend/scripts/fetch_fixtures.py --overwrite --delay 3
+
+Re-running without --overwrite skips any league whose file already exists, so a
+routine refresh needs it. The gap between requests defaults to 2s and can be
+raised per run with --delay or permanently with FETCH_DELAY_SECONDS in .env.
 """
 from __future__ import annotations
 
 import argparse
 import json
 import logging
+import os
 import sys
 import time
 from pathlib import Path
@@ -39,7 +45,11 @@ from tests.conftest import API_KEY, BASE_URL  # noqa: E402
 
 log = logging.getLogger("fetch_fixtures")
 
-REQUEST_DELAY_SECONDS = 1.0
+# Politeness gap between requests. Configured in one place, like API_PORT: the
+# environment wins, then the project .env, then the default. Raise it to be
+# gentler on the feed -- a full catalog sweep is 93 sequential requests, so the
+# delay is what the API actually feels.
+REQUEST_DELAY_SECONDS = float(os.getenv("FETCH_DELAY_SECONDS", "2.0"))
 MAX_RETRIES = 3
 RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
 

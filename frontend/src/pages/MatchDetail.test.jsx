@@ -47,7 +47,10 @@ describe("MatchDetail", () => {
     expect(screen.getByText("2 – 1")).toBeInTheDocument();
     // half-time; head-to-head rows can also contain a "1 - 0" scoreline
     expect(screen.getAllByText("1 – 0").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByRole("link", { name: "premier" })).toHaveAttribute("href", "/leagues/premier");
+    expect(screen.getByRole("link", { name: "Premier League" })).toHaveAttribute(
+      "href",
+      "/leagues/premier",
+    );
     expect(screen.getAllByText("2024-2025").length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("20'")).toBeInTheDocument();
     expect(screen.getAllByText("1001").length).toBeGreaterThanOrEqual(1);

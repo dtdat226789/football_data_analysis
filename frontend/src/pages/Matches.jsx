@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
-import { ErrorBox, ListSkeleton, TableSkeleton } from "../components/State.jsx";
+import { ErrorBox, TableSkeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
-import PredictionChips from "../components/PredictionChips.jsx";
+import UpcomingFixtures from "../components/UpcomingFixtures.jsx";
+import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 
 const SIZES = [20, 50, 100];
 const PRESETS = [
@@ -22,15 +23,6 @@ function pageLabel(pageSize, offset, total) {
   const end = Math.min(offset + pageSize, total);
   const start = Math.min(offset + 1, total);
   return `${start}–${end} of ${total}`;
-}
-
-/**
- * Route id for a fixture: the trailing `date-home-vs-away` segment of the
- * upstream slug, which is what the detail route matches on. A slug without
- * slashes is already its own tail.
- */
-export function fixturePathId(slug) {
-  return String(slug || "").replace(/\/+$/, "").split("/").pop() || "";
 }
 
 export default function Matches() {
@@ -52,10 +44,11 @@ export default function Matches() {
   };
 
   const leaguesApi = useApi(() => api.listLeagues(), []);
-  const upcoming = useApi(
-    () => api.fixtures({ league: league || undefined, sort: "confidence", limit: 50 }),
-    [league],
-  );
+  const leagueNames = useMemo(() => leagueNameMap(leaguesApi.data), [leaguesApi.data]);
+  // The upcoming list owns its own offset/filter params, so recent paging and
+  // upcoming paging cannot drag each other backwards. The league and date
+  // window are shared, so changing one rewinds both pages.
+  const upcoming = <UpcomingFixtures league={league} fromDate={fromDate} toDate={toDate} />;
   const recent = useApi(
     () =>
       api.matchesRecent({
@@ -68,10 +61,12 @@ export default function Matches() {
     [league, fromDate, toDate, offset, size],
   );
 
-  const setLeague = (value) => patch({ league: value, offset: 0 });
-  const changeDate = (field) => (e) => patch({ [field]: e.target.value, offset: 0 });
-  const resetDates = () => patch({ from: "", to: "", offset: 0 });
-  const preset = (days) => patch({ from: isoDaysAgo(days), to: "", offset: 0 });
+  const setLeague = (value) => patch({ league: value, offset: 0, uoffset: 0 });
+  const changeDate = (field) => (e) =>
+    patch({ [field]: e.target.value, offset: 0, uoffset: 0 });
+  const resetDates = () => patch({ from: "", to: "", offset: 0, uoffset: 0 });
+  const preset = (days) =>
+    patch({ from: isoDaysAgo(days), to: "", offset: 0, uoffset: 0 });
   const changeSize = (e) => {
     setSize(Number(e.target.value));
     patch({ offset: 0 });
@@ -79,12 +74,13 @@ export default function Matches() {
   const page = (delta) => patch({ offset: Math.max(0, offset + delta * size) });
 
   const recentData = recent.data;
+  const dateWindow = Boolean(fromDate || toDate);
 
   return (
     <div>
       <div className="page-head">
         <h2>Matches</h2>
-        <p>{league || "all leagues"} · upcoming top picks + recent results</p>
+        <p>{leagueLabel(league, leagueNames) || "all leagues"} · upcoming fixtures by day + recent results</p>
       </div>
 
       <div className="filters">
@@ -130,7 +126,7 @@ export default function Matches() {
               key={p.days}
               className="preset"
               onClick={() => preset(p.days)}
-              title={`Recent results for the last ${p.days} days`}
+              title={`Both lists, from ${isoDaysAgo(p.days)} onwards`}
             >
               {p.label}
             </button>
@@ -139,50 +135,15 @@ export default function Matches() {
             All dates
           </button>
         </div>
+        {dateWindow && (
+          <span className="muted" style={{ fontSize: 12 }}>
+            Date window applies to both lists
+          </span>
+        )}
       </div>
 
       <div className="two-col">
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>
-            Upcoming <span className="badge">{upcoming.data?.total ?? 0}</span>
-          </h3>
-          {upcoming.loading && <ListSkeleton items={4} />}
-          {upcoming.error && <ErrorBox error={upcoming.error} />}
-          {upcoming.data && upcoming.data.matches.length === 0 && (
-            <p className="muted">No upcoming fixtures{league ? " for this league" : ""}.</p>
-          )}
-          {upcoming.data && upcoming.data.matches.length > 0 && (
-            <div className="event-list">
-              {upcoming.data.matches.map((m, i) => (
-                <div key={i} className="event">
-                  <div className="teams">
-                    <span className="muted" style={{ fontSize: 12 }}>
-                      {m.match_date} {m.time} · {m.league}
-                    </span>
-                    <span>
-                      <TeamLink name={m.home_team} /> vs <TeamLink name={m.away_team} />
-                    </span>
-                  </div>
-                  <PredictionChips
-                    predictions={m.predictions}
-                    compact
-                    confidence={m.predictions?.confidence}
-                    dataThrough={m.predictions?.data_through}
-                  />
-                  {m.slug ? (
-                    <Link
-                      className="link"
-                      style={{ fontSize: 12 }}
-                      to={`/fixture/${m.league}/${fixturePathId(m.slug)}`}
-                    >
-                      detail
-                    </Link>
-                  ) : null}
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
+        {upcoming}
 
         <section className="card">
           <h3 style={{ marginTop: 0 }}>
@@ -217,7 +178,7 @@ export default function Matches() {
                     <td>
                       <TeamLink name={m.away_team} />
                     </td>
-                    <td className="muted">{m.league}</td>
+                    <td className="muted">{m.league_name || m.league}</td>
                     <td>
                       <Link className="link" to={`/match/${m.api_id}`}>
                         view
