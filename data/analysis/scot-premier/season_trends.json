@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:06:05+00:00",
+  "config": {
+    "league": "scot-premier",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot-premier",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premiership",
+    "country": "Scotland",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "split",
+    "url": "https://www.football-charts.com/leagues/scotland/premiership"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Celtic",
+      "champion_id": 1416,
+      "champion_pts": 82,
+      "runner_up": "Hearts",
+      "runner_up_id": 1417,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Celtic",
+      "champion_id": 1416,
+      "champion_pts": 18,
+      "runner_up": "Rangers",
+      "runner_up_id": 1418,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 2,
+      "champion": "Celtic",
+      "runner_up": "Hearts"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 82,
+        "2": 80,
+        "4": 61,
+        "6": 49,
+        "9": 40,
+        "12": 21
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 18,
+        "2": 16,
+        "4": 10,
+        "6": 8,
+        "9": 8,
+        "12": 5
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 9,
+      "safe_pts": 40,
+      "drop_position": 10,
+      "drop_pts": 40,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 40
+        },
+        {
+          "position": 11,
+          "points": 38
+        },
+        {
+          "position": 12,
+          "points": 21
+        }
+      ],
+      "bottom3_range": 19
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 9,
+      "safe_pts": 8,
+      "drop_position": 10,
+      "drop_pts": 7,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 7
+        },
+        {
+          "position": 11,
+          "points": 6
+        },
+        {
+          "position": 12,
+          "points": 5
+        }
+      ],
+      "bottom3_range": 2
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 234,
+      "total_goals": 643,
+      "avg_goals": 2.748,
+      "home_wins": 105,
+      "draws": 64,
+      "away_wins": 65,
+      "home_win_pct": 44.9,
+      "draw_pct": 27.4,
+      "away_win_pct": 27.8,
+      "goalless": 17,
+      "goalless_pct": 7.3,
+      "total_points": 638,
+      "avg_points_per_team": 42.53,
+      "n_teams": 15
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 42,
+      "total_goals": 107,
+      "avg_goals": 2.548,
+      "home_wins": 16,
+      "draws": 9,
+      "away_wins": 17,
+      "home_win_pct": 38.1,
+      "draw_pct": 21.4,
+      "away_win_pct": 40.5,
+      "goalless": 2,
+      "goalless_pct": 4.8,
+      "total_points": 117,
+      "avg_points_per_team": 9.75,
+      "n_teams": 12
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.8,
+        "goals": 2.933
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.667,
+        "goals": 4.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 4.5
+    }
+  }
+}

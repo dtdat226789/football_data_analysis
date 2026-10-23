@@ -1,0 +1,646 @@
+{
+  "report_name": "relationships",
+  "script": {
+    "name": "backend/scripts/analyze_relationships.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:02:28+00:00",
+  "config": {
+    "league": "north",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\north",
+    "out_stem": null
+  },
+  "league": {
+    "name": "National League North",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/national-league-north"
+  },
+  "n_matches": 560,
+  "feature_count": 23,
+  "correlation_matrix": [
+    {
+      "feature": "home_team_goals_scored_last_5",
+      "n": 560,
+      "corr_home_score": 0.1956,
+      "corr_away_score": -0.0262,
+      "corr_total_goals": 0.1365
+    },
+    {
+      "feature": "home_team_wins_last_5",
+      "n": 560,
+      "corr_home_score": 0.2003,
+      "corr_away_score": -0.0464,
+      "corr_total_goals": 0.1257
+    },
+    {
+      "feature": "home_team_points_last_5",
+      "n": 560,
+      "corr_home_score": 0.191,
+      "corr_away_score": -0.0525,
+      "corr_total_goals": 0.114
+    },
+    {
+      "feature": "home_position_before_match",
+      "n": 560,
+      "corr_home_score": -0.172,
+      "corr_away_score": 0.0378,
+      "corr_total_goals": -0.1095
+    },
+    {
+      "feature": "home_team_home_goals_avg",
+      "n": 560,
+      "corr_home_score": 0.1188,
+      "corr_away_score": 0.0011,
+      "corr_total_goals": 0.095
+    },
+    {
+      "feature": "home_team_home_win_rate",
+      "n": 560,
+      "corr_home_score": 0.098,
+      "corr_away_score": 0.003,
+      "corr_total_goals": 0.0799
+    },
+    {
+      "feature": "points_difference",
+      "n": 560,
+      "corr_home_score": 0.2286,
+      "corr_away_score": -0.163,
+      "corr_total_goals": 0.0648
+    },
+    {
+      "feature": "position_difference",
+      "n": 560,
+      "corr_home_score": -0.2133,
+      "corr_away_score": 0.1461,
+      "corr_total_goals": -0.0647
+    },
+    {
+      "feature": "away_team_wins_last_5",
+      "n": 560,
+      "corr_home_score": -0.0325,
+      "corr_away_score": 0.1204,
+      "corr_total_goals": 0.0604
+    },
+    {
+      "feature": "away_team_points_last_5",
+      "n": 560,
+      "corr_home_score": -0.0324,
+      "corr_away_score": 0.1187,
+      "corr_total_goals": 0.0592
+    },
+    {
+      "feature": "home_points_before_match",
+      "n": 560,
+      "corr_home_score": 0.1088,
+      "corr_away_score": -0.0474,
+      "corr_total_goals": 0.0524
+    },
+    {
+      "feature": "away_team_goals_conceded_last_5",
+      "n": 560,
+      "corr_home_score": 0.0016,
+      "corr_away_score": -0.0711,
+      "corr_total_goals": -0.0497
+    },
+    {
+      "feature": "away_team_away_win_rate",
+      "n": 560,
+      "corr_home_score": -0.0798,
+      "corr_away_score": 0.1472,
+      "corr_total_goals": 0.042
+    },
+    {
+      "feature": "home_team_goals_conceded_last_5",
+      "n": 560,
+      "corr_home_score": -0.0836,
+      "corr_away_score": 0.0343,
+      "corr_total_goals": -0.0418
+    },
+    {
+      "feature": "home_team_home_conceded_avg",
+      "n": 560,
+      "corr_home_score": -0.05,
+      "corr_away_score": 0.0023,
+      "corr_total_goals": -0.0381
+    },
+    {
+      "feature": "home_rest_days",
+      "n": 548,
+      "corr_home_score": 0.0018,
+      "corr_away_score": 0.0504,
+      "corr_total_goals": 0.0375
+    },
+    {
+      "feature": "away_team_away_goals_avg",
+      "n": 560,
+      "corr_home_score": -0.0682,
+      "corr_away_score": 0.1253,
+      "corr_total_goals": 0.0356
+    },
+    {
+      "feature": "away_team_goals_scored_last_5",
+      "n": 560,
+      "corr_home_score": -0.0615,
+      "corr_away_score": 0.1135,
+      "corr_total_goals": 0.0324
+    },
+    {
+      "feature": "rest_days_difference",
+      "n": 548,
+      "corr_home_score": -0.0102,
+      "corr_away_score": 0.0501,
+      "corr_total_goals": 0.0277
+    },
+    {
+      "feature": "away_position_before_match",
+      "n": 560,
+      "corr_home_score": 0.1206,
+      "corr_away_score": -0.1646,
+      "corr_total_goals": -0.022
+    },
+    {
+      "feature": "away_team_away_conceded_avg",
+      "n": 560,
+      "corr_home_score": 0.0536,
+      "corr_away_score": -0.0823,
+      "corr_total_goals": -0.0164
+    },
+    {
+      "feature": "away_rest_days",
+      "n": 548,
+      "corr_home_score": 0.0103,
+      "corr_away_score": 0.0066,
+      "corr_total_goals": 0.0129
+    },
+    {
+      "feature": "away_points_before_match",
+      "n": 560,
+      "corr_home_score": -0.0438,
+      "corr_away_score": 0.0613,
+      "corr_total_goals": 0.0091
+    }
+  ],
+  "form_vs_outcome": {
+    "feature": "home_team_points_last_5 - away_team_points_last_5",
+    "bins": [
+      {
+        "bucket": "<-4",
+        "n": 91,
+        "home_wins": 35,
+        "draws": 16,
+        "away_wins": 40,
+        "home_pct": 38.5,
+        "draw_pct": 17.6,
+        "away_pct": 44.0
+      },
+      {
+        "bucket": "-4..-2",
+        "n": 117,
+        "home_wins": 40,
+        "draws": 26,
+        "away_wins": 51,
+        "home_pct": 34.2,
+        "draw_pct": 22.2,
+        "away_pct": 43.6
+      },
+      {
+        "bucket": "-1..1",
+        "n": 156,
+        "home_wins": 71,
+        "draws": 33,
+        "away_wins": 52,
+        "home_pct": 45.5,
+        "draw_pct": 21.2,
+        "away_pct": 33.3
+      },
+      {
+        "bucket": "2..4",
+        "n": 107,
+        "home_wins": 43,
+        "draws": 31,
+        "away_wins": 33,
+        "home_pct": 40.2,
+        "draw_pct": 29.0,
+        "away_pct": 30.8
+      },
+      {
+        "bucket": ">4",
+        "n": 89,
+        "home_wins": 50,
+        "draws": 20,
+        "away_wins": 19,
+        "home_pct": 56.2,
+        "draw_pct": 22.5,
+        "away_pct": 21.3
+      },
+      {
+        "bucket": "unknown",
+        "n": 0,
+        "home_wins": 0,
+        "draws": 0,
+        "away_wins": 0,
+        "home_pct": null,
+        "draw_pct": null,
+        "away_pct": null
+      }
+    ]
+  },
+  "position_vs_outcome": {
+    "feature": "position_difference (home_position - away_position)",
+    "bins": [
+      {
+        "bucket": "<=-6",
+        "n": 162,
+        "home_wins": 81,
+        "draws": 41,
+        "away_wins": 40,
+        "home_pct": 50.0,
+        "draw_pct": 25.3,
+        "away_pct": 24.7
+      },
+      {
+        "bucket": "-5..-2",
+        "n": 93,
+        "home_wins": 45,
+        "draws": 17,
+        "away_wins": 31,
+        "home_pct": 48.4,
+        "draw_pct": 18.3,
+        "away_pct": 33.3
+      },
+      {
+        "bucket": "-1..1",
+        "n": 57,
+        "home_wins": 27,
+        "draws": 17,
+        "away_wins": 13,
+        "home_pct": 47.4,
+        "draw_pct": 29.8,
+        "away_pct": 22.8
+      },
+      {
+        "bucket": "2..5",
+        "n": 87,
+        "home_wins": 33,
+        "draws": 15,
+        "away_wins": 39,
+        "home_pct": 37.9,
+        "draw_pct": 17.2,
+        "away_pct": 44.8
+      },
+      {
+        "bucket": ">=6",
+        "n": 161,
+        "home_wins": 53,
+        "draws": 36,
+        "away_wins": 72,
+        "home_pct": 32.9,
+        "draw_pct": 22.4,
+        "away_pct": 44.7
+      },
+      {
+        "bucket": "unknown",
+        "n": 0,
+        "home_wins": 0,
+        "draws": 0,
+        "away_wins": 0,
+        "home_pct": null,
+        "draw_pct": null,
+        "away_pct": null
+      }
+    ]
+  },
+  "rest_advantage": {
+    "feature": "rest_days_difference (home_rest_days - away_rest_days)",
+    "bins": [
+      {
+        "bucket": "<-1",
+        "n": 75,
+        "home_wins": 29,
+        "draws": 21,
+        "away_wins": 25,
+        "home_pct": 38.7,
+        "draw_pct": 28.0,
+        "away_pct": 33.3
+      },
+      {
+        "bucket": "-1..0",
+        "n": 1,
+        "home_wins": 0,
+        "draws": 1,
+        "away_wins": 0,
+        "home_pct": 0.0,
+        "draw_pct": 100.0,
+        "away_pct": 0.0
+      },
+      {
+        "bucket": "0",
+        "n": 400,
+        "home_wins": 173,
+        "draws": 82,
+        "away_wins": 145,
+        "home_pct": 43.2,
+        "draw_pct": 20.5,
+        "away_pct": 36.2
+      },
+      {
+        "bucket": "1..2",
+        "n": 5,
+        "home_wins": 1,
+        "draws": 2,
+        "away_wins": 2,
+        "home_pct": 20.0,
+        "draw_pct": 40.0,
+        "away_pct": 40.0
+      },
+      {
+        "bucket": ">2",
+        "n": 67,
+        "home_wins": 28,
+        "draws": 17,
+        "away_wins": 22,
+        "home_pct": 41.8,
+        "draw_pct": 25.4,
+        "away_pct": 32.8
+      },
+      {
+        "bucket": "unknown",
+        "n": 12,
+        "home_wins": 8,
+        "draws": 3,
+        "away_wins": 1,
+        "home_pct": 66.7,
+        "draw_pct": 25.0,
+        "away_pct": 8.3
+      }
+    ]
+  },
+  "home_quality": {
+    "feature": "home_team_home_win_rate",
+    "tiers": [
+      {
+        "tier": "low",
+        "label": "< 0.5",
+        "n": 359,
+        "home_wins": 144,
+        "draws": 81,
+        "away_wins": 134,
+        "home_pct": 40.1,
+        "draw_pct": 22.6,
+        "away_pct": 37.3
+      },
+      {
+        "tier": "high",
+        "label": ">= 0.5",
+        "n": 201,
+        "home_wins": 95,
+        "draws": 45,
+        "away_wins": 61,
+        "home_pct": 47.3,
+        "draw_pct": 22.4,
+        "away_pct": 30.3
+      }
+    ],
+    "home_win_pct_gap": 7.2
+  },
+  "feature_by_result": [
+    {
+      "feature": "points_difference",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 2.699,
+        "DRAW": -0.095,
+        "AWAY_WIN": -3.81
+      },
+      "range": 6.509
+    },
+    {
+      "feature": "away_points_before_match",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 30.803,
+        "DRAW": 29.651,
+        "AWAY_WIN": 34.6
+      },
+      "range": 4.949
+    },
+    {
+      "feature": "position_difference",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": -1.536,
+        "DRAW": -0.46,
+        "AWAY_WIN": 2.626
+      },
+      "range": 4.161
+    },
+    {
+      "feature": "home_points_before_match",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 33.502,
+        "DRAW": 29.556,
+        "AWAY_WIN": 30.79
+      },
+      "range": 3.947
+    },
+    {
+      "feature": "away_position_before_match",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 12.649,
+        "DRAW": 13.183,
+        "AWAY_WIN": 10.8
+      },
+      "range": 2.383
+    },
+    {
+      "feature": "home_position_before_match",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 11.113,
+        "DRAW": 12.722,
+        "AWAY_WIN": 13.426
+      },
+      "range": 2.313
+    },
+    {
+      "feature": "home_team_points_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 6.983,
+        "DRAW": 6.46,
+        "AWAY_WIN": 5.918
+      },
+      "range": 1.065
+    },
+    {
+      "feature": "home_team_goals_scored_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 7.598,
+        "DRAW": 6.762,
+        "AWAY_WIN": 6.667
+      },
+      "range": 0.932
+    },
+    {
+      "feature": "away_team_points_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 6.406,
+        "DRAW": 6.135,
+        "AWAY_WIN": 7.041
+      },
+      "range": 0.906
+    },
+    {
+      "feature": "away_team_goals_scored_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 6.967,
+        "DRAW": 6.794,
+        "AWAY_WIN": 7.621
+      },
+      "range": 0.827
+    },
+    {
+      "feature": "home_team_goals_conceded_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 6.858,
+        "DRAW": 7.032,
+        "AWAY_WIN": 7.549
+      },
+      "range": 0.691
+    },
+    {
+      "feature": "away_team_goals_conceded_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 6.967,
+        "DRAW": 7.357,
+        "AWAY_WIN": 6.862
+      },
+      "range": 0.496
+    },
+    {
+      "feature": "away_rest_days",
+      "n_values": 548,
+      "means": {
+        "HOME_WIN": 5.81,
+        "DRAW": 5.976,
+        "AWAY_WIN": 5.552
+      },
+      "range": 0.424
+    },
+    {
+      "feature": "home_team_wins_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 1.996,
+        "DRAW": 1.802,
+        "AWAY_WIN": 1.6
+      },
+      "range": 0.396
+    },
+    {
+      "feature": "home_rest_days",
+      "n_values": 548,
+      "means": {
+        "HOME_WIN": 5.697,
+        "DRAW": 5.821,
+        "AWAY_WIN": 5.562
+      },
+      "range": 0.259
+    },
+    {
+      "feature": "away_team_wins_last_5",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 1.782,
+        "DRAW": 1.73,
+        "AWAY_WIN": 1.985
+      },
+      "range": 0.254
+    },
+    {
+      "feature": "rest_days_difference",
+      "n_values": 548,
+      "means": {
+        "HOME_WIN": -0.113,
+        "DRAW": -0.154,
+        "AWAY_WIN": 0.01
+      },
+      "range": 0.165
+    },
+    {
+      "feature": "away_team_away_goals_avg",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 1.306,
+        "DRAW": 1.285,
+        "AWAY_WIN": 1.446
+      },
+      "range": 0.161
+    },
+    {
+      "feature": "home_team_home_conceded_avg",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 1.31,
+        "DRAW": 1.346,
+        "AWAY_WIN": 1.386
+      },
+      "range": 0.076
+    },
+    {
+      "feature": "away_team_away_win_rate",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 0.295,
+        "DRAW": 0.293,
+        "AWAY_WIN": 0.36
+      },
+      "range": 0.067
+    },
+    {
+      "feature": "away_team_away_conceded_avg",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 1.551,
+        "DRAW": 1.541,
+        "AWAY_WIN": 1.492
+      },
+      "range": 0.059
+    },
+    {
+      "feature": "home_team_home_goals_avg",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 1.552,
+        "DRAW": 1.502,
+        "AWAY_WIN": 1.53
+      },
+      "range": 0.051
+    },
+    {
+      "feature": "home_team_home_win_rate",
+      "n_values": 560,
+      "means": {
+        "HOME_WIN": 0.427,
+        "DRAW": 0.427,
+        "AWAY_WIN": 0.411
+      },
+      "range": 0.016
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:49:29+00:00",
+  "config": {
+    "league": "finland1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\finland1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Veikkausliiga",
+    "country": "Finland",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/finland/veikkausliiga"
+  },
+  "overall": {
+    "n_matches": 273,
+    "home_wins": 119,
+    "draws": 67,
+    "away_wins": 87,
+    "home_win_pct": 43.6,
+    "draw_pct": 24.5,
+    "away_win_pct": 31.9,
+    "home_goals": 421,
+    "away_goals": 368,
+    "total_goals": 789,
+    "avg_goals": 2.89,
+    "goalless": 18,
+    "goalless_pct": 6.6
+  },
+  "per_season": [
+    {
+      "season": "2025",
+      "n_matches": 132,
+      "home_wins": 56,
+      "draws": 29,
+      "away_wins": 47,
+      "home_win_pct": 42.4,
+      "draw_pct": 22.0,
+      "away_win_pct": 35.6,
+      "home_goals": 222,
+      "away_goals": 211,
+      "total_goals": 433,
+      "avg_goals": 3.28,
+      "goalless": 8,
+      "goalless_pct": 6.1
+    },
+    {
+      "season": "2026",
+      "n_matches": 141,
+      "home_wins": 63,
+      "draws": 38,
+      "away_wins": 40,
+      "home_win_pct": 44.7,
+      "draw_pct": 27.0,
+      "away_win_pct": 28.4,
+      "home_goals": 199,
+      "away_goals": 157,
+      "total_goals": 356,
+      "avg_goals": 2.525,
+      "goalless": 10,
+      "goalless_pct": 7.1
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 69,
+        "draw": 15,
+        "away": 9
+      },
+      "draw": {
+        "home": 39,
+        "draw": 42,
+        "away": 22
+      },
+      "away": {
+        "home": 11,
+        "draw": 10,
+        "away": 56
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 74.2,
+        "draw": 16.1,
+        "away": 9.7
+      },
+      "draw": {
+        "home": 37.9,
+        "draw": 40.8,
+        "away": 21.4
+      },
+      "away": {
+        "home": 14.3,
+        "draw": 13.0,
+        "away": 72.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 11,
+      "pct": 4.0,
+      "matches": [
+        {
+          "season": "2025",
+          "home_team": "Ilves",
+          "away_team": "HJK",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "VPS",
+          "away_team": "AC Oulu",
+          "ht_score": "0-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2025",
+          "home_team": "Haka",
+          "away_team": "AC Oulu",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Gnistan",
+          "away_team": "KTP",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "AC Oulu",
+          "away_team": "KTP",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "SJK",
+          "away_team": "Gnistan",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "VPS",
+          "away_team": "KTP",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Inter Turku",
+          "away_team": "Ilves",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "VPS",
+          "away_team": "HJK",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "TPS",
+          "away_team": "Jaro",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "HJK",
+          "away_team": "Inter Turku",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 9,
+      "pct": 3.3,
+      "matches": [
+        {
+          "season": "2025",
+          "home_team": "Mariehamn",
+          "away_team": "SJK",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Gnistan",
+          "away_team": "KuPS",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "HJK",
+          "away_team": "Jaro",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025",
+          "home_team": "VPS",
+          "away_team": "SJK",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Haka",
+          "away_team": "HJK",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Jaro",
+          "away_team": "HJK",
+          "ht_score": "2-1",
+          "ft_score": "2-5"
+        },
+        {
+          "season": "2026",
+          "home_team": "SJK",
+          "away_team": "VPS",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "AC Oulu",
+          "away_team": "Inter Turku",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026",
+          "home_team": "HJK",
+          "away_team": "Gnistan",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 93,
+      "home": {
+        "count": 69,
+        "pct": 74.2
+      },
+      "draw": {
+        "count": 15,
+        "pct": 16.1
+      },
+      "away": {
+        "count": 9,
+        "pct": 9.7
+      }
+    },
+    "ht_draw": {
+      "n_matches": 103,
+      "home": {
+        "count": 39,
+        "pct": 37.9
+      },
+      "draw": {
+        "count": 42,
+        "pct": 40.8
+      },
+      "away": {
+        "count": 22,
+        "pct": 21.4
+      }
+    },
+    "away_lead": {
+      "n_matches": 77,
+      "home": {
+        "count": 11,
+        "pct": 14.3
+      },
+      "draw": {
+        "count": 10,
+        "pct": 13.0
+      },
+      "away": {
+        "count": 56,
+        "pct": 72.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 273,
+    "n_with_first_goal": 255,
+    "n_goalless": 18,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 85,
+        "home": {
+          "count": 41,
+          "pct": 48.2
+        },
+        "draw": {
+          "count": 20,
+          "pct": 23.5
+        },
+        "away": {
+          "count": 24,
+          "pct": 28.2
+        },
+        "pct_of_matches": 31.1
+      },
+      "16-30": {
+        "n_matches": 62,
+        "home": {
+          "count": 27,
+          "pct": 43.5
+        },
+        "draw": {
+          "count": 9,
+          "pct": 14.5
+        },
+        "away": {
+          "count": 26,
+          "pct": 41.9
+        },
+        "pct_of_matches": 22.7
+      },
+      "31-45": {
+        "n_matches": 43,
+        "home": {
+          "count": 16,
+          "pct": 37.2
+        },
+        "draw": {
+          "count": 10,
+          "pct": 23.3
+        },
+        "away": {
+          "count": 17,
+          "pct": 39.5
+        },
+        "pct_of_matches": 15.8
+      },
+      "46-60": {
+        "n_matches": 37,
+        "home": {
+          "count": 21,
+          "pct": 56.8
+        },
+        "draw": {
+          "count": 4,
+          "pct": 10.8
+        },
+        "away": {
+          "count": 12,
+          "pct": 32.4
+        },
+        "pct_of_matches": 13.6
+      },
+      "61-75": {
+        "n_matches": 15,
+        "home": {
+          "count": 6,
+          "pct": 40.0
+        },
+        "draw": {
+          "count": 4,
+          "pct": 26.7
+        },
+        "away": {
+          "count": 5,
+          "pct": 33.3
+        },
+        "pct_of_matches": 5.5
+      },
+      "76-90": {
+        "n_matches": 11,
+        "home": {
+          "count": 6,
+          "pct": 54.5
+        },
+        "draw": {
+          "count": 2,
+          "pct": 18.2
+        },
+        "away": {
+          "count": 3,
+          "pct": 27.3
+        },
+        "pct_of_matches": 4.0
+      },
+      "91-120": {
+        "n_matches": 2,
+        "home": {
+          "count": 2,
+          "pct": 100.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "pct_of_matches": 0.7
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 273,
+      "count": 18,
+      "pct": 6.6
+    },
+    "per_season": [
+      {
+        "season": "2025",
+        "n_matches": 132,
+        "count": 8,
+        "pct": 6.1
+      },
+      {
+        "season": "2026",
+        "n_matches": 141,
+        "count": 10,
+        "pct": 7.1
+      }
+    ]
+  }
+}

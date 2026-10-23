@@ -1,0 +1,2044 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:04:02+00:00",
+  "config": {
+    "league": "premier",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\premier",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier League",
+    "country": "England",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/premier-league"
+  },
+  "teams": [
+    {
+      "team_id": 1252,
+      "team": "Manchester City",
+      "slug": "manchester-city",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 161,
+      "draws": 40,
+      "losses": 32,
+      "points": 523,
+      "goals_for": 534,
+      "goals_against": 209,
+      "goal_difference": 325,
+      "avg_points_per_season": 74.71,
+      "best_position": 1,
+      "worst_position": 3,
+      "titles": 5
+    },
+    {
+      "team_id": 1257,
+      "team": "Arsenal",
+      "slug": "arsenal",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 144,
+      "draws": 42,
+      "losses": 47,
+      "points": 474,
+      "goals_for": 443,
+      "goals_against": 224,
+      "goal_difference": 219,
+      "avg_points_per_season": 67.71,
+      "best_position": 1,
+      "worst_position": 8,
+      "titles": 1
+    },
+    {
+      "team_id": 1254,
+      "team": "Liverpool",
+      "slug": "liverpool",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 135,
+      "draws": 58,
+      "losses": 40,
+      "points": 463,
+      "goals_for": 479,
+      "goals_against": 254,
+      "goal_difference": 225,
+      "avg_points_per_season": 66.14,
+      "best_position": 1,
+      "worst_position": 6,
+      "titles": 1
+    },
+    {
+      "team_id": 1253,
+      "team": "Manchester Utd",
+      "slug": "manchester-utd",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 110,
+      "draws": 55,
+      "losses": 68,
+      "points": 385,
+      "goals_for": 366,
+      "goals_against": 314,
+      "goal_difference": 52,
+      "avg_points_per_season": 55.0,
+      "best_position": 2,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 1255,
+      "team": "Chelsea",
+      "slug": "chelsea",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 105,
+      "draws": 61,
+      "losses": 67,
+      "points": 376,
+      "goals_for": 381,
+      "goals_against": 286,
+      "goal_difference": 95,
+      "avg_points_per_season": 53.71,
+      "best_position": 3,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 1260,
+      "team": "Aston Villa",
+      "slug": "aston-villa",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 106,
+      "draws": 46,
+      "losses": 81,
+      "points": 364,
+      "goals_for": 352,
+      "goals_against": 316,
+      "goal_difference": 36,
+      "avg_points_per_season": 52.0,
+      "best_position": 4,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 1261,
+      "team": "Newcastle",
+      "slug": "newcastle",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 98,
+      "draws": 54,
+      "losses": 81,
+      "points": 348,
+      "goals_for": 373,
+      "goals_against": 330,
+      "goal_difference": 43,
+      "avg_points_per_season": 49.71,
+      "best_position": 4,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 1256,
+      "team": "Tottenham",
+      "slug": "tottenham",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 99,
+      "draws": 43,
+      "losses": 91,
+      "points": 340,
+      "goals_for": 395,
+      "goals_against": 339,
+      "goal_difference": 56,
+      "avg_points_per_season": 48.57,
+      "best_position": 4,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 1263,
+      "team": "Brighton",
+      "slug": "brighton",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 84,
+      "draws": 74,
+      "losses": 75,
+      "points": 326,
+      "goals_for": 343,
+      "goals_against": 315,
+      "goal_difference": 28,
+      "avg_points_per_season": 46.57,
+      "best_position": 3,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 242,
+      "team": "West Ham",
+      "slug": "west-ham",
+      "seasons_played": 6,
+      "total_matches": 228,
+      "wins": 81,
+      "draws": 52,
+      "losses": 95,
+      "points": 295,
+      "goals_for": 316,
+      "goals_against": 354,
+      "goal_difference": -38,
+      "avg_points_per_season": 49.17,
+      "best_position": 6,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 1262,
+      "team": "Crystal Palace",
+      "slug": "crystal-palace",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 72,
+      "draws": 72,
+      "losses": 89,
+      "points": 288,
+      "goals_for": 286,
+      "goals_against": 332,
+      "goal_difference": -46,
+      "avg_points_per_season": 41.14,
+      "best_position": 10,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 1259,
+      "team": "Everton",
+      "slug": "everton",
+      "seasons_played": 7,
+      "total_matches": 233,
+      "wins": 75,
+      "draws": 63,
+      "losses": 95,
+      "points": 288,
+      "goals_for": 259,
+      "goals_against": 319,
+      "goal_difference": -60,
+      "avg_points_per_season": 41.14,
+      "best_position": 7,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 1265,
+      "team": "Brentford",
+      "slug": "brentford",
+      "seasons_played": 6,
+      "total_matches": 195,
+      "wins": 70,
+      "draws": 52,
+      "losses": 73,
+      "points": 262,
+      "goals_for": 293,
+      "goals_against": 280,
+      "goal_difference": 13,
+      "avg_points_per_season": 43.67,
+      "best_position": 4,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 243,
+      "team": "Wolves",
+      "slug": "wolves",
+      "seasons_played": 6,
+      "total_matches": 228,
+      "wins": 66,
+      "draws": 47,
+      "losses": 115,
+      "points": 245,
+      "goals_for": 236,
+      "goals_against": 355,
+      "goal_difference": -119,
+      "avg_points_per_season": 40.83,
+      "best_position": 10,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 1264,
+      "team": "Fulham",
+      "slug": "fulham",
+      "seasons_played": 6,
+      "total_matches": 195,
+      "wins": 63,
+      "draws": 46,
+      "losses": 86,
+      "points": 235,
+      "goals_for": 243,
+      "goals_against": 280,
+      "goal_difference": -37,
+      "avg_points_per_season": 39.17,
+      "best_position": 10,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 1266,
+      "team": "Bournemouth",
+      "slug": "bournemouth",
+      "seasons_played": 5,
+      "total_matches": 157,
+      "wins": 52,
+      "draws": 47,
+      "losses": 58,
+      "points": 203,
+      "goals_for": 213,
+      "goals_against": 246,
+      "goal_difference": -33,
+      "avg_points_per_season": 40.6,
+      "best_position": 6,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 1267,
+      "team": "Nottingham",
+      "slug": "nottingham",
+      "seasons_played": 5,
+      "total_matches": 157,
+      "wins": 49,
+      "draws": 41,
+      "losses": 67,
+      "points": 188,
+      "goals_for": 197,
+      "goals_against": 237,
+      "goal_difference": -40,
+      "avg_points_per_season": 37.6,
+      "best_position": 7,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 1258,
+      "team": "Leeds",
+      "slug": "leeds",
+      "seasons_played": 5,
+      "total_matches": 157,
+      "wins": 47,
+      "draws": 43,
+      "losses": 67,
+      "points": 184,
+      "goals_for": 208,
+      "goals_against": 270,
+      "goal_difference": -62,
+      "avg_points_per_season": 36.8,
+      "best_position": 5,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 239,
+      "team": "Leicester",
+      "slug": "leicester",
+      "seasons_played": 4,
+      "total_matches": 152,
+      "wins": 49,
+      "draws": 30,
+      "losses": 73,
+      "points": 177,
+      "goals_for": 214,
+      "goals_against": 257,
+      "goal_difference": -43,
+      "avg_points_per_season": 44.25,
+      "best_position": 5,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 247,
+      "team": "Burnley",
+      "slug": "burnley",
+      "seasons_played": 4,
+      "total_matches": 152,
+      "wins": 26,
+      "draws": 42,
+      "losses": 84,
+      "points": 120,
+      "goals_for": 146,
+      "goals_against": 261,
+      "goal_difference": -115,
+      "avg_points_per_season": 30.0,
+      "best_position": 17,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 221,
+      "team": "Southampton",
+      "slug": "southampton",
+      "seasons_played": 4,
+      "total_matches": 152,
+      "wins": 29,
+      "draws": 33,
+      "losses": 90,
+      "points": 120,
+      "goals_for": 152,
+      "goals_against": 294,
+      "goal_difference": -142,
+      "avg_points_per_season": 30.0,
+      "best_position": 15,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 1268,
+      "team": "Sunderland",
+      "slug": "sunderland",
+      "seasons_played": 2,
+      "total_matches": 43,
+      "wins": 15,
+      "draws": 13,
+      "losses": 15,
+      "points": 58,
+      "goals_for": 48,
+      "goals_against": 58,
+      "goal_difference": -10,
+      "avg_points_per_season": 29.0,
+      "best_position": 7,
+      "worst_position": 14,
+      "titles": 0
+    },
+    {
+      "team_id": 230,
+      "team": "Sheffield Utd",
+      "slug": "sheffield-utd",
+      "seasons_played": 2,
+      "total_matches": 76,
+      "wins": 10,
+      "draws": 9,
+      "losses": 57,
+      "points": 39,
+      "goals_for": 55,
+      "goals_against": 167,
+      "goal_difference": -112,
+      "avg_points_per_season": 19.5,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 219,
+      "team": "Ipswich",
+      "slug": "ipswich",
+      "seasons_played": 2,
+      "total_matches": 43,
+      "wins": 6,
+      "draws": 10,
+      "losses": 27,
+      "points": 28,
+      "goals_for": 43,
+      "goals_against": 93,
+      "goal_difference": -50,
+      "avg_points_per_season": 14.0,
+      "best_position": 11,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 406,
+      "team": "Luton",
+      "slug": "luton",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 6,
+      "draws": 8,
+      "losses": 24,
+      "points": 26,
+      "goals_for": 52,
+      "goals_against": 85,
+      "goal_difference": -33,
+      "avg_points_per_season": 26.0,
+      "best_position": 18,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 238,
+      "team": "West Brom",
+      "slug": "west-brom",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 5,
+      "draws": 11,
+      "losses": 22,
+      "points": 26,
+      "goals_for": 35,
+      "goals_against": 76,
+      "goal_difference": -41,
+      "avg_points_per_season": 26.0,
+      "best_position": 19,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 233,
+      "team": "Watford",
+      "slug": "watford",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 6,
+      "draws": 5,
+      "losses": 27,
+      "points": 23,
+      "goals_for": 34,
+      "goals_against": 77,
+      "goal_difference": -43,
+      "avg_points_per_season": 23.0,
+      "best_position": 19,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 226,
+      "team": "Norwich",
+      "slug": "norwich",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 5,
+      "draws": 7,
+      "losses": 26,
+      "points": 22,
+      "goals_for": 23,
+      "goals_against": 84,
+      "goal_difference": -61,
+      "avg_points_per_season": 22.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 223,
+      "team": "Hull",
+      "slug": "hull",
+      "seasons_played": 1,
+      "total_matches": 5,
+      "wins": 2,
+      "draws": 2,
+      "losses": 1,
+      "points": 8,
+      "goals_for": 6,
+      "goals_against": 4,
+      "goal_difference": 2,
+      "avg_points_per_season": 8.0,
+      "best_position": 8,
+      "worst_position": 8,
+      "titles": 0
+    },
+    {
+      "team_id": 218,
+      "team": "Coventry",
+      "slug": "coventry",
+      "seasons_played": 1,
+      "total_matches": 5,
+      "wins": 1,
+      "draws": 0,
+      "losses": 4,
+      "points": 3,
+      "goals_for": 1,
+      "goals_against": 10,
+      "goal_difference": -9,
+      "avg_points_per_season": 3.0,
+      "best_position": 18,
+      "worst_position": 18,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 1261,
+      "team": "Newcastle",
+      "home": {
+        "matches": 117,
+        "wins": 60,
+        "draws": 27,
+        "losses": 30,
+        "points": 207,
+        "goals_for": 219,
+        "goals_against": 151
+      },
+      "away": {
+        "matches": 116,
+        "wins": 38,
+        "draws": 27,
+        "losses": 51,
+        "points": 141,
+        "goals_for": 154,
+        "goals_against": 179
+      },
+      "home_advantage": 66
+    },
+    {
+      "team_id": 1254,
+      "team": "Liverpool",
+      "home": {
+        "matches": 116,
+        "wins": 77,
+        "draws": 27,
+        "losses": 12,
+        "points": 258,
+        "goals_for": 251,
+        "goals_against": 101
+      },
+      "away": {
+        "matches": 117,
+        "wins": 58,
+        "draws": 31,
+        "losses": 28,
+        "points": 205,
+        "goals_for": 228,
+        "goals_against": 153
+      },
+      "home_advantage": 53
+    },
+    {
+      "team_id": 1253,
+      "team": "Manchester Utd",
+      "home": {
+        "matches": 116,
+        "wins": 65,
+        "draws": 21,
+        "losses": 30,
+        "points": 216,
+        "goals_for": 204,
+        "goals_against": 143
+      },
+      "away": {
+        "matches": 117,
+        "wins": 45,
+        "draws": 34,
+        "losses": 38,
+        "points": 169,
+        "goals_for": 162,
+        "goals_against": 171
+      },
+      "home_advantage": 47
+    },
+    {
+      "team_id": 1260,
+      "team": "Aston Villa",
+      "home": {
+        "matches": 116,
+        "wins": 60,
+        "draws": 24,
+        "losses": 32,
+        "points": 204,
+        "goals_for": 206,
+        "goals_against": 150
+      },
+      "away": {
+        "matches": 117,
+        "wins": 46,
+        "draws": 22,
+        "losses": 49,
+        "points": 160,
+        "goals_for": 146,
+        "goals_against": 166
+      },
+      "home_advantage": 44
+    },
+    {
+      "team_id": 1265,
+      "team": "Brentford",
+      "home": {
+        "matches": 98,
+        "wins": 41,
+        "draws": 30,
+        "losses": 27,
+        "points": 153,
+        "goals_for": 166,
+        "goals_against": 130
+      },
+      "away": {
+        "matches": 97,
+        "wins": 29,
+        "draws": 22,
+        "losses": 46,
+        "points": 109,
+        "goals_for": 127,
+        "goals_against": 150
+      },
+      "home_advantage": 44
+    },
+    {
+      "team_id": 1252,
+      "team": "Manchester City",
+      "home": {
+        "matches": 117,
+        "wins": 89,
+        "draws": 16,
+        "losses": 12,
+        "points": 283,
+        "goals_for": 308,
+        "goals_against": 106
+      },
+      "away": {
+        "matches": 116,
+        "wins": 72,
+        "draws": 24,
+        "losses": 20,
+        "points": 240,
+        "goals_for": 226,
+        "goals_against": 103
+      },
+      "home_advantage": 43
+    },
+    {
+      "team_id": 243,
+      "team": "Wolves",
+      "home": {
+        "matches": 114,
+        "wins": 40,
+        "draws": 21,
+        "losses": 53,
+        "points": 141,
+        "goals_for": 132,
+        "goals_against": 166
+      },
+      "away": {
+        "matches": 114,
+        "wins": 26,
+        "draws": 26,
+        "losses": 62,
+        "points": 104,
+        "goals_for": 104,
+        "goals_against": 189
+      },
+      "home_advantage": 37
+    },
+    {
+      "team_id": 242,
+      "team": "West Ham",
+      "home": {
+        "matches": 114,
+        "wins": 45,
+        "draws": 30,
+        "losses": 39,
+        "points": 165,
+        "goals_for": 172,
+        "goals_against": 164
+      },
+      "away": {
+        "matches": 114,
+        "wins": 36,
+        "draws": 22,
+        "losses": 56,
+        "points": 130,
+        "goals_for": 144,
+        "goals_against": 190
+      },
+      "home_advantage": 35
+    },
+    {
+      "team_id": 1257,
+      "team": "Arsenal",
+      "home": {
+        "matches": 116,
+        "wins": 78,
+        "draws": 19,
+        "losses": 19,
+        "points": 253,
+        "goals_for": 241,
+        "goals_against": 108
+      },
+      "away": {
+        "matches": 117,
+        "wins": 66,
+        "draws": 23,
+        "losses": 28,
+        "points": 221,
+        "goals_for": 202,
+        "goals_against": 116
+      },
+      "home_advantage": 32
+    },
+    {
+      "team_id": 1256,
+      "team": "Tottenham",
+      "home": {
+        "matches": 117,
+        "wins": 57,
+        "draws": 15,
+        "losses": 45,
+        "points": 186,
+        "goals_for": 207,
+        "goals_against": 162
+      },
+      "away": {
+        "matches": 116,
+        "wins": 42,
+        "draws": 28,
+        "losses": 46,
+        "points": 154,
+        "goals_for": 188,
+        "goals_against": 177
+      },
+      "home_advantage": 32
+    },
+    {
+      "team_id": 1263,
+      "team": "Brighton",
+      "home": {
+        "matches": 117,
+        "wins": 46,
+        "draws": 41,
+        "losses": 30,
+        "points": 179,
+        "goals_for": 176,
+        "goals_against": 140
+      },
+      "away": {
+        "matches": 116,
+        "wins": 38,
+        "draws": 33,
+        "losses": 45,
+        "points": 147,
+        "goals_for": 167,
+        "goals_against": 175
+      },
+      "home_advantage": 32
+    },
+    {
+      "team_id": 1258,
+      "team": "Leeds",
+      "home": {
+        "matches": 79,
+        "wins": 27,
+        "draws": 25,
+        "losses": 27,
+        "points": 106,
+        "goals_for": 107,
+        "goals_against": 119
+      },
+      "away": {
+        "matches": 78,
+        "wins": 20,
+        "draws": 18,
+        "losses": 40,
+        "points": 78,
+        "goals_for": 101,
+        "goals_against": 151
+      },
+      "home_advantage": 28
+    },
+    {
+      "team_id": 1264,
+      "team": "Fulham",
+      "home": {
+        "matches": 98,
+        "wins": 37,
+        "draws": 19,
+        "losses": 42,
+        "points": 130,
+        "goals_for": 133,
+        "goals_against": 138
+      },
+      "away": {
+        "matches": 97,
+        "wins": 26,
+        "draws": 27,
+        "losses": 44,
+        "points": 105,
+        "goals_for": 110,
+        "goals_against": 142
+      },
+      "home_advantage": 25
+    },
+    {
+      "team_id": 1255,
+      "team": "Chelsea",
+      "home": {
+        "matches": 116,
+        "wins": 55,
+        "draws": 35,
+        "losses": 26,
+        "points": 200,
+        "goals_for": 199,
+        "goals_against": 133
+      },
+      "away": {
+        "matches": 117,
+        "wins": 50,
+        "draws": 26,
+        "losses": 41,
+        "points": 176,
+        "goals_for": 182,
+        "goals_against": 153
+      },
+      "home_advantage": 24
+    },
+    {
+      "team_id": 1262,
+      "team": "Crystal Palace",
+      "home": {
+        "matches": 116,
+        "wins": 38,
+        "draws": 40,
+        "losses": 38,
+        "points": 154,
+        "goals_for": 151,
+        "goals_against": 154
+      },
+      "away": {
+        "matches": 117,
+        "wins": 34,
+        "draws": 32,
+        "losses": 51,
+        "points": 134,
+        "goals_for": 135,
+        "goals_against": 178
+      },
+      "home_advantage": 20
+    },
+    {
+      "team_id": 1259,
+      "team": "Everton",
+      "home": {
+        "matches": 117,
+        "wins": 42,
+        "draws": 28,
+        "losses": 47,
+        "points": 154,
+        "goals_for": 146,
+        "goals_against": 150
+      },
+      "away": {
+        "matches": 116,
+        "wins": 33,
+        "draws": 35,
+        "losses": 48,
+        "points": 134,
+        "goals_for": 113,
+        "goals_against": 169
+      },
+      "home_advantage": 20
+    },
+    {
+      "team_id": 1267,
+      "team": "Nottingham",
+      "home": {
+        "matches": 79,
+        "wins": 26,
+        "draws": 25,
+        "losses": 28,
+        "points": 103,
+        "goals_for": 100,
+        "goals_against": 95
+      },
+      "away": {
+        "matches": 78,
+        "wins": 23,
+        "draws": 16,
+        "losses": 39,
+        "points": 85,
+        "goals_for": 97,
+        "goals_against": 142
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 221,
+      "team": "Southampton",
+      "home": {
+        "matches": 76,
+        "wins": 17,
+        "draws": 18,
+        "losses": 41,
+        "points": 69,
+        "goals_for": 83,
+        "goals_against": 133
+      },
+      "away": {
+        "matches": 76,
+        "wins": 12,
+        "draws": 15,
+        "losses": 49,
+        "points": 51,
+        "goals_for": 69,
+        "goals_against": 161
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 1266,
+      "team": "Bournemouth",
+      "home": {
+        "matches": 79,
+        "wins": 28,
+        "draws": 26,
+        "losses": 25,
+        "points": 110,
+        "goals_for": 102,
+        "goals_against": 96
+      },
+      "away": {
+        "matches": 78,
+        "wins": 24,
+        "draws": 21,
+        "losses": 33,
+        "points": 93,
+        "goals_for": 111,
+        "goals_against": 150
+      },
+      "home_advantage": 17
+    },
+    {
+      "team_id": 239,
+      "team": "Leicester",
+      "home": {
+        "matches": 76,
+        "wins": 28,
+        "draws": 12,
+        "losses": 36,
+        "points": 96,
+        "goals_for": 106,
+        "goals_against": 114
+      },
+      "away": {
+        "matches": 76,
+        "wins": 21,
+        "draws": 18,
+        "losses": 37,
+        "points": 81,
+        "goals_for": 108,
+        "goals_against": 143
+      },
+      "home_advantage": 15
+    },
+    {
+      "team_id": 1268,
+      "team": "Sunderland",
+      "home": {
+        "matches": 21,
+        "wins": 10,
+        "draws": 6,
+        "losses": 5,
+        "points": 36,
+        "goals_for": 26,
+        "goals_against": 22
+      },
+      "away": {
+        "matches": 22,
+        "wins": 5,
+        "draws": 7,
+        "losses": 10,
+        "points": 22,
+        "goals_for": 22,
+        "goals_against": 36
+      },
+      "home_advantage": 14
+    },
+    {
+      "team_id": 230,
+      "team": "Sheffield Utd",
+      "home": {
+        "matches": 38,
+        "wins": 7,
+        "draws": 5,
+        "losses": 26,
+        "points": 26,
+        "goals_for": 31,
+        "goals_against": 84
+      },
+      "away": {
+        "matches": 38,
+        "wins": 3,
+        "draws": 4,
+        "losses": 31,
+        "points": 13,
+        "goals_for": 24,
+        "goals_against": 83
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 406,
+      "team": "Luton",
+      "home": {
+        "matches": 19,
+        "wins": 4,
+        "draws": 4,
+        "losses": 11,
+        "points": 16,
+        "goals_for": 28,
+        "goals_against": 37
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 4,
+        "losses": 13,
+        "points": 10,
+        "goals_for": 24,
+        "goals_against": 48
+      },
+      "home_advantage": 6
+    },
+    {
+      "team_id": 247,
+      "team": "Burnley",
+      "home": {
+        "matches": 76,
+        "wins": 13,
+        "draws": 23,
+        "losses": 40,
+        "points": 62,
+        "goals_for": 69,
+        "goals_against": 124
+      },
+      "away": {
+        "matches": 76,
+        "wins": 13,
+        "draws": 19,
+        "losses": 44,
+        "points": 58,
+        "goals_for": 77,
+        "goals_against": 137
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 238,
+      "team": "West Brom",
+      "home": {
+        "matches": 19,
+        "wins": 3,
+        "draws": 6,
+        "losses": 10,
+        "points": 15,
+        "goals_for": 15,
+        "goals_against": 39
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 5,
+        "losses": 12,
+        "points": 11,
+        "goals_for": 20,
+        "goals_against": 37
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 226,
+      "team": "Norwich",
+      "home": {
+        "matches": 19,
+        "wins": 3,
+        "draws": 3,
+        "losses": 13,
+        "points": 12,
+        "goals_for": 12,
+        "goals_against": 43
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 4,
+        "losses": 13,
+        "points": 10,
+        "goals_for": 11,
+        "goals_against": 41
+      },
+      "home_advantage": 2
+    },
+    {
+      "team_id": 223,
+      "team": "Hull",
+      "home": {
+        "matches": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "points": 4,
+        "goals_for": 2,
+        "goals_against": 0
+      },
+      "away": {
+        "matches": 3,
+        "wins": 1,
+        "draws": 1,
+        "losses": 1,
+        "points": 4,
+        "goals_for": 4,
+        "goals_against": 4
+      },
+      "home_advantage": 0
+    },
+    {
+      "team_id": 218,
+      "team": "Coventry",
+      "home": {
+        "matches": 2,
+        "wins": 0,
+        "draws": 0,
+        "losses": 2,
+        "points": 0,
+        "goals_for": 0,
+        "goals_against": 6
+      },
+      "away": {
+        "matches": 3,
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "points": 3,
+        "goals_for": 1,
+        "goals_against": 4
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 233,
+      "team": "Watford",
+      "home": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 2,
+        "losses": 15,
+        "points": 8,
+        "goals_for": 17,
+        "goals_against": 46
+      },
+      "away": {
+        "matches": 19,
+        "wins": 4,
+        "draws": 3,
+        "losses": 12,
+        "points": 15,
+        "goals_for": 17,
+        "goals_against": 31
+      },
+      "home_advantage": -7
+    },
+    {
+      "team_id": 219,
+      "team": "Ipswich",
+      "home": {
+        "matches": 21,
+        "wins": 2,
+        "draws": 4,
+        "losses": 15,
+        "points": 10,
+        "goals_for": 16,
+        "goals_against": 47
+      },
+      "away": {
+        "matches": 22,
+        "wins": 4,
+        "draws": 6,
+        "losses": 12,
+        "points": 18,
+        "goals_for": 27,
+        "goals_against": 46
+      },
+      "home_advantage": -8
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 1252,
+        "team": "Manchester City",
+        "value": 2.245
+      },
+      {
+        "rank": 2,
+        "team_id": 1257,
+        "team": "Arsenal",
+        "value": 2.034
+      },
+      {
+        "rank": 3,
+        "team_id": 1254,
+        "team": "Liverpool",
+        "value": 1.987
+      },
+      {
+        "rank": 4,
+        "team_id": 1253,
+        "team": "Manchester Utd",
+        "value": 1.652
+      },
+      {
+        "rank": 5,
+        "team_id": 1255,
+        "team": "Chelsea",
+        "value": 1.614
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 1252,
+        "team": "Manchester City",
+        "value": 534
+      },
+      {
+        "rank": 2,
+        "team_id": 1254,
+        "team": "Liverpool",
+        "value": 479
+      },
+      {
+        "rank": 3,
+        "team_id": 1257,
+        "team": "Arsenal",
+        "value": 443
+      },
+      {
+        "rank": 4,
+        "team_id": 1256,
+        "team": "Tottenham",
+        "value": 395
+      },
+      {
+        "rank": 5,
+        "team_id": 1255,
+        "team": "Chelsea",
+        "value": 381
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 1252,
+        "team": "Manchester City",
+        "value": 325
+      },
+      {
+        "rank": 2,
+        "team_id": 1254,
+        "team": "Liverpool",
+        "value": 225
+      },
+      {
+        "rank": 3,
+        "team_id": 1257,
+        "team": "Arsenal",
+        "value": 219
+      },
+      {
+        "rank": 4,
+        "team_id": 1255,
+        "team": "Chelsea",
+        "value": 95
+      },
+      {
+        "rank": 5,
+        "team_id": 1256,
+        "team": "Tottenham",
+        "value": 56
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 223,
+        "team": "Hull",
+        "value": 0.8
+      },
+      {
+        "rank": 2,
+        "team_id": 1252,
+        "team": "Manchester City",
+        "value": 0.897
+      },
+      {
+        "rank": 3,
+        "team_id": 1257,
+        "team": "Arsenal",
+        "value": 0.961
+      },
+      {
+        "rank": 4,
+        "team_id": 1254,
+        "team": "Liverpool",
+        "value": 1.09
+      },
+      {
+        "rank": 5,
+        "team_id": 1255,
+        "team": "Chelsea",
+        "value": 1.227
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 7,
+    "n_teams": 11,
+    "teams": [
+      {
+        "team_id": 1257,
+        "team": "Arsenal"
+      },
+      {
+        "team_id": 1260,
+        "team": "Aston Villa"
+      },
+      {
+        "team_id": 1263,
+        "team": "Brighton"
+      },
+      {
+        "team_id": 1255,
+        "team": "Chelsea"
+      },
+      {
+        "team_id": 1262,
+        "team": "Crystal Palace"
+      },
+      {
+        "team_id": 1259,
+        "team": "Everton"
+      },
+      {
+        "team_id": 1254,
+        "team": "Liverpool"
+      },
+      {
+        "team_id": 1252,
+        "team": "Manchester City"
+      },
+      {
+        "team_id": 1253,
+        "team": "Manchester Utd"
+      },
+      {
+        "team_id": 1261,
+        "team": "Newcastle"
+      },
+      {
+        "team_id": 1256,
+        "team": "Tottenham"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 354,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 1257,
+        "team_b_id": 1260,
+        "team_a": "Arsenal",
+        "team_b": "Aston Villa",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 1,
+        "away_wins": 6,
+        "home_win_pct": 46.2,
+        "draw_pct": 7.7,
+        "away_win_pct": 46.2
+      },
+      {
+        "team_a_id": 1260,
+        "team_b_id": 1263,
+        "team_a": "Aston Villa",
+        "team_b": "Brighton",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 2,
+        "away_wins": 5,
+        "home_win_pct": 46.2,
+        "draw_pct": 15.4,
+        "away_win_pct": 38.5
+      },
+      {
+        "team_a_id": 1255,
+        "team_b_id": 1257,
+        "team_a": "Chelsea",
+        "team_b": "Arsenal",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 3,
+        "away_wins": 4,
+        "home_win_pct": 46.2,
+        "draw_pct": 23.1,
+        "away_win_pct": 30.8
+      },
+      {
+        "team_a_id": 1255,
+        "team_b_id": 1263,
+        "team_a": "Chelsea",
+        "team_b": "Brighton",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 3,
+        "away_wins": 4,
+        "home_win_pct": 46.2,
+        "draw_pct": 23.1,
+        "away_win_pct": 30.8
+      },
+      {
+        "team_a_id": 1259,
+        "team_b_id": 1262,
+        "team_a": "Everton",
+        "team_b": "Crystal Palace",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 4,
+        "away_wins": 3,
+        "home_win_pct": 46.2,
+        "draw_pct": 30.8,
+        "away_win_pct": 23.1
+      },
+      {
+        "team_a_id": 1252,
+        "team_b_id": 1253,
+        "team_a": "Manchester City",
+        "team_b": "Manchester Utd",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 2,
+        "away_wins": 5,
+        "home_win_pct": 46.2,
+        "draw_pct": 15.4,
+        "away_win_pct": 38.5
+      },
+      {
+        "team_a_id": 1256,
+        "team_b_id": 1259,
+        "team_a": "Tottenham",
+        "team_b": "Everton",
+        "meetings": 13,
+        "home_wins": 6,
+        "draws": 5,
+        "away_wins": 2,
+        "home_win_pct": 46.2,
+        "draw_pct": 38.5,
+        "away_win_pct": 15.4
+      },
+      {
+        "team_a_id": 1254,
+        "team_b_id": 1261,
+        "team_a": "Liverpool",
+        "team_b": "Newcastle",
+        "meetings": 13,
+        "home_wins": 5,
+        "draws": 4,
+        "away_wins": 4,
+        "home_win_pct": 38.5,
+        "draw_pct": 30.8,
+        "away_win_pct": 30.8
+      },
+      {
+        "team_a_id": 1256,
+        "team_b_id": 1261,
+        "team_a": "Tottenham",
+        "team_b": "Newcastle",
+        "meetings": 13,
+        "home_wins": 5,
+        "draws": 3,
+        "away_wins": 5,
+        "home_win_pct": 38.5,
+        "draw_pct": 23.1,
+        "away_win_pct": 38.5
+      },
+      {
+        "team_a_id": 1257,
+        "team_b_id": 1263,
+        "team_a": "Arsenal",
+        "team_b": "Brighton",
+        "meetings": 13,
+        "home_wins": 4,
+        "draws": 3,
+        "away_wins": 6,
+        "home_win_pct": 30.8,
+        "draw_pct": 23.1,
+        "away_win_pct": 46.2
+      },
+      {
+        "team_a_id": 1252,
+        "team_b_id": 1262,
+        "team_a": "Manchester City",
+        "team_b": "Crystal Palace",
+        "meetings": 13,
+        "home_wins": 4,
+        "draws": 3,
+        "away_wins": 6,
+        "home_win_pct": 30.8,
+        "draw_pct": 23.1,
+        "away_win_pct": 46.2
+      },
+      {
+        "team_a_id": 1253,
+        "team_b_id": 1259,
+        "team_a": "Manchester Utd",
+        "team_b": "Everton",
+        "meetings": 13,
+        "home_wins": 4,
+        "draws": 4,
+        "away_wins": 5,
+        "home_win_pct": 30.8,
+        "draw_pct": 30.8,
+        "away_win_pct": 38.5
+      },
+      {
+        "team_a_id": 1256,
+        "team_b_id": 1260,
+        "team_a": "Tottenham",
+        "team_b": "Aston Villa",
+        "meetings": 13,
+        "home_wins": 4,
+        "draws": 0,
+        "away_wins": 9,
+        "home_win_pct": 30.8,
+        "draw_pct": 0.0,
+        "away_win_pct": 69.2
+      },
+      {
+        "team_a_id": 242,
+        "team_b_id": 243,
+        "team_a": "West Ham",
+        "team_b": "Wolves",
+        "meetings": 12,
+        "home_wins": 10,
+        "draws": 0,
+        "away_wins": 2,
+        "home_win_pct": 83.3,
+        "draw_pct": 0.0,
+        "away_win_pct": 16.7
+      },
+      {
+        "team_a_id": 1257,
+        "team_b_id": 1261,
+        "team_a": "Arsenal",
+        "team_b": "Newcastle",
+        "meetings": 12,
+        "home_wins": 8,
+        "draws": 1,
+        "away_wins": 3,
+        "home_win_pct": 66.7,
+        "draw_pct": 8.3,
+        "away_win_pct": 25.0
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2020-2021",
+      "2021-2022",
+      "2022-2023",
+      "2023-2024",
+      "2024-2025",
+      "2025-2026",
+      "2026-2027"
+    ],
+    "teams": [
+      {
+        "team_id": 1252,
+        "team": "Manchester City",
+        "positions": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "team_id": 1257,
+        "team": "Arsenal",
+        "positions": [
+          8,
+          5,
+          2,
+          2,
+          2,
+          1,
+          2
+        ]
+      },
+      {
+        "team_id": 1254,
+        "team": "Liverpool",
+        "positions": [
+          3,
+          2,
+          5,
+          3,
+          1,
+          5,
+          6
+        ]
+      },
+      {
+        "team_id": 1253,
+        "team": "Manchester Utd",
+        "positions": [
+          2,
+          6,
+          3,
+          8,
+          15,
+          3,
+          12
+        ]
+      },
+      {
+        "team_id": 1255,
+        "team": "Chelsea",
+        "positions": [
+          4,
+          3,
+          12,
+          6,
+          4,
+          10,
+          10
+        ]
+      },
+      {
+        "team_id": 1260,
+        "team": "Aston Villa",
+        "positions": [
+          11,
+          14,
+          7,
+          4,
+          6,
+          4,
+          16
+        ]
+      },
+      {
+        "team_id": 1261,
+        "team": "Newcastle",
+        "positions": [
+          12,
+          11,
+          4,
+          7,
+          5,
+          12,
+          9
+        ]
+      },
+      {
+        "team_id": 1256,
+        "team": "Tottenham",
+        "positions": [
+          7,
+          4,
+          8,
+          5,
+          17,
+          17,
+          20
+        ]
+      },
+      {
+        "team_id": 1263,
+        "team": "Brighton",
+        "positions": [
+          16,
+          9,
+          6,
+          11,
+          8,
+          8,
+          3
+        ]
+      },
+      {
+        "team_id": 242,
+        "team": "West Ham",
+        "positions": [
+          6,
+          7,
+          14,
+          9,
+          14,
+          18,
+          null
+        ]
+      },
+      {
+        "team_id": 1262,
+        "team": "Crystal Palace",
+        "positions": [
+          14,
+          12,
+          11,
+          10,
+          12,
+          15,
+          15
+        ]
+      },
+      {
+        "team_id": 1259,
+        "team": "Everton",
+        "positions": [
+          10,
+          16,
+          17,
+          12,
+          13,
+          13,
+          7
+        ]
+      },
+      {
+        "team_id": 1265,
+        "team": "Brentford",
+        "positions": [
+          null,
+          13,
+          9,
+          16,
+          10,
+          9,
+          4
+        ]
+      },
+      {
+        "team_id": 243,
+        "team": "Wolves",
+        "positions": [
+          13,
+          10,
+          13,
+          15,
+          16,
+          20,
+          null
+        ]
+      },
+      {
+        "team_id": 1264,
+        "team": "Fulham",
+        "positions": [
+          18,
+          null,
+          10,
+          14,
+          11,
+          11,
+          19
+        ]
+      },
+      {
+        "team_id": 1266,
+        "team": "Bournemouth",
+        "positions": [
+          null,
+          null,
+          15,
+          13,
+          9,
+          6,
+          17
+        ]
+      },
+      {
+        "team_id": 1267,
+        "team": "Nottingham",
+        "positions": [
+          null,
+          null,
+          16,
+          17,
+          7,
+          16,
+          13
+        ]
+      },
+      {
+        "team_id": 1258,
+        "team": "Leeds",
+        "positions": [
+          9,
+          17,
+          19,
+          null,
+          null,
+          14,
+          5
+        ]
+      },
+      {
+        "team_id": 239,
+        "team": "Leicester",
+        "positions": [
+          5,
+          8,
+          18,
+          null,
+          18,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 247,
+        "team": "Burnley",
+        "positions": [
+          17,
+          18,
+          null,
+          19,
+          null,
+          19,
+          null
+        ]
+      },
+      {
+        "team_id": 221,
+        "team": "Southampton",
+        "positions": [
+          15,
+          15,
+          20,
+          null,
+          20,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 1268,
+        "team": "Sunderland",
+        "positions": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          14
+        ]
+      },
+      {
+        "team_id": 230,
+        "team": "Sheffield Utd",
+        "positions": [
+          20,
+          null,
+          null,
+          20,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 219,
+        "team": "Ipswich",
+        "positions": [
+          null,
+          null,
+          null,
+          null,
+          19,
+          null,
+          11
+        ]
+      },
+      {
+        "team_id": 406,
+        "team": "Luton",
+        "positions": [
+          null,
+          null,
+          null,
+          18,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 238,
+        "team": "West Brom",
+        "positions": [
+          19,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 233,
+        "team": "Watford",
+        "positions": [
+          null,
+          19,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 226,
+        "team": "Norwich",
+        "positions": [
+          null,
+          20,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "team_id": 223,
+        "team": "Hull",
+        "positions": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8
+        ]
+      },
+      {
+        "team_id": 218,
+        "team": "Coventry",
+        "positions": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          18
+        ]
+      }
+    ]
+  }
+}

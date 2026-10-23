@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:09:21+00:00",
+  "config": {
+    "league": "sweden1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\sweden1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Allsvenskan",
+    "country": "Sweden",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/sweden/allsvenskan"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Mjallby",
+      "champion_id": 1695,
+      "champion_pts": 75,
+      "runner_up": "Hammarby",
+      "runner_up_id": 1696,
+      "margin_pts": 13
+    },
+    {
+      "season": "2026",
+      "champion": "Sirius",
+      "champion_id": 1703,
+      "champion_pts": 51,
+      "runner_up": "Hammarby",
+      "runner_up_id": 1696,
+      "margin_pts": 8
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 13,
+        "tight": false
+      },
+      {
+        "season": "2026",
+        "margin": 8,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026",
+      "margin": 8,
+      "champion": "Sirius",
+      "runner_up": "Hammarby"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 75,
+        "2": 62,
+        "4": 51,
+        "6": 49,
+        "13": 30,
+        "16": 16
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 51,
+        "2": 43,
+        "4": 37,
+        "6": 35,
+        "13": 19,
+        "16": 14
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 13,
+      "safe_pts": 30,
+      "drop_position": 14,
+      "drop_pts": 29,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 29
+        },
+        {
+          "position": 15,
+          "points": 26
+        },
+        {
+          "position": 16,
+          "points": 16
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2026",
+      "safe_position": 13,
+      "safe_pts": 19,
+      "drop_position": 14,
+      "drop_pts": 19,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 19
+        },
+        {
+          "position": 15,
+          "points": 15
+        },
+        {
+          "position": 16,
+          "points": 14
+        }
+      ],
+      "bottom3_range": 5
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 240,
+      "total_goals": 683,
+      "avg_goals": 2.846,
+      "home_wins": 96,
+      "draws": 53,
+      "away_wins": 91,
+      "home_win_pct": 40.0,
+      "draw_pct": 22.1,
+      "away_win_pct": 37.9,
+      "goalless": 14,
+      "goalless_pct": 5.8,
+      "total_points": 667,
+      "avg_points_per_team": 41.69,
+      "n_teams": 16
+    },
+    {
+      "season": "2026",
+      "n_matches": 176,
+      "total_goals": 517,
+      "avg_goals": 2.938,
+      "home_wins": 73,
+      "draws": 41,
+      "away_wins": 62,
+      "home_win_pct": 41.5,
+      "draw_pct": 23.3,
+      "away_win_pct": 35.2,
+      "goalless": 7,
+      "goalless_pct": 4.0,
+      "total_points": 487,
+      "avg_points_per_team": 30.44,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 2.75,
+        "goals": 7.0
+      },
+      {
+        "season": "2026",
+        "luck": 2.875,
+        "goals": 3.625
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "goals",
+      "avg_abs_diff": 7.0
+    }
+  }
+}

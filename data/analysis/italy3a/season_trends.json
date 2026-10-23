@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:58:08+00:00",
+  "config": {
+    "league": "italy3a",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\italy3a",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie C - Group A",
+    "country": "Italy",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/italy/serie-c-group-a"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "L.R. Vicenza",
+      "champion_id": 900,
+      "champion_pts": 89,
+      "runner_up": "Brescia",
+      "runner_up_id": 901,
+      "margin_pts": 20
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Cittadella",
+      "champion_id": 905,
+      "champion_pts": 21,
+      "runner_up": "Brescia",
+      "runner_up_id": 901,
+      "margin_pts": 6
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 20,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 6,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 6,
+      "champion": "Cittadella",
+      "runner_up": "Brescia"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 89,
+        "2": 69,
+        "4": 64,
+        "6": 59,
+        "17": 40,
+        "20": 23
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 21,
+        "2": 15,
+        "4": 13,
+        "6": 12,
+        "17": 6,
+        "20": 2
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 17,
+      "safe_pts": 40,
+      "drop_position": 18,
+      "drop_pts": 36,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 36
+        },
+        {
+          "position": 19,
+          "points": 25
+        },
+        {
+          "position": 20,
+          "points": 23
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 17,
+      "safe_pts": 6,
+      "drop_position": 18,
+      "drop_pts": 6,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 6
+        },
+        {
+          "position": 19,
+          "points": 3
+        },
+        {
+          "position": 20,
+          "points": 2
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 380,
+      "total_goals": 889,
+      "avg_goals": 2.339,
+      "home_wins": 144,
+      "draws": 115,
+      "away_wins": 121,
+      "home_win_pct": 37.9,
+      "draw_pct": 30.3,
+      "away_win_pct": 31.8,
+      "goalless": 37,
+      "goalless_pct": 9.7,
+      "total_points": 1025,
+      "avg_points_per_team": 51.25,
+      "n_teams": 20
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 70,
+      "total_goals": 155,
+      "avg_goals": 2.214,
+      "home_wins": 21,
+      "draws": 28,
+      "away_wins": 21,
+      "home_win_pct": 30.0,
+      "draw_pct": 40.0,
+      "away_win_pct": 30.0,
+      "goalless": 13,
+      "goalless_pct": 18.6,
+      "total_points": 182,
+      "avg_points_per_team": 9.1,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.6,
+        "goals": 8.1
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.9,
+        "goals": 7.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 8.1
+    }
+  }
+}

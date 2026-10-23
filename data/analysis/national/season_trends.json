@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:02:03+00:00",
+  "config": {
+    "league": "national",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\national",
+    "out_stem": null
+  },
+  "league": {
+    "name": "National League",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/national-league"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Rochdale",
+      "champion_id": 450,
+      "champion_pts": 112,
+      "runner_up": "York City",
+      "runner_up_id": 449,
+      "margin_pts": 4
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Boreham Wood",
+      "champion_id": 1103,
+      "champion_pts": 26,
+      "runner_up": "Southend",
+      "runner_up_id": 1105,
+      "margin_pts": 6
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 4,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 6,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 4,
+      "champion": "Rochdale",
+      "runner_up": "York City"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 112,
+        "2": 108,
+        "4": 90,
+        "6": 81,
+        "21": 42,
+        "24": 34
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 26,
+        "2": 20,
+        "4": 19,
+        "6": 18,
+        "21": 9,
+        "24": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 21,
+      "safe_pts": 42,
+      "drop_position": 22,
+      "drop_pts": 38,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 38
+        },
+        {
+          "position": 23,
+          "points": 36
+        },
+        {
+          "position": 24,
+          "points": 34
+        }
+      ],
+      "bottom3_range": 4
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 21,
+      "safe_pts": 9,
+      "drop_position": 22,
+      "drop_pts": 8,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 8
+        },
+        {
+          "position": 23,
+          "points": 4
+        },
+        {
+          "position": 24,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 557,
+      "total_goals": 1626,
+      "avg_goals": 2.919,
+      "home_wins": 242,
+      "draws": 128,
+      "away_wins": 187,
+      "home_win_pct": 43.4,
+      "draw_pct": 23.0,
+      "away_win_pct": 33.6,
+      "goalless": 28,
+      "goalless_pct": 5.0,
+      "total_points": 1534,
+      "avg_points_per_team": 63.92,
+      "n_teams": 24
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 120,
+      "total_goals": 375,
+      "avg_goals": 3.125,
+      "home_wins": 57,
+      "draws": 22,
+      "away_wins": 41,
+      "home_win_pct": 47.5,
+      "draw_pct": 18.3,
+      "away_win_pct": 34.2,
+      "goalless": 1,
+      "goalless_pct": 0.8,
+      "total_points": 338,
+      "avg_points_per_team": 14.08,
+      "n_teams": 24
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.833,
+        "goals": 7.083
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.5,
+        "goals": 6.667
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 7.083
+    }
+  }
+}

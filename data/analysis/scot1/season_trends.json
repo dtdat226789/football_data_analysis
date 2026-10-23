@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:06:20+00:00",
+  "config": {
+    "league": "scot1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "League One",
+    "country": "Scotland",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/scotland/league-one"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Inverness",
+      "champion_id": 1415,
+      "champion_pts": 74,
+      "runner_up": "Stenhousemuir",
+      "runner_up_id": 1412,
+      "margin_pts": 3
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Ross County",
+      "champion_id": 1410,
+      "champion_pts": 19,
+      "runner_up": "Hamilton",
+      "runner_up_id": 1427,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 3,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "Ross County",
+      "runner_up": "Hamilton"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 74,
+        "2": 71,
+        "4": 59,
+        "6": 43,
+        "7": 42,
+        "10": 29
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 19,
+        "2": 19,
+        "4": 13,
+        "6": 9,
+        "7": 8,
+        "10": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 7,
+      "safe_pts": 42,
+      "drop_position": 8,
+      "drop_pts": 38,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 38
+        },
+        {
+          "position": 9,
+          "points": 36
+        },
+        {
+          "position": 10,
+          "points": 29
+        }
+      ],
+      "bottom3_range": 9
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 7,
+      "safe_pts": 8,
+      "drop_position": 8,
+      "drop_pts": 7,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 7
+        },
+        {
+          "position": 9,
+          "points": 5
+        },
+        {
+          "position": 10,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 191,
+      "total_goals": 511,
+      "avg_goals": 2.675,
+      "home_wins": 80,
+      "draws": 52,
+      "away_wins": 59,
+      "home_win_pct": 41.9,
+      "draw_pct": 27.2,
+      "away_win_pct": 30.9,
+      "goalless": 10,
+      "goalless_pct": 5.2,
+      "total_points": 518,
+      "avg_points_per_team": 37.0,
+      "n_teams": 14
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 39,
+      "total_goals": 103,
+      "avg_goals": 2.641,
+      "home_wins": 19,
+      "draws": 9,
+      "away_wins": 11,
+      "home_win_pct": 48.7,
+      "draw_pct": 23.1,
+      "away_win_pct": 28.2,
+      "goalless": 4,
+      "goalless_pct": 10.3,
+      "total_points": 108,
+      "avg_points_per_team": 10.8,
+      "n_teams": 10
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.286,
+        "goals": 4.571
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.0,
+        "goals": 2.6
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 4.571
+    }
+  }
+}

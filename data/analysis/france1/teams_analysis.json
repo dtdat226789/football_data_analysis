@@ -1,0 +1,1566 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:50:00+00:00",
+  "config": {
+    "league": "france1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\france1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Ligue 1",
+    "country": "France",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/france/ligue-1"
+  },
+  "teams": [
+    {
+      "team_id": 495,
+      "team": "PSG",
+      "slug": "psg",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 26,
+      "draws": 6,
+      "losses": 7,
+      "points": 84,
+      "goals_for": 82,
+      "goals_against": 36,
+      "goal_difference": 46,
+      "avg_points_per_season": 42.0,
+      "best_position": 1,
+      "worst_position": 6,
+      "titles": 1
+    },
+    {
+      "team_id": 496,
+      "team": "Lens",
+      "slug": "lens",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 23,
+      "draws": 5,
+      "losses": 11,
+      "points": 74,
+      "goals_for": 75,
+      "goals_against": 44,
+      "goal_difference": 31,
+      "avg_points_per_season": 37.0,
+      "best_position": 2,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 498,
+      "team": "Lyon",
+      "slug": "lyon",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 21,
+      "draws": 8,
+      "losses": 10,
+      "points": 71,
+      "goals_for": 63,
+      "goals_against": 42,
+      "goal_difference": 21,
+      "avg_points_per_season": 35.5,
+      "best_position": 2,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 497,
+      "team": "Lille",
+      "slug": "lille",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 21,
+      "draws": 8,
+      "losses": 10,
+      "points": 71,
+      "goals_for": 60,
+      "goals_against": 41,
+      "goal_difference": 19,
+      "avg_points_per_season": 35.5,
+      "best_position": 3,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 500,
+      "team": "Rennes",
+      "slug": "rennes",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 20,
+      "draws": 9,
+      "losses": 10,
+      "points": 69,
+      "goals_for": 67,
+      "goals_against": 59,
+      "goal_difference": 8,
+      "avg_points_per_season": 34.5,
+      "best_position": 5,
+      "worst_position": 6,
+      "titles": 0
+    },
+    {
+      "team_id": 501,
+      "team": "Monaco",
+      "slug": "monaco",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 20,
+      "draws": 7,
+      "losses": 12,
+      "points": 67,
+      "goals_for": 68,
+      "goals_against": 57,
+      "goal_difference": 11,
+      "avg_points_per_season": 33.5,
+      "best_position": 1,
+      "worst_position": 7,
+      "titles": 1
+    },
+    {
+      "team_id": 499,
+      "team": "Marseille",
+      "slug": "marseille",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 19,
+      "draws": 5,
+      "losses": 15,
+      "points": 62,
+      "goals_for": 70,
+      "goals_against": 53,
+      "goal_difference": 17,
+      "avg_points_per_season": 31.0,
+      "best_position": 5,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 502,
+      "team": "Strasbourg",
+      "slug": "strasbourg",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 17,
+      "draws": 9,
+      "losses": 13,
+      "points": 60,
+      "goals_for": 68,
+      "goals_against": 57,
+      "goal_difference": 11,
+      "avg_points_per_season": 30.0,
+      "best_position": 8,
+      "worst_position": 8,
+      "titles": 0
+    },
+    {
+      "team_id": 505,
+      "team": "Paris FC",
+      "slug": "paris-fc",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 14,
+      "draws": 13,
+      "losses": 12,
+      "points": 55,
+      "goals_for": 55,
+      "goals_against": 53,
+      "goal_difference": 2,
+      "avg_points_per_season": 27.5,
+      "best_position": 3,
+      "worst_position": 11,
+      "titles": 0
+    },
+    {
+      "team_id": 503,
+      "team": "Toulouse",
+      "slug": "toulouse",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 13,
+      "draws": 11,
+      "losses": 15,
+      "points": 50,
+      "goals_for": 54,
+      "goals_against": 55,
+      "goal_difference": -1,
+      "avg_points_per_season": 25.0,
+      "best_position": 9,
+      "worst_position": 13,
+      "titles": 0
+    },
+    {
+      "team_id": 504,
+      "team": "Lorient",
+      "slug": "lorient",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 12,
+      "draws": 14,
+      "losses": 13,
+      "points": 50,
+      "goals_for": 53,
+      "goals_against": 57,
+      "goal_difference": -4,
+      "avg_points_per_season": 25.0,
+      "best_position": 10,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 506,
+      "team": "Brest",
+      "slug": "brest",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 11,
+      "draws": 11,
+      "losses": 17,
+      "points": 44,
+      "goals_for": 50,
+      "goals_against": 63,
+      "goal_difference": -13,
+      "avg_points_per_season": 22.0,
+      "best_position": 11,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 507,
+      "team": "Angers",
+      "slug": "angers",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 11,
+      "draws": 10,
+      "losses": 18,
+      "points": 43,
+      "goals_for": 35,
+      "goals_against": 53,
+      "goal_difference": -18,
+      "avg_points_per_season": 21.5,
+      "best_position": 7,
+      "worst_position": 13,
+      "titles": 0
+    },
+    {
+      "team_id": 508,
+      "team": "Nice",
+      "slug": "nice",
+      "seasons_played": 2,
+      "total_matches": 41,
+      "wins": 9,
+      "draws": 14,
+      "losses": 18,
+      "points": 41,
+      "goals_for": 44,
+      "goals_against": 67,
+      "goal_difference": -23,
+      "avg_points_per_season": 20.5,
+      "best_position": 14,
+      "worst_position": 14,
+      "titles": 0
+    },
+    {
+      "team_id": 510,
+      "team": "Auxerre",
+      "slug": "auxerre",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 10,
+      "draws": 10,
+      "losses": 19,
+      "points": 40,
+      "goals_for": 41,
+      "goals_against": 56,
+      "goal_difference": -15,
+      "avg_points_per_season": 20.0,
+      "best_position": 10,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 509,
+      "team": "Le Havre",
+      "slug": "le-havre",
+      "seasons_played": 2,
+      "total_matches": 39,
+      "wins": 7,
+      "draws": 16,
+      "losses": 16,
+      "points": 37,
+      "goals_for": 36,
+      "goals_against": 51,
+      "goal_difference": -15,
+      "avg_points_per_season": 18.5,
+      "best_position": 15,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 511,
+      "team": "Nantes",
+      "slug": "nantes",
+      "seasons_played": 1,
+      "total_matches": 34,
+      "wins": 5,
+      "draws": 9,
+      "losses": 20,
+      "points": 24,
+      "goals_for": 29,
+      "goals_against": 52,
+      "goal_difference": -23,
+      "avg_points_per_season": 24.0,
+      "best_position": 17,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 512,
+      "team": "Metz",
+      "slug": "metz",
+      "seasons_played": 1,
+      "total_matches": 34,
+      "wins": 3,
+      "draws": 8,
+      "losses": 23,
+      "points": 17,
+      "goals_for": 32,
+      "goals_against": 76,
+      "goal_difference": -44,
+      "avg_points_per_season": 17.0,
+      "best_position": 18,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 516,
+      "team": "Le Mans",
+      "slug": "le-mans",
+      "seasons_played": 1,
+      "total_matches": 5,
+      "wins": 1,
+      "draws": 3,
+      "losses": 1,
+      "points": 6,
+      "goals_for": 9,
+      "goals_against": 9,
+      "goal_difference": 0,
+      "avg_points_per_season": 6.0,
+      "best_position": 9,
+      "worst_position": 9,
+      "titles": 0
+    },
+    {
+      "team_id": 514,
+      "team": "St Etienne",
+      "slug": "st-etienne",
+      "seasons_played": 1,
+      "total_matches": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "points": 4,
+      "goals_for": 2,
+      "goals_against": 4,
+      "goal_difference": -2,
+      "avg_points_per_season": 4.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 517,
+      "team": "Troyes",
+      "slug": "troyes",
+      "seasons_played": 1,
+      "total_matches": 5,
+      "wins": 1,
+      "draws": 1,
+      "losses": 3,
+      "points": 4,
+      "goals_for": 4,
+      "goals_against": 11,
+      "goal_difference": -7,
+      "avg_points_per_season": 4.0,
+      "best_position": 16,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 513,
+      "team": "Rodez",
+      "slug": "rodez",
+      "seasons_played": 1,
+      "total_matches": 2,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "points": 3,
+      "goals_for": 3,
+      "goals_against": 3,
+      "goal_difference": 0,
+      "avg_points_per_season": 3.0,
+      "best_position": 19,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 515,
+      "team": "Red Star",
+      "slug": "red-star",
+      "seasons_played": 1,
+      "total_matches": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 1,
+      "points": 0,
+      "goals_for": 2,
+      "goals_against": 3,
+      "goal_difference": -1,
+      "avg_points_per_season": 0.0,
+      "best_position": 21,
+      "worst_position": 21,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 499,
+      "team": "Marseille",
+      "home": {
+        "matches": 20,
+        "wins": 12,
+        "draws": 4,
+        "losses": 4,
+        "points": 40,
+        "goals_for": 48,
+        "goals_against": 25
+      },
+      "away": {
+        "matches": 19,
+        "wins": 7,
+        "draws": 1,
+        "losses": 11,
+        "points": 22,
+        "goals_for": 22,
+        "goals_against": 28
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 498,
+      "team": "Lyon",
+      "home": {
+        "matches": 20,
+        "wins": 14,
+        "draws": 2,
+        "losses": 4,
+        "points": 44,
+        "goals_for": 38,
+        "goals_against": 20
+      },
+      "away": {
+        "matches": 19,
+        "wins": 7,
+        "draws": 6,
+        "losses": 6,
+        "points": 27,
+        "goals_for": 25,
+        "goals_against": 22
+      },
+      "home_advantage": 17
+    },
+    {
+      "team_id": 496,
+      "team": "Lens",
+      "home": {
+        "matches": 19,
+        "wins": 15,
+        "draws": 0,
+        "losses": 4,
+        "points": 45,
+        "goals_for": 40,
+        "goals_against": 16
+      },
+      "away": {
+        "matches": 20,
+        "wins": 8,
+        "draws": 5,
+        "losses": 7,
+        "points": 29,
+        "goals_for": 35,
+        "goals_against": 28
+      },
+      "home_advantage": 16
+    },
+    {
+      "team_id": 510,
+      "team": "Auxerre",
+      "home": {
+        "matches": 20,
+        "wins": 8,
+        "draws": 4,
+        "losses": 8,
+        "points": 28,
+        "goals_for": 22,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 6,
+        "losses": 11,
+        "points": 12,
+        "goals_for": 19,
+        "goals_against": 35
+      },
+      "home_advantage": 16
+    },
+    {
+      "team_id": 508,
+      "team": "Nice",
+      "home": {
+        "matches": 21,
+        "wins": 6,
+        "draws": 10,
+        "losses": 5,
+        "points": 28,
+        "goals_for": 26,
+        "goals_against": 30
+      },
+      "away": {
+        "matches": 20,
+        "wins": 3,
+        "draws": 4,
+        "losses": 13,
+        "points": 13,
+        "goals_for": 18,
+        "goals_against": 37
+      },
+      "home_advantage": 15
+    },
+    {
+      "team_id": 500,
+      "team": "Rennes",
+      "home": {
+        "matches": 20,
+        "wins": 12,
+        "draws": 5,
+        "losses": 3,
+        "points": 41,
+        "goals_for": 36,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 19,
+        "wins": 8,
+        "draws": 4,
+        "losses": 7,
+        "points": 28,
+        "goals_for": 31,
+        "goals_against": 38
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 504,
+      "team": "Lorient",
+      "home": {
+        "matches": 19,
+        "wins": 8,
+        "draws": 7,
+        "losses": 4,
+        "points": 31,
+        "goals_for": 34,
+        "goals_against": 29
+      },
+      "away": {
+        "matches": 20,
+        "wins": 4,
+        "draws": 7,
+        "losses": 9,
+        "points": 19,
+        "goals_for": 19,
+        "goals_against": 28
+      },
+      "home_advantage": 12
+    },
+    {
+      "team_id": 509,
+      "team": "Le Havre",
+      "home": {
+        "matches": 20,
+        "wins": 5,
+        "draws": 9,
+        "losses": 6,
+        "points": 24,
+        "goals_for": 21,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 19,
+        "wins": 2,
+        "draws": 7,
+        "losses": 10,
+        "points": 13,
+        "goals_for": 15,
+        "goals_against": 30
+      },
+      "home_advantage": 11
+    },
+    {
+      "team_id": 506,
+      "team": "Brest",
+      "home": {
+        "matches": 19,
+        "wins": 7,
+        "draws": 6,
+        "losses": 6,
+        "points": 27,
+        "goals_for": 30,
+        "goals_against": 26
+      },
+      "away": {
+        "matches": 20,
+        "wins": 4,
+        "draws": 5,
+        "losses": 11,
+        "points": 17,
+        "goals_for": 20,
+        "goals_against": 37
+      },
+      "home_advantage": 10
+    },
+    {
+      "team_id": 501,
+      "team": "Monaco",
+      "home": {
+        "matches": 19,
+        "wins": 12,
+        "draws": 2,
+        "losses": 5,
+        "points": 38,
+        "goals_for": 37,
+        "goals_against": 24
+      },
+      "away": {
+        "matches": 20,
+        "wins": 8,
+        "draws": 5,
+        "losses": 7,
+        "points": 29,
+        "goals_for": 31,
+        "goals_against": 33
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 505,
+      "team": "Paris FC",
+      "home": {
+        "matches": 20,
+        "wins": 9,
+        "draws": 5,
+        "losses": 6,
+        "points": 32,
+        "goals_for": 33,
+        "goals_against": 28
+      },
+      "away": {
+        "matches": 19,
+        "wins": 5,
+        "draws": 8,
+        "losses": 6,
+        "points": 23,
+        "goals_for": 22,
+        "goals_against": 25
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 507,
+      "team": "Angers",
+      "home": {
+        "matches": 20,
+        "wins": 7,
+        "draws": 5,
+        "losses": 8,
+        "points": 26,
+        "goals_for": 21,
+        "goals_against": 24
+      },
+      "away": {
+        "matches": 19,
+        "wins": 4,
+        "draws": 5,
+        "losses": 10,
+        "points": 17,
+        "goals_for": 14,
+        "goals_against": 29
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 502,
+      "team": "Strasbourg",
+      "home": {
+        "matches": 19,
+        "wins": 10,
+        "draws": 4,
+        "losses": 5,
+        "points": 34,
+        "goals_for": 33,
+        "goals_against": 21
+      },
+      "away": {
+        "matches": 20,
+        "wins": 7,
+        "draws": 5,
+        "losses": 8,
+        "points": 26,
+        "goals_for": 35,
+        "goals_against": 36
+      },
+      "home_advantage": 8
+    },
+    {
+      "team_id": 503,
+      "team": "Toulouse",
+      "home": {
+        "matches": 20,
+        "wins": 7,
+        "draws": 6,
+        "losses": 7,
+        "points": 27,
+        "goals_for": 28,
+        "goals_against": 29
+      },
+      "away": {
+        "matches": 19,
+        "wins": 6,
+        "draws": 5,
+        "losses": 8,
+        "points": 23,
+        "goals_for": 26,
+        "goals_against": 26
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 516,
+      "team": "Le Mans",
+      "home": {
+        "matches": 3,
+        "wins": 1,
+        "draws": 2,
+        "losses": 0,
+        "points": 5,
+        "goals_for": 6,
+        "goals_against": 5
+      },
+      "away": {
+        "matches": 2,
+        "wins": 0,
+        "draws": 1,
+        "losses": 1,
+        "points": 1,
+        "goals_for": 3,
+        "goals_against": 4
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 514,
+      "team": "St Etienne",
+      "home": {
+        "matches": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "points": 4,
+        "goals_for": 1,
+        "goals_against": 0
+      },
+      "away": {
+        "matches": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "points": 0,
+        "goals_for": 1,
+        "goals_against": 4
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 512,
+      "team": "Metz",
+      "home": {
+        "matches": 17,
+        "wins": 2,
+        "draws": 4,
+        "losses": 11,
+        "points": 10,
+        "goals_for": 15,
+        "goals_against": 32
+      },
+      "away": {
+        "matches": 17,
+        "wins": 1,
+        "draws": 4,
+        "losses": 12,
+        "points": 7,
+        "goals_for": 17,
+        "goals_against": 44
+      },
+      "home_advantage": 3
+    },
+    {
+      "team_id": 511,
+      "team": "Nantes",
+      "home": {
+        "matches": 17,
+        "wins": 3,
+        "draws": 4,
+        "losses": 10,
+        "points": 13,
+        "goals_for": 18,
+        "goals_against": 27
+      },
+      "away": {
+        "matches": 17,
+        "wins": 2,
+        "draws": 5,
+        "losses": 10,
+        "points": 11,
+        "goals_for": 11,
+        "goals_against": 25
+      },
+      "home_advantage": 2
+    },
+    {
+      "team_id": 515,
+      "team": "Red Star",
+      "home": {
+        "matches": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "points": 0,
+        "goals_for": 2,
+        "goals_against": 3
+      },
+      "away": {
+        "matches": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "points": 0,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      "home_advantage": 0
+    },
+    {
+      "team_id": 495,
+      "team": "PSG",
+      "home": {
+        "matches": 18,
+        "wins": 13,
+        "draws": 2,
+        "losses": 3,
+        "points": 41,
+        "goals_for": 42,
+        "goals_against": 14
+      },
+      "away": {
+        "matches": 21,
+        "wins": 13,
+        "draws": 4,
+        "losses": 4,
+        "points": 43,
+        "goals_for": 40,
+        "goals_against": 22
+      },
+      "home_advantage": -2
+    },
+    {
+      "team_id": 517,
+      "team": "Troyes",
+      "home": {
+        "matches": 2,
+        "wins": 0,
+        "draws": 1,
+        "losses": 1,
+        "points": 1,
+        "goals_for": 2,
+        "goals_against": 6
+      },
+      "away": {
+        "matches": 3,
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "points": 3,
+        "goals_for": 2,
+        "goals_against": 5
+      },
+      "home_advantage": -2
+    },
+    {
+      "team_id": 513,
+      "team": "Rodez",
+      "home": {
+        "matches": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "points": 0,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      "away": {
+        "matches": 2,
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "points": 3,
+        "goals_for": 3,
+        "goals_against": 3
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 497,
+      "team": "Lille",
+      "home": {
+        "matches": 19,
+        "wins": 9,
+        "draws": 6,
+        "losses": 4,
+        "points": 33,
+        "goals_for": 28,
+        "goals_against": 19
+      },
+      "away": {
+        "matches": 20,
+        "wins": 12,
+        "draws": 2,
+        "losses": 6,
+        "points": 38,
+        "goals_for": 32,
+        "goals_against": 22
+      },
+      "home_advantage": -5
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 495,
+        "team": "PSG",
+        "value": 2.154
+      },
+      {
+        "rank": 2,
+        "team_id": 496,
+        "team": "Lens",
+        "value": 1.897
+      },
+      {
+        "rank": 3,
+        "team_id": 498,
+        "team": "Lyon",
+        "value": 1.821
+      },
+      {
+        "rank": 4,
+        "team_id": 497,
+        "team": "Lille",
+        "value": 1.821
+      },
+      {
+        "rank": 5,
+        "team_id": 500,
+        "team": "Rennes",
+        "value": 1.769
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 495,
+        "team": "PSG",
+        "value": 82
+      },
+      {
+        "rank": 2,
+        "team_id": 496,
+        "team": "Lens",
+        "value": 75
+      },
+      {
+        "rank": 3,
+        "team_id": 499,
+        "team": "Marseille",
+        "value": 70
+      },
+      {
+        "rank": 4,
+        "team_id": 501,
+        "team": "Monaco",
+        "value": 68
+      },
+      {
+        "rank": 5,
+        "team_id": 502,
+        "team": "Strasbourg",
+        "value": 68
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 495,
+        "team": "PSG",
+        "value": 46
+      },
+      {
+        "rank": 2,
+        "team_id": 496,
+        "team": "Lens",
+        "value": 31
+      },
+      {
+        "rank": 3,
+        "team_id": 498,
+        "team": "Lyon",
+        "value": 21
+      },
+      {
+        "rank": 4,
+        "team_id": 497,
+        "team": "Lille",
+        "value": 19
+      },
+      {
+        "rank": 5,
+        "team_id": 499,
+        "team": "Marseille",
+        "value": 17
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 495,
+        "team": "PSG",
+        "value": 0.923
+      },
+      {
+        "rank": 2,
+        "team_id": 497,
+        "team": "Lille",
+        "value": 1.051
+      },
+      {
+        "rank": 3,
+        "team_id": 498,
+        "team": "Lyon",
+        "value": 1.077
+      },
+      {
+        "rank": 4,
+        "team_id": 496,
+        "team": "Lens",
+        "value": 1.128
+      },
+      {
+        "rank": 5,
+        "team_id": 509,
+        "team": "Le Havre",
+        "value": 1.308
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 2,
+    "n_teams": 16,
+    "teams": [
+      {
+        "team_id": 507,
+        "team": "Angers"
+      },
+      {
+        "team_id": 510,
+        "team": "Auxerre"
+      },
+      {
+        "team_id": 506,
+        "team": "Brest"
+      },
+      {
+        "team_id": 509,
+        "team": "Le Havre"
+      },
+      {
+        "team_id": 496,
+        "team": "Lens"
+      },
+      {
+        "team_id": 497,
+        "team": "Lille"
+      },
+      {
+        "team_id": 504,
+        "team": "Lorient"
+      },
+      {
+        "team_id": 498,
+        "team": "Lyon"
+      },
+      {
+        "team_id": 499,
+        "team": "Marseille"
+      },
+      {
+        "team_id": 501,
+        "team": "Monaco"
+      },
+      {
+        "team_id": 508,
+        "team": "Nice"
+      },
+      {
+        "team_id": 495,
+        "team": "PSG"
+      },
+      {
+        "team_id": 505,
+        "team": "Paris FC"
+      },
+      {
+        "team_id": 500,
+        "team": "Rennes"
+      },
+      {
+        "team_id": 502,
+        "team": "Strasbourg"
+      },
+      {
+        "team_id": 503,
+        "team": "Toulouse"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 166,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 506,
+        "team_b_id": 510,
+        "team_a": "Brest",
+        "team_b": "Auxerre",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 498,
+        "team_b_id": 500,
+        "team_a": "Lyon",
+        "team_b": "Rennes",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 499,
+        "team_b_id": 501,
+        "team_a": "Marseille",
+        "team_b": "Monaco",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 499,
+        "team_b_id": 500,
+        "team_a": "Marseille",
+        "team_b": "Rennes",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 508,
+        "team_b_id": 510,
+        "team_a": "Nice",
+        "team_b": "Auxerre",
+        "meetings": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 507,
+        "team_b_id": 510,
+        "team_a": "Angers",
+        "team_b": "Auxerre",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 506,
+        "team_b_id": 509,
+        "team_a": "Brest",
+        "team_b": "Le Havre",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 496,
+        "team_b_id": 510,
+        "team_a": "Lens",
+        "team_b": "Auxerre",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 496,
+        "team_b_id": 504,
+        "team_a": "Lens",
+        "team_b": "Lorient",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 496,
+        "team_b_id": 502,
+        "team_a": "Lens",
+        "team_b": "Strasbourg",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 497,
+        "team_b_id": 508,
+        "team_a": "Lille",
+        "team_b": "Nice",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 498,
+        "team_b_id": 510,
+        "team_a": "Lyon",
+        "team_b": "Auxerre",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 501,
+        "team_b_id": 502,
+        "team_a": "Monaco",
+        "team_b": "Strasbourg",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 495,
+        "team_b_id": 499,
+        "team_a": "PSG",
+        "team_b": "Marseille",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 66.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 33.3
+      },
+      {
+        "team_a_id": 495,
+        "team_b_id": 500,
+        "team_a": "PSG",
+        "team_b": "Rennes",
+        "meetings": 3,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 66.7,
+        "draw_pct": 33.3,
+        "away_win_pct": 0.0
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2025-2026",
+      "2026-2027"
+    ],
+    "teams": [
+      {
+        "team_id": 495,
+        "team": "PSG",
+        "positions": [
+          1,
+          6
+        ]
+      },
+      {
+        "team_id": 496,
+        "team": "Lens",
+        "positions": [
+          2,
+          15
+        ]
+      },
+      {
+        "team_id": 498,
+        "team": "Lyon",
+        "positions": [
+          4,
+          2
+        ]
+      },
+      {
+        "team_id": 497,
+        "team": "Lille",
+        "positions": [
+          3,
+          4
+        ]
+      },
+      {
+        "team_id": 500,
+        "team": "Rennes",
+        "positions": [
+          6,
+          5
+        ]
+      },
+      {
+        "team_id": 501,
+        "team": "Monaco",
+        "positions": [
+          7,
+          1
+        ]
+      },
+      {
+        "team_id": 499,
+        "team": "Marseille",
+        "positions": [
+          5,
+          17
+        ]
+      },
+      {
+        "team_id": 502,
+        "team": "Strasbourg",
+        "positions": [
+          8,
+          8
+        ]
+      },
+      {
+        "team_id": 505,
+        "team": "Paris FC",
+        "positions": [
+          11,
+          3
+        ]
+      },
+      {
+        "team_id": 503,
+        "team": "Toulouse",
+        "positions": [
+          9,
+          13
+        ]
+      },
+      {
+        "team_id": 504,
+        "team": "Lorient",
+        "positions": [
+          10,
+          12
+        ]
+      },
+      {
+        "team_id": 506,
+        "team": "Brest",
+        "positions": [
+          12,
+          11
+        ]
+      },
+      {
+        "team_id": 507,
+        "team": "Angers",
+        "positions": [
+          13,
+          7
+        ]
+      },
+      {
+        "team_id": 508,
+        "team": "Nice",
+        "positions": [
+          14,
+          14
+        ]
+      },
+      {
+        "team_id": 510,
+        "team": "Auxerre",
+        "positions": [
+          16,
+          10
+        ]
+      },
+      {
+        "team_id": 509,
+        "team": "Le Havre",
+        "positions": [
+          15,
+          18
+        ]
+      },
+      {
+        "team_id": 511,
+        "team": "Nantes",
+        "positions": [
+          17,
+          null
+        ]
+      },
+      {
+        "team_id": 512,
+        "team": "Metz",
+        "positions": [
+          18,
+          null
+        ]
+      },
+      {
+        "team_id": 516,
+        "team": "Le Mans",
+        "positions": [
+          null,
+          9
+        ]
+      },
+      {
+        "team_id": 514,
+        "team": "St Etienne",
+        "positions": [
+          20,
+          null
+        ]
+      },
+      {
+        "team_id": 517,
+        "team": "Troyes",
+        "positions": [
+          null,
+          16
+        ]
+      },
+      {
+        "team_id": 513,
+        "team": "Rodez",
+        "positions": [
+          19,
+          null
+        ]
+      },
+      {
+        "team_id": 515,
+        "team": "Red Star",
+        "positions": [
+          21,
+          null
+        ]
+      }
+    ]
+  }
+}

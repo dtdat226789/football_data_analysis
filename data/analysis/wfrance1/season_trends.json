@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:11:29+00:00",
+  "config": {
+    "league": "wfrance1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\wfrance1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premiere Ligue Women",
+    "country": "France",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/france/premiere-ligue-women"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Lyon W",
+      "champion_id": 1824,
+      "champion_pts": 66,
+      "runner_up": "Paris FC W",
+      "runner_up_id": 1825,
+      "margin_pts": 15
+    },
+    {
+      "season": "2026-2027",
+      "champion": "OL Lyonnes W",
+      "champion_id": 1836,
+      "champion_pts": 9,
+      "runner_up": "PSG W",
+      "runner_up_id": 1826,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 15,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "OL Lyonnes W",
+      "runner_up": "PSG W"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 66,
+        "2": 51,
+        "4": 41,
+        "6": 33,
+        "9": 19,
+        "12": 13
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 9,
+        "2": 9,
+        "4": 6,
+        "6": 4,
+        "9": 3,
+        "12": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 9,
+      "safe_pts": 19,
+      "drop_position": 10,
+      "drop_pts": 15,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 15
+        },
+        {
+          "position": 11,
+          "points": 15
+        },
+        {
+          "position": 12,
+          "points": 13
+        }
+      ],
+      "bottom3_range": 2
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 9,
+      "safe_pts": 3,
+      "drop_position": 10,
+      "drop_pts": 1,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 1
+        },
+        {
+          "position": 11,
+          "points": 1
+        },
+        {
+          "position": 12,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 0
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 135,
+      "total_goals": 410,
+      "avg_goals": 3.037,
+      "home_wins": 53,
+      "draws": 25,
+      "away_wins": 57,
+      "home_win_pct": 39.3,
+      "draw_pct": 18.5,
+      "away_win_pct": 42.2,
+      "goalless": 7,
+      "goalless_pct": 5.2,
+      "total_points": 380,
+      "avg_points_per_team": 31.67,
+      "n_teams": 12
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 18,
+      "total_goals": 61,
+      "avg_goals": 3.389,
+      "home_wins": 9,
+      "draws": 3,
+      "away_wins": 6,
+      "home_win_pct": 50.0,
+      "draw_pct": 16.7,
+      "away_win_pct": 33.3,
+      "goalless": 1,
+      "goalless_pct": 5.6,
+      "total_points": 51,
+      "avg_points_per_team": 4.25,
+      "n_teams": 12
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.167,
+        "goals": 3.333
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.333,
+        "goals": 3.667
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 3.667
+    }
+  }
+}

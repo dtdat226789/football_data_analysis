@@ -1,0 +1,2135 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:45:21+00:00",
+  "config": {
+    "league": "brazil1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\brazil1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie A Betano",
+    "country": "Brazil",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/brazil/serie-a-betano"
+  },
+  "teams": [
+    {
+      "team_id": 99,
+      "team": "Flamengo RJ",
+      "slug": "flamengo-rj",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 41,
+      "draws": 16,
+      "losses": 9,
+      "points": 139,
+      "goals_for": 133,
+      "goals_against": 50,
+      "goal_difference": 83,
+      "avg_points_per_season": 69.5,
+      "best_position": 1,
+      "worst_position": 1,
+      "titles": 2
+    },
+    {
+      "team_id": 100,
+      "team": "Palmeiras",
+      "slug": "palmeiras",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 39,
+      "draws": 16,
+      "losses": 11,
+      "points": 133,
+      "goals_for": 113,
+      "goals_against": 54,
+      "goal_difference": 59,
+      "avg_points_per_season": 66.5,
+      "best_position": 2,
+      "worst_position": 2,
+      "titles": 0
+    },
+    {
+      "team_id": 101,
+      "team": "Cruzeiro",
+      "slug": "cruzeiro",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 32,
+      "draws": 19,
+      "losses": 15,
+      "points": 115,
+      "goals_for": 97,
+      "goals_against": 71,
+      "goal_difference": 26,
+      "avg_points_per_season": 57.5,
+      "best_position": 3,
+      "worst_position": 6,
+      "titles": 0
+    },
+    {
+      "team_id": 103,
+      "team": "Fluminense",
+      "slug": "fluminense",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 32,
+      "draws": 16,
+      "losses": 18,
+      "points": 112,
+      "goals_for": 94,
+      "goals_against": 75,
+      "goal_difference": 19,
+      "avg_points_per_season": 56.0,
+      "best_position": 4,
+      "worst_position": 5,
+      "titles": 0
+    },
+    {
+      "team_id": 105,
+      "team": "Bahia",
+      "slug": "bahia",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 29,
+      "draws": 19,
+      "losses": 18,
+      "points": 106,
+      "goals_for": 93,
+      "goals_against": 81,
+      "goal_difference": 12,
+      "avg_points_per_season": 53.0,
+      "best_position": 5,
+      "worst_position": 7,
+      "titles": 0
+    },
+    {
+      "team_id": 102,
+      "team": "Mirassol",
+      "slug": "mirassol",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 26,
+      "draws": 21,
+      "losses": 19,
+      "points": 99,
+      "goals_for": 96,
+      "goals_against": 81,
+      "goal_difference": 15,
+      "avg_points_per_season": 49.5,
+      "best_position": 4,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 104,
+      "team": "Botafogo RJ",
+      "slug": "botafogo-rj",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 26,
+      "draws": 20,
+      "losses": 20,
+      "points": 98,
+      "goals_for": 99,
+      "goals_against": 83,
+      "goal_difference": 16,
+      "avg_points_per_season": 49.0,
+      "best_position": 6,
+      "worst_position": 12,
+      "titles": 0
+    },
+    {
+      "team_id": 119,
+      "team": "Atletico-MG",
+      "slug": "atletico-mg",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 23,
+      "draws": 19,
+      "losses": 23,
+      "points": 88,
+      "goals_for": 79,
+      "goals_against": 76,
+      "goal_difference": 3,
+      "avg_points_per_season": 44.0,
+      "best_position": 7,
+      "worst_position": 21,
+      "titles": 0
+    },
+    {
+      "team_id": 106,
+      "team": "Sao Paulo",
+      "slug": "sao-paulo",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 24,
+      "draws": 15,
+      "losses": 26,
+      "points": 87,
+      "goals_for": 75,
+      "goals_against": 77,
+      "goal_difference": -2,
+      "avg_points_per_season": 43.5,
+      "best_position": 8,
+      "worst_position": 11,
+      "titles": 0
+    },
+    {
+      "team_id": 109,
+      "team": "Santos",
+      "slug": "santos",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 22,
+      "draws": 19,
+      "losses": 24,
+      "points": 85,
+      "goals_for": 86,
+      "goals_against": 90,
+      "goal_difference": -4,
+      "avg_points_per_season": 42.5,
+      "best_position": 8,
+      "worst_position": 11,
+      "titles": 0
+    },
+    {
+      "team_id": 107,
+      "team": "Bragantino",
+      "slug": "bragantino",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 24,
+      "draws": 12,
+      "losses": 29,
+      "points": 84,
+      "goals_for": 78,
+      "goals_against": 88,
+      "goal_difference": -10,
+      "avg_points_per_season": 42.0,
+      "best_position": 9,
+      "worst_position": 10,
+      "titles": 0
+    },
+    {
+      "team_id": 110,
+      "team": "Corinthians",
+      "slug": "corinthians",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 20,
+      "draws": 19,
+      "losses": 27,
+      "points": 79,
+      "goals_for": 71,
+      "goals_against": 79,
+      "goal_difference": -8,
+      "avg_points_per_season": 39.5,
+      "best_position": 12,
+      "worst_position": 14,
+      "titles": 0
+    },
+    {
+      "team_id": 108,
+      "team": "Gremio",
+      "slug": "gremio",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 20,
+      "draws": 18,
+      "losses": 28,
+      "points": 78,
+      "goals_for": 77,
+      "goals_against": 88,
+      "goal_difference": -11,
+      "avg_points_per_season": 39.0,
+      "best_position": 10,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 113,
+      "team": "Vitoria",
+      "slug": "vitoria",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 20,
+      "draws": 18,
+      "losses": 28,
+      "points": 78,
+      "goals_for": 63,
+      "goals_against": 94,
+      "goal_difference": -31,
+      "avg_points_per_season": 39.0,
+      "best_position": 13,
+      "worst_position": 15,
+      "titles": 0
+    },
+    {
+      "team_id": 111,
+      "team": "Vasco",
+      "slug": "vasco",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 21,
+      "draws": 13,
+      "losses": 31,
+      "points": 76,
+      "goals_for": 89,
+      "goals_against": 101,
+      "goal_difference": -12,
+      "avg_points_per_season": 38.0,
+      "best_position": 13,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 112,
+      "team": "Internacional",
+      "slug": "internacional",
+      "seasons_played": 2,
+      "total_matches": 66,
+      "wins": 17,
+      "draws": 21,
+      "losses": 28,
+      "points": 72,
+      "goals_for": 74,
+      "goals_against": 93,
+      "goal_difference": -19,
+      "avg_points_per_season": 36.0,
+      "best_position": 14,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 139,
+      "team": "Athletico-PR",
+      "slug": "athletico-pr",
+      "seasons_played": 1,
+      "total_matches": 28,
+      "wins": 14,
+      "draws": 7,
+      "losses": 7,
+      "points": 49,
+      "goals_for": 43,
+      "goals_against": 32,
+      "goal_difference": 11,
+      "avg_points_per_season": 49.0,
+      "best_position": 3,
+      "worst_position": 3,
+      "titles": 0
+    },
+    {
+      "team_id": 114,
+      "team": "Ceara",
+      "slug": "ceara",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 11,
+      "draws": 10,
+      "losses": 17,
+      "points": 43,
+      "goals_for": 34,
+      "goals_against": 40,
+      "goal_difference": -6,
+      "avg_points_per_season": 43.0,
+      "best_position": 16,
+      "worst_position": 16,
+      "titles": 0
+    },
+    {
+      "team_id": 115,
+      "team": "Fortaleza",
+      "slug": "fortaleza",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 11,
+      "draws": 10,
+      "losses": 17,
+      "points": 43,
+      "goals_for": 43,
+      "goals_against": 58,
+      "goal_difference": -15,
+      "avg_points_per_season": 43.0,
+      "best_position": 17,
+      "worst_position": 17,
+      "titles": 0
+    },
+    {
+      "team_id": 140,
+      "team": "Coritiba",
+      "slug": "coritiba",
+      "seasons_played": 1,
+      "total_matches": 28,
+      "wins": 10,
+      "draws": 8,
+      "losses": 10,
+      "points": 38,
+      "goals_for": 37,
+      "goals_against": 43,
+      "goal_difference": -6,
+      "avg_points_per_season": 38.0,
+      "best_position": 9,
+      "worst_position": 9,
+      "titles": 0
+    },
+    {
+      "team_id": 117,
+      "team": "Juventude",
+      "slug": "juventude",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 9,
+      "draws": 8,
+      "losses": 21,
+      "points": 35,
+      "goals_for": 35,
+      "goals_against": 69,
+      "goal_difference": -34,
+      "avg_points_per_season": 35.0,
+      "best_position": 19,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 141,
+      "team": "Remo",
+      "slug": "remo",
+      "seasons_played": 1,
+      "total_matches": 28,
+      "wins": 5,
+      "draws": 8,
+      "losses": 15,
+      "points": 23,
+      "goals_for": 32,
+      "goals_against": 47,
+      "goal_difference": -15,
+      "avg_points_per_season": 23.0,
+      "best_position": 19,
+      "worst_position": 19,
+      "titles": 0
+    },
+    {
+      "team_id": 142,
+      "team": "Chapecoense-SC",
+      "slug": "chapecoense-sc",
+      "seasons_played": 1,
+      "total_matches": 27,
+      "wins": 3,
+      "draws": 9,
+      "losses": 15,
+      "points": 18,
+      "goals_for": 29,
+      "goals_against": 53,
+      "goal_difference": -24,
+      "avg_points_per_season": 18.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 118,
+      "team": "Sport Recife",
+      "slug": "sport-recife",
+      "seasons_played": 1,
+      "total_matches": 38,
+      "wins": 2,
+      "draws": 11,
+      "losses": 25,
+      "points": 17,
+      "goals_for": 28,
+      "goals_against": 75,
+      "goal_difference": -47,
+      "avg_points_per_season": 17.0,
+      "best_position": 20,
+      "worst_position": 20,
+      "titles": 0
+    },
+    {
+      "team_id": 116,
+      "team": "Atletico",
+      "slug": "atletico",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 18,
+      "worst_position": 18,
+      "titles": 0
+    },
+    {
+      "team_id": 137,
+      "team": "MG-Bahia",
+      "slug": "mg-bahia",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 39,
+      "worst_position": 39,
+      "titles": 0
+    },
+    {
+      "team_id": 134,
+      "team": "MG-Botafogo RJ",
+      "slug": "mg-botafogo-rj",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 36,
+      "worst_position": 36,
+      "titles": 0
+    },
+    {
+      "team_id": 131,
+      "team": "MG-Bragantino",
+      "slug": "mg-bragantino",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 33,
+      "worst_position": 33,
+      "titles": 0
+    },
+    {
+      "team_id": 132,
+      "team": "MG-Ceara",
+      "slug": "mg-ceara",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 34,
+      "worst_position": 34,
+      "titles": 0
+    },
+    {
+      "team_id": 128,
+      "team": "MG-Corinthians",
+      "slug": "mg-corinthians",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 30,
+      "worst_position": 30,
+      "titles": 0
+    },
+    {
+      "team_id": 125,
+      "team": "MG-Cruzeiro",
+      "slug": "mg-cruzeiro",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 27,
+      "worst_position": 27,
+      "titles": 0
+    },
+    {
+      "team_id": 124,
+      "team": "MG-Flamengo RJ",
+      "slug": "mg-flamengo-rj",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 26,
+      "worst_position": 26,
+      "titles": 0
+    },
+    {
+      "team_id": 130,
+      "team": "MG-Fluminense",
+      "slug": "mg-fluminense",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 32,
+      "worst_position": 32,
+      "titles": 0
+    },
+    {
+      "team_id": 122,
+      "team": "MG-Fortaleza",
+      "slug": "mg-fortaleza",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 24,
+      "worst_position": 24,
+      "titles": 0
+    },
+    {
+      "team_id": 121,
+      "team": "MG-Gremio",
+      "slug": "mg-gremio",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 23,
+      "worst_position": 23,
+      "titles": 0
+    },
+    {
+      "team_id": 136,
+      "team": "MG-Internacional",
+      "slug": "mg-internacional",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 38,
+      "worst_position": 38,
+      "titles": 0
+    },
+    {
+      "team_id": 129,
+      "team": "MG-Juventude",
+      "slug": "mg-juventude",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 31,
+      "worst_position": 31,
+      "titles": 0
+    },
+    {
+      "team_id": 133,
+      "team": "MG-Mirassol",
+      "slug": "mg-mirassol",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 35,
+      "worst_position": 35,
+      "titles": 0
+    },
+    {
+      "team_id": 120,
+      "team": "MG-Palmeiras",
+      "slug": "mg-palmeiras",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 22,
+      "worst_position": 22,
+      "titles": 0
+    },
+    {
+      "team_id": 126,
+      "team": "MG-Santos",
+      "slug": "mg-santos",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 28,
+      "worst_position": 28,
+      "titles": 0
+    },
+    {
+      "team_id": 127,
+      "team": "MG-Sao Paulo",
+      "slug": "mg-sao-paulo",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 29,
+      "worst_position": 29,
+      "titles": 0
+    },
+    {
+      "team_id": 135,
+      "team": "MG-Sport Recife",
+      "slug": "mg-sport-recife",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 37,
+      "worst_position": 37,
+      "titles": 0
+    },
+    {
+      "team_id": 138,
+      "team": "MG-Vasco",
+      "slug": "mg-vasco",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 40,
+      "worst_position": 40,
+      "titles": 0
+    },
+    {
+      "team_id": 123,
+      "team": "MG-Vitoria",
+      "slug": "mg-vitoria",
+      "seasons_played": 1,
+      "total_matches": 0,
+      "wins": 0,
+      "draws": 0,
+      "losses": 0,
+      "points": 0,
+      "goals_for": 0,
+      "goals_against": 0,
+      "goal_difference": 0,
+      "avg_points_per_season": 0.0,
+      "best_position": 25,
+      "worst_position": 25,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 103,
+      "team": "Fluminense",
+      "home": {
+        "matches": 33,
+        "wins": 25,
+        "draws": 4,
+        "losses": 4,
+        "points": 79,
+        "goals_for": 55,
+        "goals_against": 25
+      },
+      "away": {
+        "matches": 33,
+        "wins": 7,
+        "draws": 12,
+        "losses": 14,
+        "points": 33,
+        "goals_for": 39,
+        "goals_against": 50
+      },
+      "home_advantage": 46
+    },
+    {
+      "team_id": 113,
+      "team": "Vitoria",
+      "home": {
+        "matches": 33,
+        "wins": 18,
+        "draws": 7,
+        "losses": 8,
+        "points": 61,
+        "goals_for": 39,
+        "goals_against": 27
+      },
+      "away": {
+        "matches": 33,
+        "wins": 2,
+        "draws": 11,
+        "losses": 20,
+        "points": 17,
+        "goals_for": 24,
+        "goals_against": 67
+      },
+      "home_advantage": 44
+    },
+    {
+      "team_id": 108,
+      "team": "Gremio",
+      "home": {
+        "matches": 33,
+        "wins": 16,
+        "draws": 9,
+        "losses": 8,
+        "points": 57,
+        "goals_for": 46,
+        "goals_against": 33
+      },
+      "away": {
+        "matches": 33,
+        "wins": 4,
+        "draws": 9,
+        "losses": 20,
+        "points": 21,
+        "goals_for": 31,
+        "goals_against": 55
+      },
+      "home_advantage": 36
+    },
+    {
+      "team_id": 106,
+      "team": "Sao Paulo",
+      "home": {
+        "matches": 32,
+        "wins": 18,
+        "draws": 7,
+        "losses": 7,
+        "points": 61,
+        "goals_for": 48,
+        "goals_against": 27
+      },
+      "away": {
+        "matches": 33,
+        "wins": 6,
+        "draws": 8,
+        "losses": 19,
+        "points": 26,
+        "goals_for": 27,
+        "goals_against": 50
+      },
+      "home_advantage": 35
+    },
+    {
+      "team_id": 119,
+      "team": "Atletico-MG",
+      "home": {
+        "matches": 32,
+        "wins": 16,
+        "draws": 13,
+        "losses": 3,
+        "points": 61,
+        "goals_for": 53,
+        "goals_against": 34
+      },
+      "away": {
+        "matches": 33,
+        "wins": 7,
+        "draws": 6,
+        "losses": 20,
+        "points": 27,
+        "goals_for": 26,
+        "goals_against": 42
+      },
+      "home_advantage": 34
+    },
+    {
+      "team_id": 102,
+      "team": "Mirassol",
+      "home": {
+        "matches": 34,
+        "wins": 18,
+        "draws": 12,
+        "losses": 4,
+        "points": 66,
+        "goals_for": 63,
+        "goals_against": 38
+      },
+      "away": {
+        "matches": 32,
+        "wins": 8,
+        "draws": 9,
+        "losses": 15,
+        "points": 33,
+        "goals_for": 33,
+        "goals_against": 43
+      },
+      "home_advantage": 33
+    },
+    {
+      "team_id": 105,
+      "team": "Bahia",
+      "home": {
+        "matches": 33,
+        "wins": 20,
+        "draws": 9,
+        "losses": 4,
+        "points": 69,
+        "goals_for": 55,
+        "goals_against": 28
+      },
+      "away": {
+        "matches": 33,
+        "wins": 9,
+        "draws": 10,
+        "losses": 14,
+        "points": 37,
+        "goals_for": 38,
+        "goals_against": 53
+      },
+      "home_advantage": 32
+    },
+    {
+      "team_id": 111,
+      "team": "Vasco",
+      "home": {
+        "matches": 33,
+        "wins": 15,
+        "draws": 6,
+        "losses": 12,
+        "points": 51,
+        "goals_for": 52,
+        "goals_against": 44
+      },
+      "away": {
+        "matches": 32,
+        "wins": 6,
+        "draws": 7,
+        "losses": 19,
+        "points": 25,
+        "goals_for": 37,
+        "goals_against": 57
+      },
+      "home_advantage": 26
+    },
+    {
+      "team_id": 99,
+      "team": "Flamengo RJ",
+      "home": {
+        "matches": 33,
+        "wins": 24,
+        "draws": 8,
+        "losses": 1,
+        "points": 80,
+        "goals_for": 74,
+        "goals_against": 18
+      },
+      "away": {
+        "matches": 33,
+        "wins": 17,
+        "draws": 8,
+        "losses": 8,
+        "points": 59,
+        "goals_for": 59,
+        "goals_against": 32
+      },
+      "home_advantage": 21
+    },
+    {
+      "team_id": 101,
+      "team": "Cruzeiro",
+      "home": {
+        "matches": 33,
+        "wins": 20,
+        "draws": 8,
+        "losses": 5,
+        "points": 68,
+        "goals_for": 59,
+        "goals_against": 30
+      },
+      "away": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 11,
+        "losses": 10,
+        "points": 47,
+        "goals_for": 38,
+        "goals_against": 41
+      },
+      "home_advantage": 21
+    },
+    {
+      "team_id": 104,
+      "team": "Botafogo RJ",
+      "home": {
+        "matches": 33,
+        "wins": 16,
+        "draws": 11,
+        "losses": 6,
+        "points": 59,
+        "goals_for": 63,
+        "goals_against": 44
+      },
+      "away": {
+        "matches": 33,
+        "wins": 10,
+        "draws": 9,
+        "losses": 14,
+        "points": 39,
+        "goals_for": 36,
+        "goals_against": 39
+      },
+      "home_advantage": 20
+    },
+    {
+      "team_id": 109,
+      "team": "Santos",
+      "home": {
+        "matches": 33,
+        "wins": 14,
+        "draws": 10,
+        "losses": 9,
+        "points": 52,
+        "goals_for": 44,
+        "goals_against": 37
+      },
+      "away": {
+        "matches": 32,
+        "wins": 8,
+        "draws": 9,
+        "losses": 15,
+        "points": 33,
+        "goals_for": 42,
+        "goals_against": 53
+      },
+      "home_advantage": 19
+    },
+    {
+      "team_id": 107,
+      "team": "Bragantino",
+      "home": {
+        "matches": 32,
+        "wins": 15,
+        "draws": 6,
+        "losses": 11,
+        "points": 51,
+        "goals_for": 46,
+        "goals_against": 38
+      },
+      "away": {
+        "matches": 33,
+        "wins": 9,
+        "draws": 6,
+        "losses": 18,
+        "points": 33,
+        "goals_for": 32,
+        "goals_against": 50
+      },
+      "home_advantage": 18
+    },
+    {
+      "team_id": 110,
+      "team": "Corinthians",
+      "home": {
+        "matches": 34,
+        "wins": 13,
+        "draws": 9,
+        "losses": 12,
+        "points": 48,
+        "goals_for": 42,
+        "goals_against": 34
+      },
+      "away": {
+        "matches": 32,
+        "wins": 7,
+        "draws": 10,
+        "losses": 15,
+        "points": 31,
+        "goals_for": 29,
+        "goals_against": 45
+      },
+      "home_advantage": 17
+    },
+    {
+      "team_id": 112,
+      "team": "Internacional",
+      "home": {
+        "matches": 33,
+        "wins": 11,
+        "draws": 11,
+        "losses": 11,
+        "points": 44,
+        "goals_for": 43,
+        "goals_against": 36
+      },
+      "away": {
+        "matches": 33,
+        "wins": 6,
+        "draws": 10,
+        "losses": 17,
+        "points": 28,
+        "goals_for": 31,
+        "goals_against": 57
+      },
+      "home_advantage": 16
+    },
+    {
+      "team_id": 139,
+      "team": "Athletico-PR",
+      "home": {
+        "matches": 14,
+        "wins": 9,
+        "draws": 4,
+        "losses": 1,
+        "points": 31,
+        "goals_for": 25,
+        "goals_against": 11
+      },
+      "away": {
+        "matches": 14,
+        "wins": 5,
+        "draws": 3,
+        "losses": 6,
+        "points": 18,
+        "goals_for": 18,
+        "goals_against": 21
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 115,
+      "team": "Fortaleza",
+      "home": {
+        "matches": 19,
+        "wins": 8,
+        "draws": 3,
+        "losses": 8,
+        "points": 27,
+        "goals_for": 23,
+        "goals_against": 23
+      },
+      "away": {
+        "matches": 19,
+        "wins": 3,
+        "draws": 7,
+        "losses": 9,
+        "points": 16,
+        "goals_for": 20,
+        "goals_against": 35
+      },
+      "home_advantage": 11
+    },
+    {
+      "team_id": 117,
+      "team": "Juventude",
+      "home": {
+        "matches": 19,
+        "wins": 6,
+        "draws": 5,
+        "losses": 8,
+        "points": 23,
+        "goals_for": 21,
+        "goals_against": 26
+      },
+      "away": {
+        "matches": 19,
+        "wins": 3,
+        "draws": 3,
+        "losses": 13,
+        "points": 12,
+        "goals_for": 14,
+        "goals_against": 43
+      },
+      "home_advantage": 11
+    },
+    {
+      "team_id": 100,
+      "team": "Palmeiras",
+      "home": {
+        "matches": 32,
+        "wins": 21,
+        "draws": 8,
+        "losses": 3,
+        "points": 71,
+        "goals_for": 58,
+        "goals_against": 20
+      },
+      "away": {
+        "matches": 34,
+        "wins": 18,
+        "draws": 8,
+        "losses": 8,
+        "points": 62,
+        "goals_for": 55,
+        "goals_against": 34
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 114,
+      "team": "Ceara",
+      "home": {
+        "matches": 19,
+        "wins": 7,
+        "draws": 5,
+        "losses": 7,
+        "points": 26,
+        "goals_for": 20,
+        "goals_against": 18
+      },
+      "away": {
+        "matches": 19,
+        "wins": 4,
+        "draws": 5,
+        "losses": 10,
+        "points": 17,
+        "goals_for": 14,
+        "goals_against": 22
+      },
+      "home_advantage": 9
+    },
+    {
+      "team_id": 141,
+      "team": "Remo",
+      "home": {
+        "matches": 14,
+        "wins": 3,
+        "draws": 5,
+        "losses": 6,
+        "points": 14,
+        "goals_for": 18,
+        "goals_against": 19
+      },
+      "away": {
+        "matches": 14,
+        "wins": 2,
+        "draws": 3,
+        "losses": 9,
+        "points": 9,
+        "goals_for": 14,
+        "goals_against": 28
+      },
+      "home_advantage": 5
+    },
+    {
+      "team_id": 142,
+      "team": "Chapecoense-SC",
+      "home": {
+        "matches": 13,
+        "wins": 2,
+        "draws": 5,
+        "losses": 6,
+        "points": 11,
+        "goals_for": 18,
+        "goals_against": 29
+      },
+      "away": {
+        "matches": 14,
+        "wins": 1,
+        "draws": 4,
+        "losses": 9,
+        "points": 7,
+        "goals_for": 11,
+        "goals_against": 24
+      },
+      "home_advantage": 4
+    },
+    {
+      "team_id": 118,
+      "team": "Sport Recife",
+      "home": {
+        "matches": 19,
+        "wins": 1,
+        "draws": 7,
+        "losses": 11,
+        "points": 10,
+        "goals_for": 17,
+        "goals_against": 39
+      },
+      "away": {
+        "matches": 19,
+        "wins": 1,
+        "draws": 4,
+        "losses": 14,
+        "points": 7,
+        "goals_for": 11,
+        "goals_against": 36
+      },
+      "home_advantage": 3
+    },
+    {
+      "team_id": 140,
+      "team": "Coritiba",
+      "home": {
+        "matches": 14,
+        "wins": 5,
+        "draws": 4,
+        "losses": 5,
+        "points": 19,
+        "goals_for": 19,
+        "goals_against": 19
+      },
+      "away": {
+        "matches": 14,
+        "wins": 5,
+        "draws": 4,
+        "losses": 5,
+        "points": 19,
+        "goals_for": 18,
+        "goals_against": 24
+      },
+      "home_advantage": 0
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 99,
+        "team": "Flamengo RJ",
+        "value": 2.106
+      },
+      {
+        "rank": 2,
+        "team_id": 100,
+        "team": "Palmeiras",
+        "value": 2.015
+      },
+      {
+        "rank": 3,
+        "team_id": 139,
+        "team": "Athletico-PR",
+        "value": 1.75
+      },
+      {
+        "rank": 4,
+        "team_id": 101,
+        "team": "Cruzeiro",
+        "value": 1.742
+      },
+      {
+        "rank": 5,
+        "team_id": 103,
+        "team": "Fluminense",
+        "value": 1.697
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 99,
+        "team": "Flamengo RJ",
+        "value": 133
+      },
+      {
+        "rank": 2,
+        "team_id": 100,
+        "team": "Palmeiras",
+        "value": 113
+      },
+      {
+        "rank": 3,
+        "team_id": 104,
+        "team": "Botafogo RJ",
+        "value": 99
+      },
+      {
+        "rank": 4,
+        "team_id": 101,
+        "team": "Cruzeiro",
+        "value": 97
+      },
+      {
+        "rank": 5,
+        "team_id": 102,
+        "team": "Mirassol",
+        "value": 96
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 99,
+        "team": "Flamengo RJ",
+        "value": 83
+      },
+      {
+        "rank": 2,
+        "team_id": 100,
+        "team": "Palmeiras",
+        "value": 59
+      },
+      {
+        "rank": 3,
+        "team_id": 101,
+        "team": "Cruzeiro",
+        "value": 26
+      },
+      {
+        "rank": 4,
+        "team_id": 103,
+        "team": "Fluminense",
+        "value": 19
+      },
+      {
+        "rank": 5,
+        "team_id": 104,
+        "team": "Botafogo RJ",
+        "value": 16
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 120,
+        "team": "MG-Palmeiras",
+        "value": 0.0
+      },
+      {
+        "rank": 2,
+        "team_id": 127,
+        "team": "MG-Sao Paulo",
+        "value": 0.0
+      },
+      {
+        "rank": 3,
+        "team_id": 128,
+        "team": "MG-Corinthians",
+        "value": 0.0
+      },
+      {
+        "rank": 4,
+        "team_id": 129,
+        "team": "MG-Juventude",
+        "value": 0.0
+      },
+      {
+        "rank": 5,
+        "team_id": 99,
+        "team": "Flamengo RJ",
+        "value": 0.754
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 2,
+    "n_teams": 16,
+    "teams": [
+      {
+        "team_id": 119,
+        "team": "Atletico-MG"
+      },
+      {
+        "team_id": 105,
+        "team": "Bahia"
+      },
+      {
+        "team_id": 104,
+        "team": "Botafogo RJ"
+      },
+      {
+        "team_id": 107,
+        "team": "Bragantino"
+      },
+      {
+        "team_id": 110,
+        "team": "Corinthians"
+      },
+      {
+        "team_id": 101,
+        "team": "Cruzeiro"
+      },
+      {
+        "team_id": 99,
+        "team": "Flamengo RJ"
+      },
+      {
+        "team_id": 103,
+        "team": "Fluminense"
+      },
+      {
+        "team_id": 108,
+        "team": "Gremio"
+      },
+      {
+        "team_id": 112,
+        "team": "Internacional"
+      },
+      {
+        "team_id": 102,
+        "team": "Mirassol"
+      },
+      {
+        "team_id": 100,
+        "team": "Palmeiras"
+      },
+      {
+        "team_id": 109,
+        "team": "Santos"
+      },
+      {
+        "team_id": 106,
+        "team": "Sao Paulo"
+      },
+      {
+        "team_id": 111,
+        "team": "Vasco"
+      },
+      {
+        "team_id": 113,
+        "team": "Vitoria"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 260,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 103,
+        "team_b_id": 119,
+        "team_a": "Fluminense",
+        "team_b": "Atletico-MG",
+        "meetings": 4,
+        "home_wins": 4,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 103,
+        "team_b_id": 111,
+        "team_a": "Fluminense",
+        "team_b": "Vasco",
+        "meetings": 4,
+        "home_wins": 4,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 106,
+        "team_b_id": 108,
+        "team_a": "Sao Paulo",
+        "team_b": "Gremio",
+        "meetings": 4,
+        "home_wins": 4,
+        "draws": 0,
+        "away_wins": 0,
+        "home_win_pct": 100.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 104,
+        "team_b_id": 108,
+        "team_a": "Botafogo RJ",
+        "team_b": "Gremio",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 101,
+        "team_b_id": 111,
+        "team_a": "Cruzeiro",
+        "team_b": "Vasco",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 99,
+        "team_b_id": 107,
+        "team_a": "Flamengo RJ",
+        "team_b": "Bragantino",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 75.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 99,
+        "team_b_id": 101,
+        "team_a": "Flamengo RJ",
+        "team_b": "Cruzeiro",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 103,
+        "team_b_id": 104,
+        "team_a": "Fluminense",
+        "team_b": "Botafogo RJ",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 108,
+        "team_b_id": 119,
+        "team_a": "Gremio",
+        "team_b": "Atletico-MG",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 75.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 108,
+        "team_b_id": 113,
+        "team_a": "Gremio",
+        "team_b": "Vitoria",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 100,
+        "team_b_id": 108,
+        "team_a": "Palmeiras",
+        "team_b": "Gremio",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 100,
+        "team_b_id": 111,
+        "team_a": "Palmeiras",
+        "team_b": "Vasco",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 75.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 106,
+        "team_b_id": 119,
+        "team_a": "Sao Paulo",
+        "team_b": "Atletico-MG",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 113,
+        "team_b_id": 119,
+        "team_a": "Vitoria",
+        "team_b": "Atletico-MG",
+        "meetings": 4,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 0,
+        "home_win_pct": 75.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 0.0
+      },
+      {
+        "team_a_id": 105,
+        "team_b_id": 107,
+        "team_a": "Bahia",
+        "team_b": "Bragantino",
+        "meetings": 4,
+        "home_wins": 2,
+        "draws": 0,
+        "away_wins": 2,
+        "home_win_pct": 50.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 50.0
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2025",
+      "2026"
+    ],
+    "teams": [
+      {
+        "team_id": 99,
+        "team": "Flamengo RJ",
+        "positions": [
+          1,
+          1
+        ]
+      },
+      {
+        "team_id": 100,
+        "team": "Palmeiras",
+        "positions": [
+          2,
+          2
+        ]
+      },
+      {
+        "team_id": 101,
+        "team": "Cruzeiro",
+        "positions": [
+          3,
+          6
+        ]
+      },
+      {
+        "team_id": 103,
+        "team": "Fluminense",
+        "positions": [
+          5,
+          4
+        ]
+      },
+      {
+        "team_id": 105,
+        "team": "Bahia",
+        "positions": [
+          7,
+          5
+        ]
+      },
+      {
+        "team_id": 102,
+        "team": "Mirassol",
+        "positions": [
+          4,
+          15
+        ]
+      },
+      {
+        "team_id": 104,
+        "team": "Botafogo RJ",
+        "positions": [
+          6,
+          12
+        ]
+      },
+      {
+        "team_id": 119,
+        "team": "Atletico-MG",
+        "positions": [
+          21,
+          7
+        ]
+      },
+      {
+        "team_id": 106,
+        "team": "Sao Paulo",
+        "positions": [
+          8,
+          11
+        ]
+      },
+      {
+        "team_id": 109,
+        "team": "Santos",
+        "positions": [
+          11,
+          8
+        ]
+      },
+      {
+        "team_id": 107,
+        "team": "Bragantino",
+        "positions": [
+          9,
+          10
+        ]
+      },
+      {
+        "team_id": 110,
+        "team": "Corinthians",
+        "positions": [
+          12,
+          14
+        ]
+      },
+      {
+        "team_id": 108,
+        "team": "Gremio",
+        "positions": [
+          10,
+          17
+        ]
+      },
+      {
+        "team_id": 113,
+        "team": "Vitoria",
+        "positions": [
+          15,
+          13
+        ]
+      },
+      {
+        "team_id": 111,
+        "team": "Vasco",
+        "positions": [
+          13,
+          16
+        ]
+      },
+      {
+        "team_id": 112,
+        "team": "Internacional",
+        "positions": [
+          14,
+          18
+        ]
+      },
+      {
+        "team_id": 139,
+        "team": "Athletico-PR",
+        "positions": [
+          null,
+          3
+        ]
+      },
+      {
+        "team_id": 114,
+        "team": "Ceara",
+        "positions": [
+          16,
+          null
+        ]
+      },
+      {
+        "team_id": 115,
+        "team": "Fortaleza",
+        "positions": [
+          17,
+          null
+        ]
+      },
+      {
+        "team_id": 140,
+        "team": "Coritiba",
+        "positions": [
+          null,
+          9
+        ]
+      },
+      {
+        "team_id": 117,
+        "team": "Juventude",
+        "positions": [
+          19,
+          null
+        ]
+      },
+      {
+        "team_id": 141,
+        "team": "Remo",
+        "positions": [
+          null,
+          19
+        ]
+      },
+      {
+        "team_id": 142,
+        "team": "Chapecoense-SC",
+        "positions": [
+          null,
+          20
+        ]
+      },
+      {
+        "team_id": 118,
+        "team": "Sport Recife",
+        "positions": [
+          20,
+          null
+        ]
+      },
+      {
+        "team_id": 116,
+        "team": "Atletico",
+        "positions": [
+          18,
+          null
+        ]
+      },
+      {
+        "team_id": 137,
+        "team": "MG-Bahia",
+        "positions": [
+          39,
+          null
+        ]
+      },
+      {
+        "team_id": 134,
+        "team": "MG-Botafogo RJ",
+        "positions": [
+          36,
+          null
+        ]
+      },
+      {
+        "team_id": 131,
+        "team": "MG-Bragantino",
+        "positions": [
+          33,
+          null
+        ]
+      },
+      {
+        "team_id": 132,
+        "team": "MG-Ceara",
+        "positions": [
+          34,
+          null
+        ]
+      },
+      {
+        "team_id": 128,
+        "team": "MG-Corinthians",
+        "positions": [
+          30,
+          null
+        ]
+      },
+      {
+        "team_id": 125,
+        "team": "MG-Cruzeiro",
+        "positions": [
+          27,
+          null
+        ]
+      },
+      {
+        "team_id": 124,
+        "team": "MG-Flamengo RJ",
+        "positions": [
+          26,
+          null
+        ]
+      },
+      {
+        "team_id": 130,
+        "team": "MG-Fluminense",
+        "positions": [
+          32,
+          null
+        ]
+      },
+      {
+        "team_id": 122,
+        "team": "MG-Fortaleza",
+        "positions": [
+          24,
+          null
+        ]
+      },
+      {
+        "team_id": 121,
+        "team": "MG-Gremio",
+        "positions": [
+          23,
+          null
+        ]
+      },
+      {
+        "team_id": 136,
+        "team": "MG-Internacional",
+        "positions": [
+          38,
+          null
+        ]
+      },
+      {
+        "team_id": 129,
+        "team": "MG-Juventude",
+        "positions": [
+          31,
+          null
+        ]
+      },
+      {
+        "team_id": 133,
+        "team": "MG-Mirassol",
+        "positions": [
+          35,
+          null
+        ]
+      },
+      {
+        "team_id": 120,
+        "team": "MG-Palmeiras",
+        "positions": [
+          22,
+          null
+        ]
+      },
+      {
+        "team_id": 126,
+        "team": "MG-Santos",
+        "positions": [
+          28,
+          null
+        ]
+      },
+      {
+        "team_id": 127,
+        "team": "MG-Sao Paulo",
+        "positions": [
+          29,
+          null
+        ]
+      },
+      {
+        "team_id": 135,
+        "team": "MG-Sport Recife",
+        "positions": [
+          37,
+          null
+        ]
+      },
+      {
+        "team_id": 138,
+        "team": "MG-Vasco",
+        "positions": [
+          40,
+          null
+        ]
+      },
+      {
+        "team_id": 123,
+        "team": "MG-Vitoria",
+        "positions": [
+          25,
+          null
+        ]
+      }
+    ]
+  }
+}

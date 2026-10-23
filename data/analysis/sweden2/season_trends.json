@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:09:36+00:00",
+  "config": {
+    "league": "sweden2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\sweden2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Superettan",
+    "country": "Sweden",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/sweden/superettan"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Vasteras SK",
+      "champion_id": 1711,
+      "champion_pts": 65,
+      "runner_up": "Kalmar",
+      "runner_up_id": 1712,
+      "margin_pts": 1
+    },
+    {
+      "season": "2026",
+      "champion": "Norrkoping",
+      "champion_id": 1708,
+      "champion_pts": 55,
+      "runner_up": "Falkenberg",
+      "runner_up_id": 1715,
+      "margin_pts": 10
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 1,
+        "tight": true
+      },
+      {
+        "season": "2026",
+        "margin": 10,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025",
+      "margin": 1,
+      "champion": "Vasteras SK",
+      "runner_up": "Kalmar"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 65,
+        "2": 64,
+        "4": 48,
+        "6": 43,
+        "13": 30,
+        "16": 19
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 55,
+        "2": 45,
+        "4": 43,
+        "6": 37,
+        "13": 24,
+        "16": 19
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 13,
+      "safe_pts": 30,
+      "drop_position": 14,
+      "drop_pts": 22,
+      "gap": 8,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 22
+        },
+        {
+          "position": 15,
+          "points": 22
+        },
+        {
+          "position": 16,
+          "points": 19
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026",
+      "safe_position": 13,
+      "safe_pts": 24,
+      "drop_position": 14,
+      "drop_pts": 24,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 24
+        },
+        {
+          "position": 15,
+          "points": 23
+        },
+        {
+          "position": 16,
+          "points": 19
+        }
+      ],
+      "bottom3_range": 5
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 240,
+      "total_goals": 686,
+      "avg_goals": 2.858,
+      "home_wins": 101,
+      "draws": 65,
+      "away_wins": 74,
+      "home_win_pct": 42.1,
+      "draw_pct": 27.1,
+      "away_win_pct": 30.8,
+      "goalless": 18,
+      "goalless_pct": 7.5,
+      "total_points": 655,
+      "avg_points_per_team": 40.94,
+      "n_teams": 16
+    },
+    {
+      "season": "2026",
+      "n_matches": 200,
+      "total_goals": 580,
+      "avg_goals": 2.9,
+      "home_wins": 77,
+      "draws": 54,
+      "away_wins": 69,
+      "home_win_pct": 38.5,
+      "draw_pct": 27.0,
+      "away_win_pct": 34.5,
+      "goalless": 13,
+      "goalless_pct": 6.5,
+      "total_points": 546,
+      "avg_points_per_team": 34.12,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 1.75,
+        "goals": 4.875
+      },
+      {
+        "season": "2026",
+        "luck": 0.875,
+        "goals": 5.25
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026",
+      "view": "goals",
+      "avg_abs_diff": 5.25
+    }
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:44:05+00:00",
+  "config": {
+    "league": "austria1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\austria1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Bundesliga",
+    "country": "Austria",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "split",
+    "url": "https://www.football-charts.com/leagues/austria/bundesliga"
+  },
+  "overall": {
+    "n_matches": 237,
+    "home_wins": 106,
+    "draws": 59,
+    "away_wins": 72,
+    "home_win_pct": 44.7,
+    "draw_pct": 24.9,
+    "away_win_pct": 30.4,
+    "home_goals": 359,
+    "away_goals": 297,
+    "total_goals": 656,
+    "avg_goals": 2.768,
+    "goalless": 13,
+    "goalless_pct": 5.5
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 195,
+      "home_wins": 84,
+      "draws": 50,
+      "away_wins": 61,
+      "home_win_pct": 43.1,
+      "draw_pct": 25.6,
+      "away_win_pct": 31.3,
+      "home_goals": 280,
+      "away_goals": 247,
+      "total_goals": 527,
+      "avg_goals": 2.703,
+      "goalless": 12,
+      "goalless_pct": 6.2
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 42,
+      "home_wins": 22,
+      "draws": 9,
+      "away_wins": 11,
+      "home_win_pct": 52.4,
+      "draw_pct": 21.4,
+      "away_win_pct": 26.2,
+      "home_goals": 79,
+      "away_goals": 50,
+      "total_goals": 129,
+      "avg_goals": 3.071,
+      "goalless": 1,
+      "goalless_pct": 2.4
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 66,
+        "draw": 8,
+        "away": 5
+      },
+      "draw": {
+        "home": 34,
+        "draw": 37,
+        "away": 18
+      },
+      "away": {
+        "home": 6,
+        "draw": 14,
+        "away": 49
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 83.5,
+        "draw": 10.1,
+        "away": 6.3
+      },
+      "draw": {
+        "home": 38.2,
+        "draw": 41.6,
+        "away": 20.2
+      },
+      "away": {
+        "home": 8.7,
+        "draw": 20.3,
+        "away": 71.0
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 6,
+      "pct": 2.5,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Austria Vienna",
+          "away_team": "Ried",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "SK Rapid",
+          "away_team": "Sturm Graz",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "BW Linz",
+          "away_team": "Ried",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Ried",
+          "away_team": "Altach",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Tirol",
+          "away_team": "Wolfsberger AC",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "LASK",
+          "away_team": "SK Rapid",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 5,
+      "pct": 2.1,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Wolfsberger AC",
+          "away_team": "Ried",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Salzburg",
+          "away_team": "Tirol",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Sturm Graz",
+          "away_team": "Tirol",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Hartberg",
+          "away_team": "Salzburg",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Wolfsberger AC",
+          "away_team": "LASK",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 79,
+      "home": {
+        "count": 66,
+        "pct": 83.5
+      },
+      "draw": {
+        "count": 8,
+        "pct": 10.1
+      },
+      "away": {
+        "count": 5,
+        "pct": 6.3
+      }
+    },
+    "ht_draw": {
+      "n_matches": 89,
+      "home": {
+        "count": 34,
+        "pct": 38.2
+      },
+      "draw": {
+        "count": 37,
+        "pct": 41.6
+      },
+      "away": {
+        "count": 18,
+        "pct": 20.2
+      }
+    },
+    "away_lead": {
+      "n_matches": 69,
+      "home": {
+        "count": 6,
+        "pct": 8.7
+      },
+      "draw": {
+        "count": 14,
+        "pct": 20.3
+      },
+      "away": {
+        "count": 49,
+        "pct": 71.0
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 237,
+    "n_with_first_goal": 224,
+    "n_goalless": 13,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 80,
+        "home": {
+          "count": 33,
+          "pct": 41.2
+        },
+        "draw": {
+          "count": 16,
+          "pct": 20.0
+        },
+        "away": {
+          "count": 31,
+          "pct": 38.8
+        },
+        "pct_of_matches": 33.8
+      },
+      "16-30": {
+        "n_matches": 47,
+        "home": {
+          "count": 22,
+          "pct": 46.8
+        },
+        "draw": {
+          "count": 12,
+          "pct": 25.5
+        },
+        "away": {
+          "count": 13,
+          "pct": 27.7
+        },
+        "pct_of_matches": 19.8
+      },
+      "31-45": {
+        "n_matches": 40,
+        "home": {
+          "count": 20,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 8,
+          "pct": 20.0
+        },
+        "away": {
+          "count": 12,
+          "pct": 30.0
+        },
+        "pct_of_matches": 16.9
+      },
+      "46-60": {
+        "n_matches": 27,
+        "home": {
+          "count": 12,
+          "pct": 44.4
+        },
+        "draw": {
+          "count": 8,
+          "pct": 29.6
+        },
+        "away": {
+          "count": 7,
+          "pct": 25.9
+        },
+        "pct_of_matches": 11.4
+      },
+      "61-75": {
+        "n_matches": 12,
+        "home": {
+          "count": 6,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 1,
+          "pct": 8.3
+        },
+        "away": {
+          "count": 5,
+          "pct": 41.7
+        },
+        "pct_of_matches": 5.1
+      },
+      "76-90": {
+        "n_matches": 16,
+        "home": {
+          "count": 11,
+          "pct": 68.8
+        },
+        "draw": {
+          "count": 1,
+          "pct": 6.2
+        },
+        "away": {
+          "count": 4,
+          "pct": 25.0
+        },
+        "pct_of_matches": 6.8
+      },
+      "91-120": {
+        "n_matches": 2,
+        "home": {
+          "count": 2,
+          "pct": 100.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "pct_of_matches": 0.8
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 237,
+      "count": 13,
+      "pct": 5.5
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 195,
+        "count": 12,
+        "pct": 6.2
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 42,
+        "count": 1,
+        "pct": 2.4
+      }
+    ]
+  }
+}

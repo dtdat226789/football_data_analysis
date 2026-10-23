@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:48:50+00:00",
+  "config": {
+    "league": "eng1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\eng1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "League One",
+    "country": "England",
+    "teams": 24,
+    "matches": 552,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/league-one"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Lincoln",
+      "champion_id": 244,
+      "champion_pts": 103,
+      "runner_up": "Cardiff",
+      "runner_up_id": 246,
+      "margin_pts": 12
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Bradford City",
+      "champion_id": 404,
+      "champion_pts": 15,
+      "runner_up": "Sheffield Wed",
+      "runner_up_id": 241,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 12,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 1,
+      "champion": "Bradford City",
+      "runner_up": "Sheffield Wed"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 103,
+        "2": 91,
+        "4": 83,
+        "6": 75,
+        "21": 49,
+        "24": 35
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 14,
+        "4": 13,
+        "6": 12,
+        "21": 6,
+        "24": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 21,
+      "safe_pts": 49,
+      "drop_position": 22,
+      "drop_pts": 42,
+      "gap": 7,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 42
+        },
+        {
+          "position": 23,
+          "points": 41
+        },
+        {
+          "position": 24,
+          "points": 35
+        }
+      ],
+      "bottom3_range": 7
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 21,
+      "safe_pts": 6,
+      "drop_position": 22,
+      "drop_pts": 6,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 22,
+          "points": 6
+        },
+        {
+          "position": 23,
+          "points": 5
+        },
+        {
+          "position": 24,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 2
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 557,
+      "total_goals": 1462,
+      "avg_goals": 2.625,
+      "home_wins": 257,
+      "draws": 139,
+      "away_wins": 161,
+      "home_win_pct": 46.1,
+      "draw_pct": 25.0,
+      "away_win_pct": 28.9,
+      "goalless": 33,
+      "goalless_pct": 5.9,
+      "total_points": 1532,
+      "avg_points_per_team": 63.83,
+      "n_teams": 24
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 87,
+      "total_goals": 251,
+      "avg_goals": 2.885,
+      "home_wins": 30,
+      "draws": 29,
+      "away_wins": 28,
+      "home_win_pct": 34.5,
+      "draw_pct": 33.3,
+      "away_win_pct": 32.2,
+      "goalless": 8,
+      "goalless_pct": 9.2,
+      "total_points": 232,
+      "avg_points_per_team": 9.67,
+      "n_teams": 24
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.917,
+        "goals": 6.333
+      },
+      {
+        "season": "2026-2027",
+        "luck": 3.417,
+        "goals": 7.083
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 7.083
+    }
+  }
+}

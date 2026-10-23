@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:43:55+00:00",
+  "config": {
+    "league": "australia",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\australia",
+    "out_stem": null
+  },
+  "league": {
+    "name": "A-League",
+    "country": "Australia",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/australia/a-league"
+  },
+  "champions": [
+    {
+      "season": "2024-2025",
+      "champion": "Auckland FC",
+      "champion_id": 20,
+      "champion_pts": 53,
+      "runner_up": "Melbourne City",
+      "runner_up_id": 21,
+      "margin_pts": 5
+    },
+    {
+      "season": "2025-2026",
+      "champion": "Auckland FC",
+      "champion_id": 20,
+      "champion_pts": 49,
+      "runner_up": "Newcastle Jets",
+      "runner_up_id": 28,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "margin": 5,
+        "tight": false
+      },
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "Auckland FC",
+      "runner_up": "Newcastle Jets"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2024-2025",
+      "positions": {
+        "1": 53,
+        "2": 48,
+        "4": 46,
+        "6": 38,
+        "9": 30,
+        "12": 21
+      }
+    },
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 49,
+        "2": 49,
+        "4": 43,
+        "6": 38,
+        "9": 32,
+        "12": 21
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2024-2025",
+      "safe_position": 9,
+      "safe_pts": 30,
+      "drop_position": 10,
+      "drop_pts": 26,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 26
+        },
+        {
+          "position": 11,
+          "points": 24
+        },
+        {
+          "position": 12,
+          "points": 21
+        }
+      ],
+      "bottom3_range": 5
+    },
+    {
+      "season": "2025-2026",
+      "safe_position": 9,
+      "safe_pts": 32,
+      "drop_position": 10,
+      "drop_pts": 31,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 31
+        },
+        {
+          "position": 11,
+          "points": 26
+        },
+        {
+          "position": 12,
+          "points": 21
+        }
+      ],
+      "bottom3_range": 10
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2024-2025",
+      "n_matches": 169,
+      "total_goals": 556,
+      "avg_goals": 3.29,
+      "home_wins": 59,
+      "draws": 44,
+      "away_wins": 66,
+      "home_win_pct": 34.9,
+      "draw_pct": 26.0,
+      "away_win_pct": 39.1,
+      "goalless": 8,
+      "goalless_pct": 4.7,
+      "total_points": 463,
+      "avg_points_per_team": 35.62,
+      "n_teams": 13
+    },
+    {
+      "season": "2025-2026",
+      "n_matches": 163,
+      "total_goals": 462,
+      "avg_goals": 2.834,
+      "home_wins": 62,
+      "draws": 43,
+      "away_wins": 58,
+      "home_win_pct": 38.0,
+      "draw_pct": 26.4,
+      "away_win_pct": 35.6,
+      "goalless": 9,
+      "goalless_pct": 5.5,
+      "total_points": 440,
+      "avg_points_per_team": 36.67,
+      "n_teams": 12
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "luck": 1.846,
+        "goals": 4.154
+      },
+      {
+        "season": "2025-2026",
+        "luck": 3.0,
+        "goals": 3.667
+      }
+    ],
+    "worst_divergence": {
+      "season": "2024-2025",
+      "view": "goals",
+      "avg_abs_diff": 4.154
+    }
+  }
+}

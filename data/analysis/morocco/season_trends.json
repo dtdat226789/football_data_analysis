@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:01:47+00:00",
+  "config": {
+    "league": "morocco",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\morocco",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Botola Pro",
+    "country": "Morocco",
+    "teams": 17,
+    "matches": 272,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/morocco/botola-pro"
+  },
+  "champions": [
+    {
+      "season": "2024-2025",
+      "champion": "Berkane",
+      "champion_id": 1082,
+      "champion_pts": 70,
+      "runner_up": "FAR Rabat",
+      "runner_up_id": 1083,
+      "margin_pts": 13
+    },
+    {
+      "season": "2025-2026",
+      "champion": "Maghreb Fez",
+      "champion_id": 1088,
+      "champion_pts": 59,
+      "runner_up": "Raja Casablanca",
+      "runner_up_id": 1086,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "margin": 13,
+        "tight": false
+      },
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 2,
+      "champion": "Maghreb Fez",
+      "runner_up": "Raja Casablanca"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2024-2025",
+      "positions": {
+        "1": 70,
+        "2": 57,
+        "4": 53,
+        "6": 47,
+        "14": 25,
+        "17": null
+      }
+    },
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 59,
+        "2": 57,
+        "4": 55,
+        "6": 40,
+        "14": 31,
+        "17": 20
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2024-2025",
+      "safe_position": 14,
+      "safe_pts": 25,
+      "drop_position": 15,
+      "drop_pts": 23,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 15,
+          "points": 23
+        },
+        {
+          "position": 16,
+          "points": 4
+        },
+        {
+          "position": 17,
+          "points": null
+        }
+      ],
+      "bottom3_range": 19
+    },
+    {
+      "season": "2025-2026",
+      "safe_position": 14,
+      "safe_pts": 31,
+      "drop_position": 15,
+      "drop_pts": 30,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 15,
+          "points": 30
+        },
+        {
+          "position": 16,
+          "points": 22
+        },
+        {
+          "position": 17,
+          "points": 20
+        }
+      ],
+      "bottom3_range": 10
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2024-2025",
+      "n_matches": 240,
+      "total_goals": 555,
+      "avg_goals": 2.312,
+      "home_wins": 104,
+      "draws": 68,
+      "away_wins": 68,
+      "home_win_pct": 43.3,
+      "draw_pct": 28.3,
+      "away_win_pct": 28.3,
+      "goalless": 22,
+      "goalless_pct": 9.2,
+      "total_points": 652,
+      "avg_points_per_team": 40.75,
+      "n_teams": 16
+    },
+    {
+      "season": "2025-2026",
+      "n_matches": 248,
+      "total_goals": 539,
+      "avg_goals": 2.173,
+      "home_wins": 94,
+      "draws": 85,
+      "away_wins": 69,
+      "home_win_pct": 37.9,
+      "draw_pct": 34.3,
+      "away_win_pct": 27.8,
+      "goalless": 29,
+      "goalless_pct": 11.7,
+      "total_points": 659,
+      "avg_points_per_team": 38.76,
+      "n_teams": 17
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "luck": 2.625,
+        "goals": 5.0
+      },
+      {
+        "season": "2025-2026",
+        "luck": 3.882,
+        "goals": 6.706
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.706
+    }
+  }
+}

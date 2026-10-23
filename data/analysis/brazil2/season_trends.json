@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:45:42+00:00",
+  "config": {
+    "league": "brazil2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\brazil2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Serie B",
+    "country": "Brazil",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/brazil/serie-b"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Coritiba",
+      "champion_id": 140,
+      "champion_pts": 62,
+      "runner_up": "Criciuma",
+      "runner_up_id": 143,
+      "margin_pts": 1
+    },
+    {
+      "season": "2026",
+      "champion": "Vila Nova FC",
+      "champion_id": 150,
+      "champion_pts": 54,
+      "runner_up": "Juventude",
+      "runner_up_id": 117,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 1,
+        "tight": true
+      },
+      {
+        "season": "2026",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025",
+      "margin": 1,
+      "champion": "Coritiba",
+      "runner_up": "Criciuma"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 62,
+        "2": 61,
+        "4": 58,
+        "6": 52,
+        "17": 34,
+        "20": 31
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 54,
+        "2": 53,
+        "4": 51,
+        "6": 49,
+        "17": 30,
+        "20": 13
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 17,
+      "safe_pts": 34,
+      "drop_position": 18,
+      "drop_pts": 33,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 33
+        },
+        {
+          "position": 19,
+          "points": 32
+        },
+        {
+          "position": 20,
+          "points": 31
+        }
+      ],
+      "bottom3_range": 2
+    },
+    {
+      "season": "2026",
+      "safe_position": 17,
+      "safe_pts": 30,
+      "drop_position": 18,
+      "drop_pts": 28,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 28
+        },
+        {
+          "position": 19,
+          "points": 17
+        },
+        {
+          "position": 20,
+          "points": 13
+        }
+      ],
+      "bottom3_range": 15
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 380,
+      "total_goals": 843,
+      "avg_goals": 2.218,
+      "home_wins": 174,
+      "draws": 116,
+      "away_wins": 90,
+      "home_win_pct": 45.8,
+      "draw_pct": 30.5,
+      "away_win_pct": 23.7,
+      "goalless": 33,
+      "goalless_pct": 8.7,
+      "total_points": 1024,
+      "avg_points_per_team": 17.96,
+      "n_teams": 57
+    },
+    {
+      "season": "2026",
+      "n_matches": 299,
+      "total_goals": 701,
+      "avg_goals": 2.344,
+      "home_wins": 134,
+      "draws": 82,
+      "away_wins": 83,
+      "home_win_pct": 44.8,
+      "draw_pct": 27.4,
+      "away_win_pct": 27.8,
+      "goalless": 26,
+      "goalless_pct": 8.7,
+      "total_points": 815,
+      "avg_points_per_team": 40.75,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 16.281,
+        "goals": 19.333
+      },
+      {
+        "season": "2026",
+        "luck": 2.1,
+        "goals": 7.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "goals",
+      "avg_abs_diff": 19.333
+    }
+  }
+}

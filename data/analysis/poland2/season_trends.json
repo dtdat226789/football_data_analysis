@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:03:14+00:00",
+  "config": {
+    "league": "poland2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\poland2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Division 1",
+    "country": "Poland",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/poland/division-1"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Wisla",
+      "champion_id": 1191,
+      "champion_pts": 72,
+      "runner_up": "Slask Wroclaw",
+      "runner_up_id": 1192,
+      "margin_pts": 8
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Grodzisk M.",
+      "champion_id": 1201,
+      "champion_pts": 18,
+      "runner_up": "Termalica B-B.",
+      "runner_up_id": 1188,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 8,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "Grodzisk M.",
+      "runner_up": "Termalica B-B."
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 72,
+        "2": 64,
+        "4": 55,
+        "6": 55,
+        "15": 36,
+        "18": 28
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 18,
+        "2": 16,
+        "4": 15,
+        "6": 14,
+        "15": 9,
+        "18": 6
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 36,
+      "drop_position": 16,
+      "drop_pts": 30,
+      "gap": 6,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 30
+        },
+        {
+          "position": 17,
+          "points": 28
+        },
+        {
+          "position": 18,
+          "points": 28
+        }
+      ],
+      "bottom3_range": 2
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 9,
+      "drop_position": 16,
+      "drop_pts": 9,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 9
+        },
+        {
+          "position": 17,
+          "points": 8
+        },
+        {
+          "position": 18,
+          "points": 6
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 328,
+      "total_goals": 991,
+      "avg_goals": 3.021,
+      "home_wins": 136,
+      "draws": 89,
+      "away_wins": 103,
+      "home_win_pct": 41.5,
+      "draw_pct": 27.1,
+      "away_win_pct": 31.4,
+      "goalless": 15,
+      "goalless_pct": 4.6,
+      "total_points": 892,
+      "avg_points_per_team": 46.95,
+      "n_teams": 19
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 80,
+      "total_goals": 220,
+      "avg_goals": 2.75,
+      "home_wins": 34,
+      "draws": 23,
+      "away_wins": 23,
+      "home_win_pct": 42.5,
+      "draw_pct": 28.8,
+      "away_win_pct": 28.8,
+      "goalless": 4,
+      "goalless_pct": 5.0,
+      "total_points": 217,
+      "avg_points_per_team": 12.06,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.474,
+        "goals": 6.526
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.222,
+        "goals": 6.0
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.526
+    }
+  }
+}

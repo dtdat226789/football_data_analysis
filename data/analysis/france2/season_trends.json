@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:50:16+00:00",
+  "config": {
+    "league": "france2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\france2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Ligue 2",
+    "country": "France",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/france/ligue-2"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Troyes",
+      "champion_id": 517,
+      "champion_pts": 67,
+      "runner_up": "Le Mans",
+      "runner_up_id": 516,
+      "margin_pts": 5
+    },
+    {
+      "season": "2026-2027",
+      "champion": "St Etienne",
+      "champion_id": 514,
+      "champion_pts": 16,
+      "runner_up": "Red Star",
+      "runner_up_id": 515,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 5,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "St Etienne",
+      "runner_up": "Red Star"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 67,
+        "2": 62,
+        "4": 60,
+        "6": 56,
+        "15": 36,
+        "18": 24
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 16,
+        "2": 14,
+        "4": 12,
+        "6": 10,
+        "15": 7,
+        "18": 5
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 36,
+      "drop_position": 16,
+      "drop_pts": 36,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 36
+        },
+        {
+          "position": 17,
+          "points": 29
+        },
+        {
+          "position": 18,
+          "points": 24
+        }
+      ],
+      "bottom3_range": 12
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 7,
+      "drop_position": 16,
+      "drop_pts": 6,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 6
+        },
+        {
+          "position": 17,
+          "points": 5
+        },
+        {
+          "position": 18,
+          "points": 5
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 310,
+      "total_goals": 784,
+      "avg_goals": 2.529,
+      "home_wins": 117,
+      "draws": 95,
+      "away_wins": 98,
+      "home_win_pct": 37.7,
+      "draw_pct": 30.6,
+      "away_win_pct": 31.6,
+      "goalless": 33,
+      "goalless_pct": 10.6,
+      "total_points": 832,
+      "avg_points_per_team": 43.79,
+      "n_teams": 19
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 63,
+      "total_goals": 162,
+      "avg_goals": 2.571,
+      "home_wins": 21,
+      "draws": 23,
+      "away_wins": 19,
+      "home_win_pct": 33.3,
+      "draw_pct": 36.5,
+      "away_win_pct": 30.2,
+      "goalless": 7,
+      "goalless_pct": 11.1,
+      "total_points": 166,
+      "avg_points_per_team": 9.22,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.474,
+        "goals": 4.737
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.667,
+        "goals": 5.778
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 5.778
+    }
+  }
+}

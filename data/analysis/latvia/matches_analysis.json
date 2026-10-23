@@ -1,0 +1,423 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:01:09+00:00",
+  "config": {
+    "league": "latvia",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\latvia",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Virsliga",
+    "country": "Latvia",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/latvia/virsliga"
+  },
+  "overall": {
+    "n_matches": 336,
+    "home_wins": 147,
+    "draws": 80,
+    "away_wins": 109,
+    "home_win_pct": 43.8,
+    "draw_pct": 23.8,
+    "away_win_pct": 32.4,
+    "home_goals": 548,
+    "away_goals": 425,
+    "total_goals": 973,
+    "avg_goals": 2.896,
+    "goalless": 19,
+    "goalless_pct": 5.7
+  },
+  "per_season": [
+    {
+      "season": "2025",
+      "n_matches": 182,
+      "home_wins": 83,
+      "draws": 43,
+      "away_wins": 56,
+      "home_win_pct": 45.6,
+      "draw_pct": 23.6,
+      "away_win_pct": 30.8,
+      "home_goals": 302,
+      "away_goals": 233,
+      "total_goals": 535,
+      "avg_goals": 2.94,
+      "goalless": 11,
+      "goalless_pct": 6.0
+    },
+    {
+      "season": "2026",
+      "n_matches": 154,
+      "home_wins": 64,
+      "draws": 37,
+      "away_wins": 53,
+      "home_win_pct": 41.6,
+      "draw_pct": 24.0,
+      "away_win_pct": 34.4,
+      "home_goals": 246,
+      "away_goals": 192,
+      "total_goals": 438,
+      "avg_goals": 2.844,
+      "goalless": 8,
+      "goalless_pct": 5.2
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 97,
+        "draw": 18,
+        "away": 5
+      },
+      "draw": {
+        "home": 41,
+        "draw": 42,
+        "away": 40
+      },
+      "away": {
+        "home": 9,
+        "draw": 20,
+        "away": 64
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 80.8,
+        "draw": 15.0,
+        "away": 4.2
+      },
+      "draw": {
+        "home": 33.3,
+        "draw": 34.1,
+        "away": 32.5
+      },
+      "away": {
+        "home": 9.7,
+        "draw": 21.5,
+        "away": 68.8
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 9,
+      "pct": 2.7,
+      "matches": [
+        {
+          "season": "2025",
+          "home_team": "Grobina",
+          "away_team": "BFC Daugavpils",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Metta",
+          "away_team": "Tukums 2000",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "RFS",
+          "away_team": "FK Liepaja",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "Jelgava",
+          "away_team": "Tukums 2000",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025",
+          "home_team": "BFC Daugavpils",
+          "away_team": "Grobina",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025",
+          "home_team": "Tukums 2000",
+          "away_team": "Super Nova",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Ogre United",
+          "away_team": "Tukums 2000",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Riga FC",
+          "away_team": "Tukums 2000",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Tukums 2000",
+          "away_team": "Ogre United",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 5,
+      "pct": 1.5,
+      "matches": [
+        {
+          "season": "2026",
+          "home_team": "Jelgava",
+          "away_team": "Auda",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026",
+          "home_team": "Ogre United",
+          "away_team": "RFS",
+          "ht_score": "3-2",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2026",
+          "home_team": "Super Nova",
+          "away_team": "FK Liepaja",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Ogre United",
+          "away_team": "Jelgava",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026",
+          "home_team": "BFC Daugavpils",
+          "away_team": "RFS",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 120,
+      "home": {
+        "count": 97,
+        "pct": 80.8
+      },
+      "draw": {
+        "count": 18,
+        "pct": 15.0
+      },
+      "away": {
+        "count": 5,
+        "pct": 4.2
+      }
+    },
+    "ht_draw": {
+      "n_matches": 123,
+      "home": {
+        "count": 41,
+        "pct": 33.3
+      },
+      "draw": {
+        "count": 42,
+        "pct": 34.1
+      },
+      "away": {
+        "count": 40,
+        "pct": 32.5
+      }
+    },
+    "away_lead": {
+      "n_matches": 93,
+      "home": {
+        "count": 9,
+        "pct": 9.7
+      },
+      "draw": {
+        "count": 20,
+        "pct": 21.5
+      },
+      "away": {
+        "count": 64,
+        "pct": 68.8
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 336,
+    "n_with_first_goal": 317,
+    "n_goalless": 19,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 104,
+        "home": {
+          "count": 51,
+          "pct": 49.0
+        },
+        "draw": {
+          "count": 14,
+          "pct": 13.5
+        },
+        "away": {
+          "count": 39,
+          "pct": 37.5
+        },
+        "pct_of_matches": 31.0
+      },
+      "16-30": {
+        "n_matches": 85,
+        "home": {
+          "count": 42,
+          "pct": 49.4
+        },
+        "draw": {
+          "count": 19,
+          "pct": 22.4
+        },
+        "away": {
+          "count": 24,
+          "pct": 28.2
+        },
+        "pct_of_matches": 25.3
+      },
+      "31-45": {
+        "n_matches": 45,
+        "home": {
+          "count": 18,
+          "pct": 40.0
+        },
+        "draw": {
+          "count": 12,
+          "pct": 26.7
+        },
+        "away": {
+          "count": 15,
+          "pct": 33.3
+        },
+        "pct_of_matches": 13.4
+      },
+      "46-60": {
+        "n_matches": 43,
+        "home": {
+          "count": 21,
+          "pct": 48.8
+        },
+        "draw": {
+          "count": 8,
+          "pct": 18.6
+        },
+        "away": {
+          "count": 14,
+          "pct": 32.6
+        },
+        "pct_of_matches": 12.8
+      },
+      "61-75": {
+        "n_matches": 17,
+        "home": {
+          "count": 7,
+          "pct": 41.2
+        },
+        "draw": {
+          "count": 7,
+          "pct": 41.2
+        },
+        "away": {
+          "count": 3,
+          "pct": 17.6
+        },
+        "pct_of_matches": 5.1
+      },
+      "76-90": {
+        "n_matches": 19,
+        "home": {
+          "count": 7,
+          "pct": 36.8
+        },
+        "draw": {
+          "count": 1,
+          "pct": 5.3
+        },
+        "away": {
+          "count": 11,
+          "pct": 57.9
+        },
+        "pct_of_matches": 5.7
+      },
+      "91-120": {
+        "n_matches": 4,
+        "home": {
+          "count": 1,
+          "pct": 25.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 3,
+          "pct": 75.0
+        },
+        "pct_of_matches": 1.2
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 336,
+      "count": 19,
+      "pct": 5.7
+    },
+    "per_season": [
+      {
+        "season": "2025",
+        "n_matches": 182,
+        "count": 11,
+        "pct": 6.0
+      },
+      {
+        "season": "2026",
+        "n_matches": 154,
+        "count": 8,
+        "pct": 5.2
+      }
+    ]
+  }
+}

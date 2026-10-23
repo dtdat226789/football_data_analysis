@@ -1,0 +1,465 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:43:49+00:00",
+  "config": {
+    "league": "australia",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\australia",
+    "out_stem": null
+  },
+  "league": {
+    "name": "A-League",
+    "country": "Australia",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/australia/a-league"
+  },
+  "overall": {
+    "n_matches": 332,
+    "home_wins": 121,
+    "draws": 87,
+    "away_wins": 124,
+    "home_win_pct": 36.4,
+    "draw_pct": 26.2,
+    "away_win_pct": 37.3,
+    "home_goals": 524,
+    "away_goals": 494,
+    "total_goals": 1018,
+    "avg_goals": 3.066,
+    "goalless": 17,
+    "goalless_pct": 5.1
+  },
+  "per_season": [
+    {
+      "season": "2024-2025",
+      "n_matches": 169,
+      "home_wins": 59,
+      "draws": 44,
+      "away_wins": 66,
+      "home_win_pct": 34.9,
+      "draw_pct": 26.0,
+      "away_win_pct": 39.1,
+      "home_goals": 280,
+      "away_goals": 276,
+      "total_goals": 556,
+      "avg_goals": 3.29,
+      "goalless": 8,
+      "goalless_pct": 4.7
+    },
+    {
+      "season": "2025-2026",
+      "n_matches": 163,
+      "home_wins": 62,
+      "draws": 43,
+      "away_wins": 58,
+      "home_win_pct": 38.0,
+      "draw_pct": 26.4,
+      "away_win_pct": 35.6,
+      "home_goals": 244,
+      "away_goals": 218,
+      "total_goals": 462,
+      "avg_goals": 2.834,
+      "goalless": 9,
+      "goalless_pct": 5.5
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 70,
+        "draw": 25,
+        "away": 10
+      },
+      "draw": {
+        "home": 41,
+        "draw": 42,
+        "away": 52
+      },
+      "away": {
+        "home": 10,
+        "draw": 20,
+        "away": 62
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 66.7,
+        "draw": 23.8,
+        "away": 9.5
+      },
+      "draw": {
+        "home": 30.4,
+        "draw": 31.1,
+        "away": 38.5
+      },
+      "away": {
+        "home": 10.9,
+        "draw": 21.7,
+        "away": 67.4
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 10,
+      "pct": 3.0,
+      "matches": [
+        {
+          "season": "2024-2025",
+          "home_team": "WS Wanderers",
+          "away_team": "Melbourne Victory",
+          "ht_score": "1-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Melbourne City",
+          "away_team": "Brisbane Roar",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Sydney FC",
+          "away_team": "Newcastle Jets",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Wellington Phoenix",
+          "away_team": "Brisbane Roar",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Melbourne City",
+          "away_team": "Auckland FC",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Perth Glory",
+          "away_team": "Auckland FC",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Central Coast Mariners",
+          "away_team": "WS Wanderers",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Newcastle Jets",
+          "away_team": "WS Wanderers",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Melbourne Victory",
+          "away_team": "Central Coast Mariners",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Adelaide United",
+          "away_team": "Macarthur FC",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 10,
+      "pct": 3.0,
+      "matches": [
+        {
+          "season": "2024-2025",
+          "home_team": "Macarthur FC",
+          "away_team": "Newcastle Jets",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Brisbane Roar",
+          "away_team": "Adelaide United",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Sydney FC",
+          "away_team": "Western United",
+          "ht_score": "2-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Adelaide United",
+          "away_team": "WS Wanderers",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Melbourne Victory",
+          "away_team": "Western United",
+          "ht_score": "2-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Macarthur FC",
+          "away_team": "Wellington Phoenix",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Adelaide United",
+          "away_team": "Macarthur FC",
+          "ht_score": "3-2",
+          "ft_score": "4-5"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Brisbane Roar",
+          "away_team": "Adelaide United",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Brisbane Roar",
+          "away_team": "Melbourne City",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Melbourne City",
+          "away_team": "Adelaide United",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 105,
+      "home": {
+        "count": 70,
+        "pct": 66.7
+      },
+      "draw": {
+        "count": 25,
+        "pct": 23.8
+      },
+      "away": {
+        "count": 10,
+        "pct": 9.5
+      }
+    },
+    "ht_draw": {
+      "n_matches": 135,
+      "home": {
+        "count": 41,
+        "pct": 30.4
+      },
+      "draw": {
+        "count": 42,
+        "pct": 31.1
+      },
+      "away": {
+        "count": 52,
+        "pct": 38.5
+      }
+    },
+    "away_lead": {
+      "n_matches": 92,
+      "home": {
+        "count": 10,
+        "pct": 10.9
+      },
+      "draw": {
+        "count": 20,
+        "pct": 21.7
+      },
+      "away": {
+        "count": 62,
+        "pct": 67.4
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 332,
+    "n_with_first_goal": 315,
+    "n_goalless": 17,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 128,
+        "home": {
+          "count": 46,
+          "pct": 35.9
+        },
+        "draw": {
+          "count": 29,
+          "pct": 22.7
+        },
+        "away": {
+          "count": 53,
+          "pct": 41.4
+        },
+        "pct_of_matches": 38.6
+      },
+      "16-30": {
+        "n_matches": 63,
+        "home": {
+          "count": 24,
+          "pct": 38.1
+        },
+        "draw": {
+          "count": 18,
+          "pct": 28.6
+        },
+        "away": {
+          "count": 21,
+          "pct": 33.3
+        },
+        "pct_of_matches": 19.0
+      },
+      "31-45": {
+        "n_matches": 47,
+        "home": {
+          "count": 20,
+          "pct": 42.6
+        },
+        "draw": {
+          "count": 10,
+          "pct": 21.3
+        },
+        "away": {
+          "count": 17,
+          "pct": 36.2
+        },
+        "pct_of_matches": 14.2
+      },
+      "46-60": {
+        "n_matches": 42,
+        "home": {
+          "count": 20,
+          "pct": 47.6
+        },
+        "draw": {
+          "count": 7,
+          "pct": 16.7
+        },
+        "away": {
+          "count": 15,
+          "pct": 35.7
+        },
+        "pct_of_matches": 12.7
+      },
+      "61-75": {
+        "n_matches": 20,
+        "home": {
+          "count": 5,
+          "pct": 25.0
+        },
+        "draw": {
+          "count": 5,
+          "pct": 25.0
+        },
+        "away": {
+          "count": 10,
+          "pct": 50.0
+        },
+        "pct_of_matches": 6.0
+      },
+      "76-90": {
+        "n_matches": 9,
+        "home": {
+          "count": 3,
+          "pct": 33.3
+        },
+        "draw": {
+          "count": 1,
+          "pct": 11.1
+        },
+        "away": {
+          "count": 5,
+          "pct": 55.6
+        },
+        "pct_of_matches": 2.7
+      },
+      "91-120": {
+        "n_matches": 6,
+        "home": {
+          "count": 3,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 3,
+          "pct": 50.0
+        },
+        "pct_of_matches": 1.8
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 332,
+      "count": 17,
+      "pct": 5.1
+    },
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "n_matches": 169,
+        "count": 8,
+        "pct": 4.7
+      },
+      {
+        "season": "2025-2026",
+        "n_matches": 163,
+        "count": 9,
+        "pct": 5.5
+      }
+    ]
+  }
+}

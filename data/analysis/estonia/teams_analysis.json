@@ -1,0 +1,950 @@
+{
+  "report_name": "teams_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_teams.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:49:17+00:00",
+  "config": {
+    "league": "estonia",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\estonia",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Meistriliiga",
+    "country": "Estonia",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/estonia/meistriliiga"
+  },
+  "teams": [
+    {
+      "team_id": 452,
+      "team": "Levadia",
+      "slug": "levadia",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 47,
+      "draws": 10,
+      "losses": 8,
+      "points": 151,
+      "goals_for": 170,
+      "goals_against": 57,
+      "goal_difference": 113,
+      "avg_points_per_season": 75.5,
+      "best_position": 1,
+      "worst_position": 2,
+      "titles": 1
+    },
+    {
+      "team_id": 451,
+      "team": "Flora",
+      "slug": "flora",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 44,
+      "draws": 5,
+      "losses": 16,
+      "points": 137,
+      "goals_for": 143,
+      "goals_against": 70,
+      "goal_difference": 73,
+      "avg_points_per_season": 68.5,
+      "best_position": 1,
+      "worst_position": 2,
+      "titles": 1
+    },
+    {
+      "team_id": 453,
+      "team": "Kalju",
+      "slug": "kalju",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 38,
+      "draws": 10,
+      "losses": 17,
+      "points": 124,
+      "goals_for": 121,
+      "goals_against": 64,
+      "goal_difference": 57,
+      "avg_points_per_season": 62.0,
+      "best_position": 3,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 454,
+      "team": "Paide",
+      "slug": "paide",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 36,
+      "draws": 13,
+      "losses": 16,
+      "points": 121,
+      "goals_for": 111,
+      "goals_against": 68,
+      "goal_difference": 43,
+      "avg_points_per_season": 60.5,
+      "best_position": 3,
+      "worst_position": 4,
+      "titles": 0
+    },
+    {
+      "team_id": 456,
+      "team": "Parnu JK Vaprus",
+      "slug": "parnu-jk-vaprus",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 24,
+      "draws": 11,
+      "losses": 30,
+      "points": 83,
+      "goals_for": 93,
+      "goals_against": 108,
+      "goal_difference": -15,
+      "avg_points_per_season": 41.5,
+      "best_position": 6,
+      "worst_position": 7,
+      "titles": 0
+    },
+    {
+      "team_id": 458,
+      "team": "Tammeka",
+      "slug": "tammeka",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 23,
+      "draws": 5,
+      "losses": 37,
+      "points": 74,
+      "goals_for": 84,
+      "goals_against": 130,
+      "goal_difference": -46,
+      "avg_points_per_season": 37.0,
+      "best_position": 5,
+      "worst_position": 8,
+      "titles": 0
+    },
+    {
+      "team_id": 457,
+      "team": "Harju JK Laagri",
+      "slug": "harju-jk-laagri",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 21,
+      "draws": 8,
+      "losses": 36,
+      "points": 71,
+      "goals_for": 89,
+      "goals_against": 117,
+      "goal_difference": -28,
+      "avg_points_per_season": 35.5,
+      "best_position": 6,
+      "worst_position": 7,
+      "titles": 0
+    },
+    {
+      "team_id": 455,
+      "team": "Narva",
+      "slug": "narva",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 20,
+      "draws": 10,
+      "losses": 35,
+      "points": 70,
+      "goals_for": 75,
+      "goals_against": 117,
+      "goal_difference": -42,
+      "avg_points_per_season": 35.0,
+      "best_position": 5,
+      "worst_position": 10,
+      "titles": 0
+    },
+    {
+      "team_id": 459,
+      "team": "Kuressaare",
+      "slug": "kuressaare",
+      "seasons_played": 2,
+      "total_matches": 65,
+      "wins": 16,
+      "draws": 9,
+      "losses": 40,
+      "points": 57,
+      "goals_for": 63,
+      "goals_against": 116,
+      "goal_difference": -53,
+      "avg_points_per_season": 28.5,
+      "best_position": 8,
+      "worst_position": 9,
+      "titles": 0
+    },
+    {
+      "team_id": 461,
+      "team": "Nomme Utd",
+      "slug": "nomme-utd",
+      "seasons_played": 1,
+      "total_matches": 29,
+      "wins": 9,
+      "draws": 1,
+      "losses": 19,
+      "points": 28,
+      "goals_for": 47,
+      "goals_against": 68,
+      "goal_difference": -21,
+      "avg_points_per_season": 28.0,
+      "best_position": 9,
+      "worst_position": 9,
+      "titles": 0
+    },
+    {
+      "team_id": 460,
+      "team": "Tallinna Kalev",
+      "slug": "tallinna-kalev",
+      "seasons_played": 1,
+      "total_matches": 36,
+      "wins": 5,
+      "draws": 2,
+      "losses": 29,
+      "points": 17,
+      "goals_for": 32,
+      "goals_against": 113,
+      "goal_difference": -81,
+      "avg_points_per_season": 17.0,
+      "best_position": 10,
+      "worst_position": 10,
+      "titles": 0
+    }
+  ],
+  "home_away": [
+    {
+      "team_id": 455,
+      "team": "Narva",
+      "home": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 6,
+        "losses": 15,
+        "points": 42,
+        "goals_for": 47,
+        "goals_against": 51
+      },
+      "away": {
+        "matches": 32,
+        "wins": 8,
+        "draws": 4,
+        "losses": 20,
+        "points": 28,
+        "goals_for": 28,
+        "goals_against": 66
+      },
+      "home_advantage": 14
+    },
+    {
+      "team_id": 459,
+      "team": "Kuressaare",
+      "home": {
+        "matches": 32,
+        "wins": 10,
+        "draws": 5,
+        "losses": 17,
+        "points": 35,
+        "goals_for": 36,
+        "goals_against": 51
+      },
+      "away": {
+        "matches": 33,
+        "wins": 6,
+        "draws": 4,
+        "losses": 23,
+        "points": 22,
+        "goals_for": 27,
+        "goals_against": 65
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 460,
+      "team": "Tallinna Kalev",
+      "home": {
+        "matches": 18,
+        "wins": 5,
+        "draws": 0,
+        "losses": 13,
+        "points": 15,
+        "goals_for": 19,
+        "goals_against": 52
+      },
+      "away": {
+        "matches": 18,
+        "wins": 0,
+        "draws": 2,
+        "losses": 16,
+        "points": 2,
+        "goals_for": 13,
+        "goals_against": 61
+      },
+      "home_advantage": 13
+    },
+    {
+      "team_id": 457,
+      "team": "Harju JK Laagri",
+      "home": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 5,
+        "losses": 16,
+        "points": 41,
+        "goals_for": 50,
+        "goals_against": 49
+      },
+      "away": {
+        "matches": 32,
+        "wins": 9,
+        "draws": 3,
+        "losses": 20,
+        "points": 30,
+        "goals_for": 39,
+        "goals_against": 68
+      },
+      "home_advantage": 11
+    },
+    {
+      "team_id": 458,
+      "team": "Tammeka",
+      "home": {
+        "matches": 32,
+        "wins": 13,
+        "draws": 2,
+        "losses": 17,
+        "points": 41,
+        "goals_for": 44,
+        "goals_against": 48
+      },
+      "away": {
+        "matches": 33,
+        "wins": 10,
+        "draws": 3,
+        "losses": 20,
+        "points": 33,
+        "goals_for": 40,
+        "goals_against": 82
+      },
+      "home_advantage": 8
+    },
+    {
+      "team_id": 454,
+      "team": "Paide",
+      "home": {
+        "matches": 32,
+        "wins": 19,
+        "draws": 6,
+        "losses": 7,
+        "points": 63,
+        "goals_for": 59,
+        "goals_against": 28
+      },
+      "away": {
+        "matches": 33,
+        "wins": 17,
+        "draws": 7,
+        "losses": 9,
+        "points": 58,
+        "goals_for": 52,
+        "goals_against": 40
+      },
+      "home_advantage": 5
+    },
+    {
+      "team_id": 456,
+      "team": "Parnu JK Vaprus",
+      "home": {
+        "matches": 32,
+        "wins": 12,
+        "draws": 7,
+        "losses": 13,
+        "points": 43,
+        "goals_for": 49,
+        "goals_against": 51
+      },
+      "away": {
+        "matches": 33,
+        "wins": 12,
+        "draws": 4,
+        "losses": 17,
+        "points": 40,
+        "goals_for": 44,
+        "goals_against": 57
+      },
+      "home_advantage": 3
+    },
+    {
+      "team_id": 453,
+      "team": "Kalju",
+      "home": {
+        "matches": 33,
+        "wins": 19,
+        "draws": 5,
+        "losses": 9,
+        "points": 62,
+        "goals_for": 72,
+        "goals_against": 34
+      },
+      "away": {
+        "matches": 32,
+        "wins": 19,
+        "draws": 5,
+        "losses": 8,
+        "points": 62,
+        "goals_for": 49,
+        "goals_against": 30
+      },
+      "home_advantage": 0
+    },
+    {
+      "team_id": 452,
+      "team": "Levadia",
+      "home": {
+        "matches": 32,
+        "wins": 23,
+        "draws": 5,
+        "losses": 4,
+        "points": 74,
+        "goals_for": 89,
+        "goals_against": 24
+      },
+      "away": {
+        "matches": 33,
+        "wins": 24,
+        "draws": 5,
+        "losses": 4,
+        "points": 77,
+        "goals_for": 81,
+        "goals_against": 33
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 451,
+      "team": "Flora",
+      "home": {
+        "matches": 33,
+        "wins": 22,
+        "draws": 1,
+        "losses": 10,
+        "points": 67,
+        "goals_for": 78,
+        "goals_against": 35
+      },
+      "away": {
+        "matches": 32,
+        "wins": 22,
+        "draws": 4,
+        "losses": 6,
+        "points": 70,
+        "goals_for": 65,
+        "goals_against": 35
+      },
+      "home_advantage": -3
+    },
+    {
+      "team_id": 461,
+      "team": "Nomme Utd",
+      "home": {
+        "matches": 15,
+        "wins": 4,
+        "draws": 0,
+        "losses": 11,
+        "points": 12,
+        "goals_for": 29,
+        "goals_against": 33
+      },
+      "away": {
+        "matches": 14,
+        "wins": 5,
+        "draws": 1,
+        "losses": 8,
+        "points": 16,
+        "goals_for": 18,
+        "goals_against": 35
+      },
+      "home_advantage": -4
+    }
+  ],
+  "top_performers": {
+    "best_ppg": [
+      {
+        "rank": 1,
+        "team_id": 452,
+        "team": "Levadia",
+        "value": 2.323
+      },
+      {
+        "rank": 2,
+        "team_id": 451,
+        "team": "Flora",
+        "value": 2.108
+      },
+      {
+        "rank": 3,
+        "team_id": 453,
+        "team": "Kalju",
+        "value": 1.908
+      },
+      {
+        "rank": 4,
+        "team_id": 454,
+        "team": "Paide",
+        "value": 1.862
+      },
+      {
+        "rank": 5,
+        "team_id": 456,
+        "team": "Parnu JK Vaprus",
+        "value": 1.277
+      }
+    ],
+    "most_goals_scored": [
+      {
+        "rank": 1,
+        "team_id": 452,
+        "team": "Levadia",
+        "value": 170
+      },
+      {
+        "rank": 2,
+        "team_id": 451,
+        "team": "Flora",
+        "value": 143
+      },
+      {
+        "rank": 3,
+        "team_id": 453,
+        "team": "Kalju",
+        "value": 121
+      },
+      {
+        "rank": 4,
+        "team_id": 454,
+        "team": "Paide",
+        "value": 111
+      },
+      {
+        "rank": 5,
+        "team_id": 456,
+        "team": "Parnu JK Vaprus",
+        "value": 93
+      }
+    ],
+    "best_goal_difference": [
+      {
+        "rank": 1,
+        "team_id": 452,
+        "team": "Levadia",
+        "value": 113
+      },
+      {
+        "rank": 2,
+        "team_id": 451,
+        "team": "Flora",
+        "value": 73
+      },
+      {
+        "rank": 3,
+        "team_id": 453,
+        "team": "Kalju",
+        "value": 57
+      },
+      {
+        "rank": 4,
+        "team_id": 454,
+        "team": "Paide",
+        "value": 43
+      },
+      {
+        "rank": 5,
+        "team_id": 456,
+        "team": "Parnu JK Vaprus",
+        "value": -15
+      }
+    ],
+    "best_defence": [
+      {
+        "rank": 1,
+        "team_id": 452,
+        "team": "Levadia",
+        "value": 0.877
+      },
+      {
+        "rank": 2,
+        "team_id": 453,
+        "team": "Kalju",
+        "value": 0.985
+      },
+      {
+        "rank": 3,
+        "team_id": 454,
+        "team": "Paide",
+        "value": 1.046
+      },
+      {
+        "rank": 4,
+        "team_id": 451,
+        "team": "Flora",
+        "value": 1.077
+      },
+      {
+        "rank": 5,
+        "team_id": 456,
+        "team": "Parnu JK Vaprus",
+        "value": 1.662
+      }
+    ]
+  },
+  "consistent_teams": {
+    "n_seasons": 2,
+    "n_teams": 9,
+    "teams": [
+      {
+        "team_id": 451,
+        "team": "Flora"
+      },
+      {
+        "team_id": 457,
+        "team": "Harju JK Laagri"
+      },
+      {
+        "team_id": 453,
+        "team": "Kalju"
+      },
+      {
+        "team_id": 459,
+        "team": "Kuressaare"
+      },
+      {
+        "team_id": 452,
+        "team": "Levadia"
+      },
+      {
+        "team_id": 455,
+        "team": "Narva"
+      },
+      {
+        "team_id": 454,
+        "team": "Paide"
+      },
+      {
+        "team_id": 456,
+        "team": "Parnu JK Vaprus"
+      },
+      {
+        "team_id": 458,
+        "team": "Tammeka"
+      }
+    ]
+  },
+  "head_to_head": {
+    "n_pairs_total": 54,
+    "top_n": 15,
+    "pairs": [
+      {
+        "team_a_id": 452,
+        "team_b_id": 455,
+        "team_a": "Levadia",
+        "team_b": "Narva",
+        "meetings": 8,
+        "home_wins": 4,
+        "draws": 1,
+        "away_wins": 3,
+        "home_win_pct": 50.0,
+        "draw_pct": 12.5,
+        "away_win_pct": 37.5
+      },
+      {
+        "team_a_id": 454,
+        "team_b_id": 457,
+        "team_a": "Paide",
+        "team_b": "Harju JK Laagri",
+        "meetings": 8,
+        "home_wins": 4,
+        "draws": 2,
+        "away_wins": 2,
+        "home_win_pct": 50.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 25.0
+      },
+      {
+        "team_a_id": 458,
+        "team_b_id": 459,
+        "team_a": "Tammeka",
+        "team_b": "Kuressaare",
+        "meetings": 8,
+        "home_wins": 4,
+        "draws": 0,
+        "away_wins": 4,
+        "home_win_pct": 50.0,
+        "draw_pct": 0.0,
+        "away_win_pct": 50.0
+      },
+      {
+        "team_a_id": 451,
+        "team_b_id": 456,
+        "team_a": "Flora",
+        "team_b": "Parnu JK Vaprus",
+        "meetings": 8,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 5,
+        "home_win_pct": 37.5,
+        "draw_pct": 0.0,
+        "away_win_pct": 62.5
+      },
+      {
+        "team_a_id": 457,
+        "team_b_id": 459,
+        "team_a": "Harju JK Laagri",
+        "team_b": "Kuressaare",
+        "meetings": 8,
+        "home_wins": 3,
+        "draws": 2,
+        "away_wins": 3,
+        "home_win_pct": 37.5,
+        "draw_pct": 25.0,
+        "away_win_pct": 37.5
+      },
+      {
+        "team_a_id": 453,
+        "team_b_id": 455,
+        "team_a": "Kalju",
+        "team_b": "Narva",
+        "meetings": 8,
+        "home_wins": 3,
+        "draws": 1,
+        "away_wins": 4,
+        "home_win_pct": 37.5,
+        "draw_pct": 12.5,
+        "away_win_pct": 50.0
+      },
+      {
+        "team_a_id": 453,
+        "team_b_id": 458,
+        "team_a": "Kalju",
+        "team_b": "Tammeka",
+        "meetings": 8,
+        "home_wins": 2,
+        "draws": 1,
+        "away_wins": 5,
+        "home_win_pct": 25.0,
+        "draw_pct": 12.5,
+        "away_win_pct": 62.5
+      },
+      {
+        "team_a_id": 452,
+        "team_b_id": 456,
+        "team_a": "Levadia",
+        "team_b": "Parnu JK Vaprus",
+        "meetings": 8,
+        "home_wins": 2,
+        "draws": 2,
+        "away_wins": 4,
+        "home_win_pct": 25.0,
+        "draw_pct": 25.0,
+        "away_win_pct": 50.0
+      },
+      {
+        "team_a_id": 454,
+        "team_b_id": 456,
+        "team_a": "Paide",
+        "team_b": "Parnu JK Vaprus",
+        "meetings": 7,
+        "home_wins": 6,
+        "draws": 0,
+        "away_wins": 1,
+        "home_win_pct": 85.7,
+        "draw_pct": 0.0,
+        "away_win_pct": 14.3
+      },
+      {
+        "team_a_id": 451,
+        "team_b_id": 457,
+        "team_a": "Flora",
+        "team_b": "Harju JK Laagri",
+        "meetings": 7,
+        "home_wins": 5,
+        "draws": 0,
+        "away_wins": 2,
+        "home_win_pct": 71.4,
+        "draw_pct": 0.0,
+        "away_win_pct": 28.6
+      },
+      {
+        "team_a_id": 451,
+        "team_b_id": 458,
+        "team_a": "Flora",
+        "team_b": "Tammeka",
+        "meetings": 7,
+        "home_wins": 5,
+        "draws": 0,
+        "away_wins": 2,
+        "home_win_pct": 71.4,
+        "draw_pct": 0.0,
+        "away_win_pct": 28.6
+      },
+      {
+        "team_a_id": 457,
+        "team_b_id": 458,
+        "team_a": "Harju JK Laagri",
+        "team_b": "Tammeka",
+        "meetings": 7,
+        "home_wins": 5,
+        "draws": 1,
+        "away_wins": 1,
+        "home_win_pct": 71.4,
+        "draw_pct": 14.3,
+        "away_win_pct": 14.3
+      },
+      {
+        "team_a_id": 455,
+        "team_b_id": 458,
+        "team_a": "Narva",
+        "team_b": "Tammeka",
+        "meetings": 7,
+        "home_wins": 5,
+        "draws": 0,
+        "away_wins": 2,
+        "home_win_pct": 71.4,
+        "draw_pct": 0.0,
+        "away_win_pct": 28.6
+      },
+      {
+        "team_a_id": 453,
+        "team_b_id": 457,
+        "team_a": "Kalju",
+        "team_b": "Harju JK Laagri",
+        "meetings": 7,
+        "home_wins": 4,
+        "draws": 0,
+        "away_wins": 3,
+        "home_win_pct": 57.1,
+        "draw_pct": 0.0,
+        "away_win_pct": 42.9
+      },
+      {
+        "team_a_id": 452,
+        "team_b_id": 453,
+        "team_a": "Levadia",
+        "team_b": "Kalju",
+        "meetings": 7,
+        "home_wins": 4,
+        "draws": 2,
+        "away_wins": 1,
+        "home_win_pct": 57.1,
+        "draw_pct": 28.6,
+        "away_win_pct": 14.3
+      }
+    ]
+  },
+  "position_table": {
+    "seasons": [
+      "2025",
+      "2026"
+    ],
+    "teams": [
+      {
+        "team_id": 452,
+        "team": "Levadia",
+        "positions": [
+          2,
+          1
+        ]
+      },
+      {
+        "team_id": 451,
+        "team": "Flora",
+        "positions": [
+          1,
+          2
+        ]
+      },
+      {
+        "team_id": 453,
+        "team": "Kalju",
+        "positions": [
+          3,
+          4
+        ]
+      },
+      {
+        "team_id": 454,
+        "team": "Paide",
+        "positions": [
+          4,
+          3
+        ]
+      },
+      {
+        "team_id": 456,
+        "team": "Parnu JK Vaprus",
+        "positions": [
+          6,
+          7
+        ]
+      },
+      {
+        "team_id": 458,
+        "team": "Tammeka",
+        "positions": [
+          8,
+          5
+        ]
+      },
+      {
+        "team_id": 457,
+        "team": "Harju JK Laagri",
+        "positions": [
+          7,
+          6
+        ]
+      },
+      {
+        "team_id": 455,
+        "team": "Narva",
+        "positions": [
+          5,
+          10
+        ]
+      },
+      {
+        "team_id": 459,
+        "team": "Kuressaare",
+        "positions": [
+          9,
+          8
+        ]
+      },
+      {
+        "team_id": 461,
+        "team": "Nomme Utd",
+        "positions": [
+          null,
+          9
+        ]
+      },
+      {
+        "team_id": 460,
+        "team": "Tallinna Kalev",
+        "positions": [
+          10,
+          null
+        ]
+      }
+    ]
+  }
+}

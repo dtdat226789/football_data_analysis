@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:44:51+00:00",
+  "config": {
+    "league": "azer",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\azer",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier League",
+    "country": "Azerbaijan",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/azerbaijan/premier-league"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Sabah Baku",
+      "champion_id": 63,
+      "champion_pts": 78,
+      "runner_up": "Qarabag",
+      "runner_up_id": 64,
+      "margin_pts": 9
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Neftci Baku",
+      "champion_id": 66,
+      "champion_pts": 15,
+      "runner_up": "Sabah Baku",
+      "runner_up_id": 63,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 9,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "Neftci Baku",
+      "runner_up": "Sabah Baku"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 78,
+        "2": 69,
+        "4": 59,
+        "6": 46,
+        "9": 34,
+        "12": 15
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 15,
+        "4": 11,
+        "6": 9,
+        "9": 4,
+        "12": 2
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 9,
+      "safe_pts": 34,
+      "drop_position": 10,
+      "drop_pts": 31,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 31
+        },
+        {
+          "position": 11,
+          "points": 27
+        },
+        {
+          "position": 12,
+          "points": 15
+        }
+      ],
+      "bottom3_range": 16
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 9,
+      "safe_pts": 4,
+      "drop_position": 10,
+      "drop_pts": 3,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 10,
+          "points": 3
+        },
+        {
+          "position": 11,
+          "points": 2
+        },
+        {
+          "position": 12,
+          "points": 2
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 200,
+      "total_goals": 515,
+      "avg_goals": 2.575,
+      "home_wins": 75,
+      "draws": 49,
+      "away_wins": 76,
+      "home_win_pct": 37.5,
+      "draw_pct": 24.5,
+      "away_win_pct": 38.0,
+      "goalless": 18,
+      "goalless_pct": 9.0,
+      "total_points": 551,
+      "avg_points_per_team": 42.38,
+      "n_teams": 13
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 34,
+      "total_goals": 85,
+      "avg_goals": 2.5,
+      "home_wins": 18,
+      "draws": 7,
+      "away_wins": 9,
+      "home_win_pct": 52.9,
+      "draw_pct": 20.6,
+      "away_win_pct": 26.5,
+      "goalless": 3,
+      "goalless_pct": 8.8,
+      "total_points": 95,
+      "avg_points_per_team": 7.92,
+      "n_teams": 12
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.462,
+        "goals": 2.923
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.5,
+        "goals": 2.833
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 2.923
+    }
+  }
+}

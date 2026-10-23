@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:01:31+00:00",
+  "config": {
+    "league": "lithuania",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\lithuania",
+    "out_stem": null
+  },
+  "league": {
+    "name": "TOPLYGA",
+    "country": "Lithuania",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/lithuania/toplyga"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Kauno Zalgiris",
+      "champion_id": 1070,
+      "champion_pts": 75,
+      "runner_up": "Hegelmann",
+      "runner_up_id": 1071,
+      "margin_pts": 8
+    },
+    {
+      "season": "2026",
+      "champion": "Kauno Zalgiris",
+      "champion_id": 1070,
+      "champion_pts": 57,
+      "runner_up": "Suduva",
+      "runner_up_id": 1073,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 8,
+        "tight": false
+      },
+      {
+        "season": "2026",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026",
+      "margin": 1,
+      "champion": "Kauno Zalgiris",
+      "runner_up": "Suduva"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 75,
+        "2": 67,
+        "4": 59,
+        "6": 49,
+        "7": 46,
+        "10": 18
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 57,
+        "2": 56,
+        "4": 48,
+        "6": 44,
+        "7": 38,
+        "10": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 7,
+      "safe_pts": 46,
+      "drop_position": 8,
+      "drop_pts": 42,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 42
+        },
+        {
+          "position": 9,
+          "points": 26
+        },
+        {
+          "position": 10,
+          "points": 18
+        }
+      ],
+      "bottom3_range": 24
+    },
+    {
+      "season": "2026",
+      "safe_position": 7,
+      "safe_pts": 38,
+      "drop_position": 8,
+      "drop_pts": 27,
+      "gap": 11,
+      "bottom3": [
+        {
+          "position": 8,
+          "points": 27
+        },
+        {
+          "position": 9,
+          "points": 21
+        },
+        {
+          "position": 10,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 24
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 180,
+      "total_goals": 479,
+      "avg_goals": 2.661,
+      "home_wins": 73,
+      "draws": 44,
+      "away_wins": 63,
+      "home_win_pct": 40.6,
+      "draw_pct": 24.4,
+      "away_win_pct": 35.0,
+      "goalless": 13,
+      "goalless_pct": 7.2,
+      "total_points": 496,
+      "avg_points_per_team": 49.6,
+      "n_teams": 10
+    },
+    {
+      "season": "2026",
+      "n_matches": 144,
+      "total_goals": 381,
+      "avg_goals": 2.646,
+      "home_wins": 57,
+      "draws": 40,
+      "away_wins": 47,
+      "home_win_pct": 39.6,
+      "draw_pct": 27.8,
+      "away_win_pct": 32.6,
+      "goalless": 16,
+      "goalless_pct": 11.1,
+      "total_points": 392,
+      "avg_points_per_team": 39.2,
+      "n_teams": 10
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 1.6,
+        "goals": 4.0
+      },
+      {
+        "season": "2026",
+        "luck": 2.2,
+        "goals": 3.2
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "goals",
+      "avg_abs_diff": 4.0
+    }
+  }
+}

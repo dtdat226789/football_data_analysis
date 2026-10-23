@@ -1,0 +1,367 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:10:00+00:00",
+  "config": {
+    "league": "swiss2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\swiss2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Challenge League",
+    "country": "Switzerland",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/switzerland/challenge-league"
+  },
+  "overall": {
+    "n_matches": 231,
+    "home_wins": 103,
+    "draws": 52,
+    "away_wins": 76,
+    "home_win_pct": 44.6,
+    "draw_pct": 22.5,
+    "away_win_pct": 32.9,
+    "home_goals": 382,
+    "away_goals": 320,
+    "total_goals": 702,
+    "avg_goals": 3.039,
+    "goalless": 14,
+    "goalless_pct": 6.1
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 186,
+      "home_wins": 83,
+      "draws": 40,
+      "away_wins": 63,
+      "home_win_pct": 44.6,
+      "draw_pct": 21.5,
+      "away_win_pct": 33.9,
+      "home_goals": 300,
+      "away_goals": 266,
+      "total_goals": 566,
+      "avg_goals": 3.043,
+      "goalless": 12,
+      "goalless_pct": 6.5
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 45,
+      "home_wins": 20,
+      "draws": 12,
+      "away_wins": 13,
+      "home_win_pct": 44.4,
+      "draw_pct": 26.7,
+      "away_win_pct": 28.9,
+      "home_goals": 82,
+      "away_goals": 54,
+      "total_goals": 136,
+      "avg_goals": 3.022,
+      "goalless": 2,
+      "goalless_pct": 4.4
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 60,
+        "draw": 12,
+        "away": 2
+      },
+      "draw": {
+        "home": 39,
+        "draw": 30,
+        "away": 29
+      },
+      "away": {
+        "home": 4,
+        "draw": 10,
+        "away": 45
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 81.1,
+        "draw": 16.2,
+        "away": 2.7
+      },
+      "draw": {
+        "home": 39.8,
+        "draw": 30.6,
+        "away": 29.6
+      },
+      "away": {
+        "home": 6.8,
+        "draw": 16.9,
+        "away": 76.3
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 4,
+      "pct": 1.7,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Yverdon",
+          "away_team": "Lausanne Ouchy",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Xamax",
+          "away_team": "Wil",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Aarau",
+          "away_team": "Rapperswil-Jona",
+          "ht_score": "1-2",
+          "ft_score": "5-3"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Aarau",
+          "away_team": "Rapperswil-Jona",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        }
+      ]
+    },
+    "away": {
+      "count": 2,
+      "pct": 0.9,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Wil",
+          "away_team": "Yverdon",
+          "ht_score": "2-0",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Rapperswil-Jona",
+          "away_team": "Xamax",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 74,
+      "home": {
+        "count": 60,
+        "pct": 81.1
+      },
+      "draw": {
+        "count": 12,
+        "pct": 16.2
+      },
+      "away": {
+        "count": 2,
+        "pct": 2.7
+      }
+    },
+    "ht_draw": {
+      "n_matches": 98,
+      "home": {
+        "count": 39,
+        "pct": 39.8
+      },
+      "draw": {
+        "count": 30,
+        "pct": 30.6
+      },
+      "away": {
+        "count": 29,
+        "pct": 29.6
+      }
+    },
+    "away_lead": {
+      "n_matches": 59,
+      "home": {
+        "count": 4,
+        "pct": 6.8
+      },
+      "draw": {
+        "count": 10,
+        "pct": 16.9
+      },
+      "away": {
+        "count": 45,
+        "pct": 76.3
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 231,
+    "n_with_first_goal": 217,
+    "n_goalless": 14,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 100,
+        "home": {
+          "count": 49,
+          "pct": 49.0
+        },
+        "draw": {
+          "count": 18,
+          "pct": 18.0
+        },
+        "away": {
+          "count": 33,
+          "pct": 33.0
+        },
+        "pct_of_matches": 43.3
+      },
+      "16-30": {
+        "n_matches": 38,
+        "home": {
+          "count": 18,
+          "pct": 47.4
+        },
+        "draw": {
+          "count": 7,
+          "pct": 18.4
+        },
+        "away": {
+          "count": 13,
+          "pct": 34.2
+        },
+        "pct_of_matches": 16.5
+      },
+      "31-45": {
+        "n_matches": 30,
+        "home": {
+          "count": 9,
+          "pct": 30.0
+        },
+        "draw": {
+          "count": 7,
+          "pct": 23.3
+        },
+        "away": {
+          "count": 14,
+          "pct": 46.7
+        },
+        "pct_of_matches": 13.0
+      },
+      "46-60": {
+        "n_matches": 22,
+        "home": {
+          "count": 12,
+          "pct": 54.5
+        },
+        "draw": {
+          "count": 3,
+          "pct": 13.6
+        },
+        "away": {
+          "count": 7,
+          "pct": 31.8
+        },
+        "pct_of_matches": 9.5
+      },
+      "61-75": {
+        "n_matches": 16,
+        "home": {
+          "count": 8,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 2,
+          "pct": 12.5
+        },
+        "away": {
+          "count": 6,
+          "pct": 37.5
+        },
+        "pct_of_matches": 6.9
+      },
+      "76-90": {
+        "n_matches": 6,
+        "home": {
+          "count": 3,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 1,
+          "pct": 16.7
+        },
+        "away": {
+          "count": 2,
+          "pct": 33.3
+        },
+        "pct_of_matches": 2.6
+      },
+      "91-120": {
+        "n_matches": 5,
+        "home": {
+          "count": 4,
+          "pct": 80.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 1,
+          "pct": 20.0
+        },
+        "pct_of_matches": 2.2
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 231,
+      "count": 14,
+      "pct": 6.1
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 186,
+        "count": 12,
+        "pct": 6.5
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 45,
+        "count": 2,
+        "pct": 4.4
+      }
+    ]
+  }
+}

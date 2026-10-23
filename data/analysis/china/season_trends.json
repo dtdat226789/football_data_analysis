@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:46:35+00:00",
+  "config": {
+    "league": "china",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\china",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Super League",
+    "country": "China",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/china/super-league"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Shanghai Port",
+      "champion_id": 248,
+      "champion_pts": 66,
+      "runner_up": "Shanghai Shenhua",
+      "runner_up_id": 249,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026",
+      "champion": "Chengdu Rongcheng",
+      "champion_id": 250,
+      "champion_pts": 52,
+      "runner_up": "Beijing Guoan",
+      "runner_up_id": 251,
+      "margin_pts": 9
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026",
+        "margin": 9,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025",
+      "margin": 2,
+      "champion": "Shanghai Port",
+      "runner_up": "Shanghai Shenhua"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 66,
+        "2": 64,
+        "4": 57,
+        "6": 44,
+        "13": 25,
+        "16": 19
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 52,
+        "2": 43,
+        "4": 41,
+        "6": 38,
+        "13": 28,
+        "16": 21
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 13,
+      "safe_pts": 25,
+      "drop_position": 14,
+      "drop_pts": 25,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 25
+        },
+        {
+          "position": 15,
+          "points": 21
+        },
+        {
+          "position": 16,
+          "points": 19
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2026",
+      "safe_position": 13,
+      "safe_pts": 28,
+      "drop_position": 14,
+      "drop_pts": 26,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 26
+        },
+        {
+          "position": 15,
+          "points": 25
+        },
+        {
+          "position": 16,
+          "points": 21
+        }
+      ],
+      "bottom3_range": 5
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 240,
+      "total_goals": 771,
+      "avg_goals": 3.212,
+      "home_wins": 112,
+      "draws": 62,
+      "away_wins": 66,
+      "home_win_pct": 46.7,
+      "draw_pct": 25.8,
+      "away_win_pct": 27.5,
+      "goalless": 9,
+      "goalless_pct": 3.8,
+      "total_points": 658,
+      "avg_points_per_team": 41.12,
+      "n_teams": 16
+    },
+    {
+      "season": "2026",
+      "n_matches": 208,
+      "total_goals": 643,
+      "avg_goals": 3.091,
+      "home_wins": 95,
+      "draws": 56,
+      "away_wins": 57,
+      "home_win_pct": 45.7,
+      "draw_pct": 26.9,
+      "away_win_pct": 27.4,
+      "goalless": 10,
+      "goalless_pct": 4.8,
+      "total_points": 568,
+      "avg_points_per_team": 35.5,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 2.5,
+        "goals": 3.625
+      },
+      {
+        "season": "2026",
+        "luck": 4.125,
+        "goals": 5.0
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026",
+      "view": "goals",
+      "avg_abs_diff": 5.0
+    }
+  }
+}

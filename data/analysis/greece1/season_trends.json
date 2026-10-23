@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:51:42+00:00",
+  "config": {
+    "league": "greece1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\greece1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Super League",
+    "country": "Greece",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "playoff",
+    "url": "https://www.football-charts.com/leagues/greece/super-league"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "AEK Athens",
+      "champion_id": 666,
+      "champion_pts": 72,
+      "runner_up": "Olympiacos Piraeus",
+      "runner_up_id": 667,
+      "margin_pts": 3
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Panathinaikos",
+      "champion_id": 670,
+      "champion_pts": 15,
+      "runner_up": "PAOK",
+      "runner_up_id": 668,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 3,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 3,
+      "champion": "AEK Athens",
+      "runner_up": "Olympiacos Piraeus"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 72,
+        "2": 69,
+        "4": 52,
+        "6": 46,
+        "11": 36,
+        "14": 29
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 12,
+        "4": 10,
+        "6": 9,
+        "11": 2,
+        "14": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 11,
+      "safe_pts": 36,
+      "drop_position": 12,
+      "drop_pts": 32,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 32
+        },
+        {
+          "position": 13,
+          "points": 31
+        },
+        {
+          "position": 14,
+          "points": 29
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 11,
+      "safe_pts": 2,
+      "drop_position": 12,
+      "drop_pts": 2,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 2
+        },
+        {
+          "position": 13,
+          "points": 2
+        },
+        {
+          "position": 14,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 246,
+      "total_goals": 624,
+      "avg_goals": 2.537,
+      "home_wins": 102,
+      "draws": 68,
+      "away_wins": 76,
+      "home_win_pct": 41.5,
+      "draw_pct": 27.6,
+      "away_win_pct": 30.9,
+      "goalless": 22,
+      "goalless_pct": 8.9,
+      "total_points": 670,
+      "avg_points_per_team": 44.67,
+      "n_teams": 15
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 35,
+      "total_goals": 88,
+      "avg_goals": 2.514,
+      "home_wins": 14,
+      "draws": 9,
+      "away_wins": 12,
+      "home_win_pct": 40.0,
+      "draw_pct": 25.7,
+      "away_win_pct": 34.3,
+      "goalless": 2,
+      "goalless_pct": 5.7,
+      "total_points": 96,
+      "avg_points_per_team": 6.86,
+      "n_teams": 14
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 3.6,
+        "goals": 4.667
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.429,
+        "goals": 3.286
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 4.667
+    }
+  }
+}

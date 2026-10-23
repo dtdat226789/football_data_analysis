@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:07:36+00:00",
+  "config": {
+    "league": "segunda4",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\segunda4",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Segunda RFEF - Group 4",
+    "country": "Spain",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/segunda-rfef-group-4"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Deportiva Minera",
+      "champion_id": 1511,
+      "champion_pts": 66,
+      "runner_up": "CD Extremadura",
+      "runner_up_id": 1296,
+      "margin_pts": 0
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Betis B",
+      "champion_id": 1314,
+      "champion_pts": 10,
+      "runner_up": "Don Benito",
+      "runner_up_id": 1528,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "Deportiva Minera",
+      "runner_up": "CD Extremadura"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 66,
+        "2": 66,
+        "4": 62,
+        "6": 60,
+        "15": 37,
+        "18": 21
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 10,
+        "2": 10,
+        "4": 9,
+        "6": 7,
+        "15": 4,
+        "18": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 37,
+      "drop_position": 16,
+      "drop_pts": 37,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 37
+        },
+        {
+          "position": 17,
+          "points": 24
+        },
+        {
+          "position": 18,
+          "points": 21
+        }
+      ],
+      "bottom3_range": 16
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 4,
+      "drop_position": 16,
+      "drop_pts": 2,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 2
+        },
+        {
+          "position": 17,
+          "points": 2
+        },
+        {
+          "position": 18,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 2
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 323,
+      "total_goals": 738,
+      "avg_goals": 2.285,
+      "home_wins": 162,
+      "draws": 84,
+      "away_wins": 77,
+      "home_win_pct": 50.2,
+      "draw_pct": 26.0,
+      "away_win_pct": 23.8,
+      "goalless": 28,
+      "goalless_pct": 8.7,
+      "total_points": 885,
+      "avg_points_per_team": 46.58,
+      "n_teams": 19
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 36,
+      "total_goals": 88,
+      "avg_goals": 2.444,
+      "home_wins": 15,
+      "draws": 10,
+      "away_wins": 11,
+      "home_win_pct": 41.7,
+      "draw_pct": 27.8,
+      "away_win_pct": 30.6,
+      "goalless": 5,
+      "goalless_pct": 13.9,
+      "total_points": 98,
+      "avg_points_per_team": 5.44,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.211,
+        "goals": 6.632
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.333,
+        "goals": 5.222
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.632
+    }
+  }
+}

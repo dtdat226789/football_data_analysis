@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:51:27+00:00",
+  "config": {
+    "league": "germany3",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\germany3",
+    "out_stem": null
+  },
+  "league": {
+    "name": "3. Liga",
+    "country": "Germany",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/germany/3-liga"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "VfL Osnabruck",
+      "champion_id": 645,
+      "champion_pts": 80,
+      "runner_up": "Cottbus",
+      "runner_up_id": 644,
+      "margin_pts": 8
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Duisburg",
+      "champion_id": 646,
+      "champion_pts": 18,
+      "runner_up": "Viktoria Koln",
+      "runner_up_id": 653,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 8,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 3,
+      "champion": "Duisburg",
+      "runner_up": "Viktoria Koln"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 80,
+        "2": 72,
+        "4": 68,
+        "6": 64,
+        "17": 35,
+        "20": 21
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 18,
+        "2": 15,
+        "4": 13,
+        "6": 12,
+        "17": 6,
+        "20": 4
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 17,
+      "safe_pts": 35,
+      "drop_position": 18,
+      "drop_pts": 34,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 34
+        },
+        {
+          "position": 19,
+          "points": 33
+        },
+        {
+          "position": 20,
+          "points": 21
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 17,
+      "safe_pts": 6,
+      "drop_position": 18,
+      "drop_pts": 5,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 5
+        },
+        {
+          "position": 19,
+          "points": 5
+        },
+        {
+          "position": 20,
+          "points": 4
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 380,
+      "total_goals": 1219,
+      "avg_goals": 3.208,
+      "home_wins": 175,
+      "draws": 89,
+      "away_wins": 116,
+      "home_win_pct": 46.1,
+      "draw_pct": 23.4,
+      "away_win_pct": 30.5,
+      "goalless": 23,
+      "goalless_pct": 6.1,
+      "total_points": 1051,
+      "avg_points_per_team": 52.55,
+      "n_teams": 20
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 70,
+      "total_goals": 229,
+      "avg_goals": 3.271,
+      "home_wins": 29,
+      "draws": 14,
+      "away_wins": 27,
+      "home_win_pct": 41.4,
+      "draw_pct": 20.0,
+      "away_win_pct": 38.6,
+      "goalless": 2,
+      "goalless_pct": 2.9,
+      "total_points": 196,
+      "avg_points_per_team": 9.8,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.1,
+        "goals": 7.2
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.3,
+        "goals": 6.1
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 7.2
+    }
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:04:04+00:00",
+  "config": {
+    "league": "premier",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\premier",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier League",
+    "country": "England",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/premier-league"
+  },
+  "champions": [
+    {
+      "season": "2020-2021",
+      "champion": "Manchester City",
+      "champion_id": 1252,
+      "champion_pts": 86,
+      "runner_up": "Manchester Utd",
+      "runner_up_id": 1253,
+      "margin_pts": 12
+    },
+    {
+      "season": "2021-2022",
+      "champion": "Manchester City",
+      "champion_id": 1252,
+      "champion_pts": 93,
+      "runner_up": "Liverpool",
+      "runner_up_id": 1254,
+      "margin_pts": 1
+    },
+    {
+      "season": "2022-2023",
+      "champion": "Manchester City",
+      "champion_id": 1252,
+      "champion_pts": 89,
+      "runner_up": "Arsenal",
+      "runner_up_id": 1257,
+      "margin_pts": 5
+    },
+    {
+      "season": "2023-2024",
+      "champion": "Manchester City",
+      "champion_id": 1252,
+      "champion_pts": 91,
+      "runner_up": "Arsenal",
+      "runner_up_id": 1257,
+      "margin_pts": 2
+    },
+    {
+      "season": "2024-2025",
+      "champion": "Liverpool",
+      "champion_id": 1254,
+      "champion_pts": 84,
+      "runner_up": "Arsenal",
+      "runner_up_id": 1257,
+      "margin_pts": 10
+    },
+    {
+      "season": "2025-2026",
+      "champion": "Arsenal",
+      "champion_id": 1257,
+      "champion_pts": 85,
+      "runner_up": "Manchester City",
+      "runner_up_id": 1252,
+      "margin_pts": 7
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Manchester City",
+      "champion_id": 1252,
+      "champion_pts": 15,
+      "runner_up": "Arsenal",
+      "runner_up_id": 1257,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2020-2021",
+        "margin": 12,
+        "tight": false
+      },
+      {
+        "season": "2021-2022",
+        "margin": 1,
+        "tight": true
+      },
+      {
+        "season": "2022-2023",
+        "margin": 5,
+        "tight": false
+      },
+      {
+        "season": "2023-2024",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2024-2025",
+        "margin": 10,
+        "tight": false
+      },
+      {
+        "season": "2025-2026",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 3,
+    "total_seasons": 7,
+    "tightest": {
+      "season": "2021-2022",
+      "margin": 1,
+      "champion": "Manchester City",
+      "runner_up": "Liverpool"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2020-2021",
+      "positions": {
+        "1": 86,
+        "2": 74,
+        "4": 67,
+        "6": 65,
+        "17": 39,
+        "20": 23
+      }
+    },
+    {
+      "season": "2021-2022",
+      "positions": {
+        "1": 93,
+        "2": 92,
+        "4": 71,
+        "6": 58,
+        "17": 38,
+        "20": 22
+      }
+    },
+    {
+      "season": "2022-2023",
+      "positions": {
+        "1": 89,
+        "2": 84,
+        "4": 71,
+        "6": 62,
+        "17": 36,
+        "20": 25
+      }
+    },
+    {
+      "season": "2023-2024",
+      "positions": {
+        "1": 91,
+        "2": 89,
+        "4": 68,
+        "6": 63,
+        "17": 36,
+        "20": 16
+      }
+    },
+    {
+      "season": "2024-2025",
+      "positions": {
+        "1": 84,
+        "2": 74,
+        "4": 69,
+        "6": 66,
+        "17": 38,
+        "20": 12
+      }
+    },
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 85,
+        "2": 78,
+        "4": 65,
+        "6": 57,
+        "17": 41,
+        "20": 20
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 12,
+        "4": 9,
+        "6": 9,
+        "17": 3,
+        "20": 2
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2020-2021",
+      "safe_position": 17,
+      "safe_pts": 39,
+      "drop_position": 18,
+      "drop_pts": 28,
+      "gap": 11,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 28
+        },
+        {
+          "position": 19,
+          "points": 26
+        },
+        {
+          "position": 20,
+          "points": 23
+        }
+      ],
+      "bottom3_range": 5
+    },
+    {
+      "season": "2021-2022",
+      "safe_position": 17,
+      "safe_pts": 38,
+      "drop_position": 18,
+      "drop_pts": 35,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 35
+        },
+        {
+          "position": 19,
+          "points": 23
+        },
+        {
+          "position": 20,
+          "points": 22
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2022-2023",
+      "safe_position": 17,
+      "safe_pts": 36,
+      "drop_position": 18,
+      "drop_pts": 34,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 34
+        },
+        {
+          "position": 19,
+          "points": 31
+        },
+        {
+          "position": 20,
+          "points": 25
+        }
+      ],
+      "bottom3_range": 9
+    },
+    {
+      "season": "2023-2024",
+      "safe_position": 17,
+      "safe_pts": 36,
+      "drop_position": 18,
+      "drop_pts": 26,
+      "gap": 10,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 26
+        },
+        {
+          "position": 19,
+          "points": 24
+        },
+        {
+          "position": 20,
+          "points": 16
+        }
+      ],
+      "bottom3_range": 10
+    },
+    {
+      "season": "2024-2025",
+      "safe_position": 17,
+      "safe_pts": 38,
+      "drop_position": 18,
+      "drop_pts": 25,
+      "gap": 13,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 25
+        },
+        {
+          "position": 19,
+          "points": 22
+        },
+        {
+          "position": 20,
+          "points": 12
+        }
+      ],
+      "bottom3_range": 13
+    },
+    {
+      "season": "2025-2026",
+      "safe_position": 17,
+      "safe_pts": 41,
+      "drop_position": 18,
+      "drop_pts": 39,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 39
+        },
+        {
+          "position": 19,
+          "points": 22
+        },
+        {
+          "position": 20,
+          "points": 20
+        }
+      ],
+      "bottom3_range": 19
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 17,
+      "safe_pts": 3,
+      "drop_position": 18,
+      "drop_pts": 3,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 3
+        },
+        {
+          "position": 19,
+          "points": 2
+        },
+        {
+          "position": 20,
+          "points": 2
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2020-2021",
+      "n_matches": 380,
+      "total_goals": 1024,
+      "avg_goals": 2.695,
+      "home_wins": 144,
+      "draws": 83,
+      "away_wins": 153,
+      "home_win_pct": 37.9,
+      "draw_pct": 21.8,
+      "away_win_pct": 40.3,
+      "goalless": 30,
+      "goalless_pct": 7.9,
+      "total_points": 1057,
+      "avg_points_per_team": 52.85,
+      "n_teams": 20
+    },
+    {
+      "season": "2021-2022",
+      "n_matches": 380,
+      "total_goals": 1071,
+      "avg_goals": 2.818,
+      "home_wins": 163,
+      "draws": 88,
+      "away_wins": 129,
+      "home_win_pct": 42.9,
+      "draw_pct": 23.2,
+      "away_win_pct": 33.9,
+      "goalless": 22,
+      "goalless_pct": 5.8,
+      "total_points": 1052,
+      "avg_points_per_team": 52.6,
+      "n_teams": 20
+    },
+    {
+      "season": "2022-2023",
+      "n_matches": 380,
+      "total_goals": 1084,
+      "avg_goals": 2.853,
+      "home_wins": 184,
+      "draws": 87,
+      "away_wins": 109,
+      "home_win_pct": 48.4,
+      "draw_pct": 22.9,
+      "away_win_pct": 28.7,
+      "goalless": 23,
+      "goalless_pct": 6.1,
+      "total_points": 1053,
+      "avg_points_per_team": 52.65,
+      "n_teams": 20
+    },
+    {
+      "season": "2023-2024",
+      "n_matches": 380,
+      "total_goals": 1246,
+      "avg_goals": 3.279,
+      "home_wins": 175,
+      "draws": 82,
+      "away_wins": 123,
+      "home_win_pct": 46.1,
+      "draw_pct": 21.6,
+      "away_win_pct": 32.4,
+      "goalless": 11,
+      "goalless_pct": 2.9,
+      "total_points": 1058,
+      "avg_points_per_team": 52.9,
+      "n_teams": 20
+    },
+    {
+      "season": "2024-2025",
+      "n_matches": 380,
+      "total_goals": 1115,
+      "avg_goals": 2.934,
+      "home_wins": 155,
+      "draws": 93,
+      "away_wins": 132,
+      "home_win_pct": 40.8,
+      "draw_pct": 24.5,
+      "away_win_pct": 34.7,
+      "goalless": 16,
+      "goalless_pct": 4.2,
+      "total_points": 1047,
+      "avg_points_per_team": 52.35,
+      "n_teams": 20
+    },
+    {
+      "season": "2025-2026",
+      "n_matches": 380,
+      "total_goals": 1045,
+      "avg_goals": 2.75,
+      "home_wins": 162,
+      "draws": 104,
+      "away_wins": 114,
+      "home_win_pct": 42.6,
+      "draw_pct": 27.4,
+      "away_win_pct": 30.0,
+      "goalless": 27,
+      "goalless_pct": 7.1,
+      "total_points": 1036,
+      "avg_points_per_team": 51.8,
+      "n_teams": 20
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 50,
+      "total_goals": 141,
+      "avg_goals": 2.82,
+      "home_wins": 18,
+      "draws": 16,
+      "away_wins": 16,
+      "home_win_pct": 36.0,
+      "draw_pct": 32.0,
+      "away_win_pct": 32.0,
+      "goalless": 5,
+      "goalless_pct": 10.0,
+      "total_points": 134,
+      "avg_points_per_team": 6.7,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2020-2021",
+        "luck": 5.1,
+        "goals": 3.9
+      },
+      {
+        "season": "2021-2022",
+        "luck": 3.7,
+        "goals": 5.2
+      },
+      {
+        "season": "2022-2023",
+        "luck": 4.3,
+        "goals": 5.7
+      },
+      {
+        "season": "2023-2024",
+        "luck": 3.6,
+        "goals": 5.7
+      },
+      {
+        "season": "2024-2025",
+        "luck": 4.6,
+        "goals": 7.1
+      },
+      {
+        "season": "2025-2026",
+        "luck": 4.3,
+        "goals": 5.4
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.2,
+        "goals": 6.5
+      }
+    ],
+    "worst_divergence": {
+      "season": "2024-2025",
+      "view": "goals",
+      "avg_abs_diff": 7.1
+    }
+  }
+}

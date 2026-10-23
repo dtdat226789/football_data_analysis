@@ -1,0 +1,451 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:06:00+00:00",
+  "config": {
+    "league": "scot-premier",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot-premier",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premiership",
+    "country": "Scotland",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "split",
+    "url": "https://www.football-charts.com/leagues/scotland/premiership"
+  },
+  "overall": {
+    "n_matches": 276,
+    "home_wins": 121,
+    "draws": 73,
+    "away_wins": 82,
+    "home_win_pct": 43.8,
+    "draw_pct": 26.4,
+    "away_win_pct": 29.7,
+    "home_goals": 418,
+    "away_goals": 332,
+    "total_goals": 750,
+    "avg_goals": 2.717,
+    "goalless": 19,
+    "goalless_pct": 6.9
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 234,
+      "home_wins": 105,
+      "draws": 64,
+      "away_wins": 65,
+      "home_win_pct": 44.9,
+      "draw_pct": 27.4,
+      "away_win_pct": 27.8,
+      "home_goals": 368,
+      "away_goals": 275,
+      "total_goals": 643,
+      "avg_goals": 2.748,
+      "goalless": 17,
+      "goalless_pct": 7.3
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 42,
+      "home_wins": 16,
+      "draws": 9,
+      "away_wins": 17,
+      "home_win_pct": 38.1,
+      "draw_pct": 21.4,
+      "away_win_pct": 40.5,
+      "home_goals": 50,
+      "away_goals": 57,
+      "total_goals": 107,
+      "avg_goals": 2.548,
+      "goalless": 2,
+      "goalless_pct": 4.8
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 78,
+        "draw": 13,
+        "away": 9
+      },
+      "draw": {
+        "home": 34,
+        "draw": 42,
+        "away": 19
+      },
+      "away": {
+        "home": 9,
+        "draw": 18,
+        "away": 54
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 78.0,
+        "draw": 13.0,
+        "away": 9.0
+      },
+      "draw": {
+        "home": 35.8,
+        "draw": 44.2,
+        "away": 20.0
+      },
+      "away": {
+        "home": 11.1,
+        "draw": 22.2,
+        "away": 66.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 9,
+      "pct": 3.3,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Falkirk",
+          "away_team": "Dundee FC",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Aberdeen",
+          "away_team": "Kilmarnock",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Dundee Utd",
+          "away_team": "Celtic",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Dundee FC",
+          "away_team": "Kilmarnock",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Hearts",
+          "away_team": "Rangers",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Partick Thistle",
+          "away_team": "Dunfermline",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Dundee FC",
+          "away_team": "Aberdeen",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Aberdeen",
+          "away_team": "Hearts",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Hearts",
+          "away_team": "Dundee FC",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 9,
+      "pct": 3.3,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Dundee Utd",
+          "away_team": "Hearts",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Livingston",
+          "away_team": "Hearts",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Motherwell",
+          "away_team": "Falkirk",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Livingston",
+          "away_team": "Motherwell",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Celtic",
+          "away_team": "Rangers",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Kilmarnock",
+          "away_team": "Celtic",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Falkirk",
+          "away_team": "Rangers",
+          "ht_score": "2-1",
+          "ft_score": "3-6"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Hibernian",
+          "away_team": "Hearts",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "St. Mirren",
+          "away_team": "Celtic",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 100,
+      "home": {
+        "count": 78,
+        "pct": 78.0
+      },
+      "draw": {
+        "count": 13,
+        "pct": 13.0
+      },
+      "away": {
+        "count": 9,
+        "pct": 9.0
+      }
+    },
+    "ht_draw": {
+      "n_matches": 95,
+      "home": {
+        "count": 34,
+        "pct": 35.8
+      },
+      "draw": {
+        "count": 42,
+        "pct": 44.2
+      },
+      "away": {
+        "count": 19,
+        "pct": 20.0
+      }
+    },
+    "away_lead": {
+      "n_matches": 81,
+      "home": {
+        "count": 9,
+        "pct": 11.1
+      },
+      "draw": {
+        "count": 18,
+        "pct": 22.2
+      },
+      "away": {
+        "count": 54,
+        "pct": 66.7
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 276,
+    "n_with_first_goal": 257,
+    "n_goalless": 19,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 80,
+        "home": {
+          "count": 35,
+          "pct": 43.8
+        },
+        "draw": {
+          "count": 15,
+          "pct": 18.8
+        },
+        "away": {
+          "count": 30,
+          "pct": 37.5
+        },
+        "pct_of_matches": 29.0
+      },
+      "16-30": {
+        "n_matches": 79,
+        "home": {
+          "count": 37,
+          "pct": 46.8
+        },
+        "draw": {
+          "count": 16,
+          "pct": 20.3
+        },
+        "away": {
+          "count": 26,
+          "pct": 32.9
+        },
+        "pct_of_matches": 28.6
+      },
+      "31-45": {
+        "n_matches": 50,
+        "home": {
+          "count": 25,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 10,
+          "pct": 20.0
+        },
+        "away": {
+          "count": 15,
+          "pct": 30.0
+        },
+        "pct_of_matches": 18.1
+      },
+      "46-60": {
+        "n_matches": 22,
+        "home": {
+          "count": 10,
+          "pct": 45.5
+        },
+        "draw": {
+          "count": 8,
+          "pct": 36.4
+        },
+        "away": {
+          "count": 4,
+          "pct": 18.2
+        },
+        "pct_of_matches": 8.0
+      },
+      "61-75": {
+        "n_matches": 14,
+        "home": {
+          "count": 6,
+          "pct": 42.9
+        },
+        "draw": {
+          "count": 4,
+          "pct": 28.6
+        },
+        "away": {
+          "count": 4,
+          "pct": 28.6
+        },
+        "pct_of_matches": 5.1
+      },
+      "76-90": {
+        "n_matches": 7,
+        "home": {
+          "count": 5,
+          "pct": 71.4
+        },
+        "draw": {
+          "count": 1,
+          "pct": 14.3
+        },
+        "away": {
+          "count": 1,
+          "pct": 14.3
+        },
+        "pct_of_matches": 2.5
+      },
+      "91-120": {
+        "n_matches": 5,
+        "home": {
+          "count": 3,
+          "pct": 60.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 2,
+          "pct": 40.0
+        },
+        "pct_of_matches": 1.8
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 276,
+      "count": 19,
+      "pct": 6.9
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 234,
+        "count": 17,
+        "pct": 7.3
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 42,
+        "count": 2,
+        "pct": 4.8
+      }
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:07:22+00:00",
+  "config": {
+    "league": "segunda3",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\segunda3",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Segunda RFEF - Group 3",
+    "country": "Spain",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/segunda-rfef-group-3"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Baleares",
+      "champion_id": 1493,
+      "champion_pts": 66,
+      "runner_up": "Sant Andreu",
+      "runner_up_id": 1320,
+      "margin_pts": 0
+    },
+    {
+      "season": "2026-2027",
+      "champion": "La Nucia",
+      "champion_id": 1503,
+      "champion_pts": 12,
+      "runner_up": "Castellonense",
+      "runner_up_id": 1504,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "Baleares",
+      "runner_up": "Sant Andreu"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 66,
+        "2": 66,
+        "4": 55,
+        "6": 52,
+        "15": 33,
+        "18": 27
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 12,
+        "2": 12,
+        "4": 10,
+        "6": 8,
+        "15": 3,
+        "18": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 33,
+      "drop_position": 16,
+      "drop_pts": 30,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 30
+        },
+        {
+          "position": 17,
+          "points": 30
+        },
+        {
+          "position": 18,
+          "points": 27
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 3,
+      "drop_position": 16,
+      "drop_pts": 2,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 2
+        },
+        {
+          "position": 17,
+          "points": 1
+        },
+        {
+          "position": 18,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 306,
+      "total_goals": 742,
+      "avg_goals": 2.425,
+      "home_wins": 140,
+      "draws": 97,
+      "away_wins": 69,
+      "home_win_pct": 45.8,
+      "draw_pct": 31.7,
+      "away_win_pct": 22.5,
+      "goalless": 33,
+      "goalless_pct": 10.8,
+      "total_points": 821,
+      "avg_points_per_team": 45.61,
+      "n_teams": 18
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 40,
+      "total_goals": 87,
+      "avg_goals": 2.175,
+      "home_wins": 18,
+      "draws": 10,
+      "away_wins": 12,
+      "home_win_pct": 45.0,
+      "draw_pct": 25.0,
+      "away_win_pct": 30.0,
+      "goalless": 2,
+      "goalless_pct": 5.0,
+      "total_points": 110,
+      "avg_points_per_team": 6.11,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.111,
+        "goals": 6.556
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.556,
+        "goals": 5.111
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 6.556
+    }
+  }
+}

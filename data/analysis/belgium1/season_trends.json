@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:45:07+00:00",
+  "config": {
+    "league": "belgium1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\belgium1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Jupiler Pro League",
+    "country": "Belgium",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "playoff",
+    "url": "https://www.football-charts.com/leagues/belgium/jupiler-pro-league"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Club Brugge KV",
+      "champion_id": 77,
+      "champion_pts": 88,
+      "runner_up": "Royale Union SG",
+      "runner_up_id": 78,
+      "margin_pts": 2
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Royale Union SG",
+      "champion_id": 78,
+      "champion_pts": 19,
+      "runner_up": "Gent",
+      "runner_up_id": 85,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 0,
+      "champion": "Royale Union SG",
+      "runner_up": "Gent"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 88,
+        "2": 86,
+        "4": 59,
+        "6": 55,
+        "15": 34,
+        "18": 1
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 19,
+        "2": 19,
+        "4": 18,
+        "6": 11,
+        "15": 4,
+        "18": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 34,
+      "drop_position": 16,
+      "drop_pts": 26,
+      "gap": 8,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 26
+        },
+        {
+          "position": 17,
+          "points": 16
+        },
+        {
+          "position": 18,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 25
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 4,
+      "drop_position": 16,
+      "drop_pts": 3,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 3
+        },
+        {
+          "position": 17,
+          "points": 3
+        },
+        {
+          "position": 18,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 0
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 321,
+      "total_goals": 864,
+      "avg_goals": 2.692,
+      "home_wins": 132,
+      "draws": 81,
+      "away_wins": 108,
+      "home_win_pct": 41.1,
+      "draw_pct": 25.2,
+      "away_win_pct": 33.6,
+      "goalless": 25,
+      "goalless_pct": 7.8,
+      "total_points": 876,
+      "avg_points_per_team": 43.8,
+      "n_teams": 20
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 63,
+      "total_goals": 185,
+      "avg_goals": 2.937,
+      "home_wins": 32,
+      "draws": 12,
+      "away_wins": 19,
+      "home_win_pct": 50.8,
+      "draw_pct": 19.0,
+      "away_win_pct": 30.2,
+      "goalless": 3,
+      "goalless_pct": 4.8,
+      "total_points": 177,
+      "avg_points_per_team": 9.83,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 4.9,
+        "goals": 6.2
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.889,
+        "goals": 6.222
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 6.222
+    }
+  }
+}

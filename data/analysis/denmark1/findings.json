@@ -1,0 +1,566 @@
+{
+  "report_name": "findings",
+  "script": {
+    "name": "backend/scripts/compile_findings.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:47:59+00:00",
+  "config": {
+    "league": "denmark1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\denmark1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Superliga",
+    "country": "Denmark",
+    "teams": 12,
+    "matches": 132,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/denmark/superliga"
+  },
+  "sources": [
+    {
+      "report_name": "database_profile",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\database_profile.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 32.23
+    },
+    {
+      "report_name": "matches_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\matches_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 8.93
+    },
+    {
+      "report_name": "goals_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\goals_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 6.24
+    },
+    {
+      "report_name": "teams_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\teams_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 22.96
+    },
+    {
+      "report_name": "season_trends",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\season_trends.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 3.95
+    },
+    {
+      "report_name": "scoreline_analysis",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\scoreline_analysis.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 45.54
+    },
+    {
+      "report_name": "relationships",
+      "path": "E:\\football_data_analysis\\data\\analysis\\denmark1\\relationships.json",
+      "exists": true,
+      "loaded": true,
+      "size_kb": 14.32
+    }
+  ],
+  "coverage": {
+    "found": 7,
+    "total": 7,
+    "missing": []
+  },
+  "key_findings": [
+    {
+      "source": "matches_analysis",
+      "finding": "Outcome split across all seasons",
+      "detail": "248 matches: home wins 41.9%, draws 24.6%, away wins 33.5% (104H / 61D / 83A)",
+      "importance": "medium",
+      "id": "F1"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Comeback wins",
+      "detail": "8 home and 7 away comebacks (trailing at HT but winning at FT)",
+      "importance": "medium",
+      "id": "F2"
+    },
+    {
+      "source": "matches_analysis",
+      "finding": "Most common HT/FT flow",
+      "detail": "home lead at HT -> home win occurred 64 times",
+      "importance": "low",
+      "id": "F3"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average goals per match",
+      "detail": "248 matches produced 763 goals (avg 3.077 per match)",
+      "importance": "medium",
+      "id": "F4"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Home goal share",
+      "detail": "home 52.9% vs away 47.1% of 763 goals in total (home/away ratio 1.12)",
+      "importance": "medium",
+      "id": "F5"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Both teams to score",
+      "detail": "148 of 248 matches (59.7%)",
+      "importance": "medium",
+      "id": "F6"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Most common first-goal bucket",
+      "detail": "minute 1-15 (first goal in 96 scoring matches, 40.7% of scoring)",
+      "importance": "low",
+      "id": "F7"
+    },
+    {
+      "source": "goals_analysis",
+      "finding": "Average first goal minute",
+      "detail": "mean 28.05, median 21.0",
+      "importance": "low",
+      "id": "F8"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Dominant team by lifetime points",
+      "detail": "Midtjylland leads with 79 points across 2 seasons (0 title(s), GD 44)",
+      "importance": "high",
+      "id": "F9"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Team consistency",
+      "detail": "10 teams present in every one of the 2 seasons (Aarhus, Brondby, FC Copenhagen, Midtjylland, Nordsjaelland...)",
+      "importance": "medium",
+      "id": "F10"
+    },
+    {
+      "source": "teams_analysis",
+      "finding": "Biggest home advantage",
+      "detail": "Nordsjaelland earns 17 more points at home than away (42 home vs 25 away)",
+      "importance": "medium",
+      "id": "F11"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Champion with most titles",
+      "detail": "Aarhus won 1 of 2 championship(s) on record",
+      "importance": "high",
+      "id": "F12"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Tightest title race",
+      "detail": "2026-2027: FC Copenhagen beat Midtjylland by 5 pts",
+      "importance": "medium",
+      "id": "F13"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Average-goals trend",
+      "detail": "down (-0.122 per match): first half 3.104 vs last half 2.982 across 2 seasons",
+      "importance": "medium",
+      "id": "F14"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Largest view divergence",
+      "detail": "2026-2027 (goals view, avg abs position diff 4.167)",
+      "importance": "low",
+      "id": "F15"
+    },
+    {
+      "source": "season_trends",
+      "finding": "Smallest view divergence",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.833)",
+      "importance": "low",
+      "id": "F16"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common scoreline",
+      "detail": "1-1 in 27 matches (10.9%)",
+      "importance": "medium",
+      "id": "F17"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common home-win scoreline",
+      "detail": "2-1 (25 of 104 home matches, 24.0%)",
+      "importance": "low",
+      "id": "F18"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common draw scoreline",
+      "detail": "1-1 (27 of 61 draw matches, 44.3%)",
+      "importance": "low",
+      "id": "F19"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Most common away-win scoreline",
+      "detail": "1-2 (21 of 83 away matches, 25.3%)",
+      "importance": "low",
+      "id": "F20"
+    },
+    {
+      "source": "scoreline_analysis",
+      "finding": "Extreme scorelines",
+      "detail": "6 match(es) with >= 7 total goals",
+      "importance": "low",
+      "id": "F21"
+    },
+    {
+      "source": "relationships",
+      "finding": "Strongest correlation with total goals",
+      "detail": "rest_days_difference |corr| = -0.1692 (n=187 leakage-safe rows)",
+      "importance": "medium",
+      "id": "F22"
+    },
+    {
+      "source": "relationships",
+      "finding": "Most outcome-separating feature",
+      "detail": "away_points_before_match spreads group means over 5.922: home 19.300, draw 25.222, away 22.794",
+      "importance": "medium",
+      "id": "F23"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data-quality warnings (17)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "importance": "high",
+      "id": "F24"
+    },
+    {
+      "source": "database_profile",
+      "finding": "Data coverage",
+      "detail": "2 of 2 registered seasons populated (100.0%); 248 matches observed",
+      "importance": "medium",
+      "id": "F25"
+    }
+  ],
+  "headline_stats": {
+    "n_matches": 248,
+    "avg_goals": 3.077,
+    "home_win_pct": 41.9,
+    "draw_pct": 24.6,
+    "away_win_pct": 33.5,
+    "most_common_scoreline": "1-1",
+    "dominant_team": "Midtjylland",
+    "champion_most_titles": "Aarhus",
+    "btts_rate_pct": 59.7
+  },
+  "comparison": [
+    {
+      "module": "database_profile",
+      "report_name": "database_profile",
+      "sections": [
+        "observed",
+        "calculated",
+        "warnings"
+      ],
+      "size_kb": 32.23
+    },
+    {
+      "module": "matches_analysis",
+      "report_name": "matches_analysis",
+      "sections": [
+        "overall",
+        "per_season",
+        "ht_ft_matrix",
+        "comebacks",
+        "ht_lead_conversion",
+        "first_goal_timing",
+        "goalless"
+      ],
+      "size_kb": 8.93
+    },
+    {
+      "module": "goals_analysis",
+      "report_name": "goals_analysis",
+      "sections": [
+        "goals_distribution",
+        "goals_per_season",
+        "goal_share",
+        "btts",
+        "clean_sheets",
+        "scoring_intensity",
+        "first_goal_timing"
+      ],
+      "size_kb": 6.24
+    },
+    {
+      "module": "teams_analysis",
+      "report_name": "teams_analysis",
+      "sections": [
+        "teams",
+        "home_away",
+        "top_performers",
+        "consistent_teams",
+        "head_to_head",
+        "position_table"
+      ],
+      "size_kb": 22.96
+    },
+    {
+      "module": "season_trends",
+      "report_name": "season_trends",
+      "sections": [
+        "champions",
+        "title_race",
+        "points_thresholds",
+        "relegation_battle",
+        "league_trends",
+        "view_divergence"
+      ],
+      "size_kb": 3.95
+    },
+    {
+      "module": "scoreline_analysis",
+      "report_name": "scoreline_analysis",
+      "sections": [
+        "scoreline_frequency",
+        "scoreline_per_season",
+        "total_goal_histogram",
+        "extreme_scorelines",
+        "margin_distribution",
+        "margin_by_outcome",
+        "common_scorelines"
+      ],
+      "size_kb": 45.54
+    },
+    {
+      "module": "relationships",
+      "report_name": "relationships",
+      "sections": [
+        "n_matches",
+        "feature_count",
+        "correlation_matrix",
+        "form_vs_outcome",
+        "position_vs_outcome",
+        "rest_advantage",
+        "home_quality",
+        "feature_by_result"
+      ],
+      "size_kb": 14.32
+    }
+  ],
+  "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 193 matches, expected 380",
+      "details": {
+        "season": "2025-2026",
+        "n_matches": 193,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2025-2026 has 12 teams, expected 20",
+      "details": {
+        "season": "2025-2026",
+        "n_teams": 12,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 55 matches, expected 380",
+      "details": {
+        "season": "2026-2027",
+        "n_matches": 55,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2026-2027 has 12 teams, expected 20",
+      "details": {
+        "season": "2026-2027",
+        "n_teams": 12,
+        "expected": 20
+      }
+    },
+    {
+      "code": "SEASON_STATE_NOT_COMPLETE",
+      "severity": "warning",
+      "message": "Season 2026-2027 has data but state is 'in_progress'",
+      "details": {
+        "season": "2026-2027",
+        "season_state": "in_progress"
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 1.8% vs overall 4.8% (deviation 3.0 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 1.8,
+        "overall_goalless_pct": 4.8,
+        "deviation_pp": 3.0
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 draw outcome share 29.1% vs overall 24.6%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "draw",
+        "season_share": 29.1,
+        "overall_share": 24.6
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 away outcome share 27.3% vs overall 33.5%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "away",
+        "season_share": 27.3,
+        "overall_share": 33.5
+      }
+    },
+    {
+      "code": "HIGH_SCORING_MATCHES",
+      "severity": "warning",
+      "message": "2 match(es) with >= 8 total goals (extreme scorelines)",
+      "details": {
+        "n_matches": 2,
+        "threshold": 8,
+        "examples": [
+          {
+            "scoreline": "6-2",
+            "total_goals": 8,
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "code": "DUPLICATE_ROWS",
+      "severity": "warning",
+      "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
+      "details": {
+        "check": "matches same fixture on same date (league_season, home, away, match_date)",
+        "rows": 6111,
+        "distinct": 6106,
+        "duplicates": 5
+      }
+    },
+    {
+      "code": "FIRST_GOAL_NULL_INCONSISTENCY",
+      "severity": "warning",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
+      "details": {
+        "total": 6111,
+        "fgt_inconsistent": 5,
+        "fgte_inconsistent": 5,
+        "n_with_fgt": 5689
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2025-2026/classic rows=12 positions=1..12 teams=12",
+      "details": {
+        "season": "2025-2026",
+        "view": "classic",
+        "n_rows": 12,
+        "min_pos": 1,
+        "max_pos": 12,
+        "distinct_teams": 12
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2025-2026/goals rows=12 positions=1..12 teams=12",
+      "details": {
+        "season": "2025-2026",
+        "view": "goals",
+        "n_rows": 12,
+        "min_pos": 1,
+        "max_pos": 12,
+        "distinct_teams": 12
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2025-2026/luck rows=12 positions=1..12 teams=12",
+      "details": {
+        "season": "2025-2026",
+        "view": "luck",
+        "n_rows": 12,
+        "min_pos": 1,
+        "max_pos": 12,
+        "distinct_teams": 12
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/classic rows=12 positions=1..12 teams=12",
+      "details": {
+        "season": "2026-2027",
+        "view": "classic",
+        "n_rows": 12,
+        "min_pos": 1,
+        "max_pos": 12,
+        "distinct_teams": 12
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/goals rows=12 positions=1..12 teams=12",
+      "details": {
+        "season": "2026-2027",
+        "view": "goals",
+        "n_rows": 12,
+        "min_pos": 1,
+        "max_pos": 12,
+        "distinct_teams": 12
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2026-2027/luck rows=12 positions=1..12 teams=12",
+      "details": {
+        "season": "2026-2027",
+        "view": "luck",
+        "n_rows": 12,
+        "min_pos": 1,
+        "max_pos": 12,
+        "distinct_teams": 12
+      }
+    }
+  ],
+  "methodology": "Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power."
+}

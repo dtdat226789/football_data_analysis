@@ -1,0 +1,458 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:45:02+00:00",
+  "config": {
+    "league": "belgium1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\belgium1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Jupiler Pro League",
+    "country": "Belgium",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "playoff",
+    "url": "https://www.football-charts.com/leagues/belgium/jupiler-pro-league"
+  },
+  "overall": {
+    "n_matches": 384,
+    "home_wins": 164,
+    "draws": 93,
+    "away_wins": 127,
+    "home_win_pct": 42.7,
+    "draw_pct": 24.2,
+    "away_win_pct": 33.1,
+    "home_goals": 572,
+    "away_goals": 477,
+    "total_goals": 1049,
+    "avg_goals": 2.732,
+    "goalless": 28,
+    "goalless_pct": 7.3
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 321,
+      "home_wins": 132,
+      "draws": 81,
+      "away_wins": 108,
+      "home_win_pct": 41.1,
+      "draw_pct": 25.2,
+      "away_win_pct": 33.6,
+      "home_goals": 465,
+      "away_goals": 399,
+      "total_goals": 864,
+      "avg_goals": 2.692,
+      "goalless": 25,
+      "goalless_pct": 7.8
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 63,
+      "home_wins": 32,
+      "draws": 12,
+      "away_wins": 19,
+      "home_win_pct": 50.8,
+      "draw_pct": 19.0,
+      "away_win_pct": 30.2,
+      "home_goals": 107,
+      "away_goals": 78,
+      "total_goals": 185,
+      "avg_goals": 2.937,
+      "goalless": 3,
+      "goalless_pct": 4.8
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 99,
+        "draw": 16,
+        "away": 10
+      },
+      "draw": {
+        "home": 56,
+        "draw": 56,
+        "away": 46
+      },
+      "away": {
+        "home": 9,
+        "draw": 21,
+        "away": 71
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 79.2,
+        "draw": 12.8,
+        "away": 8.0
+      },
+      "draw": {
+        "home": 35.4,
+        "draw": 35.4,
+        "away": 29.1
+      },
+      "away": {
+        "home": 8.9,
+        "draw": 20.8,
+        "away": 70.3
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 9,
+      "pct": 2.3,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Club Brugge KV",
+          "away_team": "Genk",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Gent",
+          "away_team": "Anderlecht",
+          "ht_score": "1-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Club Brugge KV",
+          "away_team": "Waregem",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Anderlecht",
+          "away_team": "Gent",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "St. Liege",
+          "away_team": "Leuven",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "RAAL La Louviere",
+          "away_team": "Cercle Brugge KSV",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Lommel SK",
+          "away_team": "Dender",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Waregem",
+          "away_team": "Genk",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Antwerp",
+          "away_team": "Beveren",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 10,
+      "pct": 2.6,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Charleroi",
+          "away_team": "Waregem",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "St. Truiden",
+          "away_team": "Genk",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "KV Mechelen",
+          "away_team": "St. Truiden",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Cercle Brugge KSV",
+          "away_team": "Leuven",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Gent",
+          "away_team": "St. Truiden",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Club Brugge KV",
+          "away_team": "RAAL La Louviere",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Charleroi",
+          "away_team": "Club Brugge KV",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "St. Truiden",
+          "away_team": "Club Brugge KV",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "KV Mechelen",
+          "away_team": "Anderlecht",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Cercle Brugge KSV",
+          "away_team": "Waregem",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 125,
+      "home": {
+        "count": 99,
+        "pct": 79.2
+      },
+      "draw": {
+        "count": 16,
+        "pct": 12.8
+      },
+      "away": {
+        "count": 10,
+        "pct": 8.0
+      }
+    },
+    "ht_draw": {
+      "n_matches": 158,
+      "home": {
+        "count": 56,
+        "pct": 35.4
+      },
+      "draw": {
+        "count": 56,
+        "pct": 35.4
+      },
+      "away": {
+        "count": 46,
+        "pct": 29.1
+      }
+    },
+    "away_lead": {
+      "n_matches": 101,
+      "home": {
+        "count": 9,
+        "pct": 8.9
+      },
+      "draw": {
+        "count": 21,
+        "pct": 20.8
+      },
+      "away": {
+        "count": 71,
+        "pct": 70.3
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 384,
+    "n_with_first_goal": 356,
+    "n_goalless": 28,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 123,
+        "home": {
+          "count": 54,
+          "pct": 43.9
+        },
+        "draw": {
+          "count": 27,
+          "pct": 22.0
+        },
+        "away": {
+          "count": 42,
+          "pct": 34.1
+        },
+        "pct_of_matches": 32.0
+      },
+      "16-30": {
+        "n_matches": 84,
+        "home": {
+          "count": 37,
+          "pct": 44.0
+        },
+        "draw": {
+          "count": 20,
+          "pct": 23.8
+        },
+        "away": {
+          "count": 27,
+          "pct": 32.1
+        },
+        "pct_of_matches": 21.9
+      },
+      "31-45": {
+        "n_matches": 64,
+        "home": {
+          "count": 34,
+          "pct": 53.1
+        },
+        "draw": {
+          "count": 8,
+          "pct": 12.5
+        },
+        "away": {
+          "count": 22,
+          "pct": 34.4
+        },
+        "pct_of_matches": 16.7
+      },
+      "46-60": {
+        "n_matches": 37,
+        "home": {
+          "count": 18,
+          "pct": 48.6
+        },
+        "draw": {
+          "count": 5,
+          "pct": 13.5
+        },
+        "away": {
+          "count": 14,
+          "pct": 37.8
+        },
+        "pct_of_matches": 9.6
+      },
+      "61-75": {
+        "n_matches": 27,
+        "home": {
+          "count": 11,
+          "pct": 40.7
+        },
+        "draw": {
+          "count": 3,
+          "pct": 11.1
+        },
+        "away": {
+          "count": 13,
+          "pct": 48.1
+        },
+        "pct_of_matches": 7.0
+      },
+      "76-90": {
+        "n_matches": 17,
+        "home": {
+          "count": 9,
+          "pct": 52.9
+        },
+        "draw": {
+          "count": 2,
+          "pct": 11.8
+        },
+        "away": {
+          "count": 6,
+          "pct": 35.3
+        },
+        "pct_of_matches": 4.4
+      },
+      "91-120": {
+        "n_matches": 4,
+        "home": {
+          "count": 1,
+          "pct": 25.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 3,
+          "pct": 75.0
+        },
+        "pct_of_matches": 1.0
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 384,
+      "count": 28,
+      "pct": 7.3
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 321,
+        "count": 25,
+        "pct": 7.8
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 63,
+        "count": 3,
+        "pct": 4.8
+      }
+    ]
+  }
+}

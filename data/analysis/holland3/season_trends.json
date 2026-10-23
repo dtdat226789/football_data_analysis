@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:53:39+00:00",
+  "config": {
+    "league": "holland3",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\holland3",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Tweede Divisie",
+    "country": "Netherlands",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/netherlands/tweede-divisie"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Quick Boys",
+      "champion_id": 743,
+      "champion_pts": 67,
+      "runner_up": "De Treffers",
+      "runner_up_id": 744,
+      "margin_pts": 4
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Quick Boys",
+      "champion_id": 743,
+      "champion_pts": 18,
+      "runner_up": "De Treffers",
+      "runner_up_id": 744,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 4,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 3,
+      "champion": "Quick Boys",
+      "runner_up": "De Treffers"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 67,
+        "2": 63,
+        "4": 56,
+        "6": 56,
+        "15": 42,
+        "18": 30
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 18,
+        "2": 15,
+        "4": 13,
+        "6": 11,
+        "15": 6,
+        "18": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 42,
+      "drop_position": 16,
+      "drop_pts": 39,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 39
+        },
+        {
+          "position": 17,
+          "points": 38
+        },
+        {
+          "position": 18,
+          "points": 30
+        }
+      ],
+      "bottom3_range": 9
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 6,
+      "drop_position": 16,
+      "drop_pts": 6,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 6
+        },
+        {
+          "position": 17,
+          "points": 4
+        },
+        {
+          "position": 18,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 5
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 322,
+      "total_goals": 1069,
+      "avg_goals": 3.32,
+      "home_wins": 153,
+      "draws": 63,
+      "away_wins": 106,
+      "home_win_pct": 47.5,
+      "draw_pct": 19.6,
+      "away_win_pct": 32.9,
+      "goalless": 10,
+      "goalless_pct": 3.1,
+      "total_points": 897,
+      "avg_points_per_team": 35.88,
+      "n_teams": 25
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 63,
+      "total_goals": 218,
+      "avg_goals": 3.46,
+      "home_wins": 23,
+      "draws": 16,
+      "away_wins": 24,
+      "home_win_pct": 36.5,
+      "draw_pct": 25.4,
+      "away_win_pct": 38.1,
+      "goalless": 0,
+      "goalless_pct": 0.0,
+      "total_points": 173,
+      "avg_points_per_team": 9.61,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 6.4,
+        "goals": 5.92
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.111,
+        "goals": 6.111
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "luck",
+      "avg_abs_diff": 6.4
+    }
+  }
+}

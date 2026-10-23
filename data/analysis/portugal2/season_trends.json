@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:03:47+00:00",
+  "config": {
+    "league": "portugal2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\portugal2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Liga Portugal 2",
+    "country": "Portugal",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/portugal/liga-portugal-2"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Maritimo",
+      "champion_id": 1233,
+      "champion_pts": 66,
+      "runner_up": "Torreense",
+      "runner_up_id": 1231,
+      "margin_pts": 6
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Lusitania FC",
+      "champion_id": 1243,
+      "champion_pts": 16,
+      "runner_up": "Penafiel",
+      "runner_up_id": 1245,
+      "margin_pts": 3
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 6,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 3,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 3,
+      "champion": "Lusitania FC",
+      "runner_up": "Penafiel"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 66,
+        "2": 60,
+        "4": 51,
+        "6": 50,
+        "15": 41,
+        "18": 34
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 16,
+        "2": 13,
+        "4": 11,
+        "6": 10,
+        "15": 5,
+        "18": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 41,
+      "drop_position": 16,
+      "drop_pts": 40,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 40
+        },
+        {
+          "position": 17,
+          "points": 39
+        },
+        {
+          "position": 18,
+          "points": 34
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 5,
+      "drop_position": 16,
+      "drop_pts": 4,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 4
+        },
+        {
+          "position": 17,
+          "points": 4
+        },
+        {
+          "position": 18,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 310,
+      "total_goals": 751,
+      "avg_goals": 2.423,
+      "home_wins": 131,
+      "draws": 76,
+      "away_wins": 103,
+      "home_win_pct": 42.3,
+      "draw_pct": 24.5,
+      "away_win_pct": 33.2,
+      "goalless": 33,
+      "goalless_pct": 10.6,
+      "total_points": 854,
+      "avg_points_per_team": 42.7,
+      "n_teams": 20
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 53,
+      "total_goals": 123,
+      "avg_goals": 2.321,
+      "home_wins": 22,
+      "draws": 12,
+      "away_wins": 19,
+      "home_win_pct": 41.5,
+      "draw_pct": 22.6,
+      "away_win_pct": 35.8,
+      "goalless": 4,
+      "goalless_pct": 7.5,
+      "total_points": 147,
+      "avg_points_per_team": 8.17,
+      "n_teams": 18
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 5.6,
+        "goals": 5.2
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.333,
+        "goals": 5.222
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "luck",
+      "avg_abs_diff": 5.6
+    }
+  }
+}

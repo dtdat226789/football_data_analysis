@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:09:07+00:00",
+  "config": {
+    "league": "spain2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\spain2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "LaLiga2",
+    "country": "Spain",
+    "teams": 22,
+    "matches": 462,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/spain/laliga2"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Racing Santander",
+      "champion_id": 1677,
+      "champion_pts": 88,
+      "runner_up": "Malaga",
+      "runner_up_id": 1678,
+      "margin_pts": 3
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Castellon",
+      "champion_id": 1680,
+      "champion_pts": 19,
+      "runner_up": "Eibar",
+      "runner_up_id": 1684,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 3,
+        "tight": true
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 2,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 1,
+      "champion": "Castellon",
+      "runner_up": "Eibar"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 88,
+        "2": 85,
+        "4": 79,
+        "6": 77,
+        "19": 44,
+        "22": 37
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 19,
+        "2": 18,
+        "4": 14,
+        "6": 13,
+        "19": 5,
+        "22": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 19,
+      "safe_pts": 44,
+      "drop_position": 20,
+      "drop_pts": 40,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 20,
+          "points": 40
+        },
+        {
+          "position": 21,
+          "points": 39
+        },
+        {
+          "position": 22,
+          "points": 37
+        }
+      ],
+      "bottom3_range": 3
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 19,
+      "safe_pts": 5,
+      "drop_position": 20,
+      "drop_pts": 4,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 20,
+          "points": 4
+        },
+        {
+          "position": 21,
+          "points": 4
+        },
+        {
+          "position": 22,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 509,
+      "total_goals": 1335,
+      "avg_goals": 2.623,
+      "home_wins": 223,
+      "draws": 129,
+      "away_wins": 157,
+      "home_win_pct": 43.8,
+      "draw_pct": 25.3,
+      "away_win_pct": 30.8,
+      "goalless": 40,
+      "goalless_pct": 7.9,
+      "total_points": 1398,
+      "avg_points_per_team": 60.78,
+      "n_teams": 23
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 77,
+      "total_goals": 193,
+      "avg_goals": 2.506,
+      "home_wins": 33,
+      "draws": 16,
+      "away_wins": 28,
+      "home_win_pct": 42.9,
+      "draw_pct": 20.8,
+      "away_win_pct": 36.4,
+      "goalless": 7,
+      "goalless_pct": 9.1,
+      "total_points": 215,
+      "avg_points_per_team": 9.77,
+      "n_teams": 22
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.696,
+        "goals": 5.13
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.091,
+        "goals": 8.182
+      }
+    ],
+    "worst_divergence": {
+      "season": "2026-2027",
+      "view": "goals",
+      "avg_abs_diff": 8.182
+    }
+  }
+}

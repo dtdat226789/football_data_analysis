@@ -1,0 +1,472 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:58:56+00:00",
+  "config": {
+    "league": "japan1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\japan1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "J1 League",
+    "country": "Japan",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/japan/j1-league"
+  },
+  "overall": {
+    "n_matches": 241,
+    "home_wins": 131,
+    "draws": 17,
+    "away_wins": 93,
+    "home_win_pct": 54.4,
+    "draw_pct": 7.1,
+    "away_win_pct": 38.6,
+    "home_goals": 375,
+    "away_goals": 324,
+    "total_goals": 699,
+    "avg_goals": 2.9,
+    "goalless": 3,
+    "goalless_pct": 1.2
+  },
+  "per_season": [
+    {
+      "season": "2026",
+      "n_matches": 161,
+      "home_wins": 94,
+      "draws": 0,
+      "away_wins": 67,
+      "home_win_pct": 58.4,
+      "draw_pct": 0.0,
+      "away_win_pct": 41.6,
+      "home_goals": 248,
+      "away_goals": 214,
+      "total_goals": 462,
+      "avg_goals": 2.87,
+      "goalless": 0,
+      "goalless_pct": 0.0
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 80,
+      "home_wins": 37,
+      "draws": 17,
+      "away_wins": 26,
+      "home_win_pct": 46.2,
+      "draw_pct": 21.2,
+      "away_win_pct": 32.5,
+      "home_goals": 127,
+      "away_goals": 110,
+      "total_goals": 237,
+      "avg_goals": 2.962,
+      "goalless": 3,
+      "goalless_pct": 3.8
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 59,
+        "draw": 4,
+        "away": 10
+      },
+      "draw": {
+        "home": 61,
+        "draw": 12,
+        "away": 40
+      },
+      "away": {
+        "home": 11,
+        "draw": 1,
+        "away": 43
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 80.8,
+        "draw": 5.5,
+        "away": 13.7
+      },
+      "draw": {
+        "home": 54.0,
+        "draw": 10.6,
+        "away": 35.4
+      },
+      "away": {
+        "home": 20.0,
+        "draw": 1.8,
+        "away": 78.2
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 11,
+      "pct": 4.6,
+      "matches": [
+        {
+          "season": "2026",
+          "home_team": "Avispa Fukuoka",
+          "away_team": "Okayama",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Kawasaki Frontale",
+          "away_team": "Mito",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Gamba Osaka",
+          "away_team": "V-Varen Nagasaki",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Avispa Fukuoka",
+          "away_team": "Gamba Osaka",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Kyoto",
+          "away_team": "Nagoya Grampus",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Nagoya Grampus",
+          "away_team": "Avispa Fukuoka",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Sanfrecce Hiroshima",
+          "away_team": "Cerezo Osaka",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Avispa Fukuoka",
+          "away_team": "Sanfrecce Hiroshima",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Shimizu S-Pulse",
+          "away_team": "Cerezo Osaka",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026",
+          "home_team": "Avispa Fukuoka",
+          "away_team": "Kyoto",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Shimizu S-Pulse",
+          "away_team": "Chiba",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 10,
+      "pct": 4.1,
+      "matches": [
+        {
+          "season": "2026",
+          "home_team": "Kashiwa Reysol",
+          "away_team": "Verdy",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Sanfrecce Hiroshima",
+          "away_team": "Kyoto",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Urawa Reds",
+          "away_team": "Kashima Antlers",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026",
+          "home_team": "Chiba",
+          "away_team": "Yokohama F. Marinos",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026",
+          "home_team": "Kyoto",
+          "away_team": "Shimizu S-Pulse",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026",
+          "home_team": "Sanfrecce Hiroshima",
+          "away_team": "Vissel Kobe",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Yokohama F. Marinos",
+          "away_team": "Kashima Antlers",
+          "ht_score": "2-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Avispa Fukuoka",
+          "away_team": "Urawa Reds",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Kyoto",
+          "away_team": "Kashiwa Reysol",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Machida",
+          "away_team": "Kashiwa Reysol",
+          "ht_score": "1-0",
+          "ft_score": "2-4"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 73,
+      "home": {
+        "count": 59,
+        "pct": 80.8
+      },
+      "draw": {
+        "count": 4,
+        "pct": 5.5
+      },
+      "away": {
+        "count": 10,
+        "pct": 13.7
+      }
+    },
+    "ht_draw": {
+      "n_matches": 113,
+      "home": {
+        "count": 61,
+        "pct": 54.0
+      },
+      "draw": {
+        "count": 12,
+        "pct": 10.6
+      },
+      "away": {
+        "count": 40,
+        "pct": 35.4
+      }
+    },
+    "away_lead": {
+      "n_matches": 55,
+      "home": {
+        "count": 11,
+        "pct": 20.0
+      },
+      "draw": {
+        "count": 1,
+        "pct": 1.8
+      },
+      "away": {
+        "count": 43,
+        "pct": 78.2
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 241,
+    "n_with_first_goal": 238,
+    "n_goalless": 3,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 66,
+        "home": {
+          "count": 42,
+          "pct": 63.6
+        },
+        "draw": {
+          "count": 1,
+          "pct": 1.5
+        },
+        "away": {
+          "count": 23,
+          "pct": 34.8
+        },
+        "pct_of_matches": 27.4
+      },
+      "16-30": {
+        "n_matches": 51,
+        "home": {
+          "count": 25,
+          "pct": 49.0
+        },
+        "draw": {
+          "count": 3,
+          "pct": 5.9
+        },
+        "away": {
+          "count": 23,
+          "pct": 45.1
+        },
+        "pct_of_matches": 21.2
+      },
+      "31-45": {
+        "n_matches": 46,
+        "home": {
+          "count": 20,
+          "pct": 43.5
+        },
+        "draw": {
+          "count": 4,
+          "pct": 8.7
+        },
+        "away": {
+          "count": 22,
+          "pct": 47.8
+        },
+        "pct_of_matches": 19.1
+      },
+      "46-60": {
+        "n_matches": 41,
+        "home": {
+          "count": 20,
+          "pct": 48.8
+        },
+        "draw": {
+          "count": 4,
+          "pct": 9.8
+        },
+        "away": {
+          "count": 17,
+          "pct": 41.5
+        },
+        "pct_of_matches": 17.0
+      },
+      "61-75": {
+        "n_matches": 19,
+        "home": {
+          "count": 14,
+          "pct": 73.7
+        },
+        "draw": {
+          "count": 1,
+          "pct": 5.3
+        },
+        "away": {
+          "count": 4,
+          "pct": 21.1
+        },
+        "pct_of_matches": 7.9
+      },
+      "76-90": {
+        "n_matches": 14,
+        "home": {
+          "count": 10,
+          "pct": 71.4
+        },
+        "draw": {
+          "count": 1,
+          "pct": 7.1
+        },
+        "away": {
+          "count": 3,
+          "pct": 21.4
+        },
+        "pct_of_matches": 5.8
+      },
+      "91-120": {
+        "n_matches": 1,
+        "home": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 1,
+          "pct": 100.0
+        },
+        "pct_of_matches": 0.4
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 241,
+      "count": 3,
+      "pct": 1.2
+    },
+    "per_season": [
+      {
+        "season": "2026",
+        "n_matches": 161,
+        "count": 0,
+        "pct": 0.0
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 80,
+        "count": 3,
+        "pct": 3.8
+      }
+    ]
+  }
+}

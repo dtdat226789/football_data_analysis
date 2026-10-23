@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:24:21+00:00",
+  "config": {
+    "league": "wgermany1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\wgermany1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Bundesliga Women",
+    "country": "Germany",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/germany/bundesliga-women"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Bayern Munich W",
+      "champion_id": 1839,
+      "champion_pts": 74,
+      "runner_up": "Wolfsburg W",
+      "runner_up_id": 1840,
+      "margin_pts": 16
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Bayern Munich W",
+      "champion_id": 1839,
+      "champion_pts": 15,
+      "runner_up": "Eintracht Frankfurt W",
+      "runner_up_id": 1841,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 16,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "Bayern Munich W",
+      "runner_up": "Eintracht Frankfurt W"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 74,
+        "2": 58,
+        "4": 46,
+        "6": 43,
+        "11": 22,
+        "14": 11
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 15,
+        "2": 13,
+        "4": 10,
+        "6": 9,
+        "11": 3,
+        "14": 0
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 11,
+      "safe_pts": 22,
+      "drop_position": 12,
+      "drop_pts": 18,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 18
+        },
+        {
+          "position": 13,
+          "points": 16
+        },
+        {
+          "position": 14,
+          "points": 11
+        }
+      ],
+      "bottom3_range": 7
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 11,
+      "safe_pts": 3,
+      "drop_position": 12,
+      "drop_pts": 3,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 3
+        },
+        {
+          "position": 13,
+          "points": 2
+        },
+        {
+          "position": 14,
+          "points": 0
+        }
+      ],
+      "bottom3_range": 3
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 182,
+      "total_goals": 627,
+      "avg_goals": 3.445,
+      "home_wins": 81,
+      "draws": 32,
+      "away_wins": 69,
+      "home_win_pct": 44.5,
+      "draw_pct": 17.6,
+      "away_win_pct": 37.9,
+      "goalless": 7,
+      "goalless_pct": 3.8,
+      "total_points": 514,
+      "avg_points_per_team": 36.71,
+      "n_teams": 14
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 35,
+      "total_goals": 121,
+      "avg_goals": 3.457,
+      "home_wins": 17,
+      "draws": 5,
+      "away_wins": 13,
+      "home_win_pct": 48.6,
+      "draw_pct": 14.3,
+      "away_win_pct": 37.1,
+      "goalless": 0,
+      "goalless_pct": 0.0,
+      "total_points": 100,
+      "avg_points_per_team": 7.14,
+      "n_teams": 14
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 2.429,
+        "goals": 4.286
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.0,
+        "goals": 3.714
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 4.286
+    }
+  }
+}

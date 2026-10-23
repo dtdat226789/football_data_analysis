@@ -1,0 +1,324 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:48:14+00:00",
+  "config": {
+    "league": "develop21",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\develop21",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Professional Development League",
+    "country": "England",
+    "teams": 17,
+    "matches": 272,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/professional-development-league"
+  },
+  "overall": {
+    "n_matches": 40,
+    "home_wins": 18,
+    "draws": 10,
+    "away_wins": 12,
+    "home_win_pct": 45.0,
+    "draw_pct": 25.0,
+    "away_win_pct": 30.0,
+    "home_goals": 93,
+    "away_goals": 71,
+    "total_goals": 164,
+    "avg_goals": 4.1,
+    "goalless": 1,
+    "goalless_pct": 2.5
+  },
+  "per_season": [
+    {
+      "season": "2026-2027",
+      "n_matches": 40,
+      "home_wins": 18,
+      "draws": 10,
+      "away_wins": 12,
+      "home_win_pct": 45.0,
+      "draw_pct": 25.0,
+      "away_win_pct": 30.0,
+      "home_goals": 93,
+      "away_goals": 71,
+      "total_goals": 164,
+      "avg_goals": 4.1,
+      "goalless": 1,
+      "goalless_pct": 2.5
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 13,
+        "draw": 2,
+        "away": 1
+      },
+      "draw": {
+        "home": 3,
+        "draw": 5,
+        "away": 3
+      },
+      "away": {
+        "home": 2,
+        "draw": 3,
+        "away": 8
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 81.2,
+        "draw": 12.5,
+        "away": 6.2
+      },
+      "draw": {
+        "home": 27.3,
+        "draw": 45.5,
+        "away": 27.3
+      },
+      "away": {
+        "home": 15.4,
+        "draw": 23.1,
+        "away": 61.5
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 2,
+      "pct": 5.0,
+      "matches": [
+        {
+          "season": "2026-2027",
+          "home_team": "Bristol City U21",
+          "away_team": "Sheffield Utd U21",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Wigan U21",
+          "away_team": "Colchester U21",
+          "ht_score": "1-2",
+          "ft_score": "6-4"
+        }
+      ]
+    },
+    "away": {
+      "count": 1,
+      "pct": 2.5,
+      "matches": [
+        {
+          "season": "2026-2027",
+          "home_team": "Millwall U21",
+          "away_team": "Huddersfield U21",
+          "ht_score": "2-0",
+          "ft_score": "2-4"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 16,
+      "home": {
+        "count": 13,
+        "pct": 81.2
+      },
+      "draw": {
+        "count": 2,
+        "pct": 12.5
+      },
+      "away": {
+        "count": 1,
+        "pct": 6.2
+      }
+    },
+    "ht_draw": {
+      "n_matches": 11,
+      "home": {
+        "count": 3,
+        "pct": 27.3
+      },
+      "draw": {
+        "count": 5,
+        "pct": 45.5
+      },
+      "away": {
+        "count": 3,
+        "pct": 27.3
+      }
+    },
+    "away_lead": {
+      "n_matches": 13,
+      "home": {
+        "count": 2,
+        "pct": 15.4
+      },
+      "draw": {
+        "count": 3,
+        "pct": 23.1
+      },
+      "away": {
+        "count": 8,
+        "pct": 61.5
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 40,
+    "n_with_first_goal": 39,
+    "n_goalless": 1,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 12,
+        "home": {
+          "count": 6,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 2,
+          "pct": 16.7
+        },
+        "away": {
+          "count": 4,
+          "pct": 33.3
+        },
+        "pct_of_matches": 30.0
+      },
+      "16-30": {
+        "n_matches": 16,
+        "home": {
+          "count": 10,
+          "pct": 62.5
+        },
+        "draw": {
+          "count": 2,
+          "pct": 12.5
+        },
+        "away": {
+          "count": 4,
+          "pct": 25.0
+        },
+        "pct_of_matches": 40.0
+      },
+      "31-45": {
+        "n_matches": 8,
+        "home": {
+          "count": 1,
+          "pct": 12.5
+        },
+        "draw": {
+          "count": 4,
+          "pct": 50.0
+        },
+        "away": {
+          "count": 3,
+          "pct": 37.5
+        },
+        "pct_of_matches": 20.0
+      },
+      "46-60": {
+        "n_matches": 1,
+        "home": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "draw": {
+          "count": 1,
+          "pct": 100.0
+        },
+        "away": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "pct_of_matches": 2.5
+      },
+      "61-75": {
+        "n_matches": 2,
+        "home": {
+          "count": 1,
+          "pct": 50.0
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 1,
+          "pct": 50.0
+        },
+        "pct_of_matches": 5.0
+      },
+      "76-90": {
+        "n_matches": 0,
+        "home": {
+          "count": 0,
+          "pct": null
+        },
+        "draw": {
+          "count": 0,
+          "pct": null
+        },
+        "away": {
+          "count": 0,
+          "pct": null
+        },
+        "pct_of_matches": 0.0
+      },
+      "91-120": {
+        "n_matches": 0,
+        "home": {
+          "count": 0,
+          "pct": null
+        },
+        "draw": {
+          "count": 0,
+          "pct": null
+        },
+        "away": {
+          "count": 0,
+          "pct": null
+        },
+        "pct_of_matches": 0.0
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 40,
+      "count": 1,
+      "pct": 2.5
+    },
+    "per_season": [
+      {
+        "season": "2026-2027",
+        "n_matches": 40,
+        "count": 1,
+        "pct": 2.5
+      }
+    ]
+  }
+}

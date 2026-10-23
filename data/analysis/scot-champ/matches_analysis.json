@@ -1,0 +1,402 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:05:45+00:00",
+  "config": {
+    "league": "scot-champ",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot-champ",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Championship",
+    "country": "Scotland",
+    "teams": 10,
+    "matches": 90,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/scotland/championship"
+  },
+  "overall": {
+    "n_matches": 231,
+    "home_wins": 93,
+    "draws": 74,
+    "away_wins": 64,
+    "home_win_pct": 40.3,
+    "draw_pct": 32.0,
+    "away_win_pct": 27.7,
+    "home_goals": 298,
+    "away_goals": 242,
+    "total_goals": 540,
+    "avg_goals": 2.338,
+    "goalless": 29,
+    "goalless_pct": 12.6
+  },
+  "per_season": [
+    {
+      "season": "2025-2026",
+      "n_matches": 190,
+      "home_wins": 74,
+      "draws": 64,
+      "away_wins": 52,
+      "home_win_pct": 38.9,
+      "draw_pct": 33.7,
+      "away_win_pct": 27.4,
+      "home_goals": 252,
+      "away_goals": 208,
+      "total_goals": 460,
+      "avg_goals": 2.421,
+      "goalless": 25,
+      "goalless_pct": 13.2
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 41,
+      "home_wins": 19,
+      "draws": 10,
+      "away_wins": 12,
+      "home_win_pct": 46.3,
+      "draw_pct": 24.4,
+      "away_win_pct": 29.3,
+      "home_goals": 46,
+      "away_goals": 34,
+      "total_goals": 80,
+      "avg_goals": 1.951,
+      "goalless": 4,
+      "goalless_pct": 9.8
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 60,
+        "draw": 13,
+        "away": 1
+      },
+      "draw": {
+        "home": 23,
+        "draw": 46,
+        "away": 22
+      },
+      "away": {
+        "home": 10,
+        "draw": 15,
+        "away": 41
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 81.1,
+        "draw": 17.6,
+        "away": 1.4
+      },
+      "draw": {
+        "home": 25.3,
+        "draw": 50.5,
+        "away": 24.2
+      },
+      "away": {
+        "home": 15.2,
+        "draw": 22.7,
+        "away": 62.1
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 10,
+      "pct": 4.3,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Partick Thistle",
+          "away_team": "Airdrieonians",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "St Johnstone",
+          "away_team": "Dunfermline",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Arbroath",
+          "away_team": "St Johnstone",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Partick Thistle",
+          "away_team": "Ayr",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Partick Thistle",
+          "away_team": "Morton",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Dunfermline",
+          "away_team": "Morton",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Raith",
+          "away_team": "Morton",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Airdrieonians",
+          "away_team": "Ayr",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Raith",
+          "away_team": "Ross County",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Partick Thistle",
+          "away_team": "Dunfermline",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 1,
+      "pct": 0.4,
+      "matches": [
+        {
+          "season": "2025-2026",
+          "home_team": "Ayr",
+          "away_team": "St Johnstone",
+          "ht_score": "2-0",
+          "ft_score": "2-4"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 74,
+      "home": {
+        "count": 60,
+        "pct": 81.1
+      },
+      "draw": {
+        "count": 13,
+        "pct": 17.6
+      },
+      "away": {
+        "count": 1,
+        "pct": 1.4
+      }
+    },
+    "ht_draw": {
+      "n_matches": 91,
+      "home": {
+        "count": 23,
+        "pct": 25.3
+      },
+      "draw": {
+        "count": 46,
+        "pct": 50.5
+      },
+      "away": {
+        "count": 22,
+        "pct": 24.2
+      }
+    },
+    "away_lead": {
+      "n_matches": 66,
+      "home": {
+        "count": 10,
+        "pct": 15.2
+      },
+      "draw": {
+        "count": 15,
+        "pct": 22.7
+      },
+      "away": {
+        "count": 41,
+        "pct": 62.1
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 231,
+    "n_with_first_goal": 202,
+    "n_goalless": 29,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 60,
+        "home": {
+          "count": 32,
+          "pct": 53.3
+        },
+        "draw": {
+          "count": 11,
+          "pct": 18.3
+        },
+        "away": {
+          "count": 17,
+          "pct": 28.3
+        },
+        "pct_of_matches": 26.0
+      },
+      "16-30": {
+        "n_matches": 56,
+        "home": {
+          "count": 30,
+          "pct": 53.6
+        },
+        "draw": {
+          "count": 15,
+          "pct": 26.8
+        },
+        "away": {
+          "count": 11,
+          "pct": 19.6
+        },
+        "pct_of_matches": 24.2
+      },
+      "31-45": {
+        "n_matches": 41,
+        "home": {
+          "count": 16,
+          "pct": 39.0
+        },
+        "draw": {
+          "count": 9,
+          "pct": 22.0
+        },
+        "away": {
+          "count": 16,
+          "pct": 39.0
+        },
+        "pct_of_matches": 17.7
+      },
+      "46-60": {
+        "n_matches": 27,
+        "home": {
+          "count": 10,
+          "pct": 37.0
+        },
+        "draw": {
+          "count": 6,
+          "pct": 22.2
+        },
+        "away": {
+          "count": 11,
+          "pct": 40.7
+        },
+        "pct_of_matches": 11.7
+      },
+      "61-75": {
+        "n_matches": 10,
+        "home": {
+          "count": 2,
+          "pct": 20.0
+        },
+        "draw": {
+          "count": 4,
+          "pct": 40.0
+        },
+        "away": {
+          "count": 4,
+          "pct": 40.0
+        },
+        "pct_of_matches": 4.3
+      },
+      "76-90": {
+        "n_matches": 8,
+        "home": {
+          "count": 3,
+          "pct": 37.5
+        },
+        "draw": {
+          "count": 0,
+          "pct": 0.0
+        },
+        "away": {
+          "count": 5,
+          "pct": 62.5
+        },
+        "pct_of_matches": 3.5
+      },
+      "91-120": {
+        "n_matches": 0,
+        "home": {
+          "count": 0,
+          "pct": null
+        },
+        "draw": {
+          "count": 0,
+          "pct": null
+        },
+        "away": {
+          "count": 0,
+          "pct": null
+        },
+        "pct_of_matches": 0.0
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 231,
+      "count": 29,
+      "pct": 12.6
+    },
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "n_matches": 190,
+        "count": 25,
+        "pct": 13.2
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 41,
+        "count": 4,
+        "pct": 9.8
+      }
+    ]
+  }
+}

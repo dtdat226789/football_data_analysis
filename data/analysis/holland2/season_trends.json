@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:53:09+00:00",
+  "config": {
+    "league": "holland2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\holland2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Eerste Divisie",
+    "country": "Netherlands",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/netherlands/eerste-divisie"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Den Haag",
+      "champion_id": 730,
+      "champion_pts": 89,
+      "runner_up": "Cambuur",
+      "runner_up_id": 729,
+      "margin_pts": 11
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Heracles",
+      "champion_id": 722,
+      "champion_pts": 21,
+      "runner_up": "Almere City",
+      "runner_up_id": 723,
+      "margin_pts": 5
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 11,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 5,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 5,
+      "champion": "Heracles",
+      "runner_up": "Almere City"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 89,
+        "2": 78,
+        "4": 68,
+        "6": 60,
+        "17": 40,
+        "20": 35
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 21,
+        "2": 16,
+        "4": 15,
+        "6": 15,
+        "17": 7,
+        "20": 6
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 17,
+      "safe_pts": 40,
+      "drop_position": 18,
+      "drop_pts": 39,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 39
+        },
+        {
+          "position": 19,
+          "points": 38
+        },
+        {
+          "position": 20,
+          "points": 35
+        }
+      ],
+      "bottom3_range": 4
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 17,
+      "safe_pts": 7,
+      "drop_position": 18,
+      "drop_pts": 7,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 7
+        },
+        {
+          "position": 19,
+          "points": 7
+        },
+        {
+          "position": 20,
+          "points": 6
+        }
+      ],
+      "bottom3_range": 1
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 392,
+      "total_goals": 1248,
+      "avg_goals": 3.184,
+      "home_wins": 167,
+      "draws": 85,
+      "away_wins": 140,
+      "home_win_pct": 42.6,
+      "draw_pct": 21.7,
+      "away_win_pct": 35.7,
+      "goalless": 14,
+      "goalless_pct": 3.6,
+      "total_points": 1085,
+      "avg_points_per_team": 51.67,
+      "n_teams": 21
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 82,
+      "total_goals": 303,
+      "avg_goals": 3.695,
+      "home_wins": 47,
+      "draws": 12,
+      "away_wins": 23,
+      "home_win_pct": 57.3,
+      "draw_pct": 14.6,
+      "away_win_pct": 28.0,
+      "goalless": 2,
+      "goalless_pct": 2.4,
+      "total_points": 234,
+      "avg_points_per_team": 11.7,
+      "n_teams": 20
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 5.429,
+        "goals": 5.905
+      },
+      {
+        "season": "2026-2027",
+        "luck": 2.2,
+        "goals": 5.9
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 5.905
+    }
+  }
+}

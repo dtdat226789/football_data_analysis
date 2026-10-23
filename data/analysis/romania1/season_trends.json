@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:04:50+00:00",
+  "config": {
+    "league": "romania1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\romania1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Superliga",
+    "country": "Romania",
+    "teams": 16,
+    "matches": 240,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "playoff",
+    "url": "https://www.football-charts.com/leagues/romania/superliga"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Univ. Craiova",
+      "champion_id": 1324,
+      "champion_pts": 82,
+      "runner_up": "U. Cluj",
+      "runner_up_id": 1325,
+      "margin_pts": 9
+    },
+    {
+      "season": "2026-2027",
+      "champion": "Dinamo Bucuresti",
+      "champion_id": 1328,
+      "champion_pts": 23,
+      "runner_up": "FC Rapid Bucuresti",
+      "runner_up_id": 1327,
+      "margin_pts": 2
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 9,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 2,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 2,
+      "champion": "Dinamo Bucuresti",
+      "runner_up": "FC Rapid Bucuresti"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 82,
+        "2": 73,
+        "4": 68,
+        "6": 64,
+        "13": 45,
+        "16": 34
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 23,
+        "2": 21,
+        "4": 19,
+        "6": 14,
+        "13": 11,
+        "16": 1
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 13,
+      "safe_pts": 45,
+      "drop_position": 14,
+      "drop_pts": 42,
+      "gap": 3,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 42
+        },
+        {
+          "position": 15,
+          "points": 39
+        },
+        {
+          "position": 16,
+          "points": 34
+        }
+      ],
+      "bottom3_range": 8
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 13,
+      "safe_pts": 11,
+      "drop_position": 14,
+      "drop_pts": 10,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 10
+        },
+        {
+          "position": 15,
+          "points": 8
+        },
+        {
+          "position": 16,
+          "points": 1
+        }
+      ],
+      "bottom3_range": 9
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 350,
+      "total_goals": 887,
+      "avg_goals": 2.534,
+      "home_wins": 155,
+      "draws": 96,
+      "away_wins": 99,
+      "home_win_pct": 44.3,
+      "draw_pct": 27.4,
+      "away_win_pct": 28.3,
+      "goalless": 25,
+      "goalless_pct": 7.1,
+      "total_points": 945,
+      "avg_points_per_team": 49.74,
+      "n_teams": 19
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 79,
+      "total_goals": 208,
+      "avg_goals": 2.633,
+      "home_wins": 44,
+      "draws": 21,
+      "away_wins": 14,
+      "home_win_pct": 55.7,
+      "draw_pct": 26.6,
+      "away_win_pct": 17.7,
+      "goalless": 7,
+      "goalless_pct": 8.9,
+      "total_points": 216,
+      "avg_points_per_team": 13.5,
+      "n_teams": 16
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 4.316,
+        "goals": 7.684
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.5,
+        "goals": 5.125
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 7.684
+    }
+  }
+}

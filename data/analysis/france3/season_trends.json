@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:50:31+00:00",
+  "config": {
+    "league": "france3",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\france3",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Ligue 3",
+    "country": "France",
+    "teams": 18,
+    "matches": 306,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/france/ligue-3"
+  },
+  "champions": [
+    {
+      "season": "2025-2026",
+      "champion": "Dijon",
+      "champion_id": 533,
+      "champion_pts": 65,
+      "runner_up": "Sochaux",
+      "runner_up_id": 532,
+      "margin_pts": 7
+    },
+    {
+      "season": "2026-2027",
+      "champion": "La Roche",
+      "champion_id": 581,
+      "champion_pts": 18,
+      "runner_up": "Rouen",
+      "runner_up_id": 531,
+      "margin_pts": 1
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2026-2027",
+        "margin": 1,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2026-2027",
+      "margin": 1,
+      "champion": "La Roche",
+      "runner_up": "Rouen"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 65,
+        "2": 58,
+        "4": 54,
+        "6": 51,
+        "15": 31,
+        "18": 25
+      }
+    },
+    {
+      "season": "2026-2027",
+      "positions": {
+        "1": 18,
+        "2": 17,
+        "4": 16,
+        "6": 13,
+        "15": 10,
+        "18": 5
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025-2026",
+      "safe_position": 15,
+      "safe_pts": 31,
+      "drop_position": 16,
+      "drop_pts": 31,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 31
+        },
+        {
+          "position": 17,
+          "points": 27
+        },
+        {
+          "position": 18,
+          "points": 25
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2026-2027",
+      "safe_position": 15,
+      "safe_pts": 10,
+      "drop_position": 16,
+      "drop_pts": 9,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 16,
+          "points": 9
+        },
+        {
+          "position": 17,
+          "points": 8
+        },
+        {
+          "position": 18,
+          "points": 5
+        }
+      ],
+      "bottom3_range": 4
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025-2026",
+      "n_matches": 303,
+      "total_goals": 738,
+      "avg_goals": 2.436,
+      "home_wins": 109,
+      "draws": 100,
+      "away_wins": 94,
+      "home_win_pct": 36.0,
+      "draw_pct": 33.0,
+      "away_win_pct": 31.0,
+      "goalless": 32,
+      "goalless_pct": 10.6,
+      "total_points": 809,
+      "avg_points_per_team": 16.18,
+      "n_teams": 50
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 85,
+      "total_goals": 205,
+      "avg_goals": 2.412,
+      "home_wins": 31,
+      "draws": 26,
+      "away_wins": 28,
+      "home_win_pct": 36.5,
+      "draw_pct": 30.6,
+      "away_win_pct": 32.9,
+      "goalless": 10,
+      "goalless_pct": 11.8,
+      "total_points": 229,
+      "avg_points_per_team": 12.05,
+      "n_teams": 19
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025-2026",
+        "luck": 13.04,
+        "goals": 17.8
+      },
+      {
+        "season": "2026-2027",
+        "luck": 1.368,
+        "goals": 7.158
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 17.8
+    }
+  }
+}

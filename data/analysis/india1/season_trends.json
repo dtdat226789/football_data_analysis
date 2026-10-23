@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T15:55:08+00:00",
+  "config": {
+    "league": "india1",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\india1",
+    "out_stem": null
+  },
+  "league": {
+    "name": "ISL",
+    "country": "India",
+    "teams": 14,
+    "matches": 182,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/india/isl"
+  },
+  "champions": [
+    {
+      "season": "2024-2025",
+      "champion": "Mohun Bagan",
+      "champion_id": 800,
+      "champion_pts": 56,
+      "runner_up": "Goa",
+      "runner_up_id": 801,
+      "margin_pts": 8
+    },
+    {
+      "season": "2025-2026",
+      "champion": "East Bengal",
+      "champion_id": 809,
+      "champion_pts": 26,
+      "runner_up": "Mohun Bagan",
+      "runner_up_id": 800,
+      "margin_pts": 0
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "margin": 8,
+        "tight": false
+      },
+      {
+        "season": "2025-2026",
+        "margin": 0,
+        "tight": true
+      }
+    ],
+    "tight_race_count": 1,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025-2026",
+      "margin": 0,
+      "champion": "East Bengal",
+      "runner_up": "Mohun Bagan"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2024-2025",
+      "positions": {
+        "1": 56,
+        "2": 48,
+        "4": 38,
+        "6": 36,
+        "11": 27,
+        "14": null
+      }
+    },
+    {
+      "season": "2025-2026",
+      "positions": {
+        "1": 26,
+        "2": 26,
+        "4": 23,
+        "6": 22,
+        "11": 11,
+        "14": 3
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2024-2025",
+      "safe_position": 11,
+      "safe_pts": 27,
+      "drop_position": 12,
+      "drop_pts": 18,
+      "gap": 9,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 18
+        },
+        {
+          "position": 13,
+          "points": 13
+        },
+        {
+          "position": 14,
+          "points": null
+        }
+      ],
+      "bottom3_range": 5
+    },
+    {
+      "season": "2025-2026",
+      "safe_position": 11,
+      "safe_pts": 11,
+      "drop_position": 12,
+      "drop_pts": 11,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 12,
+          "points": 11
+        },
+        {
+          "position": 13,
+          "points": 9
+        },
+        {
+          "position": 14,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 8
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2024-2025",
+      "n_matches": 156,
+      "total_goals": 448,
+      "avg_goals": 2.872,
+      "home_wins": 66,
+      "draws": 38,
+      "away_wins": 52,
+      "home_win_pct": 42.3,
+      "draw_pct": 24.4,
+      "away_win_pct": 33.3,
+      "goalless": 11,
+      "goalless_pct": 7.1,
+      "total_points": 430,
+      "avg_points_per_team": 33.08,
+      "n_teams": 13
+    },
+    {
+      "season": "2025-2026",
+      "n_matches": 91,
+      "total_goals": 221,
+      "avg_goals": 2.429,
+      "home_wins": 35,
+      "draws": 29,
+      "away_wins": 27,
+      "home_win_pct": 38.5,
+      "draw_pct": 31.9,
+      "away_win_pct": 29.7,
+      "goalless": 10,
+      "goalless_pct": 11.0,
+      "total_points": 244,
+      "avg_points_per_team": 17.43,
+      "n_teams": 14
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2024-2025",
+        "luck": 1.692,
+        "goals": 3.538
+      },
+      {
+        "season": "2025-2026",
+        "luck": 2.714,
+        "goals": 4.714
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025-2026",
+      "view": "goals",
+      "avg_abs_diff": 4.714
+    }
+  }
+}

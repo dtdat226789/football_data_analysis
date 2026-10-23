@@ -1,0 +1,195 @@
+{
+  "report_name": "season_trends",
+  "script": {
+    "name": "backend/scripts/analyze_seasons.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:00:38+00:00",
+  "config": {
+    "league": "korea2",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\korea2",
+    "out_stem": null
+  },
+  "league": {
+    "name": "K League 2",
+    "country": "South Korea",
+    "teams": 17,
+    "matches": 272,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/south-korea/k-league-2"
+  },
+  "champions": [
+    {
+      "season": "2025",
+      "champion": "Incheon",
+      "champion_id": 1015,
+      "champion_pts": 76,
+      "runner_up": "Suwon Bluewings",
+      "runner_up_id": 1017,
+      "margin_pts": 7
+    },
+    {
+      "season": "2026",
+      "champion": "Suwon Bluewings",
+      "champion_id": 1017,
+      "champion_pts": 56,
+      "runner_up": "Suwon FC",
+      "runner_up_id": 1012,
+      "margin_pts": 7
+    }
+  ],
+  "title_race": {
+    "per_season": [
+      {
+        "season": "2025",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2026",
+        "margin": 7,
+        "tight": false
+      }
+    ],
+    "tight_race_count": 0,
+    "total_seasons": 2,
+    "tightest": {
+      "season": "2025",
+      "margin": 7,
+      "champion": "Incheon",
+      "runner_up": "Suwon Bluewings"
+    }
+  },
+  "points_thresholds": [
+    {
+      "season": "2025",
+      "positions": {
+        "1": 76,
+        "2": 69,
+        "4": 61,
+        "6": 54,
+        "14": 28,
+        "17": 3
+      }
+    },
+    {
+      "season": "2026",
+      "positions": {
+        "1": 56,
+        "2": 49,
+        "4": 46,
+        "6": 41,
+        "14": 24,
+        "17": 14
+      }
+    }
+  ],
+  "relegation_battle": [
+    {
+      "season": "2025",
+      "safe_position": 14,
+      "safe_pts": 28,
+      "drop_position": 15,
+      "drop_pts": 26,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 15,
+          "points": 26
+        },
+        {
+          "position": 16,
+          "points": 3
+        },
+        {
+          "position": 17,
+          "points": 3
+        }
+      ],
+      "bottom3_range": 23
+    },
+    {
+      "season": "2026",
+      "safe_position": 14,
+      "safe_pts": 24,
+      "drop_position": 15,
+      "drop_pts": 22,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 15,
+          "points": 22
+        },
+        {
+          "position": 16,
+          "points": 22
+        },
+        {
+          "position": 17,
+          "points": 14
+        }
+      ],
+      "bottom3_range": 8
+    }
+  ],
+  "league_trends": [
+    {
+      "season": "2025",
+      "n_matches": 273,
+      "total_goals": 686,
+      "avg_goals": 2.513,
+      "home_wins": 96,
+      "draws": 80,
+      "away_wins": 97,
+      "home_win_pct": 35.2,
+      "draw_pct": 29.3,
+      "away_win_pct": 35.5,
+      "goalless": 26,
+      "goalless_pct": 9.5,
+      "total_points": 739,
+      "avg_points_per_team": 26.39,
+      "n_teams": 28
+    },
+    {
+      "season": "2026",
+      "n_matches": 220,
+      "total_goals": 588,
+      "avg_goals": 2.673,
+      "home_wins": 77,
+      "draws": 73,
+      "away_wins": 70,
+      "home_win_pct": 35.0,
+      "draw_pct": 33.2,
+      "away_win_pct": 31.8,
+      "goalless": 16,
+      "goalless_pct": 7.3,
+      "total_points": 587,
+      "avg_points_per_team": 34.53,
+      "n_teams": 17
+    }
+  ],
+  "view_divergence": {
+    "per_season": [
+      {
+        "season": "2025",
+        "luck": 7.857,
+        "goals": 10.0
+      },
+      {
+        "season": "2026",
+        "luck": 2.706,
+        "goals": 5.412
+      }
+    ],
+    "worst_divergence": {
+      "season": "2025",
+      "view": "goals",
+      "avg_abs_diff": 10.0
+    }
+  }
+}

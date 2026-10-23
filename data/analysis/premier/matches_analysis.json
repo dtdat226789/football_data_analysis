@@ -1,0 +1,1373 @@
+{
+  "report_name": "matches_analysis",
+  "script": {
+    "name": "backend/scripts/analyze_matches.py",
+    "version": "1.0.0"
+  },
+  "generated_at": "2026-09-29T16:03:59+00:00",
+  "config": {
+    "league": "premier",
+    "out_dir": "E:\\football_data_analysis\\data\\analysis\\premier",
+    "out_stem": null
+  },
+  "league": {
+    "name": "Premier League",
+    "country": "England",
+    "teams": 20,
+    "matches": 380,
+    "views": [
+      "classic",
+      "luck",
+      "goals"
+    ],
+    "format": "round-robin",
+    "url": "https://www.football-charts.com/leagues/england/premier-league"
+  },
+  "overall": {
+    "n_matches": 2330,
+    "home_wins": 1001,
+    "draws": 553,
+    "away_wins": 776,
+    "home_win_pct": 43.0,
+    "draw_pct": 23.7,
+    "away_win_pct": 33.3,
+    "home_goals": 3625,
+    "away_goals": 3101,
+    "total_goals": 6726,
+    "avg_goals": 2.887,
+    "goalless": 134,
+    "goalless_pct": 5.8
+  },
+  "per_season": [
+    {
+      "season": "2020-2021",
+      "n_matches": 380,
+      "home_wins": 144,
+      "draws": 83,
+      "away_wins": 153,
+      "home_win_pct": 37.9,
+      "draw_pct": 21.8,
+      "away_win_pct": 40.3,
+      "home_goals": 514,
+      "away_goals": 510,
+      "total_goals": 1024,
+      "avg_goals": 2.695,
+      "goalless": 30,
+      "goalless_pct": 7.9
+    },
+    {
+      "season": "2021-2022",
+      "n_matches": 380,
+      "home_wins": 163,
+      "draws": 88,
+      "away_wins": 129,
+      "home_win_pct": 42.9,
+      "draw_pct": 23.2,
+      "away_win_pct": 33.9,
+      "home_goals": 575,
+      "away_goals": 496,
+      "total_goals": 1071,
+      "avg_goals": 2.818,
+      "goalless": 22,
+      "goalless_pct": 5.8
+    },
+    {
+      "season": "2022-2023",
+      "n_matches": 380,
+      "home_wins": 184,
+      "draws": 87,
+      "away_wins": 109,
+      "home_win_pct": 48.4,
+      "draw_pct": 22.9,
+      "away_win_pct": 28.7,
+      "home_goals": 621,
+      "away_goals": 463,
+      "total_goals": 1084,
+      "avg_goals": 2.853,
+      "goalless": 23,
+      "goalless_pct": 6.1
+    },
+    {
+      "season": "2023-2024",
+      "n_matches": 380,
+      "home_wins": 175,
+      "draws": 82,
+      "away_wins": 123,
+      "home_win_pct": 46.1,
+      "draw_pct": 21.6,
+      "away_win_pct": 32.4,
+      "home_goals": 684,
+      "away_goals": 562,
+      "total_goals": 1246,
+      "avg_goals": 3.279,
+      "goalless": 11,
+      "goalless_pct": 2.9
+    },
+    {
+      "season": "2024-2025",
+      "n_matches": 380,
+      "home_wins": 155,
+      "draws": 93,
+      "away_wins": 132,
+      "home_win_pct": 40.8,
+      "draw_pct": 24.5,
+      "away_win_pct": 34.7,
+      "home_goals": 575,
+      "away_goals": 540,
+      "total_goals": 1115,
+      "avg_goals": 2.934,
+      "goalless": 16,
+      "goalless_pct": 4.2
+    },
+    {
+      "season": "2025-2026",
+      "n_matches": 380,
+      "home_wins": 162,
+      "draws": 104,
+      "away_wins": 114,
+      "home_win_pct": 42.6,
+      "draw_pct": 27.4,
+      "away_win_pct": 30.0,
+      "home_goals": 580,
+      "away_goals": 465,
+      "total_goals": 1045,
+      "avg_goals": 2.75,
+      "goalless": 27,
+      "goalless_pct": 7.1
+    },
+    {
+      "season": "2026-2027",
+      "n_matches": 50,
+      "home_wins": 18,
+      "draws": 16,
+      "away_wins": 16,
+      "home_win_pct": 36.0,
+      "draw_pct": 32.0,
+      "away_win_pct": 32.0,
+      "home_goals": 76,
+      "away_goals": 65,
+      "total_goals": 141,
+      "avg_goals": 2.82,
+      "goalless": 5,
+      "goalless_pct": 10.0
+    }
+  ],
+  "ht_ft_matrix": {
+    "ht_states": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "ft_outcomes": [
+      "home",
+      "draw",
+      "away"
+    ],
+    "counts": {
+      "home": {
+        "home": 619,
+        "draw": 133,
+        "away": 64
+      },
+      "draw": {
+        "home": 312,
+        "draw": 315,
+        "away": 278
+      },
+      "away": {
+        "home": 70,
+        "draw": 105,
+        "away": 434
+      }
+    },
+    "pcts": {
+      "home": {
+        "home": 75.9,
+        "draw": 16.3,
+        "away": 7.8
+      },
+      "draw": {
+        "home": 34.5,
+        "draw": 34.8,
+        "away": 30.7
+      },
+      "away": {
+        "home": 11.5,
+        "draw": 17.2,
+        "away": 71.3
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "comebacks": {
+    "home": {
+      "count": 70,
+      "pct": 3.0,
+      "matches": [
+        {
+          "season": "2020-2021",
+          "home_team": "Burnley",
+          "away_team": "Aston Villa",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Sheffield Utd",
+          "away_team": "West Brom",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Manchester Utd",
+          "away_team": "Brighton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Liverpool",
+          "away_team": "Aston Villa",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Tottenham",
+          "away_team": "Southampton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Leicester",
+          "away_team": "Crystal Palace",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Wolves",
+          "away_team": "Brighton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Crystal Palace",
+          "away_team": "Aston Villa",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Brighton",
+          "away_team": "Manchester City",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Everton",
+          "away_team": "Southampton",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Tottenham",
+          "away_team": "Leeds",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "West Ham",
+          "away_team": "Chelsea",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Everton",
+          "away_team": "Arsenal",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Brentford",
+          "away_team": "Watford",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Arsenal",
+          "away_team": "Wolves",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Burnley",
+          "away_team": "Everton",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Everton",
+          "away_team": "Crystal Palace",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Manchester City",
+          "away_team": "Aston Villa",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Brighton",
+          "away_team": "West Ham",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Manchester City",
+          "away_team": "Crystal Palace",
+          "ht_score": "0-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Liverpool",
+          "away_team": "Newcastle",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Bournemouth",
+          "away_team": "Leicester",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Crystal Palace",
+          "away_team": "Wolves",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Leeds",
+          "away_team": "Bournemouth",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Tottenham",
+          "away_team": "Leeds",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Arsenal",
+          "away_team": "West Ham",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Manchester City",
+          "away_team": "Tottenham",
+          "ht_score": "0-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Arsenal",
+          "away_team": "Bournemouth",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Bournemouth",
+          "away_team": "Fulham",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Brentford",
+          "away_team": "Nottingham",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Newcastle",
+          "away_team": "Southampton",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Manchester Utd",
+          "away_team": "Nottingham",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Manchester Utd",
+          "away_team": "Brentford",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Brentford",
+          "away_team": "West Ham",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Wolves",
+          "away_team": "Tottenham",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Manchester Utd",
+          "away_team": "Aston Villa",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Tottenham",
+          "away_team": "Brentford",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Tottenham",
+          "away_team": "Brighton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Liverpool",
+          "away_team": "Luton",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Manchester City",
+          "away_team": "Manchester Utd",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Bournemouth",
+          "away_team": "Luton",
+          "ht_score": "0-3",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Newcastle",
+          "away_team": "West Ham",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Tottenham",
+          "away_team": "Luton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "West Ham",
+          "away_team": "Luton",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Aston Villa",
+          "away_team": "Everton",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Aston Villa",
+          "away_team": "Wolves",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Everton",
+          "away_team": "Crystal Palace",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Brighton",
+          "away_team": "Tottenham",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Manchester Utd",
+          "away_team": "Brentford",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Liverpool",
+          "away_team": "Brighton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Tottenham",
+          "away_team": "Aston Villa",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Fulham",
+          "away_team": "Brentford",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Brighton",
+          "away_team": "Manchester City",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Manchester Utd",
+          "away_team": "Southampton",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Chelsea",
+          "away_team": "West Ham",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Aston Villa",
+          "away_team": "Chelsea",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Liverpool",
+          "away_team": "Southampton",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Brighton",
+          "away_team": "Liverpool",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Brighton",
+          "away_team": "Manchester City",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Everton",
+          "away_team": "Crystal Palace",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Brentford",
+          "away_team": "Newcastle",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Brighton",
+          "away_team": "Brentford",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Sunderland",
+          "away_team": "Bournemouth",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Newcastle",
+          "away_team": "Leeds",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Fulham",
+          "away_team": "Brighton",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Chelsea",
+          "away_team": "West Ham",
+          "ht_score": "0-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Manchester Utd",
+          "away_team": "Crystal Palace",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Crystal Palace",
+          "away_team": "Newcastle",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Nottingham",
+          "away_team": "Burnley",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Manchester City",
+          "away_team": "Bournemouth",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        }
+      ]
+    },
+    "away": {
+      "count": 64,
+      "pct": 2.7,
+      "matches": [
+        {
+          "season": "2020-2021",
+          "home_team": "Southampton",
+          "away_team": "Manchester Utd",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "West Ham",
+          "away_team": "Manchester Utd",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Wolves",
+          "away_team": "West Brom",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Southampton",
+          "away_team": "Wolves",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Brighton",
+          "away_team": "Leicester",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Burnley",
+          "away_team": "Newcastle",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Tottenham",
+          "away_team": "Manchester Utd",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Manchester City",
+          "away_team": "Chelsea",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2020-2021",
+          "home_team": "Aston Villa",
+          "away_team": "Manchester Utd",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Burnley",
+          "away_team": "Brighton",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Newcastle",
+          "away_team": "West Ham",
+          "ht_score": "2-1",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Leeds",
+          "away_team": "West Ham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Arsenal",
+          "away_team": "Manchester City",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Wolves",
+          "away_team": "Leeds",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Watford",
+          "away_team": "Burnley",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Southampton",
+          "away_team": "Crystal Palace",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2021-2022",
+          "home_team": "Everton",
+          "away_team": "Brentford",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Nottingham",
+          "away_team": "Bournemouth",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Nottingham",
+          "away_team": "Fulham",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Bournemouth",
+          "away_team": "Tottenham",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Everton",
+          "away_team": "Southampton",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Southampton",
+          "away_team": "Wolves",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Aston Villa",
+          "away_team": "Arsenal",
+          "ht_score": "2-1",
+          "ft_score": "2-4"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Brentford",
+          "away_team": "Newcastle",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2022-2023",
+          "home_team": "Tottenham",
+          "away_team": "Brentford",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Newcastle",
+          "away_team": "Liverpool",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Wolves",
+          "away_team": "Liverpool",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "West Ham",
+          "away_team": "Manchester City",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Bournemouth",
+          "away_team": "Wolves",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Tottenham",
+          "away_team": "West Ham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Luton",
+          "away_team": "Manchester City",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Brentford",
+          "away_team": "Aston Villa",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Everton",
+          "away_team": "Manchester City",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Newcastle",
+          "away_team": "Manchester City",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Crystal Palace",
+          "away_team": "Chelsea",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2023-2024",
+          "home_team": "Wolves",
+          "away_team": "West Ham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Wolves",
+          "away_team": "Newcastle",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Southampton",
+          "away_team": "Leicester",
+          "ht_score": "2-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Nottingham",
+          "away_team": "Newcastle",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Ipswich",
+          "away_team": "Bournemouth",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Tottenham",
+          "away_team": "Chelsea",
+          "ht_score": "2-1",
+          "ft_score": "3-4"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Manchester City",
+          "away_team": "Manchester Utd",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Chelsea",
+          "away_team": "Fulham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Tottenham",
+          "away_team": "Leicester",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Newcastle",
+          "away_team": "Fulham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Ipswich",
+          "away_team": "Wolves",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Fulham",
+          "away_team": "Chelsea",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Southampton",
+          "away_team": "Fulham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Arsenal",
+          "away_team": "Bournemouth",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Brentford",
+          "away_team": "Fulham",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2024-2025",
+          "home_team": "Tottenham",
+          "away_team": "Brighton",
+          "ht_score": "1-0",
+          "ft_score": "1-4"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Chelsea",
+          "away_team": "Brighton",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Newcastle",
+          "away_team": "Arsenal",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Leeds",
+          "away_team": "Aston Villa",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Crystal Palace",
+          "away_team": "Manchester Utd",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "West Ham",
+          "away_team": "Aston Villa",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Chelsea",
+          "away_team": "Aston Villa",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "West Ham",
+          "away_team": "Nottingham",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Fulham",
+          "away_team": "Everton",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Everton",
+          "away_team": "Bournemouth",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Newcastle",
+          "away_team": "Sunderland",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Everton",
+          "away_team": "Sunderland",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2025-2026",
+          "home_team": "Manchester City",
+          "away_team": "Aston Villa",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2026-2027",
+          "home_team": "Fulham",
+          "away_team": "Crystal Palace",
+          "ht_score": "2-1",
+          "ft_score": "2-3"
+        }
+      ]
+    }
+  },
+  "ht_lead_conversion": {
+    "home_lead": {
+      "n_matches": 816,
+      "home": {
+        "count": 619,
+        "pct": 75.9
+      },
+      "draw": {
+        "count": 133,
+        "pct": 16.3
+      },
+      "away": {
+        "count": 64,
+        "pct": 7.8
+      }
+    },
+    "ht_draw": {
+      "n_matches": 905,
+      "home": {
+        "count": 312,
+        "pct": 34.5
+      },
+      "draw": {
+        "count": 315,
+        "pct": 34.8
+      },
+      "away": {
+        "count": 278,
+        "pct": 30.7
+      }
+    },
+    "away_lead": {
+      "n_matches": 609,
+      "home": {
+        "count": 70,
+        "pct": 11.5
+      },
+      "draw": {
+        "count": 105,
+        "pct": 17.2
+      },
+      "away": {
+        "count": 434,
+        "pct": 71.3
+      }
+    },
+    "excluded_no_ht": 0
+  },
+  "first_goal_timing": {
+    "n_total": 2330,
+    "n_with_first_goal": 2196,
+    "n_goalless": 134,
+    "unbucketed": 0,
+    "buckets": {
+      "1-15": {
+        "n_matches": 753,
+        "home": {
+          "count": 357,
+          "pct": 47.4
+        },
+        "draw": {
+          "count": 139,
+          "pct": 18.5
+        },
+        "away": {
+          "count": 257,
+          "pct": 34.1
+        },
+        "pct_of_matches": 32.3
+      },
+      "16-30": {
+        "n_matches": 542,
+        "home": {
+          "count": 250,
+          "pct": 46.1
+        },
+        "draw": {
+          "count": 101,
+          "pct": 18.6
+        },
+        "away": {
+          "count": 191,
+          "pct": 35.2
+        },
+        "pct_of_matches": 23.3
+      },
+      "31-45": {
+        "n_matches": 352,
+        "home": {
+          "count": 159,
+          "pct": 45.2
+        },
+        "draw": {
+          "count": 75,
+          "pct": 21.3
+        },
+        "away": {
+          "count": 118,
+          "pct": 33.5
+        },
+        "pct_of_matches": 15.1
+      },
+      "46-60": {
+        "n_matches": 294,
+        "home": {
+          "count": 129,
+          "pct": 43.9
+        },
+        "draw": {
+          "count": 58,
+          "pct": 19.7
+        },
+        "away": {
+          "count": 107,
+          "pct": 36.4
+        },
+        "pct_of_matches": 12.6
+      },
+      "61-75": {
+        "n_matches": 146,
+        "home": {
+          "count": 63,
+          "pct": 43.2
+        },
+        "draw": {
+          "count": 34,
+          "pct": 23.3
+        },
+        "away": {
+          "count": 49,
+          "pct": 33.6
+        },
+        "pct_of_matches": 6.3
+      },
+      "76-90": {
+        "n_matches": 88,
+        "home": {
+          "count": 34,
+          "pct": 38.6
+        },
+        "draw": {
+          "count": 11,
+          "pct": 12.5
+        },
+        "away": {
+          "count": 43,
+          "pct": 48.9
+        },
+        "pct_of_matches": 3.8
+      },
+      "91-120": {
+        "n_matches": 21,
+        "home": {
+          "count": 9,
+          "pct": 42.9
+        },
+        "draw": {
+          "count": 1,
+          "pct": 4.8
+        },
+        "away": {
+          "count": 11,
+          "pct": 52.4
+        },
+        "pct_of_matches": 0.9
+      }
+    }
+  },
+  "goalless": {
+    "overall": {
+      "n_matches": 2330,
+      "count": 134,
+      "pct": 5.8
+    },
+    "per_season": [
+      {
+        "season": "2020-2021",
+        "n_matches": 380,
+        "count": 30,
+        "pct": 7.9
+      },
+      {
+        "season": "2021-2022",
+        "n_matches": 380,
+        "count": 22,
+        "pct": 5.8
+      },
+      {
+        "season": "2022-2023",
+        "n_matches": 380,
+        "count": 23,
+        "pct": 6.1
+      },
+      {
+        "season": "2023-2024",
+        "n_matches": 380,
+        "count": 11,
+        "pct": 2.9
+      },
+      {
+        "season": "2024-2025",
+        "n_matches": 380,
+        "count": 16,
+        "pct": 4.2
+      },
+      {
+        "season": "2025-2026",
+        "n_matches": 380,
+        "count": 27,
+        "pct": 7.1
+      },
+      {
+        "season": "2026-2027",
+        "n_matches": 50,
+        "count": 5,
+        "pct": 10.0
+      }
+    ]
+  }
+}
