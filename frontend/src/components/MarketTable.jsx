@@ -1,8 +1,6 @@
 import { useMemo, useState } from "react";
 
-function pct(v) {
-  return typeof v === "number" ? `${(v * 100).toFixed(1)}%` : "—";
-}
+import { useFormatters } from "../i18n/useFormatters.js";
 
 /** Display order, then label. Anything unlisted sorts to the end. */
 const FAMILY_ORDER = [
@@ -16,28 +14,28 @@ const FAMILY_ORDER = [
   "correct_score",
 ];
 
-const FAMILY_LABEL = {
-  result: "Result",
-  double_chance: "Double chance",
-  totals: "Goals (over/under)",
-  btts: "Both teams to score",
-  asian_handicap: "Asian handicap",
-  ht_ft: "Half time / full time",
-  team_total: "Team totals",
-  correct_score: "Correct score",
+const FAMILY_KEY = {
+  result: "market.family.result",
+  double_chance: "market.family.double_chance",
+  totals: "market.family.totals",
+  btts: "market.family.btts",
+  asian_handicap: "market.family.asian_handicap",
+  ht_ft: "market.family.ht_ft",
+  team_total: "market.family.team_total",
+  correct_score: "market.family.correct_score",
 };
 
-const SCOPE_LABEL = {
-  full_time: "Full time",
-  half_time: "Half time",
-  half_to_full: "HT / FT",
+const SCOPE_KEY = {
+  full_time: "market.scope.full_time",
+  half_time: "market.scope.half_time",
+  half_to_full: "market.scope.half_to_full",
 };
 
 const FILTERS = [
-  { id: "all", label: "All" },
-  { id: "full_time", label: "Full time" },
-  { id: "half_time", label: "Half time" },
-  { id: "assumed", label: "Assumed only" },
+  { id: "all", key: "market.filter.all" },
+  { id: "full_time", key: "market.filter.full_time" },
+  { id: "half_time", key: "market.filter.half_time" },
+  { id: "assumed", key: "market.filter.assumed" },
 ];
 
 /** Sort a market row within its family: by line, then by probability. */
@@ -66,7 +64,15 @@ function compareRows(a, b) {
  * order, row semantics and any future row-level selection keep working instead
  * of the whole row becoming a div.
  */
+/**
+ * @param {object} props
+ * @param {Record<string, any>[]} [props.markets] Absent or not an array renders nothing.
+ * @param {Record<string, any>[]} [props.selected] Markets already chosen elsewhere.
+ * @param {(row: Record<string, any>) => void} [props.onSelect] Omit it for a read-only
+ *   table: the clickable column is not rendered at all.
+ */
 export default function MarketTable({ markets, selected = [], onSelect }) {
+  const { t, pct } = useFormatters();
   const [filter, setFilter] = useState("all");
   const featured = useMemo(
     () => new Set(selected.map((m) => m && m.key).filter(Boolean)),
@@ -101,13 +107,13 @@ export default function MarketTable({ markets, selected = [], onSelect }) {
   return (
     <section className="card">
       <h3 style={{ marginTop: 0, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-        Markets
+        {t("market.title")}
         <span className="muted" style={{ fontSize: 13, fontWeight: 400 }}>
-          {markets.length} derived
+          {t("market.derived", { n: markets.length })}
         </span>
         {assumed > 0 && (
-          <span className="badge amber" title="dc_v2 does not publish a half-time goal split; these assume it is proportional to the full-time one">
-            {assumed} assumed
+          <span className="badge amber" title={t("market.assumedBadgeTitle")}>
+            {t("market.assumedCount", { n: assumed })}
           </span>
         )}
       </h3>
@@ -120,24 +126,24 @@ export default function MarketTable({ markets, selected = [], onSelect }) {
             onClick={() => setFilter(option.id)}
             aria-pressed={filter === option.id}
           >
-            {option.label}
+            {t(option.key)}
           </button>
         ))}
       </div>
 
       {grouped.length === 0 ? (
-        <p className="muted">No markets match this filter.</p>
+        <p className="muted">{t("market.noMatch")}</p>
       ) : (
         grouped.map(([family, rows]) => (
           <div key={family} className="market-group">
-            <h4>{FAMILY_LABEL[family] || family}</h4>
+            <h4>{t(FAMILY_KEY[family] ?? "") || family}</h4>
             <table className="data">
               <thead>
                 <tr>
-                  <th>Market</th>
-                  <th>Scope</th>
-                  <th>Source</th>
-                  <th className="num">Probability</th>
+                  <th>{t("market.col.market")}</th>
+                  <th>{t("market.col.scope")}</th>
+                  <th>{t("market.col.source")}</th>
+                  <th className="num">{t("market.col.probability")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -149,32 +155,35 @@ export default function MarketTable({ markets, selected = [], onSelect }) {
                           type="button"
                           className="market-open"
                           onClick={() => onSelect(row)}
-                          title={`How ${row.label} settles`}
+                          title={t("market.howSettles", { label: row.label })}
                         >
                           {row.label}
                         </button>
                       ) : (
                         row.label
                       )}
-                      {featured.has(row.key) && <span className="market-flag">featured</span>}
+                      {featured.has(row.key) && <span className="market-flag">{t("market.featured")}</span>}
                     </td>
-                    <td className="muted">{SCOPE_LABEL[row.scope] || row.scope}</td>
+                    <td className="muted">{t(SCOPE_KEY[row.scope] ?? "") || row.scope}</td>
                     <td>
                       <span
                         className={"badge" + (row.provenance === "modelled" ? " amber" : " green")}
                         title={
                           row.provenance === "modelled"
-                            ? "Assumed — the model does not publish the half-time goal split, so this is derived, not published"
-                            : "From the model's goal distribution"
+                            ? t("market.provenanceAssumed")
+                            : t("market.provenanceModel")
                         }
                       >
-                        {row.provenance === "modelled" ? "assumed" : "model"}
+                        {row.provenance === "modelled" ? t("market.assumed") : t("market.model")}
                       </span>
                     </td>
                     <td className="num">
                       {pct(row.probability)}
                       {typeof row.push === "number" && row.push > 0 && (
-                        <span className="muted market-push"> · {pct(row.push)} push</span>
+                        <span className="muted market-push">
+                          {" "}
+                          · {t("market.push", { pct: pct(row.push) })}
+                        </span>
                       )}
                     </td>
                   </tr>

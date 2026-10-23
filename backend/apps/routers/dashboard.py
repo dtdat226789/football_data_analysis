@@ -100,8 +100,8 @@ def _leagues_by_region(cur, counts: dict[str, int]) -> dict[str, list[dict]]:
                 "has_fixtures": (FIXTURES_DIR / f"{slug}.json").exists(),
             }
         )
-    for region in buckets:
-        buckets[region].sort(key=lambda r: r["matches"], reverse=True)
+    for rows in buckets.values():
+        rows.sort(key=lambda r: r["matches"], reverse=True)
     return buckets
 
 
@@ -124,7 +124,9 @@ def dashboard() -> dict:
         "generated_at": None,
         "meta": {
             "n_leagues": len(common.LEAGUE_CONFIG),
-            "with_fixtures": sum(bool(leagues_by_region[r]) for r in leagues_by_region),
+            "with_fixtures": sum(
+                row["has_fixtures"] for rows in leagues_by_region.values() for row in rows
+            ),
             "n_upcoming": len(upcoming),
         },
         "top_leagues": top_leagues,

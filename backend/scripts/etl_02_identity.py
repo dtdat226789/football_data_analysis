@@ -27,6 +27,7 @@ from db_common import (
     collected_seasons,
     get_conn,
     load_json,
+    phantom_team_names,
     raw_file,
 )
 
@@ -103,9 +104,17 @@ def main(argv: list[str] | None = None) -> int:
         apply_sql(conn, "02_identity.sql")
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
             n_memberships = 0
+            n_phantoms = 0
             for season in seasons:
                 path = raw_file(season, "teams.json", league)
                 teams_json = load_json(path)
+                results_path = raw_file(season, "results.json", league)
+                results = (
+                    load_json(results_path) if results_path.exists() else {"matches": []}
+                )
+                phantoms = phantom_team_names(
+                    teams_json.get("teams", []), results.get("matches", [])
+                )
 
                 cur.execute(
                     """
@@ -125,6 +134,9 @@ def main(argv: list[str] | None = None) -> int:
 
                 for t in teams_json["teams"]:
                     api_name = t["team"]
+                    if api_name in phantoms:
+                        n_phantoms += 1
+                        continue
                     api_slug = t["slug"]
                     team_id = resolve_team(cur, api_slug, api_name)
 
@@ -155,6 +167,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"[03] aliases rows: {cur.fetchone()[0]} (source={ALIAS_SOURCE})")
             cur.execute("SELECT count(*) FROM team_seasons")
             print(f"[03] team_seasons rows: {cur.fetchone()[0]} (observed {n_memberships})")
+            if n_phantoms:
+                print(f"[03] phantom roster rows skipped: {n_phantoms}")
         conn.commit()
     finally:
         conn.close()

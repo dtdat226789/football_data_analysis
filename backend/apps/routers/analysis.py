@@ -73,6 +73,7 @@ def analysis_module(league: str, module: str) -> dict:
 
 
 def analysis_charts(league: str) -> dict:
+    _require_known_league(league)
     report_dir = common.league_report_dir(league)
     if report_dir is None:
         raise HTTPException(status_code=404, detail=f"no data for league '{league}'")
@@ -84,6 +85,7 @@ def analysis_charts(league: str) -> dict:
 
 
 def analysis_chart(league: str, chart: str) -> FileResponse:
+    _require_known_league(league)
     report_dir = common.league_report_dir(league)
     if report_dir is None:
         raise HTTPException(status_code=404, detail=f"no data for league '{league}'")

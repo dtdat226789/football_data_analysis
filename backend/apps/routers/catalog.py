@@ -36,7 +36,7 @@ def meta() -> dict:
             cur.execute("SELECT count(*) FROM leagues")
             db_leagues = cur.fetchone()[0]
         database: dict = {"reachable": True, "leagues": db_leagues}
-    except Exception as exc:  # noqa: BLE001 - report unavailability, never crash
+    except (Exception, SystemExit) as exc:  # noqa: BLE001 - report unavailability, never crash
         database = {"reachable": False, "error": str(exc)}
     return {
         "api_version": "1.0.0",

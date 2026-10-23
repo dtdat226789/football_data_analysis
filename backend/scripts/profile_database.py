@@ -48,6 +48,7 @@ from db_common import (
     get_conn,
     parse_season_years,
 )
+from analysis_common import rel_to_root
 
 VERSION = "1.0.0"
 SCRIPT_NAME = "backend/scripts/profile_database.py"
@@ -104,7 +105,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def args_to_config(args: argparse.Namespace) -> dict:
     return {
         "league": args.league,
-        "out_dir": str(args.out_dir.resolve()),
+        "out_dir": rel_to_root(args.out_dir),
         "score_threshold": args.score_threshold,
         "avg_goals_deviation": args.avg_goals_deviation,
         "goalless_deviation_pp": args.goalless_deviation_pp,
@@ -720,7 +721,7 @@ def render_markdown(profile: dict) -> str:
     lines: list[str] = []
     add = lines.append
 
-    add(f"# Football Charts Database Profile")
+    add("# Football Charts Database Profile")
     add(f"- Report: `{profile['report_name']}`")
     add(f"- Generated: {profile['generated_at']}")
     add(f"- Script: `{profile['script']['name']}` v{profile['script']['version']}")
@@ -739,7 +740,6 @@ def render_markdown(profile: dict) -> str:
     ))
 
     leagues = obs["leagues"]
-    n_catalog = sum(1 for l in leagues if l["n_registered_seasons"] > 0 or l["n_matches"] > 0)
     with_data = [l for l in leagues if l["n_matches"] > 0]
     add("")
     add("### 1.2 Leagues with data")

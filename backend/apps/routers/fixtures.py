@@ -40,7 +40,7 @@ from fastapi import APIRouter, HTTPException
 from .. import common
 from ..deps import fetched_cursor, norm_pagination, require_league, resolve_team_id
 from ..markets import market_detail, markets_from_prediction
-from .matches import build_pre_match, head_to_head
+from .matches import build_pre_match, check_date_window, head_to_head
 from .teams import _form_result
 
 router = APIRouter(tags=["fixtures"])
@@ -470,27 +470,39 @@ def _played_total(cur, league_season_id: int, team_id: int, before_date) -> int:
 def _season_for_date(cur, league: str, match_date) -> dict | None:
     """The league season a fixture belongs to, chosen by date.
 
-    Picks the latest registered season that already has matches before the
-    fixture, so a fixture in a season that has not been collected yet falls back
-    to the previous one instead of being scored against the wrong table.
+    Prefer the registered season whose date window contains the fixture. Fall
+    back to the latest season with prior matches only when no window match
+    exists.
     """
+    from db_common import parse_season_years, season_date_window  # noqa: PLC0415
+
     cur.execute(
         """
-        SELECT ls.id, s.name AS season, ls.season_state
+        SELECT ls.id, s.name AS season, ls.season_state, s.start_year, s.end_year
         FROM league_seasons ls
         JOIN seasons s ON s.id = ls.season_id
         JOIN leagues l ON l.id = ls.league_id
-        LEFT JOIN matches m ON m.league_season_id = ls.id AND m.match_date < %s
         WHERE l.api_key = %s
-        GROUP BY ls.id, s.name, ls.season_state, s.start_year, s.end_year
-        HAVING count(m.api_id) > 0
         ORDER BY s.start_year DESC, s.end_year DESC
-        LIMIT 1
         """,
-        (match_date, league),
+        (league,),
     )
-    row = cur.fetchone()
-    return dict(row) if row else None
+    rows = cur.fetchall() or []
+    for r in rows:
+        name = r["season"]
+        window = season_date_window(name)
+        if window and window[0] <= match_date <= window[1]:
+            return {"id": r["id"], "season": r["season"], "season_state": r["season_state"]}
+    if not rows:
+        return None
+    for r in rows:
+        cur.execute(
+            "SELECT 1 FROM matches WHERE league_season_id = %s AND match_date < %s LIMIT 1",
+            (r["id"], match_date),
+        )
+        if cur.fetchone():
+            return {"id": r["id"], "season": r["season"], "season_state": r["season_state"]}
+    return {"id": rows[0]["id"], "season": rows[0]["season"], "season_state": rows[0]["season_state"]}
 
 
 def _matchday(cur, league_season_id: int, match_date) -> int | None:
@@ -552,10 +564,14 @@ def _feature_row(
         # The panel's caption reads these back, so they travel with the numbers.
         row[f"{prefix}_team"] = side.get("name")
         row[f"{prefix}_team_id"] = side.get("team_id")
-        row[f"{prefix}_team_points_last_5"] = side.get("points") or None
-        row[f"{prefix}_team_wins_last_5"] = side.get("wins") or None
-        row[f"{prefix}_team_goals_scored_last_5"] = side.get("goals_scored") or None
-        row[f"{prefix}_team_goals_conceded_last_5"] = side.get("goals_conceded") or None
+        points = side.get("points")
+        row[f"{prefix}_team_points_last_5"] = points if points is not None else None
+        wins = side.get("wins")
+        row[f"{prefix}_team_wins_last_5"] = wins if wins is not None else None
+        goals_scored = side.get("goals_scored")
+        row[f"{prefix}_team_goals_scored_last_5"] = goals_scored if goals_scored is not None else None
+        goals_conceded = side.get("goals_conceded")
+        row[f"{prefix}_team_goals_conceded_last_5"] = goals_conceded if goals_conceded is not None else None
         row[f"{prefix}_team_{suffix}_win_rate"] = venue.get("win_rate")
         row[f"{prefix}_team_{suffix}_goals_avg"] = venue.get("goals_avg")
         row[f"{prefix}_team_{suffix}_conceded_avg"] = venue.get("conceded_avg")
@@ -626,8 +642,8 @@ def list_fixtures(
     sort: Literal["date", "confidence"] = "confidence",
     limit: int = DEFAULT_LIMIT,
     offset: int = 0,
-    from_date: str | None = None,
-    to_date: str | None = None,
+    from_date: date | None = None,
+    to_date: date | None = None,
     min_confidence: float | None = None,
 ) -> dict:
     """Merged upcoming fixtures, pruned, sorted by date or model confidence.
@@ -653,6 +669,7 @@ def list_fixtures(
     rows = fixture_rows(league)
 
     start, end = _as_date(from_date), _as_date(to_date)
+    check_date_window(start, end)
     if start or end:
         rows = [r for r in rows if _in_window(r, start, end)]
 
@@ -801,8 +818,6 @@ def fixture_detail(league: str, match_id: str, market: str | None = None) -> dic
             context = {}
 
     season = context.get("season") or {}
-    home = context.get("home") or {}
-    away = context.get("away") or {}
     for side, name in (("home", merged.get("home_team")), ("away", merged.get("away_team"))):
         side_data = context.get(side) or {}
         context[side] = {

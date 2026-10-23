@@ -1,9 +1,16 @@
-import { useId } from "react";
 
-function pretty(n) {
-  return typeof n === "number" ? n.toLocaleString() : String(n ?? "—");
-}
+import { useCallback } from "react";
 
+import { useFormatters } from "../i18n/useFormatters.js";
+
+/**
+ * @param {object} props
+ * @param {{ label: string, value: number }[]} props.data
+ * @param {string} [props.color]
+ * @param {number} [props.height]
+ * @param {(value: number) => string} [props.format] Falls back to `pretty`.
+ * @param {string} [props.title] Omitted heading.
+ */
 export function BarList({
   data,
   color = "var(--accent)",
@@ -11,6 +18,8 @@ export function BarList({
   format,
   title,
 }) {
+  const { num } = useFormatters();
+  const pretty = useCallback((v) => num(v), [num]);
   const max = Math.max(...data.map((d) => d.value), 1);
   return (
     <div>
@@ -36,6 +45,14 @@ export function BarList({
   );
 }
 
+/**
+ * @param {object} props
+ * @param {{ label: string, value: number, color: string }[]} props.segments
+ * @param {number} [props.size]
+ * @param {number} [props.thickness]
+ * @param {string} [props.center] Label in the hole.
+ * @param {string} [props.title] Omitted heading.
+ */
 export function Donut({
   segments,
   size = 120,
@@ -43,7 +60,7 @@ export function Donut({
   center,
   title,
 }) {
-  const uid = useId();
+  const { num } = useFormatters();
   const total = segments.reduce((acc, s) => acc + (s.value || 0), 0) || 1;
   const radius = (size - thickness) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -92,7 +109,7 @@ export function Donut({
           {segments.map((s, i) => (
             <li key={i}>
               <span className="swatch" style={{ background: s.color }} />
-              {s.label}: {pretty(s.value)}
+              {s.label}: {num(s.value)}
             </li>
           ))}
         </ul>
@@ -101,6 +118,12 @@ export function Donut({
   );
 }
 
+/**
+ * @param {object} props
+ * @param {string} props.label
+ * @param {string | number} props.value
+ * @param {string} [props.sub] Optional caption under the value.
+ */
 export function StatCard({ label, value, sub }) {
   return (
     <div className="kpi stat-card">
@@ -110,5 +133,3 @@ export function StatCard({ label, value, sub }) {
     </div>
   );
 }
-
-export { pretty };

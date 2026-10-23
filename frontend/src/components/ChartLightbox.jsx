@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 
+import { useFormatters } from "../i18n/useFormatters.js";
+
+/** @param {{ src: string, title?: string, onClose?: () => void }} props */
 export default function ChartLightbox({ src, title, onClose }) {
+  const { t } = useFormatters();
+
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose?.();
@@ -20,7 +25,7 @@ export default function ChartLightbox({ src, title, onClose }) {
       <div className="lightbox-frame" onClick={(e) => e.stopPropagation()}>
         <div className="lightbox-head">
           <span className="caption">{title}</span>
-          <button type="button" className="lightbox-close" onClick={onClose} aria-label="Close">
+          <button type="button" className="lightbox-close" onClick={onClose} aria-label={t("common.close")}>
             ×
           </button>
         </div>

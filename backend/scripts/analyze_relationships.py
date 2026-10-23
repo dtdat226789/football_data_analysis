@@ -33,7 +33,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from analysis_common import (
-    VERSION,
     ROOT_DIR,
     parse_args,
     args_to_config,
@@ -48,7 +47,7 @@ from analysis_common import (
     new_figure,
     save_chart,
 )
-from db_common import get_conn, LEAGUE
+from db_common import get_conn
 
 sys.path.insert(0, str(ROOT_DIR / "ml"))
 sys.path.insert(0, str(ROOT_DIR))

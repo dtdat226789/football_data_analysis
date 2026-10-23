@@ -296,10 +296,10 @@ def build_rows(conn, league: str = "premier") -> list[dict]:
 
 def resolve_team_alias(cur, value: str, forms=("name", "slug")) -> int | None:
     """Map a display name or slug to a canonical team id via team_aliases."""
-    for form in forms:
+    for alias_form in forms:
         cur.execute(
             "SELECT team_id FROM team_aliases WHERE form = %s AND value = %s",
-            (form, value),
+            (alias_form, value),
         )
         row = cur.fetchone()
         if row is not None:

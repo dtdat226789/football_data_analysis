@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const DEFAULT_TTL = 5 * 60 * 1000; // ms
 
@@ -56,16 +56,29 @@ export function useApi(loader, deps = [], { ttl = DEFAULT_TTL } = {}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // Bumped by `reload`. It joins the dep list and the cache key, so a retry is a
+  // genuinely new request rather than the cached failure coming straight back.
+  const [attempt, setAttempt] = useState(0);
   const seq = useRef(0);
+  const reload = useCallback(() => setAttempt((n) => n + 1), []);
+
+  // The attempt counter has to sit inside the effect's dep list, so the key and
+  // the list are built from the same array.
+  const tracked = [...deps, attempt];
 
   useEffect(() => {
     if (typeof loader !== "function") return;
     const id = ++seq.current;
     setLoading(true);
     setError(null);
-    cachedLoad(keyFor(loader.toString(), deps), loader, ttl).then(
+    cachedLoad(keyFor(loader.toString(), tracked), loader, ttl).then(
       (d) => {
         if (seq.current === id) {
+          // A loader may resolve null to mean "a prerequisite is not ready yet"
+          // rather than "there is no data" — a route param that has not arrived,
+          // or a filter that has not been chosen. That keeps the skeleton up
+          // instead of flashing an empty state, and the deps that decide it are
+          // the caller's to change.
           if (d === null) {
             setLoading(true);
             setData(null);
@@ -86,7 +99,14 @@ export function useApi(loader, deps = [], { ttl = DEFAULT_TTL } = {}) {
     return () => {
       seq.current += 1;
     };
-  }, deps);
+    // `tracked` is `deps` plus the reload counter, and the effect must re-run on
+    // exactly that list. The lint rule cannot check it: the array is built in the
+    // hook body rather than written here, so it reads as a non-literal dep list.
+    // `loader` and `ttl` are deliberately absent — `loader` is a fresh closure on
+    // every render, so listing it would fetch forever; `ttl` is a constant for
+    // every call site.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, tracked);
 
-  return { data, loading, error };
+  return { data, loading, error, reload };
 }

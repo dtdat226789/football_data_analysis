@@ -1,6 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
+import { qsa } from "../test/dom.js";
 import MarketTable from "./MarketTable.jsx";
 import { fixtureMarkets, SELECTED_KEYS } from "../test/fixtures.js";
 
@@ -11,7 +12,7 @@ const groupNames = (container) =>
 
 /** The market label only — the "featured" flag is a sibling span in the same cell. */
 const rowLabels = (container) =>
-  [...container.querySelectorAll("tbody tr td:first-child")].map(
+  [...qsa(container, "tbody tr td:first-child")].map(
     (el) => el.firstChild.textContent.trim()
   );
 
@@ -46,7 +47,7 @@ describe("MarketTable", () => {
 
   it("tags every row with its source", () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
-    const cells = [...container.querySelectorAll("tbody tr")].map((tr) =>
+    const cells = [...qsa(container, "tbody tr")].map((tr) =>
       within(tr).getAllByRole("cell")[2].textContent.trim()
     );
     expect(cells.filter((c) => c === "model").length).toBeGreaterThan(0);
@@ -65,14 +66,14 @@ describe("MarketTable", () => {
 
   it("marks the markets that drive the chips as featured", () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
-    const featured = [...container.querySelectorAll("tr.featured td:first-child")].map(
+    const featured = [...qsa(container, "tr.featured td:first-child")].map(
       (el) => el.firstChild.textContent.trim()
     );
     expect(featured).toEqual(["O1.5", "U2.5", "Away +0.5", "1/1"]);  });
 
   it("shows the push probability on a handicap that can refund", () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
-    const row = [...container.querySelectorAll("tbody tr")].find((tr) =>
+    const row = [...qsa(container, "tbody tr")].find((tr) =>
       tr.textContent.includes("Home -1")
     );
     expect(within(row).getByText(/27\.0% push/)).toBeInTheDocument();
@@ -80,7 +81,7 @@ describe("MarketTable", () => {
 
   it("omits the push note when the line cannot push", () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
-    const row = [...container.querySelectorAll("tbody tr")].find((tr) =>
+    const row = [...qsa(container, "tbody tr")].find((tr) =>
       tr.textContent.includes("Home -0.5")
     );
     expect(row.textContent).not.toContain("push");
@@ -89,7 +90,7 @@ describe("MarketTable", () => {
   it("filters to full time", async () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
     await userEvent.click(screen.getByRole("button", { name: "Full time" }));
-    const scopes = [...container.querySelectorAll("tbody tr")].map((tr) =>
+    const scopes = [...qsa(container, "tbody tr")].map((tr) =>
       within(tr).getAllByRole("cell")[1].textContent.trim()
     );
     expect(scopes.every((s) => s === "Full time")).toBe(true);
@@ -99,7 +100,7 @@ describe("MarketTable", () => {
   it("filters to half time", async () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
     await userEvent.click(screen.getByRole("button", { name: "Half time" }));
-    const scopes = [...container.querySelectorAll("tbody tr")].map((tr) =>
+    const scopes = [...qsa(container, "tbody tr")].map((tr) =>
       within(tr).getAllByRole("cell")[1].textContent.trim()
     );
     // HT/FT is neither full time nor half time, so it drops out of both.
@@ -110,7 +111,7 @@ describe("MarketTable", () => {
   it("filters to assumed markets only", async () => {
     const { container } = render(<MarketTable markets={fixtureMarkets} selected={selected} />);
     await userEvent.click(screen.getByRole("button", { name: "Assumed only" }));
-    const sources = [...container.querySelectorAll("tbody tr")].map((tr) =>
+    const sources = [...qsa(container, "tbody tr")].map((tr) =>
       within(tr).getAllByRole("cell")[2].textContent.trim()
     );
     expect(sources.every((s) => s === "assumed")).toBe(true);

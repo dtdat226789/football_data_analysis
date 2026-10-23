@@ -1,77 +1,94 @@
-import { useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useMemo } from "react";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
-import { ErrorBox, TableSkeleton } from "../components/State.jsx";
-import { TeamLink } from "../components/TeamLink.jsx";
-import UpcomingFixtures from "../components/UpcomingFixtures.jsx";
+import MatchTable from "../components/MatchTable.jsx";
+import UpcomingFixtures, { UPCOMING_OFFSET_PARAM } from "../components/UpcomingFixtures.jsx";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
+import { pageLabel } from "../lib/pagination.js";
+import { intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
+import { useFormatters } from "../i18n/useFormatters.js";
 
 const SIZES = [20, 50, 100];
+const DEFAULT_SIZE = 50;
 const PRESETS = [
   { label: "7d", days: 7 },
   { label: "14d", days: 14 },
   { label: "30d", days: 30 },
 ];
 
-function isoDaysAgo(days) {
-  return new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
-}
-
-function pageLabel(pageSize, offset, total) {
-  if (!total) return "0 matches";
-  const end = Math.min(offset + pageSize, total);
-  const start = Math.min(offset + 1, total);
-  return `${start}–${end} of ${total}`;
+function isoDaysAgo(days, now) {
+  return new Date(now - days * 86400000).toISOString().slice(0, 10);
 }
 
 export default function Matches() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [size, setSize] = useState(50);
+  const { t } = useFormatters();
+  const [searchParams, patch] = useParamsPatch();
 
   const league = searchParams.get("league") ?? "";
-  const fromDate = searchParams.get("from") ?? "";
-  const toDate = searchParams.get("to") ?? "";
-  const offset = Number(searchParams.get("offset") || 0);
+  // A date that is not a plain ISO day would reach FastAPI as a 422, and the
+  // inputs below cannot produce one — so anything else in the URL is dropped.
+  const fromDate = isIsoDay(searchParams.get("from")) ? searchParams.get("from") : "";
+  const toDate = isIsoDay(searchParams.get("to")) ? searchParams.get("to") : "";
+  const offset = intParam(searchParams, "offset");
+  const sizeParam = searchParams.get("size");
+  const size = SIZES.includes(Number(sizeParam)) ? Number(sizeParam) : DEFAULT_SIZE;
 
-  const patch = (updates) => {
-    const next = new URLSearchParams(searchParams);
-    for (const [key, value] of Object.entries(updates)) {
-      if (value) next.set(key, value);
-      else next.delete(key);
-    }
-    setSearchParams(next);
-  };
+  // One clock read per render, so a preset's pressed state and its tooltip
+  // cannot describe different days.
+  const now = Date.now();
 
   const leaguesApi = useApi(() => api.listLeagues(), []);
   const leagueNames = useMemo(() => leagueNameMap(leaguesApi.data), [leaguesApi.data]);
-  // The upcoming list owns its own offset/filter params, so recent paging and
-  // upcoming paging cannot drag each other backwards. The league and date
-  // window are shared, so changing one rewinds both pages.
-  const upcoming = <UpcomingFixtures league={league} fromDate={fromDate} toDate={toDate} />;
+  // The league and the date window are shared by both lists, so changing one
+  // rewinds both pages. It also drops the upcoming list's day chip: the chips are
+  // built from the rows the league and window left behind, so a chip chosen before
+  // the change can name a day that no longer holds anything, and a one-day window
+  // for it would hide the whole list.
+  const rewind = (updates) =>
+    patch({
+      ...updates,
+      offset: pageOffset(0),
+      [UPCOMING_OFFSET_PARAM]: pageOffset(0),
+      day: "",
+    });
+
+  const setLeague = (value) => rewind({ league: value });
+  const changeDate = (field) => (e) => rewind({ [field]: e.target.value });
+  const resetDates = () => rewind({ from: "", to: "" });
+  const preset = (days) => rewind({ from: isoDaysAgo(days, now), to: "" });
+  // The page size is the one control in the filter bar that governs both columns,
+  // so changing it rewinds both of them: an offset is counted in units of a page
+  // size, and page 3 of 50 is not page 3 of 100.
+  const changeSize = (e) =>
+    patch({
+      size: e.target.value,
+      offset: pageOffset(0),
+      [UPCOMING_OFFSET_PARAM]: pageOffset(0),
+    });
+  const page = (delta) => patch({ offset: pageOffset(offset + delta * size) });
+
+  // A window whose end is before its start is not a narrower window, it is a
+  // wrong request: the API answers 422 and both cards turn into an error box
+  // quoting the backend. The inputs below bound each other so this cannot be
+  // picked, but a hand-edited URL can still arrive inverted. Handled like every
+  // other unreadable param in this file — `?offset=abc` and a non-ISO `?from` are
+  // both dropped rather than sent — so an impossible window is ignored instead of
+  // asked for, and the filter bar says that it was ignored.
+  const invertedWindow = Boolean(fromDate && toDate && fromDate > toDate);
+  const windowFrom = invertedWindow ? "" : fromDate;
+  const windowTo = invertedWindow ? "" : toDate;
+
   const recent = useApi(
     () =>
       api.matchesRecent({
         league: league || undefined,
         limit: size,
         offset,
-        from_date: fromDate || undefined,
-        to_date: toDate || undefined,
+        from_date: windowFrom || undefined,
+        to_date: windowTo || undefined,
       }),
-    [league, fromDate, toDate, offset, size],
+    [league, windowFrom, windowTo, offset, size],
   );
-
-  const setLeague = (value) => patch({ league: value, offset: 0, uoffset: 0 });
-  const changeDate = (field) => (e) =>
-    patch({ [field]: e.target.value, offset: 0, uoffset: 0 });
-  const resetDates = () => patch({ from: "", to: "", offset: 0, uoffset: 0 });
-  const preset = (days) =>
-    patch({ from: isoDaysAgo(days), to: "", offset: 0, uoffset: 0 });
-  const changeSize = (e) => {
-    setSize(Number(e.target.value));
-    patch({ offset: 0 });
-  };
-  const page = (delta) => patch({ offset: Math.max(0, offset + delta * size) });
 
   const recentData = recent.data;
   const dateWindow = Boolean(fromDate || toDate);
@@ -79,40 +96,71 @@ export default function Matches() {
   return (
     <div>
       <div className="page-head">
-        <h2>Matches</h2>
-        <p>{leagueLabel(league, leagueNames) || "all leagues"} · upcoming fixtures by day + recent results</p>
+        <h2>{t("page.matches.title")}</h2>
+        <p>{t("page.matches.summary", { league: leagueLabel(league, leagueNames) || t("page.matches.allLeagues") })}</p>
       </div>
 
       <div className="filters">
-        <select aria-label="League" value={league} onChange={(e) => setLeague(e.target.value)}>
-          <option value="">All leagues</option>
+        <select aria-label={t("page.matches.league")} value={league} onChange={(e) => setLeague(e.target.value)}>
+          <option value="">{t("page.matches.allLeagues")}</option>
           {(leaguesApi.data || []).map((l) => (
             <option key={l.slug} value={l.slug}>
               {l.name}
             </option>
           ))}
         </select>
+        {/* The league list is the one filter that can fail silently: without it
+            the select collapses to "All leagues" and the heading above falls back
+            to the raw slug. Both states are said out loud instead. */}
+        {leaguesApi.loading && (
+          <span className="muted" style={{ fontSize: 12 }}>
+            {t("page.matches.loadingLeagues")}
+          </span>
+        )}
+        {leaguesApi.error && (
+          <span className="muted" style={{ fontSize: 12 }}>
+            {t("page.matches.leaguesUnavailable")} —{" "}
+            <button className="preset" onClick={leaguesApi.reload} title={leaguesApi.error}>
+              {t("common.retry")}
+            </button>
+          </span>
+        )}
         <label className="muted" style={{ fontSize: 13 }}>
-          From
+          {t("page.matches.from")}
         </label>
-        <input type="date" aria-label="From date" value={fromDate} onChange={changeDate("from")} />
+        {/* The two inputs bound each other, so the picker cannot produce a window
+            the API would reject. */}
+        <input
+          type="date"
+          aria-label={t("page.matches.fromDate")}
+          value={fromDate}
+          max={toDate || undefined}
+          onChange={changeDate("from")}
+        />
         <label className="muted" style={{ fontSize: 13 }}>
-          To
+          {t("page.matches.to")}
         </label>
-        <input type="date" aria-label="To date" value={toDate} onChange={changeDate("to")} />
+        <input
+          type="date"
+          aria-label={t("page.matches.toDate")}
+          value={toDate}
+          min={fromDate || undefined}
+          onChange={changeDate("to")}
+        />
         {(fromDate || toDate) && (
-          <button
-            className="tab-btn"
-            onClick={resetDates}
-            style={{ border: "1px solid var(--border)", background: "var(--card)", color: "var(--text)", borderRadius: 8, padding: "6px 10px", cursor: "pointer" }}
-          >
-            Reset dates
+          <button className="preset" onClick={resetDates}>
+            {t("page.matches.resetDates")}
           </button>
+        )}
+        {invertedWindow && (
+          <span className="error-box" style={{ fontSize: 12 }} role="alert">
+            {t("page.matches.inverted")}
+          </span>
         )}
         <span className="tab-spacer" />
         <label className="muted" style={{ fontSize: 13, display: "inline-flex", alignItems: "center", gap: 6 }}>
-          Show{" "}
-          <select aria-label="Page size" value={size} onChange={changeSize}>
+          {t("page.matches.show")}{" "}
+          <select aria-label={t("page.matches.pageSize")} value={size} onChange={changeSize}>
             {SIZES.map((s) => (
               <option key={s} value={s}>
                 {s}
@@ -120,90 +168,63 @@ export default function Matches() {
             ))}
           </select>
         </label>
-        <div className="date-presets">
-          {PRESETS.map((p) => (
-            <button
-              key={p.days}
-              className="preset"
-              onClick={() => preset(p.days)}
-              title={`Both lists, from ${isoDaysAgo(p.days)} onwards`}
-            >
-              {p.label}
-            </button>
-          ))}
-          <button className="preset" onClick={resetDates} title="Clear date filters">
-            All dates
+        <div className="date-presets" role="group" aria-label={t("page.matches.presets")}>
+          {PRESETS.map((p) => {
+            const presetFrom = isoDaysAgo(p.days, now);
+            return (
+              <button
+                key={p.days}
+                className={"preset" + (fromDate === presetFrom ? " on" : "")}
+                onClick={() => preset(p.days)}
+                aria-pressed={fromDate === presetFrom}
+                title={t("page.matches.presetTitle", { date: presetFrom })}
+              >
+                {p.label}
+              </button>
+            );
+          })}
+          <button className="preset" onClick={resetDates} aria-pressed={!dateWindow} title={t("page.matches.clearDates")}>
+            {t("page.matches.allDates")}
           </button>
         </div>
         {dateWindow && (
           <span className="muted" style={{ fontSize: 12 }}>
-            Date window applies to both lists
+            {t("page.matches.windowApplies")}
           </span>
         )}
       </div>
 
       <div className="two-col">
-        {upcoming}
+        {/* One "Show" control governs both columns, so the size reaches the
+            upcoming list too — it used to page at a hardcoded 50 regardless. */}
+        <UpcomingFixtures league={league} fromDate={windowFrom} toDate={windowTo} pageSize={size} />
 
         <section className="card">
           <h3 style={{ marginTop: 0 }}>
-            Recent <span className="badge">{recentData?.total ?? 0}</span>
+            {t("page.matches.recent")} <span className="badge">{recentData?.total ?? 0}</span>
           </h3>
-          {recent.loading && <TableSkeleton rows={6} cols={5} />}
-          {recent.error && <ErrorBox error={recent.error} />}
-          {recentData && (
-            <table className="data">
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Home</th>
-                  <th className="num">Score</th>
-                  <th>Away</th>
-                  <th>League</th>
-                  <th>Detail</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recentData.matches.map((m) => (
-                  <tr key={m.api_id}>
-                    <td>{m.match_date}</td>
-                    <td>
-                      <TeamLink name={m.home_team} />
-                    </td>
-                    <td className="num">
-                      <strong>
-                        {m.home_score} – {m.away_score}
-                      </strong>
-                    </td>
-                    <td>
-                      <TeamLink name={m.away_team} />
-                    </td>
-                    <td className="muted">{m.league_name || m.league}</td>
-                    <td>
-                      <Link className="link" to={`/match/${m.api_id}`}>
-                        view
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-                {recentData.matches.length === 0 && (
-                  <tr>
-                    <td colSpan={6} className="muted">
-                      No finished matches match the filters.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          )}
+          <MatchTable
+            state={recent}
+            showLeague
+            emptyMessage={
+              recentData?.total > 0 && offset > 0
+                ? t("page.matches.pastEnd")
+                : t("page.matches.noFinished")
+            }
+          />
           {recentData && recentData.total > 0 && (
             <div className="pagination">
               <button disabled={offset === 0} onClick={() => page(-1)}>
-                ‹ Prev
+                {t("common.prev")}
               </button>
-              <span className="muted">{pageLabel(size, offset, recentData.total)}</span>
+              <span className="muted">
+                {pageLabel(size, offset, recentData.total, {
+                  empty: t("pagination.zero"),
+                  past: t("pagination.past"),
+                })}
+              </span>
               <button disabled={offset + size >= recentData.total} onClick={() => page(1)}>
-                Next ›
+                {t("common.next")}
               </button>
             </div>
           )}

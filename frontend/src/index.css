@@ -95,6 +95,30 @@ body {
   gap: 10px;
 }
 
+.settings-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.settings-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.settings-control select {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
 .controls select {
   background: var(--card);
   color: var(--text);
@@ -961,10 +985,15 @@ section > h3 {
   flex: 1;
 }
 
-/* ── date presets (Matches) ───────────────────────────────────────────── */
+/* ── date presets (Matches, and the day chips in UpcomingFixtures) ───────── */
 .date-presets {
   display: inline-flex;
   gap: 6px;
+}
+/* Only the Matches filter bar needs the nudge. UpcomingFixtures nests these in
+   .market-filters, which already has an 8px gap, so the margin there pushed the
+   chips one extra step out of line with the controls above them. */
+.filters > .date-presets {
   margin-left: 8px;
 }
 

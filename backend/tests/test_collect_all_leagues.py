@@ -103,3 +103,67 @@ def test_main_reports_failure_exit_code(monkeypatch, capsys):
     monkeypatch.setattr(cal, "run_collect", lambda *a, **k: 1)
     assert cal.main(["--league", "premier"]) == 1
     assert "1 league(s) failed" in capsys.readouterr().out
+
+
+def test_prior_season_split_label():
+    assert cal.prior_season("2025-2026") == "2024-2025"
+
+
+def test_prior_season_calendar_label():
+    assert cal.prior_season("2025") == "2024"
+
+
+def test_prior_season_unparseable_is_none():
+    assert cal.prior_season("not-a-season") is None
+
+
+def test_missing_history_seasons_walks_back_and_stops(monkeypatch):
+    server = {"2024-2025", "2023-2024", "2022-2023"}
+    monkeypatch.setattr(cal, "get_raw", lambda client, url, params: b"x" if params["season"] in server else None)
+    monkeypatch.setattr(cal, "league_season_dirs", lambda league: ["2025-2026", "2026-2027"])
+    got = cal.missing_history_seasons(None, "premier", ["2026-2027", "2025-2026"])
+    assert got == ["2024-2025", "2023-2024", "2022-2023"]
+
+
+def test_missing_history_seasons_skips_existing_dirs(monkeypatch):
+    server = {"2024-2025", "2023-2024", "2022-2023", "2021-2022"}
+    monkeypatch.setattr(cal, "get_raw", lambda client, url, params: b"x" if params["season"] in server else None)
+    monkeypatch.setattr(cal, "league_season_dirs", lambda league: ["2025-2026", "2026-2027", "2023-2024"])
+    got = cal.missing_history_seasons(None, "premier", ["2026-2027", "2025-2026", "2023-2024"])
+    assert got == ["2022-2023", "2021-2022"]
+
+
+def test_missing_history_seasons_respects_depth(monkeypatch):
+    server = {"2024-2025", "2023-2024", "2022-2023", "2021-2022"}
+    monkeypatch.setattr(cal, "get_raw", lambda client, url, params: b"x" if params["season"] in server else None)
+    monkeypatch.setattr(cal, "league_season_dirs", lambda league: ["2025-2026", "2026-2027"])
+    got = cal.missing_history_seasons(None, "premier", ["2026-2027", "2025-2026"], max_depth=2)
+    assert got == ["2024-2025", "2023-2024"]
+
+
+def test_missing_history_seasons_empty_base_returns_empty():
+    assert cal.missing_history_seasons(None, "premier", []) == []
+
+
+def test_main_backfill_collects_only_missing(monkeypatch, capsys):
+    called = []
+    monkeypatch.setattr(cal, "load_catalog", lambda path: CATALOG)
+    monkeypatch.setattr(cal, "league_season_dirs", lambda league: ["2026-2027", "2025-2026"])
+    monkeypatch.setattr(cal, "missing_history_seasons", lambda client, league, base, **kw: ["2024-2025", "2023-2024"])
+    monkeypatch.setattr(cal, "build_client", lambda: None)
+    monkeypatch.setattr(cal, "run_collect", lambda *a, **k: called.append((a, k)) or 0)
+    assert cal.main(["--league", "premier", "--backfill-history"]) == 0
+    out = capsys.readouterr().out
+    assert "2024-2025, 2023-2024" in out
+
+
+def test_main_backfill_skips_when_nothing_missing(monkeypatch, capsys):
+    monkeypatch.setattr(cal, "load_catalog", lambda path: CATALOG)
+    monkeypatch.setattr(cal, "league_season_dirs", lambda league: ["2026-2027", "2025-2026"])
+    monkeypatch.setattr(cal, "missing_history_seasons", lambda client, league, base, **kw: [])
+    monkeypatch.setattr(cal, "build_client", lambda: None)
+    run_collect = Mock(side_effect=AssertionError("run_collect must not be called"))
+    monkeypatch.setattr(cal, "run_collect", run_collect)
+    assert cal.main(["--league", "premier", "--backfill-history"]) == 0
+    assert "no missing history to backfill" in capsys.readouterr().out
+    run_collect.assert_not_called()

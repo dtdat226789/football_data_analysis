@@ -852,11 +852,11 @@ def _matcher(row: dict):
         direction = _team_total_direction(row.get("key"))
         if direction == "over":
             predicate = (
-                (lambda i, j: i > line) if selection == "home" else (lambda i, j: j > line)
+                (lambda i, _j: i > line) if selection == "home" else (lambda _i, j: j > line)
             )
         elif direction == "under":
             predicate = (
-                (lambda i, j: i <= line) if selection == "home" else (lambda i, j: j <= line)
+                (lambda i, _j: i <= line) if selection == "home" else (lambda _i, j: j <= line)
             )
         else:
             predicate = None

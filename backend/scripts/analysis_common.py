@@ -25,6 +25,24 @@ from db_common import LEAGUE, league_meta  # noqa: E402
 VERSION = "1.0.0"
 
 
+# ── path rendering ───────────────────────────────────────────────────────────
+def rel_to_root(path: Path | str) -> str:
+    """Render a path repo-relative with POSIX separators, for report output.
+
+    Reports are committed artifacts, so they must not embed machine-specific
+    absolute paths. A Windows checkout writes ``E:\\repo\\data\\...`` while a
+    WSL checkout of the same tree writes ``/mnt/e/repo/data/...``; embedding
+    either one rewrites every generated report whenever the tree moves or is
+    cloned on another platform. Paths outside the repo fall back to an absolute
+    POSIX path, since there is no meaningful relative form for them.
+    """
+    resolved = Path(path).resolve()
+    try:
+        return resolved.relative_to(ROOT_DIR).as_posix()
+    except ValueError:
+        return resolved.as_posix()
+
+
 # ── matplotlib (optional) ────────────────────────────────────────────────────
 def _has_matplotlib() -> bool:
     try:
@@ -75,7 +93,7 @@ def parse_args(description: str, argv: list[str] | None = None,
 def args_to_config(args: argparse.Namespace) -> dict:
     return {
         "league": args.league,
-        "out_dir": str(args.out_dir.resolve()),
+        "out_dir": rel_to_root(args.out_dir),
         "out_stem": args.out_stem,
     }
 
@@ -124,6 +142,22 @@ def render_report_header(report: dict, title: str) -> str:
 
 
 # ── file output ──────────────────────────────────────────────────────────────
+def md_link(target: Path, md_path: Path) -> str:
+    """Render a Markdown link target relative to the .md file that embeds it.
+
+    Markdown resolves a relative target against the directory holding the
+    document, so a chart at ``<out_dir>/charts/c.png`` referenced from
+    ``<out_dir>/report.md`` must be written as ``charts/c.png``. A repo-root
+    path would resolve to ``<out_dir>/data/analysis/...`` and 404, and an
+    absolute path would tie the committed report to one machine.
+    """
+    target_resolved = Path(target).resolve()
+    try:
+        return target_resolved.relative_to(md_path.resolve().parent).as_posix()
+    except ValueError:
+        return rel_to_root(target_resolved)
+
+
 def write_report(out_dir: Path, stem: str, report: dict,
                  render_md: callable, charts: list[Path] | None = None) -> tuple[Path, Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -134,7 +168,7 @@ def write_report(out_dir: Path, stem: str, report: dict,
     if charts:
         chart_section = "\n\n## Charts\n\n"
         for c in charts:
-            chart_section += f"![{c.stem}]({c})\n"
+            chart_section += f"![{c.stem}]({md_link(c, md_path)})\n"
         md_text += chart_section
     md_path.write_text(md_text + "\n")
     return json_path, md_path

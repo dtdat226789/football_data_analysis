@@ -26,7 +26,7 @@ import argparse
 import json
 import sys
 from collections import Counter
-from datetime import date, datetime, time as dtime
+from datetime import date, datetime, time as dtime, timezone
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -139,6 +139,16 @@ def rel(p: Path) -> str:
         return str(p)
 
 
+def scrub(text: str) -> str:
+    """Rewrite repo-absolute paths out of a message so reports stay portable.
+
+    Exception strings carry the absolute path they failed on. Committed reports
+    then pin the author's checkout layout and leak a username on every other
+    machine.
+    """
+    return text.replace(f"{ROOT_DIR}/", "").replace(str(ROOT_DIR), ".")
+
+
 def load_json(path: Path) -> dict | None:
     try:
         data = json.loads(path.read_bytes())
@@ -147,9 +157,9 @@ def load_json(path: Path) -> dict | None:
             "response_structure",
             "FILE_UNREADABLE",
             SEVERITY_ERROR,
-            f"File exists but is not valid JSON: {exc}",
+            f"File exists but is not valid JSON: {scrub(str(exc))}",
             file=rel(path),
-            details={"error": str(exc)},
+            details={"error": scrub(str(exc))},
         )
         return None
     return data
@@ -267,7 +277,7 @@ def check_seasonal_structure(league: str, seasons: list[str], views: list[str]) 
         teams = load_json(http_file(league, season, "teams.json"))
         if teams:
             keys = set(teams.keys())
-            for required, label in [("league", "teams"), ("season", "teams"), ("teams", "teams")]:
+            for required in ("league", "season", "teams"):
                 if required not in keys:
                     add_issue(
                         "response_structure",
@@ -677,7 +687,6 @@ def check_tables(league: str, seasons: list[str], views: list[str]) -> dict:
     n_expected = expected_teams(league)
     for season in seasons:
         per_season[season] = {}
-        base = http_file(league, season, "table_classic.json")
         teams_data = load_json(http_file(league, season, "teams.json"))
         team_names = {t["team"] for t in teams_data.get("teams", [])} if teams_data else set()
         for view in views:
@@ -727,14 +736,18 @@ def check_tables(league: str, seasons: list[str], views: list[str]) -> dict:
                     )
     # table id stability across seasons
     seasons_with = [s for s in seen_ids if seen_ids[s]]
-    intersected = set.intersection(*[seen_ids[s] for s in seasons_with]) if seasons_with else set()
     if seasons_with:
-        stable_count = len({tid for tid, c in Counter(tid for s in seasons_with for tid in seen_ids[s]).items() if c == len(seasons_with)})
+        id_sets = [seen_ids[s] for s in seasons_with]
+        # An id is "stable" iff it appears in every collected season, which is
+        # the intersection. Counting per-season occurrences to rebuild the same
+        # set made this block do the work twice.
+        stable_count = len(set.intersection(*id_sets))
+        distinct_overall = len(set().union(*id_sets))
         add_issue(
             "table", "TABLE_ID_SEASON_SCOPED", SEVERITY_WARNING,
-            f"Table row 'id' is not a stable team identifier: only {stable_count} of {len(set().union(*[seen_ids[s] for s in seasons_with]))} distinct ids appear in every collected season",
+            f"Table row 'id' is not a stable team identifier: only {stable_count} of {distinct_overall} distinct ids appear in every collected season",
             league=league, file=rel(http_file(league, seasons[0], "table_classic.json")),
-            details={"n_seasons": len(seasons_with), "distinct_ids_overall": len(set().union(*[seen_ids[s] for s in seasons_with])), "ids_in_all_seasons": stable_count},
+            details={"n_seasons": len(seasons_with), "distinct_ids_overall": distinct_overall, "ids_in_all_seasons": stable_count},
         )
     return {"status": category_status("table"), "per_season": per_season}
 
@@ -854,7 +867,7 @@ def build_report(league: str, seasons: list[str], views: list[str]) -> dict:
     warnings = sum(1 for i in ISSUES if i["severity"] == SEVERITY_WARNING)
     return {
         "report_name": "poc_validation_report",
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "scope": {"league": league, "seasons": seasons, "views": views},
         "overall": {"errors": errors, "warnings": warnings, "pass": 0, "categories": sorted(set(i["category"] for i in ISSUES) | set(checks.keys()) | set(merged_checks.keys()))},
         "checks": {**merged_checks, **checks},

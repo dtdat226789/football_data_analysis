@@ -5,8 +5,6 @@ export const leagues = [
   { slug: "brazil1", name: "Serie A", country: "Brazil", region: "america", teams: 20, has_data: false },
 ];
 
-export const meta = { default_league: "premier" };
-
 /** Last season has zero matches -> defaults should fall back to 2024-2025. */
 export const leagueDetail = {
   name: "Premier League",
@@ -320,16 +318,18 @@ export const teamStatsResponse = {
   league: "premier",
   league_name: "Premier League",
   view: "classic",
+  season: "2024-2025",
+  scope: "2024-2025",
   seasons: [
     { season: "2023-2024", position: 2, played: 38, won: 26, drawn: 5, lost: 7, goals_for: 88, goals_against: 36, goal_difference: 52, points: 83 },
     { season: "2024-2025", position: 1, played: 38, won: 27, drawn: 4, lost: 7, goals_for: 91, goals_against: 29, goal_difference: 62, points: 85 },
   ],
-  totals: { played: 76, won: 53, drawn: 9, lost: 14, goals_for: 179, goals_against: 65, points: 168, ppg: 2.21, goal_difference: 114 },
+  totals: { played: 38, won: 27, drawn: 4, lost: 7, goals_for: 91, goals_against: 29, points: 85, ppg: 2.24, goal_difference: 62 },
   home_away: {
-    home: { played: 38, won: 30, drawn: 4, lost: 4, goals_for: 103, goals_against: 25, points: 94, win_pct: 78.9 },
-    away: { played: 38, won: 23, drawn: 5, lost: 10, goals_for: 76, goals_against: 40, points: 74, win_pct: 60.5 },
+    home: { played: 19, won: 16, drawn: 2, lost: 1, goals_for: 55, goals_against: 14, points: 50, win_pct: 84.2 },
+    away: { played: 19, won: 11, drawn: 2, lost: 6, goals_for: 36, goals_against: 15, points: 35, win_pct: 57.9 },
   },
-  best: { position: 1, position_season: "2024-2025", points: 85 },
+  best: { position: 1, position_season: "2024-2025", points: 85, played: 38 },
 };
 
 export function makeModuleBody() {

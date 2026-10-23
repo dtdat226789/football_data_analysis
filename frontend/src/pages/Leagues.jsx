@@ -3,15 +3,18 @@ import { Link } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton } from "../components/State.jsx";
+import { useFormatters } from "../i18n/useFormatters.js";
 
-const REGION_LABELS = {
-  europe: "Europe",
-  asia: "Asia",
-  america: "Americas",
-  other: "Other",
+/** Region headings are translated; the bucket keys themselves are not. */
+const REGION_KEYS = {
+  europe: "region.europe",
+  asia: "region.asia",
+  america: "region.america",
+  other: "region.other",
 };
 
 export default function Leagues() {
+  const { t, num } = useFormatters();
   const { data, loading, error } = useApi(() => api.listLeagues(), []);
   const [query, setQuery] = useState("");
 
@@ -40,15 +43,15 @@ export default function Leagues() {
   return (
     <div>
       <div className="page-head">
-        <h2>Leagues</h2>
-        <p>{data ? `${data.length} leagues in the catalog` : "…"}</p>
+        <h2>{t("page.leagues.title")}</h2>
+        <p>{data ? t("page.leagues.count", { n: data.length }) : "…"}</p>
       </div>
 
       <div className="filters">
         <input
           type="search"
-          aria-label="Search leagues"
-          placeholder="Filter by name, country or region…"
+          aria-label={t("common.searchAria")}
+          placeholder={t("page.leagues.search")}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           style={{ minWidth: 260 }}
@@ -58,7 +61,7 @@ export default function Leagues() {
       {loading && <ListSkeleton items={8} />}
       {error && <ErrorBox error={error} />}
       {!loading && !error && total === 0 && (
-        <p className="muted">No leagues match the filter.</p>
+        <p className="muted">{t("page.leagues.noMatch")}</p>
       )}
       {!loading &&
         !error &&
@@ -66,7 +69,7 @@ export default function Leagues() {
           leagues.length === 0 ? null : (
             <section key={region} style={{ marginTop: 24 }}>
               <h3>
-                {REGION_LABELS[region] ?? region}
+                {t(REGION_KEYS[region] ?? "") || region}
                 <span className="badge">{leagues.length}</span>
               </h3>
               <div className="mini-grid">
@@ -74,11 +77,11 @@ export default function Leagues() {
                   <Link key={item.slug} to={`/leagues/${item.slug}`} className="card mini" style={{ textDecoration: "none" }}>
                     <div className="mini-name">{item.name}</div>
                     <div className="muted" style={{ fontSize: 12 }}>
-                      {item.country} · {item.teams} teams
+                      {item.country} · {t("common.teams", { n: num(item.teams) })}
                     </div>
                     {item.has_data && (
                       <div className="badge green" style={{ marginTop: 8 }}>
-                        analysis
+                        {t("page.leagues.analysis")}
                       </div>
                     )}
                   </Link>

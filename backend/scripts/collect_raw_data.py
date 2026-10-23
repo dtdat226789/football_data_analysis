@@ -35,13 +35,10 @@ import time
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
+
+from db_common import BASE_URL, api_headers
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT_DIR / "backend"))
-load_dotenv(ROOT_DIR / ".env")
-
-from tests.conftest import API_KEY, BASE_URL  # noqa: E402
 
 log = logging.getLogger("collect_raw_data")
 
@@ -65,12 +62,10 @@ OUTPUT_DIR = ROOT_DIR / "data" / "raw"
 
 
 def build_client() -> httpx.Client:
-    """Return the shared httpx client used across the project (see conftest)."""
-    if not API_KEY:
-        raise SystemExit("FOOTBALL_CHARTS_API_KEY not set in project root .env")
+    """Return the shared httpx client used across the project."""
     return httpx.Client(
         base_url=BASE_URL,
-        headers={"Authorization": f"Bearer {API_KEY}"},
+        headers=api_headers(),
         timeout=60,
     )
 

@@ -13,11 +13,14 @@ shape consumed by db_common.LEAGUE_CONFIG:
       }, ...
     }
 
-Only the team count is fetched; name/country/url/seasons come from the catalog.
-The probe is idempotent: existing league_teams.json entries are kept unless
---overwrite is given. A league whose newest season returns no teams falls back
-to its previous season; a league with no data in either is recorded with
-teams: 0 so it is easy to spot.
+Only the team count is fetched; name/country/url come from the catalog, and the
+season list comes from the freshest /leagues/ dump on disk (per-league
+data/raw/{league}/leagues.json, re-collected every refresh) with the checked-in
+data/raw/leagues.json as the fallback, so a rollover is picked up without
+editing that file by hand. The probe is idempotent: existing league_teams.json
+entries are kept unless --overwrite is given. A league whose newest season
+returns no teams falls back to its previous season; a league with no data in
+either is recorded with teams: 0 so it is easy to spot.
 
 Usage:
     python backend/scripts/build_league_config.py
@@ -27,18 +30,14 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import sys
 import time
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
+
+from db_common import BASE_URL, api_headers, catalog_seasons
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT_DIR / "backend"))
-load_dotenv(ROOT_DIR / ".env")
-
-from tests.conftest import API_KEY, BASE_URL  # noqa: E402
 
 log = logging.getLogger("build_league_config")
 
@@ -63,12 +62,10 @@ OUTPUT_PATH = ROOT_DIR / "data" / "raw" / "league_teams.json"
 
 
 def build_client() -> httpx.Client:
-    """Return the shared httpx client used across the project (see conftest)."""
-    if not API_KEY:
-        raise SystemExit("FOOTBALL_CHARTS_API_KEY not set in project root .env")
+    """Return the shared httpx client used across the project."""
     return httpx.Client(
         base_url=BASE_URL,
-        headers={"Authorization": f"Bearer {API_KEY}"},
+        headers=api_headers(),
         timeout=60,
     )
 
@@ -138,6 +135,19 @@ def get_json(
     return None
 
 
+def declared_seasons(league: str, catalog: dict) -> list[str]:
+    """Seasons the API currently declares for a league, newest source first.
+
+    The pipeline re-downloads /leagues/ into data/raw/{league}/leagues.json on
+    every refresh, but nothing rewrites the checked-in data/raw/leagues.json, so
+    the latter drifts behind at each season rollover (e.g. india1 kept 2025-2026
+    after the API moved to 2026-2027). Prefer the freshest per-league dump, and
+    fall back to the checked-in catalog for leagues with no local /leagues/ data
+    yet (a fresh clone).
+    """
+    return catalog_seasons(league) or list(catalog.get("seasons", []))
+
+
 def probe_league(
     client: httpx.Client,
     league: str,
@@ -151,7 +161,7 @@ def probe_league(
     inflated lists (e.g. France 21, Eredivisie 24). TEAM_COUNT_OVERRIDES fixes
     the rare case where the open season under-reports a known complement.
     """
-    seasons = order_seasons(catalog.get("seasons", []))
+    seasons = order_seasons(declared_seasons(league, catalog))
     if not seasons:
         log.warning("%-10s no seasons in catalog", league)
         return {
@@ -180,7 +190,7 @@ def probe_league(
                 "country": catalog.get("country", ""),
                 "teams": teams,
                 "season": season,
-                "seasons": catalog.get("seasons", []),
+                "seasons": declared_seasons(league, catalog),
                 "url": catalog.get("url", ""),
             }
 
@@ -189,7 +199,7 @@ def probe_league(
         "country": catalog.get("country", ""),
         "teams": TEAM_COUNT_OVERRIDES.get(league, 0),
         "season": None,
-        "seasons": catalog.get("seasons", []),
+        "seasons": declared_seasons(league, catalog),
         "url": catalog.get("url", ""),
     }
 

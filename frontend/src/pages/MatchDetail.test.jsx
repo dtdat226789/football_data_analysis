@@ -1,21 +1,22 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { qsa } from "../test/dom.js";
 
-import { api } from "../api/client.js";
+import { Route } from "react-router-dom";
+import { api } from "../test/mockApi.js";
+import { renderRoutes } from "../test/render.jsx";
 import { matchDetail, matchInsights } from "../test/fixtures.js";
 import MatchDetail from "./MatchDetail.jsx";
 
-vi.mock("../api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchInsights", "matchesRecent", "dashboard", "fixtures", "leagueFixtures",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("../api/client.js", async () => {
+  // The stub list is read from the real client rather than written out here.
+  // Each test used to carry its own copy of these names, and the copies had
+  // already drifted apart — so a new api.foo() call reached an undefined stub in
+  // whichever test happened to render that page first.
+  const { api: actual } = await vi.importActual("../api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 
@@ -25,13 +26,7 @@ const seed = () => {
 };
 
 function renderMatch(route = "/match/1001") {
-  return render(
-    <MemoryRouter initialEntries={[route]}>
-      <Routes>
-        <Route path="/match/:id" element={<MatchDetail />} />
-      </Routes>
-    </MemoryRouter>,
-  );
+  return renderRoutes(<Route path="/match/:id" element={<MatchDetail />} />, { route });
 }
 
 describe("MatchDetail", () => {
@@ -202,7 +197,7 @@ describe("MatchDetail probability bars", () => {
     // an invisible bar. Regression guard.
     const { container } = renderMatch();
     await screen.findByRole("heading", { name: /Model view/ });
-    const tracks = container.querySelectorAll(".bar-track");
+    const tracks = qsa(container, ".bar-track");
     expect(tracks.length).toBeGreaterThan(0);
     for (const track of tracks) {
       expect(track.style.height).toMatch(/^\d+px$/);

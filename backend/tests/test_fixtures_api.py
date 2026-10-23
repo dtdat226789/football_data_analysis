@@ -421,11 +421,34 @@ def test_a_date_window_forces_date_order(tmp_path, monkeypatch):
     assert [m["home_team"] for m in body["matches"]] == ["D2-1", "D2-2"]
 
 
-def test_an_unparsable_window_is_ignored_rather_than_wiping_the_list(tmp_path, monkeypatch):
+def test_a_malformed_window_is_rejected_rather_than_silently_ignored(tmp_path, monkeypatch):
+    """A bad query param is a client error, not a filter that quietly does nothing.
+
+    This reverses an earlier decision to ignore an unparsable window. Ignoring it
+    answered "here is everything" while the caller believed they had filtered,
+    which is worse than an error. The leniency that is still correct lives on the
+    other side of the boundary: a stored fixture row with no usable date, which
+    cannot satisfy a window and is dropped by the window rather than the
+    request. See test_date_less_rows_are_dropped_by_a_window_but_kept_without_one.
+    """
     client = _client(tmp_path, monkeypatch, "primera1", _week())
     with client:
-        body = client.get("/api/v1/fixtures", params={"from_date": "not-a-date"}).json()
-    assert body["total"] == 6
+        r = client.get("/api/v1/fixtures", params={"from_date": "not-a-date"})
+    assert r.status_code == 422
+
+
+def test_an_inverted_window_is_rejected(tmp_path, monkeypatch):
+    client = _client(tmp_path, monkeypatch, "primera1", _week())
+    with client:
+        r = client.get(
+            "/api/v1/fixtures",
+            params={
+                "from_date": (TODAY + timedelta(days=5)).isoformat(),
+                "to_date": TODAY.isoformat(),
+            },
+        )
+    assert r.status_code == 422
+    assert "after" in r.json()["detail"]
 
 
 def test_date_less_rows_are_dropped_by_a_window_but_kept_without_one(tmp_path, monkeypatch):

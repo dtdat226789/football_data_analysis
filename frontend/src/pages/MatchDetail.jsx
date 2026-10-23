@@ -5,8 +5,10 @@ import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import DataTree from "../components/DataTree.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
+import { useFormatters } from "../i18n/useFormatters.js";
 
 export default function MatchDetail() {
+  const { t, kickoffDay, kickoffTime, plainDay } = useFormatters();
   const { id } = useParams();
   const { data, loading, error } = useApi(() => api.match(id), [id]);
   // Insights are supplementary: if the artifact or endpoint is unavailable the
@@ -25,7 +27,7 @@ export default function MatchDetail() {
       </div>
     );
   if (error) return <ErrorBox error={error} />;
-  if (!data) return <ErrorBox error="No match data." />;
+  if (!data) return <ErrorBox error={t("page.match.noData")} />;
 
   const home = data.home_team;
   const away = data.away_team;
@@ -35,21 +37,23 @@ export default function MatchDetail() {
     <div>
       <div className="page-head">
         <h2>
-          <TeamLink name={home} /> {played ? `${data.home_score} – ${data.away_score}` : "vs"} <TeamLink name={away} />
+          <TeamLink name={home} /> {played ? `${data.home_score} – ${data.away_score}` : t("common.vs")} <TeamLink name={away} />
         </h2>
         <p>
-          {data.match_date} {data.kickoff_time || ""}
-          {played ? ` · full time` : ""}
+          {played
+            ? plainDay(data.match_date)
+            : `${kickoffDay(data.match_date, data.kickoff_time)} ${kickoffTime(data.match_date, data.kickoff_time)}`}
+          {played ? ` · ${t("page.match.fullTime")}` : ""}
         </p>
       </div>
 
       <div className="two-col">
         <section className="card">
-          <h3 style={{ marginTop: 0 }}>Facts</h3>
+          <h3 style={{ marginTop: 0 }}>{t("page.match.facts")}</h3>
           <table className="data">
             <tbody>
               <tr>
-                <th>League</th>
+                <th>{t("common.league")}</th>
                 <td>
                   <Link className="link" to={`/leagues/${data.league}`}>
                     {data.league_name || data.league}
@@ -57,15 +61,15 @@ export default function MatchDetail() {
                 </td>
               </tr>
               <tr>
-                <th>Season</th>
+                <th>{t("page.match.season")}</th>
                 <td>{data.season}</td>
               </tr>
               <tr>
-                <th>Matchday (#)</th>
+                <th>{t("page.match.matchday")}</th>
                 <td>{data.game_index}</td>
               </tr>
               <tr>
-                <th>Half-time</th>
+                <th>{t("page.match.halfTime")}</th>
                 <td>
                   {typeof data.home_ht === "number" && typeof data.away_ht === "number"
                     ? `${data.home_ht} – ${data.away_ht}`
@@ -73,7 +77,7 @@ export default function MatchDetail() {
                 </td>
               </tr>
               <tr>
-                <th>First goal</th>
+                <th>{t("page.match.firstGoal")}</th>
                 <td>
                   {data.first_goal_time != null
                     ? `${data.first_goal_time}${data.first_goal_time_extra ? `' +${data.first_goal_time_extra}` : "'"}`
@@ -81,7 +85,7 @@ export default function MatchDetail() {
                 </td>
               </tr>
               <tr>
-                <th>API id</th>
+                <th>{t("page.match.apiId")}</th>
                 <td>{data.api_id}</td>
               </tr>
             </tbody>
@@ -89,19 +93,19 @@ export default function MatchDetail() {
         </section>
 
         <section className="card">
-          <h3 style={{ marginTop: 0 }}>Teams</h3>
+          <h3 style={{ marginTop: 0 }}>{t("page.match.teams")}</h3>
           <div className="event-list" style={{ marginTop: 10 }}>
             <div className="event">
               <div className="teams">
                 <span>
-                  <TeamLink name={home} /> <span className="muted">(home)</span>
+                  <TeamLink name={home} /> <span className="muted">{t("page.match.home")}</span>
                 </span>
               </div>
             </div>
             <div className="event">
               <div className="teams">
                 <span>
-                  <TeamLink name={away} /> <span className="muted">(away)</span>
+                  <TeamLink name={away} /> <span className="muted">{t("page.match.away")}</span>
                 </span>
               </div>
             </div>
@@ -112,7 +116,7 @@ export default function MatchDetail() {
       <MatchInsights insights={insights} homeName={home} awayName={away} />
 
       <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>Raw record</h3>
+        <h3 style={{ marginTop: 0 }}>{t("page.match.raw")}</h3>
         <DataTree value={data} />
       </section>
     </div>

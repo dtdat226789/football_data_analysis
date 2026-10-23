@@ -1,5 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import { closest } from "../test/dom.js";
+import { qsa } from "../test/dom.js";
 
 import { BarList, Donut, StatCard } from "./Charts.jsx";
 
@@ -18,7 +20,7 @@ describe("Charts", () => {
     expect(screen.getByText("Points")).toBeInTheDocument();
     expect(screen.getByText("2023-2024")).toBeInTheDocument();
     expect(screen.getByText("90")).toBeInTheDocument();
-    const fills = container.querySelectorAll(".bar-fill");
+    const fills = qsa(container, ".bar-fill");
     expect(fills).toHaveLength(2);
     expect(fills[1].style.width).toBe("100%");
   });
@@ -49,7 +51,7 @@ describe("Charts", () => {
     expect(screen.getByText("W / D / L")).toBeInTheDocument();
     expect(screen.getByText("Won: 10")).toBeInTheDocument();
     expect(screen.getByText("Drawn: 5")).toBeInTheDocument();
-    const legend = screen.getByText("Won: 10").closest("ul");
+    const legend = closest(screen.getByText("Won: 10"), "ul");
     expect(within(legend).getByText("Lost: 5")).toBeInTheDocument();
   });
 

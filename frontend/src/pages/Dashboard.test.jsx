@@ -1,21 +1,20 @@
 import { screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { api } from "../api/client.js";
+import { api } from "../test/mockApi.js";
 import { dashboard } from "../test/fixtures.js";
 import { renderPage } from "../test/render.jsx";
 import Dashboard, { regionBuckets } from "./Dashboard.jsx";
 
-vi.mock("../api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchesRecent", "dashboard", "fixtures", "leagueFixtures",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("../api/client.js", async () => {
+  // The stub list is read from the real client rather than written out here.
+  // Each test used to carry its own copy of these names, and the copies had
+  // already drifted apart — so a new api.foo() call reached an undefined stub in
+  // whichever test happened to render that page first.
+  const { api: actual } = await vi.importActual("../api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 

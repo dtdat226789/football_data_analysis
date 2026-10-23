@@ -37,7 +37,6 @@ import psycopg2.extras
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from analysis_common import (
-    VERSION,
     parse_args,
     args_to_config,
     report_metadata,
@@ -50,7 +49,7 @@ from analysis_common import (
     new_figure,
     save_chart,
 )
-from db_common import get_conn, LEAGUE
+from db_common import get_conn
 
 STEM = "matches_analysis"
 SCRIPT_NAME = "backend/scripts/analyze_matches.py"

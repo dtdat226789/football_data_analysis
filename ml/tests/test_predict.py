@@ -295,7 +295,7 @@ class _FixtureCursor:
         self._conn.record(sql, params)
 
     def fetchone(self):
-        for sql, params in reversed(self._conn.calls):
+        for sql, _params in reversed(self._conn.calls):
             if "league_seasons ls" in sql and "EXISTS" in sql:
                 self._conn.seasons_requested.append("2026-2027")
                 return ["2026-2027"]

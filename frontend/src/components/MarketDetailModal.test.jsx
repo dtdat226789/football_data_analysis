@@ -1,8 +1,9 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { closest } from "../test/dom.js";
 
-import { api } from "../api/client.js";
+import { api } from "../test/mockApi.js";
 import {
   fixtureMarkets,
   marketDetail,
@@ -10,18 +11,17 @@ import {
   marketDetailQuarter,
 } from "../test/fixtures.js";
 import MarketDetailModal from "./MarketDetailModal.jsx";
+import { I18nProvider } from "../i18n/I18nProvider.jsx";
 
-vi.mock("../api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchInsights", "matchesRecent", "dashboard",
-    "fixtures", "leagueFixtures", "fixtureDetail", "fixtureMarket",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("../api/client.js", async () => {
+  // The stub list is read from the real client rather than written out here.
+  // Each test used to carry its own copy of these names, and the copies had
+  // already drifted apart — so a new api.foo() call reached an undefined stub in
+  // whichever test happened to render that page first.
+  const { api: actual } = await vi.importActual("../api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 
@@ -43,11 +43,22 @@ const renderModal = (row, payload = marketDetail) => {
 };
 
 const settlementRow = (name) =>
-  screen.getByText(name).closest(".settle-row");
+  closest(screen.getByText(name), ".settle-row");
 
 describe("MarketDetailModal", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+  });
+
+  it("titles the dialog with the localised market label", async () => {
+    api.fixtureMarket.mockResolvedValue(marketDetail);
+    render(
+      <I18nProvider language="vi">
+        <MarketDetailModal league={LEAGUE} matchId={TAIL} market={market("ft.totals.over_1.5")} onClose={vi.fn()} />
+      </I18nProvider>,
+    );
+    const dialog = await screen.findByRole("dialog");
+    expect(dialog).toHaveAttribute("aria-label", "Trên 1,5 bàn thắng · Hết giờ");
   });
 
   it("asks for the clicked market only", async () => {
@@ -70,7 +81,7 @@ describe("MarketDetailModal", () => {
     renderModal(market("ft.asian_handicap.-1_home"));
 
     await screen.findByText("2-0");
-    const table = screen.getByText("2-0").closest("table");
+    const table = closest(screen.getByText("2-0"), "table");
     expect(within(table).getByText("pushes")).toBeInTheDocument();
     expect(screen.getByText(/4 of 81 grid cells/)).toBeInTheDocument();
   });
@@ -99,7 +110,7 @@ describe("MarketDetailModal", () => {
     renderModal(market("ht_ft.home.home"), marketDetailHalfToFull);
 
     await screen.findByText("Where it comes from");
-    const table = screen.getByText("Half time").closest("table");
+    const table = closest(screen.getByText("Half time"), "table");
     // The HT row is the one carrying the assumed split, so it is badged.
     expect(within(table).getByText("41.0%")).toBeInTheDocument();
     expect(within(table).getByText("58.0%")).toBeInTheDocument();

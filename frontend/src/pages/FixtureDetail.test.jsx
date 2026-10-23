@@ -1,23 +1,23 @@
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { qsa } from "../test/dom.js";
 
-import { api } from "../api/client.js";
+import { Route } from "react-router-dom";
+import { api } from "../test/mockApi.js";
+import { renderRoutes } from "../test/render.jsx";
 import { fixtureDetail, fixtureDetailNoHistory, marketDetail } from "../test/fixtures.js";
 import FixtureDetail from "./FixtureDetail.jsx";
 
-vi.mock("../api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchInsights", "matchesRecent", "dashboard",
-    "fixtures", "leagueFixtures", "fixtureDetail", "fixtureMarket",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("../api/client.js", async () => {
+  // The stub list is read from the real client rather than written out here.
+  // Each test used to carry its own copy of these names, and the copies had
+  // already drifted apart — so a new api.foo() call reached an undefined stub in
+  // whichever test happened to render that page first.
+  const { api: actual } = await vi.importActual("../api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 
@@ -27,12 +27,9 @@ const TAIL = "2026-02-01-arsenal-vs-chelsea";
 // Rendered through the real route pattern, so the splat that carries the
 // `date-home-vs-away` id is exercised rather than assumed.
 const renderFixture = (route = `/fixture/${LEAGUE}/${TAIL}`) =>
-  render(
-    <MemoryRouter initialEntries={[route]}>
-      <Routes>
-        <Route path="/fixture/:league/*" element={<FixtureDetail />} />
-      </Routes>
-    </MemoryRouter>,
+  renderRoutes(
+    <Route path="/fixture/:league/*" element={<FixtureDetail />} />,
+    { route },
   );
 
 const seed = (payload = fixtureDetail) => {
@@ -57,7 +54,7 @@ describe("FixtureDetail", () => {
 
     await screen.findByRole("heading", { name: "Arsenal vs Chelsea" });
     expect(
-      screen.getByText("2026-02-01 16:00 \u00b7 matchday 25 \u00b7 2025-2026 \u00b7 scheduled"),
+      screen.getByText("01/02/2026 23:00 \u00b7 matchday 25 \u00b7 2025-2026 \u00b7 scheduled"),
     ).toBeInTheDocument();
   });
 
@@ -128,7 +125,7 @@ describe("FixtureDetail", () => {
     renderFixture();
 
     const panel = (await screen.findByRole("heading", { name: /Markets/ })).closest("section");
-    const featured = [...panel.querySelectorAll("tbody tr.featured")].map((row) =>
+    const featured = [...qsa(panel, "tbody tr.featured")].map((row) =>
       within(row).getAllByRole("cell")[0].firstChild.textContent.trim()
     );
     expect(featured).toEqual(["O1.5", "U2.5", "Away +0.5", "1/1"]);
@@ -140,7 +137,7 @@ describe("FixtureDetail", () => {
     const panel = (await screen.findByRole("heading", { name: /Markets/ })).closest("section");
     expect(within(panel).getByText("4 assumed")).toBeInTheDocument();
     // One table per family, so scope to body rows to skip the repeated headers.
-    const rows = [...panel.querySelectorAll("tbody tr")];
+    const rows = [...qsa(panel, "tbody tr")];
     const sources = rows.map((tr) => within(tr).getAllByRole("cell")[2].textContent.trim());
     expect(rows).toHaveLength(21);
     expect(sources.filter((s) => s === "model").length).toBe(17);
@@ -166,7 +163,7 @@ describe("FixtureDetail", () => {
     expect(document.querySelector('img[src="https://cdn.example/arsenal.png"]')).toBeInTheDocument();
     expect(document.querySelector('img[src="https://cdn.example/chelsea.png"]')).toBeInTheDocument();
 
-    const sections = screen.getAllByRole("heading", { name: /\(home\)|\(away\)/ });
+    const sections = screen.getAllByRole("heading", { name: /Home|Away/ });
     const homeCard = sections[0].closest("section");
     const body = within(homeCard);
     // form pills from the last five results
@@ -192,7 +189,7 @@ describe("FixtureDetail", () => {
 
     const card = (await screen.findByRole("heading", { name: "Fixture record" })).closest("section");
     const body = within(card);
-    expect(body.getByText("2026-02-01T16:00:00+00:00")).toBeInTheDocument();
+    expect(body.getByText("Sun 1 Feb \u00b7 23:00")).toBeInTheDocument();
     expect(body.getByText("Matchday 25")).toBeInTheDocument();
     expect(body.getByText("regular_season")).toBeInTheDocument();
     const source = body.getByRole("link", { name: "football-charts.com" });
@@ -220,7 +217,7 @@ describe("FixtureDetail", () => {
     // ... but the fixture identity and the file-derived kickoff remain
     expect(document.querySelector('img[src="https://cdn.example/arsenal.png"]')).toBeNull();
     expect(
-      screen.getByText("2026-02-01 16:00 \u00b7 scheduled"),
+      screen.getByText("01/02/2026 23:00 \u00b7 scheduled"),
     ).toBeInTheDocument();
     const card = screen.getByRole("heading", { name: "Fixture record" }).closest("section");
     const body = within(card);

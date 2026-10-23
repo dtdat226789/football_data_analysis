@@ -1,17 +1,8 @@
 import { Link } from "react-router-dom";
 
-const pct = (v) => (typeof v === "number" ? `${(v * 100).toFixed(1)}%` : "—");
+import { useFormatters } from "../i18n/useFormatters.js";
 
-/** fmt keeps integers clean and renders floats to 2dp; nulls become an em dash. */
-function fmt(value) {
-  if (value === null || value === undefined) return "—";
-  if (typeof value === "number") {
-    return Number.isInteger(value) ? String(value) : value.toFixed(2);
-  }
-  return String(value);
-}
-
-const RESULT_LABEL = { HOME_WIN: "Home win", DRAW: "Draw", AWAY_WIN: "Away win" };
+const RESULT_KEY = { HOME_WIN: "result.home", DRAW: "result.draw", AWAY_WIN: "result.away" };
 
 /** Same confidence buckets as PredictionChips, so the two read alike. */
 function strength(v) {
@@ -26,6 +17,7 @@ function strength(v) {
  * Strictly pre-match by construction — the backend never includes the result.
  */
 export function PreMatchPanel({ preMatch }) {
+  const { t, dec } = useFormatters();
   if (!preMatch) return null;
   const groups = preMatch.groups || {};
   const keys = Object.keys(groups);
@@ -34,11 +26,14 @@ export function PreMatchPanel({ preMatch }) {
   return (
     <section className="card">
       <h3 style={{ marginTop: 0 }}>
-        Pre-match context <span className="badge">matchday {fmt(preMatch.game_index)}</span>
+        {t("insights.preMatch")} <span className="badge">{t("insights.matchday", { n: preMatch.game_index })}</span>
       </h3>
       <p className="muted" style={{ margin: "0 0 12px" }}>
-        {preMatch.home_team} vs {preMatch.away_team} · {preMatch.season} — what the model
-        knew before kickoff.
+        {t("insights.preMatchSummary", {
+          home: preMatch.home_team,
+          away: preMatch.away_team,
+          season: preMatch.season,
+        })}
       </p>
       {keys.map((key) => (
         <div key={key} style={{ marginBottom: 14 }}>
@@ -51,7 +46,7 @@ export function PreMatchPanel({ preMatch }) {
                 <div className="muted" style={{ fontSize: 12 }}>
                   {cell.label}
                 </div>
-                <div style={{ fontVariantNumeric: "tabular-nums" }}>{fmt(cell.value)}</div>
+                <div style={{ fontVariantNumeric: "tabular-nums" }}>{dec(cell.value, 2)}</div>
               </div>
             ))}
           </div>
@@ -66,6 +61,7 @@ export function PreMatchPanel({ preMatch }) {
  * a holdout season, so the badge and warning are load-bearing, not decoration.
  */
 export function ModelPanel({ model }) {
+  const { t, pct } = useFormatters();
   if (!model) return null;
   const probs = model.probabilities || {};
   const meta = model.meta || {};
@@ -76,11 +72,11 @@ export function ModelPanel({ model }) {
   return (
     <section className="card">
       <h3 style={{ marginTop: 0 }}>
-        Model view{" "}
+        {t("insights.modelView")}{" "}
         {model.in_sample ? (
-          <span className="badge amber">in-sample</span>
+          <span className="badge amber">{t("insights.inSample")}</span>
         ) : (
-          <span className="badge green">out-of-sample</span>
+          <span className="badge green">{t("insights.outOfSample")}</span>
         )}
       </h3>
 
@@ -95,7 +91,7 @@ export function ModelPanel({ model }) {
                 marginBottom: 3,
               }}
             >
-              <span>{RESULT_LABEL[key] || key}</span>
+              <span>{t(RESULT_KEY[key] ?? "") || key}</span>
               <span style={{ fontVariantNumeric: "tabular-nums" }}>{pct(value)}</span>
             </div>
             <div className="bar-track" style={{ height: 8 }}>
@@ -111,33 +107,33 @@ export function ModelPanel({ model }) {
       <table className="data">
         <tbody>
           <tr>
-            <th>Predicted</th>
+            <th>{t("insights.predicted")}</th>
             <td>
-              {RESULT_LABEL[model.predicted_match_result] || model.predicted_match_result}{" "}
+              {t(RESULT_KEY[model.predicted_match_result] ?? "") || model.predicted_match_result}{" "}
               <span className="pred-chips">
                 <span className={`pred-chip ${strength(model.confidence)}`}>
-                  conf <b>{pct(model.confidence)}</b>
+                  {t("pred.conf")} <b>{pct(model.confidence)}</b>
                 </span>
               </span>
             </td>
           </tr>
           <tr>
-            <th>Actual</th>
+            <th>{t("insights.actual")}</th>
             <td>
-              {RESULT_LABEL[model.actual_match_result] || model.actual_match_result || "—"}{" "}
+              {t(RESULT_KEY[model.actual_match_result] ?? "") || model.actual_match_result || "—"}{" "}
               {model.actual_match_result && (
                 <span className={`badge ${outcomeHit ? "green" : "amber"}`}>
-                  {outcomeHit ? "correct" : "wrong"}
+                  {outcomeHit ? t("insights.correct") : t("insights.wrong")}
                 </span>
               )}
             </td>
           </tr>
           <tr>
-            <th>Model</th>
+            <th>{t("insights.model")}</th>
             <td>{meta.model_id || "—"}</td>
           </tr>
           <tr>
-            <th>Feature version</th>
+            <th>{t("insights.featureVersion")}</th>
             <td>{meta.feature_version || "—"}</td>
           </tr>
         </tbody>
@@ -154,32 +150,40 @@ export function ModelPanel({ model }) {
 
 /** Prior meetings only; the endpoint already excludes this match and later ones. */
 export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
+  const { t, plainDay } = useFormatters();
   if (!headToHead) return null;
   const { matches = [], summary, truncated } = headToHead || {};
 
   return (
     <section className="card">
       <h3 style={{ marginTop: 0 }}>
-        Head to head{" "}
+        {t("insights.headToHead")}{" "}
         <span className="badge">
-          {summary ? `${summary.played} previous` : `${matches.length} previous`}
+          {t("insights.previous", { n: summary ? summary.played : matches.length })}
         </span>
       </h3>
 
       {summary ? (
         <p className="muted" style={{ marginTop: 0 }}>
-          {homeName} {summary.home_team_wins}W {summary.draws}D {summary.away_team_wins}L{" "}
-          {awayName} · goals {summary.goals_for}–{summary.goals_against}
+          {t("insights.h2hSummary", {
+            home: homeName,
+            away: awayName,
+            wins: summary.home_team_wins,
+            draws: summary.draws,
+            losses: summary.away_team_wins,
+            for: summary.goals_for,
+            against: summary.goals_against,
+          })}
         </p>
       ) : (
         <p className="muted" style={{ marginTop: 0 }}>
-          No previous meetings on record.
+          {t("insights.noH2h")}
         </p>
       )}
 
       {truncated && (
         <p className="muted" style={{ fontSize: 12 }}>
-          Showing the {matches.length} most recent of {summary.played}.
+          {t("insights.truncated", { shown: matches.length, total: summary.played })}
         </p>
       )}
 
@@ -187,20 +191,20 @@ export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
         <table className="data">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Season</th>
-              <th>Fixture</th>
-              <th>Score</th>
+              <th>{t("common.date")}</th>
+              <th>{t("common.season")}</th>
+              <th>{t("insights.fixture")}</th>
+              <th>{t("common.score")}</th>
             </tr>
           </thead>
           <tbody>
             {matches.map((m) => (
               <tr key={m.api_id}>
-                <td>{m.match_date}</td>
+                <td>{plainDay(m.match_date)}</td>
                 <td>{m.season}</td>
                 <td>
                   <Link className="link" to={`/match/${m.api_id}`}>
-                    {m.home_team} vs {m.away_team}
+                    {m.home_team} {t("common.vs")} {m.away_team}
                   </Link>
                 </td>
                 <td>

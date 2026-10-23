@@ -35,7 +35,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import psycopg2.extras
@@ -54,6 +54,7 @@ from db_common import (
     get_conn,
     load_json,
     normalize_season_state,
+    phantom_team_names,
     score_status,
     split_score,
 )
@@ -203,10 +204,20 @@ def reconcile_teams(
     raw: dict,
     db: dict[tuple[str, str], dict],
     aliases: dict[tuple[str, str], int],
+    phantoms: set[str] | None = None,
 ) -> dict:
-    """teams.json must match team_seasons (slug, logo) and the slug alias mapping."""
+    """teams.json must match team_seasons (slug, logo) and the slug alias mapping.
+
+    Two raw entries sharing a slug are one club: etl_02 merges them into a
+    single team_seasons row (last entry wins for api_name), so the losing
+    entry surfaces as a DUPLICATE_TEAM_IN_RAW warning, not TEAM_NOT_IN_DB.
+    Raw entries that never play a match in results.json and are hyphen-variants
+    of a participant (upstream phantom rows) are skipped by etl_02 and reported
+    as a PHANTOM_TEAM_IN_RAW warning, not TEAM_NOT_IN_DB.
+    """
     n_compared = 0
     raw_names: set[str] = set()
+    phantoms = phantoms or set()
     for t in raw.get("teams", []):
         if not isinstance(t, dict):
             continue
@@ -214,6 +225,35 @@ def reconcile_teams(
         raw_names.add(name)
         row = db.get((season, name))
         if row is None:
+            if name in phantoms:
+                add_issue(
+                    issues, "identity", "PHANTOM_TEAM_IN_RAW", SEVERITY_WARNING,
+                    f"teams.json entry '{name}' never appears in results.json and "
+                    f"is a name variant of a participant; etl_02 skipped it",
+                    league=league, season=season, file=f"{season}/teams.json",
+                    details={"team": name, "slug": slug},
+                )
+                continue
+            # a teams.json entry whose slug already appeared loses the etl_02
+            # merge (the last entry keeps api_name/logo), so it has no
+            # team_seasons row of its own: report the duplicate, do not fail
+            merged_into = next(
+                (
+                    r.get("api_name")
+                    for (s2, _n), r in db.items()
+                    if s2 == season and r.get("api_slug") == slug
+                ),
+                None,
+            )
+            if merged_into is not None:
+                add_issue(
+                    issues, "identity", "DUPLICATE_TEAM_IN_RAW", SEVERITY_WARNING,
+                    f"teams.json entry '{name}' shares slug '{slug}' with "
+                    f"'{merged_into}', merged into one team_seasons row by etl_02",
+                    league=league, season=season, file=f"{season}/teams.json",
+                    details={"team": name, "slug": slug, "merged_into": merged_into},
+                )
+                continue
             add_issue(
                 issues, "identity", "TEAM_NOT_IN_DB", SEVERITY_ERROR,
                 f"Team '{name}' in teams.json has no team_seasons row",
@@ -274,16 +314,28 @@ def reconcile_matches(
     db: dict[int, dict],
     team_ids: dict[tuple[str, str], int],
 ) -> dict:
-    """Every playable raw match must be reproduced exactly in the matches table.
+    """Every loadable raw match must be reproduced exactly in the matches table.
 
-    Cancelled/awarded ('CAN.'/'AWA.') and unparseable raw matches are skipped by
-    the ETL and logged to data/validation/skipped_matches/, so they are ignored
-    here (and never reported as MATCH_NOT_IN_DB).
+    Cancelled/awarded ('CAN.'/'AWA.'), unparseable and membership-missing raw
+    matches are skipped by the ETL and logged to
+    data/validation/skipped_matches/, so they are ignored here (and never
+    reported as MATCH_NOT_IN_DB); membership skips surface as a
+    TEAM_MEMBERSHIP_MISSING WARNING instead.
     """
     n_compared = 0
     raw_ids: set[int] = set()
     for m in raw.get("matches", []):
         if not isinstance(m, dict):
+            continue
+        home, away = m.get("homeTeam"), m.get("awayTeam")
+        if (season, home) not in team_ids or (season, away) not in team_ids:
+            add_issue(
+                issues, "matches", "TEAM_MEMBERSHIP_MISSING", SEVERITY_WARNING,
+                f"Match {m.get('id')}: home/away team not in {season} team_seasons; "
+                f"etl_03 skipped it",
+                league=league, season=season, file=f"{season}/results.json",
+                details={"match_id": m.get("id"), "home": home, "away": away},
+            )
             continue
         if score_status(m.get("score")) != "playable":
             continue
@@ -330,20 +382,12 @@ def reconcile_matches(
                     mismatches.append(("time", db_time, raw_time))
             elif db_time != raw_time:
                 mismatches.append(("time", db_time, raw_time))
-        home_tid = team_ids.get((season, m.get("homeTeam")))
-        away_tid = team_ids.get((season, m.get("awayTeam")))
-        if home_tid is None or away_tid is None:
-            add_issue(
-                issues, "matches", "TEAM_MEMBERSHIP_MISSING", SEVERITY_ERROR,
-                f"Match {mid}: home/away team not in {season} team_seasons",
-                league=league, season=season, file=f"{season}/results.json",
-                details={"match_id": mid, "home": m.get("homeTeam"), "away": m.get("awayTeam")},
-            )
-        else:
-            if row.get("home_team_id") != home_tid:
-                mismatches.append(("home_team_id", row.get("home_team_id"), home_tid))
-            if row.get("away_team_id") != away_tid:
-                mismatches.append(("away_team_id", row.get("away_team_id"), away_tid))
+        home_tid = team_ids[(season, home)]
+        away_tid = team_ids[(season, away)]
+        if row.get("home_team_id") != home_tid:
+            mismatches.append(("home_team_id", row.get("home_team_id"), home_tid))
+        if row.get("away_team_id") != away_tid:
+            mismatches.append(("away_team_id", row.get("away_team_id"), away_tid))
         if mismatches:
             add_issue(
                 issues, "matches", "MATCH_FIELD_MISMATCH", SEVERITY_ERROR,
@@ -370,6 +414,7 @@ def reconcile_standings(
     view: str,
     raw: dict,
     db: dict[tuple[str, str, str], dict],
+    team_ids: dict[tuple[str, str], int],
 ) -> dict:
     """table_{view}.json must match the standings table (core columns + metrics)."""
     n_compared = 0
@@ -378,6 +423,15 @@ def reconcile_standings(
         if not isinstance(row, dict):
             continue
         name = row.get("team")
+        if (season, name) not in team_ids:
+            add_issue(
+                issues, "standings", "TEAM_MEMBERSHIP_MISSING", SEVERITY_WARNING,
+                f"table_{view} row '{name}' is not in {season} team_seasons; "
+                f"etl_03 skipped it",
+                league=league, season=season, file=f"{season}/table_{view}.json",
+                details={"team": name, "view": view},
+            )
+            continue
         raw_names.add(name)
         db_row = db.get((season, view, name))
         if db_row is None:
@@ -538,20 +592,30 @@ def build_report(league: str, seasons: list[str], views: list[str]) -> dict:
     team_ids = {(s, name): row["team_id"] for (s, name), row in db["teams"].items()}
     for season in seasons:
         tpath = raw_url(league, season, "teams.json")
-        if tpath.exists():
-            counts["identity"] += reconcile_teams(
-                issues, league, season, load_json(tpath), db["teams"], db["aliases"]
-            )["n_compared"]
         rpath = raw_url(league, season, "results.json")
-        if rpath.exists():
+        teams_json = load_json(tpath) if tpath.exists() else None
+        results_json = load_json(rpath) if rpath.exists() else None
+        phantoms = (
+            phantom_team_names(
+                teams_json.get("teams", []), results_json.get("matches", [])
+            )
+            if teams_json is not None
+            else set()
+        )
+        if teams_json is not None:
+            counts["identity"] += reconcile_teams(
+                issues, league, season, teams_json, db["teams"], db["aliases"], phantoms
+            )["n_compared"]
+        if results_json is not None:
             counts["matches"] += reconcile_matches(
-                issues, league, season, load_json(rpath), db["matches"], team_ids
+                issues, league, season, results_json, db["matches"], team_ids
             )["n_compared"]
         for view in views:
             s_path = raw_url(league, season, f"table_{view}.json")
             if s_path.exists():
                 counts["standings"] += reconcile_standings(
-                    issues, league, season, view, load_json(s_path), db["standings"]
+                    issues, league, season, view, load_json(s_path),
+                    db["standings"], team_ids,
                 )["n_compared"]
 
     categories = ["registry", "identity", "matches", "standings"]
@@ -566,7 +630,7 @@ def build_report(league: str, seasons: list[str], views: list[str]) -> dict:
     warnings = sum(1 for i in issues if i["severity"] == SEVERITY_WARNING)
     return {
         "report_name": "raw_to_db_report",
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "scope": {"league": league, "seasons": seasons, "views": views},
         "overall": {
             "errors": errors,
@@ -620,8 +684,15 @@ def render_markdown(report: dict) -> str:
         "Reads the byte-preserved raw JSON files under `data/raw/` and compares them "
         "field-by-field against the rows the ETL pipeline loaded into PostgreSQL. "
         "Read-only (transaction is rolled back). Any value that differs between the "
-        "raw source of truth and the loaded row is reported as an ERROR. Logo drift is "
-        "reported as a WARNING."
+        "raw source of truth and the loaded row is reported as an ERROR. Logo drift "
+        "and raw rows etl_03 skipped for a team-membership gap are reported as "
+        "WARNINGs."
+    )
+    lines.append(
+        "Phantom roster rows (teams.json entries that never play a match in "
+        "results.json and that etl_02 therefore skipped) surface as "
+        "PHANTOM_TEAM_IN_RAW WARNINGs, and their table rows as "
+        "TEAM_MEMBERSHIP_MISSING WARNINGs."
     )
     return "\n".join(lines)
 

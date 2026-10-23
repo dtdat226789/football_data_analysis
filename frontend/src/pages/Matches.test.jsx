@@ -1,21 +1,20 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { api } from "../api/client.js";
+import { api } from "../test/mockApi.js";
 import { leagues, upcomingFixtures } from "../test/fixtures.js";
 import { renderPage } from "../test/render.jsx";
 import Matches from "./Matches.jsx";
 
-vi.mock("../api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchesRecent", "dashboard", "fixtures", "leagueFixtures",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("../api/client.js", async () => {
+  // The stub list is read from the real client rather than written out here.
+  // Each test used to carry its own copy of these names, and the copies had
+  // already drifted apart — so a new api.foo() call reached an undefined stub in
+  // whichever test happened to render that page first.
+  const { api: actual } = await vi.importActual("../api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 
@@ -230,6 +229,120 @@ describe("Matches", () => {
     );
   });
 
+  it("asks for the picked day and nothing else", async () => {
+    renderPage(<Matches />);
+    await screen.findByRole("heading", { name: /Upcoming/ });
+
+    fireEvent.click(screen.getByRole("button", { name: /Sun 1 Feb 1/ }));
+
+    // The day has to reach the API as a one-day window. Sending only the chip
+    // left the query over every day and only reordered it, so page one of a
+    // date-ordered list showed the soonest fixtures and the picked day read as
+    // "only today".
+    await waitFor(() =>
+      expect(api.fixtures).toHaveBeenLastCalledWith(
+        expect.objectContaining({
+          from_date: "2026-02-01",
+          to_date: "2026-02-01",
+          offset: 0,
+        }),
+      ),
+    );
+  });
+
+  it("keeps a picked day clearable once the list narrows to that day", async () => {
+    api.fixtures.mockImplementation((params = {}) => {
+      const day = params.from_date || "";
+      const matches = day
+        ? [{ ...upcomingFixtures.matches[0], match_date: day }]
+        : upcomingFixtures.matches;
+      return Promise.resolve({
+        ...upcomingFixtures,
+        total: matches.length,
+        returned: matches.length,
+        offset: 0,
+        has_more: false,
+        from_date: day || null,
+        to_date: day || null,
+        dates: day ? [day] : upcomingFixtures.dates,
+        day_counts: day ? { [day]: matches.length } : upcomingFixtures.day_counts,
+        matches,
+      });
+    });
+    renderPage(<Matches />, { route: "/matches?uoffset=50" });
+    await screen.findByRole("heading", { name: /Upcoming/ });
+
+    fireEvent.click(screen.getByRole("button", { name: /Sun 1 Feb 1/ }));
+
+    // Only the picked day comes back, so the chip row is down to a single entry.
+    const section = screen.getByRole("heading", { name: /Upcoming/ }).closest("section");
+    expect(await within(section).findByRole("button", { name: /Sun 1 Feb 1/ })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Mon 2 Feb/ })).not.toBeInTheDocument();
+
+    // "All days" has to survive, or the pick could only be undone by reloading.
+    fireEvent.click(within(section).getByRole("button", { name: "All days" }));
+    await waitFor(() =>
+      expect(api.fixtures).toHaveBeenLastCalledWith(
+        expect.objectContaining({ from_date: undefined, to_date: undefined }),
+      ),
+    );
+    expect(await within(section).findByRole("button", { name: /Mon 2 Feb/ })).toBeInTheDocument();
+  });
+
+  it("drops the upcoming day chip when the league changes", async () => {
+    renderPage(<Matches />, { route: "/matches?day=2026-02-01" });
+    await screen.findByRole("heading", { name: /Upcoming/ });
+
+    // The chip was picked against the previous league's rows. Carrying it over
+    // would narrow the new league to a day it may hold nothing for, and the
+    // preset's promise of "from N days onwards" would no longer be true.
+    fireEvent.change(screen.getByLabelText("League"), { target: { value: "spain1" } });
+
+    await waitFor(() =>
+      expect(api.fixtures).toHaveBeenLastCalledWith(
+        expect.objectContaining({ league: "spain1", from_date: undefined, to_date: undefined }),
+      ),
+    );
+  });
+
+  it("treats a junk offset in the URL as page one", async () => {
+    // `?offset=abc` used to be sent on as the string "NaN" and come back 422,
+    // and `NaN + size >= total` left the pager disabled in one direction forever.
+    renderPage(<Matches />, { route: "/matches?offset=abc" });
+
+    expect(await screen.findByText("1–2 of 2")).toBeInTheDocument();
+    expect(api.matchesRecent).toHaveBeenLastCalledWith(expect.objectContaining({ offset: 0 }));
+    expect(api.fixtures).toHaveBeenLastCalledWith(expect.objectContaining({ offset: 0 }));
+    expect(screen.getByRole("button", { name: "‹ Prev" })).toBeDisabled();
+  });
+
+  it("renders an empty recent table when the payload carries no matches", async () => {
+    // A partially built payload must not take the page down with it.
+    api.matchesRecent.mockResolvedValue({ count: 0, total: 0 });
+    renderPage(<Matches />);
+
+    expect(await screen.findByText("No finished matches match the filters.")).toBeInTheDocument();
+  });
+
+  it("says when the recent offset is past the last result", async () => {
+    api.matchesRecent.mockImplementation(({ offset = 0, limit = 50 } = {}) =>
+      Promise.resolve({
+        count: 0,
+        total: 120,
+        offset,
+        limit,
+        matches: recentMatches.matches.slice(offset, offset + limit),
+      }),
+    );
+    renderPage(<Matches />, { route: "/matches?offset=9999" });
+
+    expect(
+      await screen.findByText("This page is past the last result — step back a page."),
+    ).toBeInTheDocument();
+    // Not "150–150 of 150": there is no row on screen to point at.
+    expect(screen.getByText("no rows on this page")).toBeInTheDocument();
+  });
+
   it("paginates upcoming fixtures independently of recent results", async () => {
     const total = 120;
     api.fixtures.mockImplementation((params = {}) => {
@@ -253,7 +366,7 @@ describe("Matches", () => {
         };
       });
       const matches = all.slice(offset, offset + size);
-      return {
+      return Promise.resolve({
         count: matches.length,
         total,
         returned: matches.length,
@@ -263,7 +376,7 @@ describe("Matches", () => {
         dates: ["2026-02-01", "2026-02-02", "2026-02-03"],
         day_counts: { "2026-02-01": 40, "2026-02-02": 40, "2026-02-03": 40 },
         matches,
-      };
+      });
     });
 
     renderPage(<Matches />);
@@ -336,7 +449,7 @@ describe("Matches", () => {
         league: "premier",
       }));
       const matches = all.slice(offset, offset + size);
-      return { count: matches.length, total, limit: size, offset, matches };
+      return Promise.resolve({ count: matches.length, total, limit: size, offset, matches });
     });
     renderPage(<Matches />);
 
@@ -362,6 +475,60 @@ describe("Matches", () => {
 
     await screen.findByRole("heading", { name: /Upcoming/ });
     expect(screen.getByText(/No upcoming fixtures/)).toBeInTheDocument();
+  });
+
+  it("applies the page size to the upcoming list, not just the recent one", async () => {
+    // "Show 20" sits in the one filter bar above both columns. It used to reach
+    // only the recent table, leaving the upcoming list paging at a hardcoded 50
+    // with nothing on screen saying it had been ignored.
+    api.fixtures.mockResolvedValue({ count: 0, total: 0, matches: [] });
+    renderPage(<Matches />);
+    await screen.findByRole("heading", { name: /Upcoming/ });
+
+    fireEvent.change(screen.getByLabelText("Page size"), { target: { value: "20" } });
+
+    await waitFor(() =>
+      expect(api.fixtures).toHaveBeenLastCalledWith(expect.objectContaining({ limit: 20, offset: 0 })),
+    );
+  });
+
+  it("rewinds both columns when the page size changes", async () => {
+    // An offset is counted in pages, so page 3 of 50 is not page 3 of 100: a size
+    // change that left the upcoming offset alone would land on a different slice.
+    api.fixtures.mockResolvedValue({ count: 0, total: 0, matches: [] });
+    renderPage(<Matches />, { route: "/matches?offset=100&uoffset=100" });
+    await screen.findByRole("heading", { name: /Upcoming/ });
+
+    fireEvent.change(screen.getByLabelText("Page size"), { target: { value: "20" } });
+
+    await waitFor(() => {
+      expect(api.matchesRecent).toHaveBeenLastCalledWith(expect.objectContaining({ offset: 0 }));
+      expect(api.fixtures).toHaveBeenLastCalledWith(expect.objectContaining({ offset: 0 }));
+    });
+  });
+
+  it("ignores a date window whose end is before its start", async () => {
+    // Sent as-is, this is a 422 and both cards become an error box quoting the
+    // backend. Handled like ?offset=abc and a non-ISO ?from: dropped, not sent.
+    renderPage(<Matches />, { route: "/matches?from=2026-03-01&to=2026-01-01" });
+
+    expect(await screen.findByRole("alert")).toHaveTextContent(/date filter is being ignored/i);
+    await waitFor(() => {
+      expect(api.matchesRecent).toHaveBeenLastCalledWith(
+        expect.objectContaining({ from_date: undefined, to_date: undefined }),
+      );
+      expect(api.fixtures).toHaveBeenLastCalledWith(
+        expect.objectContaining({ from_date: undefined, to_date: undefined }),
+      );
+    });
+    expect(screen.queryByText(/is after to_date/)).not.toBeInTheDocument();
+  });
+
+  it("bounds each date input by the other so the window cannot be picked inverted", () => {
+    renderPage(<Matches />, { route: "/matches?from=2026-01-01&to=2026-02-01" });
+
+    expect(screen.getByLabelText("From date")).toHaveAttribute("max", "2026-02-01");
+    expect(screen.getByLabelText("To date")).toHaveAttribute("min", "2026-01-01");
   });
 
   it("labels leagues by name everywhere, never by slug", async () => {

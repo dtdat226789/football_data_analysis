@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from datetime import date
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException
@@ -45,16 +46,32 @@ def _resolve_season(cur, league: str, season: str | None) -> str:
     return season
 
 
+def check_date_window(from_date: date | None, to_date: date | None) -> None:
+    """Reject an inverted date window with a 422.
+
+    FastAPI already rejects a malformed value because these params are typed
+    `date`. This covers the other half: `from` after `to` used to pass the
+    filters and quietly answer "no matches", which reads as an empty league
+    rather than a wrong request.
+    """
+    if from_date and to_date and from_date > to_date:
+        raise HTTPException(
+            status_code=422,
+            detail=f"from_date {from_date.isoformat()} is after to_date {to_date.isoformat()}",
+        )
+
+
 @router.get("/leagues/{league}/matches")
 def list_matches(
     league: str,
     season: str | None = None,
-    from_date: str | None = None,
-    to_date: str | None = None,
+    from_date: date | None = None,
+    to_date: date | None = None,
     limit: int = 50,
     offset: int = 0,
 ) -> dict:
     require_league(league)
+    check_date_window(from_date, to_date)
     limit, offset = norm_pagination(limit, offset)
     with fetched_cursor() as cur:
         season = _resolve_season(cur, league, season)
@@ -99,14 +116,19 @@ def list_matches(
 @router.get("/matches/recent")
 def recent_matches(
     league: str | None = None,
-    from_date: str | None = None,
-    to_date: str | None = None,
+    from_date: date | None = None,
+    to_date: date | None = None,
     limit: int = 20,
     offset: int = 0,
 ) -> dict:
-    """Most recently finished matches across leagues (paginated, read-only)."""
-    from ..common import regions
+    """Most recently finished matches across leagues (paginated, read-only).
 
+    Each row carries `country` but not a derived `region`: nothing consuming this
+    feed reads one, and the dashboard's own region buckets come from
+    `GET /dashboard`, not from these rows. A client that wants the grouping can
+    derive it from `country`.
+    """
+    check_date_window(from_date, to_date)
     limit = min(max(limit, 1), 200)
     offset = max(offset, 0)
     filters: list[str] = ["m.home_score IS NOT NULL"]
@@ -148,8 +170,6 @@ def recent_matches(
             params + [limit, offset],
         )
         rows = [dict(r) for r in cur.fetchall()]
-    for row in rows:
-        row["region"] = regions.league_region(row.get("country") or "")
     return {
         "count": len(rows),
         "total": total,
@@ -241,40 +261,65 @@ PRE_MATCH_GROUP_LABELS = {
 H2H_LIMIT = 10
 
 
+_artifact_cache: dict[Path, object] = {}
+
+
+def _load_artifact(path: Path):
+    """Parse a JSON artifact once per process; None when absent or unreadable.
+
+    Both ML artifacts are large (the dataset is multi-MB, the prediction file
+    three-quarters of one) and read-only for the lifetime of the process, so
+    re-parsing them per request is pure waste. Keyed by path so each artifact
+    gets its own slot. Tests reset this via clear_artifact_cache().
+    """
+    if path not in _artifact_cache:
+        try:
+            _artifact_cache[path] = json.loads(path.read_bytes()) if path.exists() else None
+        except (json.JSONDecodeError, OSError):
+            _artifact_cache[path] = None
+    return _artifact_cache[path]
+
+
 def _load_json_index(path: Path, key: str) -> dict:
     """Load {key: record} from a JSON artifact, or {} if absent/unreadable."""
-    if not path.exists():
-        return {}
-    try:
-        payload = json.loads(path.read_bytes())
-    except (json.JSONDecodeError, OSError):
+    payload = _load_artifact(path)
+    if not isinstance(payload, dict):
         return {}
     index = payload.get(key)
     return index if isinstance(index, dict) else {}
 
 
-_dataset_cache: dict[str, dict] = {}
+def clear_artifact_cache() -> None:
+    _artifact_cache.clear()
 
 
 def _dataset_index() -> dict:
-    """api_id (str) -> feature row, memoized because the file is read-only.
+    """api_id (str) -> feature row. The dataset file is a top-level list.
 
     Cached on first use: match detail is one row out of thousands, and
-    re-reading a multi-MB artifact per request would be wasteful. Tests reset
-    the cache via clear_dataset_cache().
+    re-reading a multi-MB artifact per request would be wasteful.
     """
-    if "index" not in _dataset_cache:
-        path = DATASET_JSON
-        try:
-            rows = json.loads(path.read_bytes()) if path.exists() else []
-        except (json.JSONDecodeError, OSError):
-            rows = []
-        _dataset_cache["index"] = {str(r["api_id"]): r for r in rows if "api_id" in r}
-    return _dataset_cache["index"]
+    rows = _load_artifact(DATASET_JSON)
+    if not isinstance(rows, list):
+        return {}
+    return {str(r["api_id"]): r for r in rows if isinstance(r, dict) and "api_id" in r}
 
 
-def clear_dataset_cache() -> None:
-    _dataset_cache.clear()
+def _predictions_meta() -> dict | None:
+    """Header fields describing which model produced the stored predictions.
+
+    Read from the same parsed payload as the index, so a match detail costs one
+    artifact read in total rather than one per section.
+    """
+    payload = _load_artifact(PREDICTIONS_JSON)
+    if not isinstance(payload, dict):
+        return None
+    return {
+        "model_id": payload.get("model_id"),
+        "feature_version": payload.get("feature_version"),
+        "holdout_seasons": payload.get("holdout_seasons"),
+        "in_sample_warning": payload.get("in_sample_warning"),
+    }
 
 
 def build_pre_match(row: dict | None) -> dict | None:
@@ -433,18 +478,7 @@ def get_match_insights(api_id: int, limit: int = H2H_LIMIT) -> dict:
         )
 
     model = _load_json_index(PREDICTIONS_JSON, "matches").get(str(api_id))
-    model_meta = None
-    if PREDICTIONS_JSON.exists():
-        try:
-            head = json.loads(PREDICTIONS_JSON.read_bytes())
-            model_meta = {
-                "model_id": head.get("model_id"),
-                "feature_version": head.get("feature_version"),
-                "holdout_seasons": head.get("holdout_seasons"),
-                "in_sample_warning": head.get("in_sample_warning"),
-            }
-        except (json.JSONDecodeError, OSError):
-            model_meta = None
+    model_meta = _predictions_meta()
 
     return {
         "api_id": api_id,

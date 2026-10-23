@@ -25,6 +25,11 @@ Overrides:
                    daily refresh stops re-downloading immutable history. If a
                    league declares no in-progress season, its most recent one is
                    collected instead so the run never silently no-ops.
+    --backfill-history  probe the API for seasons older than the oldest one on
+                   disk and collect any that are missing (the endpoint declares
+                   only current + previous season on the free tier even though it
+                   serves more). Stops at the first season the API no longer
+                   serves, so a repeated backfill is a no-op.
 """
 from __future__ import annotations
 
@@ -32,23 +37,80 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 from datetime import date
 from pathlib import Path
 
+import httpx
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from collect_raw_data import build_client, get_raw  # noqa: E402
 from db_common import (  # noqa: E402
     COLLECTED_SEASONS,
     RAW_DIR,
     _season_sort_key,
     is_season_active,
     league_season_dirs,
+    parse_season_years,
 )
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 SCRIPT_DIR = Path(__file__).resolve().parent
 
 CATALOG_PATH = RAW_DIR / "league_teams.json"
+
+MAX_HISTORY_DEPTH = 8
+
+
+def prior_season(name: str) -> str | None:
+    """Return the season one year earlier in the same label format.
+
+    '2025-2026' -> '2024-2025', '2025' -> '2024', unparseable -> None.
+    """
+    start, end = parse_season_years(name)
+    if start is None or end is None:
+        return None
+    if start == end:
+        return str(start - 1)
+    return f"{start - 1}-{end - 1}"
+
+
+def missing_history_seasons(
+    client: httpx.Client,
+    league: str,
+    base_seasons: list[str],
+    *,
+    max_depth: int = MAX_HISTORY_DEPTH,
+    delay: float = 0.0,
+) -> list[str]:
+    """Seasons the API serves that are not yet on disk, oldest-walked newest first.
+
+    The free tier of the Football Charts API declares only the current and
+    previous season in /leagues/ but actually serves ~5 more, so every league is
+    missing history that a catalog-driven collector never fetches. Walking back
+    one season at a time from the oldest season already collected (in that
+    season's own label format) finds those gaps: the first season the API no
+    longer serves (HTTP 400) ends the walk, and anything already on disk is
+    skipped so a repeat run returns [].
+    """
+    if not base_seasons:
+        return []
+    existing = set(league_season_dirs(league))
+    oldest = min(base_seasons, key=_season_sort_key)
+    missing: list[str] = []
+    season = prior_season(oldest)
+    for _ in range(max_depth):
+        if season is None:
+            break
+        if delay:
+            time.sleep(delay)
+        if get_raw(client, f"/leagues/{league}/results/", {"season": season}) is None:
+            break
+        if season not in existing:
+            missing.append(season)
+        season = prior_season(season)
+    return missing
 
 
 def load_catalog(path: Path) -> dict:
@@ -123,6 +185,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                         help="also collect leagues with teams: 0 in the catalog")
     parser.add_argument("--active-only", action="store_true",
                         help="collect only seasons currently in progress (daily refresh)")
+    parser.add_argument("--backfill-history", action="store_true",
+                        help="probe the API for missing older seasons and collect them")
+    parser.add_argument("--backfill-depth", type=int, default=MAX_HISTORY_DEPTH,
+                        help="max seasons to walk back when backfilling (default: %(default)s)")
     return parser.parse_args(argv)
 
 
@@ -156,21 +222,38 @@ def main(argv: list[str] | None = None) -> int:
     results: list[dict] = []
     python = sys.executable
     today = date.today()
+    client = build_client() if args.backfill_history else None
     for league in slugs:
         if league not in catalog:
             print(f"WARN  unknown league '{league}', skipping")
             results.append({"league": league, "seasons": [], "status": "skipped"})
             continue
-        seasons = resolve_seasons(
-            catalog, league, args.season, active_only=args.active_only, today=today
-        )
-        if not seasons:
-            print(f"WARN  no season to collect for '{league}', skipping")
-            results.append({"league": league, "seasons": [], "status": "skipped"})
-            continue
+        if args.backfill_history:
+            base = league_season_dirs(league) or list(catalog[league].get("seasons") or [])
+            extra = missing_history_seasons(
+                client, league, base,
+                max_depth=args.backfill_depth,
+                delay=args.delay or 0.0,
+            )
+            if not extra:
+                print(f"WARN  '{league}': no missing history to backfill, skipping")
+                results.append({"league": league, "seasons": [], "status": "skipped"})
+                continue
+            seasons = extra
+        else:
+            seasons = resolve_seasons(
+                catalog, league, args.season, active_only=args.active_only, today=today
+            )
+            if not seasons:
+                print(f"WARN  no season to collect for '{league}', skipping")
+                results.append({"league": league, "seasons": [], "status": "skipped"})
+                continue
         code = run_collect(python, league, seasons, flag_args)
         status = "ok" if code == 0 else "failed"
         results.append({"league": league, "seasons": seasons, "status": status})
+
+    if client is not None:
+        client.close()
 
     print("\ncollect_all_leagues summary:")
     print("| league | seasons | status |")

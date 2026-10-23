@@ -1,8 +1,8 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { fireEvent, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { api } from "./api/client.js";
+import { api } from "./test/mockApi.js";
+import { renderPage } from "./test/render.jsx";
 import App from "./App.jsx";
 import {
   dashboard,
@@ -20,22 +20,17 @@ import {
   upcomingFixtures,
 } from "./test/fixtures.js";
 
-vi.mock("./api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchesRecent", "dashboard", "fixtures", "leagueFixtures",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("./api/client.js", async () => {
+  // Stub list read from the real client, so it cannot drift.
+  const { api: actual } = await vi.importActual("./api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 
 const seed = () => {
   api.listLeagues.mockResolvedValue(leagues);
-  api.meta.mockResolvedValue({ default_league: "premier" });
   api.league.mockResolvedValue(leagueDetail);
   api.standings.mockResolvedValue(standingsClassic);
   api.matches.mockResolvedValue(matchList);
@@ -56,13 +51,7 @@ const seed = () => {
   });
 };
 
-function renderApp(route) {
-  return render(
-    <MemoryRouter initialEntries={[route]}>
-      <App />
-    </MemoryRouter>,
-  );
-}
+const renderApp = (route) => renderPage(<App />, { route });
 
 describe("App routing", () => {
   beforeEach(() => {

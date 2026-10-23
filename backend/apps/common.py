@@ -31,7 +31,6 @@ ensure_scripts_path()
 from db_common import (  # noqa: E402
     LEAGUE as DEFAULT_LEAGUE,
     LEAGUE_CONFIG,
-    VIEWS,
     league_meta,
 )
 

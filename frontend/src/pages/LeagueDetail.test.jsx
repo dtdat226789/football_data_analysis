@@ -1,28 +1,29 @@
-import { fireEvent, screen, waitFor } from "@testing-library/react";
-import { Route, Routes } from "react-router-dom";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { api } from "../api/client.js";
+import { api } from "../test/mockApi.js";
 import {
   analysisBundle,
   leagueDetail,
-  leagueFixturesPayload,
   matchList,
   standingsClassic,
+  upcomingFixtures,
 } from "../test/fixtures.js";
 import { renderPage } from "../test/render.jsx";
+import { I18nProvider } from "../i18n/I18nProvider.jsx";
+import { ROUTER_FUTURE } from "../routerFuture.js";
 import LeagueDetail from "./LeagueDetail.jsx";
 
-vi.mock("../api/client.js", () => {
-  const names = [
-    "health", "meta", "listLeagues", "league", "seasons", "standings",
-    "matches", "match", "matchesRecent", "dashboard", "fixtures", "leagueFixtures",
-    "teams", "team", "teamMatches", "teamForm", "teamStandings", "teamStats",
-    "analysis", "analysisModule",
-  ];
+vi.mock("../api/client.js", async () => {
+  // The stub list is read from the real client rather than written out here.
+  // Each test used to carry its own copy of these names, and the copies had
+  // already drifted apart — so a new api.foo() call reached an undefined stub in
+  // whichever test happened to render that page first.
+  const { api: actual } = await vi.importActual("../api/client.js");
   const stub = {};
-  for (const name of names) stub[name] = vi.fn();
-  stub.chartUrl = (_l, _c) => `/api/v1/analysis/${_l}/charts/${_c}`;
+  for (const name of Object.keys(actual)) stub[name] = vi.fn();
+  stub.chartUrl = vi.fn((league, chart) => `/api/v1/analysis/${league}/charts/${chart}`);
   return { api: stub };
 });
 
@@ -30,7 +31,7 @@ const seed = () => {
   api.league.mockResolvedValue(leagueDetail);
   api.standings.mockResolvedValue(standingsClassic);
   api.matches.mockResolvedValue(matchList);
-  api.leagueFixtures.mockResolvedValue(leagueFixturesPayload);
+  api.fixtures.mockResolvedValue(upcomingFixtures);
   api.analysis.mockResolvedValue(analysisBundle);
 };
 
@@ -87,18 +88,87 @@ describe("LeagueDetail", () => {
     expect(screen.getByText("2.80")).toBeInTheDocument();
   });
 
+  it("translates the analysis tab findings and chart captions into Vietnamese", async () => {
+    api.analysis.mockResolvedValue({
+      ...analysisBundle,
+      charts: ["matches_analysis_ht_ft_matrix.png", "avg_goals.png"],
+      reports: {
+        ...analysisBundle.reports,
+        findings: {
+          key_findings: [
+            { id: "F1", finding: "Outcome split across all seasons", detail: "2330 matches: home wins 43.0%.", importance: "medium" },
+            { id: "F2", finding: "Data-quality warnings (3)", detail: "3 rows skipped.", importance: "medium" },
+            { id: "F3", finding: "Home advantage is strong", detail: "62% of points scored at home." },
+          ],
+        },
+      },
+    });
+    render(
+      <I18nProvider language="vi">
+        <MemoryRouter initialEntries={["/leagues/premier"]} future={ROUTER_FUTURE}>
+          <Routes>
+            <Route path="/leagues/:slug" element={<LeagueDetail />} />
+          </Routes>
+        </MemoryRouter>
+      </I18nProvider>,
+    );
+
+    fireEvent.click(await screen.findByRole("button", { name: "Phân tích" }));
+
+    expect(await screen.findByText("Phân bố kết quả qua các mùa giải")).toBeInTheDocument();
+    expect(screen.getByText("Cảnh báo chất lượng dữ liệu (3)")).toBeInTheDocument();
+    // An unknown finding keeps its original text rather than vanishing.
+    expect(screen.getByText("Home advantage is strong")).toBeInTheDocument();
+    // Known chart stems translate; unmapped ones fall back to the readable stem.
+    expect(screen.getByText("Ma trận hiệp một / hiệp hai")).toBeInTheDocument();
+    expect(screen.getByText("avg goals")).toBeInTheDocument();
+  });
+
   it("shows upcoming fixtures with predictions and recent results on the matches tab", async () => {
     renderDetail();
 
     fireEvent.click(await screen.findByRole("button", { name: "Matches" }));
 
-    expect(await screen.findByRole("heading", { name: /Upcoming · 2024-2025/ })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Upcoming/ })).toBeInTheDocument();
     expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText("58%")).toBeInTheDocument();
-    expect(api.leagueFixtures).toHaveBeenCalledWith("premier");
+
+    // The merged feed, not the raw per-league payload: the matches page reads the
+    // markets the backend selected, and this tab has to read the same ones.
+    expect(api.fixtures).toHaveBeenCalledWith(expect.objectContaining({ league: "premier" }));
+    expect(api.leagueFixtures).not.toHaveBeenCalled();
 
     expect(screen.getByRole("heading", { name: /Recent · 2024-2025/ })).toBeInTheDocument();
     expect(screen.getAllByRole("link", { name: "view" }).length).toBeGreaterThanOrEqual(1);
+  });
+
+  it("gives a fixture the same chips on the league tab as on the matches page", async () => {
+    renderDetail();
+
+    fireEvent.click(await screen.findByRole("button", { name: "Matches" }));
+
+    // The old tab fed `model_predictions.dc_v2.calibrated` into the legacy fixed
+    // chip set, so this one fixture wore a different row of predictions here than
+    // it did on /matches. Both pages now build chips from `selected` markets.
+    const chips = await waitFor(() => {
+      const found = [...document.querySelectorAll(".pred-chip")].map((el) => el.textContent.trim());
+      expect(found).toContain("O1.5 80%");
+      return found;
+    });
+    expect(chips).not.toContain("BTTS 55%");
+
+    // And the fixture links through to its own page, which the old tab never did.
+    expect(within(screen.getByRole("heading", { name: /Upcoming/ }).closest("section")).getAllByRole("link", { name: "detail" }).length)
+      .toBeGreaterThanOrEqual(1);
+  });
+
+  it("says so when a season has no finished matches", async () => {
+    api.matches.mockResolvedValue({ total: 0, matches: [] });
+    renderDetail();
+
+    fireEvent.click(await screen.findByRole("button", { name: "Matches" }));
+
+    // The table used to render bare under its heading, with nothing in the body.
+    expect(await screen.findByText("No finished matches recorded for 2024-2025.")).toBeInTheDocument();
   });
 
   it("lists seasons from the details payload", async () => {

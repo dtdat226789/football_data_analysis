@@ -15,7 +15,6 @@ independent SQL-level consistency check against PostgreSQL.
 """
 from __future__ import annotations
 
-from datetime import date
 
 from ml.contract import CONTEXT_COLUMNS, FEATURE_COLUMNS
 from ml.features.build_features import MATERIALIZED_COLUMNS, MATCH_RESULTS, OUTCOME_COLUMNS

@@ -12,15 +12,10 @@ import json
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
+
+from db_common import API_KEY, BASE_URL
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-load_dotenv(ROOT_DIR / ".env")
-
-import os
-
-BASE_URL = "https://footballcharts-backend.onrender.com/api/v1"
-API_KEY = os.getenv("FOOTBALL_CHARTS_API_KEY")
 OUTPUT_DIR = ROOT_DIR / "data" / "raw"
 
 LEAGUE = "premier"

@@ -13,6 +13,16 @@ venv/
 .env
 
 # =========================
+# Editor / tool droppings
+# =========================
+# Saved shell transcripts from GUI git clients land here as oddly named,
+# ANSI-escaped text files (e.g. "isvenvScriptsactivate.bat").
+isvenv*
+*.ansi
+*.orig
+*.rej
+
+# =========================
 # Node.js
 # =========================
 node_modules/
@@ -40,6 +50,9 @@ Thumbs.db
 # Test / tooling
 # =========================
 .pytest_cache/
+.ruff_cache/
+*.log
+debug.log
 
 # =========================
 # Trained ML artifacts (ml/models)
@@ -51,6 +64,39 @@ ml/models/selected_model.json
 ml/models/evaluation_report.json
 
 # =========================
+# Built ML dataset (ml/datasets)
+# =========================
+# Regenerable via ml/build_dataset.py from the database. Keep the directory
+# (.gitkeep) but not the emitted artifacts: they are several MB of derived data
+# rewritten on every rebuild, and tests that need them skip when they are absent.
+ml/datasets/*
+!ml/datasets/.gitkeep
+
+# =========================
+# Scheduled refresh logs (scripts/refresh_data.sh)
+# =========================
+# Written by the daily refresh job driven by scripts/install_task.ps1.
+# Covers the per-run log files, the refresh_latest.log symlink and the lock.
+logs/
+
+# =========================
+# Generated analysis output (data/analysis)
+# =========================
+# Produced by backend/scripts/run_analysis.py per league (94 leagues, ~2600
+# files: .json + .md + charts/*.png + dashboard.html). Fully regenerable from
+# the database, so it is build output rather than source. The generator code
+# and its tests stay tracked; only the emitted reports are ignored.
+data/analysis/
+
+# =========================
+# Per-league validation reports (scripts/refresh_data.sh)
+# =========================
+# The refresh job writes one report per league under by-league/; these are
+# regenerable and noisy (90+ files rewritten per run). The canonical
+# single-league report at the parent level stays tracked.
+data/validation/by-league/
+
+# =========================
 # Raw API dumps (data/raw)
 # =========================
 # The per-(league, season) dumps produced by collect_all_leagues.py are
@@ -60,6 +106,11 @@ ml/models/evaluation_report.json
 data/raw/*/
 !data/raw/premier/
 data/raw/premier/*/
+
+# One-off match-detail dumps written into data/raw/ by fetch_raw_data.py's ad-hoc
+# inspection mode. They sit at the top level, so the data/raw/*/ rule above does
+# not catch them.
+data/raw/match_detail_*.json
 !data/raw/premier/2020-2021/
 !data/raw/premier/2021-2022/
 !data/raw/premier/2022-2023/
@@ -68,3 +119,6 @@ data/raw/premier/*/
 !data/raw/premier/2025-2026/
 !data/raw/leagues.json
 !data/raw/league_teams.json
+
+# Chromium (running the Vite app from WSL) writes this to the repo root.
+debug.log

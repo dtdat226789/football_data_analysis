@@ -36,18 +36,16 @@ async function request(path, params = {}) {
 
 export const api = {
   health: () => request("/health"),
-  meta: () => request("/meta"),
   listLeagues: () => request("/leagues"),
   league: (league) => request(`/leagues/${league}`),
-  seasons: (league) => request(`/leagues/${league}/seasons`),
-  standings: (league, { season, view } = {}) =>
+  standings: (league, { season, view } = /** @type {{ season?: string, view?: string }} */ ({})) =>
     request(`/leagues/${league}/standings`, { season, view }),
   matches: (league, params = {}) => request(`/leagues/${league}/matches`, params),
   match: (apiId) => request(`/matches/${apiId}`),
   matchInsights: (apiId, params = {}) => request(`/matches/${apiId}/insights`, params),
-  matchesRecent: (params = {}) => request("/matches/recent", params),
+  matchesRecent: (params = /** @type {Record<string, any>} */ ({})) => request("/matches/recent", params),
   dashboard: () => request("/dashboard"),
-  fixtures: (params = {}) => request("/fixtures", params),
+  fixtures: (params = /** @type {Record<string, any>} */ ({})) => request("/fixtures", params),
   leagueFixtures: (league) => request(`/fixtures/${league}`),
   // matchId is the trailing `date-home-vs-away` slug segment, or the full
   // upstream slug when the caller has it; the route accepts either.
@@ -57,14 +55,14 @@ export const api = {
   // than adding a second path that could collide with the `:path` match id.
   fixtureMarket: (league, matchId, marketKey) =>
     request(`/fixtures/${league}/${matchId}`, { market: marketKey }),
-  teams: ({ limit, offset } = {}) => request("/teams", { limit, offset }),
+  teams: ({ limit, offset, q } = /** @type {{ limit?: number, offset?: number, q?: string }} */ ({})) =>
+    request("/teams", { limit, offset, q }),
   team: (slug) => request(`/teams/${slug}`),
   teamMatches: (slug, params = {}) => request(`/teams/${slug}/matches`, params),
   teamForm: (slug, params = {}) => request(`/teams/${slug}/form`, params),
   teamStandings: (slug, params = {}) => request(`/teams/${slug}/standings`, params),
   teamStats: (slug, params = {}) => request(`/teams/${slug}/stats`, params),
   analysis: (league) => request(`/analysis/${league}`),
-  analysisModule: (league, module) => request(`/analysis/${league}/${module}`),
   chartUrl: (league, chart) => `/api/v1/analysis/${league}/charts/${chart}`,
 };
 

@@ -9,24 +9,16 @@ import MatchInsights from "../components/MatchInsights.jsx";
 import MarketTable from "../components/MarketTable.jsx";
 import PredictionChips from "../components/PredictionChips.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
+import { useFormatters } from "../i18n/useFormatters.js";
 
-const RESULT_LABEL = { home: "Home win", draw: "Draw", away: "Away win" };
-const SCOPE_LABEL = { full_time: "Full time", half_time: "Half time" };
-
-const pct = (v) => (typeof v === "number" ? `${(v * 100).toFixed(1)}%` : "—");
-
-/** fmt keeps integers clean, renders floats to `dp` places, nulls become an em dash. */
-function fmt(value, dp = 2) {
-  if (value === null || value === undefined) return "—";
-  if (typeof value === "number") {
-    return Number.isInteger(value) ? String(value) : value.toFixed(dp);
-  }
-  return String(value);
-}
+const RESULT_KEY = { home: "result.home", draw: "result.draw", away: "result.away" };
+const SCOPE_KEY = { full_time: "market.scope.full_time", half_time: "market.scope.half_time" };
 
 /** Strip the `over_`/`ht_over_` prefix the API keeps, leaving the quoted line. */
-function lineLabel(line) {
-  return String(line || "").replace(/^ht_/, "").replace(/^over_/, "Over ");
+function lineLabel(line, t) {
+  const s = String(line || "");
+  const over = s.replace(/^ht_/, "").replace(/^over_/, "");
+  return over === s ? s : `${t("fixture.over")} ${over}`;
 }
 
 /**
@@ -35,6 +27,7 @@ function lineLabel(line) {
  * how much to trust the number.
  */
 function PredictabilityPanel({ prediction, onSelectMarket }) {
+  const { t, pct, dec } = useFormatters();
   if (!prediction) return null;
   const probs = prediction.probabilities || {};
   const goals = prediction.expected_goals || {};
@@ -46,9 +39,9 @@ function PredictabilityPanel({ prediction, onSelectMarket }) {
   return (
     <section className="card">
       <h3 style={{ marginTop: 0 }}>
-        Prediction{" "}
+        {t("predictability.title")}{" "}
         <span className="badge">{prediction.model || "—"}</span>
-        {status.stale && <span className="badge amber">stale</span>}
+        {status.stale && <span className="badge amber">{t("predictability.stale")}</span>}
       </h3>
 
       <div style={{ marginBottom: 12 }}>
@@ -62,7 +55,7 @@ function PredictabilityPanel({ prediction, onSelectMarket }) {
                 marginBottom: 3,
               }}
             >
-              <span>{RESULT_LABEL[key]}</span>
+              <span>{t(RESULT_KEY[key])}</span>
               <span style={{ fontVariantNumeric: "tabular-nums" }}>{pct(probs[key])}</span>
             </div>
             <div className="bar-track" style={{ height: 8 }}>
@@ -85,65 +78,65 @@ function PredictabilityPanel({ prediction, onSelectMarket }) {
       <table className="data" style={{ marginTop: 12 }}>
         <tbody>
           <tr>
-            <th>Expected goals</th>
+            <th>{t("predictability.expectedGoals")}</th>
             <td>
-              {fmt(goals.home)} – {fmt(goals.away)}
+              {dec(goals.home, 2)} – {dec(goals.away, 2)}
               <span className="muted" style={{ marginLeft: 8 }}>
-                HT total {fmt(goals.half_time_total)}
+                {t("predictability.htTotal")} {dec(goals.half_time_total, 2)}
               </span>
             </td>
           </tr>
           <tr>
-            <th>Ratings</th>
+            <th>{t("predictability.ratings")}</th>
             <td>
               {["home", "away"].map((side) => (
                 <span key={side} style={{ marginRight: 12 }}>
-                  {side} att {fmt(ratings[side]?.attack)} / def {fmt(ratings[side]?.defence)}
+                  {side} att {dec(ratings[side]?.attack, 2)} / def {dec(ratings[side]?.defence, 2)}
                 </span>
               ))}
             </td>
           </tr>
           <tr>
-            <th>Sample size</th>
+            <th>{t("predictability.sampleSize")}</th>
             <td>
               {["home", "away"].map((side) => (
                 <span key={side} style={{ marginRight: 12 }}>
-                  {side} {fmt(effective[side], 1)}
+                  {side} {dec(effective[side], 1)}
                 </span>
               ))}
-              <span className="muted">effective matches</span>
+              <span className="muted">{t("predictability.effectiveMatches")}</span>
             </td>
           </tr>
           <tr>
-            <th>Draw inflation</th>
+            <th>{t("predictability.drawInflation")}</th>
             <td>
-              {fmt(prediction.xi, 4)}
+              {dec(prediction.xi, 4)}
               <span className="muted" style={{ marginLeft: 8 }}>
-                sigma {fmt(prediction.sigma)}
+                sigma {dec(prediction.sigma, 1)}
               </span>
             </td>
           </tr>
           <tr>
-            <th>Gates</th>
+            <th>{t("predictability.gates")}</th>
             <td>
               {Object.entries(gates).length
                 ? Object.entries(gates)
-                    .map(([name, passed]) => `${name}: ${passed ? "pass" : "fail"}`)
+                    .map(([name, passed]) => `${name}: ${passed ? t("predictability.pass") : t("predictability.fail")}`)
                     .join(" · ")
                 : "—"}
             </td>
           </tr>
           <tr>
-            <th>Data through</th>
+            <th>{t("predictability.dataThrough")}</th>
             <td>
               {prediction.data_through || "—"}
               <span className="muted" style={{ marginLeft: 8 }}>
-                {status.matches_behind ? `${status.matches_behind} matches behind` : ""}
+                {status.matches_behind ? t("predictability.matchesBehind", { n: status.matches_behind }) : ""}
               </span>
             </td>
           </tr>
           <tr>
-            <th>Computed</th>
+            <th>{t("predictability.computed")}</th>
             <td className="muted">{prediction.computed_at || "—"}</td>
           </tr>
         </tbody>
@@ -154,24 +147,25 @@ function PredictabilityPanel({ prediction, onSelectMarket }) {
 
 /** Every over/under line the model priced, uncalibrated beside calibrated. */
 function GoalLinesPanel({ lines }) {
+  const { t, pct } = useFormatters();
   if (!lines || !lines.length) return null;
   return (
     <section className="card">
-      <h3 style={{ marginTop: 0 }}>Goal lines</h3>
+      <h3 style={{ marginTop: 0 }}>{t("predictability.goalLines")}</h3>
       <table className="data">
         <thead>
           <tr>
-            <th>Scope</th>
-            <th>Line</th>
-            <th className="num">Raw</th>
-            <th className="num">Calibrated</th>
+            <th>{t("market.col.scope")}</th>
+            <th>{t("predictability.col.line")}</th>
+            <th className="num">{t("predictability.col.raw")}</th>
+            <th className="num">{t("predictability.col.calibrated")}</th>
           </tr>
         </thead>
         <tbody>
           {lines.map((row) => (
             <tr key={row.line}>
-              <td className="muted">{SCOPE_LABEL[row.scope] || row.scope}</td>
-              <td>{lineLabel(row.line)}</td>
+              <td className="muted">{t(SCOPE_KEY[row.scope] ?? "") || row.scope}</td>
+              <td>{lineLabel(row.line, t)}</td>
               <td className="num">{pct(row.raw)}</td>
               <td className="num">{pct(row.calibrated)}</td>
             </tr>
@@ -184,6 +178,7 @@ function GoalLinesPanel({ lines }) {
 
 /** One side: crest, name, recent form, and the split that venue implies. */
 function TeamCard({ side, team, standings }) {
+  const { t, pct, dec } = useFormatters();
   if (!team) return null;
   const venue = team.venue;
   return (
@@ -194,13 +189,13 @@ function TeamCard({ side, team, standings }) {
         ) : null}
         <TeamLink name={team.name} />
         <span className="muted" style={{ fontSize: 13, fontWeight: 400 }}>
-          ({side})
+          {t(side === "home" ? "page.team.venue.home" : "page.team.venue.away")}
         </span>
       </h3>
 
       <div style={{ marginBottom: 10 }}>
         <span className="muted" style={{ fontSize: 12, display: "block" }}>
-          Form (last {team.form?.length || 0})
+          {t("predictability.form", { n: team.form?.length || 0 })}
         </span>
         <FormPills results={team.form} />
       </div>
@@ -208,13 +203,13 @@ function TeamCard({ side, team, standings }) {
       <table className="data">
         <tbody>
           <tr>
-            <th>Venue split</th>
+            <th>{t("predictability.venueSplit")}</th>
             <td>
               {venue ? (
                 <>
-                  {venue.wins}W {venue.draws}D {venue.losses}L · win rate{" "}
-                  {pct(venue.win_rate)} · {fmt(venue.goals_avg)} scored,{" "}
-                  {fmt(venue.conceded_avg)} conceded
+                  {venue.wins}W {venue.draws}D {venue.losses}L · {t("predictability.winRate")}{" "}
+                  {pct(venue.win_rate)} · {dec(venue.goals_avg, 1)} {t("predictability.scored")},{" "}
+                  {dec(venue.conceded_avg, 1)} {t("predictability.conceded")}
                 </>
               ) : (
                 "—"
@@ -222,20 +217,24 @@ function TeamCard({ side, team, standings }) {
             </td>
           </tr>
           <tr>
-            <th>Rest</th>
-            <td>{team.rest_days != null ? `${team.rest_days} days` : "—"}</td>
+            <th>{t("predictability.rest")}</th>
+            <td>{team.rest_days != null ? t("predictability.restDays", { n: team.rest_days }) : "—"}</td>
           </tr>
           <tr>
-            <th>Played</th>
+            <th>{t("predictability.played")}</th>
             <td>{team.games_before ?? "—"}</td>
           </tr>
           <tr>
-            <th>Table</th>
+            <th>{t("predictability.table")}</th>
             <td>
               {standings ? (
                 <>
-                  {standings.position} · {standings.points} pts · {standings.goal_difference > 0 ? "+" : ""}
-                  {standings.goal_difference} · {standings.played} played
+                  {t("predictability.tableLine", {
+                    position: standings.position,
+                    points: standings.points,
+                    gd: `${standings.goal_difference > 0 ? "+" : ""}${standings.goal_difference}`,
+                    played: standings.played,
+                  })}
                 </>
               ) : (
                 "—"
@@ -249,6 +248,7 @@ function TeamCard({ side, team, standings }) {
 }
 
 export default function FixtureDetail() {
+  const { t, kickoffDay, kickoffTime, instantTime, instantHeading } = useFormatters();
   const { league, "*": matchId } = useParams();
   const { data, loading, error } = useApi(
     () => (league && matchId ? api.fixtureDetail(league, matchId) : null),
@@ -270,7 +270,7 @@ export default function FixtureDetail() {
       </div>
     );
   if (error) return <ErrorBox error={error} />;
-  if (!data) return <ErrorBox error="No fixture data." />;
+  if (!data) return <ErrorBox error={t("page.fixture.noData")} />;
 
   const home = data.teams?.home;
   const away = data.teams?.away;
@@ -282,14 +282,14 @@ export default function FixtureDetail() {
           {home?.logo ? (
             <img src={home.logo} alt="" width={24} height={24} style={{ objectFit: "contain" }} />
           ) : null}{" "}
-          <TeamLink name={home?.name} /> vs <TeamLink name={away?.name} />{" "}
+          <TeamLink name={home?.name} /> {t("common.vs")} <TeamLink name={away?.name} />{" "}
           {away?.logo ? (
             <img src={away.logo} alt="" width={24} height={24} style={{ objectFit: "contain" }} />
           ) : null}
         </h2>
         <p>
-          {data.match_date} {data.kickoff?.time || ""}
-          {data.matchday ? ` · matchday ${data.matchday}` : ""}
+          {kickoffDay(data.match_date, data.kickoff?.time)} {kickoffTime(data.match_date, data.kickoff?.time)}
+          {data.matchday ? ` · ${t("page.fixture.matchdayLine", { n: data.matchday })}` : ""}
           {data.season ? ` · ${data.season}` : ""}
           {data.status ? ` · ${data.status}` : ""}
         </p>
@@ -324,11 +324,11 @@ export default function FixtureDetail() {
       />
 
       <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>Fixture record</h3>
+        <h3 style={{ marginTop: 0 }}>{t("page.fixture.record")}</h3>
         <table className="data">
           <tbody>
             <tr>
-              <th>League</th>
+              <th>{t("common.league")}</th>
               <td>
                 <Link className="link" to={`/leagues/${data.league}`}>
                   {data.league_name || data.real_league_name || data.league}
@@ -337,31 +337,35 @@ export default function FixtureDetail() {
               </td>
             </tr>
             <tr>
-              <th>Matchday</th>
+              <th>{t("page.fixture.matchday")}</th>
               <td>{data.matchday ?? "—"}</td>
             </tr>
             <tr>
-              <th>Season</th>
+              <th>{t("common.season")}</th>
               <td>
                 {data.season || "—"}
                 {data.season_state ? <span className="muted"> · {data.season_state}</span> : null}
               </td>
             </tr>
             <tr>
-              <th>Kickoff</th>
-              <td>{data.kickoff?.match_datetime || data.kickoff?.time || "—"}</td>
+              <th>{t("page.fixture.kickoff")}</th>
+              <td>
+                {data.kickoff?.match_datetime
+                  ? `${instantHeading(data.kickoff.match_datetime)} · ${instantTime(data.kickoff.match_datetime)}`
+                  : data.kickoff?.time || "—"}
+              </td>
             </tr>
             <tr>
-              <th>Label</th>
+              <th>{t("page.fixture.label")}</th>
               <td>{data.kickoff?.label || "—"}</td>
             </tr>
             <tr>
-              <th>Phase</th>
+              <th>{t("page.fixture.phase")}</th>
               <td>{data.kickoff?.league_phase_status || "—"}</td>
             </tr>
             {data.kickoff?.portal_link ? (
               <tr>
-                <th>Source</th>
+                <th>{t("page.fixture.source")}</th>
                 <td>
                   <a className="link" href={data.kickoff.portal_link} target="_blank" rel="noreferrer">
                     football-charts.com
@@ -369,10 +373,6 @@ export default function FixtureDetail() {
                 </td>
               </tr>
             ) : null}
-            <tr>
-              <th>Slug</th>
-              <td className="muted">{data.slug || "—"}</td>
-            </tr>
           </tbody>
         </table>
       </section>

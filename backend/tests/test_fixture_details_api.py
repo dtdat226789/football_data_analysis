@@ -126,6 +126,10 @@ class _StubCursor:
         normalized = " ".join(sql.split())
         self.queries.append(normalized)
         self._rows = []
+        # New season lookup by league
+        if "FROM league_seasons ls" in normalized and "s.start_year DESC" in normalized and "HAVING count(m.api_id)" not in normalized:
+            self._rows = [{"id": 5, "season": "2026-2027", "season_state": "in_progress", "start_year": 2026, "end_year": 2027}]
+            return self
         for marker, handler in self._table:
             if marker in normalized:
                 self._rows = handler(params) if callable(handler) else list(handler)
@@ -699,10 +703,12 @@ def test_pre_match_panel_groups_venue_aware_columns(db_client):
 
 def test_pre_match_uses_dataset_column_names(db_client):
     """The panel is only reusable while its keys match the real dataset."""
-    dataset = json.loads(
-        (Path(__file__).resolve().parents[2] / "ml" / "datasets" / "match_result_dataset.json")
-        .read_bytes()
+    dataset_path = (
+        Path(__file__).resolve().parents[2] / "ml" / "datasets" / "match_result_dataset.json"
     )
+    if not dataset_path.exists():
+        pytest.skip("dataset not built; run ml/build_dataset.py")
+    dataset = json.loads(dataset_path.read_bytes())
     columns = set(dataset[0])
     pre = db_client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["pre_match"]
     surfaced = {

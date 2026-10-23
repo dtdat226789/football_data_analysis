@@ -146,14 +146,24 @@ def test_matches_extra_in_db():
     assert "EXTRA_MATCH_IN_DB" in codes(issues)
 
 
-def test_matches_team_membership_missing():
+def test_matches_team_membership_missing_is_warning_not_missing():
+    issues = []
+    raw = {"matches": [raw_match(home="Mystery FC")]}
+    reconcile_matches(issues, LEAGUE, SEASON, raw, {}, team_ids())
+    assert "TEAM_MEMBERSHIP_MISSING" in codes(issues)
+    assert "MATCH_NOT_IN_DB" not in codes(issues)
+    assert issues[0]["severity"] == SEVERITY_WARNING
+
+
+def test_matches_team_membership_skip_is_never_field_compared():
+    # even when a stale row exists, the skipped match is not field-compared;
+    # the stale row is reported as extra instead (same rule as cancelled rows)
     issues = []
     raw = {"matches": [raw_match(home="Mystery FC")]}
     db = {101: db_match()}
-    team_ids_missing = {(SEASON, "Arsenal"): 1, (SEASON, "Chelsea"): 2, (SEASON, "Liverpool"): 3}
-    reconcile_matches(issues, LEAGUE, SEASON, raw, db, team_ids_missing)
-    assert "TEAM_MEMBERSHIP_MISSING" in codes(issues)
+    reconcile_matches(issues, LEAGUE, SEASON, raw, db, team_ids())
     assert "MATCH_FIELD_MISMATCH" not in codes(issues)
+    assert "EXTRA_MATCH_IN_DB" in codes(issues)
 
 
 def test_matches_wrong_season_detected():
@@ -190,7 +200,7 @@ def test_standings_clean_roundtrip_including_metrics():
     issues = []
     raw = {"table": [row()]}
     db = {(SEASON, "classic", "Arsenal"): stand_row()}
-    cnt = reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db)
+    cnt = reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db, team_ids())
     assert not issues
     assert cnt["n_compared"] == 1
 
@@ -199,7 +209,7 @@ def test_standings_core_field_mismatch():
     issues = []
     raw = {"table": [row(points=87)]}
     db = {(SEASON, "classic", "Arsenal"): stand_row(points=90)}
-    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db)
+    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db, team_ids())
     assert "STANDING_FIELD_MISMATCH" in codes(issues)
 
 
@@ -207,7 +217,7 @@ def test_standings_metrics_drift_detected():
     issues = []
     raw = {"table": [row(xpts=80.0)]}
     db = {(SEASON, "classic", "Arsenal"): stand_row(metrics={"xpts": 84.5})}
-    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db)
+    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db, team_ids())
     assert "STANDING_FIELD_MISMATCH" in codes(issues)
 
 
@@ -217,8 +227,26 @@ def test_standings_missing_and_extra():
     db = {
         (SEASON, "classic", "Liverpool"): stand_row(),  # not in raw -> EXTRA
     }
-    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db)
+    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db, team_ids())
     assert "STANDING_NOT_IN_DB" in codes(issues)
+    assert "EXTRA_STANDING_IN_DB" in codes(issues)
+
+
+def test_standings_membership_missing_is_warning_not_missing():
+    issues = []
+    raw = {"table": [row(team="Phantom FC")]}
+    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, {}, team_ids())
+    assert "TEAM_MEMBERSHIP_MISSING" in codes(issues)
+    assert "STANDING_NOT_IN_DB" not in codes(issues)
+    assert issues[0]["severity"] == SEVERITY_WARNING
+
+
+def test_standings_membership_skip_is_never_field_compared():
+    issues = []
+    raw = {"table": [row(team="Phantom FC")]}
+    db = {(SEASON, "classic", "Phantom FC"): stand_row()}
+    reconcile_standings(issues, LEAGUE, SEASON, "classic", raw, db, team_ids())
+    assert "STANDING_FIELD_MISMATCH" not in codes(issues)
     assert "EXTRA_STANDING_IN_DB" in codes(issues)
 
 
@@ -278,12 +306,58 @@ def test_teams_missing_from_db_and_extra_in_db():
     issues = []
     raw = {"teams": [team_row(team="Arsenal")]}
     db = {
-        (SEASON, "Liverpool"): db_team_row(api_name="Liverpool", team_id=3),
+        (SEASON, "Liverpool"): db_team_row(
+            api_name="Liverpool", api_slug="liverpool", team_id=3
+        ),
     }
     aliases = {}
     reconcile_teams(issues, LEAGUE, SEASON, raw, db, aliases)
     assert "TEAM_NOT_IN_DB" in codes(issues)
     assert "UNUSED_TEAM_IN_DB" in codes(issues)
+
+
+def test_teams_duplicate_slug_entry_is_warning_not_missing():
+    # kuwait 2026-2027: the same club listed twice under one slug; etl_02
+    # merges them, so the losing spelling has no team_seasons row of its own
+    issues = []
+    raw = {
+        "teams": [
+            team_row(team="Al-Fahaheel", slug="al-fahaheel"),
+            team_row(team="Al Fahaheel", slug="al-fahaheel"),
+        ]
+    }
+    db = {
+        (SEASON, "Al Fahaheel"): db_team_row(
+            team_id=4, api_name="Al Fahaheel", api_slug="al-fahaheel"
+        ),
+    }
+    aliases = {("slug", "al-fahaheel"): 4}
+    cnt = reconcile_teams(issues, LEAGUE, SEASON, raw, db, aliases)
+    assert "DUPLICATE_TEAM_IN_RAW" in codes(issues)
+    assert "TEAM_NOT_IN_DB" not in codes(issues)
+    assert issues[0]["severity"] == SEVERITY_WARNING
+    assert cnt["n_compared"] == 1
+
+
+def test_teams_unknown_name_without_slug_twin_still_errors():
+    issues = []
+    raw = {"teams": [team_row(team="Mystery FC", slug="mystery-fc")]}
+    reconcile_teams(issues, LEAGUE, SEASON, raw, {}, {})
+    assert "TEAM_NOT_IN_DB" in codes(issues)
+
+
+def test_teams_phantom_row_is_warning_not_missing():
+    # brazil1 2025: 'MG-Bahia' never plays a match and is a name variant of a
+    # participant, so etl_02 skips it and it must not surface as TEAM_NOT_IN_DB
+    issues = []
+    raw = {"teams": [team_row(team="MG-Bahia", slug="mg-bahia")]}
+    cnt = reconcile_teams(
+        issues, LEAGUE, SEASON, raw, {}, {}, phantoms={"MG-Bahia"}
+    )
+    assert "PHANTOM_TEAM_IN_RAW" in codes(issues)
+    assert "TEAM_NOT_IN_DB" not in codes(issues)
+    assert issues[0]["severity"] == SEVERITY_WARNING
+    assert cnt["n_compared"] == 0
 
 
 # ── registry ───────────────────────────────────────────────────────────────────

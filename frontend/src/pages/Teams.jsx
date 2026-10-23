@@ -1,42 +1,60 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
+import { useDebounced } from "../hooks/useDebounced.js";
 import { ErrorBox, TableSkeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
+import { pageLabel } from "../lib/pagination.js";
+import { useFormatters } from "../i18n/useFormatters.js";
 
 const PAGE_SIZE = 50;
 
 export default function Teams() {
+  const { t } = useFormatters();
   const [offset, setOffset] = useState(0);
   const [query, setQuery] = useState("");
+  // The registry holds every league at once, so the search runs server-side
+  // against all of it. Debounced to keep a request per keystroke from becoming
+  // a request per character.
+  const q = useDebounced(query.trim(), 250);
 
   const { data, loading, error } = useApi(
-    () => api.teams({ limit: PAGE_SIZE, offset }),
-    [offset],
+    () => api.teams({ limit: PAGE_SIZE, offset, q: q || undefined }),
+    [q, offset],
   );
 
-  const filtered = useMemo(() => {
-    const all = data?.teams || [];
-    const q = query.trim().toLowerCase();
-    if (!q) return all;
-    return all.filter(
-      (t) => t.canonical_name.toLowerCase().includes(q) || t.canonical_slug.toLowerCase().includes(q),
-    );
-  }, [data, query]);
+  const teams = data?.teams || [];
+  const total = data?.total ?? 0;
+  const searching = q.length > 0;
+
+  // Rewind on every keystroke rather than on the settled query: resetting with
+  // the debounced value would leave one request asking for the new term at the
+  // old page offset first.
+  const onQueryChange = (value) => {
+    setQuery(value);
+    setOffset(0);
+  };
 
   return (
     <div>
       <div className="page-head">
-        <h2>Teams</h2>
-        <p>{data ? `${data.total} teams in the canonical registry` : "…"}</p>
+        <h2>{t("page.teams.title")}</h2>
+        <p>
+          {data
+            ? searching
+              ? t("page.teams.matching", { n: total, q })
+              : t("page.teams.count", { n: total })
+            : "…"}
+        </p>
       </div>
 
       <div className="filters">
         <input
           type="search"
-          placeholder="Filter by name or slug…"
+          placeholder={t("page.teams.search")}
+          aria-label={t("common.searchAria")}
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => onQueryChange(e.target.value)}
           style={{ minWidth: 260 }}
         />
       </div>
@@ -49,36 +67,40 @@ export default function Teams() {
             <table className="data">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Team</th>
-                  <th>Slug</th>
+                  <th>{t("table.rank")}</th>
+                  <th>{t("table.team")}</th>
                 </tr>
               </thead>
               <tbody>
-                {filtered.map((t, i) => (
+                {teams.map((t, i) => (
                   <tr key={t.id}>
                     <td className="muted">{offset + i + 1}</td>
                     <td>
                       <TeamLink name={t.canonical_name} />
                     </td>
-                    <td className="muted">{t.canonical_slug}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            {filtered.length === 0 && <p className="muted">No teams match the filter.</p>}
+            {teams.length === 0 && (
+              <p className="muted">
+                {searching ? t("page.teams.noMatch", { q }) : t("page.teams.empty")}
+              </p>
+            )}
           </div>
 
           <div className="pagination">
             <button disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - PAGE_SIZE))}>
-              ‹ Prev
+              {t("common.prev")}
             </button>
             <span className="muted">
-              {data.total === 0 ? 0 : offset + 1}–{Math.min(offset + PAGE_SIZE, data.total)} of{" "}
-              {data.total}
+              {pageLabel(PAGE_SIZE, offset, total, {
+                empty: t("pagination.zero"),
+                past: t("pagination.past"),
+              })}
             </span>
-            <button disabled={offset + PAGE_SIZE >= data.total} onClick={() => setOffset(offset + PAGE_SIZE)}>
-              Next ›
+            <button disabled={offset + PAGE_SIZE >= total} onClick={() => setOffset(offset + PAGE_SIZE)}>
+              {t("common.next")}
             </button>
           </div>
         </>

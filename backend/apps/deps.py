@@ -12,11 +12,11 @@ from typing import Iterator
 import psycopg2.extras
 from fastapi import HTTPException
 
-from .common import DEFAULT_LEAGUE, LEAGUE_CONFIG, ensure_scripts_path
+from .common import LEAGUE_CONFIG, ensure_scripts_path
 
 ensure_scripts_path()
 
-from db_common import get_conn, parse_season_years  # noqa: E402
+from db_common import get_conn  # noqa: E402
 
 MAX_LIMIT = 200
 

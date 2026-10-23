@@ -49,7 +49,8 @@ def test_dataset_row_satisfies_every_group_key():
     rows = [r for r in json.loads(dataset.read_text()) if r.get("game_index", 0) > 20]
     if not rows:
         pytest.skip("no mid-season rows")
-    out = matches.build_pre_match(rows[0])
+    panel = matches.build_pre_match(rows[0])
+    assert isinstance(panel, dict) and panel, "build_pre_match returned nothing"
     for group, fields in matches._PRE_MATCH_GROUPS.items():
         missing = [
             col for col, _ in fields if col not in rows[0] or rows[0][col] is None
@@ -140,6 +141,92 @@ def test_load_json_index_ignores_wrong_shape(tmp_path):
     p = tmp_path / "p.json"
     p.write_text(json.dumps({"matches": ["not", "a", "dict"]}))
     assert matches._load_json_index(p, "matches") == {}
+
+
+def test_artifact_is_parsed_once_and_shared_by_index_and_meta(tmp_path, monkeypatch):
+    """A match detail must cost one read of the predictions file, not one per section.
+
+    Both the stored prediction and the model header used to be produced by
+    separate read_bytes()+json.loads() calls on the same ~0.8 MB file, on every
+    request, while the larger dataset was memoized.
+    """
+    p = tmp_path / "preds.json"
+    p.write_text(
+        json.dumps(
+            {
+                "model_id": "m-1",
+                "feature_version": "1.1.0",
+                "holdout_seasons": ["2025-2026"],
+                "in_sample_warning": "w",
+                "matches": {"7": {"raw": {}, "calibrated": {}}},
+            }
+        )
+    )
+    monkeypatch.setattr(matches, "PREDICTIONS_JSON", p)
+    expected_index = {"7": {"raw": {}, "calibrated": {}}}
+    expected_meta = {
+        "model_id": "m-1",
+        "feature_version": "1.1.0",
+        "holdout_seasons": ["2025-2026"],
+        "in_sample_warning": "w",
+    }
+
+    reads: list[Path] = []
+    original = Path.read_bytes
+
+    def counting_read_bytes(self: Path):
+        reads.append(self)
+        return original(self)
+
+    monkeypatch.setattr(Path, "read_bytes", counting_read_bytes)
+    matches.clear_artifact_cache()
+    try:
+        # Same two calls the endpoint makes, three times over.
+        for _ in range(3):
+            assert matches._load_json_index(matches.PREDICTIONS_JSON, "matches") == expected_index
+            assert matches._predictions_meta() == expected_meta
+    finally:
+        monkeypatch.undo()
+        matches.clear_artifact_cache()
+
+    assert len(reads) == 1
+
+
+def test_dataset_index_survives_a_top_level_dict(tmp_path, monkeypatch):
+    """The dataset is a list; a dict artifact must not crash the index build."""
+    p = tmp_path / "dataset.json"
+    p.write_text(json.dumps({"matches": [{"api_id": 7}]}))
+    monkeypatch.setattr(matches, "DATASET_JSON", p)
+    matches.clear_artifact_cache()
+    try:
+        assert matches._dataset_index() == {}
+    finally:
+        monkeypatch.undo()
+        matches.clear_artifact_cache()
+
+
+def test_predictions_meta_is_none_when_the_artifact_is_absent(tmp_path, monkeypatch):
+    monkeypatch.setattr(matches, "PREDICTIONS_JSON", tmp_path / "gone.json")
+    matches.clear_artifact_cache()
+    try:
+        assert matches._predictions_meta() is None
+    finally:
+        monkeypatch.undo()
+        matches.clear_artifact_cache()
+
+
+def test_clear_artifact_cache_forces_a_reread(tmp_path):
+    p = tmp_path / "p.json"
+    p.write_text(json.dumps({"matches": {"1": {"v": 1}}}))
+    matches.clear_artifact_cache()
+    try:
+        assert matches._load_json_index(p, "matches") == {"1": {"v": 1}}
+        p.write_text(json.dumps({"matches": {"1": {"v": 2}}}))
+        assert matches._load_json_index(p, "matches") == {"1": {"v": 1}}, "should be cached"
+        matches.clear_artifact_cache()
+        assert matches._load_json_index(p, "matches") == {"1": {"v": 2}}
+    finally:
+        matches.clear_artifact_cache()
 
 
 # ── endpoint ────────────────────────────────────────────────────────────────

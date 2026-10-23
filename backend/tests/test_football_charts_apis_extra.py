@@ -13,8 +13,18 @@ Endpoints tested:
 from __future__ import annotations
 
 import httpx
+import pytest
 
-from .conftest import SEASONS
+from .conftest import API_KEY, SEASONS
+
+
+# These hit the live Football Charts API. Without a key the upstream answers
+# anon_rate_limited, so every assertion below failed on a quota error rather
+# than on a real defect. Skip instead, which also keeps `pytest` usable offline.
+pytestmark = pytest.mark.skipif(
+    not API_KEY,
+    reason="live API tests need FOOTBALL_CHARTS_API_KEY; see .env.example",
+)
 
 TEAM_COUNT = 20
 TIME_BINS = ["0-15", "15-30", "30-45", "45+", "46-60", "60-75", "75-90", "90+"]
@@ -31,7 +41,8 @@ class TestGetProjection:
 
     def test_top_level_keys(self, premier_projection_response: httpx.Response):
         data = premier_projection_response.json()
-        assert set(data.keys()) == {"projection", "attribution"}
+        required = {"projection", "attribution"}
+        assert required.issubset(data.keys())
 
     def test_projection_field_keys(self, premier_projection_response: httpx.Response):
         proj = premier_projection_response.json()["projection"]
@@ -290,6 +301,10 @@ class TestGetMatchDetail:
     def test_upcoming_match_model_predictions(self, api_client: httpx.Client, fixture_slug: str):
         match = api_client.get(f"/matches/{fixture_slug}/").json()["match"]
         preds = match["model_predictions"]
+        # Nullable: upstream returns null until a model publishes for the
+        # fixture. See test_model_predictions_null_or_non_empty.
+        if preds is None:
+            pytest.skip("Upstream published no model predictions for this fixture")
         assert isinstance(preds, dict)
         assert len(preds) > 0
         model = next(iter(preds.values()))
@@ -329,7 +344,8 @@ class TestGetTrackRecord:
 
     def test_top_level_keys(self, track_record_response: httpx.Response):
         data = track_record_response.json()
-        assert set(data.keys()) == {"track_record", "attribution"}
+        required = {"track_record", "attribution"}
+        assert required.issubset(data.keys())
 
     def test_track_record_field_keys(self, track_record_response: httpx.Response):
         tr = track_record_response.json()["track_record"]

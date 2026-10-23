@@ -4,17 +4,18 @@ import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import PredictionChips from "../components/PredictionChips.jsx";
+import { useFormatters } from "../i18n/useFormatters.js";
 
-const REGION_LABELS = {
-  europe: "Europe",
-  asia: "Asia",
-  america: "Americas",
-  other: "Other",
+const REGION_KEYS = {
+  europe: "region.europe",
+  asia: "region.asia",
+  america: "region.america",
+  other: "region.other",
 };
 
 export function regionBuckets(byRegion) {
   const buckets = byRegion ?? {};
-  const known = Object.keys(REGION_LABELS);
+  const known = Object.keys(REGION_KEYS);
   const extra = Object.keys(buckets).filter((r) => !known.includes(r));
   return [...known, ...extra].map((region) => ({
     region,
@@ -22,7 +23,7 @@ export function regionBuckets(byRegion) {
   }));
 }
 
-function LeagueCard({ item }) {
+function LeagueCard({ item, t, num }) {
   return (
     <Link to={`/leagues/${item.slug}`} className="card league-card" style={{ textDecoration: "none" }}>
       <div className="league-card-name">{item.name}</div>
@@ -30,17 +31,17 @@ function LeagueCard({ item }) {
         {item.country}
       </div>
       <div className="muted" style={{ fontSize: 12, marginTop: 6 }}>
-        {item.matches > 0 ? `${item.matches.toLocaleString("en-US")} matches` : "no data"}
+        {item.matches > 0 ? t("common.matches_other", { n: num(item.matches) }) : t("common.noData")}
       </div>
     </Link>
   );
 }
 
-function RegionSection({ region, leagues }) {
+function RegionSection({ region, leagues, t }) {
   return (
     <section>
       <h3>
-        {REGION_LABELS[region] ?? region}
+        {t(REGION_KEYS[region] ?? "") || region}
         <span className="badge">{leagues.length}</span>
       </h3>
       <div className="mini-grid">
@@ -48,13 +49,13 @@ function RegionSection({ region, leagues }) {
           <Link key={item.slug} to={`/leagues/${item.slug}`} className="card mini" style={{ textDecoration: "none" }}>
             <div className="mini-name">{item.name}</div>
             <div className="muted" style={{ fontSize: 12 }}>
-              {item.country} · {item.matches > 0 ? `${item.matches} m` : "no data"}
+              {item.country} · {item.matches > 0 ? `${item.matches} m` : t("common.noData")}
             </div>
           </Link>
         ))}
         {leagues.length > 8 && (
           <div className="muted" style={{ alignSelf: "center" }}>
-            +{leagues.length - 8} more
+            {t("common.more", { n: leagues.length - 8 })}
           </div>
         )}
       </div>
@@ -63,6 +64,7 @@ function RegionSection({ region, leagues }) {
 }
 
 export default function Dashboard() {
+  const { t, num, kickoffDay, kickoffTime, plainDay } = useFormatters();
   const { data, loading, error } = useApi(() => api.dashboard(), []);
 
   if (loading)
@@ -80,7 +82,7 @@ export default function Dashboard() {
       </div>
     );
   if (error) return <ErrorBox error={error} />;
-  if (!data) return <ErrorBox error="No dashboard data returned." />;
+  if (!data) return <ErrorBox error={t("page.dashboard.noData")} />;
 
   const {
     top_leagues: topLeagues = [],
@@ -93,42 +95,45 @@ export default function Dashboard() {
   return (
     <div>
       <div className="page-head">
-        <h2>Dashboard</h2>
+        <h2>{t("page.dashboard.title")}</h2>
         <p>
-          {data.meta?.n_leagues} leagues · {recent.length} recent results · {upcoming.length} upcoming
-          matches with model predictions
+          {t("page.dashboard.summary", {
+            leagues: num(data.meta?.n_leagues),
+            recent: num(recent.length),
+            upcoming: num(upcoming.length),
+          })}
         </p>
       </div>
 
       <section>
         <h3>
-          Top leagues <span className="badge">by matches</span>
+          {t("page.dashboard.topLeagues")} <span className="badge">{t("page.dashboard.byMatches")}</span>
         </h3>
         <div className="mini-grid">
           {topLeagues.map((item) => (
-            <LeagueCard key={item.slug} item={item} />
+            <LeagueCard key={item.slug} item={item} t={t} num={num} />
           ))}
         </div>
       </section>
 
       <div className="two-col">
         <section className="card">
-          <h3 style={{ marginTop: 0 }}>Upcoming · top picks</h3>
+          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.upcomingTopPicks")}</h3>
           <Link className="link" to="/matches" style={{ fontSize: 13 }}>
-            View all matches →
+            {t("page.dashboard.viewAll")}
           </Link>
           {upcoming.length === 0 ? (
-            <p className="muted">No collected fixtures. Run <code>fetch_fixtures.py</code> first.</p>
+            <p className="muted">{t("page.dashboard.noFixtures")}</p>
           ) : (
             <div className="event-list" style={{ marginTop: 10 }}>
               {upcoming.map((m, i) => (
                 <div key={i} className="event">
                   <div className="teams">
                     <span className="muted" style={{ fontSize: 12 }}>
-                      {m.match_date} {m.time}
+                      {kickoffDay(m.match_date, m.time)} {kickoffTime(m.match_date, m.time)}
                     </span>
                     <span>
-                      <TeamLink name={m.home_team} /> vs <TeamLink name={m.away_team} />
+                      <TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} />
                     </span>
                   </div>
                   <div className="muted" style={{ fontSize: 12 }}>
@@ -147,25 +152,25 @@ export default function Dashboard() {
         </section>
 
         <section className="card">
-          <h3 style={{ marginTop: 0 }}>Recent results</h3>
+          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.recentResults")}</h3>
           <Link className="link" to="/matches" style={{ fontSize: 13 }}>
-            View all matches →
+            {t("page.dashboard.viewAll")}
           </Link>
           {recent.length === 0 ? (
-            <p className="muted">No results collected.</p>
+            <p className="muted">{t("page.dashboard.noResults")}</p>
           ) : (
             <div className="event-list" style={{ marginTop: 10 }}>
               {recent.map((m) => (
                 <div key={m.api_id} className="event">
                   <div className="teams">
                     <span className="muted" style={{ fontSize: 12 }}>
-                      {m.match_date} · {m.league_name || m.league}
+                      {plainDay(m.match_date)} · {m.league_name || m.league}
                     </span>
                     <span>
                       <TeamLink name={m.home_team} /> <strong>{m.home_score}–{m.away_score}</strong>{" "}
                       <TeamLink name={m.away_team} />{" "}
                       <Link className="link" to={`/match/${m.api_id}`} style={{ fontSize: 12 }}>
-                        view
+                        {t("common.view")}
                       </Link>
                     </span>
                   </div>
@@ -176,9 +181,9 @@ export default function Dashboard() {
         </section>
 
         <section className="card">
-          <h3 style={{ marginTop: 0 }}>Top clubs · current leaders</h3>
+          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.topClubs")}</h3>
           {topClubs.length === 0 ? (
-            <p className="muted">No leaders.</p>
+            <p className="muted">{t("page.dashboard.noLeaders")}</p>
           ) : (
             <div className="event-list" style={{ marginTop: 10 }}>
               {topClubs.map((c, i) => (
@@ -189,7 +194,7 @@ export default function Dashboard() {
                     </span>
                   </div>
                   <div className="score">
-                    {c.points} pts · #{c.position} · {c.season}
+                    {num(c.points)} {t("common.pts")} · #{num(c.position)} · {c.season}
                   </div>
                 </div>
               ))}
@@ -199,10 +204,10 @@ export default function Dashboard() {
       </div>
 
       <section>
-        <h3>Leagues by region</h3>
+        <h3>{t("page.dashboard.byRegion")}</h3>
         <div className="grid regions">
           {regionBuckets(byRegion).map(({ region, leagues }) => (
-            <RegionSection key={region} region={region} leagues={leagues} />
+            <RegionSection key={region} region={region} leagues={leagues} t={t} />
           ))}
         </div>
       </section>

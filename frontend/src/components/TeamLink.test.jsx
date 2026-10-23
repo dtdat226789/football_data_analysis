@@ -1,16 +1,12 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
+import { renderPage } from "../test/render.jsx";
 import { TeamLink } from "./TeamLink.jsx";
 
 describe("TeamLink", () => {
   it("renders a router link to the encoded team name", () => {
-    render(
-      <MemoryRouter>
-        <TeamLink name="Arsenal FC" />
-      </MemoryRouter>,
-    );
+    renderPage(<TeamLink name="Arsenal FC" />);
 
     const link = screen.getByRole("link", { name: "Arsenal FC" });
     expect(link).toHaveAttribute("href", "/teams/Arsenal%20FC");
@@ -18,11 +14,7 @@ describe("TeamLink", () => {
   });
 
   it("renders an em dash when there is no team name", () => {
-    render(
-      <MemoryRouter>
-        <TeamLink name="" />
-      </MemoryRouter>,
-    );
+    renderPage(<TeamLink name="" />);
 
     expect(screen.getByText("—")).toBeInTheDocument();
   });

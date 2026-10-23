@@ -22,7 +22,64 @@ ml = [
 ]
 dev = [
     "pytest>=8.0",
+    "ruff>=0.16",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+# The pipeline scripts are imported by path from ml/, so they have to stay
+# importable as top-level modules; `__init__.py` would break that.
+extend-exclude = ["node_modules", "frontend/dist", ".venv"]
+
+[tool.ruff.lint]
+# Deliberately bug-finding rules only. Stylistic families (SIM, RET, TRY, C4,
+# UP, PLR09xx, N, RUF, PIE) were tried and dropped: they produced ~200 findings
+# that were reviewer opinions rather than defects, which trains people to ignore
+# the linter. Add them back per-file when a file is being reworked.
+select = [
+    "F",      # pyflakes: undefined names, unused imports/variables, shadowing
+    "B",      # flake8-bugbear
+    "E7",     # pycodestyle statements: bare except, ambiguous names, walrus
+    "W",      # pycodestyle warnings: final newlines, blank lines
+    "DTZ",    # flake8-datetimez: naive datetimes are a correctness bug here
+    "PLC", "PLE",
+    "ARG",    # flake8-unused-arguments
+]
+ignore = [
+    # Deliberately unenforced: 260+ inline suppressions already carry E501, so
+    # the codebase treats line length as a review concern, not a gate.
+    "E501",
+    # Every script bootstraps sys.path and imports the app/helpers inside main();
+    # E402 is the intended shape, not an oversight.
+    "E402",
+    # Same reason, one level down: `from ml... import ...` inside functions and
+    # inside the sys.path bootstrap.
+    "PLC0415",
+    # `l`/`I`/`O` as loop and dict variables is idiomatic in the matrix-style
+    # validation code.
+    "E741",
+    # `zip(a, b)` here pairs parallel fixture columns whose length mismatch is
+    # checked separately; adding strict= would turn a tolerated edge case into
+    # a crash in the daily pipeline.
+    "B905",
+    # The pipeline is keyed on local calendar dates (`date.today()` selects the
+    # window to refresh), so a naive local date is the intent, not a bug. DTZ005
+    # for aware datetimes stays enabled.
+    "DTZ011",
+    # Route handlers legitimately take keyword params FastAPI fills in.
+    "ARG001",
+    "ARG002",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests import modules purely for their side effects (sys.path bootstrap,
+# catalog registration) and for fixtures that read better ungrouped.
+"**/tests/**" = ["PLR2004", "ARG", "B011", "F402", "F811", "F401"]
+"**/conftest.py" = ["ARG", "F401", "F811"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["apps", "ml"]
 
 [tool.pytest.ini_options]
 # `backend` holds the FastAPI app plus the pipeline scripts; `ml` imports them by

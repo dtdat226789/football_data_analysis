@@ -1,8 +1,8 @@
-function pct(v) {
-  return typeof v === "number" ? `${(v * 100).toFixed(0)}%` : "—";
-}
+import { useFormatters } from "../i18n/useFormatters.js";
 
-/** Accept keys with underscore (pruned feed) or dot (raw dc_v2 calibrated). */
+/**
+ * Accept keys with underscore (pruned feed) or dot (raw dc_v2 calibrated).
+ */
 function value(p, underscored) {
   const raw = p[underscored];
   if (typeof raw === "number") return raw;
@@ -27,23 +27,90 @@ function chipTone(v) {
   return v >= 0.75 ? "chip-strong" : "chip-mid";
 }
 
-const SCOPE_TEXT = {
-  full_time: "full time",
-  half_time: "half time",
-  half_to_full: "half time / full time",
+const SCOPE_KEY = {
+  full_time: "market.scope.ftShort",
+  half_time: "market.scope.htShort",
+  half_to_full: "market.scope.htftShort",
 };
 
+/**
+ * Localised label for one market chip.
+ *
+ * The backend serves markets with structured fields (family/selection/line),
+ * so the label is rebuilt from those rather than translated label strings.
+ * English renders the shorthand the reader is looking for (O1.5, X, BTTS, 1/1)
+ * and Vietnamese expands each to a readable phrase, keeping the number format
+ * locale-aware. Falls back to the raw label for shapes it does not recognise.
+ */
+export function chipLabel(market, t, line) {
+  const family = market.family;
+  const selection = market.selection;
+  if (family === "result") {
+    if (selection === "home" || selection === "draw" || selection === "away") {
+      return t(`chip.result.${selection}`);
+    }
+  }
+  if (family === "double_chance") {
+    if (selection === "home_or_draw" || selection === "draw_or_away" || selection === "home_or_away") {
+      return t(`chip.dc.${selection}`);
+    }
+  }
+  if (family === "btts") {
+    if (selection === "yes" || selection === "no" || selection === "short") {
+      return t(`chip.btts.${selection}`);
+    }
+  }
+  if (family === "totals") {
+    if (selection === "over" || selection === "under") {
+      const key = selection === "over" ? "chip.totals.over" : "chip.totals.under";
+      return t(key, { line: line(market.line) });
+    }
+  }
+  if (family === "team_total") {
+    if (selection === "home" || selection === "away") {
+      // The over/under side is encoded in the market key, e.g. ".over_1.5".
+      const over = String(market.key || "").includes(".over_");
+      const side = t(selection === "home" ? "chip.side.home" : "chip.side.away");
+      const key = over ? "chip.teamTotal.over" : "chip.teamTotal.under";
+      return t(key, { side, line: line(market.line) });
+    }
+  }
+  if (family === "asian_handicap") {
+    if (selection === "home" || selection === "away") {
+      // The stored line is always the home side's; the away side is its negation.
+      const raw = selection === "away" ? -market.line : market.line;
+      const sign = raw < 0 ? "-" : "+";
+      const side = t(selection === "home" ? "chip.side.home" : "chip.side.away");
+      return t("chip.handicap", { side, line: `${sign}${line(Math.abs(raw))}` });
+    }
+  }
+  if (family === "ht_ft") {
+    const [ht, ft] = String(selection || "").split("_");
+    const side = (s) =>
+      t(s === "home" ? "chip.ht.home" : s === "away" ? "chip.ht.away" : s === "draw" ? "chip.ht.draw" : "");
+    return t("chip.htft", { ht: side(ht), ft: side(ft) });
+  }
+  if (family === "correct_score") {
+    // The scoreline lives in the key tail ("2-1"); `selection` is just a
+    // positional marker on these rows.
+    const tail = String(market.key || "").split(".").pop();
+    const score = /^\d+-\d+$/.test(tail) ? tail : market.label;
+    return t("chip.correctScore", { score });
+  }
+  return market.label || market.key || "";
+}
+
 /** One-line explanation of where a derived number came from. */
-function marketTitle(market) {
-  const scope = SCOPE_TEXT[market.scope] || market.scope;
-  const parts = [`${market.label} · ${scope}`];
+function marketTitle(market, t, line, pct0) {
+  const scope = t(SCOPE_KEY[market.scope] ?? "") || market.scope;
+  const parts = [`${chipLabel(market, t, line)} · ${scope}`];
   if (market.provenance === "modelled") {
-    parts.push("assumed: the model does not publish this split, so it is derived");
+    parts.push(t("market.titleAssumed"));
   } else {
-    parts.push("from the model's goal distribution");
+    parts.push(t("market.titleModel"));
   }
   if (typeof market.push === "number" && market.push > 0) {
-    parts.push(`${pct(market.push)} push`);
+    parts.push(t("market.push", { pct: pct0(market.push) }));
   }
   return parts.join(" — ");
 }
@@ -70,6 +137,15 @@ function marketTitle(market) {
  * out, the chips stay inert spans and the markup is unchanged — the list views
  * render them as a summary, not as a control.
  */
+/**
+ * @param {object} props
+ * @param {Record<string, any>} [props.predictions]
+ * @param {boolean} [props.compact]
+ * @param {string | number} [props.confidence]
+ * @param {string} [props.dataThrough]
+ * @param {(market: object) => void} [props.onSelect] Supplied only when the chips
+ *   are interactive; without it the row is read-only.
+ */
 export default function PredictionChips({
   predictions,
   compact = false,
@@ -77,6 +153,7 @@ export default function PredictionChips({
   dataThrough,
   onSelect,
 }) {
+  const { t, pct0, line } = useFormatters();
   const p = predictions || {};
   const selected = Array.isArray(p.selected) ? p.selected.filter((m) => m && typeof m.probability === "number") : null;
   const dynamic = selected && selected.length > 0;
@@ -87,21 +164,21 @@ export default function PredictionChips({
   const chips = dynamic
     ? selected.map((market) => ({
         key: market.key || market.label,
-        label: market.label,
-        value: pct(market.probability),
-        title: marketTitle(market),
+        label: chipLabel(market, t, line),
+        value: pct0(market.probability),
+        title: marketTitle(market, t, line, pct0),
         market,
         cls: [chipTone(market.probability), market.provenance === "modelled" ? "chip-assumed" : ""]
           .filter(Boolean)
           .join(" "),
       }))
     : [
-        { key: "home", label: "1", value: pct(value(p, "home")), title: "Home win probability", cls: strength(value(p, "home")) },
-        { key: "draw", label: "X", value: "—", title: "Draw probability (not modelled)", cls: "" },
-        { key: "away", label: "2", value: pct(value(p, "away")), title: "Away win probability", cls: strength(value(p, "away")) },
-        { key: "btts", label: "BTTS", value: pct(value(p, "btts_yes")), title: "Both teams to score", cls: strength(value(p, "btts_yes")) },
-        { key: "o15", label: "O1.5", value: pct(value(p, "over_1_5")), title: "Over 1.5 goals", cls: strength(value(p, "over_1_5")) },
-        { key: "o25", label: "O2.5", value: pct(value(p, "over_2_5")), title: "Over 2.5 goals", cls: strength(value(p, "over_2_5")) },
+        { key: "home", label: chipLabel({ family: "result", selection: "home" }, t, line), value: pct0(value(p, "home")), title: t("pred.homeTitle"), cls: strength(value(p, "home")) },
+        { key: "draw", label: chipLabel({ family: "result", selection: "draw" }, t, line), value: "—", title: t("pred.drawTitle"), cls: "" },
+        { key: "away", label: chipLabel({ family: "result", selection: "away" }, t, line), value: pct0(value(p, "away")), title: t("pred.awayTitle"), cls: strength(value(p, "away")) },
+        { key: "btts", label: chipLabel({ family: "btts", selection: "short" }, t, line), value: pct0(value(p, "btts_yes")), title: t("pred.bttsTitle"), cls: strength(value(p, "btts_yes")) },
+        { key: "o15", label: chipLabel({ family: "totals", selection: "over", line: 1.5 }, t, line), value: pct0(value(p, "over_1_5")), title: t("pred.o15Title"), cls: strength(value(p, "over_1_5")) },
+        { key: "o25", label: chipLabel({ family: "totals", selection: "over", line: 2.5 }, t, line), value: pct0(value(p, "over_2_5")), title: t("pred.o25Title"), cls: strength(value(p, "over_2_5")) },
       ];
 
   const showMeta = typeof confidence === "number" || dataThrough;
@@ -126,8 +203,8 @@ export default function PredictionChips({
       )}
       {showMeta && (
         <span className="pred-meta">
-          {typeof confidence === "number" && <span>conf {pct(confidence)}</span>}
-          {dataThrough && <span>as of {dataThrough}</span>}
+          {typeof confidence === "number" && <span>{t("pred.conf")} {pct0(confidence)}</span>}
+          {dataThrough && <span>{t("pred.asOf")} {dataThrough}</span>}
         </span>
       )}
     </span>

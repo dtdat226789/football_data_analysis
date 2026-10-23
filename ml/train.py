@@ -110,7 +110,7 @@ def split_rows_for_dev(rows: list[dict], train_seasons: list[str], dev_season: s
 
 
 def train_candidates(
-    X: "X", y: "y", X_val: "X_val", y_val: "y_val"
+    X: np.ndarray, y: np.ndarray, X_val: np.ndarray, y_val: np.ndarray
 ) -> dict[str, dict]:
     """Fit every candidate on the dev window and score it on the dev validation set."""
     results: dict[str, dict] = {}

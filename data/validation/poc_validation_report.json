@@ -1,15 +1,16 @@
 {
   "report_name": "poc_validation_report",
-  "generated_at": "2026-09-22T13:14:30",
+  "generated_at": "2026-10-23T03:02:39+00:00",
   "scope": {
-    "league": "japan1",
+    "league": "wsweden",
     "seasons": [
-      "2020-2021",
-      "2021-2022",
-      "2022-2023",
-      "2023-2024",
-      "2024-2025",
-      "2025-2026"
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
     ],
     "views": [
       "classic",
@@ -18,8 +19,8 @@
     ]
   },
   "overall": {
-    "errors": 144,
-    "warnings": 1,
+    "errors": 0,
+    "warnings": 16,
     "pass": 0,
     "categories": [
       "cross_endpoint",
@@ -35,102 +36,234 @@
   },
   "checks": {
     "response_structure": {
-      "status": "ERROR",
+      "status": "WARNING",
       "leagues": {
         "status": "WARNING",
         "declared_seasons": [
-          "2026-2027",
-          "2026"
+          "2026",
+          "2025"
         ]
       },
       "seasonal": {
-        "status": "ERROR"
+        "status": "WARNING"
       }
     },
     "file_completeness": {
-      "status": "ERROR",
-      "expected_count": 31,
-      "present_count": 1,
-      "missing_files": [
-        "data/raw/japan1/2020-2021/teams.json",
-        "data/raw/japan1/2020-2021/results.json",
-        "data/raw/japan1/2020-2021/table_classic.json",
-        "data/raw/japan1/2020-2021/table_luck.json",
-        "data/raw/japan1/2020-2021/table_goals.json",
-        "data/raw/japan1/2021-2022/teams.json",
-        "data/raw/japan1/2021-2022/results.json",
-        "data/raw/japan1/2021-2022/table_classic.json",
-        "data/raw/japan1/2021-2022/table_luck.json",
-        "data/raw/japan1/2021-2022/table_goals.json",
-        "data/raw/japan1/2022-2023/teams.json",
-        "data/raw/japan1/2022-2023/results.json",
-        "data/raw/japan1/2022-2023/table_classic.json",
-        "data/raw/japan1/2022-2023/table_luck.json",
-        "data/raw/japan1/2022-2023/table_goals.json",
-        "data/raw/japan1/2023-2024/teams.json",
-        "data/raw/japan1/2023-2024/results.json",
-        "data/raw/japan1/2023-2024/table_classic.json",
-        "data/raw/japan1/2023-2024/table_luck.json",
-        "data/raw/japan1/2023-2024/table_goals.json",
-        "data/raw/japan1/2024-2025/teams.json",
-        "data/raw/japan1/2024-2025/results.json",
-        "data/raw/japan1/2024-2025/table_classic.json",
-        "data/raw/japan1/2024-2025/table_luck.json",
-        "data/raw/japan1/2024-2025/table_goals.json",
-        "data/raw/japan1/2025-2026/teams.json",
-        "data/raw/japan1/2025-2026/results.json",
-        "data/raw/japan1/2025-2026/table_classic.json",
-        "data/raw/japan1/2025-2026/table_luck.json",
-        "data/raw/japan1/2025-2026/table_goals.json"
-      ]
+      "status": "PASS",
+      "expected_count": 36,
+      "present_count": 36,
+      "missing_files": []
     },
     "teams": {
-      "status": "PASS",
+      "status": "WARNING",
       "per_season": {
-        "2020-2021": {
-          "teams": null
+        "2020": {
+          "teams": null,
+          "n_teams": 12
         },
-        "2021-2022": {
-          "teams": null
+        "2021": {
+          "teams": null,
+          "n_teams": 12
         },
-        "2022-2023": {
-          "teams": null
+        "2022": {
+          "teams": null,
+          "n_teams": 14
         },
-        "2023-2024": {
-          "teams": null
+        "2023": {
+          "teams": null,
+          "n_teams": 14
         },
-        "2024-2025": {
-          "teams": null
+        "2024": {
+          "teams": null,
+          "n_teams": 14
         },
-        "2025-2026": {
-          "teams": null
+        "2025": {
+          "teams": null,
+          "n_teams": 14
+        },
+        "2026": {
+          "teams": null,
+          "n_teams": 14
         }
       },
-      "field_sets": []
+      "field_sets": [
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ],
+        [
+          "logo_url",
+          "played",
+          "points",
+          "position",
+          "slug",
+          "team"
+        ]
+      ]
     },
     "results": {
-      "status": "PASS",
+      "status": "WARNING",
       "per_season": {
-        "2020-2021": {
-          "n_matches": null
+        "2020": {
+          "n_matches": 132
         },
-        "2021-2022": {
-          "n_matches": null
+        "2021": {
+          "n_matches": 132
         },
-        "2022-2023": {
-          "n_matches": null
+        "2022": {
+          "n_matches": 182
         },
-        "2023-2024": {
-          "n_matches": null
+        "2023": {
+          "n_matches": 182
         },
-        "2024-2025": {
-          "n_matches": null
+        "2024": {
+          "n_matches": 182
         },
-        "2025-2026": {
-          "n_matches": null
+        "2025": {
+          "n_matches": 182
+        },
+        "2026": {
+          "n_matches": 154
         }
       },
-      "field_sets": []
+      "field_sets": [
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "score",
+          "time"
+        ],
+        [
+          "awayTeam",
+          "date",
+          "first_goal_time",
+          "first_goal_time_extra",
+          "game_index",
+          "goalless",
+          "homeTeam",
+          "ht_result",
+          "id",
+          "kickoff_utc",
+          "score",
+          "time"
+        ]
+      ]
     },
     "team_references": {
       "status": "PASS"
@@ -138,110 +271,155 @@
     "match_identity": {
       "status": "PASS",
       "per_season": {
-        "2020-2021": {
-          "n_matches": null
+        "2020": {
+          "n_matches": 132,
+          "id_min": 62255,
+          "id_max": 62386,
+          "game_index_min": 1,
+          "game_index_max": 132
         },
-        "2021-2022": {
-          "n_matches": null
+        "2021": {
+          "n_matches": 132,
+          "id_min": 62123,
+          "id_max": 62254,
+          "game_index_min": 1,
+          "game_index_max": 132
         },
-        "2022-2023": {
-          "n_matches": null
+        "2022": {
+          "n_matches": 182,
+          "id_min": 61395,
+          "id_max": 61576,
+          "game_index_min": 1,
+          "game_index_max": 182
         },
-        "2023-2024": {
-          "n_matches": null
+        "2023": {
+          "n_matches": 182,
+          "id_min": 61941,
+          "id_max": 62122,
+          "game_index_min": 1,
+          "game_index_max": 182
         },
-        "2024-2025": {
-          "n_matches": null
+        "2024": {
+          "n_matches": 182,
+          "id_min": 61759,
+          "id_max": 61940,
+          "game_index_min": 1,
+          "game_index_max": 182
         },
-        "2025-2026": {
-          "n_matches": null
+        "2025": {
+          "n_matches": 182,
+          "id_min": 61577,
+          "id_max": 61758,
+          "game_index_min": 1,
+          "game_index_max": 182
+        },
+        "2026": {
+          "n_matches": 154,
+          "id_min": 210593,
+          "id_max": 222278,
+          "game_index_min": 1,
+          "game_index_max": 154
         }
       }
     },
     "table": {
-      "status": "PASS",
+      "status": "WARNING",
       "per_season": {
-        "2020-2021": {
+        "2020": {
           "classic": {
-            "rows": null,
+            "rows": 12,
             "view": "classic"
           },
           "luck": {
-            "rows": null,
+            "rows": 12,
             "view": "luck"
           },
           "goals": {
-            "rows": null,
+            "rows": 12,
             "view": "goals"
           }
         },
-        "2021-2022": {
+        "2021": {
           "classic": {
-            "rows": null,
+            "rows": 12,
             "view": "classic"
           },
           "luck": {
-            "rows": null,
+            "rows": 12,
             "view": "luck"
           },
           "goals": {
-            "rows": null,
+            "rows": 12,
             "view": "goals"
           }
         },
-        "2022-2023": {
+        "2022": {
           "classic": {
-            "rows": null,
+            "rows": 14,
             "view": "classic"
           },
           "luck": {
-            "rows": null,
+            "rows": 14,
             "view": "luck"
           },
           "goals": {
-            "rows": null,
+            "rows": 14,
             "view": "goals"
           }
         },
-        "2023-2024": {
+        "2023": {
           "classic": {
-            "rows": null,
+            "rows": 14,
             "view": "classic"
           },
           "luck": {
-            "rows": null,
+            "rows": 14,
             "view": "luck"
           },
           "goals": {
-            "rows": null,
+            "rows": 14,
             "view": "goals"
           }
         },
-        "2024-2025": {
+        "2024": {
           "classic": {
-            "rows": null,
+            "rows": 14,
             "view": "classic"
           },
           "luck": {
-            "rows": null,
+            "rows": 14,
             "view": "luck"
           },
           "goals": {
-            "rows": null,
+            "rows": 14,
             "view": "goals"
           }
         },
-        "2025-2026": {
+        "2025": {
           "classic": {
-            "rows": null,
+            "rows": 14,
             "view": "classic"
           },
           "luck": {
-            "rows": null,
+            "rows": 14,
             "view": "luck"
           },
           "goals": {
-            "rows": null,
+            "rows": 14,
+            "view": "goals"
+          }
+        },
+        "2026": {
+          "classic": {
+            "rows": 14,
+            "view": "classic"
+          },
+          "luck": {
+            "rows": 14,
+            "view": "luck"
+          },
+          "goals": {
+            "rows": 14,
             "view": "goals"
           }
         }
@@ -251,23 +429,119 @@
       "status": "PASS"
     },
     "historical": {
-      "status": "PASS",
-      "team_counts": {},
-      "match_counts": {},
-      "roster_churn": {},
+      "status": "WARNING",
+      "team_counts": {
+        "2020": 12,
+        "2021": 12,
+        "2022": 14,
+        "2023": 14,
+        "2024": 14,
+        "2025": 14,
+        "2026": 14
+      },
+      "match_counts": {
+        "2020": 132,
+        "2021": 132,
+        "2022": 182,
+        "2023": 182,
+        "2024": 182,
+        "2025": 182,
+        "2026": 154
+      },
+      "roster_churn": {
+        "2021": {
+          "added": [
+            "AIK W",
+            "Hacken W",
+            "Hammarby W"
+          ],
+          "removed": [
+            "Goteborg W",
+            "Umea W",
+            "Uppsala W"
+          ]
+        },
+        "2022": {
+          "added": [
+            "IF Brommapojkarna W",
+            "Kalmar W",
+            "Umea W"
+          ],
+          "removed": [
+            "Vaxjo DFF W"
+          ]
+        },
+        "2023": {
+          "added": [
+            "Norrkoping W",
+            "Uppsala W",
+            "Vaxjo DFF W"
+          ],
+          "removed": [
+            "AIK W",
+            "Eskilstuna Utd W",
+            "Umea W"
+          ]
+        },
+        "2024": {
+          "added": [
+            "AIK W",
+            "Trelleborg W"
+          ],
+          "removed": [
+            "Kalmar W",
+            "Uppsala W"
+          ]
+        },
+        "2025": {
+          "added": [
+            "Alingsas W",
+            "Malmo FF W"
+          ],
+          "removed": [
+            "KIF Orebro W",
+            "Trelleborg W"
+          ]
+        },
+        "2026": {
+          "added": [
+            "Eskilstuna Utd W",
+            "Uppsala W"
+          ],
+          "removed": [
+            "Alingsas W",
+            "Linkoping W"
+          ]
+        }
+      },
       "recurring_issues": [
         {
-          "code": "FILE_UNREADABLE",
-          "severity": "ERROR",
-          "n": 114
+          "code": "TABLE_ROWS_UNEXPECTED",
+          "severity": "WARNING",
+          "n": 6
         },
         {
-          "code": "FILE_MISSING",
-          "severity": "ERROR",
-          "n": 30
+          "code": "RESULTS_COUNT_UNEXPECTED",
+          "severity": "WARNING",
+          "n": 3
+        },
+        {
+          "code": "TEAMS_COUNT",
+          "severity": "WARNING",
+          "n": 2
         },
         {
           "code": "SEASON_NOT_DECLARED",
+          "severity": "WARNING",
+          "n": 1
+        },
+        {
+          "code": "RESULTS_NOT_CHRONOLOGICAL",
+          "severity": "WARNING",
+          "n": 1
+        },
+        {
+          "code": "TABLE_ID_SEASON_SCOPED",
           "severity": "WARNING",
           "n": 1
         }
@@ -276,1838 +550,249 @@
   },
   "issues": [
     {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2020-2021",
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "Expected file is missing: teams.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2020-2021",
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "Expected file is missing: results.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2020-2021",
-      "file": "data/raw/japan1/2020-2021/table_classic.json",
-      "message": "Expected file is missing: table_classic.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2020-2021",
-      "file": "data/raw/japan1/2020-2021/table_luck.json",
-      "message": "Expected file is missing: table_luck.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2020-2021",
-      "file": "data/raw/japan1/2020-2021/table_goals.json",
-      "message": "Expected file is missing: table_goals.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2021-2022",
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "Expected file is missing: teams.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2021-2022",
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "Expected file is missing: results.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2021-2022",
-      "file": "data/raw/japan1/2021-2022/table_classic.json",
-      "message": "Expected file is missing: table_classic.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2021-2022",
-      "file": "data/raw/japan1/2021-2022/table_luck.json",
-      "message": "Expected file is missing: table_luck.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2021-2022",
-      "file": "data/raw/japan1/2021-2022/table_goals.json",
-      "message": "Expected file is missing: table_goals.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2022-2023",
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "Expected file is missing: teams.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2022-2023",
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "Expected file is missing: results.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2022-2023",
-      "file": "data/raw/japan1/2022-2023/table_classic.json",
-      "message": "Expected file is missing: table_classic.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2022-2023",
-      "file": "data/raw/japan1/2022-2023/table_luck.json",
-      "message": "Expected file is missing: table_luck.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2022-2023",
-      "file": "data/raw/japan1/2022-2023/table_goals.json",
-      "message": "Expected file is missing: table_goals.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2023-2024",
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "Expected file is missing: teams.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2023-2024",
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "Expected file is missing: results.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2023-2024",
-      "file": "data/raw/japan1/2023-2024/table_classic.json",
-      "message": "Expected file is missing: table_classic.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2023-2024",
-      "file": "data/raw/japan1/2023-2024/table_luck.json",
-      "message": "Expected file is missing: table_luck.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2023-2024",
-      "file": "data/raw/japan1/2023-2024/table_goals.json",
-      "message": "Expected file is missing: table_goals.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2024-2025",
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "Expected file is missing: teams.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2024-2025",
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "Expected file is missing: results.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2024-2025",
-      "file": "data/raw/japan1/2024-2025/table_classic.json",
-      "message": "Expected file is missing: table_classic.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2024-2025",
-      "file": "data/raw/japan1/2024-2025/table_luck.json",
-      "message": "Expected file is missing: table_luck.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2024-2025",
-      "file": "data/raw/japan1/2024-2025/table_goals.json",
-      "message": "Expected file is missing: table_goals.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2025-2026",
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "Expected file is missing: teams.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2025-2026",
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "Expected file is missing: results.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2025-2026",
-      "file": "data/raw/japan1/2025-2026/table_classic.json",
-      "message": "Expected file is missing: table_classic.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2025-2026",
-      "file": "data/raw/japan1/2025-2026/table_luck.json",
-      "message": "Expected file is missing: table_luck.json",
-      "details": {},
-      "examples": []
-    },
-    {
-      "category": "file_completeness",
-      "code": "FILE_MISSING",
-      "severity": "ERROR",
-      "league": "japan1",
-      "season": "2025-2026",
-      "file": "data/raw/japan1/2025-2026/table_goals.json",
-      "message": "Expected file is missing: table_goals.json",
-      "details": {},
-      "examples": []
-    },
-    {
       "category": "response_structure",
       "code": "SEASON_NOT_DECLARED",
       "severity": "WARNING",
-      "league": "japan1",
+      "league": "wsweden",
       "season": null,
-      "file": "data/raw/japan1/leagues.json",
+      "file": "data/raw/wsweden/leagues.json",
       "message": "Historical seasons are fetched directly but not declared by /leagues/ (expected API behaviour: current + previous only)",
       "details": {
         "declared_seasons": [
-          "2026-2027",
-          "2026"
+          "2026",
+          "2025"
         ],
         "undeclared_seasons": [
-          "2020-2021",
-          "2021-2022",
-          "2022-2023",
-          "2023-2024",
-          "2024-2025",
-          "2025-2026"
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
         ]
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'",
+      "category": "teams",
+      "code": "TEAMS_COUNT",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2020",
+      "file": "data/raw/wsweden/2020/teams.json",
+      "message": "Team count is 12, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_luck.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_luck.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_luck.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_goals.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_goals.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_goals.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_classic.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/table_classic.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'",
-      "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'"
-      },
-      "examples": []
-    },
-    {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'",
+      "category": "teams",
+      "code": "TEAMS_COUNT",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2021",
+      "file": "data/raw/wsweden/2021/teams.json",
+      "message": "Team count is 12, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2025-2026/table_classic.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_classic.json'",
+      "category": "results",
+      "code": "RESULTS_COUNT_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2020",
+      "file": "data/raw/wsweden/2020/results.json",
+      "message": "Match count is 132, expected 182 for a complete 14-team round-robin season",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/table_classic.json'"
+        "expected": 182,
+        "actual": 132
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'",
+      "category": "results",
+      "code": "RESULTS_COUNT_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2021",
+      "file": "data/raw/wsweden/2021/results.json",
+      "message": "Match count is 132, expected 182 for a complete 14-team round-robin season",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/teams.json'"
+        "expected": 182,
+        "actual": 132
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2020-2021/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'",
+      "category": "results",
+      "code": "RESULTS_COUNT_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2026",
+      "file": "data/raw/wsweden/2026/results.json",
+      "message": "Match count is 154, expected 182 for a complete 14-team round-robin season",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2020-2021/results.json'"
+        "expected": 182,
+        "actual": 154
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'",
+      "category": "results",
+      "code": "RESULTS_NOT_CHRONOLOGICAL",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2026",
+      "file": "data/raw/wsweden/2026/results.json",
+      "message": "Matches are not in chronological date order",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/teams.json'"
+        "n_out_of_order": 1
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2021-2022/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'",
+      "category": "table",
+      "code": "TABLE_ROWS_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2020",
+      "file": "data/raw/wsweden/2020/table_classic.json",
+      "message": "table_classic has 12 rows, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2021-2022/results.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'",
+      "category": "table",
+      "code": "TABLE_ROWS_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2020",
+      "file": "data/raw/wsweden/2020/table_luck.json",
+      "message": "table_luck has 12 rows, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/teams.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2022-2023/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'",
+      "category": "table",
+      "code": "TABLE_ROWS_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2020",
+      "file": "data/raw/wsweden/2020/table_goals.json",
+      "message": "table_goals has 12 rows, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2022-2023/results.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'",
+      "category": "table",
+      "code": "TABLE_ROWS_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2021",
+      "file": "data/raw/wsweden/2021/table_classic.json",
+      "message": "table_classic has 12 rows, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/teams.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2023-2024/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'",
+      "category": "table",
+      "code": "TABLE_ROWS_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2021",
+      "file": "data/raw/wsweden/2021/table_luck.json",
+      "message": "table_luck has 12 rows, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2023-2024/results.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
-      "season": null,
-      "file": "data/raw/japan1/2024-2025/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'",
+      "category": "table",
+      "code": "TABLE_ROWS_UNEXPECTED",
+      "severity": "WARNING",
+      "league": "wsweden",
+      "season": "2021",
+      "file": "data/raw/wsweden/2021/table_goals.json",
+      "message": "table_goals has 12 rows, expected 14",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/teams.json'"
+        "expected": 14,
+        "actual": 12
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
+      "category": "table",
+      "code": "TABLE_ID_SEASON_SCOPED",
+      "severity": "WARNING",
+      "league": "wsweden",
       "season": null,
-      "file": "data/raw/japan1/2024-2025/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'",
+      "file": "data/raw/wsweden/2020/table_classic.json",
+      "message": "Table row 'id' is not a stable team identifier: only 0 of 94 distinct ids appear in every collected season",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2024-2025/results.json'"
+        "n_seasons": 7,
+        "distinct_ids_overall": 94,
+        "ids_in_all_seasons": 0
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
+      "category": "historical",
+      "code": "TEAM_COUNT_CHANGE",
+      "severity": "WARNING",
+      "league": "wsweden",
       "season": null,
-      "file": "data/raw/japan1/2025-2026/teams.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'",
+      "file": null,
+      "message": "Team count varies across seasons",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/teams.json'"
+        "per_season": {
+          "2020": 12,
+          "2021": 12,
+          "2022": 14,
+          "2023": 14,
+          "2024": 14,
+          "2025": 14,
+          "2026": 14
+        }
       },
       "examples": []
     },
     {
-      "category": "response_structure",
-      "code": "FILE_UNREADABLE",
-      "severity": "ERROR",
-      "league": null,
+      "category": "historical",
+      "code": "MATCH_COUNT_CHANGE",
+      "severity": "WARNING",
+      "league": "wsweden",
       "season": null,
-      "file": "data/raw/japan1/2025-2026/results.json",
-      "message": "File exists but is not valid JSON: [Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'",
+      "file": null,
+      "message": "Match count varies across seasons",
       "details": {
-        "error": "[Errno 2] No such file or directory: '/mnt/e/football_data_analysis/data/raw/japan1/2025-2026/results.json'"
+        "per_season": {
+          "2020": 132,
+          "2021": 132,
+          "2022": 182,
+          "2023": 182,
+          "2024": 182,
+          "2025": 182,
+          "2026": 154
+        }
       },
       "examples": []
     }

@@ -11,19 +11,14 @@ Design decision inputs gathered here:
 from __future__ import annotations
 
 import json
-import os
-import sys
 from collections import Counter
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
+
+from db_common import API_KEY, BASE_URL
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT_DIR / "backend"))
-load_dotenv(ROOT_DIR / ".env")
-
-from tests.conftest import BASE_URL, API_KEY  # noqa: E402
 
 LEAGUE = "premier"
 SEASON = "2025-2026"

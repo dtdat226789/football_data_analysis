@@ -34,11 +34,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from analysis_common import (
-    VERSION,
     parse_args,
     args_to_config,
     report_metadata,
     write_report,
+    rel_to_root,
     fmt_md_table,
     render_report_header,
 )
@@ -123,7 +123,7 @@ def build_sources(out_dir: Path) -> list[dict]:
         exists = path.is_file()
         sources.append({
             "report_name": stem,
-            "path": str(path),
+            "path": rel_to_root(path),
             "exists": exists,
             "loaded": False,
             "size_kb": round(path.stat().st_size / 1024, 2) if exists else None,

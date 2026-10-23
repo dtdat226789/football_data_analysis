@@ -15,7 +15,16 @@ import json
 import httpx
 import pytest
 
-from .conftest import LEAGUES, SEASONS, VIEWS
+from .conftest import API_KEY, LEAGUES, SEASONS, VIEWS
+
+
+# These hit the live Football Charts API. Without a key the upstream answers
+# anon_rate_limited, so every assertion below failed on a quota error rather
+# than on a real defect. Skip instead, which also keeps `pytest` usable offline.
+pytestmark = pytest.mark.skipif(
+    not API_KEY,
+    reason="live API tests need FOOTBALL_CHARTS_API_KEY; see .env.example",
+)
 
 
 # ── GET /leagues/ ──────────────────────────────────────────────────────────────
@@ -235,16 +244,31 @@ class TestGetLeagueFixtures:
         fixture = matches[0]
         assert "model_predictions" in fixture
         preds = fixture["model_predictions"]
-        assert len(preds) > 0, "No model predictions found"
+        # The key is part of the contract; the value is nullable. Upstream
+        # returns null for a fixture no model has published probabilities for
+        # yet (routine far ahead of kickoff), so only validate when present.
+        if preds is None:
+            pytest.skip("Upstream published no model predictions for this fixture")
+        assert len(preds) > 0, "model_predictions present but empty"
         model_key = next(iter(preds))
         model = preds[model_key]
         assert "raw" in model
         assert "calibrated" in model
         assert "ratings" in model
 
+    def test_model_predictions_null_or_non_empty(self, premier_fixtures_response: httpx.Response):
+        """model_predictions is always None or a non-empty dict, never malformed."""
+        for fixture in premier_fixtures_response.json()["matches"]:
+            preds = fixture.get("model_predictions")
+            assert preds is None or (
+                isinstance(preds, dict) and len(preds) > 0
+            ), f"Unexpected model_predictions for {fixture.get('home_team')} vs {fixture.get('away_team')}: {preds!r}"
+
     def test_prediction_probabilities_valid_range(self, premier_fixtures_response: httpx.Response):
         for fixture in premier_fixtures_response.json()["matches"]:
-            preds = fixture["model_predictions"]
+            preds = fixture.get("model_predictions")
+            if preds is None:
+                continue
             for model_name, model in preds.items():
                 raw = model.get("raw", {})
                 for key in ("home", "away", "btts_yes", "over_1.5", "over_2.5"):

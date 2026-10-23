@@ -81,7 +81,8 @@ def test_args_roundtrip_defaults():
     args = ac.parse_args("desc", ["--out-dir", "/tmp/x"])
     cfg = ac.args_to_config(args)
     assert cfg["league"] == ac.LEAGUE
-    assert cfg["out_dir"] == str(Path("/tmp/x").resolve())
+    assert cfg["out_dir"] == ac.rel_to_root("/tmp/x")
+    assert not cfg["out_dir"].startswith(str(ac.ROOT_DIR))
 
 
 def test_args_allow_customisation():
@@ -89,6 +90,37 @@ def test_args_allow_customisation():
     cfg = ac.args_to_config(args)
     assert cfg["league"] == "spain1"
     assert cfg["out_stem"] == "y"
+
+
+def test_rel_to_root_strips_machine_prefix():
+    inside = ac.ROOT_DIR / "data" / "analysis" / "premier"
+    assert ac.rel_to_root(inside) == "data/analysis/premier"
+
+
+def test_rel_to_root_outside_repo_is_absolute_posix():
+    out = ac.rel_to_root("/tmp/x")
+    assert out.startswith("/")
+    assert "\\" not in out
+
+
+def test_md_link_is_relative_to_report_dir(tmp_path):
+    chart = tmp_path / "charts" / "c.png"
+    chart.parent.mkdir(parents=True)
+    chart.write_bytes(b"x")
+    md = tmp_path / "report.md"
+    md.write_text("")
+    assert ac.md_link(chart, md) == "charts/c.png"
+
+
+def test_write_report_chart_links_resolve(tmp_path):
+    chart = tmp_path / "charts" / "c.png"
+    chart.parent.mkdir(parents=True)
+    chart.write_bytes(b"x")
+    _, mp = ac.write_report(tmp_path, "t", {"x": 1}, lambda r: "", charts=[chart])
+    link = [ln for ln in mp.read_text().splitlines() if ln.startswith("![")][0]
+    target = link.split("(", 1)[1].rstrip(")")
+    assert (mp.parent / target).resolve() == chart.resolve()
+    assert "\\" not in target
 
 
 def test_write_report(tmp_path):
@@ -105,7 +137,7 @@ def test_write_report_appends_charts(tmp_path):
     chart.parent.mkdir(parents=True, exist_ok=True)
     chart.write_bytes(b"png")
     _, mp = ac.write_report(tmp_path, "test_report", report, lambda r: "body", charts=[chart])
-    assert "![c](%s)" % chart in mp.read_text()
+    assert "![c](charts/c.png)" in mp.read_text()
 
 
 def test_fmt_md_table_and_pct():

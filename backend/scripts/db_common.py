@@ -20,6 +20,32 @@ load_dotenv(ROOT_DIR / ".env")
 SQL_DIR = ROOT_DIR / "sql"
 RAW_DIR = ROOT_DIR / "data" / "raw"
 
+# ── upstream Football Charts API ─────────────────────────────────────────────
+# BASE_URL and API_KEY used to live in backend/tests/conftest.py, which the
+# collector scripts imported from. That made the ingest pipeline depend on
+# pytest being installed and on `tests` being importable, so it is declared
+# here instead: db_common is already the module every script and the API app
+# imports, and it is the module that loads the project .env.
+BASE_URL = "https://footballcharts-backend.onrender.com/api/v1"
+API_KEY = os.getenv("FOOTBALL_CHARTS_API_KEY")
+
+
+def require_api_key() -> str:
+    """Return FOOTBALL_CHARTS_API_KEY or exit with the .env hint."""
+    if not API_KEY:
+        sys.exit("FOOTBALL_CHARTS_API_KEY not set in project root .env")
+    return API_KEY
+
+
+def api_headers() -> dict:
+    """Authorization headers for the upstream API.
+
+    Exits when no key is configured: every collector needs one, so failing
+    before the first request beats 401-ing partway through a long run.
+    """
+    return {"Authorization": f"Bearer {require_api_key()}"}
+
+
 LEAGUE = "premier"
 COLLECTED_SEASONS = [
     "2020-2021",
@@ -189,6 +215,44 @@ def raw_file(season: str, name: str, league: str | None = None) -> Path:
 
 def load_json(path: Path) -> dict:
     return json.loads(path.read_bytes())
+
+
+def phantom_team_names(teams_rows: list, matches: list) -> set[str]:
+    """Roster names that are upstream phantom rows, not real league members.
+
+    Some league/season responses carry extra rows that never play a match in
+    results.json and whose name is a hyphen-variant of a real participant that
+    does (e.g. 'MG-Bahia' vs 'Bahia', 'PK' vs 'PK-35', 'Shimizu S' vs
+    'Shimizu S-Pulse', 'Varen Nagasaki-Avispa Fukuoka' vs 'Avispa Fukuoka').
+    etl_02 skips these rows so they never reach team_seasons/standings.
+
+    A real participant is never reported: the row must be absent from
+    results.json AND share a prefix/suffix-dash-boundary with a participant.
+    With no matches yet the participant set is empty, so nothing is ever
+    filtered: pre-season rosters stay intact.
+    """
+    participants = {
+        name
+        for m in matches
+        if isinstance(m, dict)
+        for name in (m.get("homeTeam"), m.get("awayTeam"))
+        if name
+    }
+    phantoms: set[str] = set()
+    for t in teams_rows:
+        if not isinstance(t, dict):
+            continue
+        name = t.get("team")
+        if not name or name in participants:
+            continue
+        if any(
+            p.startswith(f"{name}-")
+            or name.startswith(f"{p}-")
+            or name.endswith(f"-{p}")
+            for p in participants
+        ):
+            phantoms.add(name)
+    return phantoms
 
 
 def parse_season_years(name: str) -> tuple[int | None, int | None]:

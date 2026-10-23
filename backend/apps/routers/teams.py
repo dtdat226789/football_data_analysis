@@ -30,6 +30,33 @@ def _require_team(cur, slug: str) -> int:
     return team_id
 
 
+def _require_team_in_league(cur, team_id: int, league: str, slug: str) -> None:
+    """404 when the team has never appeared in this league.
+
+    `require_league` only proves the league is registered, so
+    /teams/arsenal/matches?league=germany1 used to answer 200 with an empty
+    list -- indistinguishable from "Arsenal have not played yet". Membership is
+    checked across every season of the league, not the requested one, so a team
+    whose data for one season is missing is still reachable.
+    """
+    cur.execute(
+        """
+        SELECT 1
+        FROM team_seasons ts
+        JOIN league_seasons ls ON ls.id = ts.league_season_id
+        WHERE ts.team_id = %s
+          AND ls.league_id = (SELECT id FROM leagues WHERE api_key = %s)
+        LIMIT 1
+        """,
+        (team_id, league),
+    )
+    if cur.fetchone() is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"team '{slug}' does not play in league '{league}'",
+        )
+
+
 def _resolve_league_season(cur, league: str, season: str | None) -> str:
     if season is None:
         season = resolve_latest_season(cur, league)
@@ -43,19 +70,47 @@ def _resolve_league_season(cur, league: str, season: str | None) -> str:
     return season
 
 
+def _team_search_filter(q: str | None) -> tuple[str, list]:
+    """WHERE fragment + params for a team search. Empty fragment when no `q`.
+
+    Aliases are included so search accepts the same spellings
+    `/teams/{slug}` resolves. Today every alias is either the canonical name or
+    the canonical slug, so that clause changes no results; it is here so a
+    `manual`/`etl_resolution` alias recorded later is findable without another
+    change, rather than to widen the match today.
+    """
+    needle = (q or "").strip()
+    if not needle:
+        return "", []
+    pattern = f"%{needle}%"
+    return (
+        "WHERE t.canonical_name ILIKE %s OR t.canonical_slug ILIKE %s OR EXISTS ("
+        "  SELECT 1 FROM team_aliases ta WHERE ta.team_id = t.id AND ta.value ILIKE %s"
+        ")",
+        [pattern, pattern, pattern],
+    )
+
+
 @router.get("/teams")
-def list_teams(limit: int = 50, offset: int = 0) -> dict:
+def list_teams(limit: int = 50, offset: int = 0, q: str | None = None) -> dict:
+    """The canonical registry, optionally narrowed by a free-text search.
+
+    The registry spans every league, so the search has to run server-side: a
+    client filtering one 50-row page can only ever match what it happened to
+    fetch.
+    """
     limit, offset = norm_pagination(limit, offset)
+    where, params = _team_search_filter(q)
     with fetched_cursor() as cur:
-        cur.execute("SELECT count(*) FROM teams")
+        cur.execute(f"SELECT count(*) FROM teams t {where}", params)
         total = cur.fetchone()[0]
         cur.execute(
-            "SELECT id, canonical_name, canonical_slug FROM teams "
-            "ORDER BY canonical_name LIMIT %s OFFSET %s",
-            (limit, offset),
+            f"SELECT t.id, t.canonical_name, t.canonical_slug FROM teams t {where} "
+            f"ORDER BY t.canonical_name LIMIT %s OFFSET %s",
+            params + [limit, offset],
         )
         rows = [dict(r) for r in cur.fetchall()]
-    return {"total": total, "limit": limit, "offset": offset, "teams": rows}
+    return {"total": total, "limit": limit, "offset": offset, "q": q, "teams": rows}
 
 
 @router.get("/teams/{slug}")
@@ -100,6 +155,7 @@ def team_matches(
     limit, offset = norm_pagination(limit, offset)
     with fetched_cursor() as cur:
         team_id = _require_team(cur, slug)
+        _require_team_in_league(cur, team_id, league, slug)
         season = _resolve_league_season(cur, league, season)
         cur.execute(
             "SELECT count(*) FROM matches m JOIN league_seasons ls "
@@ -142,6 +198,7 @@ def team_form(
     n = min(max(n, 1), 20)
     with fetched_cursor() as cur:
         team_id = _require_team(cur, slug)
+        _require_team_in_league(cur, team_id, league, slug)
         season = _resolve_league_season(cur, league, season)
         filters = [
             "ls.league_id = (SELECT id FROM leagues WHERE api_key = %s)",
@@ -218,6 +275,7 @@ def team_standings(
     require_league(league)
     with fetched_cursor() as cur:
         team_id = _require_team(cur, slug)
+        _require_team_in_league(cur, team_id, league, slug)
         season = _resolve_league_season(cur, league, season)
         cur.execute(
             """
@@ -243,14 +301,27 @@ def team_standings(
     }
 
 
-def _team_stats_data(cur, slug: str, league: str, view: str) -> dict:
-    """Aggregate a team's per-season tables and home/away splits for a league."""
+def _team_stats_data(cur, slug: str, league: str, view: str, season: str | None = None) -> dict:
+    """A team's table history for a league, plus a scoped aggregate.
+
+    Two timeframes come back in one payload, so they are named:
+
+    ``seasons``
+        Every season the team appears in, always, ordered oldest first. The
+        two per-season charts and ``best`` are computed from this, so they stay
+        a career view no matter what ``season`` is set to.
+    ``totals`` / ``home_away``
+        Scoped to ``season`` when one is given, otherwise the whole league
+        history. ``scope`` in the response says which.
+
+    The season scope used to be absent entirely, so the league/season selector
+    on the team page silently left these figures career-wide while the panel sat
+    directly beneath it.
+    """
     team_id = _require_team(cur, slug)
-    cur.execute("SELECT id FROM leagues WHERE api_key = %s", (league,))
-    league_row = cur.fetchone()
-    if league_row is None:
+    cur.execute("SELECT 1 FROM leagues WHERE api_key = %s", (league,))
+    if cur.fetchone() is None:
         raise HTTPException(status_code=404, detail=f"unknown league '{league}'")
-    league_id = league_row[0]
 
     cur.execute(
         """
@@ -285,12 +356,14 @@ def _team_stats_data(cur, slug: str, league: str, view: str) -> dict:
                sum(CASE WHEN m.home_team_id = %(team)s THEN m.away_score ELSE m.home_score END) AS ga
         FROM matches m
         JOIN league_seasons ls ON ls.id = m.league_season_id
+        JOIN seasons s ON s.id = ls.season_id
         JOIN leagues l ON l.id = ls.league_id
         WHERE l.api_key = %(league)s
           AND (m.home_team_id = %(team)s OR m.away_team_id = %(team)s)
+          AND (%(season)s IS NULL OR s.name = %(season)s)
         GROUP BY m.home_team_id = %(team)s
         """,
-        {"league": league, "team": team_id},
+        {"league": league, "team": team_id, "season": season},
     )
     sides: dict = {}
     for r in cur.fetchall():
@@ -310,35 +383,48 @@ def _team_stats_data(cur, slug: str, league: str, view: str) -> dict:
             "win_pct": round(100 * won / played, 1) if played else 0.0,
         }
 
-    played = sum(s["played"] for s in seasons)
+    scoped = [s for s in seasons if s["season"] == season] if season else seasons
+    played = sum(s["played"] for s in scoped)
+    points = sum(s["points"] for s in scoped)
     totals = {
         "played": played,
-        "won": sum(s["won"] for s in seasons),
-        "drawn": sum(s["drawn"] for s in seasons),
-        "lost": sum(s["lost"] for s in seasons),
-        "goals_for": sum(s["goals_for"] for s in seasons),
-        "goals_against": sum(s["goals_against"] for s in seasons),
-        "points": sum(s["points"] for s in seasons),
-        "ppg": round(sum(s["points"] for s in seasons) / played, 2) if played else 0.0,
+        "won": sum(s["won"] for s in scoped),
+        "drawn": sum(s["drawn"] for s in scoped),
+        "lost": sum(s["lost"] for s in scoped),
+        "goals_for": sum(s["goals_for"] for s in scoped),
+        "goals_against": sum(s["goals_against"] for s in scoped),
+        "points": points,
+        "ppg": round(points / played, 2) if played else 0.0,
     }
     totals["goal_difference"] = totals["goals_for"] - totals["goals_against"]
-    positions = [s["position"] for s in seasons if s["position"] is not None]
+
+    # One row, so position, season and points always describe the same season.
+    # Previously position came from min(position) while points came from
+    # max(points), which are frequently different seasons.
+    ranked = [s for s in seasons if s["position"] is not None]
+    best_row = min(ranked, key=lambda s: s["position"]) if ranked else None
+    best = (
+        {
+            "position": best_row["position"],
+            "position_season": best_row["season"],
+            "points": best_row["points"],
+            "played": best_row["played"],
+        }
+        if best_row
+        else {"position": None, "position_season": None, "points": None, "played": None}
+    )
+
     return {
         "team": slug,
         "league": league,
         "league_name": common.league_name(league),
         "view": view,
+        "season": season,
+        "scope": season or "all",
         "seasons": seasons,
         "totals": totals,
         "home_away": sides,
-        "best": {
-            "position": min(positions) if positions else None,
-            "position_season": next(
-                (s["season"] for s in seasons if s["position"] == min(positions)),
-                None,
-            ) if positions else None,
-            "points": max((s["points"] for s in seasons), default=None),
-        },
+        "best": best,
     }
 
 
@@ -347,7 +433,11 @@ def team_stats(
     slug: str,
     league: str = common.DEFAULT_LEAGUE,
     view: Literal["classic", "luck", "goals"] = "classic",
+    season: str | None = None,
 ) -> dict:
     require_league(league)
     with fetched_cursor() as cur:
-        return _team_stats_data(cur, slug, league, view)
+        _require_team_in_league(cur, _require_team(cur, slug), league, slug)
+        if season is not None:
+            ensure_season(cur, league, season)
+        return _team_stats_data(cur, slug, league, view, season)

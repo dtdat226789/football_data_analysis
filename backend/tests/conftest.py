@@ -1,15 +1,18 @@
-import os
+import sys
 from pathlib import Path
 
 import httpx
 import pytest
-from dotenv import load_dotenv
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
-load_dotenv(ROOT_DIR / ".env")
+BACKEND_SCRIPTS = str(Path(__file__).resolve().parents[1] / "scripts")
 
-BASE_URL = "https://footballcharts-backend.onrender.com/api/v1"
-API_KEY = os.getenv("FOOTBALL_CHARTS_API_KEY")
+if BACKEND_SCRIPTS not in sys.path:
+    sys.path.insert(0, BACKEND_SCRIPTS)
+
+# BASE_URL/API_KEY and the .env load live in db_common so the collector scripts
+# and the tests read the same upstream config from one place.
+from db_common import API_KEY, BASE_URL, VIEWS  # noqa: E402,F401
 
 LEAGUES = [
     "premier",
@@ -26,8 +29,6 @@ SEASONS = {
     "italy1": "2025-2026",
     "france1": "2025-2026",
 }
-
-VIEWS = ["classic", "luck", "goals"]
 
 
 @pytest.fixture(scope="session")

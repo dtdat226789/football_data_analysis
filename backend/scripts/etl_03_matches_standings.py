@@ -15,6 +15,12 @@ awarded matches are skipped before insert, so a match that *becomes* one is
 neither updated nor removed - the schema has no status column to represent it.
 That is a pre-existing gap, not a consequence of the upsert.
 
+A match or standings row whose team is absent from the season membership
+(team_seasons, built from teams.json in etl_02) is skipped the same way and
+recorded in data/validation/skipped_matches/<league>.json instead of raising,
+so an upstream roster/results drift can never abort the build. validate_db and
+validate_raw_to_db apply the same rule when computing expectations.
+
 Usage:
     python backend/scripts/etl_03_matches_standings.py
     python backend/scripts/etl_03_matches_standings.py --league spain1
@@ -24,7 +30,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date, datetime, time as dtime
+from datetime import date, datetime, time as dtime, timezone
 
 import psycopg2.extras
 
@@ -94,9 +100,18 @@ def load_matches(cur, league_season_id: int, season: str, league: str) -> tuple[
         home_name = m["homeTeam"]
         away_name = m["awayTeam"]
         if home_name not in team_ids or away_name not in team_ids:
-            raise KeyError(
-                f"match {m['id']}: team not in {season} membership: {home_name}/{away_name}"
+            skips.append(
+                {
+                    "match_id": m.get("id"),
+                    "league": league,
+                    "season": season,
+                    "score": m.get("score"),
+                    "home": home_name,
+                    "away": away_name,
+                    "reason": f"team not in {season} membership",
+                }
             )
+            continue
         status = score_status(m.get("score"))
         if status != "playable":
             skips.append(
@@ -175,17 +190,30 @@ def load_matches(cur, league_season_id: int, season: str, league: str) -> tuple[
     return n, skips, time_unknown
 
 
-def load_standings(cur, league_season_id: int, season: str, league: str) -> int:
+def load_standings(
+    cur, league_season_id: int, season: str, league: str
+) -> tuple[int, list[dict]]:
     team_ids = team_lookup(cur, league_season_id)
 
     total = 0
+    skips: list[dict] = []
     for view in VIEWS:
         path = raw_file(season, f"table_{view}.json", league)
         table_json = load_json(path)
         for row in table_json["table"]:
             team_name = row["team"]
             if team_name not in team_ids:
-                raise KeyError(f"standings row team {team_name!r} not in {season} membership")
+                skips.append(
+                    {
+                        "league": league,
+                        "season": season,
+                        "view": view,
+                        "team": team_name,
+                        "position": row.get("position"),
+                        "reason": f"team not in {season} membership",
+                    }
+                )
+                continue
             metrics = {
                 k: v for k, v in row.items() if k not in CORE_STANDING_KEYS
             }
@@ -227,7 +255,7 @@ def load_standings(cur, league_season_id: int, season: str, league: str) -> int:
                 ),
             )
             total += cur.rowcount
-    return total
+    return total, skips
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -239,22 +267,34 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def write_skip_report(league: str, skips: list[dict], time_unknown: list[dict]) -> None:
+def write_skip_report(
+    league: str,
+    skips: list[dict],
+    time_unknown: list[dict],
+    standing_skips: list[dict],
+) -> None:
     path = SKIP_DIR / f"{league}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "league": league,
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "n_skipped": len(skips),
         "skipped": skips,
+        "n_skipped_standings": len(standing_skips),
+        "skipped_standings": standing_skips,
         "n_kickoff_time_unknown": len(time_unknown),
         "kickoff_time_unknown": time_unknown,
     }
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     if skips:
         print(
-            f"[04] {len(skips)} unplayed/unparseable match(es) skipped; "
+            f"[04] {len(skips)} match(es) skipped (unplayed/unparseable/membership); "
             f"report at {path}"
+        )
+    if standing_skips:
+        print(
+            f"[04] {len(standing_skips)} standings row(s) skipped "
+            f"(membership); report at {path}"
         )
     if time_unknown:
         print(
@@ -276,6 +316,7 @@ def main(argv: list[str] | None = None) -> int:
             n_matches = 0
             n_standings = 0
             skips: list[dict] = []
+            standing_skips: list[dict] = []
             time_unknown: list[dict] = []
             for season in seasons:
                 if season not in ls_ids:
@@ -287,13 +328,14 @@ def main(argv: list[str] | None = None) -> int:
                 )
                 skips += season_skips
                 time_unknown += season_time_unknown
-                s = load_standings(cur, ls_id, season, league)
+                s, season_standing_skips = load_standings(cur, ls_id, season, league)
+                standing_skips += season_standing_skips
                 print(f"[04] {season}: +{m} matches, +{s} standings rows")
                 n_matches += m
                 n_standings += s
             print(f"[04] total loaded: {n_matches} matches, {n_standings} standings rows")
         conn.commit()
-        write_skip_report(league, skips, time_unknown)
+        write_skip_report(league, skips, time_unknown, standing_skips)
     finally:
         conn.close()
     return 0

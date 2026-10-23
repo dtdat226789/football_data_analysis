@@ -3,8 +3,13 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ApiError, api, request } from "./client.js";
 
 function mockFetch(response) {
+  // Typed as the real global, so the assertions below that read
+  // `fetch.mock` need a cast to reach the mock's own shape.
   globalThis.fetch = vi.fn().mockResolvedValue(response);
 }
+
+/** @returns {import("vitest").Mock} */
+const mockedFetch = () => /** @type {import("vitest").Mock} */ (globalThis.fetch);
 
 describe("request", () => {
   beforeEach(() => {
@@ -20,7 +25,7 @@ describe("request", () => {
 
     await request("/x", { a: undefined, b: null, c: "", d: 1, e: 0, f: "true" });
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.pathname).toBe("/api/v1/x");
     expect([...url.searchParams.keys()]).toEqual(["d", "e", "f"]);
     expect(url.searchParams.get("d")).toBe("1");
@@ -58,7 +63,7 @@ describe("request", () => {
   });
 
   it("reports a friendly message when the network cannot be reached", async () => {
-    globalThis.fetch.mockRejectedValue(new TypeError("fetch failed"));
+    mockedFetch().mockRejectedValue(new TypeError("fetch failed"));
 
     await expect(api.health()).rejects.toMatchObject({
       status: 0,
@@ -77,7 +82,7 @@ describe("request", () => {
 
     await api.health();
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.pathname).toBe("/api/v1/health");
   });
 });
@@ -88,7 +93,7 @@ describe("teamStats", () => {
 
     await api.teamStats("spurs", { league: "premier", view: "classic" });
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.pathname).toBe("/api/v1/teams/spurs/stats");
     expect(url.searchParams.get("league")).toBe("premier");
     expect(url.searchParams.get("view")).toBe("classic");
@@ -108,7 +113,7 @@ describe("api.matchInsights", () => {
 
     await api.matchInsights(1001);
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.pathname).toBe("/api/v1/matches/1001/insights");
   });
 
@@ -117,7 +122,7 @@ describe("api.matchInsights", () => {
 
     await api.matchInsights(1001, { limit: 5 });
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.searchParams.get("limit")).toBe("5");
   });
 });
@@ -136,7 +141,7 @@ describe("api.fixtureMarket", () => {
 
     await api.fixtureMarket("premier", "2026-02-01-arsenal-vs-chelsea", "ft.result.home");
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     // A query, not a second path: the match id is a `:path` splat, so a nested
     // segment would be read as part of the id.
     expect(url.pathname).toBe("/api/v1/fixtures/premier/2026-02-01-arsenal-vs-chelsea");
@@ -148,7 +153,7 @@ describe("api.fixtureMarket", () => {
 
     await api.fixtureMarket("premier", "tail", "ft.asian_handicap.-0.25_home");
 
-    const url = new URL(globalThis.fetch.mock.calls[0][0]);
+    const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.searchParams.get("market")).toBe("ft.asian_handicap.-0.25_home");
   });
 });

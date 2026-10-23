@@ -72,3 +72,28 @@ def test_dashboard_endpoint():
         assert isinstance(body["top_clubs"], list)
         assert isinstance(body["recent_matches"], list)
         assert isinstance(body["upcoming_matches"], list)
+
+
+@pytest.mark.skipif(not _db_reachable(), reason="PostgreSQL not reachable")
+def test_recent_matches_rows_carry_no_derived_region():
+    """`recent_matches` is reused here to build the dashboard's recent list.
+
+    It used to attach a `region` to every row. Nothing read it — the dashboard's
+    own buckets come from `_leagues_by_region`, which derives its own — so it was
+    dead weight on the hottest read in the app. This guards the removal: a row
+    that grew a derived field again would silently re-couple the two.
+    """
+    from apps.main import app
+
+    with TestClient(app) as client:
+        body = client.get("/api/v1/matches/recent", params={"limit": 5}).json()
+        rows = body["matches"]
+        assert rows, "expected collected matches"
+        for row in rows:
+            assert "region" not in row
+            # `country` is the raw field a client would derive it from.
+            assert "country" in row
+
+        # The dashboard's buckets are unaffected by the row shape.
+        dashboard_body = client.get("/api/v1/dashboard").json()
+        assert set(dashboard_body["leagues_by_region"]) == {"europe", "asia", "america", "other"}

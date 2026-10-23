@@ -61,7 +61,7 @@ def test_collect_file_overwrite_redownloads(tmp_path, stub_get):
 
 def test_collect_file_skips_on_unavailable(tmp_path, stub_get):
     out = tmp_path / "results.json"
-    state = stub_get(failures={"/leagues/x/results/": 1})
+    _state = stub_get(failures={"/leagues/x/results/": 1})
     collect_file(object(), "/leagues/x/results/", None, out, False, 0.0)
     assert not out.exists()
 

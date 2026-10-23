@@ -4,19 +4,26 @@ Cross-checks the database against the byte-preserved raw dataset:
 
   registry    league_seasons registrations, declared_by_api facts
   identity    alias coverage of every api_name/api_slug; slug->team is consistent
-  matches     per-season counts = playable raw matches, game_index uniqueness/range,
+  matches     per-season counts = loadable raw matches, game_index uniqueness/range,
               team membership, goalless/first-goal semantics, HT null-pairing
-  standings   rows per (season, view) = league teams with distinct positions 1..n;
+  standings   rows per (season, view) = league teams at distinct raw positions;
               classic table reproduces the table derived from matches (points,
               W/D/L, GF/GA/GD, played) for leagues/seasons whose raw matches are
-              all playable
+              all loadable
   global      match api_id uniqueness (PK) and total counts
 
 Every count is scoped to the current league, so a database holding multiple
-leagues validates each one independently. Cancelled/awarded ('CAN.'/'AWA.') and
-unparseable raw matches are excluded from expected counts because the matches
-schema cannot represent them (they are skipped by etl_03 and logged under
-data/validation/skipped_matches/).
+leagues validates each one independently. Cancelled/awarded ('CAN.'/'AWA.'),
+unparseable, and membership-missing raw matches are excluded from expected
+counts because the matches schema cannot represent them (etl_03 skips them and
+logs them under data/validation/skipped_matches/). A raw match counts as
+loadable when its score is playable and both teams belong to the season's
+teams.json roster - the same rule etl_03 applies. Teams.json entries sharing a
+slug are one club: etl_02 merges them into a single team_seasons row (last
+ entry wins), so identity and standings expectations count one team per slug.
+ Roster entries that never play a match in results.json and are a hyphen-variant
+ of a participant (upstream phantom rows, e.g. 'MG-Bahia' vs 'Bahia') are
+ dropped by etl_02 before the slug merge and excluded here the same way.
 
 Exits non-zero if any check fails.
 Usage:
@@ -37,11 +44,26 @@ from db_common import (
     collected_seasons,
     get_conn,
     load_json,
+    phantom_team_names,
     raw_file,
     score_status,
 )
 
 CHECKS: list[tuple[str, bool, str]] = []
+
+
+def roster_for_season(teams_data: dict, matches: list) -> dict[str, str]:
+    """The roster etl_02 builds for a season: phantom rows dropped, then slug merge.
+
+    Returns slug -> the api_name that ends up in team_seasons.
+    """
+    phantoms = phantom_team_names(teams_data.get("teams", []), matches)
+    kept = [
+        t
+        for t in teams_data.get("teams", [])
+        if not (isinstance(t, dict) and t.get("team") in phantoms)
+    ]
+    return roster_by_slug({"teams": kept})
 
 
 def check(name: str, ok: bool, detail: object = "") -> None:
@@ -59,9 +81,39 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def playable_count(raw: dict) -> int:
+def loadable_count(raw: dict, roster: set[str]) -> int:
+    """Raw matches etl_03 will load: playable score and both teams in roster."""
     return sum(
-        1 for m in raw.get("matches", []) if score_status(m.get("score")) == "playable"
+        1
+        for m in raw.get("matches", [])
+        if isinstance(m, dict)
+        and m.get("homeTeam") in roster
+        and m.get("awayTeam") in roster
+        and score_status(m.get("score")) == "playable"
+    )
+
+
+def roster_by_slug(teams_data: dict) -> dict[str, str]:
+    """teams.json entries merged by slug: etl_02 keeps the last name per slug.
+
+    Returns slug -> the api_name that ends up in team_seasons.
+    """
+    merged: dict[str, str] = {}
+    for t in teams_data.get("teams", []):
+        if isinstance(t, dict):
+            merged[t["slug"]] = t["team"]
+    return merged
+
+
+def table_position_bound(table_data: dict, roster: set[str]) -> int:
+    """Highest raw position etl_03 can load; rows outside the roster are skipped."""
+    return max(
+        (
+            r.get("position")
+            for r in table_data.get("table", [])
+            if isinstance(r, dict) and r.get("team") in roster
+        ),
+        default=0,
     )
 
 
@@ -84,9 +136,9 @@ ORDER BY s.start_year
 def game_index_problems(cur, league: str, clean_seasons: set[str]) -> list[tuple]:
     """Seasons whose game_index is duplicated, or gapped inside a clean season.
 
-    A clean season (every raw match playable) must carry game_index 1..n with no
-    holes. A season with skipped or awarded matches legitimately has gaps, but
-    must still never reuse a game_index.
+    A clean season (every raw match loadable) must carry game_index 1..n with
+    no holes. A season with skipped, awarded or membership-missing matches
+    legitimately has gaps, but must still never reuse a game_index.
     """
     cur.execute(GAME_INDEX_QUERY, (league,))
     problems: list[tuple] = []
@@ -145,9 +197,19 @@ def main(argv: list[str] | None = None) -> int:
             cur.execute("SELECT count(*) FROM teams")
             n_teams = cur.fetchone()["count"]
             season_teams: dict[str, int] = {}
+            season_roster: dict[str, set[str]] = {}
             for season in seasons:
                 teams_data = load_json(raw_file(season, "teams.json", league))
-                season_teams[season] = len(teams_data.get("teams", []))
+                results_path = raw_file(season, "results.json", league)
+                results = (
+                    load_json(results_path) if results_path.exists() else {"matches": []}
+                )
+                # etl_02 drops phantom roster rows, then merges the remaining
+                # entries sharing a slug into one team_seasons row (last entry
+                # wins for api_name), so the roster is one name per slug.
+                merged = roster_for_season(teams_data, results.get("matches", []))
+                season_teams[season] = len(merged)
+                season_roster[season] = set(merged.values())
             cur.execute(
                 """
                 SELECT s.name, count(*) AS n
@@ -221,12 +283,12 @@ def main(argv: list[str] | None = None) -> int:
             clean_seasons: set[str] = set()
             for season in seasons:
                 raw = load_json(raw_file(season, "results.json", league))
-                raw_counts[season] = playable_count(raw)
+                raw_counts[season] = loadable_count(raw, season_roster[season])
                 if raw_counts[season] == len(raw.get("matches", [])):
                     clean_seasons.add(season)
             expected_total = sum(raw_counts[s] for s in seasons)
             check(
-                "match count == playable raw total",
+                "match count == loadable raw total",
                 total_db == expected_total,
                 f"db={total_db} expected={expected_total}",
             )
@@ -248,7 +310,7 @@ def main(argv: list[str] | None = None) -> int:
                 )
                 db_n = cur.fetchone()["count"]
                 check(
-                    f"{season}: match count == playable raw",
+                    f"{season}: match count == loadable raw",
                     raw_n == db_n,
                     f"raw={raw_n} db={db_n}",
                 )
@@ -314,6 +376,18 @@ def main(argv: list[str] | None = None) -> int:
             )
 
             # ── standings ───────────────────────────────────────────────
+            # Every roster team must have one row per view, at a distinct raw
+            # position. A raw table row for a team outside the roster is
+            # skipped by etl_03, so its position may leave a hole below the
+            # highest loadable position - that is mirrored here via table_max
+            # instead of demanding an exact 1..n range.
+            table_max: dict[tuple[str, str], int] = {}
+            for season in seasons:
+                for view in VIEWS:
+                    data = load_json(raw_file(season, f"table_{view}.json", league))
+                    table_max[(season, view)] = table_position_bound(
+                        data, season_roster[season]
+                    )
             cur.execute(
                 """
                 SELECT s.name, st.view, count(*), min(position), max(position),
@@ -329,24 +403,33 @@ def main(argv: list[str] | None = None) -> int:
                 (league,),
             )
             rows = cur.fetchall()
+            groups = {(r["name"], r["view"]) for r in rows}
+            missing_groups = [
+                (s, v) for s in seasons for v in VIEWS if (s, v) not in groups
+            ]
+            check(
+                "standings loaded for every (season, view)",
+                not missing_groups,
+                missing_groups,
+            )
             bad_stand = [
                 (r["name"], r["view"])
                 for r in rows
                 if not (
                     r["count"] == season_teams.get(r["name"])
-                    and r["min"] == 1
-                    and r["max"] == season_teams.get(r["name"])
-                    and r["distinct_positions"] == season_teams.get(r["name"])
+                    and r["min"] >= 1
+                    and r["max"] <= table_max.get((r["name"], r["view"]), 0)
+                    and r["distinct_positions"] == r["count"]
                 )
             ]
             check(
-                "standings == league teams with distinct positions 1..n per (season, view)",
+                "standings == league teams at distinct raw positions per (season, view)",
                 not bad_stand,
                 bad_stand,
             )
 
             # classic standings reproduce the table derived from matches,
-            # for seasons whose raw matches are all playable AND whose retained
+            # for seasons whose raw matches are all loadable AND whose retained
             # season_state is 'complete' (a 'complete' season whose standings
             # snapshot predates its results file is genuinely drifted data)
             checked = clean_seasons & {
@@ -447,7 +530,7 @@ def main(argv: list[str] | None = None) -> int:
                 check(
                     "classic standings reproduce the matches-derived table",
                     True,
-                    "no fully-playable, complete seasons for this league",
+                    "no fully-loadable, complete seasons for this league",
                 )
 
             # standings points == 3W+D independently (belt & braces)

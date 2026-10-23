@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { vi } from "vitest";
 import PredictionChips from "./PredictionChips.jsx";
+import { I18nProvider } from "../i18n/I18nProvider.jsx";
 
 const chipLabels = (container) =>
   [...container.querySelectorAll(".pred-chip")].map((el) => el.textContent.trim());
@@ -80,6 +81,49 @@ describe("PredictionChips", () => {
     const [measured, assumed] = [...document.querySelectorAll(".pred-chip")];
     expect(measured.className).not.toContain("chip-assumed");
     expect(assumed.className).toContain("chip-assumed");
+  });
+
+  it("expands the derived chip labels into Vietnamese phrases", () => {
+    const { container } = render(
+      <I18nProvider language="vi">
+        <PredictionChips
+          predictions={{
+            selected: [
+              { key: "ft.result.home", family: "result", label: "1", scope: "full_time", line: null, selection: "home", probability: 0.68, provenance: "model" },
+              { key: "ft.totals.over_1.5", family: "totals", label: "O1.5", scope: "full_time", line: 1.5, selection: "over", probability: 0.8, provenance: "model" },
+              { key: "ft.totals.under_2.5", family: "totals", label: "U2.5", scope: "full_time", line: 2.5, selection: "under", probability: 0.41, provenance: "model" },
+              { key: "ft.btts.yes", family: "btts", label: "BTTS yes", scope: "full_time", line: null, selection: "yes", probability: 0.68, provenance: "model" },
+              { key: "ft.asian_handicap.-0.5_away", family: "asian_handicap", label: "Away +0.5", scope: "full_time", line: -0.5, selection: "away", probability: 0.42, provenance: "model" },
+              { key: "ht_ft.home.home", family: "ht_ft", label: "1/1", scope: "half_to_full", line: null, selection: "home_home", probability: 0.24, provenance: "modelled" },
+            ],
+          }}
+        />
+      </I18nProvider>,
+    );
+    expect(chipLabels(container)).toEqual([
+      "Chủ nhà thắng 68%",
+      "Trên 1,5 bàn thắng 80%",
+      "Dưới 2,5 bàn thắng 41%",
+      "Cả hai đội ghi bàn 68%",
+      "Khách +0,5 42%",
+      "1 / 1 24%",
+    ]);
+  });
+
+  it("translates the legacy fixed set too", () => {
+    const { container } = render(
+      <I18nProvider language="vi">
+        <PredictionChips predictions={{ home: 0.58, away: 0.18, btts_yes: 0.55, over_1_5: 0.82, over_2_5: 0.61 }} />
+      </I18nProvider>,
+    );
+    expect(chipLabels(container)).toEqual([
+      "Chủ nhà thắng 58%",
+      "Hoà —",
+      "Khách thắng 18%",
+      "Cả hai đội ghi bàn 55%",
+      "Trên 1,5 bàn thắng 82%",
+      "Trên 2,5 bàn thắng 61%",
+    ]);
   });
 
   it("explains in the tooltip where a number came from", () => {
