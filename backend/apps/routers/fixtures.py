@@ -474,7 +474,7 @@ def _season_for_date(cur, league: str, match_date) -> dict | None:
     back to the latest season with prior matches only when no window match
     exists.
     """
-    from db_common import parse_season_years, season_date_window  # noqa: PLC0415
+    from db_common import season_date_window  # noqa: PLC0415
 
     cur.execute(
         """
