@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:00:27+00:00
+- Generated: 2026-10-26T01:39:58+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -8,34 +8,58 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 493 |
-| Home wins | 173 (35.1%) |
-| Draws | 153 (31.0%) |
-| Away wins | 167 (33.9%) |
-| Total goals | 1274 |
-| Average goals per match | 2.584 |
-| Goalless matches | 42 (8.5%) |
+| Matches | 1507 |
+| Home wins | 554 (36.8%) |
+| Draws | 432 (28.7%) |
+| Away wins | 521 (34.6%) |
+| Total goals | 3851 |
+| Average goals per match | 2.555 |
+| Goalless matches | 136 (9.0%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020 | 135 | 43 (31.9%) | 35 (25.9%) | 57 (42.2%) | 326 | 2.415 | 11 (8.1%) |
+| 2021 | 173 | 59 (34.1%) | 49 (28.3%) | 65 (37.6%) | 418 | 2.416 | 19 (11.0%) |
+| 2022 | 220 | 93 (42.3%) | 65 (29.5%) | 62 (28.2%) | 556 | 2.527 | 20 (9.1%) |
+| 2023 | 234 | 99 (42.3%) | 57 (24.4%) | 78 (33.3%) | 601 | 2.568 | 24 (10.3%) |
+| 2024 | 234 | 77 (32.9%) | 70 (29.9%) | 87 (37.2%) | 616 | 2.632 | 19 (8.1%) |
 | 2025 | 273 | 96 (35.2%) | 80 (29.3%) | 97 (35.5%) | 686 | 2.513 | 26 (9.5%) |
-| 2026 | 220 | 77 (35.0%) | 73 (33.2%) | 70 (31.8%) | 588 | 2.673 | 16 (7.3%) |
+| 2026 | 238 | 87 (36.6%) | 76 (31.9%) | 75 (31.5%) | 648 | 2.723 | 17 (7.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 93 (67.4%) | 32 (23.2%) | 13 (9.4%) | 138 |
-| HT draw | 69 (30.0%) | 96 (41.7%) | 65 (28.3%) | 230 |
-| HT away lead | 11 (8.8%) | 25 (20.0%) | 89 (71.2%) | 125 |
+| HT home lead | 299 (70.0%) | 84 (19.7%) | 44 (10.3%) | 427 |
+| HT draw | 225 (31.1%) | 277 (38.3%) | 221 (30.6%) | 723 |
+| HT away lead | 30 (8.4%) | 71 (19.9%) | 256 (71.7%) | 357 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **11** (2.2%)
-- Away comebacks (trailing at HT, won at FT): **13** (2.6%)
+- Home comebacks (trailing at HT, won at FT): **30** (2.0%)
+- Away comebacks (trailing at HT, won at FT): **44** (2.9%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020 | Anyang | Seoul E-Land | 0-1 | 2-1 |
+| 2020 | Gyeongnam | Asan | 0-1 | 3-1 |
+| 2020 | Jeju SK | Anyang | 0-1 | 4-1 |
+| 2021 | Asan | Busan | 1-2 | 3-2 |
+| 2021 | Gimcheon Sangmu | Jeonnam | 0-1 | 3-1 |
+| 2022 | Bucheon FC 1995 | Ansan Greeners | 0-1 | 2-1 |
+| 2022 | Gyeongnam | Busan | 0-2 | 3-2 |
+| 2022 | Daejeon | Busan | 0-2 | 4-3 |
+| 2022 | Gwangju FC | Asan | 0-1 | 3-2 |
+| 2022 | Ansan Greeners | Gimpo FC | 0-1 | 3-1 |
+| 2022 | Gyeongnam | Daejeon | 0-1 | 2-1 |
+| 2022 | Gwangju FC | Gimpo FC | 0-1 | 2-1 |
+| 2023 | Seoul E-Land | Cheonan City | 0-1 | 3-2 |
+| 2023 | Gimcheon Sangmu | Busan | 0-1 | 2-1 |
+| 2023 | Cheongju | Seoul E-Land | 0-1 | 2-1 |
+| 2023 | Busan | Bucheon FC 1995 | 0-1 | 2-1 |
+| 2024 | Asan | Jeonnam | 0-1 | 2-1 |
+| 2024 | Jeonnam | Bucheon FC 1995 | 0-1 | 3-1 |
+| 2024 | Suwon Bluewings | Asan | 0-1 | 2-1 |
 | 2025 | Suwon Bluewings | Jeonnam | 0-1 | 2-1 |
 | 2025 | Incheon | Cheongju | 0-1 | 2-1 |
 | 2025 | Suwon Bluewings | Bucheon FC 1995 | 0-1 | 4-1 |
@@ -51,6 +75,37 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020 | Jeju SK | Daejeon | 1-0 | 2-3 |
+| 2020 | Bucheon FC 1995 | Seoul E-Land | 1-0 | 2-3 |
+| 2020 | Gyeongnam | Seoul E-Land | 1-0 | 1-2 |
+| 2020 | Daejeon | Gyeongnam | 2-0 | 2-3 |
+| 2020 | Bucheon FC 1995 | Gyeongnam | 2-1 | 3-4 |
+| 2021 | Anyang | Ansan Greeners | 1-0 | 1-2 |
+| 2021 | Daejeon | Gimcheon Sangmu | 1-0 | 1-2 |
+| 2021 | Gimcheon Sangmu | Gyeongnam | 1-0 | 1-2 |
+| 2021 | Busan | Gyeongnam | 2-0 | 2-3 |
+| 2021 | Jeonnam | Bucheon FC 1995 | 1-0 | 1-2 |
+| 2021 | Gyeongnam | Gimcheon Sangmu | 2-1 | 2-3 |
+| 2021 | Asan | Daejeon | 2-1 | 3-4 |
+| 2022 | Gyeongnam | Gwangju FC | 1-0 | 1-2 |
+| 2022 | Busan | Seoul E-Land | 1-0 | 1-2 |
+| 2023 | Seongnam | Anyang | 1-0 | 1-2 |
+| 2023 | Seoul E-Land | Anyang | 1-0 | 1-2 |
+| 2023 | Seongnam | Gimpo FC | 1-0 | 2-4 |
+| 2023 | Seoul E-Land | Ansan Greeners | 1-0 | 3-4 |
+| 2024 | Cheonan City | Cheongju | 1-0 | 1-2 |
+| 2024 | Seongnam | Cheongju | 1-0 | 1-2 |
+| 2024 | Gyeongnam | Seongnam | 1-0 | 1-2 |
+| 2024 | Busan | Cheonan City | 2-1 | 2-3 |
+| 2024 | Suwon Bluewings | Seoul E-Land | 1-0 | 1-3 |
+| 2024 | Anyang | Jeonnam | 2-0 | 2-3 |
+| 2024 | Gimpo FC | Jeonnam | 1-0 | 1-2 |
+| 2024 | Bucheon FC 1995 | Anyang | 1-0 | 1-2 |
+| 2024 | Cheonan City | Suwon Bluewings | 1-0 | 1-2 |
+| 2024 | Seongnam | Jeonnam | 1-0 | 1-2 |
+| 2024 | Cheongju | Seoul E-Land | 1-0 | 1-2 |
+| 2024 | Jeonnam | Busan | 1-0 | 1-2 |
+| 2024 | Seongnam | Suwon Bluewings | 1-0 | 1-2 |
 | 2025 | Cheongju | Gyeongnam | 1-0 | 1-2 |
 | 2025 | Gyeongnam | Jeonnam | 1-0 | 2-3 |
 | 2025 | Hwaseong | Suwon Bluewings | 1-0 | 2-3 |
@@ -68,43 +123,48 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 138 | 93 (67.4%) | 32 (23.2%) | 13 (9.4%) |
-| Away lead | 125 | 89 (71.2%) | 25 (20.0%) | 11 (8.8%) |
+| Home lead | 427 | 299 (70.0%) | 84 (19.7%) | 44 (10.3%) |
+| Away lead | 357 | 256 (71.7%) | 71 (19.9%) | 30 (8.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 69 | 30.0% |
-| Draw | 96 | 41.7% |
-| Away win | 65 | 28.3% |
+| Home win | 225 | 31.1% |
+| Draw | 277 | 38.3% |
+| Away win | 221 | 30.6% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `451` of `493` (91.5%)
+- Matches with a first-goal time recorded: `1371` of `1507` (91.0%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 134 | 27.2% | 46 (34.3%) | 39 (29.1%) | 49 (36.6%) |
-| 16-30 | 92 | 18.7% | 41 (44.6%) | 21 (22.8%) | 30 (32.6%) |
-| 31-45 | 83 | 16.8% | 34 (41.0%) | 16 (19.3%) | 33 (39.8%) |
-| 46-60 | 65 | 13.2% | 23 (35.4%) | 22 (33.8%) | 20 (30.8%) |
-| 61-75 | 38 | 7.7% | 17 (44.7%) | 6 (15.8%) | 15 (39.5%) |
-| 76-90 | 30 | 6.1% | 9 (30.0%) | 6 (20.0%) | 15 (50.0%) |
-| 91-120 | 9 | 1.8% | 3 (33.3%) | 1 (11.1%) | 5 (55.6%) |
+| 1-15 | 361 | 24.0% | 138 (38.2%) | 78 (21.6%) | 145 (40.2%) |
+| 16-30 | 300 | 19.9% | 124 (41.3%) | 70 (23.3%) | 106 (35.3%) |
+| 31-45 | 263 | 17.5% | 118 (44.9%) | 57 (21.7%) | 88 (33.5%) |
+| 46-60 | 201 | 13.3% | 78 (38.8%) | 48 (23.9%) | 75 (37.3%) |
+| 61-75 | 130 | 8.6% | 51 (39.2%) | 27 (20.8%) | 52 (40.0%) |
+| 76-90 | 85 | 5.6% | 33 (38.8%) | 15 (17.6%) | 37 (43.5%) |
+| 91-120 | 31 | 2.1% | 12 (38.7%) | 1 (3.2%) | 18 (58.1%) |
 
 ## 7. Goalless matches
-- Overall: **42** of `493` (8.5%)
+- Overall: **136** of `1507` (9.0%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020 | 135 | 11 | 8.1% |
+| 2021 | 173 | 19 | 11.0% |
+| 2022 | 220 | 20 | 9.1% |
+| 2023 | 234 | 24 | 10.3% |
+| 2024 | 234 | 19 | 8.1% |
 | 2025 | 273 | 26 | 9.5% |
-| 2026 | 220 | 16 | 7.3% |
+| 2026 | 238 | 17 | 7.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\korea2\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\korea2\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

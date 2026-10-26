@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:09:31+00:00
+- Generated: 2026-10-26T01:50:27+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Superettan (Sweden)
 - Scope: league `sweden2`
@@ -8,35 +8,76 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 440 |
-| Home wins | 178 (40.5%) |
-| Draws | 119 (27.0%) |
-| Away wins | 143 (32.5%) |
-| Total goals | 1266 |
-| Average goals per match | 2.877 |
-| Goalless matches | 31 (7.0%) |
+| Matches | 1660 |
+| Home wins | 725 (43.7%) |
+| Draws | 445 (26.8%) |
+| Away wins | 490 (29.5%) |
+| Total goals | 4593 |
+| Average goals per match | 2.767 |
+| Goalless matches | 120 (7.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020 | 240 | 106 (44.2%) | 62 (25.8%) | 72 (30.0%) | 647 | 2.696 | 17 (7.1%) |
+| 2021 | 240 | 107 (44.6%) | 65 (27.1%) | 68 (28.3%) | 612 | 2.55 | 19 (7.9%) |
+| 2022 | 240 | 104 (43.3%) | 63 (26.2%) | 73 (30.4%) | 697 | 2.904 | 14 (5.8%) |
+| 2023 | 240 | 111 (46.2%) | 64 (26.7%) | 65 (27.1%) | 673 | 2.804 | 17 (7.1%) |
+| 2024 | 240 | 108 (45.0%) | 67 (27.9%) | 65 (27.1%) | 633 | 2.638 | 20 (8.3%) |
 | 2025 | 240 | 101 (42.1%) | 65 (27.1%) | 74 (30.8%) | 686 | 2.858 | 18 (7.5%) |
-| 2026 | 200 | 77 (38.5%) | 54 (27.0%) | 69 (34.5%) | 580 | 2.9 | 13 (6.5%) |
+| 2026 | 220 | 88 (40.0%) | 59 (26.8%) | 73 (33.2%) | 645 | 2.932 | 15 (6.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 100 (72.5%) | 27 (19.6%) | 11 (8.0%) | 138 |
-| HT draw | 57 (31.1%) | 71 (38.8%) | 55 (30.1%) | 183 |
-| HT away lead | 21 (17.8%) | 21 (17.8%) | 76 (64.4%) | 118 |
+| HT home lead | 427 (76.5%) | 96 (17.2%) | 35 (6.3%) | 558 |
+| HT draw | 241 (35.1%) | 264 (38.4%) | 182 (26.5%) | 687 |
+| HT away lead | 57 (13.8%) | 85 (20.5%) | 272 (65.7%) | 414 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **21** (4.8%)
-- Away comebacks (trailing at HT, won at FT): **11** (2.5%)
+- Home comebacks (trailing at HT, won at FT): **57** (3.4%)
+- Away comebacks (trailing at HT, won at FT): **35** (2.1%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020 | Jonkoping | Ljungskile | 0-1 | 2-1 |
+| 2020 | AFC Eskilstuna | Jonkoping | 1-2 | 3-2 |
+| 2020 | Norrby | Vasteras SK | 0-1 | 3-1 |
+| 2020 | Degerfors | Dalkurd | 0-1 | 2-1 |
+| 2020 | Jonkoping | Oster | 0-1 | 4-1 |
+| 2020 | Sundsvall | Jonkoping | 1-2 | 3-2 |
+| 2020 | Jonkoping | Trelleborg | 0-1 | 2-1 |
+| 2021 | Trelleborg | Norrby | 0-1 | 2-1 |
+| 2021 | Jonkoping | Vasalund | 0-1 | 5-1 |
+| 2021 | Brage | Jonkoping | 0-2 | 3-2 |
+| 2021 | Orgryte | Akropolis | 0-1 | 3-1 |
+| 2021 | GAIS | Orgryte | 0-1 | 2-1 |
+| 2021 | Oster | Vasalund | 1-2 | 3-2 |
+| 2021 | Varnamo | Falkenberg | 1-2 | 3-2 |
+| 2021 | Varnamo | Helsingborg | 0-1 | 3-1 |
+| 2022 | Orebro | Jonkoping | 0-1 | 3-1 |
+| 2022 | Brommapojkarna | Jonkoping | 0-1 | 2-1 |
+| 2022 | AFC Eskilstuna | Vasteras SK | 0-2 | 5-2 |
+| 2022 | Landskrona | Halmstad | 0-1 | 2-1 |
+| 2022 | Trelleborg | Skovde AIK | 0-1 | 2-1 |
+| 2022 | Jonkoping | Vasteras SK | 0-1 | 2-1 |
+| 2022 | Halmstad | Dalkurd | 0-1 | 3-1 |
+| 2022 | Landskrona | Trelleborg | 0-1 | 2-1 |
+| 2023 | Landskrona | Helsingborg | 0-1 | 2-1 |
+| 2023 | Brage | Ostersund | 0-1 | 2-1 |
+| 2023 | Vasteras SK | Helsingborg | 0-2 | 3-2 |
+| 2023 | Gefle | Orebro | 0-1 | 2-1 |
+| 2023 | Sundsvall | Jonkoping | 1-2 | 3-2 |
+| 2023 | Orebro | Skovde AIK | 1-3 | 5-3 |
+| 2023 | GAIS | Ostersund | 0-1 | 2-1 |
+| 2023 | Vasteras SK | GAIS | 0-1 | 2-1 |
+| 2024 | Ostersund | Varberg | 0-1 | 2-1 |
+| 2024 | Trelleborg | Orebro | 0-1 | 2-1 |
+| 2024 | Sandviken | Ostersund | 0-1 | 3-1 |
+| 2024 | Utsikten | Ostersund | 0-1 | 3-1 |
+| 2024 | Orgryte | Ostersund | 0-1 | 2-1 |
 | 2025 | Landskrona | Utsikten | 0-1 | 2-1 |
 | 2025 | Orgryte | Falkenberg | 0-2 | 4-2 |
 | 2025 | Kalmar | Landskrona | 1-2 | 3-2 |
@@ -62,6 +103,30 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020 | AFC Eskilstuna | Umea FC | 1-0 | 1-3 |
+| 2020 | AFC Eskilstuna | Brage | 1-0 | 1-2 |
+| 2020 | Norrby | Trelleborg | 1-0 | 1-3 |
+| 2021 | AFC Eskilstuna | Vasalund | 1-0 | 1-2 |
+| 2021 | Jonkoping | AFC Eskilstuna | 1-0 | 1-2 |
+| 2021 | Trelleborg | Jonkoping | 1-0 | 1-3 |
+| 2022 | Halmstad | Norrby | 1-0 | 1-2 |
+| 2022 | Dalkurd | Orgryte | 1-0 | 1-2 |
+| 2022 | Ostersund | Brommapojkarna | 2-1 | 2-3 |
+| 2023 | Trelleborg | Sundsvall | 3-1 | 3-4 |
+| 2023 | Ostersund | Utsikten | 1-0 | 1-2 |
+| 2023 | Orgryte | Helsingborg | 1-0 | 1-2 |
+| 2023 | Landskrona | AFC Eskilstuna | 1-0 | 1-2 |
+| 2023 | Helsingborg | Trelleborg | 1-0 | 1-3 |
+| 2023 | Jonkoping | Landskrona | 1-0 | 1-2 |
+| 2023 | Utsikten | Trelleborg | 2-0 | 2-3 |
+| 2023 | Sundsvall | Brage | 1-0 | 1-2 |
+| 2024 | Trelleborg | Oddevold | 1-0 | 1-2 |
+| 2024 | Orgryte | Trelleborg | 1-0 | 1-2 |
+| 2024 | Skovde AIK | Oster | 1-0 | 1-2 |
+| 2024 | Sundsvall | Helsingborg | 1-0 | 1-3 |
+| 2024 | Ostersund | Sundsvall | 1-0 | 1-2 |
+| 2024 | Oster | Varberg | 2-0 | 3-4 |
+| 2024 | Brage | Oddevold | 1-0 | 1-2 |
 | 2025 | Sundsvall | Vasteras SK | 1-0 | 1-2 |
 | 2025 | Orebro | Sundsvall | 1-0 | 1-2 |
 | 2025 | Varberg | Orgryte | 1-0 | 1-2 |
@@ -77,44 +142,49 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 138 | 100 (72.5%) | 27 (19.6%) | 11 (8.0%) |
-| Away lead | 118 | 76 (64.4%) | 21 (17.8%) | 21 (17.8%) |
+| Home lead | 558 | 427 (76.5%) | 96 (17.2%) | 35 (6.3%) |
+| Away lead | 414 | 272 (65.7%) | 85 (20.5%) | 57 (13.8%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 57 | 31.1% |
-| Draw | 71 | 38.8% |
-| Away win | 55 | 30.1% |
+| Home win | 241 | 35.1% |
+| Draw | 264 | 38.4% |
+| Away win | 182 | 26.5% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `408` of `440` (92.7%)
+- Matches with a first-goal time recorded: `1539` of `1660` (92.7%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 154 | 35.0% | 69 (44.8%) | 38 (24.7%) | 47 (30.5%) |
-| 16-30 | 85 | 19.3% | 38 (44.7%) | 16 (18.8%) | 31 (36.5%) |
-| 31-45 | 72 | 16.4% | 33 (45.8%) | 14 (19.4%) | 25 (34.7%) |
-| 46-60 | 48 | 10.9% | 23 (47.9%) | 7 (14.6%) | 18 (37.5%) |
-| 61-75 | 26 | 5.9% | 8 (30.8%) | 10 (38.5%) | 8 (30.8%) |
-| 76-90 | 17 | 3.9% | 5 (29.4%) | 3 (17.6%) | 9 (52.9%) |
-| 91-120 | 6 | 1.4% | 2 (33.3%) | 0 (0.0%) | 4 (66.7%) |
+| 1-15 | 526 | 31.7% | 254 (48.3%) | 108 (20.5%) | 164 (31.2%) |
+| 16-30 | 380 | 22.9% | 189 (49.7%) | 75 (19.7%) | 116 (30.5%) |
+| 31-45 | 245 | 14.8% | 110 (44.9%) | 61 (24.9%) | 74 (30.2%) |
+| 46-60 | 188 | 11.3% | 86 (45.7%) | 43 (22.9%) | 59 (31.4%) |
+| 61-75 | 107 | 6.4% | 39 (36.4%) | 28 (26.2%) | 40 (37.4%) |
+| 76-90 | 77 | 4.6% | 39 (50.6%) | 10 (13.0%) | 28 (36.4%) |
+| 91-120 | 16 | 1.0% | 8 (50.0%) | 0 (0.0%) | 8 (50.0%) |
 
 ## 7. Goalless matches
-- Overall: **31** of `440` (7.0%)
+- Overall: **120** of `1660` (7.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020 | 240 | 17 | 7.1% |
+| 2021 | 240 | 19 | 7.9% |
+| 2022 | 240 | 14 | 5.8% |
+| 2023 | 240 | 17 | 7.1% |
+| 2024 | 240 | 20 | 8.3% |
 | 2025 | 240 | 18 | 7.5% |
-| 2026 | 200 | 13 | 6.5% |
+| 2026 | 220 | 15 | 6.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\sweden2\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\sweden2\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

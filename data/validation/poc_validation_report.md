@@ -1,6 +1,6 @@
 # Football Charts Raw Data — POC Validation Report
 
-- Generated: 2026-10-23T03:02:39+00:00
+- Generated: 2026-10-26T01:25:37+00:00
 - Scope: league `wsweden`; seasons 2020, 2021, 2022, 2023, 2024, 2025, 2026; table views classic, luck, goals
 - Overall: **0 errors**, **16 warnings**
 
@@ -13,7 +13,7 @@
 | 3 | WARNING | `TEAMS_COUNT` | teams | 2021 | wsweden/2021/teams.json | Team count is 12, expected 14 |
 | 4 | WARNING | `RESULTS_COUNT_UNEXPECTED` | results | 2020 | wsweden/2020/results.json | Match count is 132, expected 182 for a complete 14-team round-robin season |
 | 5 | WARNING | `RESULTS_COUNT_UNEXPECTED` | results | 2021 | wsweden/2021/results.json | Match count is 132, expected 182 for a complete 14-team round-robin season |
-| 6 | WARNING | `RESULTS_COUNT_UNEXPECTED` | results | 2026 | wsweden/2026/results.json | Match count is 154, expected 182 for a complete 14-team round-robin season |
+| 6 | WARNING | `RESULTS_COUNT_UNEXPECTED` | results | 2026 | wsweden/2026/results.json | Match count is 159, expected 182 for a complete 14-team round-robin season |
 | 7 | WARNING | `RESULTS_NOT_CHRONOLOGICAL` | results | 2026 | wsweden/2026/results.json | Matches are not in chronological date order |
 | 8 | WARNING | `TABLE_ROWS_UNEXPECTED` | table | 2020 | wsweden/2020/table_classic.json | table_classic has 12 rows, expected 14 |
 | 9 | WARNING | `TABLE_ROWS_UNEXPECTED` | table | 2020 | wsweden/2020/table_luck.json | table_luck has 12 rows, expected 14 |
@@ -73,7 +73,7 @@
 - `2023`: {"n_matches": 182}
 - `2024`: {"n_matches": 182}
 - `2025`: {"n_matches": 182}
-- `2026`: {"n_matches": 154}
+- `2026`: {"n_matches": 159}
 **field_sets:** `[["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "kickoff_utc", "score", "time"]]`
 
 ### team_references
@@ -88,7 +88,7 @@
 - `2023`: {"n_matches": 182, "id_min": 61941, "id_max": 62122, "game_index_min": 1, "game_index_max": 182}
 - `2024`: {"n_matches": 182, "id_min": 61759, "id_max": 61940, "game_index_min": 1, "game_index_max": 182}
 - `2025`: {"n_matches": 182, "id_min": 61577, "id_max": 61758, "game_index_min": 1, "game_index_max": 182}
-- `2026`: {"n_matches": 154, "id_min": 210593, "id_max": 222278, "game_index_min": 1, "game_index_max": 154}
+- `2026`: {"n_matches": 159, "id_min": 210593, "id_max": 235388, "game_index_min": 1, "game_index_max": 159}
 
 ### table
 **Status:** WARNING
@@ -127,7 +127,7 @@
   "2023": 182,
   "2024": 182,
   "2025": 182,
-  "2026": 154
+  "2026": 159
 }
 ```
 **roster_churn:**

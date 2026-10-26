@@ -1,130 +1,139 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:08:19+00:00
+- Generated: 2026-10-26T01:49:00+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Prva liga (Slovenia)
 - Scope: league `slovenia1`
 
-- Teams: **12** | Seasons: **2** | Matches: **216**
+- Teams: **15** | Seasons: **7** | Matches: **1126**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Celje | 2 | 43 | 26 | 8 | 9 | 86 | 96 | 43 | 53 | 43.0 | 1 | 7 | 1 |
-| Koper | 2 | 44 | 25 | 10 | 9 | 85 | 82 | 51 | 31 | 42.5 | 2 | 3 | 0 |
-| Bravo | 2 | 45 | 24 | 9 | 12 | 81 | 74 | 61 | 13 | 40.5 | 2 | 3 | 0 |
-| Maribor | 2 | 45 | 20 | 14 | 11 | 74 | 77 | 52 | 25 | 37.0 | 1 | 5 | 1 |
-| O. Ljubljana | 2 | 45 | 21 | 9 | 15 | 72 | 63 | 48 | 15 | 36.0 | 4 | 4 | 0 |
-| Aluminij | 2 | 45 | 13 | 11 | 21 | 50 | 58 | 72 | -14 | 25.0 | 5 | 7 | 0 |
-| Radomlje | 2 | 43 | 14 | 8 | 21 | 50 | 59 | 81 | -22 | 25.0 | 6 | 10 | 0 |
-| Mura | 2 | 45 | 10 | 11 | 24 | 41 | 46 | 77 | -31 | 20.5 | 8 | 9 | 0 |
-| Primorje | 1 | 36 | 6 | 5 | 25 | 23 | 31 | 75 | -44 | 23.0 | 9 | 9 | 0 |
-| Nafta | 2 | 12 | 5 | 2 | 5 | 17 | 18 | 16 | 2 | 8.5 | 6 | 11 | 0 |
-| Domzale | 1 | 18 | 3 | 3 | 12 | 12 | 17 | 38 | -21 | 12.0 | 10 | 10 | 0 |
-| Grosuplje | 1 | 11 | 3 | 2 | 6 | 11 | 14 | 21 | -7 | 11.0 | 8 | 8 | 0 |
+| O. Ljubljana | 7 | 227 | 118 | 54 | 55 | 408 | 357 | 227 | 130 | 58.29 | 1 | 4 | 2 |
+| Maribor | 7 | 227 | 115 | 62 | 50 | 407 | 401 | 241 | 160 | 58.14 | 1 | 5 | 2 |
+| Celje | 7 | 225 | 111 | 49 | 65 | 382 | 383 | 253 | 130 | 54.57 | 1 | 8 | 2 |
+| Koper | 7 | 226 | 101 | 59 | 66 | 362 | 342 | 272 | 70 | 51.71 | 2 | 9 | 0 |
+| Bravo | 7 | 227 | 82 | 71 | 74 | 317 | 275 | 263 | 12 | 45.29 | 3 | 8 | 0 |
+| Mura | 7 | 227 | 75 | 68 | 84 | 293 | 285 | 307 | -22 | 41.86 | 1 | 8 | 1 |
+| Domzale | 6 | 198 | 61 | 53 | 84 | 236 | 253 | 293 | -40 | 39.33 | 4 | 10 | 0 |
+| Radomlje | 6 | 189 | 53 | 51 | 85 | 210 | 216 | 311 | -95 | 35.0 | 6 | 10 | 0 |
+| Aluminij | 5 | 155 | 35 | 43 | 77 | 148 | 159 | 258 | -99 | 29.6 | 7 | 10 | 0 |
+| Tabor Sezana | 3 | 108 | 22 | 32 | 54 | 98 | 99 | 148 | -49 | 32.67 | 6 | 10 | 0 |
+| Primorje | 2 | 72 | 17 | 15 | 40 | 66 | 72 | 136 | -64 | 33.0 | 6 | 9 | 0 |
+| ND Gorica | 2 | 72 | 12 | 20 | 40 | 56 | 55 | 115 | -60 | 28.0 | 9 | 10 | 0 |
+| Nafta | 3 | 50 | 12 | 13 | 25 | 49 | 52 | 85 | -33 | 16.33 | 5 | 11 | 0 |
+| Rogaska | 1 | 36 | 10 | 6 | 20 | 36 | 37 | 64 | -27 | 36.0 | 8 | 8 | 0 |
+| Grosuplje | 1 | 13 | 3 | 2 | 8 | 11 | 15 | 28 | -13 | 11.0 | 9 | 9 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Primorje | 18 | 6 | 2 | 10 | 20 | 18 | 0 | 3 | 15 | 3 | 17 |
-| Maribor | 23 | 12 | 8 | 3 | 44 | 22 | 8 | 6 | 8 | 30 | 14 |
-| O. Ljubljana | 23 | 13 | 4 | 6 | 43 | 22 | 8 | 5 | 9 | 29 | 14 |
-| Mura | 22 | 7 | 6 | 9 | 27 | 23 | 3 | 5 | 15 | 14 | 13 |
-| Koper | 21 | 14 | 4 | 3 | 46 | 23 | 11 | 6 | 6 | 39 | 7 |
-| Radomlje | 22 | 8 | 3 | 11 | 27 | 21 | 6 | 5 | 10 | 23 | 4 |
-| Domzale | 9 | 2 | 2 | 5 | 8 | 9 | 1 | 1 | 7 | 4 | 4 |
-| Bravo | 22 | 13 | 3 | 6 | 42 | 23 | 11 | 6 | 6 | 39 | 3 |
-| Grosuplje | 5 | 2 | 1 | 2 | 7 | 6 | 1 | 1 | 4 | 4 | 3 |
-| Celje | 21 | 13 | 5 | 3 | 44 | 22 | 13 | 3 | 6 | 42 | 2 |
-| Aluminij | 24 | 6 | 8 | 10 | 26 | 21 | 7 | 3 | 11 | 24 | 2 |
-| Nafta | 6 | 3 | 0 | 3 | 9 | 6 | 2 | 2 | 2 | 8 | 1 |
+| Maribor | 114 | 69 | 28 | 17 | 235 | 113 | 46 | 34 | 33 | 172 | 63 |
+| O. Ljubljana | 114 | 68 | 28 | 18 | 232 | 113 | 50 | 26 | 37 | 176 | 56 |
+| Mura | 113 | 46 | 32 | 35 | 170 | 114 | 29 | 36 | 49 | 123 | 47 |
+| Bravo | 113 | 48 | 33 | 32 | 177 | 114 | 34 | 38 | 42 | 140 | 37 |
+| Celje | 112 | 62 | 22 | 28 | 208 | 113 | 49 | 27 | 37 | 174 | 34 |
+| Primorje | 36 | 13 | 6 | 17 | 45 | 36 | 4 | 9 | 23 | 21 | 24 |
+| Domzale | 99 | 31 | 33 | 35 | 126 | 99 | 30 | 20 | 49 | 110 | 16 |
+| Nafta | 25 | 9 | 5 | 11 | 32 | 25 | 3 | 8 | 14 | 17 | 15 |
+| Koper | 112 | 53 | 27 | 32 | 186 | 114 | 48 | 32 | 34 | 176 | 10 |
+| Aluminij | 79 | 18 | 25 | 36 | 79 | 76 | 17 | 18 | 41 | 69 | 10 |
+| ND Gorica | 36 | 7 | 12 | 17 | 33 | 36 | 5 | 8 | 23 | 23 | 10 |
+| Tabor Sezana | 54 | 13 | 14 | 27 | 53 | 54 | 9 | 18 | 27 | 45 | 8 |
+| Grosuplje | 6 | 2 | 1 | 3 | 7 | 7 | 1 | 1 | 5 | 4 | 3 |
+| Radomlje | 95 | 26 | 28 | 41 | 106 | 94 | 27 | 23 | 44 | 104 | 2 |
+| Rogaska | 18 | 4 | 5 | 9 | 17 | 18 | 6 | 1 | 11 | 19 | -2 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Celje | 2.00 |
-| 2 | Koper | 1.93 |
-| 3 | Bravo | 1.80 |
-| 4 | Maribor | 1.64 |
-| 5 | O. Ljubljana | 1.60 |
+| 1 | O. Ljubljana | 1.80 |
+| 2 | Maribor | 1.79 |
+| 3 | Celje | 1.70 |
+| 4 | Koper | 1.60 |
+| 5 | Bravo | 1.40 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Celje | 96 |
-| 2 | Koper | 82 |
-| 3 | Maribor | 77 |
-| 4 | Bravo | 74 |
-| 5 | O. Ljubljana | 63 |
+| 1 | Maribor | 401 |
+| 2 | Celje | 383 |
+| 3 | O. Ljubljana | 357 |
+| 4 | Koper | 342 |
+| 5 | Mura | 285 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Celje | 53 |
-| 2 | Koper | 31 |
-| 3 | Maribor | 25 |
-| 4 | O. Ljubljana | 15 |
-| 5 | Bravo | 13 |
+| 1 | Maribor | 160 |
+| 2 | O. Ljubljana | 130 |
+| 3 | Celje | 130 |
+| 4 | Koper | 70 |
+| 5 | Bravo | 12 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Celje | 1.000 |
-| 2 | O. Ljubljana | 1.067 |
-| 3 | Maribor | 1.156 |
-| 4 | Koper | 1.159 |
-| 5 | Nafta | 1.333 |
+| 1 | O. Ljubljana | 1.000 |
+| 2 | Maribor | 1.062 |
+| 3 | Celje | 1.124 |
+| 4 | Bravo | 1.159 |
+| 5 | Koper | 1.204 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **9**
+- Teams present in all **7** seasons: **6**
 
-Aluminij, Bravo, Celje, Koper, Maribor, Mura, Nafta, O. Ljubljana, Radomlje
+Bravo, Celje, Koper, Maribor, Mura, O. Ljubljana
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **63** (showing the 15 most frequent)
+- Distinct fixtures: **92** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Bravo vs O. Ljubljana | 6 | 3 | 0 | 3 | 50.0% | 0.0% | 50.0% |
-| Celje vs Mura | 6 | 3 | 2 | 1 | 50.0% | 33.3% | 16.7% |
-| Maribor vs Mura | 6 | 3 | 2 | 1 | 50.0% | 33.3% | 16.7% |
-| Bravo vs Aluminij | 6 | 1 | 2 | 3 | 16.7% | 33.3% | 50.0% |
-| Maribor vs Aluminij | 6 | 1 | 3 | 2 | 16.7% | 50.0% | 33.3% |
-| Koper vs Maribor | 5 | 4 | 1 | 0 | 80.0% | 20.0% | 0.0% |
-| Bravo vs Maribor | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Celje vs Aluminij | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Celje vs O. Ljubljana | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Koper vs Aluminij | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Koper vs Bravo | 5 | 3 | 2 | 0 | 60.0% | 40.0% | 0.0% |
-| Koper vs Mura | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| O. Ljubljana vs Mura | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| O. Ljubljana vs Radomlje | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Radomlje vs Mura | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
+| Mura vs Maribor | 26 | 14 | 6 | 6 | 53.8% | 23.1% | 23.1% |
+| Mura vs Celje | 26 | 13 | 6 | 7 | 50.0% | 23.1% | 26.9% |
+| Mura vs O. Ljubljana | 26 | 13 | 8 | 5 | 50.0% | 30.8% | 19.2% |
+| O. Ljubljana vs Bravo | 26 | 13 | 9 | 4 | 50.0% | 34.6% | 15.4% |
+| Maribor vs Celje | 26 | 10 | 8 | 8 | 38.5% | 30.8% | 30.8% |
+| Bravo vs Celje | 25 | 16 | 2 | 7 | 64.0% | 8.0% | 28.0% |
+| Bravo vs Koper | 25 | 12 | 9 | 4 | 48.0% | 36.0% | 16.0% |
+| Maribor vs Koper | 25 | 12 | 7 | 6 | 48.0% | 28.0% | 24.0% |
+| Maribor vs O. Ljubljana | 25 | 12 | 9 | 4 | 48.0% | 36.0% | 16.0% |
+| Mura vs Koper | 25 | 10 | 6 | 9 | 40.0% | 24.0% | 36.0% |
+| O. Ljubljana vs Celje | 25 | 10 | 7 | 8 | 40.0% | 28.0% | 32.0% |
+| Maribor vs Bravo | 25 | 9 | 7 | 9 | 36.0% | 28.0% | 36.0% |
+| Celje vs Koper | 25 | 8 | 8 | 9 | 32.0% | 32.0% | 36.0% |
+| O. Ljubljana vs Koper | 25 | 8 | 5 | 12 | 32.0% | 20.0% | 48.0% |
+| Mura vs Bravo | 25 | 6 | 11 | 8 | 24.0% | 44.0% | 32.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Celje | 1 | 7 |
-| Koper | 2 | 3 |
-| Bravo | 3 | 2 |
-| Maribor | 5 | 1 |
-| O. Ljubljana | 4 | 4 |
-| Aluminij | 7 | 5 |
-| Radomlje | 6 | 10 |
-| Mura | 8 | 9 |
-| Primorje | 9 | - |
-| Nafta | 11 | 6 |
-| Domzale | 10 | - |
-| Grosuplje | - | 8 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| O. Ljubljana | 3 | 3 | 1 | 3 | 1 | 4 | 3 |
+| Maribor | 2 | 1 | 3 | 2 | 2 | 5 | 1 |
+| Celje | 7 | 8 | 2 | 1 | 4 | 1 | 6 |
+| Koper | 9 | 2 | 6 | 5 | 3 | 2 | 2 |
+| Bravo | 5 | 5 | 8 | 4 | 5 | 3 | 4 |
+| Mura | 1 | 4 | 5 | 7 | 7 | 8 | 8 |
+| Domzale | 4 | 7 | 4 | 6 | 9 | 10 | - |
+| Radomlje | - | 6 | 7 | 9 | 8 | 6 | 10 |
+| Aluminij | 8 | 10 | - | 10 | - | 7 | 7 |
+| Tabor Sezana | 6 | 9 | 10 | - | - | - | - |
+| Primorje | - | - | - | - | 6 | 9 | - |
+| ND Gorica | 10 | - | 9 | - | - | - | - |
+| Nafta | - | - | - | - | 10 | 11 | 5 |
+| Rogaska | - | - | - | 8 | - | - | - |
+| Grosuplje | - | - | - | - | - | - | 9 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\slovenia1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\slovenia1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

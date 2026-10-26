@@ -4,10 +4,10 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T16:08:57+00:00",
+  "generated_at": "2026-10-26T01:49:44+00:00",
   "config": {
     "league": "spain1",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\spain1",
+    "out_dir": "data/analysis/spain1",
     "out_stem": null
   },
   "league": {
@@ -26,52 +26,52 @@
   "sources": [
     {
       "report_name": "database_profile",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\database_profile.json",
+      "path": "data/analysis/spain1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 29.18
+      "size_kb": 39.87
     },
     {
       "report_name": "matches_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\matches_analysis.json",
+      "path": "data/analysis/spain1/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 10.58
+      "size_kb": 27.22
     },
     {
       "report_name": "goals_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\goals_analysis.json",
+      "path": "data/analysis/spain1/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 6.31
+      "size_kb": 12.35
     },
     {
       "report_name": "teams_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\teams_analysis.json",
+      "path": "data/analysis/spain1/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 32.72
+      "size_kb": 41.28
     },
     {
       "report_name": "season_trends",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\season_trends.json",
+      "path": "data/analysis/spain1/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.93
+      "size_kb": 10.47
     },
     {
       "report_name": "scoreline_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\scoreline_analysis.json",
+      "path": "data/analysis/spain1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 76.69
+      "size_kb": 355.94
     },
     {
       "report_name": "relationships",
-      "path": "E:\\football_data_analysis\\data\\analysis\\spain1\\relationships.json",
+      "path": "data/analysis/spain1/relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.33
+      "size_kb": 13.79
     }
   ],
   "coverage": {
@@ -83,189 +83,189 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "449 matches: home wins 48.3%, draws 24.5%, away wins 27.2% (217H / 110D / 122A)",
+      "detail": "2375 matches: home wins 45.0%, draws 26.7%, away wins 28.4% (1068H / 633D / 674A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "9 home and 15 away comebacks (trailing at HT but winning at FT)",
+      "detail": "52 home and 55 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 122 times",
+      "detail": "home lead at HT -> home win occurred 618 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "449 matches produced 1234 goals (avg 2.748 per match)",
+      "detail": "2375 matches produced 6169 goals (avg 2.597 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 58.0% vs away 42.0% of 1234 goals in total (home/away ratio 1.38)",
+      "detail": "home 56.5% vs away 43.5% of 6169 goals in total (home/away ratio 1.30)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "255 of 449 matches (56.8%)",
+      "detail": "1238 of 2375 matches (52.1%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 123 scoring matches, 28.7% of scoring)",
+      "detail": "minute 1-15 (first goal in 694 scoring matches, 31.5% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 33.82, median 30.0",
+      "detail": "mean 33.10, median 28.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Barcelona leads with 115 points across 2 seasons (2 title(s), GD 83)",
+      "detail": "Barcelona leads with 534 points across 7 seasons (4 title(s), GD 314)",
       "importance": "high",
       "id": "F9"
     },
     {
       "source": "teams_analysis",
       "finding": "Team consistency",
-      "detail": "17 teams present in every one of the 2 seasons (Alaves, Ath Bilbao, Atl. Madrid, Barcelona, Betis...)",
+      "detail": "12 teams present in every one of the 7 seasons (Ath Bilbao, Atl. Madrid, Barcelona, Betis, Celta Vigo...)",
       "importance": "medium",
       "id": "F10"
     },
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Atl. Madrid earns 27 more points at home than away (56 home vs 29 away)",
+      "detail": "Atl. Madrid earns 90 more points at home than away (285 home vs 195 away)",
       "importance": "medium",
       "id": "F11"
     },
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "Barcelona won 2 of 2 championship(s) on record",
+      "detail": "Barcelona won 4 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Barcelona beat Atl. Madrid by 5 pts",
+      "detail": "2020-2021: Atl. Madrid beat Real Madrid by 2 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.348 per match): first half 2.695 vs last half 3.043 across 2 seasons",
+      "detail": "up (+0.267 per match): first half 2.508 vs last half 2.775 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2026-2027 (goals view, avg abs position diff 6.200)",
+      "detail": "2022-2023 (goals view, avg abs position diff 7.000)",
       "importance": "low",
       "id": "F15"
     },
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2025-2026 (luck view, avg abs position diff 3.400)",
+      "detail": "2023-2024 (luck view, avg abs position diff 2.000)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 68 matches (15.1%)",
+      "detail": "1-1 in 327 matches (13.8%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (52 of 217 home matches, 24.0%)",
+      "detail": "1-0 (290 of 1068 home matches, 27.2%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (68 of 110 draw matches, 61.8%)",
+      "detail": "1-1 (327 of 633 draw matches, 51.7%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "1-2 (30 of 122 away matches, 24.6%)",
+      "detail": "0-1 (184 of 674 away matches, 27.3%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "9 match(es) with >= 7 total goals",
+      "detail": "55 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "home_position_before_match |corr| = -0.2264 (n=380 leakage-safe rows)",
+      "detail": "home_team_home_goals_avg |corr| = 0.1141 (n=2280 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 8.022: home 3.339, draw -3.022, away -4.683",
+      "detail": "points_difference spreads group means over 10.388: home 4.323, draw -1.469, away -6.065",
       "importance": "medium",
       "id": "F23"
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (6)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE",
+      "finding": "Data-quality warnings (10)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 449 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2375 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 449,
-    "avg_goals": 2.748,
-    "home_win_pct": 48.3,
-    "draw_pct": 24.5,
-    "away_win_pct": 27.2,
+    "n_matches": 2375,
+    "avg_goals": 2.597,
+    "home_win_pct": 45.0,
+    "draw_pct": 26.7,
+    "away_win_pct": 28.4,
     "most_common_scoreline": "1-1",
     "dominant_team": "Barcelona",
     "champion_most_titles": "Barcelona",
-    "btts_rate_pct": 56.8
+    "btts_rate_pct": 52.1
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 29.18
+      "size_kb": 39.87
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 10.58
+      "size_kb": 27.22
     },
     {
       "module": "goals_analysis",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 6.31
+      "size_kb": 12.35
     },
     {
       "module": "teams_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 32.72
+      "size_kb": 41.28
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.93
+      "size_kb": 10.47
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 76.69
+      "size_kb": 355.94
     },
     {
       "module": "relationships",
@@ -359,17 +359,17 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.33
+      "size_kb": 13.79
     }
   ],
   "anomalies": [
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 69 matches, expected 380",
+      "message": "Season 2026-2027 has 95 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 69,
+        "n_matches": 95,
         "expected": 380
       }
     },
@@ -385,20 +385,64 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 7.2% vs overall 4.5% (deviation 2.7 pp)",
+      "message": "Season 2021-2022 goalless share 11.3% vs overall 7.4% (deviation 3.9 pp)",
+      "details": {
+        "season": "2021-2022",
+        "season_goalless_pct": 11.3,
+        "overall_goalless_pct": 7.4,
+        "deviation_pp": 3.9
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2024-2025 goalless share 5.5% vs overall 7.4% (deviation 1.9 pp)",
+      "details": {
+        "season": "2024-2025",
+        "season_goalless_pct": 5.5,
+        "overall_goalless_pct": 7.4,
+        "deviation_pp": 1.9
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2025-2026 goalless share 3.9% vs overall 7.4% (deviation 3.5 pp)",
+      "details": {
+        "season": "2025-2026",
+        "season_goalless_pct": 3.9,
+        "overall_goalless_pct": 7.4,
+        "deviation_pp": 3.5
+      }
+    },
+    {
+      "code": "SEASON_AVG_GOALS_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 avg goals 3.011 vs overall 2.597 (deviation 0.414)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 7.2,
-        "overall_goalless_pct": 4.5,
-        "deviation_pp": 2.7
+        "season_avg_goals": 3.011,
+        "overall_avg_goals": 2.597,
+        "deviation": 0.414
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 9.5% vs overall 7.4% (deviation 2.1 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 9.5,
+        "overall_goalless_pct": 7.4,
+        "deviation_pp": 2.1
       }
     },
     {
       "code": "HIGH_SCORING_MATCHES",
       "severity": "warning",
-      "message": "2 match(es) with >= 8 total goals (extreme scorelines)",
+      "message": "12 match(es) with >= 8 total goals (extreme scorelines)",
       "details": {
-        "n_matches": 2,
+        "n_matches": 12,
         "threshold": 8,
         "examples": [
           {
@@ -407,7 +451,32 @@
             "count": 1
           },
           {
+            "scoreline": "7-1",
+            "total_goals": 8,
+            "count": 2
+          },
+          {
+            "scoreline": "6-2",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
+            "scoreline": "5-3",
+            "total_goals": 8,
+            "count": 3
+          },
+          {
+            "scoreline": "4-4",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
             "scoreline": "3-5",
+            "total_goals": 8,
+            "count": 3
+          },
+          {
+            "scoreline": "2-6",
             "total_goals": 8,
             "count": 1
           }
@@ -420,20 +489,20 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 31693,
-        "distinct": 31648,
+        "rows": 139990,
+        "distinct": 139945,
         "duplicates": 45
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=29, fgte=29 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=439, fgte=439 rows)",
       "details": {
-        "total": 31693,
-        "fgt_inconsistent": 29,
-        "fgte_inconsistent": 29,
-        "n_with_fgt": 29424
+        "total": 139990,
+        "fgt_inconsistent": 439,
+        "fgte_inconsistent": 439,
+        "n_with_fgt": 128599
       }
     }
   ],

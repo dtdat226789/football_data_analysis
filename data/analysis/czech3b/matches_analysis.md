@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:47:34+00:00
+- Generated: 2026-10-26T01:29:32+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`
@@ -8,34 +8,65 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 333 |
-| Home wins | 143 (42.9%) |
-| Draws | 76 (22.8%) |
-| Away wins | 114 (34.2%) |
-| Total goals | 1104 |
-| Average goals per match | 3.315 |
-| Goalless matches | 12 (3.6%) |
+| Matches | 1417 |
+| Home wins | 663 (46.8%) |
+| Draws | 313 (22.1%) |
+| Away wins | 441 (31.1%) |
+| Total goals | 4372 |
+| Average goals per match | 3.085 |
+| Goalless matches | 74 (5.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 63 | 43 (68.3%) | 0 (0.0%) | 20 (31.7%) | 213 | 3.381 | 0 (0.0%) |
+| 2021-2022 | 240 | 116 (48.3%) | 50 (20.8%) | 74 (30.8%) | 732 | 3.05 | 12 (5.0%) |
+| 2022-2023 | 240 | 106 (44.2%) | 58 (24.2%) | 76 (31.7%) | 713 | 2.971 | 15 (6.2%) |
+| 2023-2024 | 240 | 118 (49.2%) | 56 (23.3%) | 66 (27.5%) | 720 | 3.0 | 14 (5.8%) |
+| 2024-2025 | 272 | 125 (46.0%) | 66 (24.3%) | 81 (29.8%) | 796 | 2.926 | 19 (7.0%) |
 | 2025-2026 | 272 | 120 (44.1%) | 60 (22.1%) | 92 (33.8%) | 912 | 3.353 | 7 (2.6%) |
-| 2026-2027 | 61 | 23 (37.7%) | 16 (26.2%) | 22 (36.1%) | 192 | 3.148 | 5 (8.2%) |
+| 2026-2027 | 90 | 35 (38.9%) | 23 (25.6%) | 32 (35.6%) | 286 | 3.178 | 7 (7.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 104 (80.6%) | 17 (13.2%) | 8 (6.2%) | 129 |
-| HT draw | 35 (32.4%) | 43 (39.8%) | 30 (27.8%) | 108 |
-| HT away lead | 4 (4.2%) | 16 (16.7%) | 76 (79.2%) | 96 |
+| HT home lead | 437 (81.8%) | 65 (12.2%) | 32 (6.0%) | 534 |
+| HT draw | 191 (37.4%) | 176 (34.4%) | 144 (28.2%) | 511 |
+| HT away lead | 29 (8.0%) | 72 (19.9%) | 261 (72.1%) | 362 |
+- *10 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **4** (1.2%)
-- Away comebacks (trailing at HT, won at FT): **8** (2.4%)
+- Home comebacks (trailing at HT, won at FT): **29** (2.0%)
+- Away comebacks (trailing at HT, won at FT): **32** (2.3%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Jablonec B | Mlada Boleslav B | 0-1 | 2-1 |
+| 2021-2022 | Zapy | Hradec Kralove B | 1-2 | 3-2 |
+| 2021-2022 | Bohemians 1905 B | Teplice B | 0-1 | 4-2 |
+| 2021-2022 | Prepere | Usti nad Orlici | 1-2 | 4-2 |
+| 2021-2022 | Prepere | Jablonec B | 0-1 | 2-1 |
+| 2021-2022 | Jablonec B | Chlumec nad Cidlinou | 3-4 | 6-4 |
+| 2021-2022 | Zapy | Velvary | 1-2 | 3-2 |
+| 2021-2022 | Chlumec nad Cidlinou | Hradec Kralove B | 0-1 | 3-1 |
+| 2022-2023 | Zizkov | Benesov | 0-1 | 2-1 |
+| 2022-2023 | Banik Most-Sous | Velvary | 0-1 | 2-1 |
+| 2022-2023 | Prepere | Benesov | 0-1 | 2-1 |
+| 2022-2023 | Kolin | Prepere | 0-1 | 2-1 |
+| 2022-2023 | Velvary | Prepere | 0-1 | 2-1 |
+| 2022-2023 | Zivanice | Pardubice B | 0-2 | 3-2 |
+| 2023-2024 | Jablonec B | Zivanice | 0-1 | 2-1 |
+| 2023-2024 | Hradec Kralove B | Zivanice | 0-1 | 3-2 |
+| 2023-2024 | FK Ceska Lipa | Hradec Kralove B | 1-2 | 6-3 |
+| 2023-2024 | Brozany | Kolin | 1-2 | 4-2 |
+| 2023-2024 | Chlumec nad Cidlinou | FK Ceska Lipa | 0-2 | 3-2 |
+| 2024-2025 | Hradec Kralove B | Liberec B | 1-2 | 3-2 |
+| 2024-2025 | Hradec Kralove B | FK Ceska Lipa | 0-1 | 2-1 |
+| 2024-2025 | Usti nad Labem | Pardubice B | 0-2 | 3-2 |
+| 2024-2025 | Kolin | Jablonec B | 0-1 | 2-1 |
+| 2024-2025 | Benatky n. Jiz. | Hradec Kralove B | 0-1 | 3-2 |
+| 2024-2025 | Brozany | Liberec B | 2-4 | 5-4 |
 | 2025-2026 | Zapy | FK Ceska Lipa | 1-2 | 3-2 |
 | 2025-2026 | Hradec Kralove B | Varnsdorf | 1-2 | 3-2 |
 | 2025-2026 | Hradec Kralove B | Usti nad Orlici | 0-1 | 3-1 |
@@ -44,6 +75,30 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Liberec B | Mlada Boleslav B | 2-1 | 3-4 |
+| 2021-2022 | Hradec Kralove B | Brozany | 2-1 | 2-3 |
+| 2021-2022 | Chlumec nad Cidlinou | Prepere | 2-1 | 2-3 |
+| 2021-2022 | Bohemians 1905 B | Dukla Prague B | 1-0 | 2-3 |
+| 2021-2022 | Chlumec nad Cidlinou | Liberec B | 2-1 | 2-3 |
+| 2021-2022 | Liberec B | Teplice B | 3-2 | 3-4 |
+| 2021-2022 | Mlada Boleslav B | Jablonec B | 1-0 | 1-2 |
+| 2021-2022 | Jablonec B | Prepere | 1-0 | 1-3 |
+| 2022-2023 | Banik Most-Sous | Usti nad Labem | 1-0 | 1-3 |
+| 2022-2023 | Pardubice B | Velvary | 2-1 | 2-3 |
+| 2022-2023 | Zivanice | Usti nad Labem | 1-0 | 1-2 |
+| 2022-2023 | Mlada Boleslav B | Velvary | 1-0 | 1-2 |
+| 2022-2023 | Benesov | Hradec Kralove B | 1-0 | 2-4 |
+| 2022-2023 | Brozany | Hradec Kralove B | 1-0 | 1-3 |
+| 2023-2024 | Prepere | Liberec B | 1-0 | 2-3 |
+| 2023-2024 | Hradec Kralove B | Pardubice B | 2-1 | 2-4 |
+| 2023-2024 | Teplice B | Usti nad Labem | 2-1 | 2-3 |
+| 2023-2024 | Prepere | Zivanice | 1-0 | 1-2 |
+| 2023-2024 | Banik Most-Sous | Prepere | 1-0 | 1-2 |
+| 2024-2025 | Pardubice B | Hradec Kralove B | 1-0 | 1-2 |
+| 2024-2025 | Chlumec nad Cidlinou | Teplice B | 2-1 | 3-4 |
+| 2024-2025 | Mlada Boleslav B | Jablonec B | 1-0 | 1-2 |
+| 2024-2025 | Chlumec nad Cidlinou | Liberec B | 2-1 | 2-4 |
+| 2024-2025 | Pardubice B | SK Kladno | 1-0 | 2-3 |
 | 2025-2026 | Liberec B | Jablonec B | 1-0 | 1-3 |
 | 2025-2026 | Benatky n. Jiz. | Banik Most-Sous | 1-0 | 1-2 |
 | 2025-2026 | Kolin | Zapy | 2-0 | 2-3 |
@@ -56,43 +111,49 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 129 | 104 (80.6%) | 17 (13.2%) | 8 (6.2%) |
-| Away lead | 96 | 76 (79.2%) | 16 (16.7%) | 4 (4.2%) |
+| Home lead | 534 | 437 (81.8%) | 65 (12.2%) | 32 (6.0%) |
+| Away lead | 362 | 261 (72.1%) | 72 (19.9%) | 29 (8.0%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 35 | 32.4% |
-| Draw | 43 | 39.8% |
-| Away win | 30 | 27.8% |
+| Home win | 191 | 37.4% |
+| Draw | 176 | 34.4% |
+| Away win | 144 | 28.2% |
+- *10 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `321` of `333` (96.4%)
+- Matches with a first-goal time recorded: `1340` of `1417` (94.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 123 | 36.9% | 54 (43.9%) | 23 (18.7%) | 46 (37.4%) |
-| 16-30 | 88 | 26.4% | 43 (48.9%) | 16 (18.2%) | 29 (33.0%) |
-| 31-45 | 57 | 17.1% | 24 (42.1%) | 13 (22.8%) | 20 (35.1%) |
-| 46-60 | 33 | 9.9% | 13 (39.4%) | 9 (27.3%) | 11 (33.3%) |
-| 61-75 | 8 | 2.4% | 3 (37.5%) | 3 (37.5%) | 2 (25.0%) |
-| 76-90 | 11 | 3.3% | 5 (45.5%) | 0 (0.0%) | 6 (54.5%) |
-| 91-120 | 1 | 0.3% | 1 (100.0%) | 0 (0.0%) | 0 (0.0%) |
+| 1-15 | 483 | 34.1% | 240 (49.7%) | 88 (18.2%) | 155 (32.1%) |
+| 16-30 | 367 | 25.9% | 186 (50.7%) | 62 (16.9%) | 119 (32.4%) |
+| 31-45 | 228 | 16.1% | 110 (48.2%) | 51 (22.4%) | 67 (29.4%) |
+| 46-60 | 143 | 10.1% | 62 (43.4%) | 22 (15.4%) | 59 (41.3%) |
+| 61-75 | 63 | 4.4% | 32 (50.8%) | 13 (20.6%) | 18 (28.6%) |
+| 76-90 | 48 | 3.4% | 25 (52.1%) | 3 (6.2%) | 20 (41.7%) |
+| 91-120 | 8 | 0.6% | 7 (87.5%) | 0 (0.0%) | 1 (12.5%) |
 
 ## 7. Goalless matches
-- Overall: **12** of `333` (3.6%)
+- Overall: **74** of `1417` (5.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 63 | 0 | 0.0% |
+| 2021-2022 | 240 | 12 | 5.0% |
+| 2022-2023 | 240 | 15 | 6.2% |
+| 2023-2024 | 240 | 14 | 5.8% |
+| 2024-2025 | 272 | 19 | 7.0% |
 | 2025-2026 | 272 | 7 | 2.6% |
-| 2026-2027 | 61 | 5 | 8.2% |
+| 2026-2027 | 90 | 7 | 7.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\czech3b\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\czech3b\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

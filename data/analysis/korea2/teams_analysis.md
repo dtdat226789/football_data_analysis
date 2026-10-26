@@ -1,179 +1,166 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:00:34+00:00
+- Generated: 2026-10-26T01:40:01+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
 
-- Teams: **33** | Seasons: **2** | Matches: **493**
+- Teams: **24** | Seasons: **7** | Matches: **1507**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Suwon Bluewings | 2 | 65 | 37 | 17 | 11 | 128 | 117 | 70 | 47 | 64.0 | 1 | 2 | 1 |
-| Seoul E-Land | 2 | 65 | 31 | 20 | 14 | 113 | 109 | 73 | 36 | 56.5 | 3 | 11 | 0 |
-| Busan | 2 | 65 | 26 | 18 | 21 | 96 | 88 | 80 | 8 | 48.0 | 6 | 8 | 0 |
-| Seongnam | 2 | 64 | 24 | 23 | 17 | 95 | 74 | 62 | 12 | 47.5 | 4 | 10 | 0 |
-| Gimpo FC | 2 | 64 | 22 | 24 | 18 | 90 | 79 | 67 | 12 | 45.0 | 6 | 7 | 0 |
-| Asan | 2 | 65 | 22 | 21 | 22 | 87 | 85 | 80 | 5 | 43.5 | 7 | 8 | 0 |
-| Hwaseong | 2 | 66 | 21 | 22 | 23 | 85 | 78 | 78 | 0 | 42.5 | 5 | 10 | 0 |
-| Jeonnam | 2 | 65 | 21 | 21 | 23 | 84 | 93 | 97 | -4 | 42.0 | 5 | 15 | 0 |
+| Seoul E-Land | 7 | 240 | 89 | 66 | 85 | 333 | 329 | 288 | 41 | 47.57 | 3 | 13 | 0 |
+| Jeonnam | 7 | 242 | 81 | 79 | 82 | 322 | 328 | 323 | 5 | 46.0 | 4 | 15 | 0 |
+| Busan | 6 | 213 | 83 | 54 | 76 | 303 | 273 | 262 | 11 | 50.5 | 2 | 10 | 0 |
+| Asan | 7 | 240 | 79 | 65 | 96 | 302 | 280 | 295 | -15 | 43.14 | 2 | 10 | 0 |
+| Gyeongnam | 7 | 239 | 76 | 72 | 91 | 300 | 303 | 335 | -32 | 42.86 | 3 | 11 | 0 |
+| Bucheon FC 1995 | 6 | 213 | 80 | 56 | 77 | 296 | 251 | 262 | -11 | 49.33 | 3 | 8 | 0 |
+| Anyang | 5 | 175 | 75 | 48 | 52 | 273 | 239 | 203 | 36 | 54.6 | 1 | 9 | 1 |
+| Gimpo FC | 5 | 179 | 63 | 59 | 57 | 248 | 206 | 202 | 4 | 49.6 | 3 | 7 | 0 |
+| Ansan Greeners | 7 | 240 | 52 | 63 | 125 | 219 | 233 | 378 | -145 | 31.29 | 5 | 16 | 0 |
+| Suwon Bluewings | 3 | 103 | 54 | 28 | 21 | 190 | 170 | 108 | 62 | 63.33 | 1 | 3 | 1 |
+| Daejeon | 3 | 102 | 49 | 24 | 29 | 171 | 159 | 127 | 32 | 57.0 | 2 | 5 | 0 |
+| Seongnam | 4 | 138 | 40 | 45 | 53 | 165 | 153 | 183 | -30 | 41.25 | 4 | 14 | 0 |
+| Cheongju | 4 | 139 | 34 | 53 | 52 | 155 | 134 | 191 | -57 | 38.75 | 8 | 14 | 0 |
+| Gimcheon Sangmu | 2 | 71 | 42 | 15 | 14 | 141 | 129 | 69 | 60 | 70.5 | 1 | 1 | 2 |
+| Cheonan City | 4 | 139 | 28 | 41 | 70 | 125 | 154 | 227 | -73 | 31.25 | 8 | 14 | 0 |
+| Suwon FC | 2 | 55 | 32 | 13 | 10 | 109 | 106 | 59 | 47 | 54.5 | 2 | 2 | 0 |
+| Gwangju FC | 1 | 40 | 25 | 11 | 4 | 86 | 68 | 32 | 36 | 86.0 | 1 | 1 | 1 |
+| Hwaseong | 2 | 68 | 21 | 22 | 25 | 85 | 80 | 82 | -2 | 42.5 | 5 | 10 | 0 |
 | Incheon | 1 | 39 | 23 | 9 | 7 | 78 | 66 | 30 | 36 | 78.0 | 1 | 1 | 1 |
-| Gyeongnam | 2 | 64 | 19 | 17 | 28 | 74 | 65 | 88 | -23 | 37.0 | 9 | 9 | 0 |
-| Bucheon FC 1995 | 1 | 39 | 19 | 10 | 10 | 67 | 59 | 49 | 10 | 67.0 | 3 | 3 | 0 |
-| Cheongju | 2 | 65 | 12 | 24 | 29 | 60 | 61 | 103 | -42 | 30.0 | 12 | 14 | 0 |
-| Cheonan City | 2 | 66 | 11 | 21 | 34 | 54 | 72 | 108 | -36 | 27.0 | 13 | 14 | 0 |
-| Suwon FC | 1 | 26 | 13 | 10 | 3 | 49 | 51 | 30 | 21 | 49.0 | 2 | 2 | 0 |
-| Ansan Greeners | 2 | 65 | 11 | 16 | 38 | 49 | 52 | 109 | -57 | 24.5 | 15 | 16 | 0 |
-| Daegu | 1 | 26 | 13 | 7 | 6 | 46 | 48 | 35 | 13 | 46.0 | 4 | 4 | 0 |
-| Paju Frontier | 1 | 25 | 8 | 5 | 12 | 29 | 24 | 28 | -4 | 29.0 | 11 | 11 | 0 |
-| Yongin | 1 | 26 | 5 | 13 | 8 | 28 | 32 | 36 | -4 | 28.0 | 13 | 13 | 0 |
-| Gimhae | 1 | 26 | 2 | 8 | 16 | 14 | 21 | 51 | -30 | 14.0 | 17 | 17 | 0 |
-| Land-Ansan Greeners | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 24 | 24 | 0 |
-| Land-Asan | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 28 | 28 | 0 |
-| Land-Bucheon FC 1995 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 25 | 25 | 0 |
-| Land-Busan | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 18 | 18 | 0 |
-| Land-Cheonan City | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 27 | 27 | 0 |
-| Land-Cheongju | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 16 | 16 | 0 |
-| Land-Gimpo FC | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 22 | 22 | 0 |
-| Land-Gyeongnam | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 26 | 26 | 0 |
-| Land-Hwaseong | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 20 | 20 | 0 |
-| Land-Incheon | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 21 | 21 | 0 |
-| Land-Jeonnam | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 23 | 23 | 0 |
-| Land-Seongnam | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 17 | 17 | 0 |
-| Land-Suwon Bluewings | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 19 | 19 | 0 |
-| Seoul E | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 12 | 12 | 0 |
+| Jeju SK | 1 | 27 | 18 | 6 | 3 | 60 | 50 | 23 | 27 | 60.0 | 1 | 1 | 1 |
+| Daegu | 1 | 28 | 15 | 7 | 6 | 52 | 55 | 38 | 17 | 52.0 | 4 | 4 | 0 |
+| Paju Frontier | 1 | 27 | 8 | 6 | 13 | 30 | 26 | 33 | -7 | 30.0 | 12 | 12 | 0 |
+| Yongin | 1 | 28 | 5 | 13 | 10 | 28 | 33 | 42 | -9 | 28.0 | 13 | 13 | 0 |
+| Gimhae | 1 | 29 | 3 | 9 | 17 | 18 | 26 | 59 | -33 | 18.0 | 17 | 17 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Asan | 34 | 14 | 12 | 8 | 54 | 31 | 8 | 9 | 14 | 33 | 21 |
-| Gyeongnam | 33 | 13 | 6 | 14 | 45 | 31 | 6 | 11 | 14 | 29 | 16 |
-| Hwaseong | 35 | 13 | 11 | 11 | 50 | 31 | 8 | 11 | 12 | 35 | 15 |
-| Jeonnam | 31 | 13 | 7 | 11 | 46 | 34 | 8 | 14 | 12 | 38 | 8 |
-| Daegu | 13 | 8 | 2 | 3 | 26 | 13 | 5 | 5 | 3 | 20 | 6 |
-| Bucheon FC 1995 | 19 | 10 | 6 | 3 | 36 | 20 | 9 | 4 | 7 | 31 | 5 |
-| Suwon Bluewings | 33 | 18 | 11 | 4 | 65 | 32 | 19 | 6 | 7 | 63 | 2 |
-| Busan | 33 | 13 | 10 | 10 | 49 | 32 | 13 | 8 | 11 | 47 | 2 |
+| Asan | 121 | 48 | 33 | 40 | 177 | 119 | 31 | 32 | 56 | 125 | 52 |
+| Bucheon FC 1995 | 105 | 44 | 31 | 30 | 163 | 108 | 36 | 25 | 47 | 133 | 30 |
+| Gyeongnam | 121 | 43 | 31 | 47 | 160 | 118 | 33 | 41 | 44 | 140 | 20 |
+| Gimcheon Sangmu | 35 | 24 | 7 | 4 | 79 | 36 | 18 | 8 | 10 | 62 | 17 |
+| Hwaseong | 35 | 13 | 11 | 11 | 50 | 33 | 8 | 11 | 14 | 35 | 15 |
+| Gwangju FC | 20 | 16 | 2 | 2 | 50 | 20 | 9 | 9 | 2 | 36 | 14 |
+| Daejeon | 51 | 26 | 14 | 11 | 92 | 51 | 23 | 10 | 18 | 79 | 13 |
+| Jeonnam | 120 | 43 | 38 | 39 | 167 | 122 | 38 | 41 | 43 | 155 | 12 |
+| Suwon Bluewings | 53 | 29 | 14 | 10 | 101 | 50 | 25 | 14 | 11 | 89 | 12 |
+| Anyang | 87 | 37 | 29 | 21 | 140 | 88 | 38 | 19 | 31 | 133 | 7 |
+| Daegu | 14 | 9 | 2 | 3 | 29 | 14 | 6 | 5 | 3 | 23 | 6 |
 | Incheon | 19 | 12 | 4 | 3 | 40 | 20 | 11 | 5 | 4 | 38 | 2 |
-| Cheonan City | 32 | 5 | 13 | 14 | 28 | 34 | 6 | 8 | 20 | 26 | 2 |
-| Yongin | 14 | 2 | 8 | 4 | 14 | 12 | 3 | 5 | 4 | 14 | 0 |
-| Seongnam | 31 | 11 | 14 | 6 | 47 | 33 | 13 | 9 | 11 | 48 | -1 |
-| Suwon FC | 11 | 6 | 5 | 0 | 23 | 15 | 7 | 5 | 3 | 26 | -3 |
-| Seoul E-Land | 32 | 15 | 9 | 8 | 54 | 33 | 16 | 11 | 6 | 59 | -5 |
-| Gimhae | 13 | 0 | 4 | 9 | 4 | 13 | 2 | 4 | 7 | 10 | -6 |
-| Paju Frontier | 12 | 3 | 2 | 7 | 11 | 13 | 5 | 3 | 5 | 18 | -7 |
-| Ansan Greeners | 35 | 4 | 7 | 24 | 19 | 30 | 7 | 9 | 14 | 30 | -11 |
-| Gimpo FC | 30 | 9 | 11 | 10 | 38 | 34 | 13 | 13 | 8 | 52 | -14 |
-| Cheongju | 33 | 4 | 11 | 18 | 23 | 32 | 8 | 13 | 11 | 37 | -14 |
+| Jeju SK | 14 | 9 | 4 | 1 | 31 | 13 | 9 | 2 | 2 | 29 | 2 |
+| Seongnam | 68 | 20 | 23 | 25 | 83 | 70 | 20 | 22 | 28 | 82 | 1 |
+| Yongin | 15 | 2 | 8 | 5 | 14 | 13 | 3 | 5 | 5 | 14 | 0 |
+| Paju Frontier | 13 | 3 | 3 | 7 | 12 | 14 | 5 | 3 | 6 | 18 | -6 |
+| Cheonan City | 69 | 12 | 23 | 34 | 59 | 70 | 16 | 18 | 36 | 66 | -7 |
+| Gimhae | 14 | 0 | 5 | 9 | 5 | 15 | 3 | 4 | 8 | 13 | -8 |
+| Seoul E-Land | 120 | 44 | 30 | 46 | 162 | 120 | 45 | 36 | 39 | 171 | -9 |
+| Cheongju | 70 | 16 | 24 | 30 | 72 | 69 | 18 | 29 | 22 | 83 | -11 |
+| Busan | 107 | 38 | 31 | 38 | 145 | 106 | 45 | 23 | 38 | 158 | -13 |
+| Suwon FC | 25 | 13 | 8 | 4 | 47 | 30 | 19 | 5 | 6 | 62 | -15 |
+| Gimpo FC | 89 | 29 | 29 | 31 | 116 | 90 | 34 | 30 | 26 | 132 | -16 |
+| Ansan Greeners | 122 | 24 | 28 | 70 | 100 | 118 | 28 | 35 | 55 | 119 | -19 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Incheon | 2.00 |
-| 2 | Suwon Bluewings | 1.97 |
-| 3 | Suwon FC | 1.89 |
-| 4 | Daegu | 1.77 |
-| 5 | Seoul E-Land | 1.74 |
+| 1 | Jeju SK | 2.22 |
+| 2 | Gwangju FC | 2.15 |
+| 3 | Incheon | 2.00 |
+| 4 | Gimcheon Sangmu | 1.99 |
+| 5 | Suwon FC | 1.98 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Suwon Bluewings | 117 |
-| 2 | Seoul E-Land | 109 |
-| 3 | Jeonnam | 93 |
-| 4 | Busan | 88 |
-| 5 | Asan | 85 |
+| 1 | Seoul E-Land | 329 |
+| 2 | Jeonnam | 328 |
+| 3 | Gyeongnam | 303 |
+| 4 | Asan | 280 |
+| 5 | Busan | 273 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Suwon Bluewings | 47 |
-| 2 | Seoul E-Land | 36 |
-| 3 | Incheon | 36 |
-| 4 | Suwon FC | 21 |
-| 5 | Daegu | 13 |
+| 1 | Suwon Bluewings | 62 |
+| 2 | Gimcheon Sangmu | 60 |
+| 3 | Suwon FC | 47 |
+| 4 | Seoul E-Land | 41 |
+| 5 | Anyang | 36 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Land-Cheongju | 0.000 |
-| 2 | Land-Seongnam | 0.000 |
-| 3 | Land-Incheon | 0.000 |
-| 4 | Land-Hwaseong | 0.500 |
-| 5 | Incheon | 0.811 |
+| 1 | Gwangju FC | 0.789 |
+| 2 | Incheon | 0.811 |
+| 3 | Jeju SK | 0.852 |
+| 4 | Gimcheon Sangmu | 0.956 |
+| 5 | Suwon Bluewings | 1.010 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **12**
+- Teams present in all **7** seasons: **5**
 
-Ansan Greeners, Asan, Busan, Cheonan City, Cheongju, Gimpo FC, Gyeongnam, Hwaseong, Jeonnam, Seongnam, Seoul E-Land, Suwon Bluewings
+Ansan Greeners, Asan, Gyeongnam, Jeonnam, Seoul E-Land
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **161** (showing the 15 most frequent)
+- Distinct fixtures: **217** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Suwon Bluewings vs Asan | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
-| Hwaseong vs Cheonan City | 6 | 1 | 4 | 1 | 16.7% | 66.7% | 16.7% |
-| Gimpo FC vs Busan | 5 | 4 | 1 | 0 | 80.0% | 20.0% | 0.0% |
-| Asan vs Cheonan City | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Busan vs Hwaseong | 5 | 3 | 2 | 0 | 60.0% | 40.0% | 0.0% |
-| Gimpo FC vs Gyeongnam | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Gyeongnam vs Ansan Greeners | 5 | 3 | 2 | 0 | 60.0% | 40.0% | 0.0% |
-| Hwaseong vs Cheongju | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Jeonnam vs Cheonan City | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Jeonnam vs Hwaseong | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Seongnam vs Ansan Greeners | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Seongnam vs Asan | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Seongnam vs Hwaseong | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Seoul E-Land vs Cheonan City | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Suwon Bluewings vs Cheonan City | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
+| Gyeongnam vs Asan | 22 | 11 | 7 | 4 | 50.0% | 31.8% | 18.2% |
+| Gyeongnam vs Ansan Greeners | 22 | 10 | 7 | 5 | 45.5% | 31.8% | 22.7% |
+| Jeonnam vs Asan | 22 | 8 | 9 | 5 | 36.4% | 40.9% | 22.7% |
+| Ansan Greeners vs Asan | 22 | 7 | 6 | 9 | 31.8% | 27.3% | 40.9% |
+| Gyeongnam vs Jeonnam | 22 | 3 | 9 | 10 | 13.6% | 40.9% | 45.5% |
+| Gyeongnam vs Seoul E-Land | 21 | 7 | 7 | 7 | 33.3% | 33.3% | 33.3% |
+| Seoul E-Land vs Ansan Greeners | 21 | 4 | 7 | 10 | 19.0% | 33.3% | 47.6% |
+| Seoul E-Land vs Jeonnam | 21 | 4 | 11 | 6 | 19.0% | 52.4% | 28.6% |
+| Bucheon FC 1995 vs Seoul E-Land | 20 | 10 | 6 | 4 | 50.0% | 30.0% | 20.0% |
+| Bucheon FC 1995 vs Ansan Greeners | 20 | 9 | 4 | 7 | 45.0% | 20.0% | 35.0% |
+| Bucheon FC 1995 vs Jeonnam | 20 | 9 | 6 | 5 | 45.0% | 30.0% | 25.0% |
+| Seoul E-Land vs Asan | 20 | 9 | 5 | 6 | 45.0% | 25.0% | 30.0% |
+| Bucheon FC 1995 vs Gyeongnam | 20 | 8 | 3 | 9 | 40.0% | 15.0% | 45.0% |
+| Jeonnam vs Ansan Greeners | 20 | 8 | 6 | 6 | 40.0% | 30.0% | 30.0% |
+| Bucheon FC 1995 vs Asan | 19 | 9 | 6 | 4 | 47.4% | 31.6% | 21.1% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| Suwon Bluewings | 2 | 1 |
-| Seoul E-Land | 11 | 3 |
-| Busan | 8 | 6 |
-| Seongnam | 4 | 10 |
-| Gimpo FC | 6 | 7 |
-| Asan | 7 | 8 |
-| Hwaseong | 10 | 5 |
-| Jeonnam | 5 | 15 |
-| Incheon | 1 | - |
-| Gyeongnam | 9 | 9 |
-| Bucheon FC 1995 | 3 | - |
-| Cheongju | 14 | 12 |
-| Cheonan City | 13 | 14 |
-| Suwon FC | - | 2 |
-| Ansan Greeners | 15 | 16 |
-| Daegu | - | 4 |
-| Paju Frontier | - | 11 |
-| Yongin | - | 13 |
-| Gimhae | - | 17 |
-| Land-Ansan Greeners | 24 | - |
-| Land-Asan | 28 | - |
-| Land-Bucheon FC 1995 | 25 | - |
-| Land-Busan | 18 | - |
-| Land-Cheonan City | 27 | - |
-| Land-Cheongju | 16 | - |
-| Land-Gimpo FC | 22 | - |
-| Land-Gyeongnam | 26 | - |
-| Land-Hwaseong | 20 | - |
-| Land-Incheon | 21 | - |
-| Land-Jeonnam | 23 | - |
-| Land-Seongnam | 17 | - |
-| Land-Suwon Bluewings | 19 | - |
-| Seoul E | 12 | - |
+| team | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|---|
+| Seoul E-Land | 4 | 11 | 12 | 13 | 12 | 11 | 3 |
+| Jeonnam | 6 | 4 | 8 | 7 | 5 | 5 | 15 |
+| Busan | - | 7 | 10 | 2 | 4 | 8 | 6 |
+| Asan | 10 | 9 | 6 | 9 | 2 | 7 | 8 |
+| Gyeongnam | 3 | 6 | 5 | 5 | 11 | 9 | 9 |
+| Bucheon FC 1995 | 8 | 8 | 4 | 4 | 7 | 3 | - |
+| Anyang | 9 | 2 | 3 | 6 | 1 | - | - |
+| Gimpo FC | - | - | 7 | 3 | 6 | 6 | 7 |
+| Ansan Greeners | 7 | 5 | 9 | 11 | 10 | 15 | 16 |
+| Suwon Bluewings | - | - | - | - | 3 | 2 | 1 |
+| Daejeon | 5 | 3 | 2 | - | - | - | - |
+| Seongnam | - | - | - | 10 | 14 | 4 | 11 |
+| Cheongju | - | - | - | 8 | 9 | 14 | 10 |
+| Gimcheon Sangmu | - | 1 | - | 1 | - | - | - |
+| Cheonan City | - | - | - | 12 | 8 | 13 | 14 |
+| Suwon FC | 2 | - | - | - | - | - | 2 |
+| Gwangju FC | - | - | 1 | - | - | - | - |
+| Hwaseong | - | - | - | - | - | 10 | 5 |
+| Incheon | - | - | - | - | - | 1 | - |
+| Jeju SK | 1 | - | - | - | - | - | - |
+| Daegu | - | - | - | - | - | - | 4 |
+| Paju Frontier | - | - | - | - | - | - | 12 |
+| Yongin | - | - | - | - | - | - | 13 |
+| Gimhae | - | - | - | - | - | - | 17 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\korea2\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\korea2\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

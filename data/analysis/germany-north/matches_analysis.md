@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:50:40+00:00
+- Generated: 2026-10-26T01:33:04+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
@@ -8,34 +8,72 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 415 |
-| Home wins | 174 (41.9%) |
-| Draws | 90 (21.7%) |
-| Away wins | 151 (36.4%) |
-| Total goals | 1535 |
-| Average goals per match | 3.699 |
-| Goalless matches | 9 (2.2%) |
+| Matches | 1696 |
+| Home wins | 724 (42.7%) |
+| Draws | 382 (22.5%) |
+| Away wins | 590 (34.8%) |
+| Total goals | 5629 |
+| Average goals per match | 3.319 |
+| Goalless matches | 78 (4.6%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 98 | 44 (44.9%) | 13 (13.3%) | 41 (41.8%) | 279 | 2.847 | 2 (2.0%) |
+| 2021-2022 | 200 | 84 (42.0%) | 51 (25.5%) | 65 (32.5%) | 605 | 3.025 | 13 (6.5%) |
+| 2022-2023 | 342 | 152 (44.4%) | 78 (22.8%) | 112 (32.7%) | 1101 | 3.219 | 21 (6.1%) |
+| 2023-2024 | 306 | 128 (41.8%) | 75 (24.5%) | 103 (33.7%) | 1014 | 3.314 | 18 (5.9%) |
+| 2024-2025 | 306 | 127 (41.5%) | 70 (22.9%) | 109 (35.6%) | 984 | 3.216 | 13 (4.2%) |
 | 2025-2026 | 317 | 135 (42.6%) | 69 (21.8%) | 113 (35.6%) | 1152 | 3.634 | 8 (2.5%) |
-| 2026-2027 | 98 | 39 (39.8%) | 21 (21.4%) | 38 (38.8%) | 383 | 3.908 | 1 (1.0%) |
+| 2026-2027 | 127 | 54 (42.5%) | 26 (20.5%) | 47 (37.0%) | 494 | 3.89 | 3 (2.4%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 101 (74.8%) | 23 (17.0%) | 11 (8.1%) | 135 |
-| HT draw | 53 (37.6%) | 42 (29.8%) | 46 (32.6%) | 141 |
-| HT away lead | 20 (14.4%) | 25 (18.0%) | 94 (67.6%) | 139 |
+| HT home lead | 465 (78.8%) | 88 (14.9%) | 37 (6.3%) | 590 |
+| HT draw | 206 (34.1%) | 208 (34.4%) | 190 (31.5%) | 604 |
+| HT away lead | 52 (10.4%) | 86 (17.2%) | 361 (72.3%) | 499 |
+- *3 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **20** (4.8%)
-- Away comebacks (trailing at HT, won at FT): **11** (2.7%)
+- Home comebacks (trailing at HT, won at FT): **52** (3.1%)
+- Away comebacks (trailing at HT, won at FT): **37** (2.2%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Hannover II | Delmenhorst | 0-1 | 2-1 |
+| 2020-2021 | Altona | Holstein Kiel II | 0-1 | 2-1 |
+| 2020-2021 | Norderstedt | Hamburger SV II | 1-2 | 3-2 |
+| 2020-2021 | Hannover II | Oberneuland | 1-2 | 3-2 |
+| 2020-2021 | BSV Rehden | TSV Havelse | 0-1 | 2-1 |
+| 2020-2021 | Holstein Kiel II | Heider SV | 0-1 | 2-1 |
+| 2021-2022 | Hamburger SV II | Heider SV | 0-1 | 2-1 |
+| 2022-2023 | BSV Rehden | Emden | 0-1 | 2-1 |
+| 2022-2023 | Teutonia Ottensen | Bremer | 0-1 | 2-1 |
+| 2022-2023 | Hamburger SV II | TSV Havelse | 0-1 | 2-1 |
+| 2022-2023 | Jeddeloh | Hildesheim | 0-1 | 3-1 |
+| 2022-2023 | St. Pauli II | Lubeck | 0-1 | 2-1 |
+| 2022-2023 | Norderstedt | Delmenhorst | 0-1 | 3-1 |
+| 2023-2024 | Spelle-Venhaus | Eimsbutteler | 0-1 | 3-2 |
+| 2023-2024 | Hannover II | TSV Havelse | 0-1 | 3-2 |
+| 2023-2024 | Kilia Kiel | Eimsbutteler | 0-1 | 2-1 |
+| 2023-2024 | Drochtersen/Assel | Spelle-Venhaus | 0-1 | 3-1 |
+| 2023-2024 | Norderstedt | St. Pauli II | 1-2 | 3-2 |
+| 2023-2024 | VfB Oldenburg | Lohne | 0-1 | 2-1 |
+| 2023-2024 | St. Pauli II | Eimsbutteler | 0-1 | 3-1 |
+| 2023-2024 | Meppen | VfB Oldenburg | 1-2 | 3-2 |
+| 2023-2024 | Phonix Lubeck | Lohne | 0-1 | 3-1 |
+| 2023-2024 | Drochtersen/Assel | Eimsbutteler | 0-1 | 2-1 |
+| 2024-2025 | TSV Havelse | Werder Bremen II | 1-3 | 4-3 |
+| 2024-2025 | SC Weiche-08 | Jeddeloh | 0-1 | 4-1 |
+| 2024-2025 | Hamburger SV II | Bremer | 1-2 | 5-3 |
+| 2024-2025 | Werder Bremen II | Emden | 1-2 | 3-2 |
+| 2024-2025 | Emden | Teutonia Ottensen | 0-2 | 3-2 |
+| 2024-2025 | Bremer | Phonix Lubeck | 1-2 | 3-2 |
+| 2024-2025 | VfB Oldenburg | SC Weiche-08 | 0-1 | 5-1 |
+| 2024-2025 | SC Weiche-08 | Bremer | 0-1 | 3-2 |
+| 2024-2025 | Drochtersen/Assel | Hamburger SV II | 0-1 | 3-1 |
 | 2025-2026 | Jeddeloh | Altona | 1-2 | 3-2 |
 | 2025-2026 | SC Weiche-08 | Hamburger SV II | 0-1 | 3-2 |
 | 2025-2026 | SC Weiche | Hamburger SV II | 0-1 | 3-2 |
@@ -60,6 +98,32 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Altona | St. Pauli II | 1-0 | 1-2 |
+| 2020-2021 | Luneburger Hansa | SC Weiche-08 | 1-0 | 1-2 |
+| 2021-2022 | Luneburger Hansa | Hildesheim | 1-0 | 1-2 |
+| 2021-2022 | BSV Rehden | Oberneuland | 2-1 | 2-3 |
+| 2021-2022 | Altona | Phonix Lubeck | 2-1 | 2-4 |
+| 2021-2022 | Phonix Lubeck | Hamburger SV II | 2-1 | 2-3 |
+| 2021-2022 | BSV Rehden | Jeddeloh | 1-0 | 2-3 |
+| 2022-2023 | Lohne | Phonix Lubeck | 2-1 | 2-3 |
+| 2022-2023 | Hildesheim | Jeddeloh | 2-0 | 2-3 |
+| 2022-2023 | St. Pauli II | Norderstedt | 1-0 | 1-3 |
+| 2022-2023 | Lohne | Hamburger SV II | 2-0 | 2-3 |
+| 2022-2023 | Emden | Hamburger SV II | 1-0 | 1-2 |
+| 2022-2023 | Hannover II | Hamburger SV II | 1-0 | 1-2 |
+| 2022-2023 | Phonix Lubeck | Emden | 1-0 | 1-2 |
+| 2023-2024 | SC Weiche-08 | Holstein Kiel II | 2-1 | 2-3 |
+| 2023-2024 | Jeddeloh | Eimsbutteler | 1-0 | 1-2 |
+| 2023-2024 | Lohne | Hamburger SV II | 1-0 | 1-2 |
+| 2023-2024 | Teutonia Ottensen | Phonix Lubeck | 2-0 | 2-3 |
+| 2023-2024 | St. Pauli II | Bremer | 1-0 | 1-2 |
+| 2023-2024 | TSV Havelse | Drochtersen/Assel | 1-0 | 1-2 |
+| 2024-2025 | SC Weiche-08 | TSV Havelse | 1-0 | 1-2 |
+| 2024-2025 | Hamburger SV II | Emden | 1-0 | 1-2 |
+| 2024-2025 | Holstein Kiel II | Emden | 1-0 | 1-2 |
+| 2024-2025 | Hamburger SV II | Lubeck | 1-0 | 2-3 |
+| 2024-2025 | Bremer | Emden | 1-0 | 1-2 |
+| 2024-2025 | Holstein Kiel II | Todesfelde | 1-0 | 1-3 |
 | 2025-2026 | St. Pauli II | Werder Bremen II | 2-0 | 2-3 |
 | 2025-2026 | Emden | Hamburger SV II | 1-0 | 3-4 |
 | 2025-2026 | Lubeck | Hannoverscher SC | 1-0 | 1-2 |
@@ -75,43 +139,49 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 135 | 101 (74.8%) | 23 (17.0%) | 11 (8.1%) |
-| Away lead | 139 | 94 (67.6%) | 25 (18.0%) | 20 (14.4%) |
+| Home lead | 590 | 465 (78.8%) | 88 (14.9%) | 37 (6.3%) |
+| Away lead | 499 | 361 (72.3%) | 86 (17.2%) | 52 (10.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 53 | 37.6% |
-| Draw | 42 | 29.8% |
-| Away win | 46 | 32.6% |
+| Home win | 206 | 34.1% |
+| Draw | 208 | 34.4% |
+| Away win | 190 | 31.5% |
+- *3 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `406` of `415` (97.8%)
+- Matches with a first-goal time recorded: `1615` of `1696` (95.2%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 171 | 41.2% | 76 (44.4%) | 30 (17.5%) | 65 (38.0%) |
-| 16-30 | 95 | 22.9% | 41 (43.2%) | 21 (22.1%) | 33 (34.7%) |
-| 31-45 | 63 | 15.2% | 26 (41.3%) | 15 (23.8%) | 22 (34.9%) |
-| 46-60 | 40 | 9.6% | 18 (45.0%) | 6 (15.0%) | 16 (40.0%) |
-| 61-75 | 18 | 4.3% | 4 (22.2%) | 5 (27.8%) | 9 (50.0%) |
-| 76-90 | 16 | 3.9% | 7 (43.8%) | 4 (25.0%) | 5 (31.2%) |
-| 91-120 | 3 | 0.7% | 2 (66.7%) | 0 (0.0%) | 1 (33.3%) |
+| 1-15 | 624 | 36.8% | 277 (44.4%) | 117 (18.8%) | 230 (36.9%) |
+| 16-30 | 390 | 23.0% | 181 (46.4%) | 65 (16.7%) | 144 (36.9%) |
+| 31-45 | 272 | 16.0% | 129 (47.4%) | 56 (20.6%) | 87 (32.0%) |
+| 46-60 | 187 | 11.0% | 89 (47.6%) | 38 (20.3%) | 60 (32.1%) |
+| 61-75 | 71 | 4.2% | 24 (33.8%) | 18 (25.4%) | 29 (40.8%) |
+| 76-90 | 60 | 3.5% | 20 (33.3%) | 10 (16.7%) | 30 (50.0%) |
+| 91-120 | 11 | 0.6% | 3 (27.3%) | 0 (0.0%) | 8 (72.7%) |
 
 ## 7. Goalless matches
-- Overall: **9** of `415` (2.2%)
+- Overall: **78** of `1696` (4.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 98 | 2 | 2.0% |
+| 2021-2022 | 200 | 13 | 6.5% |
+| 2022-2023 | 342 | 21 | 6.1% |
+| 2023-2024 | 306 | 18 | 5.9% |
+| 2024-2025 | 306 | 13 | 4.2% |
 | 2025-2026 | 317 | 8 | 2.5% |
-| 2026-2027 | 98 | 1 | 1.0% |
+| 2026-2027 | 127 | 3 | 2.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\germany-north\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\germany-north\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:43:29+00:00
+- Generated: 2026-10-26T01:25:44+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`
@@ -8,87 +8,142 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 263 |
-| Home wins | 130 (49.4%) |
-| Draws | 78 (29.7%) |
-| Away wins | 55 (20.9%) |
-| Total goals | 600 |
-| Average goals per match | 2.281 |
-| Goalless matches | 22 (8.4%) |
+| Matches | 1696 |
+| Home wins | 859 (50.6%) |
+| Draws | 478 (28.2%) |
+| Away wins | 359 (21.2%) |
+| Total goals | 3794 |
+| Average goals per match | 2.237 |
+| Goalless matches | 207 (12.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 379 | 194 (51.2%) | 104 (27.4%) | 81 (21.4%) | 902 | 2.38 | 37 (9.8%) |
+| 2021-2022 | 306 | 147 (48.0%) | 86 (28.1%) | 73 (23.9%) | 693 | 2.265 | 43 (14.1%) |
+| 2022-2023 | 240 | 137 (57.1%) | 64 (26.7%) | 39 (16.2%) | 516 | 2.15 | 31 (12.9%) |
+| 2023-2024 | 240 | 123 (51.2%) | 61 (25.4%) | 56 (23.3%) | 556 | 2.317 | 28 (11.7%) |
+| 2024-2025 | 240 | 116 (48.3%) | 75 (31.2%) | 49 (20.4%) | 467 | 1.946 | 42 (17.5%) |
 | 2025-2026 | 240 | 120 (50.0%) | 70 (29.2%) | 50 (20.8%) | 544 | 2.267 | 20 (8.3%) |
-| 2026-2027 | 23 | 10 (43.5%) | 8 (34.8%) | 5 (21.7%) | 56 | 2.435 | 2 (8.7%) |
+| 2026-2027 | 51 | 22 (43.1%) | 18 (35.3%) | 11 (21.6%) | 116 | 2.275 | 6 (11.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 73 (83.0%) | 13 (14.8%) | 2 (2.3%) | 88 |
-| HT draw | 51 (38.9%) | 56 (42.7%) | 24 (18.3%) | 131 |
-| HT away lead | 6 (13.6%) | 9 (20.5%) | 29 (65.9%) | 44 |
+| HT home lead | 488 (83.6%) | 79 (13.5%) | 17 (2.9%) | 584 |
+| HT draw | 334 (40.2%) | 344 (41.4%) | 153 (18.4%) | 831 |
+| HT away lead | 34 (12.4%) | 55 (20.0%) | 186 (67.6%) | 275 |
+- *6 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **6** (2.3%)
-- Away comebacks (trailing at HT, won at FT): **2** (0.8%)
+- Home comebacks (trailing at HT, won at FT): **34** (2.0%)
+- Away comebacks (trailing at HT, won at FT): **17** (1.0%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Paradou | Bordj Bou Arreridj | 0-2 | 3-2 |
+| 2020-2021 | ASO Chlef | Paradou | 0-1 | 2-1 |
+| 2020-2021 | Paradou | Medea | 0-1 | 2-1 |
+| 2020-2021 | Mlila | Biskra | 0-1 | 2-1 |
+| 2020-2021 | MC Alger | ES Setif | 1-2 | 3-2 |
+| 2020-2021 | USM Alger | Biskra | 0-1 | 2-1 |
+| 2021-2022 | Biskra | Hussein Dey | 0-1 | 2-1 |
+| 2022-2023 | Kabylie | Paradou | 0-1 | 2-1 |
+| 2022-2023 | Magra | Kabylie | 0-1 | 2-1 |
+| 2023-2024 | Magra | Biskra | 0-1 | 2-1 |
+| 2023-2024 | Saoura | ASO Chlef | 1-2 | 3-2 |
+| 2023-2024 | USM Alger | Saoura | 0-1 | 2-1 |
+| 2023-2024 | Biskra | Saoura | 0-1 | 2-1 |
+| 2023-2024 | Constantine | El Bayadh | 0-1 | 2-1 |
+| 2023-2024 | Oran | US Souf | 0-1 | 2-1 |
+| 2023-2024 | MC Alger | ASO Chlef | 1-3 | 6-3 |
+| 2023-2024 | USM Alger | ASO Chlef | 0-1 | 2-1 |
+| 2023-2024 | ES Setif | Paradou | 0-1 | 2-1 |
+| 2024-2025 | Mostaganem | Oran | 0-1 | 2-1 |
+| 2024-2025 | Olympique Akbou | Saoura | 0-1 | 2-1 |
+| 2024-2025 | Magra | Oran | 0-1 | 2-1 |
+| 2024-2025 | Paradou | Biskra | 0-1 | 2-1 |
+| 2024-2025 | Saoura | Olympique Akbou | 0-1 | 2-1 |
+| 2024-2025 | CR Belouizdad | Mostaganem | 0-1 | 3-2 |
+| 2024-2025 | USM Alger | Constantine | 0-1 | 2-1 |
+| 2024-2025 | CR Belouizdad | Paradou | 0-1 | 2-1 |
+| 2024-2025 | Saoura | Paradou | 0-1 | 3-2 |
 | 2025-2026 | ES Setif | Constantine | 0-1 | 2-1 |
 | 2025-2026 | Oran | Paradou | 0-1 | 3-1 |
 | 2025-2026 | Olympique Akbou | Paradou | 1-2 | 4-3 |
 | 2025-2026 | Oran | Khenchela | 0-1 | 2-1 |
 | 2025-2026 | MC Alger | Khenchela | 0-1 | 2-1 |
 | 2025-2026 | Oran | Rouisset | 0-1 | 2-1 |
+| 2026-2027 | Olympique Akbou | Ben Aknoun | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Mlila | Constantine | 1-0 | 2-3 |
+| 2021-2022 | Magra | Arba | 1-0 | 1-2 |
+| 2021-2022 | Paradou | Arba | 1-0 | 1-2 |
+| 2021-2022 | Hussein Dey | Saoura | 1-0 | 1-2 |
+| 2021-2022 | Constantine | CR Belouizdad | 1-0 | 1-2 |
+| 2021-2022 | Relizane | Saoura | 1-0 | 1-2 |
+| 2021-2022 | Hussein Dey | CR Belouizdad | 2-1 | 3-5 |
+| 2021-2022 | Relizane | Chelghoum | 1-0 | 1-2 |
+| 2021-2022 | Hussein Dey | Relizane | 3-2 | 3-5 |
+| 2022-2023 | Kabylie | ES Setif | 1-0 | 2-3 |
+| 2022-2023 | Arba | Paradou | 1-0 | 1-3 |
+| 2023-2024 | Khenchela | Paradou | 1-0 | 1-2 |
+| 2023-2024 | Magra | USM Alger | 1-0 | 2-3 |
+| 2024-2025 | Biskra | ASO Chlef | 1-0 | 1-2 |
+| 2024-2025 | Khenchela | ES Setif | 1-0 | 2-3 |
 | 2025-2026 | Ben Aknoun | MC Alger | 1-0 | 2-3 |
 | 2025-2026 | Kabylie | Oran | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 88 | 73 (83.0%) | 13 (14.8%) | 2 (2.3%) |
-| Away lead | 44 | 29 (65.9%) | 9 (20.5%) | 6 (13.6%) |
+| Home lead | 584 | 488 (83.6%) | 79 (13.5%) | 17 (2.9%) |
+| Away lead | 275 | 186 (67.6%) | 55 (20.0%) | 34 (12.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 51 | 38.9% |
-| Draw | 56 | 42.7% |
-| Away win | 24 | 18.3% |
+| Home win | 334 | 40.2% |
+| Draw | 344 | 41.4% |
+| Away win | 153 | 18.4% |
+- *6 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `241` of `263` (91.6%)
+- Matches with a first-goal time recorded: `1486` of `1696` (87.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 65 | 24.7% | 36 (55.4%) | 17 (26.2%) | 12 (18.5%) |
-| 16-30 | 64 | 24.3% | 35 (54.7%) | 11 (17.2%) | 18 (28.1%) |
-| 31-45 | 31 | 11.8% | 17 (54.8%) | 9 (29.0%) | 5 (16.1%) |
-| 46-60 | 33 | 12.5% | 14 (42.4%) | 12 (36.4%) | 7 (21.2%) |
-| 61-75 | 23 | 8.7% | 13 (56.5%) | 5 (21.7%) | 5 (21.7%) |
-| 76-90 | 20 | 7.6% | 13 (65.0%) | 1 (5.0%) | 6 (30.0%) |
-| 91-120 | 5 | 1.9% | 2 (40.0%) | 1 (20.0%) | 2 (40.0%) |
+| 1-15 | 406 | 23.9% | 230 (56.7%) | 84 (20.7%) | 92 (22.7%) |
+| 16-30 | 318 | 18.8% | 198 (62.3%) | 49 (15.4%) | 71 (22.3%) |
+| 31-45 | 255 | 15.0% | 138 (54.1%) | 54 (21.2%) | 63 (24.7%) |
+| 46-60 | 224 | 13.2% | 119 (53.1%) | 48 (21.4%) | 57 (25.4%) |
+| 61-75 | 133 | 7.8% | 70 (52.6%) | 29 (21.8%) | 34 (25.6%) |
+| 76-90 | 118 | 7.0% | 83 (70.3%) | 6 (5.1%) | 29 (24.6%) |
+| 91-120 | 32 | 1.9% | 21 (65.6%) | 1 (3.1%) | 10 (31.2%) |
 
 ## 7. Goalless matches
-- Overall: **22** of `263` (8.4%)
+- Overall: **207** of `1696` (12.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 379 | 37 | 9.8% |
+| 2021-2022 | 306 | 43 | 14.1% |
+| 2022-2023 | 240 | 31 | 12.9% |
+| 2023-2024 | 240 | 28 | 11.7% |
+| 2024-2025 | 240 | 42 | 17.5% |
 | 2025-2026 | 240 | 20 | 8.3% |
-| 2026-2027 | 23 | 2 | 8.7% |
+| 2026-2027 | 51 | 6 | 11.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\algir1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\algir1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-29T15:48:22+00:00
+- Generated: 2026-10-26T01:30:29+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Professional Development League (England)
 - Scope: league `develop21`
@@ -8,73 +8,73 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\develop21\database_profile.json | yes | yes | 27.92 |
-| matches_analysis | E:\football_data_analysis\data\analysis\develop21\matches_analysis.json | yes | yes | 6.26 |
-| goals_analysis | E:\football_data_analysis\data\analysis\develop21\goals_analysis.json | yes | yes | 5.08 |
-| teams_analysis | E:\football_data_analysis\data\analysis\develop21\teams_analysis.json | yes | yes | 26.50 |
-| season_trends | E:\football_data_analysis\data\analysis\develop21\season_trends.json | yes | yes | 2.58 |
-| scoreline_analysis | E:\football_data_analysis\data\analysis\develop21\scoreline_analysis.json | yes | yes | 13.22 |
-| relationships | E:\football_data_analysis\data\analysis\develop21\relationships.json | yes | yes | 12.18 |
+| database_profile | data/analysis/develop21/database_profile.json | yes | yes | 27.72 |
+| matches_analysis | data/analysis/develop21/matches_analysis.json | yes | yes | 5.92 |
+| goals_analysis | data/analysis/develop21/goals_analysis.json | yes | yes | 4.84 |
+| teams_analysis | data/analysis/develop21/teams_analysis.json | yes | yes | 25.28 |
+| season_trends | data/analysis/develop21/season_trends.json | yes | yes | 2.43 |
+| scoreline_analysis | data/analysis/develop21/scoreline_analysis.json | yes | yes | 16.24 |
+| relationships | data/analysis/develop21/relationships.json | yes | yes | 11.61 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 40 matches: home wins 45.0%, draws 25.0%, away wins 30.0% (18H / 10D / 12A)
-- **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 2 home and 1 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 13 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 40 matches produced 164 goals (avg 4.100 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 56.7% vs away 43.3% of 164 goals in total (home/away ratio 1.31)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 28 of 40 matches (70.0%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 16-30 (first goal in 16 scoring matches, 41.0% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 23.56, median 20.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Bolton U21 leads with 15 points across 1 seasons (1 title(s), GD 15)
-- **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 17 teams present in every one of the 1 seasons (Barnsley U21, Bolton U21, Bristol City U21, Cardiff U21, Charlton U21...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Bristol City U21 earns 5 more points at home than away (7 home vs 2 away)
-- **F12** · `season_trends` · *[high]* — **Champion with most titles** — Bolton U21 won 1 of 1 championship(s) on record
-- **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: Bolton U21 beat Bristol City U21 by 6 pts
-- **F14** · `season_trends` · *[low]* — **Largest view divergence** — 2026-2027 (goals view, avg abs position diff 7.176)
-- **F15** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 2.824)
-- **F16** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 2-2 in 5 matches (12.5%)
-- **F17** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 3-1 (5 of 18 home matches, 27.8%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 2-2 (5 of 10 draw matches, 50.0%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-2 (3 of 12 away matches, 25.0%)
-- **F20** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 5 match(es) with >= 7 total goals
-- **F21** · `database_profile` · *[high]* — **Data-quality warnings (9)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F22** · `database_profile` · *[medium]* — **Data coverage** — 1 of 1 registered seasons populated (100.0%); 40 matches observed
+- **F1** Â· `matches_analysis` Â· *[medium]* â€” **Outcome split across all seasons** â€” 61 matches: home wins 42.6%, draws 23.0%, away wins 34.4% (26H / 14D / 21A)
+- **F2** Â· `matches_analysis` Â· *[medium]* â€” **Comeback wins** â€” 2 home and 1 away comebacks (trailing at HT but winning at FT)
+- **F3** Â· `matches_analysis` Â· *[low]* â€” **Most common HT/FT flow** â€” home lead at HT -> home win occurred 19 times
+- **F4** Â· `goals_analysis` Â· *[medium]* â€” **Average goals per match** â€” 61 matches produced 237 goals (avg 3.885 per match)
+- **F5** Â· `goals_analysis` Â· *[medium]* â€” **Home goal share** â€” home 53.6% vs away 46.4% of 237 goals in total (home/away ratio 1.16)
+- **F6** Â· `goals_analysis` Â· *[medium]* â€” **Both teams to score** â€” 42 of 61 matches (68.9%)
+- **F7** Â· `goals_analysis` Â· *[low]* â€” **Most common first-goal bucket** â€” minute 16-30 (first goal in 21 scoring matches, 35.0% of scoring)
+- **F8** Â· `goals_analysis` Â· *[low]* â€” **Average first goal minute** â€” mean 24.40, median 21.0
+- **F9** Â· `teams_analysis` Â· *[high]* â€” **Dominant team by lifetime points** â€” Bolton U21 leads with 21 points across 1 seasons (1 title(s), GD 16)
+- **F10** Â· `teams_analysis` Â· *[medium]* â€” **Team consistency** â€” 17 teams present in every one of the 1 seasons (Barnsley U21, Bolton U21, Bristol City U21, Cardiff U21, Charlton U21...)
+- **F11** Â· `teams_analysis` Â· *[medium]* â€” **Biggest home advantage** â€” Bristol City U21 earns 8 more points at home than away (10 home vs 2 away)
+- **F12** Â· `season_trends` Â· *[high]* â€” **Champion with most titles** â€” Bolton U21 won 1 of 1 championship(s) on record
+- **F13** Â· `season_trends` Â· *[medium]* â€” **Tightest title race** â€” 2026-2027: Bolton U21 beat Fleetwood U21 by 5 pts
+- **F14** Â· `season_trends` Â· *[low]* â€” **Largest view divergence** â€” 2026-2027 (goals view, avg abs position diff 6.118)
+- **F15** Â· `season_trends` Â· *[low]* â€” **Smallest view divergence** â€” 2026-2027 (luck view, avg abs position diff 1.882)
+- **F16** Â· `scoreline_analysis` Â· *[medium]* â€” **Most common scoreline** â€” 2-2 in 8 matches (13.1%)
+- **F17** Â· `scoreline_analysis` Â· *[low]* â€” **Most common home-win scoreline** â€” 3-1 (7 of 26 home matches, 26.9%)
+- **F18** Â· `scoreline_analysis` Â· *[low]* â€” **Most common draw scoreline** â€” 2-2 (8 of 14 draw matches, 57.1%)
+- **F19** Â· `scoreline_analysis` Â· *[low]* â€” **Most common away-win scoreline** â€” 0-2 (4 of 21 away matches, 19.0%)
+- **F20** Â· `scoreline_analysis` Â· *[low]* â€” **Extreme scorelines** â€” 7 match(es) with >= 7 total goals
+- **F21** Â· `database_profile` Â· *[high]* â€” **Data-quality warnings (9)** â€” Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
+- **F22** Â· `database_profile` Â· *[medium]* â€” **Data coverage** â€” 1 of 1 registered seasons populated (100.0%); 61 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 40 |
-| Average goals per match | 4.1 |
-| Home win rate | 45.0% |
-| Draw rate | 25.0% |
-| Away win rate | 30.0% |
+| Matches analysed | 61 |
+| Average goals per match | 3.885 |
+| Home win rate | 42.6% |
+| Draw rate | 23.0% |
+| Away win rate | 34.4% |
 | Most common scoreline | 2-2 |
 | Dominant team (lifetime points) | Bolton U21 |
 | Champion with most titles | Bolton U21 |
-| BTTS rate | 70.0% |
+| BTTS rate | 68.9% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 27.92 |
-| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 6.26 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 5.08 |
-| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 26.50 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 2.58 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 13.22 |
-| relationships | relationships | n_matches, feature_count, data_warning, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 12.18 |
+| database_profile | database_profile | observed, calculated, warnings | 27.72 |
+| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 5.92 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 4.84 |
+| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 25.28 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 2.43 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 16.24 |
+| relationships | relationships | n_matches, feature_count, data_warning, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 11.61 |
 
 ## 5. Notable anomalies
-- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 40 matches, expected 380
-- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 17 teams, expected 20
-- **3.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026-2027 has data but state is 'in_progress'
-- **4.** `HIGH_SCORING_MATCHES` *(warning)* — 2 match(es) with >= 8 total goals (extreme scorelines)
-- **5.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)
-- **6.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)
-- **7.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026-2027/classic rows=17 positions=1..17 teams=17
-- **8.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026-2027/goals rows=17 positions=1..17 teams=17
-- **9.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026-2027/luck rows=17 positions=1..17 teams=17
+- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2026-2027 has 61 matches, expected 380
+- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2026-2027 has 17 teams, expected 20
+- **3.** `SEASON_STATE_NOT_COMPLETE` *(warning)* â€” Season 2026-2027 has data but state is 'in_progress'
+- **4.** `HIGH_SCORING_MATCHES` *(warning)* â€” 2 match(es) with >= 8 total goals (extreme scorelines)
+- **5.** `DUPLICATE_ROWS` *(warning)* â€” Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)
+- **6.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* â€” first_goal_time/first_goal_time_extra NULL semantics broken (fgt=310, fgte=310 rows)
+- **7.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026-2027/classic rows=17 positions=1..17 teams=17
+- **8.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026-2027/goals rows=17 positions=1..17 teams=17
+- **9.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026-2027/luck rows=17 positions=1..17 teams=17
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

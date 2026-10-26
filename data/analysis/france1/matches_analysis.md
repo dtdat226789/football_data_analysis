@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:49:57+00:00
+- Generated: 2026-10-26T01:32:10+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ligue 1 (France)
 - Scope: league `france1`
@@ -8,35 +8,104 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 355 |
-| Home wins | 161 (45.4%) |
-| Draws | 89 (25.1%) |
-| Away wins | 105 (29.6%) |
-| Total goals | 1002 |
-| Average goals per match | 2.823 |
-| Goalless matches | 29 (8.2%) |
+| Matches | 2127 |
+| Home wins | 902 (42.4%) |
+| Draws | 523 (24.6%) |
+| Away wins | 702 (33.0%) |
+| Total goals | 5992 |
+| Average goals per match | 2.817 |
+| Goalless matches | 146 (6.9%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 380 | 142 (37.4%) | 95 (25.0%) | 143 (37.6%) | 1049 | 2.761 | 26 (6.8%) |
+| 2021-2022 | 380 | 162 (42.6%) | 102 (26.8%) | 116 (30.5%) | 1067 | 2.808 | 24 (6.3%) |
+| 2022-2023 | 380 | 163 (42.9%) | 92 (24.2%) | 125 (32.9%) | 1067 | 2.808 | 26 (6.8%) |
+| 2023-2024 | 306 | 120 (39.2%) | 81 (26.5%) | 105 (34.3%) | 826 | 2.699 | 27 (8.8%) |
+| 2024-2025 | 306 | 143 (46.7%) | 62 (20.3%) | 101 (33.0%) | 911 | 2.977 | 14 (4.6%) |
 | 2025-2026 | 310 | 143 (46.1%) | 76 (24.5%) | 91 (29.4%) | 874 | 2.819 | 25 (8.1%) |
-| 2026-2027 | 45 | 18 (40.0%) | 13 (28.9%) | 14 (31.1%) | 128 | 2.844 | 4 (8.9%) |
+| 2026-2027 | 65 | 29 (44.6%) | 15 (23.1%) | 21 (32.3%) | 198 | 3.046 | 4 (6.2%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 98 (83.8%) | 12 (10.3%) | 7 (6.0%) | 117 |
-| HT draw | 55 (38.7%) | 53 (37.3%) | 34 (23.9%) | 142 |
-| HT away lead | 8 (8.4%) | 23 (24.2%) | 64 (67.4%) | 95 |
+| HT home lead | 556 (78.6%) | 100 (14.1%) | 51 (7.2%) | 707 |
+| HT draw | 273 (33.3%) | 304 (37.1%) | 242 (29.5%) | 819 |
+| HT away lead | 73 (12.2%) | 118 (19.7%) | 409 (68.2%) | 600 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **8** (2.3%)
-- Away comebacks (trailing at HT, won at FT): **7** (2.0%)
+- Home comebacks (trailing at HT, won at FT): **73** (3.4%)
+- Away comebacks (trailing at HT, won at FT): **51** (2.4%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Lorient | Strasbourg | 0-1 | 3-1 |
+| 2020-2021 | Rennes | Monaco | 0-1 | 2-1 |
+| 2020-2021 | Angers | Brest | 1-2 | 3-2 |
+| 2020-2021 | Lyon | St Etienne | 0-1 | 2-1 |
+| 2020-2021 | Monaco | PSG | 0-2 | 3-2 |
+| 2020-2021 | Reims | Nantes | 0-1 | 3-2 |
+| 2020-2021 | Rennes | Marseille | 0-1 | 2-1 |
+| 2020-2021 | Lille | Reims | 0-1 | 2-1 |
+| 2020-2021 | Monaco | Marseille | 0-1 | 3-1 |
+| 2020-2021 | Lorient | Dijon | 1-2 | 3-2 |
+| 2020-2021 | Montpellier | Dijon | 0-1 | 4-2 |
+| 2020-2021 | Lorient | St Etienne | 0-1 | 2-1 |
+| 2020-2021 | Marseille | Lorient | 0-1 | 3-2 |
+| 2020-2021 | Nice | Brest | 1-2 | 3-2 |
+| 2021-2022 | Montpellier | Lorient | 0-1 | 3-1 |
+| 2021-2022 | Lyon | Troyes | 0-1 | 3-1 |
+| 2021-2022 | Angers | Metz | 0-1 | 3-2 |
+| 2021-2022 | PSG | Angers | 0-1 | 2-1 |
+| 2021-2022 | Nice | Lyon | 0-1 | 3-2 |
+| 2021-2022 | PSG | Lille | 0-1 | 2-1 |
+| 2021-2022 | Bordeaux | Reims | 0-1 | 3-2 |
+| 2021-2022 | Lille | Troyes | 0-1 | 2-1 |
+| 2021-2022 | Nantes | Lens | 0-2 | 3-2 |
+| 2021-2022 | Nice | Lens | 0-1 | 2-1 |
+| 2021-2022 | Strasbourg | Montpellier | 0-1 | 3-1 |
+| 2021-2022 | Clermont | Rennes | 0-1 | 2-1 |
+| 2021-2022 | Lyon | Marseille | 0-1 | 2-1 |
+| 2021-2022 | St Etienne | Montpellier | 0-1 | 3-1 |
+| 2021-2022 | Bordeaux | Metz | 0-1 | 3-1 |
+| 2021-2022 | Marseille | Nantes | 1-2 | 3-2 |
+| 2021-2022 | Nantes | Bordeaux | 0-2 | 5-3 |
+| 2021-2022 | Nice | St Etienne | 0-2 | 4-2 |
+| 2021-2022 | Monaco | Brest | 1-2 | 4-2 |
+| 2022-2023 | Nantes | Toulouse | 0-1 | 3-1 |
+| 2022-2023 | Lens | Clermont | 0-1 | 2-1 |
+| 2022-2023 | Reims | Lorient | 1-2 | 4-2 |
+| 2022-2023 | Auxerre | Lyon | 0-1 | 2-1 |
+| 2022-2023 | Lille | Brest | 0-1 | 2-1 |
+| 2022-2023 | AC Ajaccio | Troyes | 0-1 | 2-1 |
+| 2022-2023 | Montpellier | Clermont | 0-1 | 2-1 |
+| 2022-2023 | Clermont | AC Ajaccio | 0-1 | 2-1 |
+| 2022-2023 | Monaco | Strasbourg | 1-2 | 4-3 |
+| 2022-2023 | Lyon | Rennes | 0-1 | 3-1 |
+| 2022-2023 | Lille | Montpellier | 0-1 | 2-1 |
+| 2022-2023 | Marseille | Auxerre | 0-1 | 2-1 |
+| 2022-2023 | Lyon | Montpellier | 1-2 | 5-4 |
+| 2022-2023 | Lille | Marseille | 0-1 | 2-1 |
+| 2022-2023 | Lille | Nantes | 0-1 | 2-1 |
+| 2023-2024 | Brest | Lens | 1-2 | 3-2 |
+| 2023-2024 | Toulouse | Lille | 0-1 | 3-1 |
+| 2023-2024 | Toulouse | Nice | 0-1 | 2-1 |
+| 2024-2025 | Montpellier | Auxerre | 0-1 | 3-2 |
+| 2024-2025 | Lille | Toulouse | 0-1 | 2-1 |
+| 2024-2025 | Nice | Strasbourg | 0-1 | 2-1 |
+| 2024-2025 | Marseille | Monaco | 0-1 | 2-1 |
+| 2024-2025 | St Etienne | Reims | 0-1 | 3-1 |
+| 2024-2025 | Montpellier | Monaco | 0-1 | 2-1 |
+| 2024-2025 | Lille | Nice | 0-1 | 2-1 |
+| 2024-2025 | Strasbourg | Lille | 0-1 | 2-1 |
+| 2024-2025 | Monaco | Auxerre | 1-2 | 4-2 |
+| 2024-2025 | Lyon | Le Havre | 1-2 | 4-2 |
+| 2024-2025 | Strasbourg | Toulouse | 0-1 | 2-1 |
+| 2024-2025 | Monaco | Nice | 0-1 | 2-1 |
+| 2024-2025 | PSG | Auxerre | 0-1 | 3-1 |
 | 2025-2026 | Lens | Brest | 0-1 | 3-1 |
 | 2025-2026 | Rennes | Lyon | 0-1 | 3-1 |
 | 2025-2026 | Metz | Nice | 0-1 | 2-1 |
@@ -45,10 +114,53 @@
 | 2025-2026 | Strasbourg | Monaco | 1-3 | 5-4 |
 | 2026-2027 | Strasbourg | Lens | 0-1 | 2-1 |
 | 2026-2027 | Auxerre | Brest | 0-1 | 2-1 |
+| 2026-2027 | Lens | Paris FC | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Reims | Lorient | 1-0 | 1-3 |
+| 2020-2021 | Nimes | Dijon | 1-0 | 1-3 |
+| 2020-2021 | Bordeaux | Metz | 1-0 | 1-2 |
+| 2020-2021 | PSG | Nantes | 1-0 | 1-2 |
+| 2020-2021 | St Etienne | Brest | 1-0 | 1-2 |
+| 2020-2021 | Strasbourg | Nantes | 1-0 | 1-2 |
+| 2020-2021 | Lyon | Lille | 2-1 | 2-3 |
+| 2020-2021 | Monaco | Lyon | 1-0 | 2-3 |
+| 2020-2021 | Lyon | Nice | 2-1 | 2-3 |
+| 2021-2022 | Montpellier | Marseille | 2-0 | 2-3 |
+| 2021-2022 | Angers | Nice | 1-0 | 1-2 |
+| 2021-2022 | Lorient | Brest | 1-0 | 1-2 |
+| 2021-2022 | Clermont | Nice | 1-0 | 1-2 |
+| 2021-2022 | Bordeaux | Brest | 1-0 | 1-2 |
+| 2021-2022 | Marseille | Brest | 1-0 | 1-2 |
+| 2021-2022 | Bordeaux | Lille | 2-1 | 2-3 |
+| 2021-2022 | St Etienne | Lens | 1-0 | 1-2 |
+| 2021-2022 | Clermont | St Etienne | 1-0 | 1-2 |
+| 2021-2022 | Reims | Lens | 1-0 | 1-2 |
+| 2021-2022 | Nice | Lille | 1-0 | 1-3 |
+| 2021-2022 | Reims | Nice | 2-0 | 2-3 |
+| 2022-2023 | Reims | Clermont | 2-0 | 2-4 |
+| 2022-2023 | Montpellier | Auxerre | 1-0 | 1-2 |
+| 2022-2023 | Lorient | Nice | 1-0 | 1-2 |
+| 2022-2023 | Angers | Lorient | 1-0 | 1-2 |
+| 2022-2023 | Angers | AC Ajaccio | 1-0 | 1-2 |
+| 2022-2023 | Rennes | Lille | 1-0 | 1-3 |
+| 2022-2023 | Toulouse | Marseille | 1-0 | 2-3 |
+| 2022-2023 | Montpellier | Nice | 2-0 | 2-3 |
+| 2022-2023 | Reims | Montpellier | 1-0 | 1-3 |
+| 2023-2024 | Nantes | Toulouse | 1-0 | 1-2 |
+| 2023-2024 | Reims | Brest | 1-0 | 1-2 |
+| 2023-2024 | Lorient | Metz | 2-1 | 2-3 |
+| 2023-2024 | Clermont | Rennes | 1-0 | 1-3 |
+| 2023-2024 | Montpellier | Lyon | 1-0 | 1-2 |
+| 2023-2024 | Nantes | Lyon | 1-0 | 1-3 |
+| 2023-2024 | Lorient | Toulouse | 1-0 | 1-2 |
+| 2023-2024 | Rennes | Brest | 2-1 | 4-5 |
+| 2023-2024 | Metz | Rennes | 2-1 | 2-3 |
+| 2023-2024 | Lille | Lyon | 2-0 | 3-4 |
+| 2024-2025 | Strasbourg | Monaco | 1-0 | 1-3 |
+| 2024-2025 | Lens | PSG | 1-0 | 1-2 |
 | 2025-2026 | Lyon | Toulouse | 1-0 | 1-2 |
 | 2025-2026 | Strasbourg | Brest | 1-0 | 1-2 |
 | 2025-2026 | Lens | Monaco | 1-0 | 2-3 |
@@ -56,48 +168,55 @@
 | 2025-2026 | Marseille | Lille | 1-0 | 1-2 |
 | 2025-2026 | Lorient | Strasbourg | 1-0 | 2-3 |
 | 2026-2027 | PSG | Monaco | 1-0 | 1-2 |
+| 2026-2027 | Strasbourg | PSG | 1-0 | 1-3 |
+| 2026-2027 | Brest | Nice | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 117 | 98 (83.8%) | 12 (10.3%) | 7 (6.0%) |
-| Away lead | 95 | 64 (67.4%) | 23 (24.2%) | 8 (8.4%) |
+| Home lead | 707 | 556 (78.6%) | 100 (14.1%) | 51 (7.2%) |
+| Away lead | 600 | 409 (68.2%) | 118 (19.7%) | 73 (12.2%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 55 | 38.7% |
-| Draw | 53 | 37.3% |
-| Away win | 34 | 23.9% |
+| Home win | 273 | 33.3% |
+| Draw | 304 | 37.1% |
+| Away win | 242 | 29.5% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `326` of `355` (91.8%)
+- Matches with a first-goal time recorded: `1981` of `2127` (93.1%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 110 | 31.0% | 52 (47.3%) | 25 (22.7%) | 33 (30.0%) |
-| 16-30 | 80 | 22.5% | 40 (50.0%) | 10 (12.5%) | 30 (37.5%) |
-| 31-45 | 45 | 12.7% | 23 (51.1%) | 8 (17.8%) | 14 (31.1%) |
-| 46-60 | 48 | 13.5% | 24 (50.0%) | 10 (20.8%) | 14 (29.2%) |
-| 61-75 | 23 | 6.5% | 8 (34.8%) | 7 (30.4%) | 8 (34.8%) |
-| 76-90 | 15 | 4.2% | 9 (60.0%) | 0 (0.0%) | 6 (40.0%) |
-| 91-120 | 5 | 1.4% | 5 (100.0%) | 0 (0.0%) | 0 (0.0%) |
+| 1-15 | 667 | 31.4% | 320 (48.0%) | 127 (19.0%) | 220 (33.0%) |
+| 16-30 | 509 | 23.9% | 235 (46.2%) | 91 (17.9%) | 183 (36.0%) |
+| 31-45 | 322 | 15.1% | 147 (45.7%) | 61 (18.9%) | 114 (35.4%) |
+| 46-60 | 256 | 12.0% | 106 (41.4%) | 58 (22.7%) | 92 (35.9%) |
+| 61-75 | 123 | 5.8% | 40 (32.5%) | 34 (27.6%) | 49 (39.8%) |
+| 76-90 | 84 | 3.9% | 39 (46.4%) | 5 (6.0%) | 40 (47.6%) |
+| 91-120 | 20 | 0.9% | 15 (75.0%) | 1 (5.0%) | 4 (20.0%) |
 
 ## 7. Goalless matches
-- Overall: **29** of `355` (8.2%)
+- Overall: **146** of `2127` (6.9%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 380 | 26 | 6.8% |
+| 2021-2022 | 380 | 24 | 6.3% |
+| 2022-2023 | 380 | 26 | 6.8% |
+| 2023-2024 | 306 | 27 | 8.8% |
+| 2024-2025 | 306 | 14 | 4.6% |
 | 2025-2026 | 310 | 25 | 8.1% |
-| 2026-2027 | 45 | 4 | 8.9% |
+| 2026-2027 | 65 | 4 | 6.2% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\france1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\france1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

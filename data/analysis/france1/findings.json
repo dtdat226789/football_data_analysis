@@ -4,10 +4,10 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T15:50:07+00:00",
+  "generated_at": "2026-10-26T01:32:22+00:00",
   "config": {
     "league": "france1",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\france1",
+    "out_dir": "data/analysis/france1",
     "out_stem": null
   },
   "league": {
@@ -26,52 +26,52 @@
   "sources": [
     {
       "report_name": "database_profile",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\database_profile.json",
+      "path": "data/analysis/france1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 32.85
+      "size_kb": 46.03
     },
     {
       "report_name": "matches_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\matches_analysis.json",
+      "path": "data/analysis/france1/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 8.85
+      "size_kb": 29.72
     },
     {
       "report_name": "goals_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\goals_analysis.json",
+      "path": "data/analysis/france1/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 6.31
+      "size_kb": 12.34
     },
     {
       "report_name": "teams_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\teams_analysis.json",
+      "path": "data/analysis/france1/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 32.05
+      "size_kb": 39.5
     },
     {
       "report_name": "season_trends",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\season_trends.json",
+      "path": "data/analysis/france1/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.9
+      "size_kb": 10.38
     },
     {
       "report_name": "scoreline_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\scoreline_analysis.json",
+      "path": "data/analysis/france1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 63.33
+      "size_kb": 329.98
     },
     {
       "report_name": "relationships",
-      "path": "E:\\football_data_analysis\\data\\analysis\\france1\\relationships.json",
+      "path": "data/analysis/france1/relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.32
+      "size_kb": 13.78
     }
   ],
   "coverage": {
@@ -83,189 +83,189 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "355 matches: home wins 45.4%, draws 25.1%, away wins 29.6% (161H / 89D / 105A)",
+      "detail": "2127 matches: home wins 42.4%, draws 24.6%, away wins 33.0% (902H / 523D / 702A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "8 home and 7 away comebacks (trailing at HT but winning at FT)",
+      "detail": "73 home and 51 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 98 times",
+      "detail": "home lead at HT -> home win occurred 556 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "355 matches produced 1002 goals (avg 2.823 per match)",
+      "detail": "2127 matches produced 5992 goals (avg 2.817 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 56.0% vs away 44.0% of 1002 goals in total (home/away ratio 1.27)",
+      "detail": "home 53.9% vs away 46.1% of 5992 goals in total (home/away ratio 1.17)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "184 of 355 matches (51.8%)",
+      "detail": "1175 of 2127 matches (55.2%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 110 scoring matches, 33.7% of scoring)",
+      "detail": "minute 1-15 (first goal in 667 scoring matches, 33.7% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.32, median 26.0",
+      "detail": "mean 30.04, median 24.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "PSG leads with 84 points across 2 seasons (1 title(s), GD 46)",
+      "detail": "PSG leads with 503 points across 7 seasons (5 title(s), GD 316)",
       "importance": "high",
       "id": "F9"
     },
     {
       "source": "teams_analysis",
       "finding": "Team consistency",
-      "detail": "16 teams present in every one of the 2 seasons (Angers, Auxerre, Brest, Le Havre, Lens...)",
+      "detail": "10 teams present in every one of the 7 seasons (Brest, Lens, Lille, Lyon, Marseille...)",
       "importance": "medium",
       "id": "F10"
     },
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Marseille earns 18 more points at home than away (40 home vs 22 away)",
+      "detail": "Rennes earns 81 more points at home than away (216 home vs 135 away)",
       "importance": "medium",
       "id": "F11"
     },
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "PSG won 1 of 2 championship(s) on record",
+      "detail": "PSG won 5 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Monaco beat Lyon by 2 pts",
+      "detail": "2026-2027: Lyon beat PSG by 0 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "stable (+0.025 per match): first half 2.819 vs last half 2.844 across 2 seasons",
+      "detail": "up (+0.155 per match): first half 2.792 vs last half 2.947 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2026-2027 (goals view, avg abs position diff 6.333)",
+      "detail": "2026-2027 (goals view, avg abs position diff 7.333)",
       "importance": "low",
       "id": "F15"
     },
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.556)",
+      "detail": "2023-2024 (luck view, avg abs position diff 3.111)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-0 in 40 matches (11.3%)",
+      "detail": "1-1 in 247 matches (11.6%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (40 of 161 home matches, 24.8%)",
+      "detail": "2-1 (186 of 902 home matches, 20.6%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (32 of 89 draw matches, 36.0%)",
+      "detail": "1-1 (247 of 523 draw matches, 47.2%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (27 of 105 away matches, 25.7%)",
+      "detail": "1-2 (157 of 702 away matches, 22.4%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "16 match(es) with >= 7 total goals",
+      "detail": "59 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_goals_conceded_last_5 |corr| = -0.1251 (n=310 leakage-safe rows)",
+      "detail": "home_position_before_match |corr| = -0.0551 (n=2062 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 8.628: home 3.189, draw -0.039, away -5.440",
+      "detail": "points_difference spreads group means over 9.179: home 4.179, draw -0.917, away -5.000",
       "importance": "medium",
       "id": "F23"
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (15)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (30)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 355 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2127 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 355,
-    "avg_goals": 2.823,
-    "home_win_pct": 45.4,
-    "draw_pct": 25.1,
-    "away_win_pct": 29.6,
-    "most_common_scoreline": "1-0",
+    "n_matches": 2127,
+    "avg_goals": 2.817,
+    "home_win_pct": 42.4,
+    "draw_pct": 24.6,
+    "away_win_pct": 33.0,
+    "most_common_scoreline": "1-1",
     "dominant_team": "PSG",
     "champion_most_titles": "PSG",
-    "btts_rate_pct": 51.8
+    "btts_rate_pct": 55.2
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 32.85
+      "size_kb": 46.03
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 8.85
+      "size_kb": 29.72
     },
     {
       "module": "goals_analysis",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 6.31
+      "size_kb": 12.34
     },
     {
       "module": "teams_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 32.05
+      "size_kb": 39.5
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.9
+      "size_kb": 10.38
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 63.33
+      "size_kb": 329.98
     },
     {
       "module": "relationships",
@@ -359,10 +359,50 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.32
+      "size_kb": 13.78
     }
   ],
   "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2023-2024 has 306 matches, expected 380",
+      "details": {
+        "season": "2023-2024",
+        "n_matches": 306,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2023-2024 has 18 teams, expected 20",
+      "details": {
+        "season": "2023-2024",
+        "n_teams": 18,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2024-2025 has 306 matches, expected 380",
+      "details": {
+        "season": "2024-2025",
+        "n_matches": 306,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2024-2025 has 18 teams, expected 20",
+      "details": {
+        "season": "2024-2025",
+        "n_teams": 18,
+        "expected": 20
+      }
+    },
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
@@ -386,10 +426,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 45 matches, expected 380",
+      "message": "Season 2026-2027 has 65 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 45,
+        "n_matches": 65,
         "expected": 380
       }
     },
@@ -415,24 +455,84 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 40.0% vs overall 45.4%",
+      "message": "Season 2020-2021 home outcome share 37.4% vs overall 42.4%",
       "details": {
-        "season": "2026-2027",
+        "season": "2020-2021",
         "outcome": "home",
-        "season_share": 40.0,
-        "overall_share": 45.4
+        "season_share": 37.4,
+        "overall_share": 42.4
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2020-2021 away outcome share 37.6% vs overall 33.0%",
+      "details": {
+        "season": "2020-2021",
+        "outcome": "away",
+        "season_share": 37.6,
+        "overall_share": 33.0
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2023-2024 goalless share 8.8% vs overall 6.9% (deviation 1.9 pp)",
+      "details": {
+        "season": "2023-2024",
+        "season_goalless_pct": 8.8,
+        "overall_goalless_pct": 6.9,
+        "deviation_pp": 1.9
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2024-2025 goalless share 4.6% vs overall 6.9% (deviation 2.3 pp)",
+      "details": {
+        "season": "2024-2025",
+        "season_goalless_pct": 4.6,
+        "overall_goalless_pct": 6.9,
+        "deviation_pp": 2.3
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2024-2025 home outcome share 46.7% vs overall 42.4%",
+      "details": {
+        "season": "2024-2025",
+        "outcome": "home",
+        "season_share": 46.7,
+        "overall_share": 42.4
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2024-2025 draw outcome share 20.3% vs overall 24.6%",
+      "details": {
+        "season": "2024-2025",
+        "outcome": "draw",
+        "season_share": 20.3,
+        "overall_share": 24.6
       }
     },
     {
       "code": "HIGH_SCORING_MATCHES",
       "severity": "warning",
-      "message": "7 match(es) with >= 8 total goals (extreme scorelines)",
+      "message": "18 match(es) with >= 8 total goals (extreme scorelines)",
       "details": {
-        "n_matches": 7,
+        "n_matches": 18,
         "threshold": 8,
         "examples": [
           {
             "scoreline": "5-4",
+            "total_goals": 9,
+            "count": 2
+          },
+          {
+            "scoreline": "4-5",
             "total_goals": 9,
             "count": 1
           },
@@ -442,29 +542,29 @@
             "count": 1
           },
           {
-            "scoreline": "6-2",
+            "scoreline": "8-0",
             "total_goals": 8,
             "count": 1
+          },
+          {
+            "scoreline": "7-1",
+            "total_goals": 8,
+            "count": 2
+          },
+          {
+            "scoreline": "6-2",
+            "total_goals": 8,
+            "count": 2
+          },
+          {
+            "scoreline": "5-3",
+            "total_goals": 8,
+            "count": 2
           },
           {
             "scoreline": "4-4",
             "total_goals": 8,
-            "count": 1
-          },
-          {
-            "scoreline": "3-5",
-            "total_goals": 8,
-            "count": 1
-          },
-          {
-            "scoreline": "2-6",
-            "total_goals": 8,
-            "count": 1
-          },
-          {
-            "scoreline": "1-7",
-            "total_goals": 8,
-            "count": 1
+            "count": 2
           }
         ]
       }
@@ -475,20 +575,98 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 9031,
-        "distinct": 9026,
+        "rows": 40790,
+        "distinct": 40785,
         "duplicates": 5
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=313, fgte=313 rows)",
       "details": {
-        "total": 9031,
-        "fgt_inconsistent": 5,
-        "fgte_inconsistent": 5,
-        "n_with_fgt": 8396
+        "total": 40790,
+        "fgt_inconsistent": 313,
+        "fgte_inconsistent": 313,
+        "n_with_fgt": 37347
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/classic rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2023-2024",
+        "view": "classic",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/goals rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2023-2024",
+        "view": "goals",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/luck rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2023-2024",
+        "view": "luck",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/classic rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2024-2025",
+        "view": "classic",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/goals rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2024-2025",
+        "view": "goals",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/luck rows=18 positions=1..18 teams=18",
+      "details": {
+        "season": "2024-2025",
+        "view": "luck",
+        "n_rows": 18,
+        "min_pos": 1,
+        "max_pos": 18,
+        "distinct_teams": 18
       }
     },
     {

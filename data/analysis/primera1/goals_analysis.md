@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-29T16:04:16+00:00
+- Generated: 2026-10-26T01:43:57+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`
@@ -8,85 +8,106 @@
 ## 1. Goals per match distribution
 | goals | matches | pct |
 |---|---|---|
-| 0 | 42 | 9.4% |
-| 1 | 92 | 20.5% |
-| 2 | 114 | 25.4% |
-| 3 | 94 | 21.0% |
-| 4 | 55 | 12.3% |
-| 5 | 31 | 6.9% |
-| 6 | 13 | 2.9% |
-| 7 | 5 | 1.1% |
-| 8 | 1 | 0.2% |
-| 9 | 1 | 0.2% |
+| 0 | 185 | 9.2% |
+| 1 | 442 | 22.0% |
+| 2 | 540 | 26.9% |
+| 3 | 440 | 21.9% |
+| 4 | 218 | 10.9% |
+| 5 | 114 | 5.7% |
+| 6 | 48 | 2.4% |
+| 7 | 15 | 0.7% |
+| 8 | 2 | 0.1% |
+| 9 | 3 | 0.1% |
 
 ## 2. Goals per match per season
 | season | matches | total goals | avg home | avg away | avg total |
 |---|---|---|---|---|---|
+| 2021-2022 | 380 | 907 | 1.308 | 1.079 | 2.387 |
+| 2022-2023 | 380 | 862 | 1.295 | 0.974 | 2.268 |
+| 2023-2024 | 380 | 815 | 1.245 | 0.9 | 2.145 |
+| 2024-2025 | 380 | 930 | 1.429 | 1.018 | 2.447 |
 | 2025-2026 | 398 | 974 | 1.392 | 1.055 | 2.447 |
-| 2026-2027 | 50 | 133 | 1.46 | 1.2 | 2.66 |
+| 2026-2027 | 89 | 232 | 1.461 | 1.146 | 2.607 |
 
 ## 3. Home vs away goal share
-- Home goals: **627** (56.6%)
-- Away goals: **480** (43.4%)
-- Home/away ratio: **1.306**
+- Home goals: **2689** (57.0%)
+- Away goals: **2031** (43.0%)
+- Home/away ratio: **1.324**
 
 | season | home goals | away goals | total | home pct | away pct |
 |---|---|---|---|---|---|
+| 2021-2022 | 497 | 410 | 907 | 54.8% | 45.2% |
+| 2022-2023 | 492 | 370 | 862 | 57.1% | 42.9% |
+| 2023-2024 | 473 | 342 | 815 | 58.0% | 42.0% |
+| 2024-2025 | 543 | 387 | 930 | 58.4% | 41.6% |
 | 2025-2026 | 554 | 420 | 974 | 56.9% | 43.1% |
-| 2026-2027 | 73 | 60 | 133 | 54.9% | 45.1% |
+| 2026-2027 | 130 | 102 | 232 | 56.0% | 44.0% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **223** of `448` (49.8%)
+- Overall: **965** of `2007` (48.1%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
+| 2021-2022 | 380 | 173 | 45.5% |
+| 2022-2023 | 380 | 181 | 47.6% |
+| 2023-2024 | 380 | 173 | 45.5% |
+| 2024-2025 | 380 | 196 | 51.6% |
 | 2025-2026 | 398 | 196 | 49.2% |
-| 2026-2027 | 50 | 27 | 54.0% |
+| 2026-2027 | 89 | 46 | 51.7% |
 
 ## 5. Clean sheets
-- Home clean sheets: **163** (36.4%)
-- Away clean sheets: **104** (23.2%)
-- Total clean sheets recorded: **267**
-- Matches with at least one clean sheet: **225** (50.2%)
-- Both teams kept clean sheets (0-0): **42**
+- Home clean sheets: **731** (36.4%)
+- Away clean sheets: **496** (24.7%)
+- Total clean sheets recorded: **1227**
+- Matches with at least one clean sheet: **1042** (51.9%)
+- Both teams kept clean sheets (0-0): **185**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
 |---|---|---|---|---|---|
+| 2021-2022 | 380 | 133 | 106 | 239 | 207 (54.5%) |
+| 2022-2023 | 380 | 144 | 89 | 233 | 199 (52.4%) |
+| 2023-2024 | 380 | 149 | 108 | 257 | 207 (54.5%) |
+| 2024-2025 | 380 | 126 | 83 | 209 | 184 (48.4%) |
 | 2025-2026 | 398 | 146 | 95 | 241 | 202 (50.8%) |
-| 2026-2027 | 50 | 17 | 9 | 26 | 23 (46.0%) |
+| 2026-2027 | 89 | 33 | 15 | 48 | 43 (48.3%) |
 
 ## 6. Scoring intensity
-- First-half goals: **469** (42.4%)
-- Second-half goals: **638** (57.6%)
-- Avg first-half goals per match: **1.047**
-- Avg second-half goals per match: **1.424**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **114** (25.4%)
+- First-half goals: **2016** (43.0%)
+- Second-half goals: **2669** (57.0%)
+- Avg first-half goals per match: **1.013**
+- Avg second-half goals per match: **1.341**
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **536** (26.7%)
+- *16 match(es) excluded (no HT score recorded).*
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
 |---|---|---|---|---|---|
+| 2021-2022 | 380 | 405 | 470 | 46.3% | 53.7% |
+| 2022-2023 | 380 | 378 | 484 | 43.9% | 56.1% |
+| 2023-2024 | 380 | 339 | 473 | 41.7% | 58.3% |
+| 2024-2025 | 380 | 384 | 546 | 41.3% | 58.7% |
 | 2025-2026 | 398 | 419 | 555 | 43.0% | 57.0% |
-| 2026-2027 | 50 | 50 | 83 | 37.6% | 62.4% |
+| 2026-2027 | 89 | 91 | 141 | 39.2% | 60.8% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `406` of `448` (90.6%)
-- Goalless matches: `42`
-- Min `1` | Max `99` | Mean `34.13` | Median (p50) `29.5`
+- Matches with first-goal time recorded: `1806` of `2007` (90.0%)
+- Goalless matches: `201`
+- Min `1` | Max `99` | Mean `34.19` | Median (p50) `29.0`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 110 | 24.6% | 27.1% |
-| 16-30 | 101 | 22.5% | 24.9% |
-| 31-45 | 73 | 16.3% | 18.0% |
-| 46-60 | 52 | 11.6% | 12.8% |
-| 61-75 | 40 | 8.9% | 9.9% |
-| 76-90 | 21 | 4.7% | 5.2% |
-| 91-120 | 9 | 2.0% | 2.2% |
+| 1-15 | 525 | 26.2% | 29.1% |
+| 16-30 | 413 | 20.6% | 22.9% |
+| 31-45 | 315 | 15.7% | 17.4% |
+| 46-60 | 250 | 12.5% | 13.8% |
+| 61-75 | 168 | 8.4% | 9.3% |
+| 76-90 | 101 | 5.0% | 5.6% |
+| 91-120 | 34 | 1.7% | 1.9% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_goals.py` to regenerate.*
 
 ## Charts
 
-![goals_analysis_distribution](E:\football_data_analysis\data\analysis\primera1\charts\goals_analysis_distribution.png)
-![goals_analysis_avg_per_season](E:\football_data_analysis\data\analysis\primera1\charts\goals_analysis_avg_per_season.png)
+![goals_analysis_distribution](charts/goals_analysis_distribution.png)
+![goals_analysis_avg_per_season](charts/goals_analysis_avg_per_season.png)
 

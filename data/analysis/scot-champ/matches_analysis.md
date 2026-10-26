@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:05:45+00:00
+- Generated: 2026-10-26T01:45:54+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Championship (Scotland)
 - Scope: league `scot-champ`
@@ -8,34 +8,60 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 231 |
-| Home wins | 93 (40.3%) |
-| Draws | 74 (32.0%) |
-| Away wins | 64 (27.7%) |
-| Total goals | 540 |
-| Average goals per match | 2.338 |
-| Goalless matches | 29 (12.6%) |
+| Matches | 1105 |
+| Home wins | 447 (40.5%) |
+| Draws | 322 (29.1%) |
+| Away wins | 336 (30.4%) |
+| Total goals | 2851 |
+| Average goals per match | 2.580 |
+| Goalless matches | 107 (9.7%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 135 | 56 (41.5%) | 43 (31.9%) | 36 (26.7%) | 380 | 2.815 | 13 (9.6%) |
+| 2021-2022 | 180 | 67 (37.2%) | 58 (32.2%) | 55 (30.6%) | 432 | 2.4 | 18 (10.0%) |
+| 2022-2023 | 180 | 71 (39.4%) | 53 (29.4%) | 56 (31.1%) | 504 | 2.8 | 14 (7.8%) |
+| 2023-2024 | 180 | 66 (36.7%) | 47 (26.1%) | 67 (37.2%) | 503 | 2.794 | 17 (9.4%) |
+| 2024-2025 | 180 | 86 (47.8%) | 43 (23.9%) | 51 (28.3%) | 452 | 2.511 | 15 (8.3%) |
 | 2025-2026 | 190 | 74 (38.9%) | 64 (33.7%) | 52 (27.4%) | 460 | 2.421 | 25 (13.2%) |
-| 2026-2027 | 41 | 19 (46.3%) | 10 (24.4%) | 12 (29.3%) | 80 | 1.951 | 4 (9.8%) |
+| 2026-2027 | 60 | 27 (45.0%) | 14 (23.3%) | 19 (31.7%) | 120 | 2.0 | 5 (8.3%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 60 (81.1%) | 13 (17.6%) | 1 (1.4%) | 74 |
-| HT draw | 23 (25.3%) | 46 (50.5%) | 22 (24.2%) | 91 |
-| HT away lead | 10 (15.2%) | 15 (22.7%) | 41 (62.1%) | 66 |
+| HT home lead | 268 (75.3%) | 74 (20.8%) | 14 (3.9%) | 356 |
+| HT draw | 148 (33.0%) | 191 (42.6%) | 109 (24.3%) | 448 |
+| HT away lead | 31 (10.3%) | 57 (18.9%) | 213 (70.8%) | 301 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **10** (4.3%)
-- Away comebacks (trailing at HT, won at FT): **1** (0.4%)
+- Home comebacks (trailing at HT, won at FT): **31** (2.8%)
+- Away comebacks (trailing at HT, won at FT): **14** (1.3%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Morton | Ayr | 0-1 | 3-2 |
+| 2020-2021 | Inverness | Arbroath | 0-1 | 3-1 |
+| 2020-2021 | Alloa | Inverness | 0-1 | 2-1 |
+| 2020-2021 | Dundee FC | Alloa | 0-1 | 3-1 |
+| 2020-2021 | Raith | Alloa | 0-1 | 3-1 |
+| 2020-2021 | Dundee FC | Dunfermline | 1-2 | 3-2 |
+| 2021-2022 | Inverness | Partick Thistle | 0-1 | 3-1 |
+| 2021-2022 | Morton | Partick Thistle | 0-1 | 2-1 |
+| 2021-2022 | Dunfermline | Ayr | 0-1 | 2-1 |
+| 2021-2022 | Kilmarnock | Arbroath | 0-1 | 2-1 |
+| 2022-2023 | Queen's Park | Inverness | 0-1 | 2-1 |
+| 2022-2023 | Morton | Cove Rangers | 0-1 | 2-1 |
+| 2022-2023 | Queen's Park | Inverness | 0-1 | 2-1 |
+| 2023-2024 | Airdrieonians | Partick Thistle | 0-1 | 2-1 |
+| 2023-2024 | Arbroath | Raith | 0-1 | 3-2 |
+| 2023-2024 | Ayr | Airdrieonians | 0-1 | 2-1 |
+| 2024-2025 | Ayr | Hamilton | 1-2 | 3-2 |
+| 2024-2025 | Livingston | Raith | 0-1 | 2-1 |
+| 2024-2025 | Dunfermline | Raith | 0-1 | 3-1 |
+| 2024-2025 | Dunfermline | Morton | 0-1 | 2-1 |
+| 2024-2025 | Morton | Ayr | 0-1 | 2-1 |
 | 2025-2026 | Partick Thistle | Airdrieonians | 0-1 | 2-1 |
 | 2025-2026 | St Johnstone | Dunfermline | 0-1 | 2-1 |
 | 2025-2026 | Arbroath | St Johnstone | 0-1 | 3-1 |
@@ -50,48 +76,66 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Alloa | Raith | 1-0 | 1-2 |
+| 2021-2022 | Inverness | Dunfermline | 1-0 | 1-2 |
+| 2021-2022 | Raith | Arbroath | 1-0 | 1-2 |
+| 2021-2022 | Raith | Inverness | 2-1 | 2-3 |
+| 2021-2022 | Dunfermline | Queen of South | 1-0 | 1-2 |
+| 2022-2023 | Queen's Park | Ayr | 2-0 | 2-3 |
+| 2022-2023 | Partick Thistle | Dundee FC | 2-0 | 2-3 |
+| 2022-2023 | Morton | Arbroath | 1-0 | 1-2 |
+| 2022-2023 | Arbroath | Raith | 1-0 | 1-2 |
+| 2023-2024 | Queen's Park | Airdrieonians | 1-0 | 1-2 |
+| 2023-2024 | Ayr | Dundee Utd | 1-0 | 1-2 |
+| 2024-2025 | Queen's Park | Morton | 1-0 | 1-2 |
+| 2024-2025 | Falkirk | Raith | 1-0 | 1-3 |
 | 2025-2026 | Ayr | St Johnstone | 2-0 | 2-4 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 74 | 60 (81.1%) | 13 (17.6%) | 1 (1.4%) |
-| Away lead | 66 | 41 (62.1%) | 15 (22.7%) | 10 (15.2%) |
+| Home lead | 356 | 268 (75.3%) | 74 (20.8%) | 14 (3.9%) |
+| Away lead | 301 | 213 (70.8%) | 57 (18.9%) | 31 (10.3%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 23 | 25.3% |
-| Draw | 46 | 50.5% |
-| Away win | 22 | 24.2% |
+| Home win | 148 | 33.0% |
+| Draw | 191 | 42.6% |
+| Away win | 109 | 24.3% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `202` of `231` (87.4%)
+- Matches with a first-goal time recorded: `998` of `1105` (90.3%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 60 | 26.0% | 32 (53.3%) | 11 (18.3%) | 17 (28.3%) |
-| 16-30 | 56 | 24.2% | 30 (53.6%) | 15 (26.8%) | 11 (19.6%) |
-| 31-45 | 41 | 17.7% | 16 (39.0%) | 9 (22.0%) | 16 (39.0%) |
-| 46-60 | 27 | 11.7% | 10 (37.0%) | 6 (22.2%) | 11 (40.7%) |
-| 61-75 | 10 | 4.3% | 2 (20.0%) | 4 (40.0%) | 4 (40.0%) |
-| 76-90 | 8 | 3.5% | 3 (37.5%) | 0 (0.0%) | 5 (62.5%) |
-| 91-120 | 0 | 0.0% | 0 (-) | 0 (-) | 0 (-) |
+| 1-15 | 328 | 29.7% | 164 (50.0%) | 62 (18.9%) | 102 (31.1%) |
+| 16-30 | 245 | 22.2% | 101 (41.2%) | 64 (26.1%) | 80 (32.7%) |
+| 31-45 | 177 | 16.0% | 69 (39.0%) | 42 (23.7%) | 66 (37.3%) |
+| 46-60 | 130 | 11.8% | 60 (46.2%) | 32 (24.6%) | 38 (29.2%) |
+| 61-75 | 65 | 5.9% | 27 (41.5%) | 11 (16.9%) | 27 (41.5%) |
+| 76-90 | 46 | 4.2% | 21 (45.7%) | 4 (8.7%) | 21 (45.7%) |
+| 91-120 | 7 | 0.6% | 5 (71.4%) | 0 (0.0%) | 2 (28.6%) |
 
 ## 7. Goalless matches
-- Overall: **29** of `231` (12.6%)
+- Overall: **107** of `1105` (9.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 135 | 13 | 9.6% |
+| 2021-2022 | 180 | 18 | 10.0% |
+| 2022-2023 | 180 | 14 | 7.8% |
+| 2023-2024 | 180 | 17 | 9.4% |
+| 2024-2025 | 180 | 15 | 8.3% |
 | 2025-2026 | 190 | 25 | 13.2% |
-| 2026-2027 | 41 | 4 | 9.8% |
+| 2026-2027 | 60 | 5 | 8.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\scot-champ\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\scot-champ\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

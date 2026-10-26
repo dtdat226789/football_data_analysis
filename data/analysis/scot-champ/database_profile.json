@@ -4,10 +4,10 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T16:05:44+00:00",
+  "generated_at": "2026-10-26T01:45:53+00:00",
   "config": {
     "league": "scot-champ",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\scot-champ",
+    "out_dir": "data/analysis/scot-champ",
     "score_threshold": 8,
     "avg_goals_deviation": 0.35,
     "goalless_deviation_pp": 1.5,
@@ -24,498 +24,505 @@
   },
   "observed": {
     "tables": {
-      "leagues": 93,
-      "seasons": 10,
-      "league_seasons": 143,
-      "teams": 1415,
-      "team_aliases": 2830,
-      "team_seasons": 2564,
-      "matches": 27464,
-      "standings": 7410
+      "leagues": 98,
+      "seasons": 14,
+      "league_seasons": 466,
+      "teams": 1743,
+      "team_aliases": 3490,
+      "team_seasons": 7890,
+      "matches": 119420,
+      "standings": 23670
     },
     "leagues": [
       {
         "api_key": "algir1",
         "name": "Ligue 1",
         "country": "Algeria",
-        "n_registered_seasons": 2,
-        "n_matches": 263
+        "n_registered_seasons": 7,
+        "n_matches": 1696
       },
       {
         "api_key": "australia",
         "name": "A-League",
         "country": "Australia",
-        "n_registered_seasons": 2,
-        "n_matches": 332
+        "n_registered_seasons": 7,
+        "n_matches": 962
       },
       {
         "api_key": "austria1",
         "name": "Bundesliga",
         "country": "Austria",
-        "n_registered_seasons": 2,
-        "n_matches": 237
+        "n_registered_seasons": 7,
+        "n_matches": 913
       },
       {
         "api_key": "austria2",
         "name": "2. Liga",
         "country": "Austria",
-        "n_registered_seasons": 2,
-        "n_matches": 279
+        "n_registered_seasons": 7,
+        "n_matches": 1503
       },
       {
         "api_key": "azer",
         "name": "Premier League",
         "country": "Azerbaijan",
-        "n_registered_seasons": 2,
-        "n_matches": 234
+        "n_registered_seasons": 7,
+        "n_matches": 1021
       },
       {
         "api_key": "belgium1",
         "name": "Jupiler Pro League",
         "country": "Belgium",
-        "n_registered_seasons": 2,
-        "n_matches": 384
+        "n_registered_seasons": 7,
+        "n_matches": 1795
+      },
+      {
+        "api_key": "belgium2",
+        "name": "Challenger Pro League",
+        "country": "Belgium",
+        "n_registered_seasons": 0,
+        "n_matches": 0
       },
       {
         "api_key": "brazil1",
         "name": "Serie A Betano",
         "country": "Brazil",
-        "n_registered_seasons": 2,
-        "n_matches": 657
+        "n_registered_seasons": 7,
+        "n_matches": 2571
       },
       {
         "api_key": "brazil2",
         "name": "Serie B",
         "country": "Brazil",
-        "n_registered_seasons": 2,
-        "n_matches": 679
+        "n_registered_seasons": 7,
+        "n_matches": 2620
       },
       {
         "api_key": "bulgaria1",
         "name": "efbet League",
         "country": "Bulgaria",
-        "n_registered_seasons": 2,
-        "n_matches": 363
+        "n_registered_seasons": 7,
+        "n_matches": 1457
       },
       {
         "api_key": "cha",
         "name": "Championship",
         "country": "England",
-        "n_registered_seasons": 2,
-        "n_matches": 654
+        "n_registered_seasons": 7,
+        "n_matches": 3463
       },
       {
         "api_key": "china",
         "name": "Super League",
         "country": "China",
-        "n_registered_seasons": 2,
-        "n_matches": 448
+        "n_registered_seasons": 7,
+        "n_matches": 1482
       },
       {
         "api_key": "czech1",
         "name": "Chance Liga",
         "country": "Czech Republic",
-        "n_registered_seasons": 2,
-        "n_matches": 351
+        "n_registered_seasons": 7,
+        "n_matches": 1637
       },
       {
         "api_key": "czech2",
         "name": "ChNL",
         "country": "Czech Republic",
-        "n_registered_seasons": 2,
-        "n_matches": 312
+        "n_registered_seasons": 7,
+        "n_matches": 1477
       },
       {
         "api_key": "czech3a",
         "name": "3. CFL - Group A",
         "country": "Czech Republic",
-        "n_registered_seasons": 2,
-        "n_matches": 337
+        "n_registered_seasons": 5,
+        "n_matches": 1086
       },
       {
         "api_key": "czech3b",
         "name": "3. CFL - Group B",
         "country": "Czech Republic",
-        "n_registered_seasons": 2,
-        "n_matches": 333
+        "n_registered_seasons": 7,
+        "n_matches": 1417
       },
       {
         "api_key": "denmark1",
         "name": "Superliga",
         "country": "Denmark",
-        "n_registered_seasons": 2,
-        "n_matches": 248
+        "n_registered_seasons": 7,
+        "n_matches": 921
       },
       {
         "api_key": "denmark2",
         "name": "1st Division",
         "country": "Denmark",
-        "n_registered_seasons": 2,
-        "n_matches": 0
+        "n_registered_seasons": 7,
+        "n_matches": 848
       },
       {
         "api_key": "develop21",
         "name": "Professional Development League",
         "country": "England",
         "n_registered_seasons": 1,
-        "n_matches": 40
+        "n_matches": 61
       },
       {
         "api_key": "egypt",
         "name": "Premier League",
         "country": "Egypt",
-        "n_registered_seasons": 2,
-        "n_matches": 372
+        "n_registered_seasons": 7,
+        "n_matches": 1769
       },
       {
         "api_key": "eng1",
         "name": "League One",
         "country": "England",
-        "n_registered_seasons": 2,
-        "n_matches": 644
+        "n_registered_seasons": 7,
+        "n_matches": 3455
       },
       {
         "api_key": "eng2",
         "name": "League Two",
         "country": "England",
-        "n_registered_seasons": 2,
-        "n_matches": 651
+        "n_registered_seasons": 7,
+        "n_matches": 3466
       },
       {
         "api_key": "estonia",
         "name": "Meistriliiga",
         "country": "Estonia",
-        "n_registered_seasons": 2,
-        "n_matches": 325
+        "n_registered_seasons": 7,
+        "n_matches": 1166
       },
       {
         "api_key": "finland1",
         "name": "Veikkausliiga",
         "country": "Finland",
-        "n_registered_seasons": 2,
-        "n_matches": 273
+        "n_registered_seasons": 7,
+        "n_matches": 944
       },
       {
         "api_key": "finland2",
         "name": "Ykkosliiga",
         "country": "Finland",
-        "n_registered_seasons": 2,
-        "n_matches": 260
+        "n_registered_seasons": 7,
+        "n_matches": 933
       },
       {
         "api_key": "france1",
         "name": "Ligue 1",
         "country": "France",
-        "n_registered_seasons": 2,
-        "n_matches": 355
+        "n_registered_seasons": 7,
+        "n_matches": 2127
       },
       {
         "api_key": "france2",
         "name": "Ligue 2",
         "country": "France",
-        "n_registered_seasons": 2,
-        "n_matches": 373
+        "n_registered_seasons": 7,
+        "n_matches": 2224
       },
       {
         "api_key": "france3",
         "name": "Ligue 3",
         "country": "France",
-        "n_registered_seasons": 2,
-        "n_matches": 388
+        "n_registered_seasons": 7,
+        "n_matches": 1902
       },
       {
         "api_key": "germany-north",
         "name": "Regionalliga North",
         "country": "Germany",
-        "n_registered_seasons": 2,
-        "n_matches": 415
+        "n_registered_seasons": 7,
+        "n_matches": 1696
       },
       {
         "api_key": "germany1",
         "name": "Bundesliga",
         "country": "Germany",
-        "n_registered_seasons": 2,
-        "n_matches": 0
+        "n_registered_seasons": 7,
+        "n_matches": 1688
       },
       {
         "api_key": "germany2",
         "name": "2. Bundesliga",
         "country": "Germany",
-        "n_registered_seasons": 2,
-        "n_matches": 364
+        "n_registered_seasons": 7,
+        "n_matches": 1918
       },
       {
         "api_key": "germany3",
         "name": "3. Liga",
         "country": "Germany",
-        "n_registered_seasons": 2,
-        "n_matches": 450
+        "n_registered_seasons": 7,
+        "n_matches": 2380
       },
       {
         "api_key": "greece1",
         "name": "Super League",
         "country": "Greece",
-        "n_registered_seasons": 2,
-        "n_matches": 281
+        "n_registered_seasons": 7,
+        "n_matches": 1207
       },
       {
         "api_key": "greece2",
         "name": "Super League 2",
         "country": "Greece",
-        "n_registered_seasons": 2,
-        "n_matches": 297
+        "n_registered_seasons": 7,
+        "n_matches": 1832
       },
       {
         "api_key": "holland1",
         "name": "Eredivisie",
         "country": "Netherlands",
-        "n_registered_seasons": 2,
-        "n_matches": 384
+        "n_registered_seasons": 7,
+        "n_matches": 1936
       },
       {
         "api_key": "holland2",
         "name": "Eerste Divisie",
         "country": "Netherlands",
-        "n_registered_seasons": 2,
-        "n_matches": 474
+        "n_registered_seasons": 7,
+        "n_matches": 2412
       },
       {
         "api_key": "holland3",
         "name": "Tweede Divisie",
         "country": "Netherlands",
-        "n_registered_seasons": 2,
-        "n_matches": 385
+        "n_registered_seasons": 7,
+        "n_matches": 1693
       },
       {
         "api_key": "hungary1",
         "name": "NB I.",
         "country": "Hungary",
-        "n_registered_seasons": 2,
-        "n_matches": 245
+        "n_registered_seasons": 7,
+        "n_matches": 1250
       },
       {
         "api_key": "hungary2",
         "name": "NB II.",
         "country": "Hungary",
-        "n_registered_seasons": 2,
-        "n_matches": 301
+        "n_registered_seasons": 7,
+        "n_matches": 2012
       },
       {
         "api_key": "india1",
         "name": "ISL",
         "country": "India",
-        "n_registered_seasons": 2,
-        "n_matches": 247
+        "n_registered_seasons": 7,
+        "n_matches": 723
       },
       {
         "api_key": "ireland1",
         "name": "Premier Division",
         "country": "Ireland",
-        "n_registered_seasons": 2,
-        "n_matches": 339
+        "n_registered_seasons": 7,
+        "n_matches": 1164
       },
       {
         "api_key": "ireland2",
         "name": "Division 1",
         "country": "Ireland",
-        "n_registered_seasons": 2,
-        "n_matches": 344
+        "n_registered_seasons": 7,
+        "n_matches": 1086
       },
       {
         "api_key": "italy1",
         "name": "Serie A",
         "country": "Italy",
-        "n_registered_seasons": 2,
-        "n_matches": 430
+        "n_registered_seasons": 7,
+        "n_matches": 2355
       },
       {
         "api_key": "italy19",
         "name": "Primavera 1",
         "country": "Italy",
-        "n_registered_seasons": 2,
-        "n_matches": 432
+        "n_registered_seasons": 7,
+        "n_matches": 1997
       },
       {
         "api_key": "italy2",
         "name": "Serie B",
         "country": "Italy",
-        "n_registered_seasons": 2,
-        "n_matches": 440
+        "n_registered_seasons": 7,
+        "n_matches": 2368
       },
       {
         "api_key": "italy3a",
         "name": "Serie C - Group A",
         "country": "Italy",
-        "n_registered_seasons": 2,
-        "n_matches": 450
+        "n_registered_seasons": 7,
+        "n_matches": 2383
       },
       {
         "api_key": "italy3b",
         "name": "Serie C - Group B",
         "country": "Italy",
-        "n_registered_seasons": 2,
-        "n_matches": 426
+        "n_registered_seasons": 7,
+        "n_matches": 2364
       },
       {
         "api_key": "japan1",
         "name": "J1 League",
         "country": "Japan",
-        "n_registered_seasons": 2,
-        "n_matches": 241
+        "n_registered_seasons": 8,
+        "n_matches": 2334
       },
       {
         "api_key": "japan2",
         "name": "J2 League",
         "country": "Japan",
-        "n_registered_seasons": 2,
-        "n_matches": 760
+        "n_registered_seasons": 6,
+        "n_matches": 2608
       },
       {
         "api_key": "korea1",
         "name": "K League 1",
         "country": "South Korea",
-        "n_registered_seasons": 2,
-        "n_matches": 378
+        "n_registered_seasons": 7,
+        "n_matches": 1320
       },
       {
         "api_key": "korea2",
         "name": "K League 2",
         "country": "South Korea",
-        "n_registered_seasons": 2,
-        "n_matches": 493
+        "n_registered_seasons": 7,
+        "n_matches": 1507
       },
       {
         "api_key": "kuwait",
         "name": "Premier League",
         "country": "Kuwait",
-        "n_registered_seasons": 2,
-        "n_matches": 116
+        "n_registered_seasons": 7,
+        "n_matches": 593
       },
       {
         "api_key": "latvia",
         "name": "Virsliga",
         "country": "Latvia",
-        "n_registered_seasons": 2,
-        "n_matches": 336
+        "n_registered_seasons": 6,
+        "n_matches": 1020
       },
       {
         "api_key": "lithuania",
         "name": "TOPLYGA",
         "country": "Lithuania",
-        "n_registered_seasons": 2,
-        "n_matches": 324
+        "n_registered_seasons": 7,
+        "n_matches": 1110
       },
       {
         "api_key": "morocco",
         "name": "Botola Pro",
         "country": "Morocco",
-        "n_registered_seasons": 3,
-        "n_matches": 488
+        "n_registered_seasons": 7,
+        "n_matches": 1481
       },
       {
         "api_key": "national",
         "name": "National League",
         "country": "England",
-        "n_registered_seasons": 2,
-        "n_matches": 677
+        "n_registered_seasons": 6,
+        "n_matches": 2885
       },
       {
         "api_key": "north",
         "name": "National League North",
         "country": "England",
-        "n_registered_seasons": 2,
-        "n_matches": 680
+        "n_registered_seasons": 7,
+        "n_matches": 2994
       },
       {
         "api_key": "norway",
         "name": "Eliteserien",
         "country": "Norway",
-        "n_registered_seasons": 2,
-        "n_matches": 408
+        "n_registered_seasons": 7,
+        "n_matches": 1626
       },
       {
         "api_key": "poland1",
         "name": "Ekstraklasa",
         "country": "Poland",
-        "n_registered_seasons": 2,
-        "n_matches": 0
+        "n_registered_seasons": 7,
+        "n_matches": 1873
       },
       {
         "api_key": "poland2",
         "name": "Division 1",
         "country": "Poland",
-        "n_registered_seasons": 2,
-        "n_matches": 408
+        "n_registered_seasons": 7,
+        "n_matches": 1962
       },
       {
         "api_key": "portugal1",
         "name": "Liga Portugal",
         "country": "Portugal",
         "n_registered_seasons": 2,
-        "n_matches": 370
+        "n_matches": 384
       },
       {
         "api_key": "portugal2",
         "name": "Liga Portugal 2",
         "country": "Portugal",
-        "n_registered_seasons": 2,
-        "n_matches": 363
+        "n_registered_seasons": 7,
+        "n_matches": 1908
       },
       {
         "api_key": "premier",
         "name": "Premier League",
         "country": "England",
         "n_registered_seasons": 7,
-        "n_matches": 2330
+        "n_matches": 2355
       },
       {
         "api_key": "primera1",
         "name": "Primera RFEF - Group 1",
         "country": "Spain",
-        "n_registered_seasons": 2,
-        "n_matches": 448
+        "n_registered_seasons": 6,
+        "n_matches": 2007
       },
       {
         "api_key": "primera2",
         "name": "Primera RFEF - Group 2",
         "country": "Spain",
-        "n_registered_seasons": 2,
-        "n_matches": 429
+        "n_registered_seasons": 6,
+        "n_matches": 1985
       },
       {
         "api_key": "romania1",
         "name": "Superliga",
         "country": "Romania",
-        "n_registered_seasons": 2,
-        "n_matches": 429
+        "n_registered_seasons": 7,
+        "n_matches": 1651
       },
       {
         "api_key": "russia",
         "name": "Premier League",
         "country": "Russia",
-        "n_registered_seasons": 2,
-        "n_matches": 320
+        "n_registered_seasons": 7,
+        "n_matches": 1541
       },
       {
         "api_key": "saudi1",
         "name": "Saudi Professional League",
         "country": "Saudi Arabia",
-        "n_registered_seasons": 2,
-        "n_matches": 377
+        "n_registered_seasons": 7,
+        "n_matches": 1737
       },
       {
         "api_key": "saudi2",
         "name": "Division 1",
         "country": "Saudi Arabia",
-        "n_registered_seasons": 2,
-        "n_matches": 362
+        "n_registered_seasons": 7,
+        "n_matches": 2054
       },
       {
         "api_key": "scot-champ",
         "name": "Championship",
         "country": "Scotland",
-        "n_registered_seasons": 2,
-        "n_matches": 231
+        "n_registered_seasons": 7,
+        "n_matches": 1105
       },
       {
         "api_key": "scot-premier",
@@ -577,6 +584,20 @@
         "api_key": "serbia1",
         "name": "Mozzart Bet Super Liga",
         "country": "Serbia",
+        "n_registered_seasons": 0,
+        "n_matches": 0
+      },
+      {
+        "api_key": "slovakia1",
+        "name": "Nike liga",
+        "country": "Slovakia",
+        "n_registered_seasons": 0,
+        "n_matches": 0
+      },
+      {
+        "api_key": "slovakia2",
+        "name": "2. liga",
+        "country": "Slovakia",
         "n_registered_seasons": 0,
         "n_matches": 0
       },
@@ -658,9 +679,23 @@
         "n_matches": 0
       },
       {
+        "api_key": "usa1",
+        "name": "MLS",
+        "country": "USA",
+        "n_registered_seasons": 0,
+        "n_matches": 0
+      },
+      {
         "api_key": "wbelgium1",
         "name": "Super League Women",
         "country": "Belgium",
+        "n_registered_seasons": 0,
+        "n_matches": 0
+      },
+      {
+        "api_key": "wengland1",
+        "name": "WSL",
+        "country": "England",
         "n_registered_seasons": 0,
         "n_matches": 0
       },
@@ -687,10 +722,55 @@
       }
     ],
     "league_seasons": {
-      "n_registered": 2,
-      "n_with_data": 2,
+      "n_registered": 7,
+      "n_with_data": 7,
       "seasons_without_data": [],
       "seasons": [
+        {
+          "season": "2020-2021",
+          "declared_by_api": false,
+          "season_state": "complete",
+          "n_matches": 135,
+          "n_teams": 10,
+          "min_date": "2020-10-16",
+          "max_date": "2021-04-30"
+        },
+        {
+          "season": "2021-2022",
+          "declared_by_api": false,
+          "season_state": "complete",
+          "n_matches": 180,
+          "n_teams": 10,
+          "min_date": "2021-07-31",
+          "max_date": "2022-04-29"
+        },
+        {
+          "season": "2022-2023",
+          "declared_by_api": false,
+          "season_state": "complete",
+          "n_matches": 180,
+          "n_teams": 10,
+          "min_date": "2022-07-30",
+          "max_date": "2023-05-05"
+        },
+        {
+          "season": "2023-2024",
+          "declared_by_api": false,
+          "season_state": "complete",
+          "n_matches": 180,
+          "n_teams": 10,
+          "min_date": "2023-08-04",
+          "max_date": "2024-05-03"
+        },
+        {
+          "season": "2024-2025",
+          "declared_by_api": false,
+          "season_state": "complete",
+          "n_matches": 180,
+          "n_teams": 10,
+          "min_date": "2024-08-02",
+          "max_date": "2025-05-02"
+        },
         {
           "season": "2025-2026",
           "declared_by_api": true,
@@ -704,175 +784,270 @@
           "season": "2026-2027",
           "declared_by_api": true,
           "season_state": "in_progress",
-          "n_matches": 41,
+          "n_matches": 60,
           "n_teams": 10,
           "min_date": "2026-08-01",
-          "max_date": "2026-09-25"
+          "max_date": "2026-10-24"
         }
       ]
     },
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 27464,
-        "distinct": 27464,
+        "rows": 119420,
+        "distinct": 119420,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 27464,
-        "distinct": 27464,
+        "rows": 119420,
+        "distinct": 119420,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 27464,
-        "distinct": 27444,
+        "rows": 119420,
+        "distinct": 119400,
         "duplicates": 20
       },
       {
         "check": "team_seasons (league_season_id, team_id)",
-        "rows": 2564,
-        "distinct": 2564,
+        "rows": 7890,
+        "distinct": 7890,
         "duplicates": 0
       },
       {
         "check": "team_seasons api_name within a season",
-        "rows": 2564,
-        "distinct": 2564,
+        "rows": 7890,
+        "distinct": 7890,
         "duplicates": 0
       },
       {
         "check": "team_seasons api_slug within a season",
-        "rows": 2564,
-        "distinct": 2564,
+        "rows": 7890,
+        "distinct": 7890,
         "duplicates": 0
       },
       {
         "check": "standings (league_season_id, team_id, view)",
-        "rows": 7410,
-        "distinct": 7410,
+        "rows": 23670,
+        "distinct": 23670,
         "duplicates": 0
       },
       {
         "check": "team_aliases (form, value)",
-        "rows": 2830,
-        "distinct": 2830,
+        "rows": 3490,
+        "distinct": 3490,
         "duplicates": 0
       },
       {
         "check": "leagues.api_key",
-        "rows": 93,
-        "distinct": 93,
+        "rows": 98,
+        "distinct": 98,
         "duplicates": 0
       },
       {
         "check": "seasons.name",
-        "rows": 10,
-        "distinct": 10,
+        "rows": 14,
+        "distinct": 14,
         "duplicates": 0
       },
       {
         "check": "teams.canonical_name",
-        "rows": 1415,
-        "distinct": 1415,
+        "rows": 1743,
+        "distinct": 1743,
         "duplicates": 0
       }
     ],
     "null_counts": {
-      "total": 27464,
+      "total": 119420,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 27464,
+          "n_not_null": 119420,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 27464,
+          "n_not_null": 119420,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 27464,
+          "n_not_null": 119420,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 27464,
+          "n_not_null": 119420,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 27464,
+          "n_not_null": 119420,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 27464,
+          "n_not_null": 119420,
           "null_pct": 0.0
         },
         "home_ht": {
-          "n_null": 49,
-          "n_not_null": 27415,
-          "null_pct": 0.2
+          "n_null": 484,
+          "n_not_null": 118936,
+          "null_pct": 0.4
         },
         "away_ht": {
-          "n_null": 49,
-          "n_not_null": 27415,
-          "null_pct": 0.2
+          "n_null": 484,
+          "n_not_null": 118936,
+          "null_pct": 0.4
         },
         "first_goal_time": {
-          "n_null": 1942,
-          "n_not_null": 25522,
-          "null_pct": 7.1
+          "n_null": 9581,
+          "n_not_null": 109839,
+          "null_pct": 8.0
         },
         "first_goal_time_extra": {
-          "n_null": 1942,
-          "n_not_null": 25522,
-          "null_pct": 7.1
+          "n_null": 9581,
+          "n_not_null": 109839,
+          "null_pct": 8.0
         }
       }
     },
     "first_goal_consistency": {
-      "total": 27464,
-      "fgt_inconsistent": 26,
-      "fgte_inconsistent": 26,
-      "n_with_fgt": 25522
+      "total": 119420,
+      "fgt_inconsistent": 425,
+      "fgte_inconsistent": 425,
+      "n_with_fgt": 109839
     },
     "value_ranges": {
       "min_home": 0,
-      "max_home": 9,
+      "max_home": 13,
       "min_away": 0,
-      "max_away": 9,
+      "max_away": 13,
       "min_fgt": 1,
-      "max_fgt": 108,
+      "max_fgt": 112,
       "min_ht_home": 0,
-      "max_ht_home": 6,
+      "max_ht_home": 7,
       "min_ht_away": 0,
-      "max_ht_away": 6
+      "max_ht_away": 7
     }
   },
   "calculated": {
     "overall": {
-      "n_matches": 231,
-      "home_wins": 93,
-      "draws": 74,
-      "away_wins": 64,
-      "home_win_pct": 40.3,
-      "draw_pct": 32.0,
-      "away_win_pct": 27.7,
-      "home_goals": 298,
-      "away_goals": 242,
-      "total_goals": 540,
-      "avg_goals": 2.338,
-      "avg_home_goals": 1.29,
-      "avg_away_goals": 1.048,
-      "home_goal_share": 55.2,
-      "goalless": 29,
-      "goalless_pct": 12.6
+      "n_matches": 1105,
+      "home_wins": 447,
+      "draws": 322,
+      "away_wins": 336,
+      "home_win_pct": 40.5,
+      "draw_pct": 29.1,
+      "away_win_pct": 30.4,
+      "home_goals": 1550,
+      "away_goals": 1301,
+      "total_goals": 2851,
+      "avg_goals": 2.58,
+      "avg_home_goals": 1.403,
+      "avg_away_goals": 1.177,
+      "home_goal_share": 54.4,
+      "goalless": 107,
+      "goalless_pct": 9.7
     },
     "per_season": [
+      {
+        "season": "2020-2021",
+        "n_matches": 135,
+        "home_wins": 56,
+        "draws": 43,
+        "away_wins": 36,
+        "home_win_pct": 41.5,
+        "draw_pct": 31.9,
+        "away_win_pct": 26.7,
+        "home_goals": 209,
+        "away_goals": 171,
+        "total_goals": 380,
+        "avg_goals": 2.815,
+        "avg_home_goals": 1.548,
+        "avg_away_goals": 1.267,
+        "home_goal_share": 55.0,
+        "goalless": 13,
+        "goalless_pct": 9.6
+      },
+      {
+        "season": "2021-2022",
+        "n_matches": 180,
+        "home_wins": 67,
+        "draws": 58,
+        "away_wins": 55,
+        "home_win_pct": 37.2,
+        "draw_pct": 32.2,
+        "away_win_pct": 30.6,
+        "home_goals": 225,
+        "away_goals": 207,
+        "total_goals": 432,
+        "avg_goals": 2.4,
+        "avg_home_goals": 1.25,
+        "avg_away_goals": 1.15,
+        "home_goal_share": 52.1,
+        "goalless": 18,
+        "goalless_pct": 10.0
+      },
+      {
+        "season": "2022-2023",
+        "n_matches": 180,
+        "home_wins": 71,
+        "draws": 53,
+        "away_wins": 56,
+        "home_win_pct": 39.4,
+        "draw_pct": 29.4,
+        "away_win_pct": 31.1,
+        "home_goals": 279,
+        "away_goals": 225,
+        "total_goals": 504,
+        "avg_goals": 2.8,
+        "avg_home_goals": 1.55,
+        "avg_away_goals": 1.25,
+        "home_goal_share": 55.4,
+        "goalless": 14,
+        "goalless_pct": 7.8
+      },
+      {
+        "season": "2023-2024",
+        "n_matches": 180,
+        "home_wins": 66,
+        "draws": 47,
+        "away_wins": 67,
+        "home_win_pct": 36.7,
+        "draw_pct": 26.1,
+        "away_win_pct": 37.2,
+        "home_goals": 258,
+        "away_goals": 245,
+        "total_goals": 503,
+        "avg_goals": 2.794,
+        "avg_home_goals": 1.433,
+        "avg_away_goals": 1.361,
+        "home_goal_share": 51.3,
+        "goalless": 17,
+        "goalless_pct": 9.4
+      },
+      {
+        "season": "2024-2025",
+        "n_matches": 180,
+        "home_wins": 86,
+        "draws": 43,
+        "away_wins": 51,
+        "home_win_pct": 47.8,
+        "draw_pct": 23.9,
+        "away_win_pct": 28.3,
+        "home_goals": 257,
+        "away_goals": 195,
+        "total_goals": 452,
+        "avg_goals": 2.511,
+        "avg_home_goals": 1.428,
+        "avg_away_goals": 1.083,
+        "home_goal_share": 56.9,
+        "goalless": 15,
+        "goalless_pct": 8.3
+      },
       {
         "season": "2025-2026",
         "n_matches": 190,
@@ -894,45 +1069,150 @@
       },
       {
         "season": "2026-2027",
-        "n_matches": 41,
-        "home_wins": 19,
-        "draws": 10,
-        "away_wins": 12,
-        "home_win_pct": 46.3,
-        "draw_pct": 24.4,
-        "away_win_pct": 29.3,
-        "home_goals": 46,
-        "away_goals": 34,
-        "total_goals": 80,
-        "avg_goals": 1.951,
-        "avg_home_goals": 1.122,
-        "avg_away_goals": 0.829,
-        "home_goal_share": 57.5,
-        "goalless": 4,
-        "goalless_pct": 9.8
+        "n_matches": 60,
+        "home_wins": 27,
+        "draws": 14,
+        "away_wins": 19,
+        "home_win_pct": 45.0,
+        "draw_pct": 23.3,
+        "away_win_pct": 31.7,
+        "home_goals": 70,
+        "away_goals": 50,
+        "total_goals": 120,
+        "avg_goals": 2.0,
+        "avg_home_goals": 1.167,
+        "avg_away_goals": 0.833,
+        "home_goal_share": 58.3,
+        "goalless": 5,
+        "goalless_pct": 8.3
       }
     ],
     "first_goal": {
-      "n_with_fgt": 202,
+      "n_with_fgt": 998,
       "summary": {
-        "n": 202,
+        "n": 998,
         "min": 1,
-        "max": 88,
-        "mean": 29.51,
-        "p25": 13.25,
+        "max": 96,
+        "mean": 30.47,
+        "p25": 12.0,
         "p50": 25.0,
-        "p75": 43.0
+        "p75": 45.0
       },
       "buckets": {
-        "1-15": 60,
-        "16-30": 56,
-        "31-45": 41,
-        "46-60": 27,
-        "61-75": 10,
-        "76-90": 8,
-        "91-120": 0
+        "1-15": 328,
+        "16-30": 245,
+        "31-45": 177,
+        "46-60": 130,
+        "61-75": 65,
+        "76-90": 46,
+        "91-120": 7
       },
       "per_season": {
+        "2020-2021": {
+          "n_with_fgt": 122,
+          "summary": {
+            "n": 122,
+            "min": 2,
+            "max": 91,
+            "mean": 31.33,
+            "p25": 11.25,
+            "p50": 26.0,
+            "p75": 46.75
+          },
+          "buckets": {
+            "1-15": 41,
+            "16-30": 25,
+            "31-45": 24,
+            "46-60": 16,
+            "61-75": 8,
+            "76-90": 7,
+            "91-120": 1
+          }
+        },
+        "2021-2022": {
+          "n_with_fgt": 162,
+          "summary": {
+            "n": 162,
+            "min": 1,
+            "max": 96,
+            "mean": 32.3,
+            "p25": 10.0,
+            "p50": 25.0,
+            "p75": 51.75
+          },
+          "buckets": {
+            "1-15": 58,
+            "16-30": 31,
+            "31-45": 23,
+            "46-60": 26,
+            "61-75": 12,
+            "76-90": 10,
+            "91-120": 2
+          }
+        },
+        "2022-2023": {
+          "n_with_fgt": 166,
+          "summary": {
+            "n": 166,
+            "min": 2,
+            "max": 93,
+            "mean": 30.02,
+            "p25": 12.0,
+            "p50": 26.0,
+            "p75": 46.75
+          },
+          "buckets": {
+            "1-15": 55,
+            "16-30": 44,
+            "31-45": 24,
+            "46-60": 27,
+            "61-75": 8,
+            "76-90": 7,
+            "91-120": 1
+          }
+        },
+        "2023-2024": {
+          "n_with_fgt": 163,
+          "summary": {
+            "n": 163,
+            "min": 1,
+            "max": 93,
+            "mean": 29.45,
+            "p25": 12.0,
+            "p50": 25.0,
+            "p75": 41.0
+          },
+          "buckets": {
+            "1-15": 52,
+            "16-30": 47,
+            "31-45": 29,
+            "46-60": 17,
+            "61-75": 11,
+            "76-90": 5,
+            "91-120": 2
+          }
+        },
+        "2024-2025": {
+          "n_with_fgt": 165,
+          "summary": {
+            "n": 165,
+            "min": 1,
+            "max": 90,
+            "mean": 31.33,
+            "p25": 11.0,
+            "p50": 27.0,
+            "p75": 45.0
+          },
+          "buckets": {
+            "1-15": 54,
+            "16-30": 37,
+            "31-45": 33,
+            "46-60": 16,
+            "61-75": 16,
+            "76-90": 9,
+            "91-120": 0
+          }
+        },
         "2025-2026": {
           "n_with_fgt": 165,
           "summary": {
@@ -955,32 +1235,152 @@
           }
         },
         "2026-2027": {
-          "n_with_fgt": 37,
+          "n_with_fgt": 55,
           "summary": {
-            "n": 37,
+            "n": 55,
             "min": 4,
-            "max": 88,
-            "mean": 33.57,
-            "p25": 17.0,
-            "p50": 34.0,
-            "p75": 47.0
+            "max": 92,
+            "mean": 30.53,
+            "p25": 13.5,
+            "p50": 23.0,
+            "p75": 44.5
           },
           "buckets": {
-            "1-15": 9,
-            "16-30": 9,
-            "31-45": 8,
-            "46-60": 7,
+            "1-15": 17,
+            "16-30": 14,
+            "31-45": 11,
+            "46-60": 8,
             "61-75": 1,
             "76-90": 3,
-            "91-120": 0
+            "91-120": 1
           }
         }
       }
     },
     "standings": {
-      "n_pairs": 6,
-      "n_rows": 69,
+      "n_pairs": 21,
+      "n_rows": 219,
       "pairs": [
+        {
+          "season": "2020-2021",
+          "view": "classic",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2020-2021",
+          "view": "goals",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2020-2021",
+          "view": "luck",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2021-2022",
+          "view": "classic",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2021-2022",
+          "view": "goals",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2021-2022",
+          "view": "luck",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2022-2023",
+          "view": "classic",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2022-2023",
+          "view": "goals",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2022-2023",
+          "view": "luck",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2023-2024",
+          "view": "classic",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2023-2024",
+          "view": "goals",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2023-2024",
+          "view": "luck",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2024-2025",
+          "view": "classic",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2024-2025",
+          "view": "goals",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
+        {
+          "season": "2024-2025",
+          "view": "luck",
+          "n_rows": 10,
+          "min_pos": 1,
+          "max_pos": 10,
+          "distinct_teams": 10
+        },
         {
           "season": "2025-2026",
           "view": "classic",
@@ -1030,90 +1430,223 @@
           "distinct_teams": 10
         }
       ],
-      "expected_pairs": 6,
+      "expected_pairs": 21,
       "coverage_complete": true
     },
     "weekday_distribution": [
       {
+        "dow": 0,
+        "label": "Sun",
+        "n": 8,
+        "pct": 0.7
+      },
+      {
+        "dow": 1,
+        "label": "Mon",
+        "n": 5,
+        "pct": 0.5
+      },
+      {
         "dow": 2,
         "label": "Tue",
-        "n": 23,
+        "n": 111,
         "pct": 10.0
       },
       {
         "dow": 3,
         "label": "Wed",
-        "n": 1,
-        "pct": 0.4
+        "n": 16,
+        "pct": 1.4
       },
       {
         "dow": 5,
         "label": "Fri",
-        "n": 38,
-        "pct": 16.5
+        "n": 169,
+        "pct": 15.3
       },
       {
         "dow": 6,
         "label": "Sat",
-        "n": 169,
-        "pct": 73.2
+        "n": 796,
+        "pct": 72.0
       }
     ],
     "scorelines": {
       "most_common": [
         {
           "scoreline": "1-1",
-          "count": 33
+          "count": 138
         },
         {
           "scoreline": "0-0",
-          "count": 29
+          "count": 107
         },
         {
           "scoreline": "1-0",
-          "count": 22
+          "count": 103
         },
         {
           "scoreline": "2-1",
-          "count": 20
+          "count": 98
         },
         {
           "scoreline": "0-1",
-          "count": 20
+          "count": 94
         },
         {
           "scoreline": "2-0",
-          "count": 18
-        },
-        {
-          "scoreline": "0-2",
-          "count": 14
+          "count": 78
         },
         {
           "scoreline": "1-2",
-          "count": 13
+          "count": 75
         },
         {
           "scoreline": "2-2",
-          "count": 11
+          "count": 60
         },
         {
-          "scoreline": "3-2",
-          "count": 7
-        },
-        {
-          "scoreline": "3-1",
-          "count": 7
+          "scoreline": "0-2",
+          "count": 57
         },
         {
           "scoreline": "3-0",
-          "count": 7
+          "count": 43
+        },
+        {
+          "scoreline": "3-1",
+          "count": 34
+        },
+        {
+          "scoreline": "3-2",
+          "count": 26
         }
       ]
     },
-    "extreme_scorelines": []
+    "extreme_scorelines": [
+      {
+        "scoreline": "6-2",
+        "total_goals": 8,
+        "count": 1
+      },
+      {
+        "scoreline": "5-3",
+        "total_goals": 8,
+        "count": 1
+      },
+      {
+        "scoreline": "4-4",
+        "total_goals": 8,
+        "count": 3
+      },
+      {
+        "scoreline": "3-5",
+        "total_goals": 8,
+        "count": 1
+      }
+    ]
   },
   "warnings": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2020-2021 has 135 matches, expected 380",
+      "details": {
+        "season": "2020-2021",
+        "n_matches": 135,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2020-2021 has 10 teams, expected 20",
+      "details": {
+        "season": "2020-2021",
+        "n_teams": 10,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2021-2022 has 180 matches, expected 380",
+      "details": {
+        "season": "2021-2022",
+        "n_matches": 180,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2021-2022 has 10 teams, expected 20",
+      "details": {
+        "season": "2021-2022",
+        "n_teams": 10,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2022-2023 has 180 matches, expected 380",
+      "details": {
+        "season": "2022-2023",
+        "n_matches": 180,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2022-2023 has 10 teams, expected 20",
+      "details": {
+        "season": "2022-2023",
+        "n_teams": 10,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2023-2024 has 180 matches, expected 380",
+      "details": {
+        "season": "2023-2024",
+        "n_matches": 180,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2023-2024 has 10 teams, expected 20",
+      "details": {
+        "season": "2023-2024",
+        "n_teams": 10,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2024-2025 has 180 matches, expected 380",
+      "details": {
+        "season": "2024-2025",
+        "n_matches": 180,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2024-2025 has 10 teams, expected 20",
+      "details": {
+        "season": "2024-2025",
+        "n_teams": 10,
+        "expected": 20
+      }
+    },
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
@@ -1137,10 +1670,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 41 matches, expected 380",
+      "message": "Season 2026-2027 has 60 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 41,
+        "n_matches": 60,
         "expected": 380
       }
     },
@@ -1164,47 +1697,133 @@
       }
     },
     {
-      "code": "SEASON_AVG_GOALS_OUTLIER",
+      "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 avg goals 1.951 vs overall 2.338 (deviation 0.387)",
+      "message": "Season 2022-2023 goalless share 7.8% vs overall 9.7% (deviation 1.9 pp)",
       "details": {
-        "season": "2026-2027",
-        "season_avg_goals": 1.951,
-        "overall_avg_goals": 2.338,
-        "deviation": 0.387
+        "season": "2022-2023",
+        "season_goalless_pct": 7.8,
+        "overall_goalless_pct": 9.7,
+        "deviation_pp": 1.9
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2023-2024 away outcome share 37.2% vs overall 30.4%",
+      "details": {
+        "season": "2023-2024",
+        "outcome": "away",
+        "season_share": 37.2,
+        "overall_share": 30.4
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2024-2025 home outcome share 47.8% vs overall 40.5%",
+      "details": {
+        "season": "2024-2025",
+        "outcome": "home",
+        "season_share": 47.8,
+        "overall_share": 40.5
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2024-2025 draw outcome share 23.9% vs overall 29.1%",
+      "details": {
+        "season": "2024-2025",
+        "outcome": "draw",
+        "season_share": 23.9,
+        "overall_share": 29.1
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 9.8% vs overall 12.6% (deviation 2.8 pp)",
+      "message": "Season 2025-2026 goalless share 13.2% vs overall 9.7% (deviation 3.5 pp)",
       "details": {
-        "season": "2026-2027",
-        "season_goalless_pct": 9.8,
-        "overall_goalless_pct": 12.6,
-        "deviation_pp": 2.8
+        "season": "2025-2026",
+        "season_goalless_pct": 13.2,
+        "overall_goalless_pct": 9.7,
+        "deviation_pp": 3.5
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 46.3% vs overall 40.3%",
+      "message": "Season 2025-2026 draw outcome share 33.7% vs overall 29.1%",
+      "details": {
+        "season": "2025-2026",
+        "outcome": "draw",
+        "season_share": 33.7,
+        "overall_share": 29.1
+      }
+    },
+    {
+      "code": "SEASON_AVG_GOALS_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 avg goals 2.0 vs overall 2.58 (deviation 0.580)",
+      "details": {
+        "season": "2026-2027",
+        "season_avg_goals": 2.0,
+        "overall_avg_goals": 2.58,
+        "deviation": 0.58
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 45.0% vs overall 40.5%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 46.3,
-        "overall_share": 40.3
+        "season_share": 45.0,
+        "overall_share": 40.5
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 24.4% vs overall 32.0%",
+      "message": "Season 2026-2027 draw outcome share 23.3% vs overall 29.1%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 24.4,
-        "overall_share": 32.0
+        "season_share": 23.3,
+        "overall_share": 29.1
+      }
+    },
+    {
+      "code": "HIGH_SCORING_MATCHES",
+      "severity": "warning",
+      "message": "6 match(es) with >= 8 total goals (extreme scorelines)",
+      "details": {
+        "n_matches": 6,
+        "threshold": 8,
+        "examples": [
+          {
+            "scoreline": "6-2",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
+            "scoreline": "5-3",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
+            "scoreline": "4-4",
+            "total_goals": 8,
+            "count": 3
+          },
+          {
+            "scoreline": "3-5",
+            "total_goals": 8,
+            "count": 1
+          }
+        ]
       }
     },
     {
@@ -1213,20 +1832,215 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (20 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 27464,
-        "distinct": 27444,
+        "rows": 119420,
+        "distinct": 119400,
         "duplicates": 20
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=26, fgte=26 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=425, fgte=425 rows)",
       "details": {
-        "total": 27464,
-        "fgt_inconsistent": 26,
-        "fgte_inconsistent": 26,
-        "n_with_fgt": 25522
+        "total": 119420,
+        "fgt_inconsistent": 425,
+        "fgte_inconsistent": 425,
+        "n_with_fgt": 109839
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2020-2021/classic rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2020-2021",
+        "view": "classic",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2020-2021/goals rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2020-2021",
+        "view": "goals",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2020-2021/luck rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2020-2021",
+        "view": "luck",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2021-2022/classic rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2021-2022",
+        "view": "classic",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2021-2022/goals rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2021-2022",
+        "view": "goals",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2021-2022/luck rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2021-2022",
+        "view": "luck",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2022-2023/classic rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2022-2023",
+        "view": "classic",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2022-2023/goals rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2022-2023",
+        "view": "goals",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2022-2023/luck rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2022-2023",
+        "view": "luck",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/classic rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2023-2024",
+        "view": "classic",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/goals rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2023-2024",
+        "view": "goals",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/luck rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2023-2024",
+        "view": "luck",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/classic rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2024-2025",
+        "view": "classic",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/goals rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2024-2025",
+        "view": "goals",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/luck rows=10 positions=1..10 teams=10",
+      "details": {
+        "season": "2024-2025",
+        "view": "luck",
+        "n_rows": 10,
+        "min_pos": 1,
+        "max_pos": 10,
+        "distinct_teams": 10
       }
     },
     {

@@ -4,10 +4,10 @@
     "name": "backend/scripts/analyze_seasons.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T16:10:19+00:00",
+  "generated_at": "2026-10-26T01:51:27+00:00",
   "config": {
     "league": "thai1",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\thai1",
+    "out_dir": "data/analysis/thai1",
     "out_stem": null
   },
   "league": {
@@ -25,26 +25,82 @@
   },
   "champions": [
     {
+      "season": "2021-2022",
+      "champion": "Buriram",
+      "champion_id": 2143,
+      "champion_pts": 62,
+      "runner_up": "Pathum United",
+      "runner_up_id": 2144,
+      "margin_pts": 2
+    },
+    {
+      "season": "2022-2023",
+      "champion": "Buriram",
+      "champion_id": 2143,
+      "champion_pts": 74,
+      "runner_up": "Bangkok Utd",
+      "runner_up_id": 2145,
+      "margin_pts": 12
+    },
+    {
+      "season": "2023-2024",
+      "champion": "Buriram",
+      "champion_id": 2143,
+      "champion_pts": 69,
+      "runner_up": "Bangkok Utd",
+      "runner_up_id": 2145,
+      "margin_pts": 8
+    },
+    {
+      "season": "2024-2025",
+      "champion": "Buriram",
+      "champion_id": 2143,
+      "champion_pts": 70,
+      "runner_up": "Bangkok Utd",
+      "runner_up_id": 2145,
+      "margin_pts": 1
+    },
+    {
       "season": "2025-2026",
       "champion": "Buriram",
-      "champion_id": 1754,
+      "champion_id": 2143,
       "champion_pts": 70,
       "runner_up": "Port MTI FC",
-      "runner_up_id": 1755,
+      "runner_up_id": 2150,
       "margin_pts": 10
     },
     {
       "season": "2026-2027",
-      "champion": "Buriram",
-      "champion_id": 1754,
-      "champion_pts": 7,
-      "runner_up": "Rayong FC",
-      "runner_up_id": 1762,
-      "margin_pts": 0
+      "champion": "Port MTI FC",
+      "champion_id": 2150,
+      "champion_pts": 15,
+      "runner_up": "Buriram",
+      "runner_up_id": 2143,
+      "margin_pts": 2
     }
   ],
   "title_race": {
     "per_season": [
+      {
+        "season": "2021-2022",
+        "margin": 2,
+        "tight": true
+      },
+      {
+        "season": "2022-2023",
+        "margin": 12,
+        "tight": false
+      },
+      {
+        "season": "2023-2024",
+        "margin": 8,
+        "tight": false
+      },
+      {
+        "season": "2024-2025",
+        "margin": 1,
+        "tight": true
+      },
       {
         "season": "2025-2026",
         "margin": 10,
@@ -52,20 +108,64 @@
       },
       {
         "season": "2026-2027",
-        "margin": 0,
+        "margin": 2,
         "tight": true
       }
     ],
-    "tight_race_count": 1,
-    "total_seasons": 2,
+    "tight_race_count": 3,
+    "total_seasons": 6,
     "tightest": {
-      "season": "2026-2027",
-      "margin": 0,
+      "season": "2024-2025",
+      "margin": 1,
       "champion": "Buriram",
-      "runner_up": "Rayong FC"
+      "runner_up": "Bangkok Utd"
     }
   },
   "points_thresholds": [
+    {
+      "season": "2021-2022",
+      "positions": {
+        "1": 62,
+        "2": 60,
+        "4": 49,
+        "6": 47,
+        "13": 31,
+        "16": 19
+      }
+    },
+    {
+      "season": "2022-2023",
+      "positions": {
+        "1": 74,
+        "2": 62,
+        "4": 50,
+        "6": 43,
+        "13": 33,
+        "16": 19
+      }
+    },
+    {
+      "season": "2023-2024",
+      "positions": {
+        "1": 69,
+        "2": 61,
+        "4": 54,
+        "6": 39,
+        "13": 32,
+        "16": 26
+      }
+    },
+    {
+      "season": "2024-2025",
+      "positions": {
+        "1": 70,
+        "2": 69,
+        "4": 52,
+        "6": 45,
+        "13": 32,
+        "16": 18
+      }
+    },
     {
       "season": "2025-2026",
       "positions": {
@@ -80,16 +180,108 @@
     {
       "season": "2026-2027",
       "positions": {
-        "1": 7,
-        "2": 7,
-        "4": 6,
-        "6": 6,
-        "13": 3,
-        "16": 0
+        "1": 15,
+        "2": 13,
+        "4": 10,
+        "6": 10,
+        "13": 4,
+        "16": 1
       }
     }
   ],
   "relegation_battle": [
+    {
+      "season": "2021-2022",
+      "safe_position": 13,
+      "safe_pts": 31,
+      "drop_position": 14,
+      "drop_pts": 30,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 30
+        },
+        {
+          "position": 15,
+          "points": 28
+        },
+        {
+          "position": 16,
+          "points": 19
+        }
+      ],
+      "bottom3_range": 11
+    },
+    {
+      "season": "2022-2023",
+      "safe_position": 13,
+      "safe_pts": 33,
+      "drop_position": 14,
+      "drop_pts": 29,
+      "gap": 4,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 29
+        },
+        {
+          "position": 15,
+          "points": 21
+        },
+        {
+          "position": 16,
+          "points": 19
+        }
+      ],
+      "bottom3_range": 10
+    },
+    {
+      "season": "2023-2024",
+      "safe_position": 13,
+      "safe_pts": 32,
+      "drop_position": 14,
+      "drop_pts": 30,
+      "gap": 2,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 30
+        },
+        {
+          "position": 15,
+          "points": 28
+        },
+        {
+          "position": 16,
+          "points": 26
+        }
+      ],
+      "bottom3_range": 4
+    },
+    {
+      "season": "2024-2025",
+      "safe_position": 13,
+      "safe_pts": 32,
+      "drop_position": 14,
+      "drop_pts": 27,
+      "gap": 5,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 27
+        },
+        {
+          "position": 15,
+          "points": 23
+        },
+        {
+          "position": 16,
+          "points": 18
+        }
+      ],
+      "bottom3_range": 9
+    },
     {
       "season": "2025-2026",
       "safe_position": 13,
@@ -116,28 +308,96 @@
     {
       "season": "2026-2027",
       "safe_position": 13,
-      "safe_pts": 3,
+      "safe_pts": 4,
       "drop_position": 14,
-      "drop_pts": 1,
-      "gap": 2,
+      "drop_pts": 4,
+      "gap": 0,
       "bottom3": [
         {
           "position": 14,
-          "points": 1
+          "points": 4
         },
         {
           "position": 15,
-          "points": 1
+          "points": 3
         },
         {
           "position": 16,
-          "points": 0
+          "points": 1
         }
       ],
-      "bottom3_range": 1
+      "bottom3_range": 3
     }
   ],
   "league_trends": [
+    {
+      "season": "2021-2022",
+      "n_matches": 240,
+      "total_goals": 615,
+      "avg_goals": 2.562,
+      "home_wins": 109,
+      "draws": 64,
+      "away_wins": 67,
+      "home_win_pct": 45.4,
+      "draw_pct": 26.7,
+      "away_win_pct": 27.9,
+      "goalless": 19,
+      "goalless_pct": 7.9,
+      "total_points": 656,
+      "avg_points_per_team": 41.0,
+      "n_teams": 16
+    },
+    {
+      "season": "2022-2023",
+      "n_matches": 240,
+      "total_goals": 647,
+      "avg_goals": 2.696,
+      "home_wins": 117,
+      "draws": 63,
+      "away_wins": 60,
+      "home_win_pct": 48.8,
+      "draw_pct": 26.2,
+      "away_win_pct": 25.0,
+      "goalless": 15,
+      "goalless_pct": 6.2,
+      "total_points": 657,
+      "avg_points_per_team": 41.06,
+      "n_teams": 16
+    },
+    {
+      "season": "2023-2024",
+      "n_matches": 240,
+      "total_goals": 736,
+      "avg_goals": 3.067,
+      "home_wins": 112,
+      "draws": 66,
+      "away_wins": 62,
+      "home_win_pct": 46.7,
+      "draw_pct": 27.5,
+      "away_win_pct": 25.8,
+      "goalless": 17,
+      "goalless_pct": 7.1,
+      "total_points": 654,
+      "avg_points_per_team": 40.88,
+      "n_teams": 16
+    },
+    {
+      "season": "2024-2025",
+      "n_matches": 240,
+      "total_goals": 732,
+      "avg_goals": 3.05,
+      "home_wins": 118,
+      "draws": 61,
+      "away_wins": 61,
+      "home_win_pct": 49.2,
+      "draw_pct": 25.4,
+      "away_win_pct": 25.4,
+      "goalless": 16,
+      "goalless_pct": 6.7,
+      "total_points": 659,
+      "avg_points_per_team": 41.19,
+      "n_teams": 16
+    },
     {
       "season": "2025-2026",
       "n_matches": 240,
@@ -157,24 +417,44 @@
     },
     {
       "season": "2026-2027",
-      "n_matches": 24,
-      "total_goals": 62,
-      "avg_goals": 2.583,
-      "home_wins": 10,
-      "draws": 4,
-      "away_wins": 10,
-      "home_win_pct": 41.7,
-      "draw_pct": 16.7,
-      "away_win_pct": 41.7,
+      "n_matches": 44,
+      "total_goals": 130,
+      "avg_goals": 2.955,
+      "home_wins": 19,
+      "draws": 7,
+      "away_wins": 18,
+      "home_win_pct": 43.2,
+      "draw_pct": 15.9,
+      "away_win_pct": 40.9,
       "goalless": 1,
-      "goalless_pct": 4.2,
-      "total_points": 68,
-      "avg_points_per_team": 4.25,
+      "goalless_pct": 2.3,
+      "total_points": 125,
+      "avg_points_per_team": 7.81,
       "n_teams": 16
     }
   ],
   "view_divergence": {
     "per_season": [
+      {
+        "season": "2021-2022",
+        "luck": 3.5,
+        "goals": 5.125
+      },
+      {
+        "season": "2022-2023",
+        "luck": 3.25,
+        "goals": 3.25
+      },
+      {
+        "season": "2023-2024",
+        "luck": 3.625,
+        "goals": 5.0
+      },
+      {
+        "season": "2024-2025",
+        "luck": 3.5,
+        "goals": 5.5
+      },
       {
         "season": "2025-2026",
         "luck": 2.125,
@@ -183,13 +463,13 @@
       {
         "season": "2026-2027",
         "luck": 3.25,
-        "goals": 4.875
+        "goals": 4.625
       }
     ],
     "worst_divergence": {
-      "season": "2026-2027",
+      "season": "2024-2025",
       "view": "goals",
-      "avg_abs_diff": 4.875
+      "avg_abs_diff": 5.5
     }
   }
 }

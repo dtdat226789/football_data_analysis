@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:48:59+00:00
+- Generated: 2026-10-26T01:31:10+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: League Two (England)
 - Scope: league `eng2`
@@ -8,34 +8,108 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 651 |
-| Home wins | 280 (43.0%) |
-| Draws | 173 (26.6%) |
-| Away wins | 198 (30.4%) |
-| Total goals | 1674 |
-| Average goals per match | 2.571 |
-| Goalless matches | 45 (6.9%) |
+| Matches | 3466 |
+| Home wins | 1466 (42.3%) |
+| Draws | 943 (27.2%) |
+| Away wins | 1057 (30.5%) |
+| Total goals | 8797 |
+| Average goals per match | 2.538 |
+| Goalless matches | 286 (8.3%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 552 | 223 (40.4%) | 151 (27.4%) | 178 (32.2%) | 1303 | 2.361 | 57 (10.3%) |
+| 2021-2022 | 552 | 231 (41.8%) | 152 (27.5%) | 169 (30.6%) | 1359 | 2.462 | 51 (9.2%) |
+| 2022-2023 | 552 | 229 (41.5%) | 160 (29.0%) | 163 (29.5%) | 1294 | 2.344 | 54 (9.8%) |
+| 2023-2024 | 552 | 248 (44.9%) | 131 (23.7%) | 173 (31.3%) | 1645 | 2.98 | 27 (4.9%) |
+| 2024-2025 | 552 | 232 (42.0%) | 158 (28.6%) | 162 (29.3%) | 1377 | 2.495 | 48 (8.7%) |
 | 2025-2026 | 557 | 233 (41.8%) | 139 (25.0%) | 185 (33.2%) | 1434 | 2.575 | 37 (6.6%) |
-| 2026-2027 | 94 | 47 (50.0%) | 34 (36.2%) | 13 (13.8%) | 240 | 2.553 | 8 (8.5%) |
+| 2026-2027 | 149 | 70 (47.0%) | 52 (34.9%) | 27 (18.1%) | 385 | 2.584 | 12 (8.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 145 (73.2%) | 43 (21.7%) | 10 (5.1%) | 198 |
-| HT draw | 115 (39.0%) | 98 (33.2%) | 82 (27.8%) | 295 |
-| HT away lead | 20 (12.7%) | 32 (20.3%) | 106 (67.1%) | 158 |
+| HT home lead | 857 (76.0%) | 196 (17.4%) | 74 (6.6%) | 1127 |
+| HT draw | 520 (35.0%) | 578 (38.9%) | 388 (26.1%) | 1486 |
+| HT away lead | 89 (10.4%) | 169 (19.8%) | 595 (69.8%) | 853 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **20** (3.1%)
-- Away comebacks (trailing at HT, won at FT): **10** (1.5%)
+- Home comebacks (trailing at HT, won at FT): **89** (2.6%)
+- Away comebacks (trailing at HT, won at FT): **74** (2.1%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Bradford City | Stevenage | 0-1 | 2-1 |
+| 2020-2021 | Exeter | Crawley | 0-1 | 2-1 |
+| 2020-2021 | Leyton Orient | Newport | 0-1 | 2-1 |
+| 2020-2021 | Morecambe | Leyton Orient | 0-1 | 2-1 |
+| 2020-2021 | Walsall | Port Vale | 0-2 | 4-3 |
+| 2020-2021 | Cambridge Utd | Leyton Orient | 0-1 | 2-1 |
+| 2020-2021 | Morecambe | Grimsby | 0-1 | 3-1 |
+| 2020-2021 | Cambridge Utd | Harrogate | 0-1 | 2-1 |
+| 2020-2021 | Oldham | Salford | 0-1 | 2-1 |
+| 2020-2021 | Exeter | Bradford City | 1-2 | 3-2 |
+| 2020-2021 | Morecambe | Salford | 0-1 | 2-1 |
+| 2020-2021 | Colchester | Carlisle | 0-1 | 2-1 |
+| 2020-2021 | Bolton | Walsall | 0-1 | 2-1 |
+| 2020-2021 | Barrow | Newport | 0-1 | 2-1 |
+| 2020-2021 | Bolton | Harrogate | 0-1 | 2-1 |
+| 2021-2022 | Harrogate | Barrow | 0-1 | 2-1 |
+| 2021-2022 | Barrow | Newport | 0-1 | 2-1 |
+| 2021-2022 | Sutton | Port Vale | 1-2 | 4-3 |
+| 2021-2022 | Port Vale | Barrow | 0-1 | 3-1 |
+| 2021-2022 | Hartlepool | Harrogate | 0-2 | 3-2 |
+| 2021-2022 | Bristol Rovers | Northampton | 0-1 | 2-1 |
+| 2021-2022 | Tranmere | Bradford City | 0-1 | 2-1 |
+| 2021-2022 | Newport | Sutton | 0-2 | 3-2 |
+| 2021-2022 | Newport | Port Vale | 0-1 | 2-1 |
+| 2021-2022 | Mansfield | Hartlepool | 0-1 | 3-2 |
+| 2021-2022 | Bradford City | Salford | 0-1 | 2-1 |
+| 2021-2022 | Sutton | Colchester | 1-2 | 3-2 |
+| 2021-2022 | Exeter | Harrogate | 1-2 | 4-3 |
+| 2021-2022 | Rochdale | Hartlepool | 0-1 | 2-1 |
+| 2022-2023 | Doncaster | Sutton | 0-1 | 2-1 |
+| 2022-2023 | Northampton | Stockport County | 0-1 | 2-1 |
+| 2022-2023 | AFC Wimbledon | Colchester | 0-1 | 2-1 |
+| 2022-2023 | Hartlepool | Grimsby | 0-1 | 2-1 |
+| 2022-2023 | Sutton | Swindon | 0-1 | 2-1 |
+| 2022-2023 | Barrow | AFC Wimbledon | 0-1 | 2-1 |
+| 2022-2023 | Bradford City | Grimsby | 1-2 | 3-2 |
+| 2022-2023 | Hartlepool | Swindon | 0-1 | 2-1 |
+| 2022-2023 | Crewe | Swindon | 0-1 | 2-1 |
+| 2023-2024 | Barrow | Sutton | 0-1 | 2-1 |
+| 2023-2024 | Notts Co | Grimsby | 1-2 | 3-2 |
+| 2023-2024 | Mansfield | Stockport County | 1-2 | 3-2 |
+| 2023-2024 | Crewe | MK Dons | 0-1 | 3-1 |
+| 2023-2024 | Crawley | Tranmere | 0-1 | 3-2 |
+| 2023-2024 | Wrexham | Salford | 1-2 | 3-2 |
+| 2023-2024 | Colchester | Swindon | 0-1 | 3-1 |
+| 2023-2024 | Grimsby | Morecambe | 0-1 | 3-2 |
+| 2023-2024 | Tranmere | Newport | 0-1 | 2-1 |
+| 2023-2024 | Tranmere | Swindon | 0-1 | 2-1 |
+| 2023-2024 | Newport | Forest Green | 0-2 | 4-2 |
+| 2023-2024 | MK Dons | Accrington | 0-1 | 2-1 |
+| 2023-2024 | Crawley | Notts Co | 0-1 | 2-1 |
+| 2023-2024 | Colchester | Newport | 0-1 | 2-1 |
+| 2023-2024 | Harrogate | Gillingham | 0-1 | 5-1 |
+| 2023-2024 | Swindon | AFC Wimbledon | 0-1 | 3-2 |
+| 2023-2024 | Mansfield | Gillingham | 0-1 | 2-1 |
+| 2023-2024 | Doncaster | Barrow | 0-2 | 4-2 |
+| 2023-2024 | Wrexham | Stockport County | 0-1 | 2-1 |
+| 2024-2025 | Newport | Doncaster | 0-1 | 3-1 |
+| 2024-2025 | Cheltenham | Accrington | 0-1 | 2-1 |
+| 2024-2025 | Barrow | Cheltenham | 0-1 | 2-1 |
+| 2024-2025 | MK Dons | Cheltenham | 1-2 | 3-2 |
+| 2024-2025 | Accrington | Grimsby | 1-2 | 3-2 |
+| 2024-2025 | Port Vale | Newport | 1-2 | 3-2 |
+| 2024-2025 | Swindon | Tranmere | 0-1 | 3-1 |
+| 2024-2025 | Grimsby | Carlisle | 0-1 | 2-1 |
+| 2024-2025 | Cheltenham | Barrow | 0-1 | 3-2 |
+| 2024-2025 | Walsall | Chesterfield | 0-1 | 3-1 |
+| 2024-2025 | Carlisle | Newport | 1-2 | 3-2 |
+| 2024-2025 | Swindon | Bradford City | 2-3 | 5-4 |
 | 2025-2026 | Fleetwood | Colchester | 1-2 | 4-2 |
 | 2025-2026 | Walsall | Bristol Rovers | 0-1 | 2-1 |
 | 2025-2026 | Fleetwood | Accrington | 0-1 | 2-1 |
@@ -60,6 +134,67 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Cheltenham | Morecambe | 1-0 | 1-2 |
+| 2020-2021 | Southend | Morecambe | 1-0 | 1-2 |
+| 2020-2021 | Morecambe | Forest Green | 1-0 | 1-2 |
+| 2020-2021 | Port Vale | Tranmere | 2-0 | 3-4 |
+| 2020-2021 | Newport | Oldham | 2-1 | 2-4 |
+| 2020-2021 | Southend | Cambridge Utd | 1-0 | 1-2 |
+| 2020-2021 | Carlisle | Oldham | 1-0 | 1-3 |
+| 2020-2021 | Bolton | Exeter | 1-0 | 1-2 |
+| 2020-2021 | Leyton Orient | Carlisle | 2-1 | 2-3 |
+| 2021-2022 | Walsall | Bristol Rovers | 1-0 | 1-2 |
+| 2021-2022 | Bristol Rovers | Swindon | 1-0 | 1-3 |
+| 2021-2022 | Crawley | Exeter | 1-0 | 1-3 |
+| 2021-2022 | Crawley | Port Vale | 1-0 | 1-4 |
+| 2021-2022 | Oldham | Scunthorpe | 1-0 | 1-3 |
+| 2021-2022 | Bradford City | Crawley | 1-0 | 1-2 |
+| 2021-2022 | Scunthorpe | Rochdale | 1-0 | 1-2 |
+| 2021-2022 | Colchester | Hartlepool | 1-0 | 1-2 |
+| 2021-2022 | Oldham | Carlisle | 1-0 | 1-2 |
+| 2021-2022 | Scunthorpe | Colchester | 1-0 | 1-3 |
+| 2021-2022 | Oldham | Mansfield | 1-0 | 1-2 |
+| 2021-2022 | Barrow | Port Vale | 1-0 | 1-2 |
+| 2021-2022 | Newport | Colchester | 1-0 | 1-2 |
+| 2021-2022 | Rochdale | Bristol Rovers | 2-0 | 3-4 |
+| 2022-2023 | Walsall | Grimsby | 1-0 | 1-2 |
+| 2022-2023 | Crewe | Stevenage | 1-0 | 1-2 |
+| 2022-2023 | Hartlepool | Carlisle | 1-0 | 1-3 |
+| 2022-2023 | Newport | Stockport County | 1-0 | 1-2 |
+| 2022-2023 | Crewe | Newport | 1-0 | 1-2 |
+| 2022-2023 | Hartlepool | Mansfield | 1-0 | 1-2 |
+| 2022-2023 | Mansfield | Barrow | 2-1 | 2-3 |
+| 2022-2023 | Bradford City | Rochdale | 1-0 | 1-2 |
+| 2022-2023 | Stevenage | Bradford City | 1-0 | 2-3 |
+| 2022-2023 | Northampton | Grimsby | 1-0 | 1-2 |
+| 2022-2023 | AFC Wimbledon | Stevenage | 1-0 | 2-3 |
+| 2022-2023 | Doncaster | Grimsby | 1-0 | 1-2 |
+| 2022-2023 | AFC Wimbledon | Salford | 1-0 | 2-3 |
+| 2022-2023 | Doncaster | Newport | 1-0 | 1-3 |
+| 2023-2024 | Forest Green | Swindon | 1-0 | 1-2 |
+| 2023-2024 | Tranmere | Salford | 2-1 | 3-4 |
+| 2023-2024 | Colchester | MK Dons | 2-1 | 2-3 |
+| 2023-2024 | Salford | Walsall | 1-0 | 1-2 |
+| 2023-2024 | Forest Green | Crewe | 1-0 | 1-4 |
+| 2023-2024 | AFC Wimbledon | Stockport County | 1-0 | 1-2 |
+| 2023-2024 | Crawley | Crewe | 2-1 | 2-4 |
+| 2023-2024 | Swindon | Stockport County | 1-0 | 2-4 |
+| 2023-2024 | Colchester | Barrow | 1-0 | 1-4 |
+| 2023-2024 | Salford | MK Dons | 2-1 | 2-4 |
+| 2023-2024 | Notts Co | Walsall | 1-0 | 1-2 |
+| 2023-2024 | MK Dons | Morecambe | 1-0 | 1-2 |
+| 2023-2024 | Crewe | Salford | 2-1 | 2-3 |
+| 2023-2024 | Tranmere | Morecambe | 2-1 | 2-3 |
+| 2023-2024 | Crewe | Morecambe | 1-0 | 2-3 |
+| 2023-2024 | Harrogate | Crawley | 1-0 | 1-2 |
+| 2024-2025 | Bromley | Crewe | 1-0 | 1-2 |
+| 2024-2025 | Bromley | Notts Co | 2-1 | 2-4 |
+| 2024-2025 | Carlisle | Grimsby | 2-1 | 2-3 |
+| 2024-2025 | Walsall | Fleetwood | 2-1 | 2-6 |
+| 2024-2025 | Grimsby | MK Dons | 1-0 | 1-3 |
+| 2024-2025 | Notts Co | Walsall | 1-0 | 1-2 |
+| 2024-2025 | Salford | Bradford City | 1-0 | 1-2 |
+| 2024-2025 | Notts Co | Cheltenham | 1-0 | 1-2 |
 | 2025-2026 | Tranmere | Notts Co | 1-0 | 1-2 |
 | 2025-2026 | Bristol Rovers | Bromley | 2-0 | 2-3 |
 | 2025-2026 | Barnet | Swindon | 1-0 | 1-2 |
@@ -70,47 +205,55 @@
 | 2025-2026 | Harrogate | Bristol Rovers | 1-0 | 2-3 |
 | 2025-2026 | Cheltenham | Tranmere | 1-0 | 1-3 |
 | 2025-2026 | Barrow | Newport | 1-0 | 1-2 |
+| 2026-2027 | Bristol Rovers | Barnet | 1-0 | 1-3 |
+| 2026-2027 | Tranmere | Barnet | 1-0 | 1-2 |
+| 2026-2027 | Crawley | Shrewsbury | 1-0 | 2-3 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 198 | 145 (73.2%) | 43 (21.7%) | 10 (5.1%) |
-| Away lead | 158 | 106 (67.1%) | 32 (20.3%) | 20 (12.7%) |
+| Home lead | 1127 | 857 (76.0%) | 196 (17.4%) | 74 (6.6%) |
+| Away lead | 853 | 595 (69.8%) | 169 (19.8%) | 89 (10.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 115 | 39.0% |
-| Draw | 98 | 33.2% |
-| Away win | 82 | 27.8% |
+| Home win | 520 | 35.0% |
+| Draw | 578 | 38.9% |
+| Away win | 388 | 26.1% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `606` of `651` (93.1%)
+- Matches with a first-goal time recorded: `3180` of `3466` (91.7%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 193 | 29.6% | 90 (46.6%) | 42 (21.8%) | 61 (31.6%) |
-| 16-30 | 128 | 19.7% | 57 (44.5%) | 37 (28.9%) | 34 (26.6%) |
-| 31-45 | 99 | 15.2% | 42 (42.4%) | 23 (23.2%) | 34 (34.3%) |
-| 46-60 | 83 | 12.7% | 42 (50.6%) | 14 (16.9%) | 27 (32.5%) |
-| 61-75 | 62 | 9.5% | 28 (45.2%) | 11 (17.7%) | 23 (37.1%) |
-| 76-90 | 27 | 4.1% | 12 (44.4%) | 1 (3.7%) | 14 (51.9%) |
-| 91-120 | 14 | 2.2% | 9 (64.3%) | 0 (0.0%) | 5 (35.7%) |
+| 1-15 | 1029 | 29.7% | 487 (47.3%) | 217 (21.1%) | 325 (31.6%) |
+| 16-30 | 752 | 21.7% | 335 (44.5%) | 164 (21.8%) | 253 (33.6%) |
+| 31-45 | 518 | 14.9% | 232 (44.8%) | 124 (23.9%) | 162 (31.3%) |
+| 46-60 | 440 | 12.7% | 204 (46.4%) | 91 (20.7%) | 145 (33.0%) |
+| 61-75 | 244 | 7.0% | 106 (43.4%) | 48 (19.7%) | 90 (36.9%) |
+| 76-90 | 151 | 4.4% | 71 (47.0%) | 13 (8.6%) | 67 (44.4%) |
+| 91-120 | 46 | 1.3% | 31 (67.4%) | 0 (0.0%) | 15 (32.6%) |
 
 ## 7. Goalless matches
-- Overall: **45** of `651` (6.9%)
+- Overall: **286** of `3466` (8.3%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 552 | 57 | 10.3% |
+| 2021-2022 | 552 | 51 | 9.2% |
+| 2022-2023 | 552 | 54 | 9.8% |
+| 2023-2024 | 552 | 27 | 4.9% |
+| 2024-2025 | 552 | 48 | 8.7% |
 | 2025-2026 | 557 | 37 | 6.6% |
-| 2026-2027 | 94 | 8 | 8.5% |
+| 2026-2027 | 149 | 12 | 8.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\eng2\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\eng2\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

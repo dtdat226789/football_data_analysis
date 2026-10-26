@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:56:55+00:00
+- Generated: 2026-10-26T01:37:41+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -8,35 +8,74 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 432 |
-| Home wins | 166 (38.4%) |
-| Draws | 133 (30.8%) |
-| Away wins | 133 (30.8%) |
-| Total goals | 1212 |
-| Average goals per match | 2.806 |
-| Goalless matches | 31 (7.2%) |
+| Matches | 1997 |
+| Home wins | 856 (42.9%) |
+| Draws | 512 (25.6%) |
+| Away wins | 629 (31.5%) |
+| Total goals | 5980 |
+| Average goals per match | 2.994 |
+| Goalless matches | 97 (4.9%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 240 | 97 (40.4%) | 61 (25.4%) | 82 (34.2%) | 739 | 3.079 | 12 (5.0%) |
+| 2021-2022 | 306 | 141 (46.1%) | 68 (22.2%) | 97 (31.7%) | 911 | 2.977 | 11 (3.6%) |
+| 2022-2023 | 306 | 137 (44.8%) | 75 (24.5%) | 94 (30.7%) | 901 | 2.944 | 16 (5.2%) |
+| 2023-2024 | 306 | 140 (45.8%) | 83 (27.1%) | 83 (27.1%) | 962 | 3.144 | 12 (3.9%) |
+| 2024-2025 | 380 | 162 (42.6%) | 82 (21.6%) | 136 (35.8%) | 1164 | 3.063 | 15 (3.9%) |
 | 2025-2026 | 382 | 152 (39.8%) | 117 (30.6%) | 113 (29.6%) | 1051 | 2.751 | 29 (7.6%) |
-| 2026-2027 | 50 | 14 (28.0%) | 16 (32.0%) | 20 (40.0%) | 161 | 3.22 | 2 (4.0%) |
+| 2026-2027 | 77 | 27 (35.1%) | 26 (33.8%) | 24 (31.2%) | 252 | 3.273 | 2 (2.6%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 90 (67.2%) | 32 (23.9%) | 12 (9.0%) | 134 |
-| HT draw | 68 (35.8%) | 76 (40.0%) | 46 (24.2%) | 190 |
-| HT away lead | 7 (6.7%) | 24 (22.9%) | 74 (70.5%) | 105 |
-- *3 match(es) excluded (no HT score recorded).*
+| HT home lead | 516 (75.4%) | 118 (17.3%) | 50 (7.3%) | 684 |
+| HT draw | 295 (37.5%) | 274 (34.9%) | 217 (27.6%) | 786 |
+| HT away lead | 41 (7.9%) | 118 (22.7%) | 361 (69.4%) | 520 |
+- *7 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **7** (1.6%)
-- Away comebacks (trailing at HT, won at FT): **12** (2.8%)
+- Home comebacks (trailing at HT, won at FT): **41** (2.1%)
+- Away comebacks (trailing at HT, won at FT): **50** (2.5%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | AS Roma U19 | Genoa U19 | 0-1 | 3-2 |
+| 2020-2021 | Empoli U19 | Fiorentina U19 | 0-1 | 3-1 |
+| 2020-2021 | Sassuolo U19 | AS Roma U19 | 0-1 | 2-1 |
+| 2021-2022 | Spal U19 | Napoli U19 | 2-3 | 4-3 |
+| 2021-2022 | AC Milan U19 | Genoa U19 | 1-2 | 4-2 |
+| 2022-2023 | Juventus U19 | Atalanta U19 | 0-1 | 3-2 |
+| 2022-2023 | Torino U19 | Cesena U19 | 0-1 | 2-1 |
+| 2022-2023 | Atalanta U19 | Fiorentina U19 | 0-1 | 3-2 |
+| 2022-2023 | Sampdoria U19 | Cesena U19 | 1-2 | 4-2 |
+| 2022-2023 | Udinese U19 | Torino U19 | 0-1 | 2-1 |
+| 2022-2023 | Bologna U19 | AS Roma U19 | 1-2 | 3-2 |
+| 2022-2023 | Sassuolo U19 | Sampdoria U19 | 0-1 | 2-1 |
+| 2022-2023 | Frosinone U19 | Sampdoria U19 | 1-2 | 5-2 |
+| 2022-2023 | Cagliari U19 | Juventus U19 | 1-2 | 5-3 |
+| 2022-2023 | AC Milan U19 | Torino U19 | 0-1 | 2-1 |
+| 2022-2023 | Empoli U19 | Bologna U19 | 0-2 | 3-2 |
+| 2022-2023 | AS Roma U19 | Fiorentina U19 | 0-1 | 2-1 |
+| 2022-2023 | Udinese U19 | Cesena U19 | 0-1 | 3-1 |
+| 2022-2023 | Torino U19 | Empoli U19 | 0-2 | 3-2 |
+| 2023-2024 | Sassuolo U19 | Sampdoria U19 | 2-3 | 4-3 |
+| 2023-2024 | AC Milan U19 | Bologna U19 | 0-1 | 4-1 |
+| 2023-2024 | Atalanta U19 | Cagliari U19 | 0-1 | 4-1 |
+| 2023-2024 | AS Roma U19 | Sampdoria U19 | 0-1 | 3-1 |
+| 2023-2024 | AC Milan U19 | Atalanta U19 | 0-1 | 3-1 |
+| 2023-2024 | Cagliari U19 | Sassuolo U19 | 0-1 | 2-1 |
+| 2023-2024 | Lecce U19 | Genoa U19 | 0-1 | 3-2 |
+| 2023-2024 | Cagliari U19 | Atalanta U19 | 0-1 | 3-1 |
+| 2024-2025 | Genoa U20 | Fiorentina U20 | 0-1 | 3-2 |
+| 2024-2025 | Cagliari U20 | Sassuolo U20 | 0-1 | 3-1 |
+| 2024-2025 | Bologna U20 | Udinese U20 | 0-1 | 3-2 |
+| 2024-2025 | Cesena U20 | Lecce U20 | 0-1 | 3-1 |
+| 2024-2025 | Juventus U20 | Inter U20 | 0-1 | 3-2 |
+| 2024-2025 | Juventus U20 | Udinese U20 | 0-2 | 3-2 |
+| 2024-2025 | Bologna U20 | Monza U20 | 0-2 | 4-3 |
 | 2025-2026 | Cesena U20 | AS Roma U20 | 0-1 | 3-1 |
 | 2025-2026 | Inter U20 | Cagliari U20 | 1-2 | 4-3 |
 | 2025-2026 | Inter U20 | Genoa U20 | 0-1 | 3-1 |
@@ -48,6 +87,44 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Cagliari U19 | Sassuolo U19 | 2-1 | 3-4 |
+| 2020-2021 | Atalanta U19 | Empoli U19 | 2-1 | 2-4 |
+| 2020-2021 | Bologna U19 | Spal U19 | 1-0 | 1-2 |
+| 2020-2021 | Genoa U19 | Sassuolo U19 | 2-0 | 2-3 |
+| 2021-2022 | Fiorentina U19 | Torino U19 | 1-0 | 2-3 |
+| 2021-2022 | Torino U19 | Juventus U19 | 2-1 | 3-4 |
+| 2021-2022 | Inter U19 | Sampdoria U19 | 2-1 | 2-3 |
+| 2021-2022 | Juventus U19 | Verona U19 | 1-0 | 1-2 |
+| 2021-2022 | AC Milan U19 | Bologna U19 | 1-0 | 1-4 |
+| 2022-2023 | AC Milan U19 | Frosinone U19 | 3-1 | 3-5 |
+| 2022-2023 | Atalanta U19 | Torino U19 | 2-1 | 2-3 |
+| 2022-2023 | Torino U19 | Juventus U19 | 3-1 | 3-4 |
+| 2022-2023 | Lecce U19 | Torino U19 | 1-0 | 2-3 |
+| 2022-2023 | Sampdoria U19 | Lecce U19 | 1-0 | 1-2 |
+| 2022-2023 | Atalanta U19 | AC Milan U19 | 2-1 | 2-3 |
+| 2023-2024 | Juventus U19 | Verona U19 | 1-0 | 2-3 |
+| 2023-2024 | Fiorentina U19 | Lazio U19 | 1-0 | 1-2 |
+| 2023-2024 | AS Roma U19 | Juventus U19 | 1-0 | 1-2 |
+| 2023-2024 | Frosinone U19 | Atalanta U19 | 1-0 | 1-3 |
+| 2023-2024 | Atalanta U19 | Fiorentina U19 | 1-0 | 1-2 |
+| 2023-2024 | Empoli U19 | Inter U19 | 1-0 | 1-2 |
+| 2023-2024 | Sassuolo U19 | Lazio U19 | 1-0 | 1-2 |
+| 2023-2024 | AC Milan U19 | Fiorentina U19 | 1-0 | 1-4 |
+| 2023-2024 | Monza U19 | Sassuolo U19 | 1-0 | 1-2 |
+| 2023-2024 | AC Milan U19 | Monza U19 | 1-0 | 1-2 |
+| 2023-2024 | Fiorentina U19 | Cagliari U19 | 1-0 | 1-2 |
+| 2023-2024 | Atalanta U19 | Verona U19 | 1-0 | 1-2 |
+| 2024-2025 | Cesena U20 | Sassuolo U20 | 2-1 | 2-3 |
+| 2024-2025 | Empoli U20 | Torino U20 | 2-1 | 2-3 |
+| 2024-2025 | Udinese U20 | Lazio U20 | 1-0 | 1-3 |
+| 2024-2025 | Genoa U20 | Sassuolo U20 | 1-0 | 2-3 |
+| 2024-2025 | AC Milan U20 | Cremonese U20 | 1-0 | 2-3 |
+| 2024-2025 | Genoa U20 | Cagliari U20 | 1-0 | 1-2 |
+| 2024-2025 | Cesena U20 | Juventus U20 | 2-1 | 3-4 |
+| 2024-2025 | Monza U20 | Genoa U20 | 1-0 | 3-4 |
+| 2024-2025 | Monza U20 | Cesena U20 | 1-0 | 1-2 |
+| 2024-2025 | Sampdoria U20 | Torino U20 | 1-0 | 1-3 |
+| 2024-2025 | Udinese U20 | Verona U20 | 1-0 | 1-3 |
 | 2025-2026 | Bologna U20 | Atalanta U20 | 1-0 | 1-2 |
 | 2025-2026 | Inter U20 | Juventus U20 | 1-0 | 1-3 |
 | 2025-2026 | Lazio U20 | Verona U20 | 2-0 | 2-4 |
@@ -64,44 +141,49 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 134 | 90 (67.2%) | 32 (23.9%) | 12 (9.0%) |
-| Away lead | 105 | 74 (70.5%) | 24 (22.9%) | 7 (6.7%) |
+| Home lead | 684 | 516 (75.4%) | 118 (17.3%) | 50 (7.3%) |
+| Away lead | 520 | 361 (69.4%) | 118 (22.7%) | 41 (7.9%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 68 | 35.8% |
-| Draw | 76 | 40.0% |
-| Away win | 46 | 24.2% |
-- *3 match(es) excluded (no HT score recorded).*
+| Home win | 295 | 37.5% |
+| Draw | 274 | 34.9% |
+| Away win | 217 | 27.6% |
+- *7 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `392` of `432` (90.7%)
+- Matches with a first-goal time recorded: `1889` of `1997` (94.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 158 | 36.6% | 63 (39.9%) | 49 (31.0%) | 46 (29.1%) |
-| 16-30 | 81 | 18.8% | 29 (35.8%) | 23 (28.4%) | 29 (35.8%) |
-| 31-45 | 65 | 15.0% | 29 (44.6%) | 11 (16.9%) | 25 (38.5%) |
-| 46-60 | 40 | 9.3% | 19 (47.5%) | 10 (25.0%) | 11 (27.5%) |
-| 61-75 | 23 | 5.3% | 11 (47.8%) | 3 (13.0%) | 9 (39.1%) |
-| 76-90 | 21 | 4.9% | 10 (47.6%) | 3 (14.3%) | 8 (38.1%) |
-| 91-120 | 4 | 0.9% | 3 (75.0%) | 0 (0.0%) | 1 (25.0%) |
+| 1-15 | 705 | 35.3% | 302 (42.8%) | 166 (23.5%) | 237 (33.6%) |
+| 16-30 | 467 | 23.4% | 206 (44.1%) | 107 (22.9%) | 154 (33.0%) |
+| 31-45 | 282 | 14.1% | 132 (46.8%) | 59 (20.9%) | 91 (32.3%) |
+| 46-60 | 221 | 11.1% | 107 (48.4%) | 49 (22.2%) | 65 (29.4%) |
+| 61-75 | 118 | 5.9% | 60 (50.8%) | 21 (17.8%) | 37 (31.4%) |
+| 76-90 | 82 | 4.1% | 37 (45.1%) | 10 (12.2%) | 35 (42.7%) |
+| 91-120 | 14 | 0.7% | 8 (57.1%) | 0 (0.0%) | 6 (42.9%) |
 
 ## 7. Goalless matches
-- Overall: **31** of `432` (7.2%)
+- Overall: **97** of `1997` (4.9%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 240 | 12 | 5.0% |
+| 2021-2022 | 306 | 11 | 3.6% |
+| 2022-2023 | 306 | 16 | 5.2% |
+| 2023-2024 | 306 | 12 | 3.9% |
+| 2024-2025 | 380 | 15 | 3.9% |
 | 2025-2026 | 382 | 29 | 7.6% |
-| 2026-2027 | 50 | 2 | 4.0% |
+| 2026-2027 | 77 | 2 | 2.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\italy19\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\italy19\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

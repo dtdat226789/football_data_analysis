@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:10:14+00:00
+- Generated: 2026-10-26T01:51:21+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`
@@ -8,34 +8,67 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 264 |
-| Home wins | 114 (43.2%) |
-| Draws | 79 (29.9%) |
-| Away wins | 71 (26.9%) |
-| Total goals | 704 |
-| Average goals per match | 2.667 |
-| Goalless matches | 18 (6.8%) |
+| Matches | 1244 |
+| Home wins | 579 (46.5%) |
+| Draws | 336 (27.0%) |
+| Away wins | 329 (26.4%) |
+| Total goals | 3502 |
+| Average goals per match | 2.815 |
+| Goalless matches | 85 (6.8%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2021-2022 | 240 | 109 (45.4%) | 64 (26.7%) | 67 (27.9%) | 615 | 2.562 | 19 (7.9%) |
+| 2022-2023 | 240 | 117 (48.8%) | 63 (26.2%) | 60 (25.0%) | 647 | 2.696 | 15 (6.2%) |
+| 2023-2024 | 240 | 112 (46.7%) | 66 (27.5%) | 62 (25.8%) | 736 | 3.067 | 17 (7.1%) |
+| 2024-2025 | 240 | 118 (49.2%) | 61 (25.4%) | 61 (25.4%) | 732 | 3.05 | 16 (6.7%) |
 | 2025-2026 | 240 | 104 (43.3%) | 75 (31.2%) | 61 (25.4%) | 642 | 2.675 | 17 (7.1%) |
-| 2026-2027 | 24 | 10 (41.7%) | 4 (16.7%) | 10 (41.7%) | 62 | 2.583 | 1 (4.2%) |
+| 2026-2027 | 44 | 19 (43.2%) | 7 (15.9%) | 18 (40.9%) | 130 | 2.955 | 1 (2.3%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 70 (72.9%) | 18 (18.8%) | 8 (8.3%) | 96 |
-| HT draw | 36 (34.3%) | 41 (39.0%) | 28 (26.7%) | 105 |
-| HT away lead | 8 (12.7%) | 20 (31.7%) | 35 (55.6%) | 63 |
+| HT home lead | 353 (76.4%) | 73 (15.8%) | 36 (7.8%) | 462 |
+| HT draw | 189 (38.9%) | 183 (37.7%) | 114 (23.5%) | 486 |
+| HT away lead | 37 (12.5%) | 80 (27.0%) | 179 (60.5%) | 296 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **8** (3.0%)
-- Away comebacks (trailing at HT, won at FT): **8** (3.0%)
+- Home comebacks (trailing at HT, won at FT): **37** (3.0%)
+- Away comebacks (trailing at HT, won at FT): **36** (2.9%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2021-2022 | Chiangrai Utd | Nakhon Ratchasima FC | 1-2 | 3-2 |
+| 2021-2022 | Nakhon Ratchasima FC | Suphanburi | 0-1 | 2-1 |
+| 2021-2022 | Muang Thong Utd | Khonkaen Utd. | 0-1 | 3-1 |
+| 2021-2022 | Nong Bua Pitchaya | Suphanburi | 0-1 | 2-1 |
+| 2021-2022 | Nong Bua Pitchaya | Pathum United | 0-1 | 3-1 |
+| 2021-2022 | Ratchaburi | Suphanburi | 0-1 | 2-1 |
+| 2022-2023 | Chiangrai Utd | Prachuap | 1-2 | 3-2 |
+| 2022-2023 | Port MTI FC | Nong Bua Pitchaya | 0-1 | 2-1 |
+| 2022-2023 | Bangkok Utd | Buriram | 1-2 | 4-3 |
+| 2022-2023 | Pathum United | Nakhon Ratchasima FC | 0-1 | 5-2 |
+| 2023-2024 | Police Tero | Chonburi | 0-1 | 3-2 |
+| 2023-2024 | Nakhon Pathom | Uthai Thani | 0-1 | 2-1 |
+| 2023-2024 | Trat FC | Nakhon Pathom | 1-2 | 4-3 |
+| 2023-2024 | Bangkok Utd | Chiangrai Utd | 0-1 | 2-1 |
+| 2023-2024 | Uthai Thani | Muang Thong Utd | 0-1 | 4-2 |
+| 2023-2024 | Bangkok Utd | Ratchaburi | 0-1 | 3-1 |
+| 2023-2024 | Port MTI FC | Muang Thong Utd | 0-2 | 4-3 |
+| 2023-2024 | Sukhothai | Chiangrai Utd | 0-1 | 2-1 |
+| 2023-2024 | Buriram | Bangkok Utd | 1-2 | 3-2 |
+| 2023-2024 | Muang Thong Utd | Uthai Thani | 0-2 | 5-2 |
+| 2023-2024 | Sukhothai | Nakhon Pathom | 0-1 | 3-1 |
+| 2024-2025 | Muang Thong Utd | Sukhothai | 0-1 | 4-2 |
+| 2024-2025 | Nong Bua Pitchaya | Uthai Thani | 1-2 | 3-2 |
+| 2024-2025 | Prachuap | Ratchaburi | 0-2 | 3-2 |
+| 2024-2025 | Muang Thong Utd | Chiangrai Utd | 0-1 | 2-1 |
+| 2024-2025 | Port MTI FC | Nakhon Ratchasima FC | 0-2 | 4-2 |
+| 2024-2025 | Rayong FC | Sukhothai | 0-1 | 2-1 |
+| 2024-2025 | Ratchaburi | Prachuap | 0-2 | 3-2 |
+| 2024-2025 | Khonkaen Utd. | Muang Thong Utd | 0-1 | 2-1 |
 | 2025-2026 | Pathum United | Lamphun Warrior | 0-1 | 2-1 |
 | 2025-2026 | Buriram | Nakhon Ratchasima FC | 0-1 | 2-1 |
 | 2025-2026 | Ayutthaya Utd | Bangkok Utd | 0-1 | 3-1 |
@@ -48,6 +81,32 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2021-2022 | Chiangmai Utd | Bangkok Utd | 1-0 | 1-2 |
+| 2021-2022 | Chonburi | Chiangrai Utd | 2-1 | 2-3 |
+| 2021-2022 | Port MTI FC | Chonburi | 1-0 | 1-2 |
+| 2021-2022 | Buriram | Prachuap | 1-0 | 1-2 |
+| 2021-2022 | Prachuap | Nong Bua Pitchaya | 1-0 | 2-3 |
+| 2022-2023 | Lampang | Lamphun Warrior | 1-0 | 1-2 |
+| 2022-2023 | Chiangrai Utd | Bangkok Utd | 1-0 | 1-2 |
+| 2022-2023 | Port MTI FC | Muang Thong Utd | 2-0 | 2-3 |
+| 2022-2023 | Chiangrai Utd | Port MTI FC | 2-0 | 2-3 |
+| 2022-2023 | Buriram | Port MTI FC | 1-0 | 2-3 |
+| 2023-2024 | Lamphun Warrior | Sukhothai | 1-0 | 1-2 |
+| 2023-2024 | Port MTI FC | Pathum United | 2-0 | 2-3 |
+| 2023-2024 | Police Tero | Sukhothai | 1-0 | 2-3 |
+| 2023-2024 | Ratchaburi | Bangkok Utd | 1-0 | 1-2 |
+| 2023-2024 | Nakhon Pathom | Bangkok Utd | 1-0 | 1-2 |
+| 2023-2024 | Chiangrai Utd | Muang Thong Utd | 1-0 | 2-3 |
+| 2024-2025 | Rayong FC | Port MTI FC | 1-0 | 1-3 |
+| 2024-2025 | Ratchaburi | Nakhon Pathom | 1-0 | 2-3 |
+| 2024-2025 | Nong Bua Pitchaya | Bangkok Utd | 1-0 | 2-3 |
+| 2024-2025 | Nakhon Ratchasima FC | Port MTI FC | 2-1 | 2-3 |
+| 2024-2025 | Prachuap | Buriram | 1-0 | 1-2 |
+| 2024-2025 | Lamphun Warrior | Buriram | 1-0 | 1-2 |
+| 2024-2025 | Nakhon Ratchasima FC | Chiangrai Utd | 1-0 | 1-4 |
+| 2024-2025 | Nakhon Pathom | Rayong FC | 1-0 | 1-2 |
+| 2024-2025 | Nong Bua Pitchaya | Port MTI FC | 1-0 | 1-2 |
+| 2024-2025 | Prachuap | Bangkok Utd | 2-0 | 2-4 |
 | 2025-2026 | Lamphun Warrior | Buriram | 2-1 | 2-3 |
 | 2025-2026 | Kanchanaburi | Ayutthaya Utd | 1-0 | 1-2 |
 | 2025-2026 | Bangkok Utd | Uthai Thani | 1-0 | 1-2 |
@@ -56,47 +115,53 @@
 | 2025-2026 | Sukhothai | Ratchaburi | 1-0 | 1-2 |
 | 2025-2026 | Kanchanaburi | Buriram | 1-0 | 1-3 |
 | 2025-2026 | Ayutthaya Utd | Prachuap | 1-0 | 1-3 |
+| 2026-2027 | Chonburi | Prachuap | 1-0 | 1-2 |
+| 2026-2027 | Ratchaburi | Chonburi | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 96 | 70 (72.9%) | 18 (18.8%) | 8 (8.3%) |
-| Away lead | 63 | 35 (55.6%) | 20 (31.7%) | 8 (12.7%) |
+| Home lead | 462 | 353 (76.4%) | 73 (15.8%) | 36 (7.8%) |
+| Away lead | 296 | 179 (60.5%) | 80 (27.0%) | 37 (12.5%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 36 | 34.3% |
-| Draw | 41 | 39.0% |
-| Away win | 28 | 26.7% |
+| Home win | 189 | 38.9% |
+| Draw | 183 | 37.7% |
+| Away win | 114 | 23.5% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `246` of `264` (93.2%)
+- Matches with a first-goal time recorded: `1159` of `1244` (93.2%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 81 | 30.7% | 46 (56.8%) | 14 (17.3%) | 21 (25.9%) |
-| 16-30 | 51 | 19.3% | 22 (43.1%) | 12 (23.5%) | 17 (33.3%) |
-| 31-45 | 42 | 15.9% | 16 (38.1%) | 14 (33.3%) | 12 (28.6%) |
-| 46-60 | 34 | 12.9% | 12 (35.3%) | 13 (38.2%) | 9 (26.5%) |
-| 61-75 | 18 | 6.8% | 9 (50.0%) | 3 (16.7%) | 6 (33.3%) |
-| 76-90 | 15 | 5.7% | 7 (46.7%) | 5 (33.3%) | 3 (20.0%) |
-| 91-120 | 5 | 1.9% | 2 (40.0%) | 0 (0.0%) | 3 (60.0%) |
+| 1-15 | 379 | 30.5% | 203 (53.6%) | 74 (19.5%) | 102 (26.9%) |
+| 16-30 | 271 | 21.8% | 129 (47.6%) | 65 (24.0%) | 77 (28.4%) |
+| 31-45 | 198 | 15.9% | 95 (48.0%) | 48 (24.2%) | 55 (27.8%) |
+| 46-60 | 159 | 12.8% | 73 (45.9%) | 37 (23.3%) | 49 (30.8%) |
+| 61-75 | 84 | 6.8% | 47 (56.0%) | 13 (15.5%) | 24 (28.6%) |
+| 76-90 | 51 | 4.1% | 24 (47.1%) | 14 (27.5%) | 13 (25.5%) |
+| 91-120 | 17 | 1.4% | 8 (47.1%) | 0 (0.0%) | 9 (52.9%) |
 
 ## 7. Goalless matches
-- Overall: **18** of `264` (6.8%)
+- Overall: **85** of `1244` (6.8%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2021-2022 | 240 | 19 | 7.9% |
+| 2022-2023 | 240 | 15 | 6.2% |
+| 2023-2024 | 240 | 17 | 7.1% |
+| 2024-2025 | 240 | 16 | 6.7% |
 | 2025-2026 | 240 | 17 | 7.1% |
-| 2026-2027 | 24 | 1 | 4.2% |
+| 2026-2027 | 44 | 1 | 2.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\thai1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\thai1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

@@ -1,175 +1,269 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:04:33+00:00
+- Generated: 2026-10-26T01:44:22+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`
 
-- Teams: **27** | Seasons: **2** | Matches: **429**
+- Teams: **59** | Seasons: **6** | Matches: **1985**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Villarreal B | 2 | 43 | 20 | 16 | 7 | 76 | 66 | 37 | 29 | 38.0 | 1 | 4 | 1 |
-| Atl. Madrid B | 2 | 43 | 21 | 12 | 10 | 75 | 73 | 49 | 24 | 37.5 | 3 | 7 | 0 |
-| Eldense | 1 | 38 | 19 | 12 | 7 | 69 | 57 | 39 | 18 | 69.0 | 1 | 1 | 1 |
-| Sabadell | 1 | 38 | 18 | 14 | 6 | 68 | 53 | 27 | 26 | 68.0 | 2 | 2 | 0 |
-| Antequera | 2 | 43 | 18 | 10 | 15 | 64 | 55 | 50 | 5 | 32.0 | 7 | 8 | 0 |
-| CE Europa | 2 | 43 | 17 | 13 | 13 | 64 | 58 | 57 | 1 | 32.0 | 5 | 18 | 0 |
-| Hercules | 2 | 43 | 17 | 12 | 14 | 63 | 48 | 46 | 2 | 31.5 | 6 | 9 | 0 |
-| FC Cartagena SAD | 2 | 42 | 16 | 14 | 12 | 62 | 41 | 41 | 0 | 31.0 | 6 | 13 | 0 |
-| Murcia | 2 | 42 | 17 | 10 | 15 | 61 | 51 | 46 | 5 | 30.5 | 5 | 10 | 0 |
-| Alcorcon | 2 | 43 | 14 | 18 | 11 | 60 | 52 | 42 | 10 | 30.0 | 4 | 11 | 0 |
-| Algeciras | 2 | 43 | 16 | 11 | 16 | 59 | 47 | 52 | -5 | 29.5 | 8 | 17 | 0 |
-| UD Ibiza | 2 | 43 | 15 | 11 | 17 | 56 | 51 | 46 | 5 | 28.0 | 11 | 12 | 0 |
-| Gimnastic | 2 | 43 | 15 | 9 | 19 | 54 | 47 | 56 | -9 | 27.0 | 9 | 14 | 0 |
-| Teruel | 2 | 43 | 12 | 15 | 16 | 51 | 28 | 41 | -13 | 25.5 | 13 | 19 | 0 |
-| Torremolinos | 2 | 43 | 11 | 14 | 18 | 47 | 51 | 62 | -11 | 23.5 | 15 | 20 | 0 |
+| Murcia | 5 | 161 | 67 | 45 | 49 | 246 | 188 | 150 | 38 | 49.2 | 2 | 10 | 0 |
+| Algeciras | 5 | 160 | 57 | 51 | 52 | 222 | 186 | 182 | 4 | 44.4 | 7 | 13 | 0 |
+| Villarreal B | 4 | 122 | 52 | 40 | 30 | 196 | 187 | 118 | 69 | 49.0 | 2 | 11 | 0 |
+| UD Ibiza | 4 | 122 | 54 | 32 | 36 | 194 | 163 | 115 | 48 | 48.5 | 3 | 12 | 0 |
+| Castellon | 3 | 114 | 56 | 26 | 32 | 194 | 157 | 121 | 36 | 64.67 | 1 | 13 | 1 |
+| Alcoyano | 4 | 152 | 48 | 48 | 56 | 192 | 147 | 166 | -19 | 48.0 | 11 | 18 | 0 |
+| Atl. Madrid B | 4 | 122 | 47 | 42 | 33 | 183 | 175 | 138 | 37 | 45.75 | 3 | 14 | 0 |
+| Antequera | 4 | 123 | 48 | 37 | 38 | 181 | 162 | 153 | 9 | 45.25 | 4 | 11 | 0 |
+| Sabadell | 3 | 114 | 47 | 35 | 32 | 176 | 139 | 103 | 36 | 58.67 | 2 | 10 | 0 |
+| Real Madrid B | 4 | 122 | 44 | 41 | 37 | 173 | 179 | 135 | 44 | 43.25 | 6 | 10 | 0 |
+| Gimnastic | 4 | 122 | 46 | 34 | 42 | 172 | 129 | 134 | -5 | 43.0 | 4 | 14 | 0 |
+| Sanluqueno | 4 | 152 | 40 | 48 | 64 | 168 | 141 | 201 | -60 | 42.0 | 14 | 19 | 0 |
+| Eldense | 2 | 76 | 38 | 24 | 14 | 138 | 107 | 67 | 40 | 69.0 | 1 | 1 | 2 |
+| Baleares | 3 | 114 | 33 | 36 | 45 | 135 | 119 | 140 | -21 | 45.0 | 6 | 19 | 0 |
+| Ceuta | 2 | 76 | 34 | 27 | 15 | 129 | 101 | 75 | 26 | 64.5 | 1 | 5 | 1 |
+| CF Intercity | 3 | 114 | 32 | 33 | 49 | 129 | 119 | 146 | -27 | 43.0 | 11 | 20 | 0 |
+| Sevilla FC B | 3 | 114 | 32 | 31 | 51 | 127 | 97 | 142 | -45 | 42.33 | 8 | 20 | 0 |
+| Barcelona B | 2 | 76 | 32 | 22 | 22 | 118 | 104 | 89 | 15 | 59.0 | 4 | 9 | 0 |
+| Alcorcon | 3 | 84 | 29 | 28 | 27 | 115 | 110 | 95 | 15 | 38.33 | 6 | 11 | 0 |
+| Hercules | 3 | 84 | 31 | 21 | 32 | 114 | 97 | 97 | 0 | 38.0 | 8 | 12 | 0 |
+| Betis B | 3 | 114 | 29 | 25 | 60 | 112 | 115 | 186 | -71 | 37.33 | 15 | 20 | 0 |
+| Merida AD | 2 | 76 | 27 | 24 | 25 | 105 | 89 | 97 | -8 | 52.5 | 5 | 12 | 0 |
+| Linares | 2 | 76 | 27 | 18 | 31 | 99 | 92 | 98 | -6 | 49.5 | 5 | 17 | 0 |
+| Recreativo Huelva | 2 | 76 | 24 | 26 | 26 | 98 | 76 | 89 | -13 | 49.0 | 6 | 19 | 0 |
+| Cornella | 2 | 76 | 26 | 19 | 31 | 97 | 73 | 90 | -17 | 48.5 | 12 | 15 | 0 |
+| San Fernando | 2 | 76 | 24 | 18 | 34 | 90 | 85 | 106 | -21 | 45.0 | 14 | 16 | 0 |
+| Marbella | 2 | 76 | 21 | 17 | 38 | 80 | 87 | 113 | -26 | 40.0 | 13 | 18 | 0 |
+| Cordoba | 1 | 38 | 23 | 8 | 7 | 77 | 66 | 32 | 34 | 77.0 | 2 | 2 | 0 |
+| FC Cartagena SAD | 2 | 46 | 19 | 15 | 12 | 72 | 50 | 43 | 7 | 36.0 | 4 | 6 | 0 |
+| Andorra | 1 | 38 | 21 | 8 | 9 | 71 | 61 | 38 | 23 | 71.0 | 1 | 1 | 1 |
+| Malaga | 1 | 38 | 19 | 13 | 6 | 70 | 51 | 25 | 26 | 70.0 | 3 | 3 | 0 |
+| Amorebieta | 1 | 38 | 19 | 12 | 7 | 69 | 48 | 29 | 19 | 69.0 | 2 | 2 | 0 |
+| Albacete | 1 | 38 | 19 | 10 | 9 | 67 | 52 | 34 | 18 | 67.0 | 3 | 3 | 0 |
+| CE Europa | 2 | 47 | 18 | 13 | 16 | 67 | 61 | 65 | -4 | 33.5 | 5 | 18 | 0 |
+| Real Sociedad B | 1 | 38 | 14 | 18 | 6 | 60 | 50 | 34 | 16 | 60.0 | 5 | 5 | 0 |
+| Teruel | 2 | 47 | 13 | 16 | 18 | 55 | 31 | 48 | -17 | 27.5 | 13 | 20 | 0 |
+| Osasuna B | 1 | 38 | 15 | 8 | 15 | 53 | 51 | 45 | 6 | 53.0 | 7 | 7 | 0 |
+| Torremolinos | 2 | 47 | 12 | 16 | 19 | 52 | 56 | 71 | -15 | 26.0 | 15 | 19 | 0 |
+| SD Logrones | 1 | 38 | 13 | 12 | 13 | 51 | 40 | 43 | -3 | 51.0 | 9 | 9 | 0 |
+| Linense | 1 | 38 | 13 | 11 | 14 | 50 | 35 | 44 | -9 | 50.0 | 12 | 12 | 0 |
+| R. Union | 1 | 38 | 13 | 9 | 16 | 48 | 39 | 48 | -9 | 48.0 | 13 | 13 | 0 |
+| Numancia | 1 | 38 | 11 | 13 | 14 | 46 | 31 | 36 | -5 | 46.0 | 16 | 16 | 0 |
+| La Nucia | 1 | 38 | 9 | 19 | 10 | 46 | 39 | 45 | -6 | 46.0 | 17 | 17 | 0 |
 | Tarazona | 1 | 38 | 11 | 12 | 15 | 45 | 31 | 40 | -9 | 45.0 | 16 | 16 | 0 |
-| Betis B | 1 | 38 | 12 | 9 | 17 | 45 | 48 | 59 | -11 | 45.0 | 17 | 17 | 0 |
-| Marbella | 1 | 38 | 9 | 7 | 22 | 34 | 36 | 55 | -19 | 34.0 | 18 | 18 | 0 |
-| Sanluqueno | 1 | 38 | 7 | 10 | 21 | 31 | 27 | 53 | -26 | 31.0 | 19 | 19 | 0 |
-| Sevilla FC B | 1 | 38 | 5 | 13 | 20 | 28 | 21 | 44 | -23 | 28.0 | 20 | 20 | 0 |
-| Zaragoza | 1 | 5 | 4 | 0 | 1 | 12 | 8 | 5 | 3 | 12.0 | 2 | 2 | 0 |
-| Jaen | 1 | 5 | 3 | 1 | 1 | 10 | 8 | 5 | 3 | 10.0 | 3 | 3 | 0 |
-| Sant Andreu | 1 | 5 | 2 | 1 | 2 | 7 | 5 | 5 | 0 | 7.0 | 10 | 10 | 0 |
-| Huesca | 1 | 5 | 1 | 3 | 1 | 6 | 4 | 6 | -2 | 6.0 | 12 | 12 | 0 |
-| Real Madrid B | 1 | 5 | 1 | 2 | 2 | 5 | 4 | 4 | 0 | 5.0 | 14 | 14 | 0 |
-| Aguilas FC | 1 | 5 | 1 | 2 | 2 | 5 | 4 | 6 | -2 | 5.0 | 15 | 15 | 0 |
-| Rayo Majadahonda | 1 | 5 | 1 | 1 | 3 | 4 | 5 | 6 | -1 | 4.0 | 16 | 16 | 0 |
+| Yeclano | 1 | 38 | 9 | 16 | 13 | 43 | 36 | 34 | 2 | 43.0 | 16 | 16 | 0 |
+| Fuenlabrada | 1 | 38 | 10 | 13 | 15 | 43 | 43 | 48 | -5 | 43.0 | 17 | 17 | 0 |
+| UD Logrones | 1 | 38 | 7 | 15 | 16 | 36 | 25 | 33 | -8 | 36.0 | 18 | 18 | 0 |
+| UCAM Murcia | 1 | 38 | 8 | 11 | 19 | 35 | 42 | 56 | -14 | 35.0 | 18 | 18 | 0 |
+| Melilla | 1 | 38 | 9 | 7 | 22 | 34 | 26 | 52 | -26 | 34.0 | 18 | 18 | 0 |
+| Calahorra | 1 | 38 | 7 | 12 | 19 | 33 | 31 | 52 | -21 | 33.0 | 19 | 19 | 0 |
+| Som Maresme | 1 | 38 | 6 | 15 | 17 | 33 | 26 | 51 | -25 | 33.0 | 19 | 19 | 0 |
+| Granada CF B | 1 | 38 | 7 | 6 | 25 | 27 | 30 | 56 | -26 | 27.0 | 20 | 20 | 0 |
+| Ath Bilbao B | 1 | 38 | 5 | 11 | 22 | 26 | 27 | 54 | -27 | 26.0 | 20 | 20 | 0 |
+| Zaragoza | 1 | 9 | 6 | 2 | 1 | 20 | 17 | 10 | 7 | 20.0 | 1 | 1 | 1 |
+| Jaen | 1 | 8 | 4 | 3 | 1 | 15 | 12 | 8 | 4 | 15.0 | 5 | 5 | 0 |
+| Huesca | 1 | 9 | 2 | 6 | 1 | 12 | 11 | 11 | 0 | 12.0 | 10 | 10 | 0 |
+| Sant Andreu | 1 | 9 | 2 | 3 | 4 | 9 | 10 | 12 | -2 | 9.0 | 15 | 15 | 0 |
+| Rayo Majadahonda | 1 | 9 | 2 | 1 | 6 | 7 | 7 | 10 | -3 | 7.0 | 16 | 16 | 0 |
+| Aguilas FC | 1 | 9 | 1 | 4 | 4 | 7 | 9 | 15 | -6 | 7.0 | 17 | 17 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Eldense | 19 | 15 | 3 | 1 | 48 | 19 | 4 | 9 | 6 | 21 | 27 |
-| Gimnastic | 22 | 12 | 3 | 7 | 39 | 21 | 3 | 6 | 12 | 15 | 24 |
-| Hercules | 22 | 13 | 4 | 5 | 43 | 21 | 4 | 8 | 9 | 20 | 23 |
-| UD Ibiza | 22 | 11 | 5 | 6 | 38 | 21 | 4 | 6 | 11 | 18 | 20 |
+| Gimnastic | 61 | 34 | 13 | 14 | 115 | 61 | 12 | 21 | 28 | 57 | 58 |
+| Algeciras | 80 | 35 | 32 | 13 | 137 | 80 | 22 | 19 | 39 | 85 | 52 |
+| Hercules | 43 | 24 | 9 | 10 | 81 | 41 | 7 | 12 | 22 | 33 | 48 |
+| Real Madrid B | 61 | 31 | 17 | 13 | 110 | 61 | 13 | 24 | 24 | 63 | 47 |
+| Eldense | 38 | 27 | 10 | 1 | 91 | 38 | 11 | 14 | 13 | 47 | 44 |
+| Atl. Madrid B | 61 | 30 | 22 | 9 | 112 | 61 | 17 | 20 | 24 | 71 | 41 |
+| Sevilla FC B | 57 | 22 | 17 | 18 | 83 | 57 | 10 | 14 | 33 | 44 | 39 |
+| Castellon | 57 | 35 | 11 | 11 | 116 | 57 | 21 | 15 | 21 | 78 | 38 |
+| Baleares | 57 | 23 | 17 | 17 | 86 | 57 | 10 | 19 | 28 | 49 | 37 |
+| Cornella | 38 | 18 | 13 | 7 | 67 | 38 | 8 | 6 | 24 | 30 | 37 |
+| Ceuta | 38 | 24 | 10 | 4 | 82 | 38 | 10 | 17 | 11 | 47 | 35 |
+| Villarreal B | 61 | 32 | 18 | 11 | 114 | 61 | 20 | 22 | 19 | 82 | 32 |
+| Merida AD | 38 | 19 | 11 | 8 | 68 | 38 | 8 | 13 | 17 | 37 | 31 |
+| Recreativo Huelva | 38 | 17 | 13 | 8 | 64 | 38 | 7 | 13 | 18 | 34 | 30 |
+| Marbella | 38 | 16 | 7 | 15 | 55 | 38 | 5 | 10 | 23 | 25 | 30 |
+| Alcorcon | 42 | 19 | 15 | 8 | 72 | 42 | 10 | 13 | 19 | 43 | 29 |
+| Sanluqueno | 76 | 24 | 26 | 26 | 98 | 76 | 16 | 22 | 38 | 70 | 28 |
+| UD Ibiza | 61 | 31 | 17 | 13 | 110 | 61 | 23 | 15 | 23 | 84 | 26 |
+| Barcelona B | 38 | 20 | 11 | 7 | 71 | 38 | 12 | 11 | 15 | 47 | 24 |
+| FC Cartagena SAD | 23 | 14 | 6 | 3 | 48 | 23 | 5 | 9 | 9 | 24 | 24 |
+| Linense | 19 | 11 | 4 | 4 | 37 | 19 | 2 | 7 | 10 | 13 | 24 |
+| Linares | 38 | 17 | 10 | 11 | 61 | 38 | 10 | 8 | 20 | 38 | 23 |
+| Andorra | 19 | 15 | 2 | 2 | 47 | 19 | 6 | 6 | 7 | 24 | 23 |
+| Albacete | 19 | 14 | 2 | 3 | 44 | 19 | 5 | 8 | 6 | 23 | 21 |
+| Melilla | 19 | 8 | 3 | 8 | 27 | 19 | 1 | 4 | 14 | 7 | 20 |
+| Antequera | 61 | 27 | 19 | 15 | 100 | 62 | 21 | 18 | 23 | 81 | 19 |
+| Alcoyano | 76 | 25 | 30 | 21 | 105 | 76 | 23 | 18 | 35 | 87 | 18 |
+| Amorebieta | 19 | 13 | 4 | 2 | 43 | 19 | 6 | 8 | 5 | 26 | 17 |
+| Teruel | 24 | 9 | 9 | 6 | 36 | 23 | 4 | 7 | 12 | 19 | 17 |
+| Osasuna B | 19 | 11 | 2 | 6 | 35 | 19 | 4 | 6 | 9 | 18 | 17 |
 | Tarazona | 19 | 8 | 7 | 4 | 31 | 19 | 3 | 5 | 11 | 14 | 17 |
-| FC Cartagena SAD | 20 | 11 | 6 | 3 | 39 | 22 | 5 | 8 | 9 | 23 | 16 |
-| Algeciras | 21 | 10 | 7 | 4 | 37 | 22 | 6 | 4 | 12 | 22 | 15 |
-| Marbella | 19 | 7 | 3 | 9 | 24 | 19 | 2 | 4 | 13 | 10 | 14 |
-| Atl. Madrid B | 22 | 12 | 8 | 2 | 44 | 21 | 9 | 4 | 8 | 31 | 13 |
-| Teruel | 22 | 8 | 8 | 6 | 32 | 21 | 4 | 7 | 10 | 19 | 13 |
-| Betis B | 19 | 8 | 4 | 7 | 28 | 19 | 4 | 5 | 10 | 17 | 11 |
-| CE Europa | 22 | 10 | 7 | 5 | 37 | 21 | 7 | 6 | 8 | 27 | 10 |
-| Sevilla FC B | 19 | 4 | 7 | 8 | 19 | 19 | 1 | 6 | 12 | 9 | 10 |
-| Torremolinos | 21 | 7 | 7 | 7 | 28 | 22 | 4 | 7 | 11 | 19 | 9 |
-| Antequera | 22 | 10 | 5 | 7 | 35 | 21 | 8 | 5 | 8 | 29 | 6 |
-| Alcorcon | 21 | 8 | 9 | 4 | 33 | 22 | 6 | 9 | 7 | 27 | 6 |
-| Sanluqueno | 19 | 4 | 6 | 9 | 18 | 19 | 3 | 4 | 12 | 13 | 5 |
-| Rayo Majadahonda | 3 | 1 | 1 | 1 | 4 | 2 | 0 | 0 | 2 | 0 | 4 |
-| Murcia | 21 | 9 | 5 | 7 | 32 | 21 | 8 | 5 | 8 | 29 | 3 |
-| Aguilas FC | 3 | 1 | 1 | 1 | 4 | 2 | 0 | 1 | 1 | 1 | 3 |
-| Villarreal B | 21 | 10 | 9 | 2 | 39 | 22 | 10 | 7 | 5 | 37 | 2 |
-| Sabadell | 19 | 9 | 8 | 2 | 35 | 19 | 9 | 6 | 4 | 33 | 2 |
-| Huesca | 3 | 1 | 1 | 1 | 4 | 2 | 0 | 2 | 0 | 2 | 2 |
-| Sant Andreu | 2 | 1 | 1 | 0 | 4 | 3 | 1 | 0 | 2 | 3 | 1 |
-| Real Madrid B | 2 | 1 | 0 | 1 | 3 | 3 | 0 | 2 | 1 | 2 | 1 |
-| Zaragoza | 2 | 2 | 0 | 0 | 6 | 3 | 2 | 0 | 1 | 6 | 0 |
-| Jaen | 2 | 1 | 1 | 0 | 4 | 3 | 2 | 0 | 1 | 6 | -2 |
+| Granada CF B | 19 | 6 | 3 | 10 | 21 | 19 | 1 | 3 | 15 | 6 | 15 |
+| CF Intercity | 57 | 17 | 20 | 20 | 71 | 57 | 15 | 13 | 29 | 58 | 13 |
+| CE Europa | 24 | 11 | 7 | 6 | 40 | 23 | 7 | 6 | 10 | 27 | 13 |
+| Sabadell | 57 | 26 | 16 | 15 | 94 | 57 | 21 | 19 | 17 | 82 | 12 |
+| Torremolinos | 23 | 8 | 8 | 7 | 32 | 24 | 4 | 8 | 12 | 20 | 12 |
+| UCAM Murcia | 19 | 6 | 5 | 8 | 23 | 19 | 2 | 6 | 11 | 12 | 11 |
+| Betis B | 57 | 18 | 7 | 32 | 61 | 57 | 11 | 18 | 28 | 51 | 10 |
+| SD Logrones | 19 | 8 | 6 | 5 | 30 | 19 | 5 | 6 | 8 | 21 | 9 |
+| Fuenlabrada | 19 | 6 | 8 | 5 | 26 | 19 | 4 | 5 | 10 | 17 | 9 |
+| San Fernando | 38 | 12 | 13 | 13 | 49 | 38 | 12 | 5 | 21 | 41 | 8 |
+| Real Sociedad B | 19 | 9 | 7 | 3 | 34 | 19 | 5 | 11 | 3 | 26 | 8 |
+| La Nucia | 19 | 5 | 12 | 2 | 27 | 19 | 4 | 7 | 8 | 19 | 8 |
+| Som Maresme | 19 | 4 | 8 | 7 | 20 | 19 | 2 | 7 | 10 | 13 | 7 |
+| Rayo Majadahonda | 5 | 2 | 1 | 2 | 7 | 4 | 0 | 0 | 4 | 0 | 7 |
+| R. Union | 19 | 8 | 3 | 8 | 27 | 19 | 5 | 6 | 8 | 21 | 6 |
+| Cordoba | 19 | 13 | 2 | 4 | 41 | 19 | 10 | 6 | 3 | 36 | 5 |
+| Malaga | 19 | 10 | 7 | 2 | 37 | 19 | 9 | 6 | 4 | 33 | 4 |
+| Ath Bilbao B | 19 | 3 | 6 | 10 | 15 | 19 | 2 | 5 | 12 | 11 | 4 |
+| Huesca | 5 | 2 | 2 | 1 | 8 | 4 | 0 | 4 | 0 | 4 | 4 |
+| Sant Andreu | 4 | 1 | 3 | 0 | 6 | 5 | 1 | 0 | 4 | 3 | 3 |
+| Aguilas FC | 5 | 1 | 2 | 2 | 5 | 4 | 0 | 2 | 2 | 2 | 3 |
+| Murcia | 80 | 33 | 25 | 22 | 124 | 81 | 34 | 20 | 27 | 122 | 2 |
+| UD Logrones | 19 | 4 | 7 | 8 | 19 | 19 | 3 | 8 | 8 | 17 | 2 |
+| Yeclano | 19 | 4 | 10 | 5 | 22 | 19 | 5 | 6 | 8 | 21 | 1 |
+| Jaen | 4 | 2 | 2 | 0 | 8 | 4 | 2 | 1 | 1 | 7 | 1 |
+| Numancia | 19 | 5 | 7 | 7 | 22 | 19 | 6 | 6 | 7 | 24 | -2 |
+| Zaragoza | 3 | 3 | 0 | 0 | 9 | 6 | 3 | 2 | 1 | 11 | -2 |
+| Calahorra | 19 | 2 | 9 | 8 | 15 | 19 | 5 | 3 | 11 | 18 | -3 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Zaragoza | 2.40 |
-| 2 | Jaen | 2.00 |
-| 3 | Eldense | 1.82 |
-| 4 | Sabadell | 1.79 |
-| 5 | Villarreal B | 1.77 |
+| 1 | Zaragoza | 2.22 |
+| 2 | Cordoba | 2.03 |
+| 3 | Jaen | 1.88 |
+| 4 | Andorra | 1.87 |
+| 5 | Malaga | 1.84 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Atl. Madrid B | 73 |
-| 2 | Villarreal B | 66 |
-| 3 | CE Europa | 58 |
-| 4 | Eldense | 57 |
-| 5 | Antequera | 55 |
+| 1 | Murcia | 188 |
+| 2 | Villarreal B | 187 |
+| 3 | Algeciras | 186 |
+| 4 | Real Madrid B | 179 |
+| 5 | Atl. Madrid B | 175 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Villarreal B | 29 |
-| 2 | Sabadell | 26 |
-| 3 | Atl. Madrid B | 24 |
-| 4 | Eldense | 18 |
-| 5 | Alcorcon | 10 |
+| 1 | Villarreal B | 69 |
+| 2 | UD Ibiza | 48 |
+| 3 | Real Madrid B | 44 |
+| 4 | Eldense | 40 |
+| 5 | Murcia | 38 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Sabadell | 0.711 |
-| 2 | Real Madrid B | 0.800 |
-| 3 | Villarreal B | 0.860 |
-| 4 | Teruel | 0.953 |
-| 5 | FC Cartagena SAD | 0.976 |
+| 1 | Malaga | 0.658 |
+| 2 | Amorebieta | 0.763 |
+| 3 | Cordoba | 0.842 |
+| 4 | UD Logrones | 0.868 |
+| 5 | Eldense | 0.882 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **13**
-
-Alcorcon, Algeciras, Antequera, Atl. Madrid B, CE Europa, FC Cartagena SAD, Gimnastic, Hercules, Murcia, Teruel, Torremolinos, UD Ibiza, Villarreal B
+- Teams present in all **6** seasons: **0**
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **220** (showing the 15 most frequent)
+- Distinct fixtures: **780** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Algeciras vs Gimnastic | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Atl. Madrid B vs Murcia | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Atl. Madrid B vs Torremolinos | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| CE Europa vs Murcia | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| FC Cartagena SAD vs Gimnastic | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Hercules vs Torremolinos | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Villarreal B vs Algeciras | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Alcorcon vs Gimnastic | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Algeciras vs Torremolinos | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Antequera vs Alcorcon | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Antequera vs UD Ibiza | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Atl. Madrid B vs Hercules | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| CE Europa vs Hercules | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| FC Cartagena SAD vs Algeciras | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Hercules vs Murcia | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
+| Algeciras vs Sanluqueno | 8 | 1 | 4 | 3 | 12.5% | 50.0% | 37.5% |
+| UD Ibiza vs Antequera | 7 | 5 | 1 | 1 | 71.4% | 14.3% | 14.3% |
+| Algeciras vs Villarreal B | 7 | 4 | 2 | 1 | 57.1% | 28.6% | 14.3% |
+| Murcia vs Atl. Madrid B | 7 | 4 | 3 | 0 | 57.1% | 42.9% | 0.0% |
+| Real Madrid B vs Sanluqueno | 6 | 5 | 1 | 0 | 83.3% | 16.7% | 0.0% |
+| Villarreal B vs Sevilla FC B | 6 | 5 | 1 | 0 | 83.3% | 16.7% | 0.0% |
+| Alcoyano vs CF Intercity | 6 | 4 | 1 | 1 | 66.7% | 16.7% | 16.7% |
+| Algeciras vs Atl. Madrid B | 6 | 4 | 2 | 0 | 66.7% | 33.3% | 0.0% |
+| Baleares vs Alcoyano | 6 | 4 | 2 | 0 | 66.7% | 33.3% | 0.0% |
+| Baleares vs Castellon | 6 | 4 | 1 | 1 | 66.7% | 16.7% | 16.7% |
+| Sanluqueno vs Antequera | 6 | 4 | 0 | 2 | 66.7% | 0.0% | 33.3% |
+| Sevilla FC B vs Betis B | 6 | 4 | 1 | 1 | 66.7% | 16.7% | 16.7% |
+| Alcoyano vs Castellon | 6 | 3 | 2 | 1 | 50.0% | 33.3% | 16.7% |
+| Alcoyano vs Sanluqueno | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
+| Algeciras vs Murcia | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Villarreal B | 4 | 1 |
-| Atl. Madrid B | 3 | 7 |
-| Eldense | 1 | - |
-| Sabadell | 2 | - |
-| Antequera | 7 | 8 |
-| CE Europa | 5 | 18 |
-| Hercules | 9 | 6 |
-| FC Cartagena SAD | 6 | 13 |
-| Murcia | 10 | 5 |
-| Alcorcon | 11 | 4 |
-| Algeciras | 8 | 17 |
-| UD Ibiza | 12 | 11 |
-| Gimnastic | 14 | 9 |
-| Teruel | 13 | 19 |
-| Torremolinos | 15 | 20 |
-| Tarazona | 16 | - |
-| Betis B | 17 | - |
-| Marbella | 18 | - |
-| Sanluqueno | 19 | - |
-| Sevilla FC B | 20 | - |
-| Zaragoza | - | 2 |
-| Jaen | - | 3 |
-| Sant Andreu | - | 10 |
-| Huesca | - | 12 |
-| Real Madrid B | - | 14 |
-| Aguilas FC | - | 15 |
-| Rayo Majadahonda | - | 16 |
+| team | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|
+| Murcia | - | 6 | 7 | 2 | 10 | 3 |
+| Algeciras | 7 | - | 13 | 9 | 8 | 13 |
+| Villarreal B | 2 | - | - | 11 | 4 | 2 |
+| UD Ibiza | - | - | 4 | 3 | 12 | 7 |
+| Castellon | 13 | 3 | 1 | - | - | - |
+| Alcoyano | 11 | 15 | 11 | 18 | - | - |
+| Atl. Madrid B | - | - | 9 | 7 | 3 | 14 |
+| Antequera | - | - | 8 | 4 | 7 | 11 |
+| Sabadell | 8 | 10 | - | - | 2 | - |
+| Real Madrid B | 10 | - | 10 | 6 | - | 9 |
+| Gimnastic | 4 | 8 | - | - | 14 | 12 |
+| Sanluqueno | 16 | - | 14 | 14 | 19 | - |
+| Eldense | - | 1 | - | - | 1 | - |
+| Baleares | 6 | 14 | 19 | - | - | - |
+| Ceuta | - | - | 5 | 1 | - | - |
+| CF Intercity | - | 11 | 15 | 20 | - | - |
+| Sevilla FC B | 17 | - | - | 8 | 20 | - |
+| Barcelona B | 9 | 4 | - | - | - | - |
+| Alcorcon | - | - | - | 10 | 11 | 6 |
+| Hercules | - | - | - | 12 | 9 | 8 |
+| Betis B | 20 | - | - | 15 | 17 | - |
+| Merida AD | - | - | 12 | 5 | - | - |
+| Linares | 5 | - | 17 | - | - | - |
+| Recreativo Huelva | - | - | 6 | 19 | - | - |
+| Cornella | 15 | 12 | - | - | - | - |
+| San Fernando | 14 | - | 16 | - | - | - |
+| Marbella | - | - | - | 13 | 18 | - |
+| Cordoba | - | - | 2 | - | - | - |
+| FC Cartagena SAD | - | - | - | - | 6 | 4 |
+| Andorra | 1 | - | - | - | - | - |
+| Malaga | - | - | 3 | - | - | - |
+| Amorebieta | - | 2 | - | - | - | - |
+| Albacete | 3 | - | - | - | - | - |
+| CE Europa | - | - | - | - | 5 | 18 |
+| Real Sociedad B | - | 5 | - | - | - | - |
+| Teruel | - | - | - | - | 13 | 20 |
+| Osasuna B | - | 7 | - | - | - | - |
+| Torremolinos | - | - | - | - | 15 | 19 |
+| SD Logrones | - | 9 | - | - | - | - |
+| Linense | 12 | - | - | - | - | - |
+| R. Union | - | 13 | - | - | - | - |
+| Numancia | - | 16 | - | - | - | - |
+| La Nucia | - | 17 | - | - | - | - |
+| Tarazona | - | - | - | - | 16 | - |
+| Yeclano | - | - | - | 16 | - | - |
+| Fuenlabrada | - | - | - | 17 | - | - |
+| UD Logrones | - | 18 | - | - | - | - |
+| UCAM Murcia | 18 | - | - | - | - | - |
+| Melilla | - | - | 18 | - | - | - |
+| Calahorra | - | 19 | - | - | - | - |
+| Som Maresme | 19 | - | - | - | - | - |
+| Granada CF B | - | - | 20 | - | - | - |
+| Ath Bilbao B | - | 20 | - | - | - | - |
+| Zaragoza | - | - | - | - | - | 1 |
+| Jaen | - | - | - | - | - | 5 |
+| Huesca | - | - | - | - | - | 10 |
+| Sant Andreu | - | - | - | - | - | 15 |
+| Rayo Majadahonda | - | - | - | - | - | 16 |
+| Aguilas FC | - | - | - | - | - | 17 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\primera2\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\primera2\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

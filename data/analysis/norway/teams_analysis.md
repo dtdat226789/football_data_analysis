@@ -1,151 +1,163 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:02:41+00:00
+- Generated: 2026-10-26T01:42:08+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`
 
-- Teams: **19** | Seasons: **2** | Matches: **408**
+- Teams: **23** | Seasons: **7** | Matches: **1626**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Viking | 2 | 51 | 38 | 7 | 6 | 121 | 131 | 56 | 75 | 60.5 | 1 | 1 | 2 |
-| Bodo/Glimt | 2 | 51 | 38 | 6 | 7 | 120 | 138 | 47 | 91 | 60.0 | 2 | 2 | 0 |
-| Tromso | 2 | 51 | 29 | 8 | 14 | 95 | 90 | 65 | 25 | 47.5 | 3 | 3 | 0 |
-| Brann | 2 | 51 | 26 | 7 | 18 | 85 | 94 | 78 | 16 | 42.5 | 4 | 7 | 0 |
-| Molde | 2 | 51 | 23 | 6 | 22 | 75 | 90 | 74 | 16 | 37.5 | 4 | 10 | 0 |
-| Rosenborg | 2 | 51 | 21 | 12 | 18 | 75 | 84 | 72 | 12 | 37.5 | 5 | 7 | 0 |
-| Sandefjord | 2 | 51 | 21 | 8 | 22 | 71 | 76 | 69 | 7 | 35.5 | 5 | 11 | 0 |
-| Fredrikstad | 2 | 51 | 19 | 13 | 19 | 70 | 63 | 67 | -4 | 35.0 | 8 | 8 | 0 |
-| Sarpsborg 08 | 2 | 51 | 17 | 15 | 19 | 66 | 72 | 79 | -7 | 33.0 | 9 | 9 | 0 |
-| Valerenga | 2 | 51 | 19 | 9 | 23 | 66 | 83 | 93 | -10 | 33.0 | 6 | 12 | 0 |
-| KFUM Oslo | 2 | 51 | 15 | 15 | 21 | 60 | 67 | 76 | -9 | 30.0 | 10 | 12 | 0 |
-| HamKam | 2 | 51 | 16 | 12 | 23 | 60 | 71 | 91 | -20 | 30.0 | 11 | 13 | 0 |
-| Kristiansund | 2 | 51 | 14 | 11 | 26 | 53 | 55 | 99 | -44 | 26.5 | 13 | 15 | 0 |
-| Lillestrom | 1 | 21 | 10 | 2 | 9 | 32 | 28 | 29 | -1 | 32.0 | 6 | 6 | 0 |
+| Bodo/Glimt | 7 | 204 | 142 | 36 | 26 | 462 | 540 | 216 | 324 | 66.0 | 1 | 2 | 4 |
+| Molde | 7 | 203 | 117 | 31 | 55 | 382 | 445 | 253 | 192 | 54.57 | 1 | 10 | 1 |
+| Viking | 7 | 203 | 112 | 42 | 49 | 378 | 420 | 298 | 122 | 54.0 | 1 | 11 | 2 |
+| Rosenborg | 7 | 204 | 94 | 48 | 62 | 330 | 366 | 283 | 83 | 47.14 | 3 | 9 | 0 |
+| Tromso | 6 | 173 | 75 | 44 | 54 | 269 | 253 | 237 | 16 | 44.83 | 3 | 13 | 0 |
+| Brann | 6 | 173 | 76 | 39 | 58 | 267 | 283 | 255 | 28 | 44.5 | 2 | 14 | 0 |
+| Sarpsborg 08 | 7 | 203 | 71 | 46 | 86 | 259 | 303 | 332 | -29 | 37.0 | 8 | 12 | 0 |
+| Valerenga | 6 | 174 | 67 | 44 | 63 | 245 | 276 | 265 | 11 | 40.83 | 3 | 14 | 0 |
+| Sandefjord | 7 | 203 | 63 | 43 | 97 | 232 | 276 | 336 | -60 | 33.14 | 5 | 14 | 0 |
+| Lillestrom | 5 | 143 | 61 | 22 | 60 | 205 | 212 | 217 | -5 | 41.0 | 4 | 15 | 0 |
+| Kristiansund | 6 | 173 | 53 | 45 | 75 | 204 | 224 | 302 | -78 | 34.0 | 5 | 15 | 0 |
+| Stromsgodset | 6 | 180 | 54 | 38 | 88 | 200 | 234 | 302 | -68 | 33.33 | 7 | 15 | 0 |
+| Haugesund | 6 | 180 | 50 | 37 | 93 | 187 | 212 | 308 | -96 | 31.17 | 9 | 16 | 0 |
+| Odd | 5 | 150 | 49 | 35 | 66 | 182 | 207 | 252 | -45 | 36.4 | 5 | 16 | 0 |
+| HamKam | 5 | 144 | 41 | 38 | 65 | 161 | 181 | 239 | -58 | 32.2 | 11 | 13 | 0 |
+| Fredrikstad | 3 | 83 | 33 | 23 | 27 | 122 | 105 | 106 | -1 | 40.67 | 6 | 9 | 0 |
+| KFUM Oslo | 3 | 83 | 25 | 26 | 32 | 101 | 105 | 114 | -9 | 33.67 | 8 | 12 | 0 |
+| Stabaek | 3 | 90 | 22 | 27 | 41 | 93 | 106 | 155 | -49 | 31.0 | 8 | 15 | 0 |
+| Aalesund | 4 | 113 | 22 | 26 | 65 | 92 | 124 | 254 | -130 | 23.0 | 9 | 16 | 0 |
+| Mjondalen | 2 | 60 | 12 | 13 | 35 | 49 | 59 | 97 | -38 | 24.5 | 14 | 16 | 0 |
+| Start | 2 | 53 | 10 | 13 | 30 | 43 | 58 | 110 | -52 | 21.5 | 15 | 16 | 0 |
 | Bryne | 1 | 30 | 8 | 7 | 15 | 31 | 37 | 56 | -19 | 31.0 | 14 | 14 | 0 |
-| Aalesund | 1 | 21 | 4 | 9 | 8 | 21 | 33 | 46 | -13 | 21.0 | 14 | 14 | 0 |
-| Stromsgodset | 1 | 30 | 6 | 2 | 22 | 20 | 37 | 72 | -35 | 20.0 | 15 | 15 | 0 |
-| Start | 1 | 21 | 4 | 4 | 13 | 16 | 22 | 44 | -22 | 16.0 | 16 | 16 | 0 |
-| Haugesund | 1 | 30 | 2 | 3 | 25 | 9 | 22 | 80 | -58 | 9.0 | 16 | 16 | 0 |
+| Jerv | 1 | 30 | 5 | 5 | 20 | 20 | 30 | 69 | -39 | 20.0 | 16 | 16 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Rosenborg | 26 | 14 | 8 | 4 | 50 | 25 | 7 | 4 | 14 | 25 | 25 |
-| Sandefjord | 26 | 14 | 6 | 6 | 48 | 25 | 7 | 2 | 16 | 23 | 25 |
-| Valerenga | 26 | 13 | 5 | 8 | 44 | 25 | 6 | 4 | 15 | 22 | 22 |
-| HamKam | 25 | 12 | 5 | 8 | 41 | 26 | 4 | 7 | 15 | 19 | 22 |
-| Molde | 26 | 15 | 2 | 9 | 47 | 25 | 8 | 4 | 13 | 28 | 19 |
-| Brann | 26 | 16 | 3 | 7 | 51 | 25 | 10 | 4 | 11 | 34 | 17 |
-| Viking | 25 | 22 | 2 | 1 | 68 | 26 | 16 | 5 | 5 | 53 | 15 |
-| Tromso | 26 | 17 | 4 | 5 | 55 | 25 | 12 | 4 | 9 | 40 | 15 |
-| Fredrikstad | 25 | 12 | 6 | 7 | 42 | 26 | 7 | 7 | 12 | 28 | 14 |
-| KFUM Oslo | 26 | 10 | 7 | 9 | 37 | 25 | 5 | 8 | 12 | 23 | 14 |
-| Kristiansund | 25 | 9 | 6 | 10 | 33 | 26 | 5 | 5 | 16 | 20 | 13 |
+| Rosenborg | 102 | 61 | 23 | 18 | 206 | 102 | 33 | 25 | 44 | 124 | 82 |
+| Valerenga | 87 | 42 | 23 | 22 | 149 | 87 | 25 | 21 | 41 | 96 | 53 |
+| Sandefjord | 102 | 37 | 31 | 34 | 142 | 101 | 26 | 12 | 63 | 90 | 52 |
+| Kristiansund | 86 | 35 | 23 | 28 | 128 | 87 | 18 | 22 | 47 | 76 | 52 |
+| Stromsgodset | 90 | 36 | 18 | 36 | 126 | 90 | 18 | 20 | 52 | 74 | 52 |
+| Molde | 102 | 68 | 12 | 22 | 216 | 101 | 49 | 19 | 33 | 166 | 50 |
+| Haugesund | 90 | 34 | 15 | 41 | 117 | 90 | 16 | 22 | 52 | 70 | 47 |
+| Viking | 101 | 64 | 20 | 17 | 212 | 102 | 48 | 22 | 32 | 166 | 46 |
+| Brann | 87 | 45 | 18 | 24 | 153 | 86 | 31 | 21 | 34 | 114 | 39 |
+| Bodo/Glimt | 102 | 77 | 17 | 8 | 248 | 102 | 65 | 19 | 18 | 214 | 34 |
+| Odd | 75 | 31 | 15 | 29 | 108 | 75 | 18 | 20 | 37 | 74 | 34 |
+| HamKam | 72 | 26 | 18 | 28 | 96 | 72 | 15 | 20 | 37 | 65 | 31 |
+| Tromso | 87 | 42 | 22 | 23 | 148 | 86 | 33 | 22 | 31 | 121 | 27 |
+| Start | 26 | 8 | 9 | 9 | 33 | 27 | 2 | 4 | 21 | 10 | 23 |
+| Sarpsborg 08 | 101 | 39 | 23 | 39 | 140 | 102 | 32 | 23 | 47 | 119 | 21 |
+| Stabaek | 45 | 15 | 12 | 18 | 57 | 45 | 7 | 15 | 23 | 36 | 21 |
+| Aalesund | 57 | 13 | 17 | 27 | 56 | 56 | 9 | 9 | 38 | 36 | 20 |
+| Lillestrom | 71 | 34 | 10 | 27 | 112 | 72 | 27 | 12 | 33 | 93 | 19 |
+| Fredrikstad | 41 | 19 | 13 | 9 | 70 | 42 | 14 | 10 | 18 | 52 | 18 |
 | Bryne | 15 | 6 | 4 | 5 | 22 | 15 | 2 | 3 | 10 | 9 | 13 |
-| Bodo/Glimt | 25 | 21 | 1 | 3 | 64 | 26 | 17 | 5 | 4 | 56 | 8 |
-| Start | 10 | 3 | 3 | 4 | 12 | 11 | 1 | 1 | 9 | 4 | 8 |
-| Aalesund | 11 | 2 | 6 | 3 | 12 | 10 | 2 | 3 | 5 | 9 | 3 |
-| Sarpsborg 08 | 25 | 9 | 7 | 9 | 34 | 26 | 8 | 8 | 10 | 32 | 2 |
-| Haugesund | 15 | 1 | 2 | 12 | 5 | 15 | 1 | 1 | 13 | 4 | 1 |
-| Stromsgodset | 15 | 3 | 1 | 11 | 10 | 15 | 3 | 1 | 11 | 10 | 0 |
-| Lillestrom | 10 | 5 | 0 | 5 | 15 | 11 | 5 | 2 | 4 | 17 | -2 |
+| Mjondalen | 30 | 8 | 5 | 17 | 29 | 30 | 4 | 8 | 18 | 20 | 9 |
+| Jerv | 15 | 4 | 2 | 9 | 14 | 15 | 1 | 3 | 11 | 6 | 8 |
+| KFUM Oslo | 42 | 13 | 14 | 15 | 53 | 41 | 12 | 12 | 17 | 48 | 5 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Viking | 2.37 |
-| 2 | Bodo/Glimt | 2.35 |
-| 3 | Tromso | 1.86 |
-| 4 | Brann | 1.67 |
-| 5 | Lillestrom | 1.52 |
+| 1 | Bodo/Glimt | 2.27 |
+| 2 | Molde | 1.88 |
+| 3 | Viking | 1.86 |
+| 4 | Rosenborg | 1.62 |
+| 5 | Tromso | 1.55 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Bodo/Glimt | 138 |
-| 2 | Viking | 131 |
-| 3 | Brann | 94 |
-| 4 | Tromso | 90 |
-| 5 | Molde | 90 |
+| 1 | Bodo/Glimt | 540 |
+| 2 | Molde | 445 |
+| 3 | Viking | 420 |
+| 4 | Rosenborg | 366 |
+| 5 | Sarpsborg 08 | 303 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Bodo/Glimt | 91 |
-| 2 | Viking | 75 |
-| 3 | Tromso | 25 |
-| 4 | Brann | 16 |
-| 5 | Molde | 16 |
+| 1 | Bodo/Glimt | 324 |
+| 2 | Molde | 192 |
+| 3 | Viking | 122 |
+| 4 | Rosenborg | 83 |
+| 5 | Brann | 28 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Bodo/Glimt | 0.922 |
-| 2 | Viking | 1.098 |
-| 3 | Tromso | 1.275 |
-| 4 | Fredrikstad | 1.314 |
-| 5 | Sandefjord | 1.353 |
+| 1 | Bodo/Glimt | 1.059 |
+| 2 | Molde | 1.246 |
+| 3 | Fredrikstad | 1.277 |
+| 4 | Tromso | 1.370 |
+| 5 | KFUM Oslo | 1.373 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **13**
+- Teams present in all **7** seasons: **6**
 
-Bodo/Glimt, Brann, Fredrikstad, HamKam, KFUM Oslo, Kristiansund, Molde, Rosenborg, Sandefjord, Sarpsborg 08, Tromso, Valerenga, Viking
+Bodo/Glimt, Molde, Rosenborg, Sandefjord, Sarpsborg 08, Viking
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **161** (showing the 15 most frequent)
+- Distinct fixtures: **235** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Tromso vs Molde | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Tromso vs Rosenborg | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Bodo/Glimt vs Brann | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Fredrikstad vs Kristiansund | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Molde vs HamKam | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Molde vs Kristiansund | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Viking vs Rosenborg | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Bodo/Glimt vs Fredrikstad | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Bodo/Glimt vs Rosenborg | 4 | 2 | 2 | 0 | 50.0% | 50.0% | 0.0% |
-| Bodo/Glimt vs Sandefjord | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Brann vs HamKam | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Rosenborg vs Kristiansund | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Sandefjord vs Fredrikstad | 4 | 2 | 2 | 0 | 50.0% | 50.0% | 0.0% |
-| Sandefjord vs KFUM Oslo | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Sandefjord vs Sarpsborg 08 | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
+| Rosenborg vs Viking | 14 | 11 | 2 | 1 | 78.6% | 14.3% | 7.1% |
+| Sandefjord vs Sarpsborg 08 | 14 | 9 | 2 | 3 | 64.3% | 14.3% | 21.4% |
+| Bodo/Glimt vs Sandefjord | 14 | 8 | 1 | 5 | 57.1% | 7.1% | 35.7% |
+| Molde vs Sarpsborg 08 | 14 | 8 | 2 | 4 | 57.1% | 14.3% | 28.6% |
+| Viking vs Sandefjord | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Rosenborg vs Sandefjord | 14 | 6 | 5 | 3 | 42.9% | 35.7% | 21.4% |
+| Bodo/Glimt vs Rosenborg | 14 | 5 | 6 | 3 | 35.7% | 42.9% | 21.4% |
+| Viking vs Sarpsborg 08 | 14 | 5 | 2 | 7 | 35.7% | 14.3% | 50.0% |
+| Rosenborg vs Sarpsborg 08 | 14 | 4 | 3 | 7 | 28.6% | 21.4% | 50.0% |
+| Molde vs Rosenborg | 13 | 8 | 4 | 1 | 61.5% | 30.8% | 7.7% |
+| Bodo/Glimt vs Viking | 13 | 7 | 2 | 4 | 53.8% | 15.4% | 30.8% |
+| Molde vs Sandefjord | 13 | 7 | 1 | 5 | 53.8% | 7.7% | 38.5% |
+| Molde vs Viking | 13 | 7 | 2 | 4 | 53.8% | 15.4% | 30.8% |
+| Bodo/Glimt vs Sarpsborg 08 | 13 | 5 | 2 | 6 | 38.5% | 15.4% | 46.2% |
+| Bodo/Glimt vs Molde | 13 | 4 | 4 | 5 | 30.8% | 30.8% | 38.5% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| Viking | 1 | 1 |
-| Bodo/Glimt | 2 | 2 |
-| Tromso | 3 | 3 |
-| Brann | 4 | 7 |
-| Molde | 10 | 4 |
-| Rosenborg | 7 | 5 |
-| Sandefjord | 5 | 11 |
-| Fredrikstad | 8 | 8 |
-| Sarpsborg 08 | 9 | 9 |
-| Valerenga | 6 | 12 |
-| KFUM Oslo | 12 | 10 |
-| HamKam | 11 | 13 |
-| Kristiansund | 13 | 15 |
-| Lillestrom | - | 6 |
-| Bryne | 14 | - |
-| Aalesund | - | 14 |
-| Stromsgodset | 15 | - |
-| Start | - | 16 |
-| Haugesund | 16 | - |
+| team | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|---|
+| Bodo/Glimt | 1 | 1 | 2 | 1 | 1 | 2 | 2 |
+| Molde | 2 | 2 | 1 | 5 | 5 | 10 | 3 |
+| Viking | 6 | 3 | 11 | 4 | 3 | 1 | 1 |
+| Rosenborg | 4 | 5 | 3 | 9 | 4 | 7 | 4 |
+| Tromso | - | 12 | 7 | 3 | 13 | 3 | 5 |
+| Brann | 10 | 14 | - | 2 | 2 | 4 | 7 |
+| Sarpsborg 08 | 12 | 8 | 8 | 8 | 9 | 9 | 11 |
+| Valerenga | 3 | 7 | 6 | 14 | - | 6 | 8 |
+| Sandefjord | 11 | 10 | 14 | 13 | 10 | 5 | 13 |
+| Lillestrom | - | 4 | 4 | 6 | 15 | - | 6 |
+| Kristiansund | 5 | 6 | 15 | - | 11 | 13 | 15 |
+| Stromsgodset | 13 | 9 | 12 | 7 | 7 | 15 | - |
+| Haugesund | 9 | 11 | 10 | 12 | 14 | 16 | - |
+| Odd | 7 | 13 | 5 | 10 | 16 | - | - |
+| HamKam | - | - | 13 | 11 | 12 | 11 | 12 |
+| Fredrikstad | - | - | - | - | 6 | 8 | 9 |
+| KFUM Oslo | - | - | - | - | 8 | 12 | 10 |
+| Stabaek | 8 | 15 | - | 15 | - | - | - |
+| Aalesund | 16 | - | 9 | 16 | - | - | 14 |
+| Mjondalen | 14 | 16 | - | - | - | - | - |
+| Start | 15 | - | - | - | - | - | 16 |
+| Bryne | - | - | - | - | - | 14 | - |
+| Jerv | - | - | 16 | - | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\norway\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\norway\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

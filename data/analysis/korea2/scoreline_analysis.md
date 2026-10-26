@@ -1,38 +1,83 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T16:00:41+00:00
+- Generated: 2026-10-26T01:40:05+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **493** across **2** seasons.
-- Distinct scorelines seen: **29**.
+- Matches analysed: **1507** across **7** seasons.
+- Distinct scorelines seen: **39**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 64 | 13.0% |
-| 0-1 | 56 | 11.4% |
-| 0-0 | 42 | 8.5% |
-| 2-2 | 42 | 8.5% |
-| 1-0 | 41 | 8.3% |
-| 2-1 | 36 | 7.3% |
-| 1-2 | 35 | 7.1% |
-| 2-0 | 29 | 5.9% |
-| 0-2 | 24 | 4.9% |
-| 1-3 | 17 | 3.4% |
-| 3-1 | 16 | 3.2% |
-| 3-0 | 15 | 3.0% |
-| 3-2 | 13 | 2.6% |
-| 2-3 | 12 | 2.4% |
-| 0-3 | 9 | 1.8% |
-| 1-4 | 8 | 1.6% |
-| 4-1 | 7 | 1.4% |
-| 4-2 | 5 | 1.0% |
-| 3-3 | 5 | 1.0% |
-| 4-0 | 3 | 0.6% |
+| 1-1 | 196 | 13.0% |
+| 0-1 | 148 | 9.8% |
+| 1-0 | 143 | 9.5% |
+| 0-0 | 136 | 9.0% |
+| 1-2 | 128 | 8.5% |
+| 2-1 | 126 | 8.4% |
+| 2-2 | 86 | 5.7% |
+| 2-0 | 84 | 5.6% |
+| 0-2 | 75 | 5.0% |
+| 3-1 | 52 | 3.5% |
+| 2-3 | 47 | 3.1% |
+| 3-0 | 46 | 3.1% |
+| 3-2 | 35 | 2.3% |
+| 0-3 | 34 | 2.3% |
+| 1-3 | 34 | 2.3% |
+| 4-1 | 22 | 1.5% |
+| 4-0 | 19 | 1.3% |
+| 1-4 | 16 | 1.1% |
+| 3-3 | 13 | 0.9% |
+| 0-4 | 12 | 0.8% |
 
 ## 2. Scoreline frequency per season
+
+### 2020
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 17 | 12.6% |
+| 1-2 | 17 | 12.6% |
+| 0-1 | 14 | 10.4% |
+| 0-2 | 14 | 10.4% |
+| 1-0 | 13 | 9.6% |
+
+### 2021
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 25 | 14.5% |
+| 1-2 | 23 | 13.3% |
+| 0-0 | 19 | 11.0% |
+| 0-1 | 19 | 11.0% |
+| 1-0 | 15 | 8.7% |
+
+### 2022
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 28 | 12.7% |
+| 1-0 | 24 | 10.9% |
+| 2-1 | 23 | 10.5% |
+| 0-0 | 20 | 9.1% |
+| 0-1 | 19 | 8.6% |
+
+### 2023
+| scoreline | count | pct |
+|---|---|---|
+| 1-0 | 27 | 11.5% |
+| 0-0 | 24 | 10.3% |
+| 1-1 | 23 | 9.8% |
+| 2-1 | 22 | 9.4% |
+| 0-1 | 19 | 8.1% |
+
+### 2024
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 37 | 15.8% |
+| 1-2 | 24 | 10.3% |
+| 1-0 | 21 | 9.0% |
+| 2-1 | 20 | 8.5% |
+| 0-1 | 20 | 8.5% |
 
 ### 2025
 | scoreline | count | pct |
@@ -46,35 +91,55 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 31 | 14.1% |
-| 2-2 | 24 | 10.9% |
-| 0-1 | 21 | 9.5% |
-| 1-0 | 19 | 8.6% |
-| 1-2 | 18 | 8.2% |
+| 1-1 | 33 | 13.9% |
+| 2-2 | 24 | 10.1% |
+| 0-1 | 22 | 9.2% |
+| 1-0 | 21 | 8.8% |
+| 1-2 | 20 | 8.4% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 42 | 8.5% |
-| 1 | 97 | 19.7% |
-| 2 | 117 | 23.7% |
-| 3 | 95 | 19.3% |
-| 4 | 79 | 16.0% |
-| 5 | 43 | 8.7% |
-| 6 | 14 | 2.8% |
-| 7 | 5 | 1.0% |
-| 8 | 1 | 0.2% |
-| 9 | 0 | 0.0% |
-| 10+ | 0 | 0.0% |
+| 0 | 136 | 9.0% |
+| 1 | 291 | 19.3% |
+| 2 | 355 | 23.6% |
+| 3 | 334 | 22.2% |
+| 4 | 203 | 13.5% |
+| 5 | 127 | 8.4% |
+| 6 | 35 | 2.3% |
+| 7 | 20 | 1.3% |
+| 8 | 4 | 0.3% |
+| 9 | 1 | 0.1% |
+| 10+ | 1 | 0.1% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **6**
+- Matches with 7+ total goals: **26**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
+| 2023 | 2023-10-22 | 3-7 | 10 |
+| 2021 | 2021-06-20 | 4-5 | 9 |
+| 2022 | 2022-05-09 | 4-4 | 8 |
+| 2022 | 2022-09-14 | 1-7 | 8 |
 | 2025 | 2025-07-20 | 5-3 | 8 |
+| 2026 | 2026-10-18 | 6-2 | 8 |
+| 2020 | 2020-10-18 | 3-4 | 7 |
+| 2020 | 2020-10-25 | 3-4 | 7 |
+| 2021 | 2021-08-08 | 4-3 | 7 |
+| 2021 | 2021-10-16 | 3-4 | 7 |
+| 2022 | 2022-05-17 | 4-3 | 7 |
+| 2022 | 2022-06-04 | 6-1 | 7 |
+| 2023 | 2023-05-07 | 5-2 | 7 |
+| 2023 | 2023-07-19 | 5-2 | 7 |
+| 2023 | 2023-09-17 | 4-3 | 7 |
+| 2023 | 2023-09-24 | 3-4 | 7 |
+| 2024 | 2024-04-13 | 3-4 | 7 |
+| 2024 | 2024-05-12 | 3-4 | 7 |
+| 2024 | 2024-07-21 | 3-4 | 7 |
+| 2024 | 2024-07-24 | 2-5 | 7 |
+| 2024 | 2024-09-01 | 4-3 | 7 |
 | 2025 | 2025-07-19 | 3-4 | 7 |
 | 2025 | 2025-08-10 | 3-4 | 7 |
 | 2025 | 2025-08-31 | 2-5 | 7 |
@@ -82,47 +147,47 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-07-24 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **340** (draws: **153**)
+- Decided matches: **1075** (draws: **432**)
 - Average winning margin: **1.62**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 197 | 57.9% |
-| 2 | 92 | 27.1% |
-| 3+ | 51 | 15.0% |
+| 1 | 643 | 59.8% |
+| 2 | 261 | 24.3% |
+| 3+ | 171 | 15.9% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **173** | avg margin: **1.73** | max margin: **6**
+- Matches: **554** | avg margin: **1.69** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 91 | 52.6% |
-| 2 | 51 | 29.5% |
-| 3+ | 31 | 17.9% |
+| 1 | 309 | 55.8% |
+| 2 | 145 | 26.2% |
+| 3+ | 100 | 18.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **167** | avg margin: **1.5** | max margin: **4**
+- Matches: **521** | avg margin: **1.55** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 106 | 63.5% |
-| 2 | 41 | 24.6% |
-| 3+ | 20 | 12.0% |
+| 1 | 334 | 64.1% |
+| 2 | 116 | 22.3% |
+| 3+ | 71 | 13.6% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 173 | 1-0 | 41 | 23.7% |
-| draw | 153 | 1-1 | 64 | 41.8% |
-| away | 167 | 0-1 | 56 | 33.5% |
+| home | 554 | 1-0 | 143 | 25.8% |
+| draw | 432 | 1-1 | 196 | 45.4% |
+| away | 521 | 0-1 | 148 | 28.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\korea2\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\korea2\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

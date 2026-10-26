@@ -1,51 +1,51 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-29T15:55:45+00:00
+- Generated: 2026-10-26T01:36:53+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`
 
-- Matches analysed: **180** (23 leakage-safe pre-match features).
+- Matches analysed: **989** (23 leakage-safe pre-match features).
 
 ## 1. Correlation matrix
 _Pearson correlation of each pre-match feature with observed goals; sorted by |corr(total goals)|._
 
 | feature | corr(home) | corr(away) | corr(total) |
 |---|---|---|---|
-| home_team_goals_conceded_last_5 | -0.222 | 0.032 | -0.139 |
-| home_team_home_goals_avg | -0.069 | -0.127 | -0.130 |
-| away_position_before_match | 0.208 | -0.063 | 0.109 |
-| position_difference | -0.244 | 0.104 | -0.108 |
-| away_team_away_win_rate | -0.135 | -0.003 | -0.098 |
-| points_difference | 0.213 | -0.092 | 0.094 |
-| away_points_before_match | -0.112 | -0.022 | -0.094 |
-| away_team_away_conceded_avg | 0.111 | 0.005 | 0.083 |
-| home_team_goals_scored_last_5 | -0.026 | -0.100 | -0.082 |
-| away_team_away_goals_avg | -0.028 | -0.064 | -0.061 |
-| away_team_wins_last_5 | -0.147 | 0.076 | -0.057 |
-| away_team_points_last_5 | -0.135 | 0.069 | -0.053 |
-| home_team_home_conceded_avg | -0.114 | 0.047 | -0.052 |
-| home_rest_days | -0.088 | 0.027 | -0.046 |
-| home_position_before_match | -0.128 | 0.081 | -0.041 |
-| home_team_home_win_rate | -0.031 | -0.022 | -0.036 |
-| away_team_goals_conceded_last_5 | 0.097 | -0.061 | 0.031 |
-| home_points_before_match | 0.032 | -0.083 | -0.030 |
-| rest_days_difference | 0.065 | -0.119 | -0.029 |
-| away_team_goals_scored_last_5 | -0.030 | -0.002 | -0.022 |
-| away_rest_days | -0.146 | 0.133 | -0.021 |
-| home_team_wins_last_5 | 0.050 | -0.062 | -0.004 |
-| home_team_points_last_5 | 0.062 | -0.075 | -0.003 |
+| away_position_before_match | 0.270 | -0.105 | 0.149 |
+| away_team_away_conceded_avg | 0.220 | -0.095 | 0.115 |
+| points_difference | 0.316 | -0.211 | 0.115 |
+| position_difference | -0.292 | 0.202 | -0.102 |
+| away_team_away_win_rate | -0.159 | 0.055 | -0.093 |
+| away_team_goals_conceded_last_5 | 0.189 | -0.093 | 0.092 |
+| away_team_wins_last_5 | -0.144 | 0.050 | -0.084 |
+| away_team_points_last_5 | -0.153 | 0.064 | -0.082 |
+| away_team_away_goals_avg | -0.092 | 0.014 | -0.066 |
+| away_points_before_match | -0.083 | 0.029 | -0.048 |
+| home_team_home_goals_avg | 0.153 | -0.115 | 0.048 |
+| home_points_before_match | 0.157 | -0.132 | 0.039 |
+| home_team_goals_conceded_last_5 | -0.111 | 0.079 | -0.037 |
+| away_rest_days | -0.049 | 0.008 | -0.035 |
+| away_team_goals_scored_last_5 | -0.084 | 0.056 | -0.031 |
+| home_team_points_last_5 | 0.136 | -0.123 | 0.029 |
+| home_rest_days | -0.037 | 0.007 | -0.026 |
+| rest_days_difference | 0.031 | -0.002 | 0.025 |
+| home_team_home_conceded_avg | -0.034 | 0.073 | 0.022 |
+| home_team_goals_scored_last_5 | 0.127 | -0.126 | 0.018 |
+| home_team_wins_last_5 | 0.117 | -0.116 | 0.017 |
+| home_team_home_win_rate | 0.096 | -0.105 | 0.007 |
+| home_position_before_match | -0.144 | 0.181 | 0.004 |
 
 ## 2. Form vs outcome
 _Home win/draw/away % per bucket of `home_team_points_last_5 - away_team_points_last_5`._
 
 | bucket | matches | home | draw | away | home % | draw % | away % |
 |---|---|---|---|---|---|---|---|
-| <-4 | 29 | 8 | 8 | 13 | 27.6% | 27.6% | 44.8% |
-| -4..-2 | 39 | 15 | 14 | 10 | 38.5% | 35.9% | 25.6% |
-| -1..1 | 58 | 31 | 13 | 14 | 53.4% | 22.4% | 24.1% |
-| 2..4 | 32 | 13 | 10 | 9 | 40.6% | 31.2% | 28.1% |
-| >4 | 22 | 10 | 7 | 5 | 45.5% | 31.8% | 22.7% |
+| <-4 | 160 | 46 | 47 | 67 | 28.8% | 29.4% | 41.9% |
+| -4..-2 | 227 | 84 | 57 | 86 | 37.0% | 25.1% | 37.9% |
+| -1..1 | 287 | 129 | 79 | 79 | 44.9% | 27.5% | 27.5% |
+| 2..4 | 176 | 86 | 51 | 39 | 48.9% | 29.0% | 22.2% |
+| >4 | 139 | 83 | 28 | 28 | 59.7% | 20.1% | 20.1% |
 | unknown | 0 | 0 | 0 | 0 | - | - | - |
 
 ## 3. Position vs outcome
@@ -53,11 +53,11 @@ _Home win/draw/away % per bucket of `position_difference` (home position - away 
 
 | bucket | matches | home | draw | away | home % | draw % | away % |
 |---|---|---|---|---|---|---|---|
-| <=-6 | 16 | 9 | 4 | 3 | 56.2% | 25.0% | 18.8% |
-| -5..-2 | 53 | 29 | 11 | 13 | 54.7% | 20.8% | 24.5% |
-| -1..1 | 43 | 14 | 16 | 13 | 32.6% | 37.2% | 30.2% |
-| 2..5 | 46 | 21 | 13 | 12 | 45.7% | 28.3% | 26.1% |
-| >=6 | 22 | 4 | 8 | 10 | 18.2% | 36.4% | 45.5% |
+| <=-6 | 92 | 64 | 18 | 10 | 69.6% | 19.6% | 10.9% |
+| -5..-2 | 274 | 146 | 67 | 61 | 53.3% | 24.5% | 22.3% |
+| -1..1 | 237 | 97 | 75 | 65 | 40.9% | 31.6% | 27.4% |
+| 2..5 | 277 | 93 | 73 | 111 | 33.6% | 26.4% | 40.1% |
+| >=6 | 109 | 28 | 29 | 52 | 25.7% | 26.6% | 47.7% |
 | unknown | 0 | 0 | 0 | 0 | - | - | - |
 
 ## 4. Rest advantage
@@ -65,60 +65,60 @@ _Home win/draw/away % per bucket of `rest_days_difference` (home rest - away res
 
 | bucket | matches | home | draw | away | home % | draw % | away % |
 |---|---|---|---|---|---|---|---|
-| <-1 | 22 | 8 | 7 | 7 | 36.4% | 31.8% | 31.8% |
-| -1..0 | 14 | 5 | 5 | 4 | 35.7% | 35.7% | 28.6% |
-| 0 | 110 | 50 | 30 | 30 | 45.5% | 27.3% | 27.3% |
-| 1..2 | 16 | 4 | 5 | 7 | 25.0% | 31.2% | 43.8% |
-| >2 | 13 | 8 | 3 | 2 | 61.5% | 23.1% | 15.4% |
-| unknown | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-- *5 match(es) had unknown rest difference (missing rest data on at least one side).*
+| <-1 | 116 | 53 | 27 | 36 | 45.7% | 23.3% | 31.0% |
+| -1..0 | 80 | 30 | 24 | 26 | 37.5% | 30.0% | 32.5% |
+| 0 | 568 | 260 | 145 | 163 | 45.8% | 25.5% | 28.7% |
+| 1..2 | 111 | 39 | 33 | 39 | 35.1% | 29.7% | 35.1% |
+| >2 | 82 | 37 | 19 | 26 | 45.1% | 23.2% | 31.7% |
+| unknown | 32 | 9 | 14 | 9 | 28.1% | 43.8% | 28.1% |
+- *32 match(es) had unknown rest difference (missing rest data on at least one side).*
 
 ## 5. Home team quality
 _Home win rate by `home_team_home_win_rate` tier (split at 0.5)._
 
-- `< 0.5` tier: **44.1%** home win (49/111)
-- `>= 0.5` tier: **40.6%** home win (28/69)
-- Home-win gap (>= split minus < split): **-3.5 pp**
+- `< 0.5` tier: **41.4%** home win (276/666)
+- `>= 0.5` tier: **47.1%** home win (152/323)
+- Home-win gap (>= split minus < split): **+5.7 pp**
 
 | tier | label | matches | home | draw | away | home % |
 |---|---|---|---|---|---|---|
-| low | < 0.5 | 111 | 49 | 31 | 31 | 44.1% |
-| high | >= 0.5 | 69 | 28 | 21 | 20 | 40.6% |
+| low | < 0.5 | 666 | 276 | 175 | 215 | 41.4% |
+| high | >= 0.5 | 323 | 152 | 87 | 84 | 47.1% |
 
 ## 6. Feature averages by result
 _Mean feature value per outcome; `range` is home-minus-away spread of the group means._
 
 | feature | home mean | draw mean | away mean | range |
 |---|---|---|---|---|
-| points_difference | 2.558 | -2.038 | -2.451 | 5.009 |
-| away_points_before_match | 21.844 | 26.192 | 24.706 | 4.348 |
-| away_rest_days | 6.493 | 7.420 | 8.920 | 2.427 |
-| home_points_before_match | 24.403 | 24.154 | 22.255 | 2.148 |
-| position_difference | -0.792 | 0.654 | 1.098 | 1.890 |
-| rest_days_difference | 0.547 | -0.060 | -1.040 | 1.587 |
-| away_position_before_match | 6.182 | 4.712 | 4.902 | 1.470 |
-| away_team_points_last_5 | 5.649 | 6.788 | 7.059 | 1.409 |
-| away_team_goals_conceded_last_5 | 5.896 | 4.942 | 5.196 | 0.954 |
-| home_team_goals_conceded_last_5 | 5.455 | 5.808 | 6.314 | 0.859 |
-| home_rest_days | 7.040 | 7.360 | 7.880 | 0.840 |
-| home_team_goals_scored_last_5 | 5.390 | 6.077 | 5.333 | 0.744 |
-| home_team_points_last_5 | 5.987 | 6.481 | 5.804 | 0.677 |
-| home_position_before_match | 5.390 | 5.365 | 6.000 | 0.635 |
-| away_team_wins_last_5 | 1.429 | 1.827 | 1.922 | 0.493 |
-| away_team_goals_scored_last_5 | 5.468 | 5.731 | 5.863 | 0.395 |
-| home_team_wins_last_5 | 1.545 | 1.788 | 1.490 | 0.298 |
-| home_team_home_goals_avg | 1.257 | 1.472 | 1.263 | 0.215 |
-| away_team_away_conceded_avg | 1.419 | 1.220 | 1.295 | 0.199 |
-| home_team_home_conceded_avg | 0.988 | 1.027 | 1.061 | 0.074 |
-| home_team_home_win_rate | 0.386 | 0.459 | 0.436 | 0.072 |
-| away_team_away_win_rate | 0.234 | 0.305 | 0.289 | 0.071 |
-| away_team_away_goals_avg | 1.022 | 1.039 | 1.022 | 0.018 |
+| points_difference | 3.694 | -1.015 | -5.227 | 8.921 |
+| home_points_before_match | 25.287 | 22.424 | 18.833 | 6.455 |
+| position_difference | -1.079 | 0.492 | 1.659 | 2.738 |
+| away_points_before_match | 21.593 | 23.439 | 24.060 | 2.467 |
+| away_rest_days | 7.594 | 7.699 | 9.103 | 1.509 |
+| away_position_before_match | 6.110 | 5.118 | 4.612 | 1.498 |
+| home_position_before_match | 5.030 | 5.611 | 6.271 | 1.241 |
+| home_rest_days | 7.659 | 7.843 | 8.852 | 1.194 |
+| away_team_points_last_5 | 5.834 | 6.462 | 6.943 | 1.109 |
+| home_team_points_last_5 | 6.619 | 5.962 | 5.512 | 1.107 |
+| away_team_goals_conceded_last_5 | 6.002 | 5.198 | 4.953 | 1.049 |
+| home_team_goals_scored_last_5 | 5.895 | 5.481 | 4.953 | 0.942 |
+| home_team_goals_conceded_last_5 | 5.297 | 5.603 | 6.161 | 0.864 |
+| away_team_goals_scored_last_5 | 5.315 | 5.641 | 6.074 | 0.758 |
+| rest_days_difference | 0.064 | 0.145 | -0.252 | 0.397 |
+| home_team_wins_last_5 | 1.804 | 1.576 | 1.448 | 0.356 |
+| away_team_wins_last_5 | 1.547 | 1.771 | 1.903 | 0.356 |
+| away_team_away_conceded_avg | 1.377 | 1.158 | 1.063 | 0.314 |
+| home_team_home_goals_avg | 1.328 | 1.201 | 1.067 | 0.261 |
+| away_team_away_win_rate | 0.272 | 0.299 | 0.339 | 0.067 |
+| home_team_home_win_rate | 0.404 | 0.378 | 0.340 | 0.064 |
+| away_team_away_goals_avg | 1.020 | 1.016 | 1.080 | 0.064 |
+| home_team_home_conceded_avg | 1.025 | 1.032 | 1.087 | 0.061 |
 
 ---
 *All features are leakage-safe pre-match values built by `ml.features.build_features.build_rows` from strictly prior matches. Run with `python backend/scripts/analyze_relationships.py` to regenerate.*
 
 ## Charts
 
-![relationships_home_win_pct_by_form](E:\football_data_analysis\data\analysis\ireland1\charts\relationships_home_win_pct_by_form.png)
-![relationships_home_win_pct_by_position](E:\football_data_analysis\data\analysis\ireland1\charts\relationships_home_win_pct_by_position.png)
+![relationships_home_win_pct_by_form](charts/relationships_home_win_pct_by_form.png)
+![relationships_home_win_pct_by_position](charts/relationships_home_win_pct_by_position.png)
 

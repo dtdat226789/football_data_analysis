@@ -1,151 +1,160 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:46:52+00:00
+- Generated: 2026-10-26T01:28:46+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Chance Liga (Czech Republic)
 - Scope: league `czech1`
 
-- Teams: **19** | Seasons: **2** | Matches: **351**
+- Teams: **22** | Seasons: **7** | Matches: **1637**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Slavia Prague | 2 | 44 | 31 | 10 | 3 | 103 | 99 | 37 | 62 | 51.5 | 1 | 1 | 2 |
-| Sparta Prague | 2 | 44 | 28 | 7 | 9 | 91 | 87 | 46 | 41 | 45.5 | 2 | 7 | 0 |
-| Plzen | 2 | 44 | 20 | 13 | 11 | 73 | 77 | 55 | 22 | 36.5 | 3 | 10 | 0 |
-| Hradec Kralove | 2 | 44 | 20 | 10 | 14 | 70 | 58 | 50 | 8 | 35.0 | 4 | 9 | 0 |
-| Jablonec | 2 | 44 | 20 | 9 | 15 | 69 | 56 | 56 | 0 | 34.5 | 5 | 8 | 0 |
-| Sigma Olomouc | 2 | 43 | 20 | 8 | 15 | 68 | 61 | 51 | 10 | 34.0 | 4 | 6 | 0 |
-| Liberec | 2 | 44 | 18 | 12 | 14 | 66 | 58 | 43 | 15 | 33.0 | 2 | 7 | 0 |
-| Teplice | 2 | 44 | 15 | 13 | 16 | 58 | 57 | 57 | 0 | 29.0 | 5 | 9 | 0 |
-| Mlada Boleslav | 2 | 43 | 14 | 15 | 14 | 57 | 66 | 66 | 0 | 28.5 | 3 | 11 | 0 |
-| FK Pardubice | 2 | 41 | 14 | 10 | 17 | 52 | 51 | 64 | -13 | 26.0 | 8 | 13 | 0 |
-| Bohemians | 2 | 40 | 13 | 9 | 18 | 48 | 38 | 50 | -12 | 24.0 | 12 | 13 | 0 |
-| Ostrava | 2 | 46 | 12 | 9 | 25 | 45 | 47 | 66 | -19 | 22.5 | 11 | 15 | 0 |
-| Karvina | 1 | 34 | 13 | 3 | 18 | 42 | 48 | 61 | -13 | 42.0 | 12 | 12 | 0 |
-| Zlin | 2 | 44 | 11 | 9 | 24 | 42 | 51 | 75 | -24 | 21.0 | 10 | 16 | 0 |
-| Slovacko | 2 | 46 | 9 | 13 | 24 | 40 | 44 | 68 | -24 | 20.0 | 14 | 15 | 0 |
-| Dukla Prague | 1 | 35 | 5 | 11 | 19 | 26 | 23 | 51 | -28 | 26.0 | 16 | 16 | 0 |
-| Brno | 1 | 9 | 5 | 1 | 3 | 16 | 12 | 12 | 0 | 16.0 | 6 | 6 | 0 |
-| Artis Brno | 2 | 11 | 1 | 2 | 8 | 5 | 8 | 25 | -17 | 2.5 | 14 | 17 | 0 |
+| Slavia Prague | 7 | 201 | 148 | 39 | 14 | 483 | 461 | 136 | 325 | 69.0 | 1 | 2 | 5 |
+| Sparta Prague | 7 | 200 | 135 | 36 | 29 | 441 | 432 | 209 | 223 | 63.0 | 1 | 6 | 2 |
+| Plzen | 7 | 200 | 117 | 42 | 41 | 393 | 377 | 211 | 166 | 56.14 | 2 | 9 | 0 |
+| Ostrava | 7 | 202 | 81 | 47 | 74 | 290 | 292 | 251 | 41 | 41.43 | 3 | 15 | 0 |
+| Jablonec | 7 | 200 | 76 | 55 | 69 | 283 | 268 | 264 | 4 | 40.43 | 3 | 14 | 0 |
+| Slovacko | 7 | 202 | 78 | 48 | 76 | 282 | 255 | 262 | -7 | 40.29 | 4 | 15 | 0 |
+| Sigma Olomouc | 7 | 200 | 73 | 57 | 70 | 276 | 274 | 256 | 18 | 39.43 | 3 | 9 | 0 |
+| Liberec | 7 | 200 | 73 | 56 | 71 | 275 | 261 | 236 | 25 | 39.29 | 4 | 9 | 0 |
+| Mlada Boleslav | 7 | 201 | 66 | 55 | 80 | 253 | 291 | 301 | -10 | 36.14 | 2 | 11 | 0 |
+| Bohemians | 7 | 197 | 61 | 58 | 78 | 241 | 230 | 276 | -46 | 34.43 | 4 | 13 | 0 |
+| Hradec Kralove | 6 | 166 | 60 | 46 | 60 | 226 | 197 | 203 | -6 | 37.67 | 4 | 11 | 0 |
+| Teplice | 7 | 201 | 56 | 51 | 94 | 219 | 222 | 319 | -97 | 31.29 | 7 | 15 | 0 |
+| FK Pardubice | 7 | 197 | 54 | 44 | 99 | 206 | 210 | 324 | -114 | 29.43 | 7 | 15 | 0 |
+| Karvina | 5 | 158 | 42 | 38 | 78 | 164 | 185 | 266 | -81 | 32.8 | 8 | 16 | 0 |
+| Zlin | 6 | 171 | 37 | 45 | 89 | 156 | 191 | 299 | -108 | 26.0 | 10 | 16 | 0 |
+| Ceske Budejovice | 5 | 154 | 34 | 36 | 84 | 138 | 156 | 287 | -131 | 27.6 | 10 | 16 | 0 |
+| Brno | 3 | 76 | 19 | 20 | 37 | 77 | 89 | 129 | -40 | 25.67 | 5 | 16 | 0 |
+| Dukla Prague | 2 | 65 | 10 | 20 | 35 | 50 | 46 | 98 | -52 | 25.0 | 14 | 16 | 0 |
+| Pribram | 1 | 34 | 5 | 10 | 19 | 25 | 26 | 65 | -39 | 25.0 | 17 | 17 | 0 |
+| Opava | 1 | 34 | 3 | 8 | 23 | 17 | 23 | 71 | -48 | 17.0 | 18 | 18 | 0 |
+| Artis Brno | 2 | 13 | 2 | 3 | 8 | 9 | 12 | 27 | -15 | 4.5 | 14 | 17 | 0 |
 | Taborsko | 1 | 2 | 0 | 0 | 2 | 0 | 0 | 8 | -8 | 0.0 | 18 | 18 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Hradec Kralove | 22 | 13 | 5 | 4 | 44 | 22 | 7 | 5 | 10 | 26 | 18 |
-| Slavia Prague | 23 | 18 | 4 | 1 | 58 | 21 | 13 | 6 | 2 | 45 | 13 |
-| Sparta Prague | 22 | 16 | 4 | 2 | 52 | 22 | 12 | 3 | 7 | 39 | 13 |
-| Jablonec | 22 | 11 | 7 | 4 | 40 | 22 | 9 | 2 | 11 | 29 | 11 |
-| Ostrava | 22 | 8 | 3 | 11 | 27 | 24 | 4 | 6 | 14 | 18 | 9 |
-| Sigma Olomouc | 21 | 11 | 5 | 5 | 38 | 22 | 9 | 3 | 10 | 30 | 8 |
-| Zlin | 23 | 7 | 4 | 12 | 25 | 21 | 4 | 5 | 12 | 17 | 8 |
-| Slovacko | 22 | 6 | 6 | 10 | 24 | 24 | 3 | 7 | 14 | 16 | 8 |
-| Brno | 5 | 4 | 0 | 1 | 12 | 4 | 1 | 1 | 2 | 4 | 8 |
-| Plzen | 23 | 11 | 7 | 5 | 40 | 21 | 9 | 6 | 6 | 33 | 7 |
-| Mlada Boleslav | 22 | 8 | 7 | 7 | 31 | 21 | 6 | 8 | 7 | 26 | 5 |
-| Dukla Prague | 17 | 3 | 5 | 9 | 14 | 18 | 2 | 6 | 10 | 12 | 2 |
-| Liberec | 21 | 9 | 6 | 6 | 33 | 23 | 9 | 6 | 8 | 33 | 0 |
-| Teplice | 23 | 8 | 5 | 10 | 29 | 21 | 7 | 8 | 6 | 29 | 0 |
+| Slavia Prague | 102 | 88 | 11 | 3 | 275 | 99 | 60 | 28 | 11 | 208 | 67 |
+| Jablonec | 100 | 45 | 33 | 22 | 168 | 100 | 31 | 22 | 47 | 115 | 53 |
+| Plzen | 101 | 68 | 17 | 16 | 221 | 99 | 49 | 25 | 25 | 172 | 49 |
+| Ceske Budejovice | 77 | 26 | 15 | 36 | 93 | 77 | 8 | 21 | 48 | 45 | 48 |
+| Sparta Prague | 100 | 76 | 15 | 9 | 243 | 100 | 59 | 21 | 20 | 198 | 45 |
+| Hradec Kralove | 83 | 37 | 23 | 23 | 134 | 83 | 23 | 23 | 37 | 92 | 42 |
+| Zlin | 87 | 26 | 21 | 40 | 99 | 84 | 11 | 24 | 49 | 57 | 42 |
+| Teplice | 102 | 34 | 28 | 40 | 130 | 99 | 22 | 23 | 54 | 89 | 41 |
+| Liberec | 99 | 43 | 28 | 28 | 157 | 101 | 30 | 28 | 43 | 118 | 39 |
+| Slovacko | 100 | 45 | 25 | 30 | 160 | 102 | 33 | 23 | 46 | 122 | 38 |
+| Mlada Boleslav | 100 | 38 | 28 | 34 | 142 | 101 | 28 | 27 | 46 | 111 | 31 |
+| Ostrava | 100 | 46 | 22 | 32 | 160 | 102 | 35 | 25 | 42 | 130 | 30 |
+| Sigma Olomouc | 99 | 41 | 28 | 30 | 151 | 101 | 32 | 29 | 40 | 125 | 26 |
+| Bohemians | 98 | 34 | 31 | 33 | 133 | 99 | 27 | 27 | 45 | 108 | 25 |
+| FK Pardubice | 98 | 28 | 31 | 39 | 115 | 99 | 26 | 13 | 60 | 91 | 24 |
+| Opava | 17 | 2 | 5 | 10 | 11 | 17 | 1 | 3 | 13 | 6 | 5 |
+| Dukla Prague | 32 | 6 | 9 | 17 | 27 | 33 | 4 | 11 | 18 | 23 | 4 |
+| Brno | 39 | 10 | 10 | 19 | 40 | 37 | 9 | 10 | 18 | 37 | 3 |
+| Pribram | 17 | 3 | 4 | 10 | 13 | 17 | 2 | 6 | 9 | 12 | 1 |
+| Karvina | 79 | 20 | 22 | 37 | 82 | 79 | 22 | 16 | 41 | 82 | 0 |
 | Taborsko | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
-| Bohemians | 19 | 6 | 5 | 8 | 23 | 21 | 7 | 4 | 10 | 25 | -2 |
-| Artis Brno | 6 | 0 | 1 | 5 | 1 | 5 | 1 | 1 | 3 | 4 | -3 |
-| FK Pardubice | 20 | 6 | 6 | 8 | 24 | 21 | 8 | 4 | 9 | 28 | -4 |
-| Karvina | 17 | 5 | 2 | 10 | 17 | 17 | 8 | 1 | 8 | 25 | -8 |
+| Artis Brno | 6 | 0 | 1 | 5 | 1 | 7 | 2 | 2 | 3 | 8 | -7 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Slavia Prague | 2.34 |
-| 2 | Sparta Prague | 2.07 |
-| 3 | Brno | 1.78 |
-| 4 | Plzen | 1.66 |
-| 5 | Hradec Kralove | 1.59 |
+| 1 | Slavia Prague | 2.40 |
+| 2 | Sparta Prague | 2.21 |
+| 3 | Plzen | 1.97 |
+| 4 | Ostrava | 1.44 |
+| 5 | Jablonec | 1.42 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Slavia Prague | 99 |
-| 2 | Sparta Prague | 87 |
-| 3 | Plzen | 77 |
-| 4 | Mlada Boleslav | 66 |
-| 5 | Sigma Olomouc | 61 |
+| 1 | Slavia Prague | 461 |
+| 2 | Sparta Prague | 432 |
+| 3 | Plzen | 377 |
+| 4 | Ostrava | 292 |
+| 5 | Mlada Boleslav | 291 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Slavia Prague | 62 |
-| 2 | Sparta Prague | 41 |
-| 3 | Plzen | 22 |
-| 4 | Liberec | 15 |
-| 5 | Sigma Olomouc | 10 |
+| 1 | Slavia Prague | 325 |
+| 2 | Sparta Prague | 223 |
+| 3 | Plzen | 166 |
+| 4 | Ostrava | 41 |
+| 5 | Liberec | 25 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Slavia Prague | 0.841 |
-| 2 | Liberec | 0.977 |
-| 3 | Sparta Prague | 1.045 |
-| 4 | Hradec Kralove | 1.136 |
-| 5 | Sigma Olomouc | 1.167 |
+| 1 | Slavia Prague | 0.677 |
+| 2 | Sparta Prague | 1.045 |
+| 3 | Plzen | 1.055 |
+| 4 | Liberec | 1.180 |
+| 5 | Hradec Kralove | 1.223 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **15**
+- Teams present in all **7** seasons: **12**
 
-Artis Brno, Bohemians, FK Pardubice, Hradec Kralove, Jablonec, Liberec, Mlada Boleslav, Ostrava, Plzen, Sigma Olomouc, Slavia Prague, Slovacko, Sparta Prague, Teplice, Zlin
+Bohemians, FK Pardubice, Jablonec, Liberec, Mlada Boleslav, Ostrava, Plzen, Sigma Olomouc, Slavia Prague, Slovacko, Sparta Prague, Teplice
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **138** (showing the 15 most frequent)
+- Distinct fixtures: **197** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Sigma Olomouc vs Bohemians | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Sparta Prague vs Hradec Kralove | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Sparta Prague vs Jablonec | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Hradec Kralove vs Liberec | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Plzen vs Liberec | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Slavia Prague vs Plzen | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Slovacko vs Ostrava | 4 | 2 | 2 | 0 | 50.0% | 50.0% | 0.0% |
-| Zlin vs Ostrava | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| FK Pardubice vs Karvina | 4 | 1 | 0 | 3 | 25.0% | 0.0% | 75.0% |
-| Jablonec vs Liberec | 4 | 1 | 0 | 3 | 25.0% | 0.0% | 75.0% |
-| Mlada Boleslav vs Ostrava | 4 | 1 | 3 | 0 | 25.0% | 75.0% | 0.0% |
-| Mlada Boleslav vs Slovacko | 4 | 1 | 2 | 1 | 25.0% | 50.0% | 25.0% |
-| Plzen vs Hradec Kralove | 4 | 1 | 2 | 1 | 25.0% | 50.0% | 25.0% |
-| Sigma Olomouc vs Karvina | 4 | 1 | 2 | 1 | 25.0% | 50.0% | 25.0% |
-| Slavia Prague vs Liberec | 4 | 1 | 2 | 1 | 25.0% | 50.0% | 25.0% |
+| Sigma Olomouc vs Bohemians | 15 | 5 | 6 | 4 | 33.3% | 40.0% | 26.7% |
+| Slavia Prague vs Plzen | 14 | 8 | 2 | 4 | 57.1% | 14.3% | 28.6% |
+| Sparta Prague vs Jablonec | 14 | 8 | 4 | 2 | 57.1% | 28.6% | 14.3% |
+| Ostrava vs Mlada Boleslav | 14 | 7 | 4 | 3 | 50.0% | 28.6% | 21.4% |
+| Plzen vs Liberec | 14 | 7 | 2 | 5 | 50.0% | 14.3% | 35.7% |
+| Slavia Prague vs Liberec | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Slavia Prague vs Sparta Prague | 14 | 7 | 4 | 3 | 50.0% | 28.6% | 21.4% |
+| Slovacko vs Ostrava | 14 | 7 | 4 | 3 | 50.0% | 28.6% | 21.4% |
+| Jablonec vs Plzen | 14 | 6 | 5 | 3 | 42.9% | 35.7% | 21.4% |
+| Mlada Boleslav vs Teplice | 14 | 5 | 2 | 7 | 35.7% | 14.3% | 50.0% |
+| Slovacko vs Mlada Boleslav | 14 | 4 | 5 | 5 | 28.6% | 35.7% | 35.7% |
+| Jablonec vs Liberec | 14 | 3 | 5 | 6 | 21.4% | 35.7% | 42.9% |
+| Jablonec vs Ostrava | 13 | 8 | 1 | 4 | 61.5% | 7.7% | 30.8% |
+| Jablonec vs Teplice | 13 | 8 | 1 | 4 | 61.5% | 7.7% | 30.8% |
+| Liberec vs Sigma Olomouc | 13 | 8 | 3 | 2 | 61.5% | 23.1% | 15.4% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Slavia Prague | 1 | 1 |
-| Sparta Prague | 2 | 7 |
-| Plzen | 3 | 10 |
-| Hradec Kralove | 4 | 9 |
-| Jablonec | 5 | 8 |
-| Sigma Olomouc | 6 | 4 |
-| Liberec | 7 | 2 |
-| Teplice | 9 | 5 |
-| Mlada Boleslav | 11 | 3 |
-| FK Pardubice | 8 | 13 |
-| Bohemians | 13 | 12 |
-| Ostrava | 15 | 11 |
-| Karvina | 12 | - |
-| Zlin | 10 | 16 |
-| Slovacko | 14 | 15 |
-| Dukla Prague | 16 | - |
-| Brno | - | 6 |
-| Artis Brno | 17 | 14 |
-| Taborsko | 18 | - |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Slavia Prague | 1 | 1 | 2 | 2 | 1 | 1 | 1 |
+| Sparta Prague | 2 | 3 | 1 | 1 | 4 | 2 | 6 |
+| Plzen | 5 | 2 | 3 | 3 | 2 | 3 | 9 |
+| Ostrava | 8 | 5 | 10 | 4 | 3 | 15 | 13 |
+| Jablonec | 3 | 14 | 11 | 12 | 5 | 5 | 8 |
+| Slovacko | 4 | 4 | 5 | 6 | 13 | 14 | 15 |
+| Sigma Olomouc | 9 | 8 | 6 | 8 | 6 | 6 | 3 |
+| Liberec | 6 | 9 | 7 | 7 | 7 | 7 | 4 |
+| Mlada Boleslav | 11 | 7 | 9 | 5 | 10 | 11 | 2 |
+| Bohemians | 10 | 13 | 4 | 11 | 11 | 13 | 10 |
+| Hradec Kralove | - | 6 | 8 | 9 | 9 | 4 | 11 |
+| Teplice | 15 | 12 | 13 | 10 | 12 | 9 | 7 |
+| FK Pardubice | 7 | 15 | 15 | 13 | 15 | 8 | 12 |
+| Karvina | 12 | 16 | - | 14 | 8 | 12 | - |
+| Zlin | 14 | 11 | 16 | 15 | - | 10 | 16 |
+| Ceske Budejovice | 13 | 10 | 12 | 16 | 16 | - | - |
+| Brno | 16 | - | 14 | - | - | - | 5 |
+| Dukla Prague | - | - | - | - | 14 | 16 | - |
+| Pribram | 17 | - | - | - | - | - | - |
+| Opava | 18 | - | - | - | - | - | - |
+| Artis Brno | - | - | - | - | - | 17 | 14 |
+| Taborsko | - | - | - | - | - | 18 | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\czech1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\czech1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

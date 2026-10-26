@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-29T15:58:49+00:00
+- Generated: 2026-10-26T01:38:52+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Serie C - Group B (Italy)
 - Scope: league `italy3b`
@@ -8,75 +8,79 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\italy3b\database_profile.json | yes | yes | 29.45 |
-| matches_analysis | E:\football_data_analysis\data\analysis\italy3b\matches_analysis.json | yes | yes | 9.47 |
-| goals_analysis | E:\football_data_analysis\data\analysis\italy3b\goals_analysis.json | yes | yes | 6.33 |
-| teams_analysis | E:\football_data_analysis\data\analysis\italy3b\teams_analysis.json | yes | yes | 37.00 |
-| season_trends | E:\football_data_analysis\data\analysis\italy3b\season_trends.json | yes | yes | 3.92 |
-| scoreline_analysis | E:\football_data_analysis\data\analysis\italy3b\scoreline_analysis.json | yes | yes | 65.93 |
-| relationships | E:\football_data_analysis\data\analysis\italy3b\relationships.json | yes | yes | 14.36 |
+| database_profile | data/analysis/italy3b/database_profile.json | yes | yes | 40.03 |
+| matches_analysis | data/analysis/italy3b/matches_analysis.json | yes | yes | 24.65 |
+| goals_analysis | data/analysis/italy3b/goals_analysis.json | yes | yes | 12.37 |
+| teams_analysis | data/analysis/italy3b/teams_analysis.json | yes | yes | 68.73 |
+| season_trends | data/analysis/italy3b/season_trends.json | yes | yes | 10.43 |
+| scoreline_analysis | data/analysis/italy3b/scoreline_analysis.json | yes | yes | 329.69 |
+| relationships | data/analysis/italy3b/relationships.json | yes | yes | 13.79 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 426 matches: home wins 39.2%, draws 31.2%, away wins 29.6% (167H / 133D / 126A)
-- **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 9 home and 9 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 92 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 426 matches produced 979 goals (avg 2.298 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 52.8% vs away 47.2% of 979 goals in total (home/away ratio 1.12)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 212 of 426 matches (49.8%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 98 scoring matches, 25.5% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.35, median 31.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Ravenna leads with 90 points across 2 seasons (0 title(s), GD 30)
-- **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 12 teams present in every one of the 2 seasons (Campobasso, Forli, Gubbio, Guidonia, Livorno...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Livorno earns 23 more points at home than away (40 home vs 17 away)
-- **F12** · `season_trends` · *[high]* — **Champion with most titles** — Arezzo won 1 of 2 championship(s) on record
-- **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: Spezia beat Ravenna by 2 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.319 per match): first half 2.246 vs last half 2.565 across 2 seasons
-- **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025-2026 (goals view, avg abs position diff 6.600)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.700)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 65 matches (15.3%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (52 of 167 home matches, 31.1%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (65 of 133 draw matches, 48.9%)
-- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (41 of 126 away matches, 32.5%)
-- **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 1 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_conceded_avg |corr| = 0.0934 (n=357 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 8.862: home 3.799, draw -0.115, away -5.064
-- **F24** · `database_profile` · *[high]* — **Data-quality warnings (8)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 426 matches observed
+- **F1** Â· `matches_analysis` Â· *[medium]* â€” **Outcome split across all seasons** â€” 2364 matches: home wins 40.4%, draws 30.5%, away wins 29.1% (955H / 722D / 687A)
+- **F2** Â· `matches_analysis` Â· *[medium]* â€” **Comeback wins** â€” 47 home and 46 away comebacks (trailing at HT but winning at FT)
+- **F3** Â· `matches_analysis` Â· *[low]* â€” **Most common HT/FT flow** â€” home lead at HT -> home win occurred 569 times
+- **F4** Â· `goals_analysis` Â· *[medium]* â€” **Average goals per match** â€” 2364 matches produced 5596 goals (avg 2.367 per match)
+- **F5** Â· `goals_analysis` Â· *[medium]* â€” **Home goal share** â€” home 55.3% vs away 44.7% of 5596 goals in total (home/away ratio 1.24)
+- **F6** Â· `goals_analysis` Â· *[medium]* â€” **Both teams to score** â€” 1150 of 2364 matches (48.6%)
+- **F7** Â· `goals_analysis` Â· *[low]* â€” **Most common first-goal bucket** â€” minute 1-15 (first goal in 636 scoring matches, 30.2% of scoring)
+- **F8** Â· `goals_analysis` Â· *[low]* â€” **Average first goal minute** â€” mean 32.86, median 28.0
+- **F9** Â· `teams_analysis` Â· *[high]* â€” **Dominant team by lifetime points** â€” Gubbio leads with 326 points across 7 seasons (0 title(s), GD 11)
+- **F10** Â· `teams_analysis` Â· *[medium]* â€” **Team consistency** â€” 2 teams present in every one of the 7 seasons (Gubbio, Vis Pesaro)
+- **F11** Â· `teams_analysis` Â· *[medium]* â€” **Biggest home advantage** â€” Carrarese earns 70 more points at home than away (125 home vs 55 away)
+- **F12** Â· `season_trends` Â· *[high]* â€” **Champion with most titles** â€” Padova won 1 of 7 championship(s) on record
+- **F13** Â· `season_trends` Â· *[medium]* â€” **Tightest title race** â€” 2020-2021: Padova beat Perugia by 0 pts
+- **F14** Â· `season_trends` Â· *[medium]* â€” **Average-goals trend** â€” stable (+0.014 per match): first half 2.376 vs last half 2.389 across 7 seasons
+- **F15** Â· `season_trends` Â· *[low]* â€” **Largest view divergence** â€” 2024-2025 (goals view, avg abs position diff 7.800)
+- **F16** Â· `season_trends` Â· *[low]* â€” **Smallest view divergence** â€” 2020-2021 (luck view, avg abs position diff 1.100)
+- **F17** Â· `scoreline_analysis` Â· *[medium]* â€” **Most common scoreline** â€” 1-1 in 341 matches (14.4%)
+- **F18** Â· `scoreline_analysis` Â· *[low]* â€” **Most common home-win scoreline** â€” 1-0 (258 of 955 home matches, 27.0%)
+- **F19** Â· `scoreline_analysis` Â· *[low]* â€” **Most common draw scoreline** â€” 1-1 (341 of 722 draw matches, 47.2%)
+- **F20** Â· `scoreline_analysis` Â· *[low]* â€” **Most common away-win scoreline** â€” 0-1 (217 of 687 away matches, 31.6%)
+- **F21** Â· `scoreline_analysis` Â· *[low]* â€” **Extreme scorelines** â€” 17 match(es) with >= 7 total goals
+- **F22** Â· `relationships` Â· *[medium]* â€” **Strongest correlation with total goals** â€” home_rest_days |corr| = 0.0499 (n=2197 leakage-safe rows)
+- **F23** Â· `relationships` Â· *[medium]* â€” **Most outcome-separating feature** â€” points_difference spreads group means over 8.433: home 3.655, draw -0.779, away -4.778
+- **F24** Â· `database_profile` Â· *[high]* â€” **Data-quality warnings (12)** â€” Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE
+- **F25** Â· `database_profile` Â· *[medium]* â€” **Data coverage** â€” 7 of 7 registered seasons populated (100.0%); 2364 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 426 |
-| Average goals per match | 2.298 |
-| Home win rate | 39.2% |
-| Draw rate | 31.2% |
-| Away win rate | 29.6% |
+| Matches analysed | 2364 |
+| Average goals per match | 2.367 |
+| Home win rate | 40.4% |
+| Draw rate | 30.5% |
+| Away win rate | 29.1% |
 | Most common scoreline | 1-1 |
-| Dominant team (lifetime points) | Ravenna |
-| Champion with most titles | Arezzo |
-| BTTS rate | 49.8% |
+| Dominant team (lifetime points) | Gubbio |
+| Champion with most titles | Padova |
+| BTTS rate | 48.6% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 29.45 |
-| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 9.47 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 6.33 |
-| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 37.00 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.92 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 65.93 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.36 |
+| database_profile | database_profile | observed, calculated, warnings | 40.03 |
+| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 24.65 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.37 |
+| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 68.73 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.43 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 329.69 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.79 |
 
 ## 5. Notable anomalies
-- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 357 matches, expected 380
-- **2.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 69 matches, expected 380
-- **3.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026-2027 has data but state is 'in_progress'
-- **4.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 home outcome share 47.8% vs overall 39.2%
-- **5.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 away outcome share 23.2% vs overall 29.6%
-- **6.** `HIGH_SCORING_MATCHES` *(warning)* — 1 match(es) with >= 8 total goals (extreme scorelines)
-- **7.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)
-- **8.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)
+- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2025-2026 has 357 matches, expected 380
+- **2.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2026-2027 has 107 matches, expected 380
+- **3.** `SEASON_STATE_NOT_COMPLETE` *(warning)* â€” Season 2026-2027 has data but state is 'in_progress'
+- **4.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2021-2022 goalless share 12.9% vs overall 10.7% (deviation 2.2 pp)
+- **5.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2021-2022 away outcome share 24.7% vs overall 29.1%
+- **6.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2022-2023 home outcome share 35.5% vs overall 40.4%
+- **7.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2023-2024 home outcome share 45.3% vs overall 40.4%
+- **8.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2026-2027 goalless share 7.5% vs overall 10.7% (deviation 3.2 pp)
+- **9.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2026-2027 home outcome share 44.9% vs overall 40.4%
+- **10.** `HIGH_SCORING_MATCHES` *(warning)* â€” 6 match(es) with >= 8 total goals (extreme scorelines)
+- **11.** `DUPLICATE_ROWS` *(warning)* â€” Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)
+- **12.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* â€” first_goal_time/first_goal_time_extra NULL semantics broken (fgt=365, fgte=365 rows)
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

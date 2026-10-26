@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:51:58+00:00
+- Generated: 2026-10-26T01:34:43+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Super League 2 (Greece)
 - Scope: league `greece2`
@@ -8,86 +8,150 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 297 |
-| Home wins | 138 (46.5%) |
-| Draws | 68 (22.9%) |
-| Away wins | 91 (30.6%) |
-| Total goals | 676 |
-| Average goals per match | 2.276 |
-| Goalless matches | 24 (8.1%) |
+| Matches | 1832 |
+| Home wins | 820 (44.8%) |
+| Draws | 480 (26.2%) |
+| Away wins | 532 (29.0%) |
+| Total goals | 4113 |
+| Average goals per match | 2.245 |
+| Goalless matches | 204 (11.1%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 132 | 53 (40.2%) | 39 (29.5%) | 40 (30.3%) | 252 | 1.909 | 17 (12.9%) |
+| 2021-2022 | 544 | 255 (46.9%) | 149 (27.4%) | 140 (25.7%) | 1234 | 2.268 | 67 (12.3%) |
+| 2022-2023 | 387 | 157 (40.6%) | 99 (25.6%) | 131 (33.9%) | 900 | 2.326 | 46 (11.9%) |
+| 2023-2024 | 264 | 130 (49.2%) | 63 (23.9%) | 71 (26.9%) | 584 | 2.212 | 26 (9.8%) |
+| 2024-2025 | 180 | 77 (42.8%) | 50 (27.8%) | 53 (29.4%) | 412 | 2.289 | 20 (11.1%) |
 | 2025-2026 | 265 | 117 (44.2%) | 61 (23.0%) | 87 (32.8%) | 607 | 2.291 | 21 (7.9%) |
-| 2026-2027 | 32 | 21 (65.6%) | 7 (21.9%) | 4 (12.5%) | 69 | 2.156 | 3 (9.4%) |
+| 2026-2027 | 60 | 31 (51.7%) | 19 (31.7%) | 10 (16.7%) | 124 | 2.067 | 7 (11.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 82 (89.1%) | 7 (7.6%) | 3 (3.3%) | 92 |
-| HT draw | 52 (37.4%) | 49 (35.3%) | 38 (27.3%) | 139 |
-| HT away lead | 4 (6.1%) | 12 (18.2%) | 50 (75.8%) | 66 |
+| HT home lead | 507 (83.5%) | 74 (12.2%) | 26 (4.3%) | 607 |
+| HT draw | 275 (33.7%) | 330 (40.5%) | 210 (25.8%) | 815 |
+| HT away lead | 33 (8.2%) | 76 (18.9%) | 293 (72.9%) | 402 |
+- *8 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **4** (1.3%)
-- Away comebacks (trailing at HT, won at FT): **3** (1.0%)
+- Home comebacks (trailing at HT, won at FT): **33** (1.8%)
+- Away comebacks (trailing at HT, won at FT): **26** (1.4%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2021-2022 | Olympiacos Piraeus B | PAOK B | 0-1 | 3-1 |
+| 2021-2022 | Levadiakos | Asteras Vlachioti | 0-1 | 2-1 |
+| 2021-2022 | AO Trikala | Thesprotos | 0-1 | 2-1 |
+| 2021-2022 | Pierikos | Apollon Larissa | 0-1 | 3-2 |
+| 2021-2022 | Panserraikos | Karditsa | 0-1 | 2-1 |
+| 2021-2022 | PAE Egaleo | Panathinaikos B | 0-1 | 2-1 |
+| 2021-2022 | Pierikos | Veria | 0-1 | 2-1 |
+| 2021-2022 | Karditsa | Kalamaria | 0-1 | 2-1 |
+| 2021-2022 | Asteras Vlachioti | PAE Egaleo | 0-1 | 2-1 |
+| 2021-2022 | Episkopi | Panathinaikos B | 0-2 | 3-2 |
+| 2021-2022 | Olympiacos Piraeus B | O. Volos | 0-2 | 3-2 |
+| 2022-2023 | Athens Kallithea | O.F. Ierapetra | 0-1 | 2-1 |
+| 2022-2023 | Panserraikos | AEL Larissa | 0-1 | 2-1 |
+| 2022-2023 | Athens Kallithea | Panachaiki | 0-1 | 3-1 |
+| 2022-2023 | O.F. Ierapetra | Panachaiki | 0-1 | 2-1 |
+| 2022-2023 | PAOK B | Panathinaikos B | 0-1 | 3-1 |
+| 2023-2024 | Karditsa | AEK Athens FC B | 0-1 | 2-1 |
+| 2023-2024 | Ionikos | Kalamata | 1-2 | 3-2 |
+| 2023-2024 | Panathinaikos B | Tilikratis L. | 0-1 | 2-1 |
+| 2023-2024 | Tilikratis L. | Ionikos | 1-2 | 3-2 |
+| 2023-2024 | PAE Egaleo | Panathinaikos B | 0-1 | 2-1 |
+| 2023-2024 | Levadiakos | Makedonikos | 0-1 | 2-1 |
+| 2023-2024 | Panachaiki | Tilikratis L. | 0-1 | 2-1 |
+| 2023-2024 | Athens Kallithea | Ionikos | 0-1 | 2-1 |
+| 2024-2025 | AEL Larissa | Kavala | 0-1 | 2-1 |
+| 2024-2025 | Giannina | Diagoras | 0-1 | 2-1 |
+| 2024-2025 | Iraklis 1908 | Niki Volos | 0-1 | 2-1 |
+| 2024-2025 | PAE Chania | Ilioupoli | 0-1 | 3-2 |
 | 2025-2026 | Panionios | Olympiacos Piraeus B | 0-1 | 4-1 |
 | 2025-2026 | Olympiacos Piraeus B | PAE Egaleo | 0-1 | 2-1 |
 | 2025-2026 | Kavala | PAOK B | 0-1 | 2-1 |
 | 2025-2026 | PAOK B | Giannina | 0-1 | 2-1 |
+| 2026-2027 | Panserraikos | Chrisoupolis | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | PAE Chania | AO Trikala | 1-0 | 1-2 |
+| 2020-2021 | AO Trikala | Ionikos | 2-0 | 2-3 |
+| 2020-2021 | Levadiakos | Ionikos | 1-0 | 1-2 |
+| 2020-2021 | O.F. Ierapetra | Xanthi | 1-0 | 1-2 |
+| 2021-2022 | Panserraikos | Kalamaria | 2-1 | 2-4 |
+| 2021-2022 | Thesprotos | Kalamaria | 1-0 | 1-2 |
+| 2021-2022 | Kifisia | Kalamata | 1-0 | 1-2 |
+| 2022-2023 | Irodotos | Athens Kallithea | 1-0 | 1-2 |
+| 2022-2023 | Panathinaikos B | Veria | 1-0 | 1-2 |
+| 2022-2023 | Apollon Larissa | Niki Volos | 1-0 | 1-4 |
+| 2022-2023 | Makedonikos | Iraklis Larissa | 2-1 | 2-3 |
+| 2022-2023 | Iraklis Larissa | PAOK B | 1-0 | 1-4 |
+| 2022-2023 | Apollon Smyrnis | Ilioupoli | 2-1 | 2-4 |
+| 2022-2023 | Episkopi | Rouf FC | 2-0 | 2-3 |
+| 2022-2023 | Ilioupoli | PAE Egaleo | 2-1 | 2-3 |
+| 2022-2023 | Makedonikos | Kalamaria | 1-0 | 1-2 |
+| 2023-2024 | PAOK B | Kampaniakos | 2-1 | 2-3 |
+| 2023-2024 | PAE Egaleo | Ionikos | 1-0 | 1-2 |
+| 2024-2025 | PAE Chania | Kalamata | 1-0 | 1-2 |
+| 2024-2025 | Ethnikos Neou | AEL Larissa | 1-0 | 1-3 |
+| 2024-2025 | PAE Egaleo | Panionios | 1-0 | 1-2 |
+| 2024-2025 | Ethnikos Neou | Makedonikos | 1-0 | 1-2 |
 | 2025-2026 | Chrisoupolis | Iraklis 1908 | 1-0 | 1-2 |
 | 2025-2026 | Kampaniakos | Makedonikos | 1-0 | 1-2 |
 | 2026-2027 | Niki Volos | Olympiacos Piraeus B | 1-0 | 1-2 |
+| 2026-2027 | Olympiacos Piraeus B | Chrisoupolis | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 92 | 82 (89.1%) | 7 (7.6%) | 3 (3.3%) |
-| Away lead | 66 | 50 (75.8%) | 12 (18.2%) | 4 (6.1%) |
+| Home lead | 607 | 507 (83.5%) | 74 (12.2%) | 26 (4.3%) |
+| Away lead | 402 | 293 (72.9%) | 76 (18.9%) | 33 (8.2%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 52 | 37.4% |
-| Draw | 49 | 35.3% |
-| Away win | 38 | 27.3% |
+| Home win | 275 | 33.7% |
+| Draw | 330 | 40.5% |
+| Away win | 210 | 25.8% |
+- *8 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `273` of `297` (91.9%)
+- Matches with a first-goal time recorded: `1620` of `1832` (88.4%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 84 | 28.3% | 44 (52.4%) | 10 (11.9%) | 30 (35.7%) |
-| 16-30 | 52 | 17.5% | 30 (57.7%) | 7 (13.5%) | 15 (28.8%) |
-| 31-45 | 46 | 15.5% | 18 (39.1%) | 13 (28.3%) | 15 (32.6%) |
-| 46-60 | 41 | 13.8% | 20 (48.8%) | 4 (9.8%) | 17 (41.5%) |
-| 61-75 | 32 | 10.8% | 15 (46.9%) | 9 (28.1%) | 8 (25.0%) |
-| 76-90 | 13 | 4.4% | 8 (61.5%) | 1 (7.7%) | 4 (30.8%) |
-| 91-120 | 5 | 1.7% | 3 (60.0%) | 0 (0.0%) | 2 (40.0%) |
+| 1-15 | 468 | 25.5% | 231 (49.4%) | 83 (17.7%) | 154 (32.9%) |
+| 16-30 | 393 | 21.5% | 209 (53.2%) | 72 (18.3%) | 112 (28.5%) |
+| 31-45 | 259 | 14.1% | 130 (50.2%) | 51 (19.7%) | 78 (30.1%) |
+| 46-60 | 229 | 12.5% | 115 (50.2%) | 35 (15.3%) | 79 (34.5%) |
+| 61-75 | 161 | 8.8% | 71 (44.1%) | 27 (16.8%) | 63 (39.1%) |
+| 76-90 | 82 | 4.5% | 40 (48.8%) | 7 (8.5%) | 35 (42.7%) |
+| 91-120 | 28 | 1.5% | 19 (67.9%) | 1 (3.6%) | 8 (28.6%) |
 
 ## 7. Goalless matches
-- Overall: **24** of `297` (8.1%)
+- Overall: **204** of `1832` (11.1%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 132 | 17 | 12.9% |
+| 2021-2022 | 544 | 67 | 12.3% |
+| 2022-2023 | 387 | 46 | 11.9% |
+| 2023-2024 | 264 | 26 | 9.8% |
+| 2024-2025 | 180 | 20 | 11.1% |
 | 2025-2026 | 265 | 21 | 7.9% |
-| 2026-2027 | 32 | 3 | 9.4% |
+| 2026-2027 | 60 | 7 | 11.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\greece2\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\greece2\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

@@ -1,46 +1,61 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:08:35+00:00
+- Generated: 2026-10-26T01:49:19+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
 
-- Teams: **78** | Seasons: **2** | Matches: **728**
+- Teams: **92** | Seasons: **7** | Matches: **3000**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Maidstone | 2 | 57 | 29 | 12 | 16 | 99 | 91 | 61 | 30 | 49.5 | 1 | 8 | 1 |
-| Torquay | 2 | 59 | 29 | 12 | 18 | 99 | 109 | 83 | 26 | 49.5 | 3 | 12 | 0 |
-| Dorking | 2 | 59 | 28 | 15 | 16 | 99 | 107 | 84 | 23 | 49.5 | 4 | 8 | 0 |
-| Weston-super-Mare | 2 | 59 | 29 | 11 | 19 | 98 | 81 | 62 | 19 | 49.0 | 6 | 7 | 0 |
-| Maidenhead | 2 | 58 | 26 | 15 | 17 | 93 | 81 | 54 | 27 | 46.5 | 7 | 10 | 0 |
-| Hemel Hempstead | 2 | 57 | 26 | 14 | 17 | 92 | 66 | 60 | 6 | 46.0 | 5 | 13 | 0 |
-| Ebbsfleet | 2 | 51 | 25 | 13 | 13 | 88 | 80 | 56 | 24 | 44.0 | 9 | 19 | 0 |
-| Hornchurch | 1 | 48 | 25 | 12 | 11 | 87 | 86 | 66 | 20 | 87.0 | 2 | 2 | 0 |
-| Chelmsford | 2 | 56 | 22 | 19 | 15 | 85 | 83 | 71 | 12 | 42.5 | 10 | 17 | 0 |
-| Worthing | 1 | 46 | 25 | 9 | 12 | 84 | 99 | 52 | 47 | 84.0 | 1 | 1 | 1 |
-| Dag & Red | 2 | 57 | 23 | 15 | 19 | 84 | 72 | 70 | 2 | 42.0 | 3 | 13 | 0 |
-| Chesham | 2 | 57 | 24 | 10 | 23 | 82 | 85 | 77 | 8 | 41.0 | 11 | 21 | 0 |
-| AFC Totton | 2 | 56 | 24 | 7 | 25 | 79 | 72 | 95 | -23 | 39.5 | 12 | 14 | 0 |
-| Tonbridge | 2 | 57 | 21 | 14 | 22 | 77 | 89 | 76 | 13 | 38.5 | 6 | 14 | 0 |
-| Salisbury | 2 | 57 | 19 | 15 | 23 | 72 | 69 | 73 | -4 | 36.0 | 4 | 17 | 0 |
-| Horsham FC | 2 | 56 | 17 | 20 | 19 | 71 | 63 | 65 | -2 | 35.5 | 15 | 18 | 0 |
-| Dover | 2 | 57 | 18 | 13 | 26 | 67 | 77 | 94 | -17 | 33.5 | 9 | 20 | 0 |
-| Farnborough | 2 | 56 | 17 | 13 | 26 | 64 | 80 | 109 | -29 | 32.0 | 19 | 20 | 0 |
-| Hampton & Richmond | 2 | 57 | 16 | 13 | 28 | 61 | 68 | 100 | -32 | 30.5 | 18 | 22 | 0 |
-| Slough | 2 | 56 | 16 | 9 | 31 | 57 | 79 | 112 | -33 | 28.5 | 16 | 23 | 0 |
+| Maidstone | 6 | 204 | 108 | 49 | 47 | 373 | 339 | 207 | 132 | 62.17 | 1 | 11 | 2 |
+| Chelmsford | 7 | 251 | 99 | 72 | 80 | 369 | 374 | 305 | 69 | 52.71 | 2 | 19 | 0 |
+| Eastbourne Boro | 6 | 243 | 96 | 52 | 95 | 340 | 365 | 366 | -1 | 56.67 | 3 | 25 | 0 |
+| Worthing | 4 | 183 | 99 | 36 | 48 | 333 | 372 | 253 | 119 | 83.25 | 1 | 4 | 1 |
+| Hemel Hempstead | 7 | 256 | 90 | 63 | 103 | 333 | 312 | 377 | -65 | 47.57 | 5 | 20 | 0 |
+| Tonbridge | 7 | 252 | 89 | 63 | 100 | 330 | 337 | 351 | -14 | 47.14 | 5 | 16 | 0 |
+| Hampton & Richmond | 7 | 254 | 88 | 54 | 112 | 318 | 331 | 380 | -49 | 45.43 | 6 | 22 | 0 |
+| Ebbsfleet | 5 | 162 | 94 | 30 | 38 | 312 | 315 | 184 | 131 | 62.4 | 1 | 9 | 1 |
+| Dorking | 5 | 165 | 90 | 39 | 36 | 309 | 341 | 210 | 131 | 61.8 | 1 | 8 | 1 |
+| Chippenham | 6 | 238 | 79 | 63 | 96 | 300 | 303 | 349 | -46 | 50.0 | 7 | 23 | 0 |
+| Bath | 6 | 235 | 81 | 54 | 100 | 297 | 288 | 321 | -33 | 49.5 | 6 | 22 | 0 |
+| Slough | 7 | 249 | 76 | 64 | 109 | 292 | 359 | 438 | -79 | 41.71 | 11 | 24 | 0 |
+| St. Albans | 5 | 193 | 75 | 47 | 71 | 272 | 273 | 250 | 23 | 54.4 | 5 | 21 | 0 |
+| Farnborough | 5 | 197 | 75 | 43 | 79 | 268 | 286 | 302 | -16 | 53.6 | 8 | 19 | 0 |
+| Torquay | 4 | 153 | 74 | 34 | 45 | 256 | 261 | 203 | 58 | 64.0 | 2 | 12 | 0 |
+| Dartford | 4 | 151 | 68 | 33 | 50 | 237 | 239 | 184 | 55 | 59.25 | 2 | 21 | 0 |
+| Weston-super-Mare | 4 | 154 | 67 | 32 | 55 | 233 | 216 | 198 | 18 | 58.25 | 6 | 14 | 0 |
+| Braintree | 5 | 161 | 62 | 40 | 59 | 226 | 207 | 219 | -12 | 45.2 | 5 | 20 | 0 |
+| Welling | 5 | 192 | 49 | 54 | 89 | 201 | 224 | 342 | -118 | 40.2 | 16 | 22 | 0 |
+| Havant & W | 4 | 146 | 50 | 33 | 63 | 183 | 215 | 238 | -23 | 45.75 | 8 | 23 | 0 |
+| Oxford City | 3 | 103 | 49 | 32 | 22 | 179 | 189 | 119 | 70 | 59.67 | 3 | 5 | 0 |
+| Truro | 3 | 104 | 49 | 24 | 31 | 171 | 157 | 120 | 37 | 57.0 | 1 | 16 | 1 |
+| Hornchurch | 2 | 94 | 42 | 26 | 26 | 152 | 145 | 120 | 25 | 76.0 | 2 | 9 | 0 |
+| Dover | 4 | 151 | 34 | 42 | 75 | 144 | 161 | 241 | -80 | 36.0 | 13 | 24 | 0 |
+| Chesham | 3 | 105 | 40 | 21 | 44 | 141 | 146 | 156 | -10 | 47.0 | 11 | 21 | 0 |
+| Weymouth | 3 | 137 | 32 | 38 | 67 | 134 | 159 | 219 | -60 | 44.67 | 18 | 23 | 0 |
+| Salisbury | 3 | 105 | 30 | 32 | 43 | 122 | 128 | 144 | -16 | 40.67 | 7 | 20 | 0 |
+| Hungerford | 3 | 105 | 34 | 16 | 55 | 118 | 134 | 168 | -34 | 39.33 | 7 | 24 | 0 |
+| Dulwich Hamlet | 3 | 99 | 30 | 25 | 44 | 115 | 139 | 166 | -27 | 38.33 | 10 | 21 | 0 |
+| Taunton | 2 | 92 | 27 | 26 | 39 | 107 | 94 | 126 | -32 | 53.5 | 14 | 22 | 0 |
+| Concord | 3 | 100 | 28 | 23 | 49 | 107 | 114 | 181 | -67 | 35.67 | 14 | 22 | 0 |
+| Aveley | 2 | 92 | 29 | 18 | 45 | 105 | 113 | 142 | -29 | 52.5 | 7 | 24 | 0 |
+| Yeovil | 1 | 45 | 29 | 8 | 8 | 95 | 81 | 45 | 36 | 95.0 | 1 | 1 | 1 |
+| Maidenhead | 2 | 61 | 26 | 15 | 20 | 93 | 82 | 61 | 21 | 46.5 | 7 | 16 | 0 |
+| Dag & Red | 2 | 60 | 24 | 16 | 20 | 88 | 74 | 72 | 2 | 44.0 | 6 | 13 | 0 |
+| Enfield Town | 2 | 92 | 22 | 22 | 48 | 88 | 104 | 170 | -66 | 44.0 | 19 | 24 | 0 |
+| Boreham Wood | 1 | 45 | 25 | 8 | 12 | 83 | 85 | 48 | 37 | 83.0 | 6 | 6 | 0 |
+| AFC Totton | 2 | 60 | 25 | 7 | 28 | 82 | 76 | 104 | -28 | 41.0 | 12 | 17 | 0 |
+| Horsham FC | 2 | 60 | 19 | 21 | 20 | 78 | 69 | 70 | -1 | 39.0 | 12 | 15 | 0 |
+| Billericay | 3 | 70 | 20 | 17 | 33 | 77 | 96 | 120 | -24 | 25.67 | 4 | 21 | 0 |
 | Weston-super | 1 | 23 | 15 | 3 | 5 | 48 | 35 | 16 | 19 | 48.0 | 21 | 21 | 0 |
-| Bath | 1 | 46 | 10 | 13 | 23 | 43 | 50 | 77 | -27 | 43.0 | 22 | 22 | 0 |
-| Chippenham | 1 | 46 | 11 | 9 | 26 | 42 | 53 | 80 | -27 | 42.0 | 23 | 23 | 0 |
-| Enfield Town | 1 | 46 | 9 | 13 | 24 | 40 | 55 | 82 | -27 | 40.0 | 24 | 24 | 0 |
-| Eastbourne Boro | 1 | 46 | 9 | 9 | 28 | 36 | 59 | 90 | -31 | 36.0 | 25 | 25 | 0 |
+| Cheshunt | 1 | 46 | 11 | 10 | 25 | 43 | 48 | 74 | -26 | 43.0 | 23 | 23 | 0 |
 | super-Mare | 1 | 25 | 9 | 6 | 10 | 33 | 28 | 35 | -7 | 33.0 | 26 | 26 | 0 |
-| Truro | 1 | 10 | 6 | 2 | 2 | 20 | 16 | 6 | 10 | 20.0 | 2 | 2 | 0 |
-| Billericay | 1 | 11 | 5 | 4 | 2 | 19 | 24 | 17 | 7 | 19.0 | 5 | 5 | 0 |
-| Farnham | 1 | 9 | 5 | 1 | 3 | 16 | 14 | 12 | 2 | 16.0 | 11 | 11 | 0 |
-| Braintree | 1 | 10 | 4 | 1 | 5 | 13 | 18 | 23 | -5 | 13.0 | 15 | 15 | 0 |
-| Folkestone | 1 | 10 | 3 | 3 | 4 | 12 | 17 | 14 | 3 | 12.0 | 16 | 16 | 0 |
+| Farnham | 1 | 12 | 6 | 2 | 4 | 20 | 23 | 16 | 7 | 20.0 | 9 | 9 | 0 |
+| Folkestone | 1 | 14 | 5 | 4 | 5 | 19 | 22 | 17 | 5 | 19.0 | 11 | 11 | 0 |
+| Walton & Hersham | 1 | 13 | 2 | 2 | 9 | 8 | 10 | 30 | -20 | 8.0 | 23 | 23 | 0 |
 | Hornchurch-Weston | 1 | 2 | 2 | 0 | 0 | 6 | 5 | 2 | 3 | 6.0 | 27 | 27 | 0 |
 | Chesham-Weston | 1 | 1 | 1 | 0 | 0 | 3 | 4 | 0 | 4 | 3.0 | 28 | 28 | 0 |
 | Mare-Torquay | 1 | 1 | 1 | 0 | 0 | 3 | 3 | 0 | 3 | 3.0 | 30 | 30 | 0 |
@@ -55,7 +70,6 @@
 | Mare-Tonbridge | 1 | 1 | 1 | 0 | 0 | 3 | 1 | 0 | 1 | 3.0 | 38 | 38 | 0 |
 | Mare-Worthing | 1 | 1 | 1 | 0 | 0 | 3 | 3 | 2 | 1 | 3.0 | 33 | 33 | 0 |
 | Slough-Weston | 1 | 1 | 1 | 0 | 0 | 3 | 1 | 0 | 1 | 3.0 | 39 | 39 | 0 |
-| Walton & Hersham | 1 | 10 | 0 | 2 | 8 | 2 | 6 | 28 | -22 | 2.0 | 24 | 24 | 0 |
 | Bath-Weston | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1.0 | 47 | 47 | 0 |
 | Dag & Red-Weston | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1.0 | 48 | 48 | 0 |
 | Dover-Weston | 1 | 1 | 0 | 1 | 0 | 1 | 1 | 1 | 0 | 1.0 | 43 | 43 | 0 |
@@ -92,31 +106,50 @@
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| Slough | 126 | 46 | 36 | 44 | 174 | 123 | 30 | 28 | 65 | 118 | 56 |
+| Torquay | 78 | 45 | 20 | 13 | 155 | 75 | 29 | 14 | 32 | 101 | 54 |
+| Dorking | 82 | 55 | 14 | 13 | 179 | 83 | 35 | 25 | 23 | 130 | 49 |
 | Weston-super | 23 | 15 | 3 | 5 | 48 | 0 | 0 | 0 | 0 | 0 | 48 |
-| AFC Totton | 29 | 17 | 4 | 8 | 55 | 27 | 7 | 3 | 17 | 24 | 31 |
-| Dorking | 29 | 20 | 4 | 5 | 64 | 30 | 8 | 11 | 11 | 35 | 29 |
-| Chippenham | 23 | 10 | 5 | 8 | 35 | 23 | 1 | 4 | 18 | 7 | 28 |
-| Salisbury | 28 | 15 | 4 | 9 | 49 | 29 | 4 | 11 | 14 | 23 | 26 |
-| Weston-super-Mare | 29 | 19 | 4 | 6 | 61 | 30 | 10 | 7 | 13 | 37 | 24 |
-| Torquay | 30 | 17 | 9 | 4 | 60 | 29 | 12 | 3 | 14 | 39 | 21 |
-| Worthing | 23 | 15 | 7 | 1 | 52 | 23 | 10 | 2 | 11 | 32 | 20 |
-| Dag & Red | 28 | 15 | 5 | 8 | 50 | 29 | 8 | 10 | 11 | 34 | 16 |
-| Enfield Town | 23 | 7 | 7 | 9 | 28 | 23 | 2 | 6 | 15 | 12 | 16 |
-| Maidstone | 29 | 17 | 5 | 7 | 56 | 28 | 12 | 7 | 9 | 43 | 13 |
-| Ebbsfleet | 25 | 14 | 8 | 3 | 50 | 26 | 11 | 5 | 10 | 38 | 12 |
-| Hornchurch | 25 | 14 | 7 | 4 | 49 | 23 | 11 | 5 | 7 | 38 | 11 |
-| Hampton & Richmond | 27 | 10 | 6 | 11 | 36 | 30 | 6 | 7 | 17 | 25 | 11 |
-| Slough | 28 | 9 | 5 | 14 | 32 | 28 | 7 | 4 | 17 | 25 | 7 |
-| Bath | 23 | 6 | 7 | 10 | 25 | 23 | 4 | 6 | 13 | 18 | 7 |
-| Truro | 6 | 4 | 1 | 1 | 13 | 4 | 2 | 1 | 1 | 7 | 6 |
+| Hampton & Richmond | 126 | 51 | 28 | 47 | 181 | 128 | 37 | 26 | 65 | 137 | 44 |
+| Farnborough | 98 | 45 | 19 | 34 | 154 | 99 | 30 | 24 | 45 | 114 | 40 |
+| Maidstone | 102 | 62 | 20 | 20 | 206 | 102 | 46 | 29 | 27 | 167 | 39 |
+| Eastbourne Boro | 123 | 53 | 29 | 41 | 188 | 120 | 43 | 23 | 54 | 152 | 36 |
+| Chippenham | 119 | 46 | 30 | 43 | 168 | 119 | 33 | 33 | 53 | 132 | 36 |
+| Welling | 94 | 32 | 22 | 40 | 118 | 98 | 17 | 32 | 49 | 83 | 35 |
+| Ebbsfleet | 80 | 52 | 16 | 12 | 172 | 82 | 42 | 14 | 26 | 140 | 32 |
+| Dartford | 78 | 38 | 20 | 20 | 134 | 73 | 30 | 13 | 30 | 103 | 31 |
+| Salisbury | 52 | 22 | 10 | 20 | 76 | 53 | 8 | 22 | 23 | 46 | 30 |
+| Braintree | 81 | 35 | 22 | 24 | 127 | 80 | 27 | 18 | 35 | 99 | 28 |
+| AFC Totton | 30 | 17 | 4 | 9 | 55 | 30 | 8 | 3 | 19 | 27 | 28 |
+| Bath | 116 | 46 | 24 | 46 | 162 | 119 | 35 | 30 | 54 | 135 | 27 |
+| Havant & W | 75 | 29 | 17 | 29 | 104 | 71 | 21 | 16 | 34 | 79 | 25 |
+| Concord | 48 | 18 | 12 | 18 | 66 | 52 | 10 | 11 | 31 | 41 | 25 |
+| Worthing | 91 | 52 | 22 | 17 | 178 | 92 | 47 | 14 | 31 | 155 | 23 |
+| Oxford City | 53 | 28 | 17 | 8 | 101 | 50 | 21 | 15 | 14 | 78 | 23 |
+| Dag & Red | 30 | 16 | 6 | 8 | 54 | 30 | 8 | 10 | 12 | 34 | 20 |
+| Hornchurch | 48 | 24 | 13 | 11 | 85 | 46 | 18 | 13 | 15 | 67 | 18 |
+| Enfield Town | 46 | 14 | 11 | 21 | 53 | 46 | 8 | 11 | 27 | 35 | 18 |
+| Chelmsford | 126 | 52 | 37 | 37 | 193 | 125 | 47 | 35 | 43 | 176 | 17 |
+| Weston-super-Mare | 77 | 35 | 19 | 23 | 124 | 77 | 32 | 13 | 32 | 109 | 15 |
+| Hemel Hempstead | 128 | 46 | 35 | 47 | 173 | 128 | 44 | 28 | 56 | 160 | 13 |
+| Aveley | 46 | 16 | 11 | 19 | 59 | 46 | 13 | 7 | 26 | 46 | 13 |
+| Yeovil | 23 | 17 | 3 | 3 | 54 | 22 | 12 | 5 | 5 | 41 | 13 |
+| Cheshunt | 23 | 8 | 4 | 11 | 28 | 23 | 3 | 6 | 14 | 15 | 13 |
+| Dover | 76 | 18 | 24 | 34 | 78 | 75 | 16 | 18 | 41 | 66 | 12 |
+| Chesham | 51 | 23 | 7 | 21 | 76 | 54 | 17 | 14 | 23 | 65 | 11 |
+| Boreham Wood | 22 | 14 | 4 | 4 | 46 | 23 | 11 | 4 | 8 | 37 | 9 |
+| Billericay | 38 | 11 | 10 | 17 | 43 | 32 | 9 | 7 | 16 | 34 | 9 |
+| Folkestone | 7 | 4 | 2 | 1 | 14 | 7 | 1 | 2 | 4 | 5 | 9 |
+| Tonbridge | 125 | 46 | 31 | 48 | 169 | 127 | 43 | 32 | 52 | 161 | 8 |
+| St. Albans | 97 | 40 | 20 | 37 | 140 | 96 | 35 | 27 | 34 | 132 | 8 |
+| Weymouth | 68 | 17 | 20 | 31 | 71 | 69 | 15 | 18 | 36 | 63 | 8 |
+| Hungerford | 51 | 17 | 12 | 22 | 63 | 54 | 17 | 4 | 33 | 55 | 8 |
+| Truro | 52 | 26 | 11 | 15 | 89 | 52 | 23 | 13 | 16 | 82 | 7 |
+| Dulwich Hamlet | 47 | 17 | 10 | 20 | 61 | 52 | 13 | 15 | 24 | 54 | 7 |
 | Hornchurch-Weston | 2 | 2 | 0 | 0 | 6 | 0 | 0 | 0 | 0 | 0 | 6 |
-| Maidenhead | 28 | 14 | 7 | 7 | 49 | 30 | 12 | 8 | 10 | 44 | 5 |
-| Chelmsford | 28 | 12 | 9 | 7 | 45 | 28 | 10 | 10 | 8 | 40 | 5 |
-| Horsham FC | 29 | 9 | 11 | 9 | 38 | 27 | 8 | 9 | 10 | 33 | 5 |
-| Billericay | 6 | 3 | 3 | 0 | 12 | 5 | 2 | 1 | 2 | 7 | 5 |
-| Chesham | 27 | 13 | 4 | 10 | 43 | 30 | 11 | 6 | 13 | 39 | 4 |
-| Farnborough | 28 | 10 | 4 | 14 | 34 | 28 | 7 | 9 | 12 | 30 | 4 |
-| Folkestone | 5 | 2 | 2 | 1 | 8 | 5 | 1 | 1 | 3 | 4 | 4 |
+| Maidenhead | 29 | 14 | 7 | 8 | 49 | 32 | 12 | 8 | 12 | 44 | 5 |
+| Horsham FC | 31 | 10 | 11 | 10 | 41 | 29 | 9 | 10 | 10 | 37 | 4 |
+| Taunton | 46 | 14 | 13 | 19 | 55 | 46 | 13 | 13 | 20 | 52 | 3 |
 | AFC Totton-Weston | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Chelmsford-Weston | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Chesham-Weston | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
@@ -125,14 +158,13 @@
 | Maidstone-Weston | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Slough-Weston | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | Torquay-Weston | 1 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
-| Hemel Hempstead | 29 | 13 | 8 | 8 | 47 | 28 | 13 | 6 | 9 | 45 | 2 |
 | Bath-Weston | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Dag & Red-Weston | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Dover-Weston | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Horsham FC-Weston | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Tonbridge-Weston | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Worthing-Weston | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
-| Walton & Hersham | 6 | 0 | 1 | 5 | 1 | 4 | 0 | 1 | 3 | 1 | 0 |
+| Farnham | 7 | 3 | 1 | 3 | 10 | 5 | 3 | 1 | 1 | 10 | 0 |
 | Chippenham-Weston | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Eastbourne Boro-Weston | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ebbsfleet-Weston | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -156,19 +188,15 @@
 | Mare-Salisbury | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
 | Mare-Slough | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
 | Salisbury-Weston | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Braintree | 5 | 2 | 0 | 3 | 6 | 5 | 2 | 1 | 2 | 7 | -1 |
 | Mare-Chelmsford | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
 | Mare-Dorking | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
 | Mare-Hemel Hempstead | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
-| Dover | 29 | 8 | 8 | 13 | 32 | 28 | 10 | 5 | 13 | 35 | -3 |
 | Mare-Dover | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Mare-Hornchurch | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Mare-Tonbridge | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Mare-Torquay | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
 | Mare-Worthing | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 3 | -3 |
-| Eastbourne Boro | 23 | 3 | 7 | 13 | 16 | 23 | 6 | 2 | 15 | 20 | -4 |
-| Farnham | 4 | 2 | 0 | 2 | 6 | 5 | 3 | 1 | 1 | 10 | -4 |
-| Tonbridge | 28 | 8 | 7 | 13 | 31 | 29 | 13 | 7 | 9 | 46 | -15 |
+| Walton & Hersham | 6 | 0 | 1 | 5 | 1 | 7 | 2 | 1 | 4 | 7 | -6 |
 | super-Mare | 0 | 0 | 0 | 0 | 0 | 25 | 9 | 6 | 10 | 33 | -33 |
 
 ## 3. Top performers
@@ -184,20 +212,20 @@
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Torquay | 109 |
-| 2 | Dorking | 107 |
-| 3 | Worthing | 99 |
-| 4 | Maidstone | 91 |
-| 5 | Tonbridge | 89 |
+| 1 | Chelmsford | 374 |
+| 2 | Worthing | 372 |
+| 3 | Eastbourne Boro | 365 |
+| 4 | Slough | 359 |
+| 5 | Dorking | 341 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Worthing | 47 |
-| 2 | Maidstone | 30 |
-| 3 | Maidenhead | 27 |
-| 4 | Torquay | 26 |
-| 5 | Ebbsfleet | 24 |
+| 1 | Maidstone | 132 |
+| 2 | Ebbsfleet | 131 |
+| 3 | Dorking | 131 |
+| 4 | Worthing | 119 |
+| 5 | Oxford City | 70 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
@@ -209,120 +237,134 @@
 | 5 | Slough-Weston | 0.000 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **18**
+- Teams present in all **7** seasons: **5**
 
-AFC Totton, Chelmsford, Chesham, Dag & Red, Dorking, Dover, Ebbsfleet, Farnborough, Hampton & Richmond, Hemel Hempstead, Horsham FC, Maidenhead, Maidstone, Salisbury, Slough, Tonbridge, Torquay, Weston-super-Mare
+Chelmsford, Hampton & Richmond, Hemel Hempstead, Slough, Tonbridge
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **372** (showing the 15 most frequent)
+- Distinct fixtures: **745** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Weston-super-Mare vs Maidstone | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| AFC Totton vs Hampton & Richmond | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Dorking vs Maidenhead | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Torquay vs Dorking | 4 | 2 | 2 | 0 | 50.0% | 50.0% | 0.0% |
-| Chelmsford vs Salisbury | 4 | 1 | 3 | 0 | 25.0% | 75.0% | 0.0% |
-| Hemel Hempstead vs Weston-super-Mare | 4 | 1 | 1 | 2 | 25.0% | 25.0% | 50.0% |
-| Maidenhead vs Dover | 4 | 1 | 0 | 3 | 25.0% | 0.0% | 75.0% |
-| Dag & Red vs Horsham FC | 4 | 0 | 3 | 1 | 0.0% | 75.0% | 25.0% |
-| Tonbridge vs Farnborough | 4 | 0 | 1 | 3 | 0.0% | 25.0% | 75.0% |
-| Dag & Red vs Hampton & Richmond | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Weston-super-Mare vs AFC Totton | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Weston-super-Mare vs Chesham | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| AFC Totton vs Dover | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Chesham vs Farnborough | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Dag & Red vs Slough | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
+| Hemel Hempstead vs Tonbridge | 13 | 7 | 4 | 2 | 53.8% | 30.8% | 15.4% |
+| Chelmsford vs Tonbridge | 12 | 5 | 5 | 2 | 41.7% | 41.7% | 16.7% |
+| Hampton & Richmond vs Chelmsford | 12 | 5 | 3 | 4 | 41.7% | 25.0% | 33.3% |
+| Hemel Hempstead vs Slough | 12 | 4 | 2 | 6 | 33.3% | 16.7% | 50.0% |
+| Hemel Hempstead vs Bath | 11 | 7 | 2 | 2 | 63.6% | 18.2% | 18.2% |
+| Eastbourne Boro vs Hampton & Richmond | 11 | 6 | 0 | 5 | 54.5% | 0.0% | 45.5% |
+| Hampton & Richmond vs Slough | 11 | 6 | 2 | 3 | 54.5% | 18.2% | 27.3% |
+| Tonbridge vs Chippenham | 11 | 6 | 3 | 2 | 54.5% | 27.3% | 18.2% |
+| Chelmsford vs Bath | 11 | 5 | 0 | 6 | 45.5% | 0.0% | 54.5% |
+| Chippenham vs Slough | 11 | 5 | 2 | 4 | 45.5% | 18.2% | 36.4% |
+| Eastbourne Boro vs Chelmsford | 11 | 5 | 2 | 4 | 45.5% | 18.2% | 36.4% |
+| Eastbourne Boro vs Hemel Hempstead | 11 | 5 | 3 | 3 | 45.5% | 27.3% | 27.3% |
+| Eastbourne Boro vs Tonbridge | 11 | 5 | 2 | 4 | 45.5% | 18.2% | 36.4% |
+| Hampton & Richmond vs Bath | 11 | 4 | 2 | 5 | 36.4% | 18.2% | 45.5% |
+| Chippenham vs Bath | 11 | 3 | 3 | 5 | 27.3% | 27.3% | 45.5% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Maidstone | 8 | 1 |
-| Torquay | 3 | 12 |
-| Dorking | 4 | 8 |
-| Weston-super-Mare | 6 | 7 |
-| Maidenhead | 7 | 10 |
-| Hemel Hempstead | 5 | 13 |
-| Ebbsfleet | 9 | 19 |
-| Hornchurch | 2 | - |
-| Chelmsford | 10 | 17 |
-| Worthing | 1 | - |
-| Dag & Red | 13 | 3 |
-| Chesham | 11 | 21 |
-| AFC Totton | 12 | 14 |
-| Tonbridge | 14 | 6 |
-| Salisbury | 17 | 4 |
-| Horsham FC | 15 | 18 |
-| Dover | 20 | 9 |
-| Farnborough | 19 | 20 |
-| Hampton & Richmond | 18 | 22 |
-| Slough | 16 | 23 |
-| Weston-super | 21 | - |
-| Bath | 22 | - |
-| Chippenham | 23 | - |
-| Enfield Town | 24 | - |
-| Eastbourne Boro | 25 | - |
-| super-Mare | 26 | - |
-| Truro | - | 2 |
-| Billericay | - | 5 |
-| Farnham | - | 11 |
-| Braintree | - | 15 |
-| Folkestone | - | 16 |
-| Hornchurch-Weston | 27 | - |
-| Chesham-Weston | 28 | - |
-| Mare-Torquay | 30 | - |
-| AFC Totton-Weston | 32 | - |
-| Hemel Hempstead-Weston | 29 | - |
-| Torquay-Weston | 31 | - |
-| Chelmsford-Weston | 40 | - |
-| Dorking-Weston | 34 | - |
-| Maidstone-Weston | 36 | - |
-| Mare-Dover | 37 | - |
-| Mare-Hornchurch | 35 | - |
-| Mare-Tonbridge | 38 | - |
-| Mare-Worthing | 33 | - |
-| Slough-Weston | 39 | - |
-| Walton & Hersham | - | 24 |
-| Bath-Weston | 47 | - |
-| Dag & Red-Weston | 48 | - |
-| Dover-Weston | 43 | - |
-| Horsham FC-Weston | 42 | - |
-| Mare-Chelmsford | 46 | - |
-| Mare-Dorking | 41 | - |
-| Mare-Hemel Hempstead | 49 | - |
-| Tonbridge-Weston | 45 | - |
-| Worthing-Weston | 44 | - |
-| Chippenham-Weston | 51 | - |
-| Eastbourne Boro-Weston | 52 | - |
-| Enfield Town-Weston | 63 | - |
-| Hampton & Richmond-Weston | 55 | - |
-| Maidenhead-Weston | 53 | - |
-| Mare-AFC Totton | 64 | - |
-| Mare-Bath | 54 | - |
-| Mare-Chesham | 56 | - |
-| Mare-Chippenham | 57 | - |
-| Mare-Ebbsfleet | 58 | - |
-| Mare-Enfield Town | 59 | - |
-| Mare-Horsham FC | 60 | - |
-| Mare-Maidenhead | 61 | - |
-| Mare-Salisbury | 62 | - |
-| Salisbury-Weston | 50 | - |
-| Ebbsfleet-Weston | 67 | - |
-| Farnborough-Weston | 65 | - |
-| Mare-Eastbourne Boro | 66 | - |
-| Mare-Hampton & Richmond | 68 | - |
-| Mare-Dag & Red | 71 | - |
-| Mare-Farnborough | 69 | - |
-| Mare-Maidstone | 70 | - |
-| Mare-Slough | 72 | - |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Maidstone | 11 | 1 | - | 4 | 7 | 8 | 1 |
+| Chelmsford | 13 | 19 | 5 | 2 | 12 | 10 | 15 |
+| Eastbourne Boro | 3 | 6 | 8 | 19 | 3 | 25 | - |
+| Worthing | - | - | 4 | 3 | 4 | 1 | - |
+| Hemel Hempstead | 10 | 15 | 15 | 20 | 11 | 5 | 18 |
+| Tonbridge | 14 | 16 | 9 | 15 | 16 | 14 | 5 |
+| Hampton & Richmond | 6 | 11 | 17 | 9 | 18 | 18 | 22 |
+| Ebbsfleet | 8 | 3 | 1 | - | - | 9 | 2 |
+| Dorking | 1 | 2 | - | - | 5 | 4 | 8 |
+| Chippenham | 16 | 7 | 13 | 13 | 14 | 23 | - |
+| Bath | 18 | 18 | 11 | 6 | 17 | 22 | - |
+| Slough | 20 | 13 | 18 | 11 | 15 | 16 | 24 |
+| St. Albans | 5 | 9 | 6 | 10 | 21 | - | - |
+| Farnborough | - | - | 12 | 8 | 10 | 19 | 19 |
+| Torquay | - | - | - | 12 | 2 | 3 | 10 |
+| Dartford | 2 | 4 | 2 | 21 | - | - | - |
+| Weston-super-Mare | - | - | - | 14 | 8 | 6 | 14 |
+| Braintree | 19 | 17 | 7 | 5 | - | - | 20 |
+| Welling | 21 | 20 | 16 | 17 | 22 | - | - |
+| Havant & W | 9 | 8 | 10 | 23 | - | - | - |
+| Oxford City | 4 | 5 | 3 | - | - | - | - |
+| Truro | - | - | - | 16 | 1 | - | 3 |
+| Hornchurch | - | - | - | - | 9 | 2 | - |
+| Dover | - | - | 20 | 24 | - | 20 | 13 |
+| Chesham | - | - | - | - | 13 | 11 | 21 |
+| Weymouth | - | - | 19 | 18 | 23 | - | - |
+| Salisbury | - | - | - | - | 20 | 17 | 7 |
+| Hungerford | 7 | 12 | 24 | - | - | - | - |
+| Dulwich Hamlet | 12 | 10 | 21 | - | - | - | - |
+| Taunton | - | - | 14 | 22 | - | - | - |
+| Concord | 17 | 14 | 22 | - | - | - | - |
+| Aveley | - | - | - | 7 | 24 | - | - |
+| Yeovil | - | - | - | 1 | - | - | - |
+| Maidenhead | - | - | - | - | - | 7 | 16 |
+| Dag & Red | - | - | - | - | - | 13 | 6 |
+| Enfield Town | - | - | - | - | 19 | 24 | - |
+| Boreham Wood | - | - | - | - | 6 | - | - |
+| AFC Totton | - | - | - | - | - | 12 | 17 |
+| Horsham FC | - | - | - | - | - | 15 | 12 |
+| Billericay | 15 | 21 | - | - | - | - | 4 |
+| Weston-super | - | - | - | - | - | 21 | - |
+| Cheshunt | - | - | 23 | - | - | - | - |
+| super-Mare | - | - | - | - | - | 26 | - |
+| Farnham | - | - | - | - | - | - | 9 |
+| Folkestone | - | - | - | - | - | - | 11 |
+| Walton & Hersham | - | - | - | - | - | - | 23 |
+| Hornchurch-Weston | - | - | - | - | - | 27 | - |
+| Chesham-Weston | - | - | - | - | - | 28 | - |
+| Mare-Torquay | - | - | - | - | - | 30 | - |
+| AFC Totton-Weston | - | - | - | - | - | 32 | - |
+| Hemel Hempstead-Weston | - | - | - | - | - | 29 | - |
+| Torquay-Weston | - | - | - | - | - | 31 | - |
+| Chelmsford-Weston | - | - | - | - | - | 40 | - |
+| Dorking-Weston | - | - | - | - | - | 34 | - |
+| Maidstone-Weston | - | - | - | - | - | 36 | - |
+| Mare-Dover | - | - | - | - | - | 37 | - |
+| Mare-Hornchurch | - | - | - | - | - | 35 | - |
+| Mare-Tonbridge | - | - | - | - | - | 38 | - |
+| Mare-Worthing | - | - | - | - | - | 33 | - |
+| Slough-Weston | - | - | - | - | - | 39 | - |
+| Bath-Weston | - | - | - | - | - | 47 | - |
+| Dag & Red-Weston | - | - | - | - | - | 48 | - |
+| Dover-Weston | - | - | - | - | - | 43 | - |
+| Horsham FC-Weston | - | - | - | - | - | 42 | - |
+| Mare-Chelmsford | - | - | - | - | - | 46 | - |
+| Mare-Dorking | - | - | - | - | - | 41 | - |
+| Mare-Hemel Hempstead | - | - | - | - | - | 49 | - |
+| Tonbridge-Weston | - | - | - | - | - | 45 | - |
+| Worthing-Weston | - | - | - | - | - | 44 | - |
+| Chippenham-Weston | - | - | - | - | - | 51 | - |
+| Eastbourne Boro-Weston | - | - | - | - | - | 52 | - |
+| Enfield Town-Weston | - | - | - | - | - | 63 | - |
+| Hampton & Richmond-Weston | - | - | - | - | - | 55 | - |
+| Maidenhead-Weston | - | - | - | - | - | 53 | - |
+| Mare-AFC Totton | - | - | - | - | - | 64 | - |
+| Mare-Bath | - | - | - | - | - | 54 | - |
+| Mare-Chesham | - | - | - | - | - | 56 | - |
+| Mare-Chippenham | - | - | - | - | - | 57 | - |
+| Mare-Ebbsfleet | - | - | - | - | - | 58 | - |
+| Mare-Enfield Town | - | - | - | - | - | 59 | - |
+| Mare-Horsham FC | - | - | - | - | - | 60 | - |
+| Mare-Maidenhead | - | - | - | - | - | 61 | - |
+| Mare-Salisbury | - | - | - | - | - | 62 | - |
+| Salisbury-Weston | - | - | - | - | - | 50 | - |
+| Ebbsfleet-Weston | - | - | - | - | - | 67 | - |
+| Farnborough-Weston | - | - | - | - | - | 65 | - |
+| Mare-Eastbourne Boro | - | - | - | - | - | 66 | - |
+| Mare-Hampton & Richmond | - | - | - | - | - | 68 | - |
+| Mare-Dag & Red | - | - | - | - | - | 71 | - |
+| Mare-Farnborough | - | - | - | - | - | 69 | - |
+| Mare-Maidstone | - | - | - | - | - | 70 | - |
+| Mare-Slough | - | - | - | - | - | 72 | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\south\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\south\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

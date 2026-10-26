@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:49:43+00:00
+- Generated: 2026-10-26T01:31:54+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Ykkosliiga (Finland)
 - Scope: league `finland2`
@@ -8,34 +8,56 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 260 |
-| Home wins | 110 (42.3%) |
-| Draws | 64 (24.6%) |
-| Away wins | 86 (33.1%) |
-| Total goals | 764 |
-| Average goals per match | 2.938 |
-| Goalless matches | 14 (5.4%) |
+| Matches | 933 |
+| Home wins | 398 (42.7%) |
+| Draws | 233 (25.0%) |
+| Away wins | 302 (32.4%) |
+| Total goals | 2783 |
+| Average goals per match | 2.983 |
+| Goalless matches | 57 (6.1%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020 | 132 | 55 (41.7%) | 29 (22.0%) | 48 (36.4%) | 442 | 3.348 | 6 (4.5%) |
+| 2021 | 132 | 53 (40.2%) | 35 (26.5%) | 44 (33.3%) | 355 | 2.689 | 10 (7.6%) |
+| 2022 | 132 | 59 (44.7%) | 34 (25.8%) | 39 (29.5%) | 395 | 2.992 | 5 (3.8%) |
+| 2023 | 132 | 59 (44.7%) | 35 (26.5%) | 38 (28.8%) | 368 | 2.788 | 11 (8.3%) |
+| 2024 | 135 | 56 (41.5%) | 34 (25.2%) | 45 (33.3%) | 420 | 3.111 | 10 (7.4%) |
 | 2025 | 135 | 58 (43.0%) | 35 (25.9%) | 42 (31.1%) | 443 | 3.281 | 5 (3.7%) |
-| 2026 | 125 | 52 (41.6%) | 29 (23.2%) | 44 (35.2%) | 321 | 2.568 | 9 (7.2%) |
+| 2026 | 135 | 58 (43.0%) | 31 (23.0%) | 46 (34.1%) | 360 | 2.667 | 10 (7.4%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 70 (76.9%) | 13 (14.3%) | 8 (8.8%) | 91 |
-| HT draw | 32 (33.0%) | 37 (38.1%) | 28 (28.9%) | 97 |
-| HT away lead | 8 (11.1%) | 14 (19.4%) | 50 (69.4%) | 72 |
+| HT home lead | 263 (77.6%) | 48 (14.2%) | 28 (8.3%) | 339 |
+| HT draw | 109 (31.8%) | 143 (41.7%) | 91 (26.5%) | 343 |
+| HT away lead | 26 (10.4%) | 42 (16.7%) | 183 (72.9%) | 251 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **8** (3.1%)
-- Away comebacks (trailing at HT, won at FT): **8** (3.1%)
+- Home comebacks (trailing at HT, won at FT): **26** (2.8%)
+- Away comebacks (trailing at HT, won at FT): **28** (3.0%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2021 | Mikkeli | KPV Kokkola | 0-1 | 2-1 |
+| 2021 | Rovaniemi | Jaro | 0-1 | 3-1 |
+| 2021 | Ekenas | Rovaniemi | 1-2 | 3-2 |
+| 2021 | Mikkeli | Gnistan | 0-1 | 2-1 |
+| 2022 | Ekenas | PEPO | 0-1 | 2-1 |
+| 2022 | TPS | SJK Akatemia | 0-1 | 2-1 |
+| 2022 | PEPO | Mikkeli | 0-1 | 2-1 |
+| 2023 | TPS | SalPa | 0-1 | 2-1 |
+| 2023 | Mikkeli | JJK Jyvaskyla | 1-3 | 4-3 |
+| 2023 | KaPa | JaPS | 0-1 | 3-1 |
+| 2023 | Mikkeli | HIFK | 0-1 | 2-1 |
+| 2023 | Gnistan | SalPa | 1-2 | 3-2 |
+| 2024 | SJK Akatemia | JaPS | 0-1 | 2-1 |
+| 2024 | TPS | KaPa | 0-1 | 2-1 |
+| 2024 | PK-35 | JaPS | 0-1 | 4-1 |
+| 2024 | Jippo | JaPS | 0-2 | 3-2 |
+| 2024 | KaPa | Mikkeli | 0-2 | 3-2 |
 | 2025 | KaPa | SalPa | 0-1 | 3-1 |
 | 2025 | TPS | SJK Akatemia | 1-2 | 3-2 |
 | 2025 | Lahti | Jippo | 1-2 | 3-2 |
@@ -44,10 +66,31 @@
 | 2026 | KTP | JaPS | 0-1 | 4-1 |
 | 2026 | Jippo | Klubi 04 | 0-1 | 3-1 |
 | 2026 | KaPa | Haka | 0-2 | 3-2 |
+| 2026 | SJK Akatemia | KTP | 0-1 | 4-3 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020 | Mikkeli | Jaro | 1-0 | 1-2 |
+| 2020 | KTP | AC Oulu | 1-0 | 1-2 |
+| 2020 | Mikkeli | KTP | 1-0 | 2-3 |
+| 2020 | VPS | Gnistan | 3-2 | 3-5 |
+| 2020 | VPS | KTP | 2-1 | 2-4 |
+| 2021 | Jippo | Rovaniemi | 1-0 | 1-2 |
+| 2021 | PK-35 | Ekenas | 1-0 | 2-3 |
+| 2021 | Ekenas | Klubi 04 | 1-0 | 1-2 |
+| 2021 | Ekenas | TPS | 1-0 | 1-2 |
+| 2022 | PIF Pargas | Ekenas | 2-1 | 2-3 |
+| 2022 | PEPO | JaPS | 2-0 | 2-4 |
+| 2022 | Mikkeli | PIF Pargas | 2-0 | 2-3 |
+| 2022 | Mikkeli | PK-35 | 1-0 | 1-2 |
+| 2023 | KaPa | SalPa | 2-1 | 2-3 |
+| 2023 | KPV Kokkola | JaPS | 1-0 | 1-2 |
+| 2023 | JJK Jyvaskyla | KaPa | 1-0 | 1-2 |
+| 2023 | JJK Jyvaskyla | Gnistan | 1-0 | 2-3 |
+| 2023 | KPV Kokkola | Ekenas | 1-0 | 2-3 |
+| 2024 | SJK Akatemia | Jippo | 1-0 | 1-2 |
+| 2024 | TPS | SalPa | 1-0 | 2-3 |
 | 2025 | Klubi 04 | JaPS | 2-1 | 4-6 |
 | 2025 | TPS | PK-35 | 1-0 | 1-2 |
 | 2025 | TPS | PK-35 | 1-0 | 1-3 |
@@ -60,43 +103,48 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 91 | 70 (76.9%) | 13 (14.3%) | 8 (8.8%) |
-| Away lead | 72 | 50 (69.4%) | 14 (19.4%) | 8 (11.1%) |
+| Home lead | 339 | 263 (77.6%) | 48 (14.2%) | 28 (8.3%) |
+| Away lead | 251 | 183 (72.9%) | 42 (16.7%) | 26 (10.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 32 | 33.0% |
-| Draw | 37 | 38.1% |
-| Away win | 28 | 28.9% |
+| Home win | 109 | 31.8% |
+| Draw | 143 | 41.7% |
+| Away win | 91 | 26.5% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `246` of `260` (94.6%)
+- Matches with a first-goal time recorded: `876` of `933` (93.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 93 | 35.8% | 42 (45.2%) | 16 (17.2%) | 35 (37.6%) |
-| 16-30 | 59 | 22.7% | 30 (50.8%) | 9 (15.3%) | 20 (33.9%) |
-| 31-45 | 32 | 12.3% | 15 (46.9%) | 8 (25.0%) | 9 (28.1%) |
-| 46-60 | 32 | 12.3% | 12 (37.5%) | 7 (21.9%) | 13 (40.6%) |
-| 61-75 | 19 | 7.3% | 5 (26.3%) | 8 (42.1%) | 6 (31.6%) |
-| 76-90 | 7 | 2.7% | 3 (42.9%) | 2 (28.6%) | 2 (28.6%) |
-| 91-120 | 4 | 1.5% | 3 (75.0%) | 0 (0.0%) | 1 (25.0%) |
+| 1-15 | 313 | 33.5% | 144 (46.0%) | 55 (17.6%) | 114 (36.4%) |
+| 16-30 | 222 | 23.8% | 114 (51.4%) | 39 (17.6%) | 69 (31.1%) |
+| 31-45 | 132 | 14.1% | 58 (43.9%) | 32 (24.2%) | 42 (31.8%) |
+| 46-60 | 101 | 10.8% | 37 (36.6%) | 23 (22.8%) | 41 (40.6%) |
+| 61-75 | 69 | 7.4% | 23 (33.3%) | 22 (31.9%) | 24 (34.8%) |
+| 76-90 | 31 | 3.3% | 18 (58.1%) | 5 (16.1%) | 8 (25.8%) |
+| 91-120 | 8 | 0.9% | 4 (50.0%) | 0 (0.0%) | 4 (50.0%) |
 
 ## 7. Goalless matches
-- Overall: **14** of `260` (5.4%)
+- Overall: **57** of `933` (6.1%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020 | 132 | 6 | 4.5% |
+| 2021 | 132 | 10 | 7.6% |
+| 2022 | 132 | 5 | 3.8% |
+| 2023 | 132 | 11 | 8.3% |
+| 2024 | 135 | 10 | 7.4% |
 | 2025 | 135 | 5 | 3.7% |
-| 2026 | 125 | 9 | 7.2% |
+| 2026 | 135 | 10 | 7.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\finland2\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\finland2\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

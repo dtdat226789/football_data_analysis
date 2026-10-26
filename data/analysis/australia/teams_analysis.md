@@ -1,133 +1,133 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:43:53+00:00
+- Generated: 2026-10-26T01:26:03+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`
 
-- Teams: **13** | Seasons: **2** | Matches: **332**
+- Teams: **13** | Seasons: **6** | Matches: **962**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Auckland FC | 2 | 56 | 29 | 18 | 9 | 105 | 98 | 58 | 40 | 52.5 | 1 | 1 | 2 |
-| Melbourne City | 2 | 53 | 24 | 14 | 15 | 86 | 75 | 60 | 15 | 43.0 | 2 | 6 | 0 |
-| Melbourne Victory | 2 | 53 | 23 | 14 | 16 | 83 | 88 | 70 | 18 | 41.5 | 5 | 5 | 0 |
-| Sydney FC | 2 | 56 | 23 | 14 | 19 | 83 | 90 | 74 | 16 | 41.5 | 4 | 7 | 0 |
-| Adelaide United | 2 | 54 | 22 | 16 | 16 | 82 | 100 | 95 | 5 | 41.0 | 3 | 6 | 0 |
-| Newcastle Jets | 2 | 54 | 23 | 10 | 21 | 79 | 100 | 86 | 14 | 39.5 | 2 | 9 | 0 |
-| WS Wanderers | 2 | 52 | 18 | 13 | 21 | 67 | 85 | 83 | 2 | 33.5 | 4 | 12 | 0 |
-| Macarthur FC | 2 | 52 | 18 | 13 | 21 | 67 | 87 | 89 | -2 | 33.5 | 7 | 8 | 0 |
-| Central Coast Mariners | 2 | 52 | 13 | 19 | 20 | 58 | 64 | 93 | -29 | 29.0 | 9 | 10 | 0 |
-| Wellington Phoenix | 2 | 52 | 15 | 12 | 25 | 57 | 63 | 91 | -28 | 28.5 | 8 | 11 | 0 |
-| Perth Glory | 2 | 52 | 12 | 12 | 28 | 48 | 54 | 95 | -41 | 24.0 | 10 | 13 | 0 |
-| Western United | 1 | 26 | 14 | 5 | 7 | 47 | 55 | 37 | 18 | 47.0 | 3 | 3 | 0 |
-| Brisbane Roar | 2 | 52 | 11 | 14 | 27 | 47 | 59 | 87 | -28 | 23.5 | 11 | 12 | 0 |
+| Melbourne City | 6 | 158 | 80 | 38 | 40 | 278 | 298 | 195 | 103 | 46.33 | 1 | 6 | 3 |
+| Central Coast Mariners | 6 | 157 | 67 | 40 | 50 | 241 | 252 | 221 | 31 | 40.17 | 1 | 10 | 1 |
+| Sydney FC | 6 | 161 | 67 | 39 | 55 | 240 | 258 | 221 | 37 | 40.0 | 2 | 8 | 0 |
+| Adelaide United | 6 | 159 | 65 | 43 | 51 | 238 | 282 | 266 | 16 | 39.67 | 2 | 8 | 0 |
+| Wellington Phoenix | 6 | 157 | 61 | 39 | 57 | 222 | 222 | 245 | -23 | 37.0 | 2 | 11 | 0 |
+| Melbourne Victory | 6 | 158 | 59 | 43 | 56 | 220 | 233 | 222 | 11 | 36.67 | 2 | 12 | 0 |
+| WS Wanderers | 6 | 157 | 55 | 42 | 60 | 207 | 247 | 239 | 8 | 34.5 | 4 | 12 | 0 |
+| Macarthur FC | 6 | 157 | 56 | 38 | 63 | 206 | 234 | 268 | -34 | 34.33 | 5 | 12 | 0 |
+| Newcastle Jets | 6 | 159 | 50 | 36 | 73 | 186 | 238 | 259 | -21 | 31.0 | 1 | 11 | 1 |
+| Western United | 5 | 131 | 51 | 25 | 55 | 178 | 195 | 216 | -21 | 35.6 | 3 | 11 | 0 |
+| Brisbane Roar | 6 | 157 | 44 | 41 | 72 | 173 | 192 | 242 | -50 | 28.83 | 4 | 12 | 0 |
+| Perth Glory | 6 | 157 | 37 | 40 | 80 | 151 | 200 | 297 | -97 | 25.17 | 9 | 13 | 0 |
+| Auckland FC | 2 | 56 | 29 | 18 | 9 | 105 | 98 | 58 | 40 | 52.5 | 1 | 3 | 1 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Melbourne Victory | 27 | 13 | 8 | 6 | 47 | 26 | 10 | 6 | 10 | 36 | 11 |
-| Melbourne City | 26 | 14 | 4 | 8 | 46 | 27 | 10 | 10 | 7 | 40 | 6 |
+| Perth Glory | 79 | 26 | 20 | 33 | 98 | 78 | 11 | 20 | 47 | 53 | 45 |
+| Melbourne City | 79 | 48 | 17 | 14 | 161 | 79 | 32 | 21 | 26 | 117 | 44 |
+| Western United | 65 | 30 | 14 | 21 | 104 | 66 | 21 | 11 | 34 | 74 | 30 |
+| Wellington Phoenix | 78 | 35 | 19 | 24 | 124 | 79 | 26 | 20 | 33 | 98 | 26 |
+| Adelaide United | 80 | 37 | 20 | 23 | 131 | 79 | 28 | 23 | 28 | 107 | 24 |
+| Melbourne Victory | 79 | 33 | 21 | 25 | 120 | 79 | 26 | 22 | 31 | 100 | 20 |
+| Brisbane Roar | 79 | 25 | 21 | 33 | 96 | 78 | 19 | 20 | 39 | 77 | 19 |
+| Central Coast Mariners | 79 | 35 | 23 | 21 | 128 | 78 | 32 | 17 | 29 | 113 | 15 |
+| WS Wanderers | 78 | 31 | 17 | 30 | 110 | 79 | 24 | 25 | 30 | 97 | 13 |
+| Sydney FC | 79 | 35 | 21 | 23 | 126 | 82 | 32 | 18 | 32 | 114 | 12 |
 | Auckland FC | 29 | 15 | 9 | 5 | 54 | 27 | 14 | 9 | 4 | 51 | 3 |
-| Perth Glory | 26 | 7 | 4 | 15 | 25 | 26 | 5 | 8 | 13 | 23 | 2 |
-| Western United | 13 | 7 | 3 | 3 | 24 | 13 | 7 | 2 | 4 | 23 | 1 |
-| Adelaide United | 27 | 11 | 8 | 8 | 41 | 27 | 11 | 8 | 8 | 41 | 0 |
-| Sydney FC | 27 | 11 | 8 | 8 | 41 | 29 | 12 | 6 | 11 | 42 | -1 |
-| WS Wanderers | 26 | 9 | 6 | 11 | 33 | 26 | 9 | 7 | 10 | 34 | -1 |
-| Wellington Phoenix | 26 | 7 | 7 | 12 | 28 | 26 | 8 | 5 | 13 | 29 | -1 |
-| Central Coast Mariners | 26 | 5 | 12 | 9 | 27 | 26 | 8 | 7 | 11 | 31 | -4 |
-| Brisbane Roar | 26 | 5 | 6 | 15 | 21 | 26 | 6 | 8 | 12 | 26 | -5 |
-| Macarthur FC | 26 | 7 | 8 | 11 | 29 | 26 | 11 | 5 | 10 | 38 | -9 |
-| Newcastle Jets | 27 | 10 | 4 | 13 | 34 | 27 | 13 | 6 | 8 | 45 | -11 |
+| Macarthur FC | 79 | 27 | 23 | 29 | 104 | 78 | 29 | 15 | 34 | 102 | 2 |
+| Newcastle Jets | 79 | 25 | 16 | 38 | 91 | 80 | 25 | 20 | 35 | 95 | -4 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
 | 1 | Auckland FC | 1.88 |
-| 2 | Western United | 1.81 |
-| 3 | Melbourne City | 1.62 |
-| 4 | Melbourne Victory | 1.57 |
-| 5 | Adelaide United | 1.52 |
+| 2 | Melbourne City | 1.76 |
+| 3 | Central Coast Mariners | 1.53 |
+| 4 | Adelaide United | 1.50 |
+| 5 | Sydney FC | 1.49 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Adelaide United | 100 |
-| 2 | Newcastle Jets | 100 |
-| 3 | Auckland FC | 98 |
-| 4 | Sydney FC | 90 |
-| 5 | Melbourne Victory | 88 |
+| 1 | Melbourne City | 298 |
+| 2 | Adelaide United | 282 |
+| 3 | Sydney FC | 258 |
+| 4 | Central Coast Mariners | 252 |
+| 5 | WS Wanderers | 247 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Auckland FC | 40 |
-| 2 | Melbourne Victory | 18 |
-| 3 | Western United | 18 |
-| 4 | Sydney FC | 16 |
-| 5 | Melbourne City | 15 |
+| 1 | Melbourne City | 103 |
+| 2 | Auckland FC | 40 |
+| 3 | Sydney FC | 37 |
+| 4 | Central Coast Mariners | 31 |
+| 5 | Adelaide United | 16 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Auckland FC | 1.036 |
-| 2 | Melbourne City | 1.115 |
-| 3 | Melbourne Victory | 1.321 |
-| 4 | Sydney FC | 1.327 |
-| 5 | Western United | 1.423 |
+| 1 | Auckland FC | 1.077 |
+| 2 | Melbourne City | 1.229 |
+| 3 | Sydney FC | 1.389 |
+| 4 | Central Coast Mariners | 1.408 |
+| 5 | Melbourne Victory | 1.408 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **12**
+- Teams present in all **6** seasons: **11**
 
-Adelaide United, Auckland FC, Brisbane Roar, Central Coast Mariners, Macarthur FC, Melbourne City, Melbourne Victory, Newcastle Jets, Perth Glory, Sydney FC, WS Wanderers, Wellington Phoenix
+Adelaide United, Brisbane Roar, Central Coast Mariners, Macarthur FC, Melbourne City, Melbourne Victory, Newcastle Jets, Perth Glory, Sydney FC, WS Wanderers, Wellington Phoenix
 
 ## 5. Head-to-head dominance
 - Distinct fixtures: **78** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Sydney FC vs Newcastle Jets | 7 | 2 | 2 | 3 | 28.6% | 28.6% | 42.9% |
-| Melbourne Victory vs Sydney FC | 6 | 4 | 1 | 1 | 66.7% | 16.7% | 16.7% |
-| Auckland FC vs Sydney FC | 6 | 3 | 3 | 0 | 50.0% | 50.0% | 0.0% |
-| Auckland FC vs Wellington Phoenix | 6 | 3 | 0 | 3 | 50.0% | 0.0% | 50.0% |
-| Melbourne City vs Brisbane Roar | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
-| Melbourne Victory vs Wellington Phoenix | 6 | 3 | 0 | 3 | 50.0% | 0.0% | 50.0% |
-| Newcastle Jets vs Central Coast Mariners | 6 | 3 | 2 | 1 | 50.0% | 33.3% | 16.7% |
-| WS Wanderers vs Sydney FC | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
-| Central Coast Mariners vs Perth Glory | 6 | 2 | 3 | 1 | 33.3% | 50.0% | 16.7% |
-| Macarthur FC vs Newcastle Jets | 6 | 2 | 1 | 3 | 33.3% | 16.7% | 50.0% |
-| Auckland FC vs Adelaide United | 6 | 1 | 4 | 1 | 16.7% | 66.7% | 16.7% |
-| WS Wanderers vs Macarthur FC | 6 | 1 | 1 | 4 | 16.7% | 16.7% | 66.7% |
-| Melbourne City vs Melbourne Victory | 6 | 0 | 2 | 4 | 0.0% | 33.3% | 66.7% |
-| Auckland FC vs Melbourne City | 5 | 4 | 1 | 0 | 80.0% | 20.0% | 0.0% |
-| Melbourne Victory vs Adelaide United | 5 | 4 | 1 | 0 | 80.0% | 20.0% | 0.0% |
+| Sydney FC vs WS Wanderers | 18 | 8 | 3 | 7 | 44.4% | 16.7% | 38.9% |
+| Central Coast Mariners vs Newcastle Jets | 18 | 7 | 2 | 9 | 38.9% | 11.1% | 50.0% |
+| Melbourne City vs Melbourne Victory | 18 | 5 | 7 | 6 | 27.8% | 38.9% | 33.3% |
+| Sydney FC vs Melbourne Victory | 17 | 8 | 3 | 6 | 47.1% | 17.6% | 35.3% |
+| Adelaide United vs Melbourne Victory | 17 | 7 | 5 | 5 | 41.2% | 29.4% | 29.4% |
+| Macarthur FC vs WS Wanderers | 17 | 6 | 4 | 7 | 35.3% | 23.5% | 41.2% |
+| Melbourne City vs Brisbane Roar | 16 | 9 | 2 | 5 | 56.2% | 12.5% | 31.2% |
+| Macarthur FC vs Newcastle Jets | 16 | 5 | 5 | 6 | 31.2% | 31.2% | 37.5% |
+| Brisbane Roar vs Newcastle Jets | 15 | 9 | 1 | 5 | 60.0% | 6.7% | 33.3% |
+| Wellington Phoenix vs Melbourne Victory | 15 | 9 | 2 | 4 | 60.0% | 13.3% | 26.7% |
+| Adelaide United vs Perth Glory | 15 | 7 | 4 | 4 | 46.7% | 26.7% | 26.7% |
+| Melbourne City vs Perth Glory | 15 | 7 | 2 | 6 | 46.7% | 13.3% | 40.0% |
+| Sydney FC vs Newcastle Jets | 15 | 7 | 4 | 4 | 46.7% | 26.7% | 26.7% |
+| Brisbane Roar vs Wellington Phoenix | 15 | 6 | 5 | 4 | 40.0% | 33.3% | 26.7% |
+| Macarthur FC vs Wellington Phoenix | 15 | 5 | 2 | 8 | 33.3% | 13.3% | 53.3% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2024-2025 | 2025-2026 |
-|---|---|---|
-| Auckland FC | 1 | 1 |
-| Melbourne City | 2 | 6 |
-| Melbourne Victory | 5 | 5 |
-| Sydney FC | 7 | 4 |
-| Adelaide United | 6 | 3 |
-| Newcastle Jets | 9 | 2 |
-| WS Wanderers | 4 | 12 |
-| Macarthur FC | 8 | 7 |
-| Central Coast Mariners | 10 | 9 |
-| Wellington Phoenix | 11 | 8 |
-| Perth Glory | 13 | 10 |
-| Western United | 3 | - |
-| Brisbane Roar | 12 | 11 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 |
+|---|---|---|---|---|---|---|
+| Melbourne City | 1 | 1 | 1 | 6 | 2 | 6 |
+| Central Coast Mariners | 3 | 5 | 2 | 1 | 10 | 9 |
+| Sydney FC | 2 | 8 | 5 | 4 | 7 | 5 |
+| Adelaide United | 5 | 4 | 3 | 8 | 6 | 2 |
+| Wellington Phoenix | 7 | 6 | 6 | 2 | 11 | 8 |
+| Melbourne Victory | 12 | 2 | 11 | 3 | 5 | 4 |
+| WS Wanderers | 8 | 10 | 4 | 7 | 4 | 12 |
+| Macarthur FC | 6 | 7 | 12 | 5 | 8 | 7 |
+| Newcastle Jets | 11 | 9 | 10 | 10 | 9 | 1 |
+| Western United | 10 | 3 | 7 | 11 | 3 | - |
+| Brisbane Roar | 4 | 11 | 8 | 9 | 12 | 11 |
+| Perth Glory | 9 | 12 | 9 | 12 | 13 | 10 |
+| Auckland FC | - | - | - | - | 1 | 3 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\australia\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\australia\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

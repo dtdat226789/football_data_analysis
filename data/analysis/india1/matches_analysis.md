@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:54:57+00:00
+- Generated: 2026-10-26T01:36:30+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
@@ -8,34 +8,56 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 247 |
-| Home wins | 101 (40.9%) |
-| Draws | 67 (27.1%) |
-| Away wins | 79 (32.0%) |
-| Total goals | 669 |
-| Average goals per match | 2.709 |
-| Goalless matches | 21 (8.5%) |
+| Matches | 723 |
+| Home wins | 295 (40.8%) |
+| Draws | 192 (26.6%) |
+| Away wins | 236 (32.6%) |
+| Total goals | 2036 |
+| Average goals per match | 2.816 |
+| Goalless matches | 52 (7.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 110 | 32 (29.1%) | 42 (38.2%) | 36 (32.7%) | 286 | 2.6 | 13 (11.8%) |
+| 2021-2022 | 110 | 44 (40.0%) | 31 (28.2%) | 35 (31.8%) | 344 | 3.127 | 5 (4.5%) |
+| 2022-2023 | 110 | 52 (47.3%) | 16 (14.5%) | 42 (38.2%) | 334 | 3.036 | 3 (2.7%) |
+| 2023-2024 | 132 | 60 (45.5%) | 32 (24.2%) | 40 (30.3%) | 363 | 2.75 | 9 (6.8%) |
 | 2024-2025 | 156 | 66 (42.3%) | 38 (24.4%) | 52 (33.3%) | 448 | 2.872 | 11 (7.1%) |
 | 2025-2026 | 91 | 35 (38.5%) | 29 (31.9%) | 27 (29.7%) | 221 | 2.429 | 10 (11.0%) |
+| 2026-2027 | 14 | 6 (42.9%) | 4 (28.6%) | 4 (28.6%) | 40 | 2.857 | 1 (7.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 58 (70.7%) | 14 (17.1%) | 10 (12.2%) | 82 |
-| HT draw | 35 (36.5%) | 41 (42.7%) | 20 (20.8%) | 96 |
-| HT away lead | 8 (11.6%) | 12 (17.4%) | 49 (71.0%) | 69 |
+| HT home lead | 158 (75.2%) | 30 (14.3%) | 22 (10.5%) | 210 |
+| HT draw | 112 (36.7%) | 124 (40.7%) | 69 (22.6%) | 305 |
+| HT away lead | 25 (12.1%) | 38 (18.4%) | 144 (69.6%) | 207 |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **8** (3.2%)
-- Away comebacks (trailing at HT, won at FT): **10** (4.0%)
+- Home comebacks (trailing at HT, won at FT): **25** (3.5%)
+- Away comebacks (trailing at HT, won at FT): **22** (3.0%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Hyderabad | East Bengal | 0-1 | 3-2 |
+| 2020-2021 | Kerala Blasters | Bengaluru FC | 0-1 | 2-1 |
+| 2020-2021 | Mohun Bagan | Kerala Blasters | 0-1 | 3-2 |
+| 2020-2021 | Odisha FC | East Bengal | 1-2 | 6-5 |
+| 2021-2022 | Odisha FC | Mumbai City | 1-2 | 4-2 |
+| 2021-2022 | Chennaiyin | North East Utd | 0-1 | 2-1 |
+| 2021-2022 | Bengaluru FC | Jamshedpur | 0-1 | 3-1 |
+| 2022-2023 | Odisha FC | Kerala Blasters | 0-1 | 2-1 |
+| 2023-2024 | Goa | Odisha FC | 0-1 | 3-2 |
+| 2023-2024 | North East Utd | Jamshedpur | 0-1 | 2-1 |
+| 2023-2024 | Kerala Blasters | Odisha FC | 0-1 | 2-1 |
+| 2023-2024 | Mumbai City | Punjab | 0-1 | 2-1 |
+| 2023-2024 | Odisha FC | Kerala Blasters | 0-1 | 2-1 |
+| 2023-2024 | Jamshedpur | East Bengal | 0-1 | 2-1 |
+| 2023-2024 | Kerala Blasters | Goa | 0-2 | 4-2 |
+| 2023-2024 | Chennaiyin | Jamshedpur | 0-1 | 2-1 |
 | 2024-2025 | Mohun Bagan | North East Utd | 1-2 | 3-2 |
 | 2024-2025 | Punjab | Chennaiyin | 0-1 | 3-2 |
 | 2024-2025 | East Bengal | Punjab | 0-2 | 4-2 |
@@ -44,10 +66,22 @@
 | 2024-2025 | Hyderabad | Jamshedpur | 1-2 | 3-2 |
 | 2024-2025 | Odisha FC | Hyderabad | 0-1 | 3-1 |
 | 2025-2026 | Punjab | Mohammedan | 0-1 | 2-1 |
+| 2026-2027 | Bengaluru FC | SC Delhi | 1-2 | 3-2 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Jamshedpur | Goa | 1-0 | 1-2 |
+| 2020-2021 | Kerala Blasters | Mumbai City | 1-0 | 1-2 |
+| 2021-2022 | Odisha FC | Hyderabad | 1-0 | 2-3 |
+| 2022-2023 | Mohun Bagan | Chennaiyin | 1-0 | 1-2 |
+| 2022-2023 | Jamshedpur | Odisha FC | 2-1 | 2-3 |
+| 2022-2023 | East Bengal | Odisha FC | 2-0 | 2-4 |
+| 2022-2023 | East Bengal | Jamshedpur | 1-0 | 1-2 |
+| 2023-2024 | East Bengal | Goa | 1-0 | 1-2 |
+| 2023-2024 | Mumbai City | Jamshedpur | 2-0 | 2-3 |
+| 2023-2024 | Punjab | Mumbai City | 2-1 | 2-3 |
+| 2023-2024 | Mohun Bagan | Chennaiyin | 1-0 | 2-3 |
 | 2024-2025 | Odisha FC | Chennaiyin | 1-0 | 2-3 |
 | 2024-2025 | Goa | Jamshedpur | 1-0 | 1-2 |
 | 2024-2025 | Mohammedan | Kerala Blasters | 1-0 | 1-2 |
@@ -58,47 +92,54 @@
 | 2025-2026 | Bengaluru FC | Kerala Blasters | 1-0 | 1-2 |
 | 2025-2026 | Mumbai City | East Bengal | 1-0 | 1-2 |
 | 2025-2026 | Inter Kashi | East Bengal | 1-0 | 1-2 |
+| 2026-2027 | SC Delhi | Mohun Bagan | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 82 | 58 (70.7%) | 14 (17.1%) | 10 (12.2%) |
-| Away lead | 69 | 49 (71.0%) | 12 (17.4%) | 8 (11.6%) |
+| Home lead | 210 | 158 (75.2%) | 30 (14.3%) | 22 (10.5%) |
+| Away lead | 207 | 144 (69.6%) | 38 (18.4%) | 25 (12.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 35 | 36.5% |
-| Draw | 41 | 42.7% |
-| Away win | 20 | 20.8% |
+| Home win | 112 | 36.7% |
+| Draw | 124 | 40.7% |
+| Away win | 69 | 22.6% |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `226` of `247` (91.5%)
+- Matches with a first-goal time recorded: `670` of `723` (92.7%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 82 | 33.2% | 33 (40.2%) | 15 (18.3%) | 34 (41.5%) |
-| 16-30 | 43 | 17.4% | 22 (51.2%) | 8 (18.6%) | 13 (30.2%) |
-| 31-45 | 34 | 13.8% | 12 (35.3%) | 6 (17.6%) | 16 (47.1%) |
-| 46-60 | 38 | 15.4% | 18 (47.4%) | 12 (31.6%) | 8 (21.1%) |
-| 61-75 | 18 | 7.3% | 10 (55.6%) | 4 (22.2%) | 4 (22.2%) |
-| 76-90 | 9 | 3.6% | 5 (55.6%) | 1 (11.1%) | 3 (33.3%) |
-| 91-120 | 2 | 0.8% | 1 (50.0%) | 0 (0.0%) | 1 (50.0%) |
+| 1-15 | 243 | 33.6% | 99 (40.7%) | 53 (21.8%) | 91 (37.4%) |
+| 16-30 | 142 | 19.6% | 60 (42.3%) | 30 (21.1%) | 52 (36.6%) |
+| 31-45 | 103 | 14.2% | 46 (44.7%) | 20 (19.4%) | 37 (35.9%) |
+| 46-60 | 91 | 12.6% | 43 (47.3%) | 22 (24.2%) | 26 (28.6%) |
+| 61-75 | 49 | 6.8% | 22 (44.9%) | 9 (18.4%) | 18 (36.7%) |
+| 76-90 | 35 | 4.8% | 20 (57.1%) | 6 (17.1%) | 9 (25.7%) |
+| 91-120 | 7 | 1.0% | 5 (71.4%) | 0 (0.0%) | 2 (28.6%) |
 
 ## 7. Goalless matches
-- Overall: **21** of `247` (8.5%)
+- Overall: **52** of `723` (7.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 110 | 13 | 11.8% |
+| 2021-2022 | 110 | 5 | 4.5% |
+| 2022-2023 | 110 | 3 | 2.7% |
+| 2023-2024 | 132 | 9 | 6.8% |
 | 2024-2025 | 156 | 11 | 7.1% |
 | 2025-2026 | 91 | 10 | 11.0% |
+| 2026-2027 | 14 | 1 | 7.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\india1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\india1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

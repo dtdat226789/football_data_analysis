@@ -1,136 +1,142 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:47:52+00:00
+- Generated: 2026-10-26T01:29:53+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Superliga (Denmark)
 - Scope: league `denmark1`
 
-- Teams: **14** | Seasons: **2** | Matches: **248**
+- Teams: **16** | Seasons: **7** | Matches: **921**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Midtjylland | 2 | 41 | 21 | 16 | 4 | 79 | 89 | 45 | 44 | 39.5 | 2 | 2 | 0 |
-| FC Copenhagen | 2 | 42 | 24 | 6 | 12 | 78 | 93 | 53 | 40 | 39.0 | 1 | 3 | 1 |
-| Aarhus | 2 | 42 | 19 | 16 | 7 | 73 | 75 | 51 | 24 | 36.5 | 1 | 11 | 1 |
-| Nordsjaelland | 2 | 41 | 20 | 7 | 14 | 67 | 65 | 56 | 9 | 33.5 | 4 | 4 | 0 |
-| Viborg | 2 | 41 | 18 | 7 | 16 | 61 | 64 | 59 | 5 | 30.5 | 3 | 6 | 0 |
-| Brondby | 2 | 42 | 17 | 7 | 18 | 58 | 57 | 53 | 4 | 29.0 | 5 | 5 | 0 |
-| Odense | 2 | 41 | 13 | 11 | 17 | 50 | 59 | 74 | -15 | 25.0 | 8 | 9 | 0 |
-| Sonderjyske | 2 | 41 | 13 | 10 | 18 | 49 | 56 | 70 | -14 | 24.5 | 7 | 12 | 0 |
-| Silkeborg | 2 | 42 | 12 | 11 | 19 | 47 | 55 | 81 | -26 | 23.5 | 6 | 9 | 0 |
-| Randers FC | 2 | 41 | 12 | 9 | 20 | 45 | 44 | 61 | -17 | 22.5 | 8 | 10 | 0 |
+| Midtjylland | 7 | 153 | 84 | 39 | 30 | 291 | 282 | 168 | 114 | 41.57 | 1 | 8 | 2 |
+| FC Copenhagen | 7 | 154 | 86 | 32 | 36 | 290 | 305 | 173 | 132 | 41.43 | 1 | 4 | 2 |
+| Brondby | 7 | 155 | 74 | 37 | 44 | 259 | 254 | 192 | 62 | 37.0 | 1 | 6 | 1 |
+| Aarhus | 7 | 154 | 64 | 56 | 34 | 248 | 232 | 167 | 65 | 35.43 | 1 | 10 | 1 |
+| Nordsjaelland | 7 | 153 | 64 | 42 | 47 | 234 | 239 | 203 | 36 | 33.43 | 1 | 10 | 1 |
+| Randers FC | 7 | 154 | 52 | 45 | 57 | 201 | 192 | 207 | -15 | 28.71 | 4 | 10 | 0 |
+| Viborg | 6 | 131 | 48 | 35 | 48 | 179 | 192 | 195 | -3 | 29.83 | 3 | 9 | 0 |
+| Silkeborg | 6 | 132 | 43 | 39 | 50 | 168 | 192 | 205 | -13 | 28.0 | 6 | 9 | 0 |
+| Odense | 6 | 131 | 38 | 41 | 52 | 155 | 169 | 208 | -39 | 25.83 | 7 | 9 | 0 |
+| Sonderjyske | 5 | 109 | 28 | 26 | 55 | 110 | 133 | 197 | -64 | 22.0 | 7 | 12 | 0 |
+| Aalborg | 4 | 88 | 26 | 24 | 38 | 102 | 101 | 130 | -29 | 25.5 | 4 | 12 | 0 |
+| Vejle | 5 | 120 | 22 | 30 | 68 | 96 | 125 | 221 | -96 | 19.2 | 10 | 12 | 0 |
+| Lyngby | 5 | 99 | 18 | 31 | 50 | 85 | 103 | 168 | -65 | 17.0 | 8 | 12 | 0 |
+| Horsens | 3 | 55 | 11 | 15 | 29 | 48 | 59 | 93 | -34 | 16.0 | 6 | 12 | 0 |
 | Fredericia | 1 | 32 | 9 | 7 | 16 | 34 | 45 | 68 | -23 | 34.0 | 11 | 11 | 0 |
-| Vejle | 1 | 32 | 5 | 9 | 18 | 24 | 36 | 60 | -24 | 24.0 | 12 | 12 | 0 |
-| Horsens | 1 | 9 | 3 | 2 | 4 | 11 | 15 | 16 | -1 | 11.0 | 7 | 7 | 0 |
-| Lyngby | 1 | 9 | 1 | 4 | 4 | 7 | 10 | 16 | -6 | 7.0 | 10 | 10 | 0 |
+| Hvidovre IF | 1 | 22 | 2 | 5 | 15 | 11 | 17 | 45 | -28 | 11.0 | 12 | 12 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Nordsjaelland | 20 | 13 | 3 | 4 | 42 | 21 | 7 | 4 | 10 | 25 | 17 |
-| Sonderjyske | 21 | 9 | 4 | 8 | 31 | 20 | 4 | 6 | 10 | 18 | 13 |
-| Viborg | 21 | 11 | 2 | 8 | 35 | 20 | 7 | 5 | 8 | 26 | 9 |
-| Vejle | 16 | 4 | 4 | 8 | 16 | 16 | 1 | 5 | 10 | 8 | 8 |
-| Randers FC | 21 | 7 | 5 | 9 | 26 | 20 | 5 | 4 | 11 | 19 | 7 |
-| Odense | 20 | 8 | 4 | 8 | 28 | 21 | 5 | 7 | 9 | 22 | 6 |
-| Brondby | 22 | 9 | 4 | 9 | 31 | 20 | 8 | 3 | 9 | 27 | 4 |
-| Aarhus | 21 | 10 | 8 | 3 | 38 | 21 | 9 | 8 | 4 | 35 | 3 |
-| Midtjylland | 20 | 11 | 7 | 2 | 40 | 21 | 10 | 9 | 2 | 39 | 1 |
-| Silkeborg | 20 | 6 | 6 | 8 | 24 | 22 | 6 | 5 | 11 | 23 | 1 |
-| Lyngby | 5 | 0 | 4 | 1 | 4 | 4 | 1 | 0 | 3 | 3 | 1 |
-| Horsens | 5 | 1 | 2 | 2 | 5 | 4 | 2 | 0 | 2 | 6 | -1 |
+| Nordsjaelland | 76 | 41 | 22 | 13 | 145 | 77 | 23 | 20 | 34 | 89 | 56 |
+| Vejle | 60 | 16 | 17 | 27 | 65 | 60 | 6 | 13 | 41 | 31 | 34 |
+| Sonderjyske | 55 | 19 | 13 | 23 | 70 | 54 | 9 | 13 | 32 | 40 | 30 |
+| Aarhus | 77 | 38 | 24 | 15 | 138 | 77 | 26 | 32 | 19 | 110 | 28 |
+| Brondby | 78 | 41 | 20 | 17 | 143 | 77 | 33 | 17 | 27 | 116 | 27 |
+| Viborg | 66 | 29 | 16 | 21 | 103 | 65 | 19 | 19 | 27 | 76 | 27 |
+| Horsens | 28 | 8 | 9 | 11 | 33 | 27 | 3 | 6 | 18 | 15 | 18 |
+| Midtjylland | 76 | 47 | 13 | 16 | 154 | 77 | 37 | 26 | 14 | 137 | 17 |
+| Silkeborg | 65 | 24 | 19 | 22 | 91 | 67 | 19 | 20 | 28 | 77 | 14 |
+| Randers FC | 78 | 29 | 19 | 30 | 106 | 76 | 23 | 26 | 27 | 95 | 11 |
+| Lyngby | 50 | 8 | 24 | 18 | 48 | 49 | 10 | 7 | 32 | 37 | 11 |
+| FC Copenhagen | 76 | 43 | 19 | 14 | 148 | 78 | 43 | 13 | 22 | 142 | 6 |
+| Aalborg | 44 | 13 | 13 | 18 | 52 | 44 | 13 | 11 | 20 | 50 | 2 |
+| Odense | 65 | 20 | 18 | 27 | 78 | 66 | 18 | 23 | 25 | 77 | 1 |
 | Fredericia | 16 | 4 | 4 | 8 | 16 | 16 | 5 | 3 | 8 | 18 | -2 |
-| FC Copenhagen | 20 | 11 | 4 | 5 | 37 | 22 | 13 | 2 | 7 | 41 | -4 |
+| Hvidovre IF | 11 | 0 | 2 | 9 | 2 | 11 | 2 | 3 | 6 | 9 | -7 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Midtjylland | 1.93 |
-| 2 | FC Copenhagen | 1.86 |
-| 3 | Aarhus | 1.74 |
-| 4 | Nordsjaelland | 1.63 |
-| 5 | Viborg | 1.49 |
+| 1 | Midtjylland | 1.90 |
+| 2 | FC Copenhagen | 1.88 |
+| 3 | Brondby | 1.67 |
+| 4 | Aarhus | 1.61 |
+| 5 | Nordsjaelland | 1.53 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | FC Copenhagen | 93 |
-| 2 | Midtjylland | 89 |
-| 3 | Aarhus | 75 |
-| 4 | Nordsjaelland | 65 |
-| 5 | Viborg | 64 |
+| 1 | FC Copenhagen | 305 |
+| 2 | Midtjylland | 282 |
+| 3 | Brondby | 254 |
+| 4 | Nordsjaelland | 239 |
+| 5 | Aarhus | 232 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Midtjylland | 44 |
-| 2 | FC Copenhagen | 40 |
-| 3 | Aarhus | 24 |
-| 4 | Nordsjaelland | 9 |
-| 5 | Viborg | 5 |
+| 1 | FC Copenhagen | 132 |
+| 2 | Midtjylland | 114 |
+| 3 | Aarhus | 65 |
+| 4 | Brondby | 62 |
+| 5 | Nordsjaelland | 36 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Midtjylland | 1.098 |
-| 2 | Aarhus | 1.214 |
-| 3 | Brondby | 1.220 |
-| 4 | FC Copenhagen | 1.268 |
-| 5 | Nordsjaelland | 1.366 |
+| 1 | Aarhus | 1.084 |
+| 2 | Midtjylland | 1.098 |
+| 3 | FC Copenhagen | 1.124 |
+| 4 | Brondby | 1.227 |
+| 5 | Nordsjaelland | 1.327 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **10**
+- Teams present in all **7** seasons: **6**
 
-Aarhus, Brondby, FC Copenhagen, Midtjylland, Nordsjaelland, Odense, Randers FC, Silkeborg, Sonderjyske, Viborg
+Aarhus, Brondby, FC Copenhagen, Midtjylland, Nordsjaelland, Randers FC
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **83** (showing the 15 most frequent)
+- Distinct fixtures: **113** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Nordsjaelland vs Viborg | 5 | 5 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Brondby vs Sonderjyske | 5 | 4 | 1 | 0 | 80.0% | 20.0% | 0.0% |
-| Aarhus vs Viborg | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Nordsjaelland vs Brondby | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Nordsjaelland vs Sonderjyske | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Odense vs Silkeborg | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Aarhus vs Nordsjaelland | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Brondby vs Viborg | 5 | 2 | 0 | 3 | 40.0% | 0.0% | 60.0% |
-| FC Copenhagen vs Odense | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| FC Copenhagen vs Silkeborg | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Midtjylland vs Nordsjaelland | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Midtjylland vs Sonderjyske | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Odense vs Randers FC | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Silkeborg vs Randers FC | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Aarhus vs Brondby | 5 | 1 | 3 | 1 | 20.0% | 60.0% | 20.0% |
+| Brondby vs Nordsjaelland | 15 | 8 | 2 | 5 | 53.3% | 13.3% | 33.3% |
+| Midtjylland vs Nordsjaelland | 15 | 8 | 6 | 1 | 53.3% | 40.0% | 6.7% |
+| Aarhus vs Nordsjaelland | 15 | 5 | 5 | 5 | 33.3% | 33.3% | 33.3% |
+| Brondby vs Midtjylland | 15 | 5 | 1 | 9 | 33.3% | 6.7% | 60.0% |
+| Brondby vs Aarhus | 15 | 4 | 8 | 3 | 26.7% | 53.3% | 20.0% |
+| FC Copenhagen vs Randers FC | 15 | 4 | 1 | 10 | 26.7% | 6.7% | 66.7% |
+| Midtjylland vs Aarhus | 15 | 4 | 5 | 6 | 26.7% | 33.3% | 40.0% |
+| Brondby vs FC Copenhagen | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Brondby vs Randers FC | 14 | 3 | 6 | 5 | 21.4% | 42.9% | 35.7% |
+| Nordsjaelland vs Viborg | 13 | 9 | 2 | 2 | 69.2% | 15.4% | 15.4% |
+| Aarhus vs Viborg | 13 | 7 | 4 | 2 | 53.8% | 30.8% | 15.4% |
+| FC Copenhagen vs Nordsjaelland | 13 | 7 | 2 | 4 | 53.8% | 15.4% | 30.8% |
+| FC Copenhagen vs Odense | 13 | 7 | 3 | 3 | 53.8% | 23.1% | 23.1% |
+| Midtjylland vs FC Copenhagen | 13 | 7 | 3 | 3 | 53.8% | 23.1% | 23.1% |
+| Randers FC vs Nordsjaelland | 13 | 7 | 4 | 2 | 53.8% | 30.8% | 15.4% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Midtjylland | 2 | 2 |
-| FC Copenhagen | 3 | 1 |
-| Aarhus | 1 | 11 |
-| Nordsjaelland | 4 | 4 |
-| Viborg | 6 | 3 |
-| Brondby | 5 | 5 |
-| Odense | 8 | 9 |
-| Sonderjyske | 7 | 12 |
-| Silkeborg | 9 | 6 |
-| Randers FC | 10 | 8 |
-| Fredericia | 11 | - |
-| Vejle | 12 | - |
-| Horsens | - | 7 |
-| Lyngby | - | 10 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Midtjylland | 2 | 2 | 8 | 1 | 1 | 2 | 2 |
+| FC Copenhagen | 4 | 1 | 2 | 3 | 2 | 3 | 1 |
+| Brondby | 1 | 3 | 6 | 2 | 6 | 5 | 5 |
+| Aarhus | 3 | 8 | 4 | 5 | 3 | 1 | 10 |
+| Nordsjaelland | 6 | 10 | 1 | 4 | 5 | 4 | 4 |
+| Randers FC | 5 | 5 | 5 | 10 | 4 | 10 | 9 |
+| Viborg | - | 7 | 3 | 9 | 8 | 6 | 3 |
+| Silkeborg | - | 6 | 7 | 6 | 7 | 9 | 8 |
+| Odense | 8 | 9 | 9 | 7 | - | 8 | 7 |
+| Sonderjyske | 7 | 12 | - | - | 11 | 7 | 11 |
+| Aalborg | 9 | 4 | 12 | - | 9 | - | - |
+| Vejle | 10 | 11 | - | 11 | 12 | 12 | - |
+| Lyngby | 11 | - | 11 | 8 | 10 | - | 12 |
+| Horsens | 12 | - | 10 | - | - | - | 6 |
+| Fredericia | - | - | - | - | - | 11 | - |
+| Hvidovre IF | - | - | - | 12 | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\denmark1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\denmark1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

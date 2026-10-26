@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:01:57+00:00
+- Generated: 2026-10-26T01:41:28+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -8,35 +8,119 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 677 |
-| Home wins | 299 (44.2%) |
-| Draws | 150 (22.2%) |
-| Away wins | 228 (33.7%) |
-| Total goals | 2001 |
-| Average goals per match | 2.956 |
-| Goalless matches | 29 (4.3%) |
+| Matches | 2885 |
+| Home wins | 1251 (43.4%) |
+| Draws | 713 (24.7%) |
+| Away wins | 921 (31.9%) |
+| Total goals | 8180 |
+| Average goals per match | 2.835 |
+| Goalless matches | 163 (5.6%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2021-2022 | 506 | 223 (44.1%) | 116 (22.9%) | 167 (33.0%) | 1386 | 2.739 | 36 (7.1%) |
+| 2022-2023 | 552 | 244 (44.2%) | 142 (25.7%) | 166 (30.1%) | 1540 | 2.79 | 27 (4.9%) |
+| 2023-2024 | 552 | 233 (42.2%) | 141 (25.5%) | 178 (32.2%) | 1623 | 2.94 | 33 (6.0%) |
+| 2024-2025 | 552 | 233 (42.2%) | 157 (28.4%) | 162 (29.3%) | 1488 | 2.696 | 37 (6.7%) |
 | 2025-2026 | 557 | 242 (43.4%) | 128 (23.0%) | 187 (33.6%) | 1626 | 2.919 | 28 (5.0%) |
-| 2026-2027 | 120 | 57 (47.5%) | 22 (18.3%) | 41 (34.2%) | 375 | 3.125 | 1 (0.8%) |
+| 2026-2027 | 166 | 76 (45.8%) | 29 (17.5%) | 61 (36.7%) | 517 | 3.114 | 2 (1.2%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 185 (79.7%) | 30 (12.9%) | 17 (7.3%) | 232 |
-| HT draw | 97 (34.8%) | 89 (31.9%) | 93 (33.3%) | 279 |
-| HT away lead | 16 (9.7%) | 31 (18.8%) | 118 (71.5%) | 165 |
-- *1 match(es) excluded (no HT score recorded).*
+| HT home lead | 748 (75.8%) | 166 (16.8%) | 73 (7.4%) | 987 |
+| HT draw | 403 (36.0%) | 390 (34.9%) | 325 (29.1%) | 1118 |
+| HT away lead | 98 (12.6%) | 157 (20.2%) | 523 (67.2%) | 778 |
+- *2 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **16** (2.4%)
-- Away comebacks (trailing at HT, won at FT): **17** (2.5%)
+- Home comebacks (trailing at HT, won at FT): **98** (3.4%)
+- Away comebacks (trailing at HT, won at FT): **73** (2.5%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2021-2022 | Grimsby | Barnet | 1-2 | 4-3 |
+| 2021-2022 | Dag & Red | Weymouth | 1-2 | 4-2 |
+| 2021-2022 | Stockport County | Wrexham | 0-1 | 2-1 |
+| 2021-2022 | Eastleigh | Woking | 1-2 | 3-2 |
+| 2021-2022 | Bromley | Grimsby | 0-1 | 3-1 |
+| 2021-2022 | Woking | Chesterfield | 0-1 | 3-1 |
+| 2021-2022 | FC Halifax | Notts Co | 0-1 | 3-2 |
+| 2021-2022 | Eastleigh | Altrincham | 0-1 | 2-1 |
+| 2021-2022 | Eastleigh | Torquay | 0-1 | 2-1 |
+| 2021-2022 | Wealdstone | Dover | 0-1 | 2-1 |
+| 2021-2022 | Southend | King’s Lynn | 0-1 | 2-1 |
+| 2021-2022 | Chesterfield | Notts Co | 0-1 | 3-1 |
+| 2021-2022 | Wealdstone | Weymouth | 0-1 | 3-2 |
+| 2021-2022 | Stockport County | Wealdstone | 0-2 | 4-2 |
+| 2021-2022 | Grimsby | Stockport County | 0-1 | 2-1 |
+| 2021-2022 | Woking | Wrexham | 0-1 | 2-1 |
+| 2021-2022 | Wealdstone | King’s Lynn | 0-1 | 2-1 |
+| 2022-2023 | Wrexham | Eastleigh | 0-1 | 2-1 |
+| 2022-2023 | Wealdstone | Bromley | 1-2 | 3-2 |
+| 2022-2023 | Maidstone | York City | 0-1 | 2-1 |
+| 2022-2023 | Eastleigh | Southend | 0-1 | 2-1 |
+| 2022-2023 | York City | Bromley | 0-1 | 2-1 |
+| 2022-2023 | Oldham | Eastleigh | 1-2 | 3-2 |
+| 2022-2023 | Scunthorpe | Dorking | 0-2 | 3-2 |
+| 2022-2023 | Wrexham | FC Halifax | 0-1 | 3-1 |
+| 2022-2023 | Eastleigh | Maidstone | 1-2 | 5-2 |
+| 2022-2023 | Altrincham | York City | 0-1 | 2-1 |
+| 2022-2023 | Woking | Maidstone | 0-1 | 3-1 |
+| 2022-2023 | Dorking | Maidstone | 1-2 | 3-2 |
+| 2022-2023 | Altrincham | FC Halifax | 0-1 | 2-1 |
+| 2022-2023 | Oldham | Dag & Red | 0-1 | 4-2 |
+| 2022-2023 | Notts Co | Barnet | 0-1 | 4-1 |
+| 2022-2023 | Southend | FC Halifax | 0-1 | 2-1 |
+| 2022-2023 | Notts Co | Eastleigh | 0-1 | 3-1 |
+| 2022-2023 | FC Halifax | Wrexham | 0-1 | 3-1 |
+| 2022-2023 | Wrexham | Notts Co | 0-1 | 3-2 |
+| 2022-2023 | Dorking | Altrincham | 1-2 | 3-2 |
+| 2022-2023 | Chesterfield | Eastleigh | 0-2 | 3-2 |
+| 2022-2023 | Southend | Wealdstone | 0-1 | 2-1 |
+| 2023-2024 | Wealdstone | York City | 0-1 | 2-1 |
+| 2023-2024 | Woking | Rochdale | 0-1 | 3-2 |
+| 2023-2024 | Altrincham | Chesterfield | 0-1 | 2-1 |
+| 2023-2024 | Chesterfield | Hartlepool | 1-2 | 3-2 |
+| 2023-2024 | Oxford City | Hartlepool | 1-2 | 5-2 |
+| 2023-2024 | Chesterfield | Dag & Red | 0-1 | 3-1 |
+| 2023-2024 | Chesterfield | Wealdstone | 0-1 | 3-2 |
+| 2023-2024 | Barnet | AFC Fylde | 0-1 | 2-1 |
+| 2023-2024 | Barnet | Maidenhead | 1-2 | 3-2 |
+| 2023-2024 | Southend | Chesterfield | 0-1 | 2-1 |
+| 2023-2024 | Wealdstone | Barnet | 1-2 | 3-2 |
+| 2023-2024 | Boreham Wood | Woking | 1-2 | 4-2 |
+| 2023-2024 | Altrincham | AFC Fylde | 0-1 | 2-1 |
+| 2023-2024 | Chesterfield | Solihull Moors | 0-1 | 3-2 |
+| 2023-2024 | Gateshead | Barnet | 0-1 | 2-1 |
+| 2023-2024 | Kidderminster | Oxford City | 0-2 | 3-2 |
+| 2023-2024 | Oldham | Boreham Wood | 0-1 | 2-1 |
+| 2023-2024 | Bromley | Chesterfield | 0-1 | 4-3 |
+| 2023-2024 | Hartlepool | Altrincham | 0-1 | 3-2 |
+| 2023-2024 | Southend | Aldershot | 0-1 | 4-1 |
+| 2023-2024 | Woking | Gateshead | 1-2 | 3-2 |
+| 2023-2024 | Woking | Kidderminster | 0-1 | 2-1 |
+| 2023-2024 | Ebbsfleet | Gateshead | 1-2 | 4-2 |
+| 2023-2024 | AFC Fylde | Oxford City | 0-1 | 2-1 |
+| 2023-2024 | York City | Chesterfield | 0-1 | 2-1 |
+| 2023-2024 | Gateshead | Bromley | 0-1 | 2-1 |
+| 2024-2025 | AFC Fylde | Solihull Moors | 1-2 | 3-2 |
+| 2024-2025 | Eastleigh | AFC Fylde | 1-2 | 4-2 |
+| 2024-2025 | Braintree | Aldershot | 0-1 | 2-1 |
+| 2024-2025 | Woking | Hartlepool | 0-2 | 3-2 |
+| 2024-2025 | Barnet | Boston Utd | 0-1 | 3-1 |
+| 2024-2025 | Hartlepool | Sutton | 0-2 | 4-3 |
+| 2024-2025 | FC Halifax | Tamworth | 0-2 | 3-2 |
+| 2024-2025 | Wealdstone | Braintree | 1-2 | 3-2 |
+| 2024-2025 | Tamworth | Dag & Red | 0-1 | 2-1 |
+| 2024-2025 | Oldham | Wealdstone | 1-2 | 3-2 |
+| 2024-2025 | Forest Green | Yeovil | 0-1 | 2-1 |
+| 2024-2025 | Yeovil | Tamworth | 0-1 | 2-1 |
+| 2024-2025 | Aldershot | Hartlepool | 0-1 | 3-2 |
+| 2024-2025 | Solihull Moors | Boston Utd | 1-2 | 3-2 |
+| 2024-2025 | Tamworth | AFC Fylde | 2-3 | 4-3 |
 | 2025-2026 | Eastleigh | Altrincham | 0-1 | 2-1 |
 | 2025-2026 | Altrincham | Sutton | 0-1 | 2-1 |
 | 2025-2026 | Wealdstone | Sutton | 1-2 | 4-2 |
@@ -53,10 +137,65 @@
 | 2026-2027 | Tamworth | Worthing | 0-1 | 3-2 |
 | 2026-2027 | Southend | Yeovil | 0-1 | 3-2 |
 | 2026-2027 | Tamworth | Wealdstone | 0-1 | 2-1 |
+| 2026-2027 | Boreham Wood | Altrincham | 0-1 | 3-1 |
+| 2026-2027 | FC Halifax | Gateshead | 0-1 | 4-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2021-2022 | FC Halifax | Maidenhead | 1-0 | 1-2 |
+| 2021-2022 | Yeovil | King’s Lynn | 1-0 | 1-2 |
+| 2021-2022 | Weymouth | Stockport County | 1-0 | 1-2 |
+| 2021-2022 | Notts Co | Woking | 1-0 | 1-4 |
+| 2021-2022 | Maidenhead | King’s Lynn | 1-0 | 2-3 |
+| 2021-2022 | Dag & Red | Altrincham | 2-1 | 2-3 |
+| 2021-2022 | Altrincham | Solihull Moors | 1-0 | 1-2 |
+| 2021-2022 | Woking | Aldershot | 1-0 | 2-3 |
+| 2021-2022 | King’s Lynn | Notts Co | 1-0 | 2-4 |
+| 2021-2022 | Yeovil | Wrexham | 1-0 | 1-2 |
+| 2021-2022 | Weymouth | Dag & Red | 1-0 | 1-2 |
+| 2021-2022 | Notts Co | Grimsby | 1-0 | 1-2 |
+| 2021-2022 | Chesterfield | Solihull Moors | 2-1 | 2-3 |
+| 2021-2022 | Grimsby | Solihull Moors | 1-0 | 1-2 |
+| 2021-2022 | Eastleigh | Barnet | 1-0 | 2-3 |
+| 2021-2022 | Weymouth | Wrexham | 1-0 | 1-6 |
+| 2022-2023 | Scunthorpe | Solihull Moors | 3-2 | 3-4 |
+| 2022-2023 | Dorking | Boreham Wood | 1-0 | 1-4 |
+| 2022-2023 | Altrincham | Chesterfield | 1-0 | 1-2 |
+| 2022-2023 | Aldershot | Wealdstone | 1-0 | 1-2 |
+| 2022-2023 | Oldham | Wrexham | 1-0 | 1-2 |
+| 2022-2023 | York City | Wealdstone | 1-0 | 1-2 |
+| 2022-2023 | Wealdstone | Gateshead | 1-0 | 1-2 |
+| 2022-2023 | York City | Solihull Moors | 1-0 | 2-3 |
+| 2022-2023 | Barnet | Altrincham | 2-1 | 2-4 |
+| 2022-2023 | Southend | Aldershot | 1-0 | 1-2 |
+| 2022-2023 | Torquay | Dag & Red | 1-0 | 1-2 |
+| 2023-2024 | Gateshead | Woking | 1-0 | 1-3 |
+| 2023-2024 | Woking | FC Halifax | 1-0 | 1-2 |
+| 2023-2024 | Dorking | Barnet | 2-0 | 2-3 |
+| 2023-2024 | Bromley | Aldershot | 2-0 | 2-3 |
+| 2023-2024 | Solihull Moors | Oldham | 1-0 | 2-3 |
+| 2023-2024 | Oldham | Gateshead | 1-0 | 1-2 |
+| 2023-2024 | FC Halifax | Aldershot | 1-0 | 1-2 |
+| 2023-2024 | Altrincham | Gateshead | 1-0 | 2-3 |
+| 2023-2024 | Eastleigh | Maidenhead | 2-0 | 2-3 |
+| 2023-2024 | Oldham | Wealdstone | 1-0 | 2-3 |
+| 2024-2025 | AFC Fylde | Yeovil | 2-0 | 3-4 |
+| 2024-2025 | Boston Utd | Hartlepool | 1-0 | 1-2 |
+| 2024-2025 | Eastleigh | Forest Green | 1-0 | 1-3 |
+| 2024-2025 | Boston Utd | AFC Fylde | 1-0 | 1-2 |
+| 2024-2025 | FC Halifax | York City | 1-0 | 1-2 |
+| 2024-2025 | Eastleigh | Braintree | 1-0 | 1-2 |
+| 2024-2025 | Dag & Red | Barnet | 2-1 | 3-4 |
+| 2024-2025 | Sutton | Tamworth | 1-0 | 1-2 |
+| 2024-2025 | Braintree | Wealdstone | 1-0 | 1-2 |
+| 2024-2025 | AFC Fylde | Sutton | 1-0 | 1-2 |
+| 2024-2025 | Gateshead | Braintree | 1-0 | 1-3 |
+| 2024-2025 | Wealdstone | Aldershot | 1-0 | 1-3 |
+| 2024-2025 | Aldershot | Boston Utd | 1-0 | 1-2 |
+| 2024-2025 | Oldham | Woking | 1-0 | 1-2 |
+| 2024-2025 | Tamworth | Solihull Moors | 1-0 | 1-2 |
+| 2024-2025 | Yeovil | Sutton | 1-0 | 1-2 |
 | 2025-2026 | Yeovil | Gateshead | 3-0 | 3-4 |
 | 2025-2026 | Sutton | Boreham Wood | 2-1 | 3-4 |
 | 2025-2026 | Braintree | York City | 1-0 | 2-3 |
@@ -74,48 +213,55 @@
 | 2026-2027 | Worthing | Boreham Wood | 1-0 | 2-3 |
 | 2026-2027 | Boston Utd | Hornchurch | 2-1 | 2-3 |
 | 2026-2027 | Solihull Moors | Aldershot | 1-0 | 1-2 |
+| 2026-2027 | Solihull Moors | Carlisle | 1-0 | 1-2 |
+| 2026-2027 | Yeovil | Altrincham | 1-0 | 1-2 |
+| 2026-2027 | Kidderminster | Worthing | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 232 | 185 (79.7%) | 30 (12.9%) | 17 (7.3%) |
-| Away lead | 165 | 118 (71.5%) | 31 (18.8%) | 16 (9.7%) |
+| Home lead | 987 | 748 (75.8%) | 166 (16.8%) | 73 (7.4%) |
+| Away lead | 778 | 523 (67.2%) | 157 (20.2%) | 98 (12.6%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 97 | 34.8% |
-| Draw | 89 | 31.9% |
-| Away win | 93 | 33.3% |
-- *1 match(es) excluded (no HT score recorded).*
+| Home win | 403 | 36.0% |
+| Draw | 390 | 34.9% |
+| Away win | 325 | 29.1% |
+- *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `647` of `677` (95.6%)
+- Matches with a first-goal time recorded: `2720` of `2885` (94.3%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 210 | 31.0% | 98 (46.7%) | 40 (19.0%) | 72 (34.3%) |
-| 16-30 | 164 | 24.2% | 84 (51.2%) | 25 (15.2%) | 55 (33.5%) |
-| 31-45 | 93 | 13.7% | 44 (47.3%) | 16 (17.2%) | 33 (35.5%) |
-| 46-60 | 90 | 13.3% | 37 (41.1%) | 20 (22.2%) | 33 (36.7%) |
-| 61-75 | 47 | 6.9% | 17 (36.2%) | 14 (29.8%) | 16 (34.0%) |
-| 76-90 | 27 | 4.0% | 11 (40.7%) | 4 (14.8%) | 12 (44.4%) |
-| 91-120 | 16 | 2.4% | 7 (43.8%) | 2 (12.5%) | 7 (43.8%) |
+| 1-15 | 908 | 31.5% | 436 (48.0%) | 166 (18.3%) | 306 (33.7%) |
+| 16-30 | 672 | 23.3% | 319 (47.5%) | 138 (20.5%) | 215 (32.0%) |
+| 31-45 | 453 | 15.7% | 205 (45.3%) | 97 (21.4%) | 151 (33.3%) |
+| 46-60 | 347 | 12.0% | 142 (40.9%) | 87 (25.1%) | 118 (34.0%) |
+| 61-75 | 197 | 6.8% | 80 (40.6%) | 42 (21.3%) | 75 (38.1%) |
+| 76-90 | 107 | 3.7% | 48 (44.9%) | 17 (15.9%) | 42 (39.3%) |
+| 91-120 | 36 | 1.2% | 19 (52.8%) | 3 (8.3%) | 14 (38.9%) |
 
 ## 7. Goalless matches
-- Overall: **29** of `677` (4.3%)
+- Overall: **163** of `2885` (5.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2021-2022 | 506 | 36 | 7.1% |
+| 2022-2023 | 552 | 27 | 4.9% |
+| 2023-2024 | 552 | 33 | 6.0% |
+| 2024-2025 | 552 | 37 | 6.7% |
 | 2025-2026 | 557 | 28 | 5.0% |
-| 2026-2027 | 120 | 1 | 0.8% |
+| 2026-2027 | 166 | 2 | 1.2% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\national\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\national\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

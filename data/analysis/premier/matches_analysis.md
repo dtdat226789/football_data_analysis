@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:03:59+00:00
+- Generated: 2026-10-26T01:43:33+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2330 |
-| Home wins | 1001 (43.0%) |
-| Draws | 553 (23.7%) |
-| Away wins | 776 (33.3%) |
-| Total goals | 6726 |
+| Matches | 2355 |
+| Home wins | 1013 (43.0%) |
+| Draws | 558 (23.7%) |
+| Away wins | 784 (33.3%) |
+| Total goals | 6798 |
 | Average goals per match | 2.887 |
-| Goalless matches | 134 (5.8%) |
+| Goalless matches | 134 (5.7%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,18 +25,18 @@
 | 2023-2024 | 380 | 175 (46.1%) | 82 (21.6%) | 123 (32.4%) | 1246 | 3.279 | 11 (2.9%) |
 | 2024-2025 | 380 | 155 (40.8%) | 93 (24.5%) | 132 (34.7%) | 1115 | 2.934 | 16 (4.2%) |
 | 2025-2026 | 380 | 162 (42.6%) | 104 (27.4%) | 114 (30.0%) | 1045 | 2.75 | 27 (7.1%) |
-| 2026-2027 | 50 | 18 (36.0%) | 16 (32.0%) | 16 (32.0%) | 141 | 2.82 | 5 (10.0%) |
+| 2026-2027 | 75 | 30 (40.0%) | 21 (28.0%) | 24 (32.0%) | 213 | 2.84 | 5 (6.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 619 (75.9%) | 133 (16.3%) | 64 (7.8%) | 816 |
-| HT draw | 312 (34.5%) | 315 (34.8%) | 278 (30.7%) | 905 |
-| HT away lead | 70 (11.5%) | 105 (17.2%) | 434 (71.3%) | 609 |
+| HT home lead | 629 (76.1%) | 133 (16.1%) | 65 (7.9%) | 827 |
+| HT draw | 314 (34.2%) | 319 (34.8%) | 284 (31.0%) | 917 |
+| HT away lead | 70 (11.5%) | 106 (17.3%) | 435 (71.2%) | 611 |
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **70** (3.0%)
-- Away comebacks (trailing at HT, won at FT): **64** (2.7%)
+- Away comebacks (trailing at HT, won at FT): **65** (2.8%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -179,36 +179,37 @@
 | 2025-2026 | Everton | Sunderland | 1-0 | 1-3 |
 | 2025-2026 | Manchester City | Aston Villa | 1-0 | 1-2 |
 | 2026-2027 | Fulham | Crystal Palace | 2-1 | 2-3 |
+| 2026-2027 | Brentford | Liverpool | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 816 | 619 (75.9%) | 133 (16.3%) | 64 (7.8%) |
-| Away lead | 609 | 434 (71.3%) | 105 (17.2%) | 70 (11.5%) |
+| Home lead | 827 | 629 (76.1%) | 133 (16.1%) | 65 (7.9%) |
+| Away lead | 611 | 435 (71.2%) | 106 (17.3%) | 70 (11.5%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 312 | 34.5% |
-| Draw | 315 | 34.8% |
-| Away win | 278 | 30.7% |
+| Home win | 314 | 34.2% |
+| Draw | 319 | 34.8% |
+| Away win | 284 | 31.0% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2196` of `2330` (94.2%)
+- Matches with a first-goal time recorded: `2221` of `2355` (94.3%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 753 | 32.3% | 357 (47.4%) | 139 (18.5%) | 257 (34.1%) |
-| 16-30 | 542 | 23.3% | 250 (46.1%) | 101 (18.6%) | 191 (35.2%) |
-| 31-45 | 352 | 15.1% | 159 (45.2%) | 75 (21.3%) | 118 (33.5%) |
-| 46-60 | 294 | 12.6% | 129 (43.9%) | 58 (19.7%) | 107 (36.4%) |
-| 61-75 | 146 | 6.3% | 63 (43.2%) | 34 (23.3%) | 49 (33.6%) |
-| 76-90 | 88 | 3.8% | 34 (38.6%) | 11 (12.5%) | 43 (48.9%) |
+| 1-15 | 763 | 32.4% | 365 (47.8%) | 141 (18.5%) | 257 (33.7%) |
+| 16-30 | 543 | 23.1% | 251 (46.2%) | 101 (18.6%) | 191 (35.2%) |
+| 31-45 | 356 | 15.1% | 160 (44.9%) | 76 (21.3%) | 120 (33.7%) |
+| 46-60 | 299 | 12.7% | 131 (43.8%) | 59 (19.7%) | 109 (36.5%) |
+| 61-75 | 148 | 6.3% | 63 (42.6%) | 35 (23.6%) | 50 (33.8%) |
+| 76-90 | 91 | 3.9% | 34 (37.4%) | 11 (12.1%) | 46 (50.5%) |
 | 91-120 | 21 | 0.9% | 9 (42.9%) | 1 (4.8%) | 11 (52.4%) |
 
 ## 7. Goalless matches
-- Overall: **134** of `2330` (5.8%)
+- Overall: **134** of `2355` (5.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -218,13 +219,13 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 11 | 2.9% |
 | 2024-2025 | 380 | 16 | 4.2% |
 | 2025-2026 | 380 | 27 | 7.1% |
-| 2026-2027 | 50 | 5 | 10.0% |
+| 2026-2027 | 75 | 5 | 6.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\premier\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\premier\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

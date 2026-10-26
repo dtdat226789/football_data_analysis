@@ -1,34 +1,34 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T16:04:06+00:00
+- Generated: 2026-10-26T01:43:41+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
 
 ## 1. Scoreline frequency
-- Matches analysed: **2330** across **7** seasons.
+- Matches analysed: **2355** across **7** seasons.
 - Distinct scorelines seen: **46**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 255 | 10.9% |
-| 1-0 | 192 | 8.2% |
-| 2-1 | 191 | 8.2% |
-| 0-1 | 173 | 7.4% |
-| 1-2 | 160 | 6.9% |
-| 2-0 | 156 | 6.7% |
-| 2-2 | 137 | 5.9% |
-| 0-0 | 134 | 5.8% |
-| 0-2 | 129 | 5.5% |
-| 3-1 | 111 | 4.8% |
-| 3-0 | 107 | 4.6% |
+| 1-1 | 258 | 11.0% |
+| 2-1 | 194 | 8.2% |
+| 1-0 | 193 | 8.2% |
+| 0-1 | 176 | 7.5% |
+| 1-2 | 161 | 6.8% |
+| 2-0 | 158 | 6.7% |
+| 2-2 | 139 | 5.9% |
+| 0-0 | 134 | 5.7% |
+| 0-2 | 132 | 5.6% |
+| 3-1 | 113 | 4.8% |
+| 3-0 | 107 | 4.5% |
 | 1-3 | 71 | 3.0% |
-| 0-3 | 65 | 2.8% |
-| 3-2 | 58 | 2.5% |
+| 0-3 | 66 | 2.8% |
+| 3-2 | 59 | 2.5% |
 | 2-3 | 54 | 2.3% |
-| 4-1 | 46 | 2.0% |
+| 4-1 | 47 | 2.0% |
 | 4-0 | 37 | 1.6% |
-| 1-4 | 34 | 1.5% |
+| 1-4 | 34 | 1.4% |
 | 0-4 | 25 | 1.1% |
 | 4-2 | 23 | 1.0% |
 
@@ -91,24 +91,24 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 0-1 | 6 | 12.0% |
-| 2-2 | 6 | 12.0% |
-| 1-1 | 5 | 10.0% |
-| 0-0 | 5 | 10.0% |
-| 3-0 | 4 | 8.0% |
+| 0-1 | 9 | 12.0% |
+| 2-2 | 8 | 10.7% |
+| 1-1 | 8 | 10.7% |
+| 2-1 | 7 | 9.3% |
+| 0-2 | 6 | 8.0% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 134 | 5.8% |
-| 1 | 365 | 15.7% |
-| 2 | 540 | 23.2% |
-| 3 | 523 | 22.4% |
-| 4 | 381 | 16.4% |
-| 5 | 226 | 9.7% |
-| 6 | 94 | 4.0% |
+| 0 | 134 | 5.7% |
+| 1 | 369 | 15.7% |
+| 2 | 548 | 23.3% |
+| 3 | 528 | 22.4% |
+| 4 | 385 | 16.3% |
+| 5 | 229 | 9.7% |
+| 6 | 95 | 4.0% |
 | 7 | 49 | 2.1% |
 | 8 | 11 | 0.5% |
 | 9 | 7 | 0.3% |
@@ -188,47 +188,47 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-08-30 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1777** (draws: **553**)
+- Decided matches: **1797** (draws: **558**)
 - Average winning margin: **1.88**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 853 | 48.0% |
-| 2 | 510 | 28.7% |
-| 3+ | 414 | 23.3% |
+| 1 | 862 | 48.0% |
+| 2 | 517 | 28.8% |
+| 3+ | 418 | 23.3% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **1001** | avg margin: **1.93** | max margin: **9**
+- Matches: **1013** | avg margin: **1.93** | max margin: **9**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 458 | 45.8% |
-| 2 | 293 | 29.3% |
-| 3+ | 250 | 25.0% |
+| 1 | 463 | 45.7% |
+| 2 | 297 | 29.3% |
+| 3+ | 253 | 25.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **776** | avg margin: **1.82** | max margin: **8**
+- Matches: **784** | avg margin: **1.82** | max margin: **8**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 395 | 50.9% |
-| 2 | 217 | 28.0% |
-| 3+ | 164 | 21.1% |
+| 1 | 399 | 50.9% |
+| 2 | 220 | 28.1% |
+| 3+ | 165 | 21.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 1001 | 1-0 | 192 | 19.2% |
-| draw | 553 | 1-1 | 255 | 46.1% |
-| away | 776 | 0-1 | 173 | 22.3% |
+| home | 1013 | 2-1 | 194 | 19.2% |
+| draw | 558 | 1-1 | 258 | 46.2% |
+| away | 784 | 0-1 | 176 | 22.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\premier\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\premier\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

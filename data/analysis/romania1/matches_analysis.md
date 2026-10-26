@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:04:44+00:00
+- Generated: 2026-10-26T01:44:39+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Superliga (Romania)
 - Scope: league `romania1`
@@ -8,34 +8,64 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 429 |
-| Home wins | 199 (46.4%) |
-| Draws | 117 (27.3%) |
-| Away wins | 113 (26.3%) |
-| Total goals | 1095 |
-| Average goals per match | 2.552 |
-| Goalless matches | 32 (7.5%) |
+| Matches | 1651 |
+| Home wins | 698 (42.3%) |
+| Draws | 483 (29.3%) |
+| Away wins | 470 (28.5%) |
+| Total goals | 3956 |
+| Average goals per match | 2.396 |
+| Goalless matches | 158 (9.6%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 240 | 83 (34.6%) | 74 (30.8%) | 83 (34.6%) | 549 | 2.288 | 25 (10.4%) |
+| 2021-2022 | 240 | 103 (42.9%) | 68 (28.3%) | 69 (28.8%) | 521 | 2.171 | 28 (11.7%) |
+| 2022-2023 | 240 | 107 (44.6%) | 63 (26.2%) | 70 (29.2%) | 562 | 2.342 | 17 (7.1%) |
+| 2023-2024 | 240 | 96 (40.0%) | 80 (33.3%) | 64 (26.7%) | 615 | 2.562 | 30 (12.5%) |
+| 2024-2025 | 240 | 100 (41.7%) | 78 (32.5%) | 62 (25.8%) | 553 | 2.304 | 26 (10.8%) |
 | 2025-2026 | 350 | 155 (44.3%) | 96 (27.4%) | 99 (28.3%) | 887 | 2.534 | 25 (7.1%) |
-| 2026-2027 | 79 | 44 (55.7%) | 21 (26.6%) | 14 (17.7%) | 208 | 2.633 | 7 (8.9%) |
+| 2026-2027 | 101 | 54 (53.5%) | 24 (23.8%) | 23 (22.8%) | 269 | 2.663 | 7 (6.9%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 123 (82.0%) | 23 (15.3%) | 4 (2.7%) | 150 |
-| HT draw | 65 (34.6%) | 73 (38.8%) | 50 (26.6%) | 188 |
-| HT away lead | 11 (12.1%) | 21 (23.1%) | 59 (64.8%) | 91 |
+| HT home lead | 399 (76.1%) | 101 (19.3%) | 24 (4.6%) | 524 |
+| HT draw | 263 (35.2%) | 288 (38.5%) | 197 (26.3%) | 748 |
+| HT away lead | 36 (9.5%) | 94 (24.9%) | 248 (65.6%) | 378 |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **11** (2.6%)
-- Away comebacks (trailing at HT, won at FT): **4** (0.9%)
+- Home comebacks (trailing at HT, won at FT): **36** (2.2%)
+- Away comebacks (trailing at HT, won at FT): **24** (1.5%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | FC Hermannstadt | FC Voluntari | 1-2 | 3-2 |
+| 2020-2021 | LPS HD Clinceni | Poli Iasi | 0-1 | 2-1 |
+| 2020-2021 | FC Arges | Chindia Targoviste | 0-1 | 3-1 |
+| 2021-2022 | CFR Cluj | Gaz Metan Medias | 0-1 | 2-1 |
+| 2021-2022 | FCSB | FC Botosani | 0-1 | 3-1 |
+| 2021-2022 | FCSB | Chindia Targoviste | 0-2 | 3-2 |
+| 2022-2023 | FCSB | Chindia Targoviste | 0-2 | 3-2 |
+| 2022-2023 | Farul Constanta | FC Voluntari | 0-1 | 2-1 |
+| 2022-2023 | FC Arges | Chindia Targoviste | 0-1 | 2-1 |
+| 2022-2023 | Univ. Craiova | Farul Constanta | 2-3 | 4-3 |
+| 2022-2023 | U Craiova 1948 | FC Voluntari | 0-1 | 2-1 |
+| 2022-2023 | Univ. Craiova | UTA Arad | 0-1 | 2-1 |
+| 2023-2024 | FC Hermannstadt | UTA Arad | 0-1 | 2-1 |
+| 2023-2024 | FC Hermannstadt | FC Voluntari | 0-1 | 3-1 |
+| 2023-2024 | Sepsi Sf. Gheorghe | CFR Cluj | 0-1 | 2-1 |
+| 2023-2024 | FC Botosani | Poli Iasi | 0-1 | 2-1 |
+| 2023-2024 | Petrolul | Poli Iasi | 0-1 | 2-1 |
+| 2024-2025 | CFR Cluj | Din. Bucuresti | 1-2 | 3-2 |
+| 2024-2025 | FCSB | Farul Constanta | 1-2 | 3-2 |
+| 2024-2025 | FC Hermannstadt | FC Botosani | 0-1 | 2-1 |
+| 2024-2025 | Poli Iasi | Otelul | 0-1 | 2-1 |
+| 2024-2025 | U. Cluj | CFR Cluj | 0-1 | 3-2 |
+| 2024-2025 | U. Cluj | Gloria Buzau | 0-1 | 2-1 |
+| 2024-2025 | U. Cluj | Unirea Slobozia | 1-2 | 3-2 |
 | 2025-2026 | Univ. Craiova | U. Cluj | 0-1 | 2-1 |
 | 2025-2026 | Unirea Slobozia | Metaloglobus Bucharest | 0-1 | 2-1 |
 | 2025-2026 | Metaloglobus Bucharest | FCSB | 0-1 | 2-1 |
@@ -47,55 +77,82 @@
 | 2026-2027 | U. Cluj | FC Botosani | 0-1 | 2-1 |
 | 2026-2027 | Sepsi Sf. Gheorghe | CFR Cluj | 0-1 | 3-1 |
 | 2026-2027 | FC Rapid Bucuresti | FC Voluntari | 0-1 | 2-1 |
+| 2026-2027 | FCSB | FC Rapid Bucuresti | 0-1 | 4-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | FC Voluntari | Sepsi Sf. Gheorghe | 1-0 | 1-2 |
+| 2020-2021 | FC Botosani | UTA Arad | 2-1 | 2-3 |
+| 2020-2021 | Chindia Targoviste | Sepsi Sf. Gheorghe | 1-0 | 1-2 |
+| 2020-2021 | Poli Iasi | UTA Arad | 1-0 | 1-2 |
+| 2021-2022 | Univ. Craiova | FC Botosani | 1-0 | 1-2 |
+| 2021-2022 | FC Rapid Bucuresti | Univ. Craiova | 1-0 | 1-2 |
+| 2021-2022 | LPS HD Clinceni | FC Rapid Bucuresti | 1-0 | 2-3 |
+| 2022-2023 | FC Hermannstadt | Sepsi Sf. Gheorghe | 1-0 | 1-2 |
+| 2022-2023 | Petrolul | Chindia Targoviste | 1-0 | 1-2 |
+| 2023-2024 | Poli Iasi | Univ. Craiova | 1-0 | 1-4 |
+| 2023-2024 | U. Cluj | CFR Cluj | 2-1 | 3-4 |
+| 2023-2024 | Otelul | Univ. Craiova | 1-0 | 1-3 |
+| 2023-2024 | FC Rapid Bucuresti | U. Cluj | 2-1 | 2-3 |
+| 2023-2024 | Petrolul | CFR Cluj | 1-0 | 1-2 |
+| 2023-2024 | FC Voluntari | FCSB | 1-0 | 1-2 |
+| 2023-2024 | U Craiova 1948 | Univ. Craiova | 1-0 | 1-2 |
+| 2024-2025 | CFR Cluj | U. Cluj | 1-0 | 2-3 |
+| 2024-2025 | UTA Arad | Univ. Craiova | 1-0 | 1-2 |
+| 2024-2025 | Unirea Slobozia | FC Hermannstadt | 1-0 | 1-2 |
 | 2025-2026 | FCSB | Farul Constanta | 1-0 | 1-2 |
 | 2025-2026 | FC Rapid Bucuresti | U. Cluj | 1-0 | 1-2 |
 | 2025-2026 | Unirea Slobozia | Petrolul | 1-0 | 1-2 |
 | 2025-2026 | Farul Constanta | FCSB | 1-0 | 2-3 |
+| 2026-2027 | CFR Cluj | U. Cluj | 1-0 | 1-3 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 150 | 123 (82.0%) | 23 (15.3%) | 4 (2.7%) |
-| Away lead | 91 | 59 (64.8%) | 21 (23.1%) | 11 (12.1%) |
+| Home lead | 524 | 399 (76.1%) | 101 (19.3%) | 24 (4.6%) |
+| Away lead | 378 | 248 (65.6%) | 94 (24.9%) | 36 (9.5%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 65 | 34.6% |
-| Draw | 73 | 38.8% |
-| Away win | 50 | 26.6% |
+| Home win | 263 | 35.2% |
+| Draw | 288 | 38.5% |
+| Away win | 197 | 26.3% |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `397` of `429` (92.5%)
+- Matches with a first-goal time recorded: `1492` of `1651` (90.4%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 112 | 26.1% | 59 (52.7%) | 21 (18.8%) | 32 (28.6%) |
-| 16-30 | 97 | 22.6% | 50 (51.5%) | 21 (21.6%) | 26 (26.8%) |
-| 31-45 | 70 | 16.3% | 37 (52.9%) | 19 (27.1%) | 14 (20.0%) |
-| 46-60 | 50 | 11.7% | 21 (42.0%) | 15 (30.0%) | 14 (28.0%) |
-| 61-75 | 46 | 10.7% | 18 (39.1%) | 7 (15.2%) | 21 (45.7%) |
-| 76-90 | 15 | 3.5% | 9 (60.0%) | 2 (13.3%) | 4 (26.7%) |
-| 91-120 | 7 | 1.6% | 5 (71.4%) | 0 (0.0%) | 2 (28.6%) |
+| 1-15 | 450 | 27.3% | 221 (49.1%) | 102 (22.7%) | 127 (28.2%) |
+| 16-30 | 357 | 21.6% | 169 (47.3%) | 82 (23.0%) | 106 (29.7%) |
+| 31-45 | 241 | 14.6% | 107 (44.4%) | 65 (27.0%) | 69 (28.6%) |
+| 46-60 | 207 | 12.5% | 87 (42.0%) | 50 (24.2%) | 70 (33.8%) |
+| 61-75 | 137 | 8.3% | 60 (43.8%) | 20 (14.6%) | 57 (41.6%) |
+| 76-90 | 72 | 4.4% | 36 (50.0%) | 6 (8.3%) | 30 (41.7%) |
+| 91-120 | 28 | 1.7% | 18 (64.3%) | 0 (0.0%) | 10 (35.7%) |
 
 ## 7. Goalless matches
-- Overall: **32** of `429` (7.5%)
+- Overall: **158** of `1651` (9.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 240 | 25 | 10.4% |
+| 2021-2022 | 240 | 28 | 11.7% |
+| 2022-2023 | 240 | 17 | 7.1% |
+| 2023-2024 | 240 | 30 | 12.5% |
+| 2024-2025 | 240 | 26 | 10.8% |
 | 2025-2026 | 350 | 25 | 7.1% |
-| 2026-2027 | 79 | 7 | 8.9% |
+| 2026-2027 | 101 | 7 | 6.9% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\romania1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\romania1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

@@ -1,133 +1,142 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:44:08+00:00
+- Generated: 2026-10-26T01:26:19+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Bundesliga (Austria)
 - Scope: league `austria1`
 
-- Teams: **13** | Seasons: **2** | Matches: **237**
+- Teams: **16** | Seasons: **7** | Matches: **913**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| LASK | 2 | 39 | 22 | 8 | 9 | 74 | 75 | 49 | 26 | 37.0 | 1 | 3 | 1 |
-| Sturm Graz | 2 | 39 | 19 | 10 | 10 | 67 | 59 | 44 | 15 | 33.5 | 2 | 4 | 0 |
-| Salzburg | 2 | 39 | 18 | 11 | 10 | 65 | 74 | 45 | 29 | 32.5 | 2 | 3 | 0 |
-| SK Rapid | 2 | 41 | 19 | 8 | 14 | 65 | 61 | 50 | 11 | 32.5 | 1 | 5 | 1 |
-| Ried | 2 | 42 | 16 | 8 | 18 | 56 | 53 | 59 | -6 | 28.0 | 4 | 5 | 0 |
-| Austria Vienna | 2 | 39 | 16 | 6 | 17 | 54 | 52 | 63 | -11 | 27.0 | 6 | 10 | 0 |
-| Hartberg | 2 | 39 | 12 | 14 | 13 | 50 | 50 | 53 | -3 | 25.0 | 6 | 7 | 0 |
-| Tirol | 2 | 39 | 12 | 12 | 15 | 48 | 49 | 64 | -15 | 24.0 | 7 | 10 | 0 |
-| Wolfsberger AC | 2 | 40 | 12 | 10 | 18 | 46 | 49 | 57 | -8 | 23.0 | 9 | 11 | 0 |
-| Altach | 2 | 39 | 11 | 12 | 16 | 45 | 41 | 51 | -10 | 22.5 | 8 | 12 | 0 |
-| Grazer AK | 2 | 39 | 11 | 12 | 16 | 45 | 48 | 61 | -13 | 22.5 | 9 | 11 | 0 |
-| BW Linz | 1 | 32 | 8 | 5 | 19 | 29 | 37 | 49 | -12 | 29.0 | 12 | 12 | 0 |
-| A. Lustenau | 1 | 7 | 2 | 2 | 3 | 8 | 8 | 11 | -3 | 8.0 | 8 | 8 | 0 |
+| Salzburg | 7 | 151 | 95 | 34 | 22 | 319 | 321 | 129 | 192 | 45.57 | 1 | 3 | 4 |
+| Sturm Graz | 7 | 151 | 83 | 40 | 28 | 289 | 272 | 155 | 117 | 41.29 | 1 | 4 | 1 |
+| SK Rapid | 7 | 154 | 70 | 40 | 44 | 250 | 253 | 179 | 74 | 35.71 | 1 | 6 | 1 |
+| LASK | 7 | 151 | 70 | 38 | 43 | 248 | 245 | 180 | 65 | 35.43 | 1 | 8 | 1 |
+| Austria Vienna | 7 | 152 | 63 | 37 | 52 | 226 | 215 | 197 | 18 | 32.29 | 2 | 11 | 0 |
+| Wolfsberger AC | 7 | 153 | 58 | 29 | 66 | 203 | 231 | 237 | -6 | 29.0 | 3 | 12 | 0 |
+| Hartberg | 7 | 152 | 46 | 47 | 59 | 185 | 189 | 233 | -44 | 26.43 | 4 | 11 | 0 |
+| Tirol | 7 | 152 | 42 | 40 | 70 | 166 | 192 | 253 | -61 | 23.71 | 6 | 11 | 0 |
+| Altach | 7 | 152 | 33 | 38 | 81 | 137 | 135 | 245 | -110 | 19.57 | 8 | 12 | 0 |
+| Ried | 5 | 110 | 33 | 26 | 51 | 125 | 126 | 181 | -55 | 25.0 | 4 | 11 | 0 |
+| A. Klagenfurt | 4 | 88 | 29 | 28 | 31 | 115 | 117 | 144 | -27 | 28.75 | 5 | 9 | 0 |
+| BW Linz | 3 | 76 | 22 | 15 | 39 | 81 | 89 | 116 | -27 | 27.0 | 6 | 12 | 0 |
+| Grazer AK | 3 | 64 | 14 | 21 | 29 | 63 | 77 | 113 | -36 | 21.0 | 8 | 12 | 0 |
+| A. Lustenau | 3 | 54 | 11 | 12 | 31 | 45 | 54 | 110 | -56 | 15.0 | 8 | 12 | 0 |
+| Admira | 2 | 44 | 7 | 13 | 24 | 34 | 47 | 81 | -34 | 17.0 | 11 | 12 | 0 |
+| St. Polten | 1 | 22 | 5 | 6 | 11 | 21 | 33 | 43 | -10 | 21.0 | 9 | 9 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Ried | 22 | 12 | 4 | 6 | 40 | 20 | 4 | 4 | 12 | 16 | 24 |
-| Altach | 19 | 9 | 6 | 4 | 33 | 20 | 2 | 6 | 12 | 12 | 21 |
-| Grazer AK | 19 | 7 | 9 | 3 | 30 | 20 | 4 | 3 | 13 | 15 | 15 |
-| BW Linz | 16 | 7 | 1 | 8 | 22 | 16 | 1 | 4 | 11 | 7 | 15 |
-| SK Rapid | 21 | 12 | 2 | 7 | 38 | 20 | 7 | 6 | 7 | 27 | 11 |
-| LASK | 19 | 13 | 3 | 3 | 42 | 20 | 9 | 5 | 6 | 32 | 10 |
-| Wolfsberger AC | 20 | 7 | 7 | 6 | 28 | 20 | 5 | 3 | 12 | 18 | 10 |
-| Tirol | 19 | 7 | 7 | 5 | 28 | 20 | 5 | 5 | 10 | 20 | 8 |
-| A. Lustenau | 4 | 2 | 1 | 1 | 7 | 3 | 0 | 1 | 2 | 1 | 6 |
-| Salzburg | 20 | 10 | 4 | 6 | 34 | 19 | 8 | 7 | 4 | 31 | 3 |
-| Austria Vienna | 19 | 7 | 3 | 9 | 24 | 20 | 9 | 3 | 8 | 30 | -6 |
-| Sturm Graz | 19 | 8 | 6 | 5 | 30 | 20 | 11 | 4 | 5 | 37 | -7 |
-| Hartberg | 20 | 5 | 6 | 9 | 21 | 19 | 7 | 8 | 4 | 29 | -8 |
+| Ried | 56 | 24 | 15 | 17 | 87 | 54 | 9 | 11 | 34 | 38 | 49 |
+| SK Rapid | 78 | 44 | 12 | 22 | 144 | 76 | 26 | 28 | 22 | 106 | 38 |
+| Altach | 76 | 21 | 22 | 33 | 85 | 76 | 12 | 16 | 48 | 52 | 33 |
+| BW Linz | 38 | 16 | 7 | 15 | 55 | 38 | 6 | 8 | 24 | 26 | 29 |
+| Salzburg | 76 | 52 | 13 | 11 | 169 | 75 | 43 | 21 | 11 | 150 | 19 |
+| Sturm Graz | 75 | 45 | 17 | 13 | 152 | 76 | 38 | 23 | 15 | 137 | 15 |
+| Austria Vienna | 75 | 33 | 21 | 21 | 120 | 77 | 30 | 16 | 31 | 106 | 14 |
+| Hartberg | 77 | 25 | 24 | 28 | 99 | 75 | 21 | 23 | 31 | 86 | 13 |
+| Grazer AK | 31 | 8 | 14 | 9 | 38 | 33 | 6 | 7 | 20 | 25 | 13 |
+| A. Lustenau | 27 | 8 | 4 | 15 | 28 | 27 | 3 | 8 | 16 | 17 | 11 |
+| LASK | 75 | 38 | 15 | 22 | 129 | 76 | 32 | 23 | 21 | 119 | 10 |
+| Admira | 22 | 5 | 4 | 13 | 19 | 22 | 2 | 9 | 11 | 15 | 4 |
+| A. Klagenfurt | 44 | 14 | 17 | 13 | 59 | 44 | 15 | 11 | 18 | 56 | 3 |
+| Tirol | 76 | 18 | 28 | 30 | 82 | 76 | 24 | 12 | 40 | 84 | -2 |
+| Wolfsberger AC | 76 | 27 | 16 | 33 | 97 | 77 | 31 | 13 | 33 | 106 | -9 |
+| St. Polten | 11 | 1 | 3 | 7 | 6 | 11 | 4 | 3 | 4 | 15 | -9 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | LASK | 1.90 |
-| 2 | Sturm Graz | 1.72 |
-| 3 | Salzburg | 1.67 |
-| 4 | SK Rapid | 1.58 |
-| 5 | Austria Vienna | 1.39 |
+| 1 | Salzburg | 2.11 |
+| 2 | Sturm Graz | 1.91 |
+| 3 | LASK | 1.64 |
+| 4 | SK Rapid | 1.62 |
+| 5 | Austria Vienna | 1.49 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | LASK | 75 |
-| 2 | Salzburg | 74 |
-| 3 | SK Rapid | 61 |
-| 4 | Sturm Graz | 59 |
-| 5 | Ried | 53 |
+| 1 | Salzburg | 321 |
+| 2 | Sturm Graz | 272 |
+| 3 | SK Rapid | 253 |
+| 4 | LASK | 245 |
+| 5 | Wolfsberger AC | 231 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Salzburg | 29 |
-| 2 | LASK | 26 |
-| 3 | Sturm Graz | 15 |
-| 4 | SK Rapid | 11 |
-| 5 | Hartberg | -3 |
+| 1 | Salzburg | 192 |
+| 2 | Sturm Graz | 117 |
+| 3 | SK Rapid | 74 |
+| 4 | LASK | 65 |
+| 5 | Austria Vienna | 18 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Sturm Graz | 1.128 |
-| 2 | Salzburg | 1.154 |
-| 3 | SK Rapid | 1.220 |
-| 4 | LASK | 1.256 |
-| 5 | Altach | 1.308 |
+| 1 | Salzburg | 0.854 |
+| 2 | Sturm Graz | 1.026 |
+| 3 | SK Rapid | 1.162 |
+| 4 | LASK | 1.192 |
+| 5 | Austria Vienna | 1.296 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **11**
+- Teams present in all **7** seasons: **9**
 
-Altach, Austria Vienna, Grazer AK, Hartberg, LASK, Ried, SK Rapid, Salzburg, Sturm Graz, Tirol, Wolfsberger AC
+Altach, Austria Vienna, Hartberg, LASK, SK Rapid, Salzburg, Sturm Graz, Tirol, Wolfsberger AC
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **73** (showing the 15 most frequent)
+- Distinct fixtures: **113** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Ried vs Wolfsberger AC | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
-| Salzburg vs SK Rapid | 5 | 4 | 0 | 1 | 80.0% | 0.0% | 20.0% |
-| Ried vs Grazer AK | 5 | 3 | 2 | 0 | 60.0% | 40.0% | 0.0% |
-| Sturm Graz vs SK Rapid | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Altach vs Grazer AK | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Austria Vienna vs Hartberg | 5 | 2 | 0 | 3 | 40.0% | 0.0% | 60.0% |
-| LASK vs Austria Vienna | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Ried vs SK Rapid | 5 | 2 | 0 | 3 | 40.0% | 0.0% | 60.0% |
-| Salzburg vs Austria Vienna | 5 | 2 | 0 | 3 | 40.0% | 0.0% | 60.0% |
-| Wolfsberger AC vs Grazer AK | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Altach vs Tirol | 5 | 1 | 3 | 1 | 20.0% | 60.0% | 20.0% |
-| LASK vs Sturm Graz | 5 | 1 | 2 | 2 | 20.0% | 40.0% | 40.0% |
-| Salzburg vs Hartberg | 5 | 1 | 1 | 3 | 20.0% | 20.0% | 60.0% |
-| Sturm Graz vs Hartberg | 5 | 1 | 1 | 3 | 20.0% | 20.0% | 60.0% |
-| Sturm Graz vs Salzburg | 5 | 1 | 3 | 1 | 20.0% | 60.0% | 20.0% |
+| Hartberg vs Austria Vienna | 15 | 8 | 1 | 6 | 53.3% | 6.7% | 40.0% |
+| SK Rapid vs LASK | 15 | 8 | 4 | 3 | 53.3% | 26.7% | 20.0% |
+| Salzburg vs SK Rapid | 15 | 8 | 3 | 4 | 53.3% | 20.0% | 26.7% |
+| Salzburg vs Austria Vienna | 15 | 7 | 1 | 7 | 46.7% | 6.7% | 46.7% |
+| SK Rapid vs Hartberg | 15 | 6 | 3 | 6 | 40.0% | 20.0% | 40.0% |
+| SK Rapid vs Sturm Graz | 15 | 6 | 5 | 4 | 40.0% | 33.3% | 26.7% |
+| Salzburg vs Hartberg | 15 | 6 | 2 | 7 | 40.0% | 13.3% | 46.7% |
+| Salzburg vs Sturm Graz | 15 | 6 | 6 | 3 | 40.0% | 40.0% | 20.0% |
+| Sturm Graz vs Hartberg | 15 | 6 | 4 | 5 | 40.0% | 26.7% | 33.3% |
+| LASK vs Austria Vienna | 15 | 5 | 5 | 5 | 33.3% | 33.3% | 33.3% |
+| LASK vs Sturm Graz | 15 | 5 | 4 | 6 | 33.3% | 26.7% | 40.0% |
+| Tirol vs Altach | 15 | 5 | 6 | 4 | 33.3% | 40.0% | 26.7% |
+| Wolfsberger AC vs Altach | 15 | 5 | 4 | 6 | 33.3% | 26.7% | 40.0% |
+| Wolfsberger AC vs Tirol | 15 | 5 | 4 | 6 | 33.3% | 26.7% | 40.0% |
+| Sturm Graz vs Austria Vienna | 15 | 4 | 4 | 7 | 26.7% | 26.7% | 46.7% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| LASK | 1 | 3 |
-| Sturm Graz | 2 | 4 |
-| Salzburg | 3 | 2 |
-| SK Rapid | 5 | 1 |
-| Ried | 4 | 5 |
-| Austria Vienna | 6 | 10 |
-| Hartberg | 7 | 6 |
-| Tirol | 10 | 7 |
-| Wolfsberger AC | 9 | 11 |
-| Altach | 8 | 12 |
-| Grazer AK | 11 | 9 |
-| BW Linz | 12 | - |
-| A. Lustenau | - | 8 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Salzburg | 1 | 1 | 1 | 1 | 3 | 3 | 2 |
+| Sturm Graz | 4 | 2 | 2 | 2 | 1 | 2 | 4 |
+| SK Rapid | 2 | 5 | 5 | 6 | 5 | 5 | 1 |
+| LASK | 3 | 8 | 3 | 3 | 7 | 1 | 3 |
+| Austria Vienna | 8 | 4 | 4 | 7 | 2 | 6 | 11 |
+| Wolfsberger AC | 5 | 3 | 9 | 8 | 4 | 9 | 12 |
+| Hartberg | 7 | 10 | 11 | 4 | 8 | 7 | 6 |
+| Tirol | 6 | 9 | 7 | 11 | 10 | 10 | 7 |
+| Altach | 10 | 12 | 12 | 9 | 11 | 8 | 9 |
+| Ried | 11 | 7 | 10 | - | - | 4 | 5 |
+| A. Klagenfurt | - | 6 | 6 | 5 | 9 | - | - |
+| BW Linz | - | - | - | 10 | 6 | 12 | - |
+| Grazer AK | - | - | - | - | 12 | 11 | 8 |
+| A. Lustenau | - | - | 8 | 12 | - | - | 10 |
+| Admira | 12 | 11 | - | - | - | - | - |
+| St. Polten | 9 | - | - | - | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\austria1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\austria1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

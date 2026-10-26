@@ -1,38 +1,74 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T16:01:49+00:00
+- Generated: 2026-10-26T01:41:15+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`
 
 ## 1. Scoreline frequency
-- Matches analysed: **488** across **2** seasons.
-- Distinct scorelines seen: **27**.
+- Matches analysed: **1481** across **7** seasons.
+- Distinct scorelines seen: **35**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 81 | 16.6% |
-| 1-0 | 62 | 12.7% |
-| 0-0 | 51 | 10.5% |
-| 2-1 | 50 | 10.2% |
-| 2-0 | 42 | 8.6% |
-| 1-2 | 38 | 7.8% |
-| 0-1 | 36 | 7.4% |
-| 0-2 | 22 | 4.5% |
-| 2-2 | 19 | 3.9% |
-| 3-0 | 16 | 3.3% |
-| 1-3 | 13 | 2.7% |
-| 0-3 | 10 | 2.0% |
-| 3-1 | 9 | 1.8% |
-| 3-2 | 8 | 1.6% |
-| 0-4 | 5 | 1.0% |
-| 4-0 | 4 | 0.8% |
-| 2-3 | 4 | 0.8% |
-| 0-5 | 3 | 0.6% |
-| 4-2 | 3 | 0.6% |
-| 4-1 | 2 | 0.4% |
+| 1-1 | 216 | 14.6% |
+| 0-0 | 194 | 13.1% |
+| 1-0 | 178 | 12.0% |
+| 2-1 | 150 | 10.1% |
+| 0-1 | 133 | 9.0% |
+| 1-2 | 102 | 6.9% |
+| 2-0 | 101 | 6.8% |
+| 0-2 | 69 | 4.7% |
+| 2-2 | 57 | 3.8% |
+| 3-0 | 47 | 3.2% |
+| 3-1 | 43 | 2.9% |
+| 3-2 | 37 | 2.5% |
+| 1-3 | 32 | 2.2% |
+| 0-3 | 30 | 2.0% |
+| 2-3 | 20 | 1.4% |
+| 4-1 | 12 | 0.8% |
+| 4-0 | 8 | 0.5% |
+| 3-3 | 7 | 0.5% |
+| 4-2 | 6 | 0.4% |
+| 1-4 | 6 | 0.4% |
 
 ## 2. Scoreline frequency per season
+
+### 2020-2021
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 36 | 15.0% |
+| 0-0 | 34 | 14.2% |
+| 0-1 | 25 | 10.4% |
+| 1-0 | 22 | 9.2% |
+| 2-0 | 19 | 7.9% |
+
+### 2021-2022
+| scoreline | count | pct |
+|---|---|---|
+| 0-0 | 40 | 16.7% |
+| 1-1 | 34 | 14.2% |
+| 1-0 | 28 | 11.7% |
+| 2-1 | 25 | 10.4% |
+| 2-0 | 17 | 7.1% |
+
+### 2022-2023
+| scoreline | count | pct |
+|---|---|---|
+| 0-0 | 34 | 14.2% |
+| 2-1 | 32 | 13.3% |
+| 1-1 | 31 | 12.9% |
+| 1-0 | 30 | 12.5% |
+| 0-1 | 29 | 12.1% |
+
+### 2023-2024
+| scoreline | count | pct |
+|---|---|---|
+| 1-0 | 33 | 13.8% |
+| 1-1 | 31 | 12.9% |
+| 0-0 | 30 | 12.5% |
+| 2-1 | 22 | 9.2% |
+| 0-1 | 22 | 9.2% |
 
 ### 2024-2025
 | scoreline | count | pct |
@@ -52,74 +88,96 @@
 | 2-1 | 27 | 10.9% |
 | 1-2 | 26 | 10.5% |
 
+### 2026-2027
+| scoreline | count | pct |
+|---|---|---|
+| 0-0 | 5 | 15.2% |
+| 0-1 | 5 | 15.2% |
+| 2-1 | 4 | 12.1% |
+| 1-1 | 3 | 9.1% |
+| 1-0 | 3 | 9.1% |
+
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 51 | 10.5% |
-| 1 | 98 | 20.1% |
-| 2 | 145 | 29.7% |
-| 3 | 114 | 23.4% |
-| 4 | 50 | 10.2% |
-| 5 | 19 | 3.9% |
-| 6 | 8 | 1.6% |
-| 7 | 3 | 0.6% |
-| 8 | 0 | 0.0% |
+| 0 | 194 | 13.1% |
+| 1 | 311 | 21.0% |
+| 2 | 386 | 26.1% |
+| 3 | 329 | 22.2% |
+| 4 | 146 | 9.9% |
+| 5 | 81 | 5.5% |
+| 6 | 18 | 1.2% |
+| 7 | 13 | 0.9% |
+| 8 | 2 | 0.1% |
 | 9 | 0 | 0.0% |
-| 10+ | 0 | 0.0% |
+| 10+ | 1 | 0.1% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **3**
+- Matches with 7+ total goals: **16**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
+| 2022-2023 | 2023-06-23 | 6-4 | 10 |
+| 2020-2021 | 2021-06-13 | 3-5 | 8 |
+| 2026-2027 | 2026-09-26 | 2-6 | 8 |
+| 2020-2021 | 2020-12-05 | 4-3 | 7 |
+| 2020-2021 | 2021-05-23 | 3-4 | 7 |
+| 2021-2022 | 2021-11-19 | 3-4 | 7 |
+| 2021-2022 | 2022-05-01 | 4-3 | 7 |
+| 2022-2023 | 2022-10-08 | 3-4 | 7 |
+| 2022-2023 | 2022-10-30 | 4-3 | 7 |
+| 2023-2024 | 2023-12-28 | 6-1 | 7 |
+| 2023-2024 | 2024-02-11 | 5-2 | 7 |
 | 2025-2026 | 2026-03-08 | 3-4 | 7 |
 | 2025-2026 | 2026-05-07 | 4-3 | 7 |
 | 2025-2026 | 2026-06-17 | 3-4 | 7 |
+| 2026-2027 | 2026-10-08 | 2-5 | 7 |
+| 2026-2027 | 2026-10-10 | 2-5 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **335** (draws: **153**)
-- Average winning margin: **1.59**
+- Decided matches: **1007** (draws: **474**)
+- Average winning margin: **1.53**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 201 | 60.0% |
-| 2 | 89 | 26.6% |
-| 3+ | 45 | 13.4% |
+| 1 | 629 | 62.5% |
+| 2 | 255 | 25.3% |
+| 3+ | 123 | 12.2% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **198** | avg margin: **1.53** | max margin: **4**
+- Matches: **592** | avg margin: **1.52** | max margin: **5**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 121 | 61.1% |
-| 2 | 54 | 27.3% |
-| 3+ | 23 | 11.6% |
+| 1 | 369 | 62.3% |
+| 2 | 151 | 25.5% |
+| 3+ | 72 | 12.2% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **137** | avg margin: **1.69** | max margin: **6**
+- Matches: **415** | avg margin: **1.54** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 80 | 58.4% |
-| 2 | 35 | 25.5% |
-| 3+ | 22 | 16.1% |
+| 1 | 260 | 62.7% |
+| 2 | 104 | 25.1% |
+| 3+ | 51 | 12.3% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 198 | 1-0 | 62 | 31.3% |
-| draw | 153 | 1-1 | 81 | 52.9% |
-| away | 137 | 1-2 | 38 | 27.7% |
+| home | 592 | 1-0 | 178 | 30.1% |
+| draw | 474 | 1-1 | 216 | 45.6% |
+| away | 415 | 0-1 | 133 | 32.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\morocco\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\morocco\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

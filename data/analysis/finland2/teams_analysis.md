@@ -1,153 +1,170 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:49:46+00:00
+- Generated: 2026-10-26T01:31:57+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ykkosliiga (Finland)
 - Scope: league `finland2`
 
-- Teams: **23** | Seasons: **2** | Matches: **260**
+- Teams: **26** | Seasons: **7** | Matches: **933**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| PK-35 | 2 | 52 | 25 | 16 | 11 | 91 | 80 | 48 | 32 | 45.5 | 2 | 8 | 0 |
-| Jippo | 2 | 52 | 21 | 19 | 12 | 82 | 69 | 52 | 17 | 41.0 | 4 | 4 | 0 |
-| Ekenas | 2 | 52 | 20 | 10 | 22 | 70 | 77 | 80 | -3 | 35.0 | 5 | 6 | 0 |
-| JaPS | 2 | 52 | 18 | 13 | 21 | 67 | 64 | 86 | -22 | 33.5 | 5 | 6 | 0 |
-| Klubi 04 | 2 | 52 | 16 | 14 | 22 | 62 | 79 | 82 | -3 | 31.0 | 3 | 9 | 0 |
+| TPS | 5 | 120 | 64 | 29 | 27 | 221 | 217 | 133 | 84 | 44.2 | 1 | 4 | 2 |
+| Ekenas | 6 | 142 | 61 | 36 | 45 | 219 | 242 | 199 | 43 | 36.5 | 1 | 7 | 1 |
+| KTP | 4 | 98 | 64 | 18 | 16 | 210 | 218 | 101 | 117 | 52.5 | 1 | 2 | 2 |
+| Jaro | 5 | 115 | 52 | 29 | 34 | 185 | 197 | 145 | 52 | 37.0 | 2 | 9 | 0 |
+| PK-35 | 5 | 125 | 47 | 38 | 40 | 179 | 166 | 161 | 5 | 35.8 | 2 | 13 | 0 |
+| Mikkeli | 6 | 142 | 44 | 36 | 62 | 168 | 177 | 223 | -46 | 28.0 | 3 | 11 | 0 |
+| Jippo | 4 | 103 | 45 | 26 | 32 | 161 | 139 | 106 | 33 | 40.25 | 3 | 12 | 0 |
+| JaPS | 5 | 125 | 42 | 31 | 52 | 157 | 167 | 220 | -53 | 31.4 | 5 | 8 | 0 |
+| SJK Akatemia | 6 | 147 | 39 | 37 | 71 | 154 | 194 | 253 | -59 | 25.67 | 5 | 11 | 0 |
+| Gnistan | 4 | 88 | 38 | 19 | 31 | 133 | 141 | 129 | 12 | 33.25 | 2 | 9 | 0 |
+| KPV Kokkola | 4 | 88 | 25 | 29 | 34 | 104 | 108 | 125 | -17 | 26.0 | 5 | 11 | 0 |
+| KaPa | 4 | 103 | 20 | 27 | 56 | 87 | 155 | 231 | -76 | 21.75 | 8 | 10 | 0 |
+| Klubi 04 | 3 | 76 | 23 | 17 | 36 | 86 | 112 | 120 | -8 | 28.67 | 3 | 11 | 0 |
+| VPS | 2 | 44 | 20 | 12 | 12 | 72 | 76 | 63 | 13 | 36.0 | 3 | 6 | 0 |
+| SalPa | 3 | 76 | 18 | 16 | 42 | 70 | 83 | 127 | -44 | 23.33 | 7 | 11 | 0 |
 | Lahti | 1 | 27 | 17 | 7 | 3 | 58 | 54 | 30 | 24 | 58.0 | 1 | 1 | 1 |
-| KTP | 1 | 25 | 18 | 4 | 3 | 58 | 45 | 22 | 23 | 58.0 | 1 | 1 | 1 |
-| TPS | 1 | 27 | 16 | 5 | 6 | 53 | 66 | 45 | 21 | 53.0 | 2 | 2 | 0 |
-| Haka | 1 | 25 | 13 | 5 | 7 | 44 | 47 | 29 | 18 | 44.0 | 3 | 3 | 0 |
-| KaPa | 2 | 52 | 10 | 14 | 28 | 44 | 71 | 113 | -42 | 22.0 | 8 | 10 | 0 |
-| SJK Akatemia | 2 | 52 | 10 | 13 | 29 | 43 | 63 | 90 | -27 | 21.5 | 7 | 10 | 0 |
-| Mikkeli | 1 | 25 | 8 | 5 | 12 | 29 | 27 | 35 | -8 | 29.0 | 7 | 7 | 0 |
-| SalPa | 1 | 27 | 4 | 3 | 20 | 15 | 22 | 52 | -30 | 15.0 | 11 | 11 | 0 |
-| 35-Ekenas | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 12 | 12 | 0 |
-| 35-JaPS | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 17 | 17 | 0 |
-| 35-Jippo | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 13 | 13 | 0 |
-| 35-KaPa | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 18 | 18 | 0 |
-| 35-Klubi 04 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 16 | 16 | 0 |
-| 35-Lahti | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 15 | 15 | 0 |
-| 35-SJK Akatemia | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 19 | 19 | 0 |
-| 35-SalPa | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 20 | 20 | 0 |
-| 35-TPS | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 14 | 14 | 0 |
-| PK | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 9 | 9 | 0 |
+| MuSa | 2 | 44 | 14 | 13 | 17 | 55 | 60 | 79 | -19 | 27.5 | 5 | 9 | 0 |
+| AC Oulu | 1 | 22 | 15 | 5 | 2 | 50 | 38 | 16 | 22 | 50.0 | 1 | 1 | 1 |
+| Haka | 1 | 27 | 14 | 5 | 8 | 47 | 51 | 31 | 20 | 47.0 | 3 | 3 | 0 |
+| Rovaniemi | 1 | 22 | 12 | 6 | 4 | 42 | 39 | 25 | 14 | 42.0 | 2 | 2 | 0 |
+| HIFK | 1 | 22 | 8 | 6 | 8 | 30 | 27 | 29 | -2 | 30.0 | 6 | 6 | 0 |
+| PEPO | 1 | 22 | 6 | 6 | 10 | 24 | 25 | 38 | -13 | 24.0 | 10 | 10 | 0 |
+| AC Kajaani | 1 | 22 | 5 | 8 | 9 | 23 | 35 | 37 | -2 | 23.0 | 10 | 10 | 0 |
+| PIF Pargas | 1 | 22 | 4 | 1 | 17 | 13 | 21 | 51 | -30 | 13.0 | 12 | 12 | 0 |
+| JJK Jyvaskyla | 1 | 22 | 2 | 6 | 14 | 12 | 20 | 42 | -22 | 12.0 | 12 | 12 | 0 |
+| MyPa | 1 | 22 | 1 | 3 | 18 | 6 | 21 | 69 | -48 | 6.0 | 12 | 12 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| JaPS | 25 | 11 | 8 | 6 | 41 | 27 | 7 | 5 | 15 | 26 | 15 |
-| Ekenas | 27 | 13 | 3 | 11 | 42 | 25 | 7 | 7 | 11 | 28 | 14 |
+| Ekenas | 72 | 40 | 12 | 20 | 132 | 70 | 21 | 24 | 25 | 87 | 45 |
+| SJK Akatemia | 73 | 27 | 17 | 29 | 98 | 74 | 12 | 20 | 42 | 56 | 42 |
+| Jaro | 58 | 28 | 20 | 10 | 104 | 57 | 24 | 9 | 24 | 81 | 23 |
+| KaPa | 50 | 13 | 15 | 22 | 54 | 53 | 7 | 12 | 34 | 33 | 21 |
+| Mikkeli | 70 | 25 | 19 | 26 | 94 | 72 | 19 | 17 | 36 | 74 | 20 |
+| PK-35 | 63 | 26 | 20 | 17 | 98 | 62 | 21 | 18 | 23 | 81 | 17 |
+| Jippo | 52 | 25 | 13 | 14 | 88 | 51 | 20 | 13 | 18 | 73 | 15 |
 | Lahti | 14 | 11 | 3 | 0 | 36 | 13 | 6 | 4 | 3 | 22 | 14 |
-| Haka | 13 | 8 | 2 | 3 | 26 | 12 | 5 | 3 | 4 | 18 | 8 |
-| Mikkeli | 12 | 5 | 3 | 4 | 18 | 13 | 3 | 2 | 8 | 11 | 7 |
-| Jippo | 26 | 12 | 8 | 6 | 44 | 26 | 9 | 11 | 6 | 38 | 6 |
-| KaPa | 25 | 6 | 7 | 12 | 25 | 27 | 4 | 7 | 16 | 19 | 6 |
-| TPS | 14 | 9 | 2 | 3 | 29 | 13 | 7 | 3 | 3 | 24 | 5 |
-| SJK Akatemia | 25 | 6 | 6 | 13 | 24 | 27 | 4 | 7 | 16 | 19 | 5 |
-| SalPa | 13 | 2 | 3 | 8 | 9 | 14 | 2 | 0 | 12 | 6 | 3 |
-| Klubi 04 | 26 | 8 | 7 | 11 | 31 | 26 | 8 | 7 | 11 | 31 | 0 |
-| KTP | 13 | 9 | 2 | 2 | 29 | 12 | 9 | 2 | 1 | 29 | 0 |
-| PK-35 | 27 | 10 | 10 | 7 | 40 | 25 | 15 | 6 | 4 | 51 | -11 |
+| JaPS | 61 | 22 | 19 | 20 | 85 | 64 | 20 | 12 | 32 | 72 | 13 |
+| Haka | 14 | 9 | 2 | 3 | 29 | 13 | 5 | 3 | 5 | 18 | 11 |
+| VPS | 22 | 12 | 5 | 5 | 41 | 22 | 8 | 7 | 7 | 31 | 10 |
+| TPS | 61 | 35 | 10 | 16 | 115 | 59 | 29 | 19 | 11 | 106 | 9 |
+| MuSa | 22 | 9 | 5 | 8 | 32 | 22 | 5 | 8 | 9 | 23 | 9 |
+| KTP | 50 | 33 | 10 | 7 | 109 | 48 | 31 | 8 | 9 | 101 | 8 |
+| KPV Kokkola | 44 | 14 | 13 | 17 | 55 | 44 | 11 | 16 | 17 | 49 | 6 |
+| Klubi 04 | 38 | 13 | 7 | 18 | 46 | 38 | 10 | 10 | 18 | 40 | 6 |
+| JJK Jyvaskyla | 11 | 2 | 3 | 6 | 9 | 11 | 0 | 3 | 8 | 3 | 6 |
+| MyPa | 11 | 1 | 3 | 7 | 6 | 11 | 0 | 0 | 11 | 0 | 6 |
+| SalPa | 37 | 9 | 10 | 18 | 37 | 39 | 9 | 6 | 24 | 33 | 4 |
+| HIFK | 11 | 5 | 2 | 4 | 17 | 11 | 3 | 4 | 4 | 13 | 4 |
+| Gnistan | 44 | 19 | 11 | 14 | 68 | 44 | 19 | 8 | 17 | 65 | 3 |
+| PEPO | 11 | 3 | 4 | 4 | 13 | 11 | 3 | 2 | 6 | 11 | 2 |
+| Rovaniemi | 11 | 6 | 3 | 2 | 21 | 11 | 6 | 3 | 2 | 21 | 0 |
+| PIF Pargas | 11 | 2 | 0 | 9 | 6 | 11 | 2 | 1 | 8 | 7 | -1 |
+| AC Oulu | 11 | 7 | 3 | 1 | 24 | 11 | 8 | 2 | 1 | 26 | -2 |
+| AC Kajaani | 11 | 2 | 4 | 5 | 10 | 11 | 3 | 4 | 4 | 13 | -3 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | KTP | 2.32 |
+| 1 | AC Oulu | 2.27 |
 | 2 | Lahti | 2.15 |
-| 3 | TPS | 1.96 |
-| 4 | Haka | 1.76 |
-| 5 | PK-35 | 1.75 |
+| 3 | KTP | 2.14 |
+| 4 | Rovaniemi | 1.91 |
+| 5 | TPS | 1.84 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | PK-35 | 80 |
-| 2 | Klubi 04 | 79 |
-| 3 | Ekenas | 77 |
-| 4 | KaPa | 71 |
-| 5 | Jippo | 69 |
+| 1 | Ekenas | 242 |
+| 2 | KTP | 218 |
+| 3 | TPS | 217 |
+| 4 | Jaro | 197 |
+| 5 | SJK Akatemia | 194 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | PK-35 | 32 |
-| 2 | Lahti | 24 |
-| 3 | KTP | 23 |
-| 4 | TPS | 21 |
-| 5 | Haka | 18 |
+| 1 | KTP | 117 |
+| 2 | TPS | 84 |
+| 3 | Jaro | 52 |
+| 4 | Ekenas | 43 |
+| 5 | Jippo | 33 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | 35-Lahti | 0.000 |
-| 2 | 35-Jippo | 0.500 |
-| 3 | 35-JaPS | 0.500 |
-| 4 | PK-35 | 0.868 |
-| 5 | KTP | 0.880 |
+| 1 | AC Oulu | 0.727 |
+| 2 | KTP | 1.042 |
+| 3 | Jippo | 1.061 |
+| 4 | TPS | 1.103 |
+| 5 | Rovaniemi | 1.143 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **7**
-
-Ekenas, JaPS, Jippo, KaPa, Klubi 04, PK-35, SJK Akatemia
+- Teams present in all **7** seasons: **0**
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **69** (showing the 15 most frequent)
+- Distinct fixtures: **215** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Klubi 04 vs JaPS | 6 | 5 | 0 | 1 | 83.3% | 0.0% | 16.7% |
-| Ekenas vs JaPS | 6 | 3 | 2 | 1 | 50.0% | 33.3% | 16.7% |
-| JaPS vs PK-35 | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
-| Jippo vs KaPa | 6 | 3 | 1 | 2 | 50.0% | 16.7% | 33.3% |
-| Jippo vs SJK Akatemia | 6 | 3 | 2 | 1 | 50.0% | 33.3% | 16.7% |
-| Ekenas vs PK-35 | 6 | 2 | 1 | 3 | 33.3% | 16.7% | 50.0% |
-| Ekenas vs SJK Akatemia | 6 | 2 | 2 | 2 | 33.3% | 33.3% | 33.3% |
-| JaPS vs KaPa | 6 | 2 | 2 | 2 | 33.3% | 33.3% | 33.3% |
-| JaPS vs SJK Akatemia | 6 | 2 | 2 | 2 | 33.3% | 33.3% | 33.3% |
-| Klubi 04 vs SJK Akatemia | 6 | 2 | 1 | 3 | 33.3% | 16.7% | 50.0% |
-| PK-35 vs KaPa | 6 | 2 | 3 | 1 | 33.3% | 50.0% | 16.7% |
-| SJK Akatemia vs KaPa | 6 | 2 | 2 | 2 | 33.3% | 33.3% | 33.3% |
-| Jippo vs Ekenas | 6 | 1 | 3 | 2 | 16.7% | 50.0% | 33.3% |
-| Klubi 04 vs Jippo | 6 | 1 | 2 | 3 | 16.7% | 33.3% | 50.0% |
-| Klubi 04 vs PK-35 | 6 | 1 | 4 | 1 | 16.7% | 66.7% | 16.7% |
+| SJK Akatemia vs JaPS | 13 | 5 | 4 | 4 | 38.5% | 30.8% | 30.8% |
+| Mikkeli vs SJK Akatemia | 12 | 6 | 5 | 1 | 50.0% | 41.7% | 8.3% |
+| Ekenas vs SJK Akatemia | 12 | 5 | 2 | 5 | 41.7% | 16.7% | 41.7% |
+| Ekenas vs Mikkeli | 11 | 6 | 4 | 1 | 54.5% | 36.4% | 9.1% |
+| Jaro vs Mikkeli | 11 | 6 | 1 | 4 | 54.5% | 9.1% | 36.4% |
+| PK-35 vs JaPS | 11 | 6 | 3 | 2 | 54.5% | 27.3% | 18.2% |
+| SJK Akatemia vs KaPa | 11 | 5 | 4 | 2 | 45.5% | 36.4% | 18.2% |
+| SJK Akatemia vs PK-35 | 11 | 5 | 3 | 3 | 45.5% | 27.3% | 27.3% |
+| JaPS vs KaPa | 11 | 3 | 5 | 3 | 27.3% | 45.5% | 27.3% |
+| Jippo vs PK-35 | 11 | 1 | 4 | 6 | 9.1% | 36.4% | 54.5% |
+| KTP vs SJK Akatemia | 10 | 6 | 2 | 2 | 60.0% | 20.0% | 20.0% |
+| TPS vs SJK Akatemia | 10 | 6 | 1 | 3 | 60.0% | 10.0% | 30.0% |
+| Ekenas vs JaPS | 10 | 5 | 3 | 2 | 50.0% | 30.0% | 20.0% |
+| Mikkeli vs PK-35 | 10 | 5 | 2 | 3 | 50.0% | 20.0% | 30.0% |
+| TPS vs JaPS | 10 | 5 | 1 | 4 | 50.0% | 10.0% | 40.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| PK-35 | 8 | 2 |
-| Jippo | 4 | 4 |
-| Ekenas | 5 | 6 |
-| JaPS | 6 | 5 |
-| Klubi 04 | 3 | 9 |
-| Lahti | 1 | - |
-| KTP | - | 1 |
-| TPS | 2 | - |
-| Haka | - | 3 |
-| KaPa | 10 | 8 |
-| SJK Akatemia | 7 | 10 |
-| Mikkeli | - | 7 |
-| SalPa | 11 | - |
-| 35-Ekenas | 12 | - |
-| 35-JaPS | 17 | - |
-| 35-Jippo | 13 | - |
-| 35-KaPa | 18 | - |
-| 35-Klubi 04 | 16 | - |
-| 35-Lahti | 15 | - |
-| 35-SJK Akatemia | 19 | - |
-| 35-SalPa | 20 | - |
-| 35-TPS | 14 | - |
-| PK | 9 | - |
+| team | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|---|
+| TPS | - | 1 | 1 | 4 | 4 | 2 | - |
+| Ekenas | 4 | 7 | 4 | 1 | - | 5 | 6 |
+| KTP | 2 | - | 2 | - | 1 | - | 1 |
+| Jaro | 3 | 4 | 3 | 9 | 2 | - | - |
+| PK-35 | - | 13 | 13 | - | 10 | 8 | 2 |
+| Mikkeli | 7 | 8 | 8 | 3 | 11 | - | 7 |
+| Jippo | - | 12 | - | - | 3 | 4 | 4 |
+| JaPS | - | - | 6 | 8 | 5 | 6 | 5 |
+| SJK Akatemia | 11 | - | 9 | 5 | 6 | 7 | 10 |
+| Gnistan | 9 | 5 | 7 | 2 | - | - | - |
+| KPV Kokkola | 8 | 6 | 5 | 11 | - | - | - |
+| KaPa | - | - | - | 10 | 8 | 10 | 9 |
+| Klubi 04 | - | 11 | - | - | - | 3 | 8 |
+| VPS | 6 | 3 | - | - | - | - | - |
+| SalPa | - | - | - | 7 | 7 | 11 | - |
+| Lahti | - | - | - | - | - | 1 | - |
+| MuSa | 5 | 9 | - | - | - | - | - |
+| AC Oulu | 1 | - | - | - | - | - | - |
+| Haka | - | - | - | - | - | - | 3 |
+| Rovaniemi | - | 2 | - | - | - | - | - |
+| HIFK | - | - | - | 6 | - | - | - |
+| PEPO | - | - | 10 | - | - | - | - |
+| AC Kajaani | 10 | - | - | - | - | - | - |
+| PIF Pargas | - | - | 12 | - | - | - | - |
+| JJK Jyvaskyla | - | - | - | 12 | - | - | - |
+| MyPa | 12 | - | - | - | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\finland2\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\finland2\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

@@ -4,10 +4,10 @@
     "name": "backend/scripts/analyze_seasons.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T15:59:38+00:00",
+  "generated_at": "2026-10-26T01:39:24+00:00",
   "config": {
     "league": "japan2",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\japan2",
+    "out_dir": "data/analysis/japan2",
     "out_stem": null
   },
   "league": {
@@ -25,26 +25,82 @@
   },
   "champions": [
     {
+      "season": "2020",
+      "champion": "Tokushima",
+      "champion_id": 1200,
+      "champion_pts": 84,
+      "runner_up": "Avispa Fukuoka",
+      "runner_up_id": 1199,
+      "margin_pts": 0
+    },
+    {
+      "season": "2021",
+      "champion": "Iwata",
+      "champion_id": 1202,
+      "champion_pts": 91,
+      "runner_up": "Kyoto",
+      "runner_up_id": 1201,
+      "margin_pts": 7
+    },
+    {
+      "season": "2022",
+      "champion": "Albirex Niigata",
+      "champion_id": 1203,
+      "champion_pts": 84,
+      "runner_up": "Yokohama FC",
+      "runner_up_id": 1195,
+      "margin_pts": 4
+    },
+    {
+      "season": "2023",
+      "champion": "Machida",
+      "champion_id": 1204,
+      "champion_pts": 87,
+      "runner_up": "Iwata",
+      "runner_up_id": 1202,
+      "margin_pts": 12
+    },
+    {
       "season": "2024",
       "champion": "Shimizu S-Pulse",
-      "champion_id": 966,
+      "champion_id": 1198,
       "champion_pts": 82,
       "runner_up": "Yokohama FC",
-      "runner_up_id": 982,
+      "runner_up_id": 1195,
       "margin_pts": 6
     },
     {
       "season": "2025",
       "champion": "Mito",
-      "champion_id": 967,
+      "champion_id": 1209,
       "champion_pts": 70,
       "runner_up": "V-Varen Nagasaki",
-      "runner_up_id": 962,
+      "runner_up_id": 1207,
       "margin_pts": 0
     }
   ],
   "title_race": {
     "per_season": [
+      {
+        "season": "2020",
+        "margin": 0,
+        "tight": true
+      },
+      {
+        "season": "2021",
+        "margin": 7,
+        "tight": false
+      },
+      {
+        "season": "2022",
+        "margin": 4,
+        "tight": false
+      },
+      {
+        "season": "2023",
+        "margin": 12,
+        "tight": false
+      },
       {
         "season": "2024",
         "margin": 6,
@@ -56,16 +112,60 @@
         "tight": true
       }
     ],
-    "tight_race_count": 1,
-    "total_seasons": 2,
+    "tight_race_count": 2,
+    "total_seasons": 6,
     "tightest": {
-      "season": "2025",
+      "season": "2020",
       "margin": 0,
-      "champion": "Mito",
-      "runner_up": "V-Varen Nagasaki"
+      "champion": "Tokushima",
+      "runner_up": "Avispa Fukuoka"
     }
   },
   "points_thresholds": [
+    {
+      "season": "2020",
+      "positions": {
+        "1": 84,
+        "2": 84,
+        "4": 65,
+        "6": 63,
+        "17": 50,
+        "20": 49
+      }
+    },
+    {
+      "season": "2021",
+      "positions": {
+        "1": 91,
+        "2": 84,
+        "4": 78,
+        "6": 68,
+        "17": 41,
+        "20": 35
+      }
+    },
+    {
+      "season": "2022",
+      "positions": {
+        "1": 84,
+        "2": 80,
+        "4": 67,
+        "6": 64,
+        "17": 49,
+        "20": 42
+      }
+    },
+    {
+      "season": "2023",
+      "positions": {
+        "1": 87,
+        "2": 75,
+        "4": 74,
+        "6": 67,
+        "17": 47,
+        "20": 44
+      }
+    },
     {
       "season": "2024",
       "positions": {
@@ -90,6 +190,98 @@
     }
   ],
   "relegation_battle": [
+    {
+      "season": "2020",
+      "safe_position": 17,
+      "safe_pts": 50,
+      "drop_position": 18,
+      "drop_pts": 49,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 49
+        },
+        {
+          "position": 19,
+          "points": 49
+        },
+        {
+          "position": 20,
+          "points": 49
+        }
+      ],
+      "bottom3_range": 0
+    },
+    {
+      "season": "2021",
+      "safe_position": 17,
+      "safe_pts": 41,
+      "drop_position": 18,
+      "drop_pts": 41,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 41
+        },
+        {
+          "position": 19,
+          "points": 38
+        },
+        {
+          "position": 20,
+          "points": 35
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2022",
+      "safe_position": 17,
+      "safe_pts": 49,
+      "drop_position": 18,
+      "drop_pts": 48,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 48
+        },
+        {
+          "position": 19,
+          "points": 43
+        },
+        {
+          "position": 20,
+          "points": 42
+        }
+      ],
+      "bottom3_range": 6
+    },
+    {
+      "season": "2023",
+      "safe_position": 17,
+      "safe_pts": 47,
+      "drop_position": 18,
+      "drop_pts": 47,
+      "gap": 0,
+      "bottom3": [
+        {
+          "position": 18,
+          "points": 47
+        },
+        {
+          "position": 19,
+          "points": 44
+        },
+        {
+          "position": 20,
+          "points": 44
+        }
+      ],
+      "bottom3_range": 3
+    },
     {
       "season": "2024",
       "safe_position": 17,
@@ -139,6 +331,74 @@
   ],
   "league_trends": [
     {
+      "season": "2020",
+      "n_matches": 462,
+      "total_goals": 1119,
+      "avg_goals": 2.422,
+      "home_wins": 184,
+      "draws": 123,
+      "away_wins": 155,
+      "home_win_pct": 39.8,
+      "draw_pct": 26.6,
+      "away_win_pct": 33.5,
+      "goalless": 42,
+      "goalless_pct": 9.1,
+      "total_points": 1263,
+      "avg_points_per_team": 57.41,
+      "n_teams": 22
+    },
+    {
+      "season": "2021",
+      "n_matches": 462,
+      "total_goals": 1102,
+      "avg_goals": 2.385,
+      "home_wins": 162,
+      "draws": 137,
+      "away_wins": 163,
+      "home_win_pct": 35.1,
+      "draw_pct": 29.7,
+      "away_win_pct": 35.3,
+      "goalless": 47,
+      "goalless_pct": 10.2,
+      "total_points": 1249,
+      "avg_points_per_team": 56.77,
+      "n_teams": 22
+    },
+    {
+      "season": "2022",
+      "n_matches": 462,
+      "total_goals": 1136,
+      "avg_goals": 2.459,
+      "home_wins": 169,
+      "draws": 134,
+      "away_wins": 159,
+      "home_win_pct": 36.6,
+      "draw_pct": 29.0,
+      "away_win_pct": 34.4,
+      "goalless": 38,
+      "goalless_pct": 8.2,
+      "total_points": 1252,
+      "avg_points_per_team": 56.91,
+      "n_teams": 22
+    },
+    {
+      "season": "2023",
+      "n_matches": 462,
+      "total_goals": 1179,
+      "avg_goals": 2.552,
+      "home_wins": 181,
+      "draws": 130,
+      "away_wins": 151,
+      "home_win_pct": 39.2,
+      "draw_pct": 28.1,
+      "away_win_pct": 32.7,
+      "goalless": 40,
+      "goalless_pct": 8.7,
+      "total_points": 1256,
+      "avg_points_per_team": 57.09,
+      "n_teams": 22
+    },
+    {
       "season": "2024",
       "n_matches": 380,
       "total_goals": 946,
@@ -176,6 +436,26 @@
   "view_divergence": {
     "per_season": [
       {
+        "season": "2020",
+        "luck": 4.0,
+        "goals": 7.909
+      },
+      {
+        "season": "2021",
+        "luck": 2.273,
+        "goals": 6.364
+      },
+      {
+        "season": "2022",
+        "luck": 3.455,
+        "goals": 6.636
+      },
+      {
+        "season": "2023",
+        "luck": 3.364,
+        "goals": 5.909
+      },
+      {
         "season": "2024",
         "luck": 2.7,
         "goals": 6.4
@@ -187,9 +467,9 @@
       }
     ],
     "worst_divergence": {
-      "season": "2024",
+      "season": "2020",
       "view": "goals",
-      "avg_abs_diff": 6.4
+      "avg_abs_diff": 7.909
     }
   }
 }

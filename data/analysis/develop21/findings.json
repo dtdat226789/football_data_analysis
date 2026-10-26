@@ -4,10 +4,10 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T15:48:22+00:00",
+  "generated_at": "2026-10-26T01:30:29+00:00",
   "config": {
     "league": "develop21",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\develop21",
+    "out_dir": "data/analysis/develop21",
     "out_stem": null
   },
   "league": {
@@ -26,52 +26,52 @@
   "sources": [
     {
       "report_name": "database_profile",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\database_profile.json",
+      "path": "data/analysis/develop21/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 27.92
+      "size_kb": 27.72
     },
     {
       "report_name": "matches_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\matches_analysis.json",
+      "path": "data/analysis/develop21/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 6.26
+      "size_kb": 5.92
     },
     {
       "report_name": "goals_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\goals_analysis.json",
+      "path": "data/analysis/develop21/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 5.08
+      "size_kb": 4.84
     },
     {
       "report_name": "teams_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\teams_analysis.json",
+      "path": "data/analysis/develop21/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 26.5
+      "size_kb": 25.28
     },
     {
       "report_name": "season_trends",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\season_trends.json",
+      "path": "data/analysis/develop21/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 2.58
+      "size_kb": 2.43
     },
     {
       "report_name": "scoreline_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\scoreline_analysis.json",
+      "path": "data/analysis/develop21/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 13.22
+      "size_kb": 16.24
     },
     {
       "report_name": "relationships",
-      "path": "E:\\football_data_analysis\\data\\analysis\\develop21\\relationships.json",
+      "path": "data/analysis/develop21/relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 12.18
+      "size_kb": 11.61
     }
   ],
   "coverage": {
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "40 matches: home wins 45.0%, draws 25.0%, away wins 30.0% (18H / 10D / 12A)",
+      "detail": "61 matches: home wins 42.6%, draws 23.0%, away wins 34.4% (26H / 14D / 21A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 13 times",
+      "detail": "home lead at HT -> home win occurred 19 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "40 matches produced 164 goals (avg 4.100 per match)",
+      "detail": "61 matches produced 237 goals (avg 3.885 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 56.7% vs away 43.3% of 164 goals in total (home/away ratio 1.31)",
+      "detail": "home 53.6% vs away 46.4% of 237 goals in total (home/away ratio 1.16)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "28 of 40 matches (70.0%)",
+      "detail": "42 of 61 matches (68.9%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 16-30 (first goal in 16 scoring matches, 41.0% of scoring)",
+      "detail": "minute 16-30 (first goal in 21 scoring matches, 35.0% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 23.56, median 20.0",
+      "detail": "mean 24.40, median 21.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Bolton U21 leads with 15 points across 1 seasons (1 title(s), GD 15)",
+      "detail": "Bolton U21 leads with 21 points across 1 seasons (1 title(s), GD 16)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Bristol City U21 earns 5 more points at home than away (7 home vs 2 away)",
+      "detail": "Bristol City U21 earns 8 more points at home than away (10 home vs 2 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -167,56 +167,56 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Bolton U21 beat Bristol City U21 by 6 pts",
+      "detail": "2026-2027: Bolton U21 beat Fleetwood U21 by 5 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2026-2027 (goals view, avg abs position diff 7.176)",
+      "detail": "2026-2027 (goals view, avg abs position diff 6.118)",
       "importance": "low",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 2.824)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.882)",
       "importance": "low",
       "id": "F15"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "2-2 in 5 matches (12.5%)",
+      "detail": "2-2 in 8 matches (13.1%)",
       "importance": "medium",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "3-1 (5 of 18 home matches, 27.8%)",
+      "detail": "3-1 (7 of 26 home matches, 26.9%)",
       "importance": "low",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "2-2 (5 of 10 draw matches, 50.0%)",
+      "detail": "2-2 (8 of 14 draw matches, 57.1%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-2 (3 of 12 away matches, 25.0%)",
+      "detail": "0-2 (4 of 21 away matches, 19.0%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "5 match(es) with >= 7 total goals",
+      "detail": "7 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F20"
     },
@@ -230,21 +230,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "1 of 1 registered seasons populated (100.0%); 40 matches observed",
+      "detail": "1 of 1 registered seasons populated (100.0%); 61 matches observed",
       "importance": "medium",
       "id": "F22"
     }
   ],
   "headline_stats": {
-    "n_matches": 40,
-    "avg_goals": 4.1,
-    "home_win_pct": 45.0,
-    "draw_pct": 25.0,
-    "away_win_pct": 30.0,
+    "n_matches": 61,
+    "avg_goals": 3.885,
+    "home_win_pct": 42.6,
+    "draw_pct": 23.0,
+    "away_win_pct": 34.4,
     "most_common_scoreline": "2-2",
     "dominant_team": "Bolton U21",
     "champion_most_titles": "Bolton U21",
-    "btts_rate_pct": 70.0
+    "btts_rate_pct": 68.9
   },
   "comparison": [
     {
@@ -255,7 +255,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 27.92
+      "size_kb": 27.72
     },
     {
       "module": "matches_analysis",
@@ -269,7 +269,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 6.26
+      "size_kb": 5.92
     },
     {
       "module": "goals_analysis",
@@ -283,7 +283,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 5.08
+      "size_kb": 4.84
     },
     {
       "module": "teams_analysis",
@@ -296,7 +296,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 26.5
+      "size_kb": 25.28
     },
     {
       "module": "season_trends",
@@ -309,7 +309,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 2.58
+      "size_kb": 2.43
     },
     {
       "module": "scoreline_analysis",
@@ -323,7 +323,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 13.22
+      "size_kb": 16.24
     },
     {
       "module": "relationships",
@@ -339,17 +339,17 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 12.18
+      "size_kb": 11.61
     }
   ],
   "anomalies": [
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 40 matches, expected 380",
+      "message": "Season 2026-2027 has 61 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 40,
+        "n_matches": 61,
         "expected": 380
       }
     },
@@ -399,20 +399,20 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 6151,
-        "distinct": 6146,
+        "rows": 26930,
+        "distinct": 26925,
         "duplicates": 5
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=310, fgte=310 rows)",
       "details": {
-        "total": 6151,
-        "fgt_inconsistent": 5,
-        "fgte_inconsistent": 5,
-        "n_with_fgt": 5728
+        "total": 26930,
+        "fgt_inconsistent": 310,
+        "fgte_inconsistent": 310,
+        "n_with_fgt": 24581
       }
     },
     {

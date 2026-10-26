@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:44:05+00:00
+- Generated: 2026-10-26T01:26:16+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Bundesliga (Austria)
 - Scope: league `austria1`
@@ -8,44 +8,82 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 237 |
-| Home wins | 106 (44.7%) |
-| Draws | 59 (24.9%) |
-| Away wins | 72 (30.4%) |
-| Total goals | 656 |
-| Average goals per match | 2.768 |
-| Goalless matches | 13 (5.5%) |
+| Matches | 913 |
+| Home wins | 379 (41.5%) |
+| Draws | 232 (25.4%) |
+| Away wins | 302 (33.1%) |
+| Total goals | 2596 |
+| Average goals per match | 2.843 |
+| Goalless matches | 56 (6.1%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 132 | 53 (40.2%) | 29 (22.0%) | 50 (37.9%) | 415 | 3.144 | 8 (6.1%) |
+| 2021-2022 | 132 | 52 (39.4%) | 41 (31.1%) | 39 (29.5%) | 380 | 2.879 | 5 (3.8%) |
+| 2022-2023 | 132 | 51 (38.6%) | 28 (21.2%) | 53 (40.2%) | 386 | 2.924 | 7 (5.3%) |
+| 2023-2024 | 132 | 50 (37.9%) | 39 (29.5%) | 43 (32.6%) | 334 | 2.53 | 12 (9.1%) |
+| 2024-2025 | 132 | 58 (43.9%) | 34 (25.8%) | 40 (30.3%) | 371 | 2.811 | 10 (7.6%) |
 | 2025-2026 | 195 | 84 (43.1%) | 50 (25.6%) | 61 (31.3%) | 527 | 2.703 | 12 (6.2%) |
-| 2026-2027 | 42 | 22 (52.4%) | 9 (21.4%) | 11 (26.2%) | 129 | 3.071 | 1 (2.4%) |
+| 2026-2027 | 58 | 31 (53.4%) | 11 (19.0%) | 16 (27.6%) | 183 | 3.155 | 2 (3.4%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 66 (83.5%) | 8 (10.1%) | 5 (6.3%) | 79 |
-| HT draw | 34 (38.2%) | 37 (41.6%) | 18 (20.2%) | 89 |
-| HT away lead | 6 (8.7%) | 14 (20.3%) | 49 (71.0%) | 69 |
+| HT home lead | 239 (80.5%) | 37 (12.5%) | 21 (7.1%) | 297 |
+| HT draw | 117 (32.8%) | 138 (38.7%) | 102 (28.6%) | 357 |
+| HT away lead | 23 (8.9%) | 57 (22.0%) | 179 (69.1%) | 259 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **6** (2.5%)
-- Away comebacks (trailing at HT, won at FT): **5** (2.1%)
+- Home comebacks (trailing at HT, won at FT): **23** (2.5%)
+- Away comebacks (trailing at HT, won at FT): **21** (2.3%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Ried | Tirol | 1-2 | 3-2 |
+| 2020-2021 | Salzburg | LASK | 0-1 | 3-1 |
+| 2020-2021 | Austria Vienna | Altach | 0-1 | 5-1 |
+| 2020-2021 | Altach | Ried | 0-1 | 2-1 |
+| 2021-2022 | LASK | Admira | 0-1 | 3-1 |
+| 2021-2022 | Salzburg | Hartberg | 0-1 | 2-1 |
+| 2022-2023 | Altach | Austria Vienna | 0-1 | 3-2 |
+| 2022-2023 | Sturm Graz | Wolfsberger AC | 0-1 | 3-2 |
+| 2022-2023 | Austria Vienna | Altach | 0-1 | 2-1 |
+| 2023-2024 | Hartberg | BW Linz | 1-2 | 3-2 |
+| 2024-2025 | Austria Vienna | Wolfsberger AC | 0-1 | 3-1 |
+| 2024-2025 | Sturm Graz | Tirol | 1-2 | 4-2 |
+| 2024-2025 | Austria Vienna | BW Linz | 0-1 | 2-1 |
+| 2024-2025 | Wolfsberger AC | LASK | 0-1 | 2-1 |
+| 2024-2025 | Salzburg | Sturm Graz | 0-1 | 3-1 |
 | 2025-2026 | Austria Vienna | Ried | 0-2 | 3-2 |
 | 2025-2026 | SK Rapid | Sturm Graz | 0-1 | 2-1 |
 | 2025-2026 | BW Linz | Ried | 0-2 | 3-2 |
 | 2025-2026 | Ried | Altach | 0-1 | 3-2 |
 | 2025-2026 | Tirol | Wolfsberger AC | 0-1 | 3-1 |
 | 2025-2026 | LASK | SK Rapid | 0-1 | 3-1 |
+| 2026-2027 | Hartberg | A. Lustenau | 1-2 | 4-3 |
+| 2026-2027 | Altach | Austria Vienna | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Admira | Hartberg | 2-1 | 2-3 |
+| 2020-2021 | Tirol | Ried | 1-0 | 1-3 |
+| 2021-2022 | Sturm Graz | Salzburg | 1-0 | 1-3 |
+| 2021-2022 | SK Rapid | Admira | 1-0 | 1-2 |
+| 2021-2022 | Admira | Ried | 1-0 | 1-2 |
+| 2021-2022 | SK Rapid | Salzburg | 1-0 | 1-2 |
+| 2021-2022 | Admira | Austria Vienna | 1-0 | 1-2 |
+| 2022-2023 | Ried | Tirol | 1-0 | 1-2 |
+| 2022-2023 | Ried | Altach | 2-1 | 2-3 |
+| 2023-2024 | Wolfsberger AC | Salzburg | 1-0 | 1-2 |
+| 2023-2024 | Wolfsberger AC | Sturm Graz | 1-0 | 1-2 |
+| 2023-2024 | SK Rapid | A. Klagenfurt | 1-0 | 2-3 |
+| 2023-2024 | A. Lustenau | LASK | 1-0 | 1-3 |
+| 2023-2024 | Altach | Hartberg | 1-0 | 1-2 |
+| 2024-2025 | Grazer AK | Wolfsberger AC | 3-0 | 3-4 |
+| 2024-2025 | SK Rapid | Wolfsberger AC | 1-0 | 1-3 |
 | 2025-2026 | Wolfsberger AC | Ried | 1-0 | 1-2 |
 | 2025-2026 | Salzburg | Tirol | 2-0 | 2-3 |
 | 2025-2026 | Sturm Graz | Tirol | 1-0 | 1-3 |
@@ -55,43 +93,48 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 79 | 66 (83.5%) | 8 (10.1%) | 5 (6.3%) |
-| Away lead | 69 | 49 (71.0%) | 14 (20.3%) | 6 (8.7%) |
+| Home lead | 297 | 239 (80.5%) | 37 (12.5%) | 21 (7.1%) |
+| Away lead | 259 | 179 (69.1%) | 57 (22.0%) | 23 (8.9%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 34 | 38.2% |
-| Draw | 37 | 41.6% |
-| Away win | 18 | 20.2% |
+| Home win | 117 | 32.8% |
+| Draw | 138 | 38.7% |
+| Away win | 102 | 28.6% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `224` of `237` (94.5%)
+- Matches with a first-goal time recorded: `857` of `913` (93.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 80 | 33.8% | 33 (41.2%) | 16 (20.0%) | 31 (38.8%) |
-| 16-30 | 47 | 19.8% | 22 (46.8%) | 12 (25.5%) | 13 (27.7%) |
-| 31-45 | 40 | 16.9% | 20 (50.0%) | 8 (20.0%) | 12 (30.0%) |
-| 46-60 | 27 | 11.4% | 12 (44.4%) | 8 (29.6%) | 7 (25.9%) |
-| 61-75 | 12 | 5.1% | 6 (50.0%) | 1 (8.3%) | 5 (41.7%) |
-| 76-90 | 16 | 6.8% | 11 (68.8%) | 1 (6.2%) | 4 (25.0%) |
-| 91-120 | 2 | 0.8% | 2 (100.0%) | 0 (0.0%) | 0 (0.0%) |
+| 1-15 | 310 | 34.0% | 124 (40.0%) | 66 (21.3%) | 120 (38.7%) |
+| 16-30 | 196 | 21.5% | 94 (48.0%) | 43 (21.9%) | 59 (30.1%) |
+| 31-45 | 147 | 16.1% | 72 (49.0%) | 28 (19.0%) | 47 (32.0%) |
+| 46-60 | 100 | 11.0% | 39 (39.0%) | 28 (28.0%) | 33 (33.0%) |
+| 61-75 | 54 | 5.9% | 18 (33.3%) | 7 (13.0%) | 29 (53.7%) |
+| 76-90 | 43 | 4.7% | 25 (58.1%) | 4 (9.3%) | 14 (32.6%) |
+| 91-120 | 7 | 0.8% | 7 (100.0%) | 0 (0.0%) | 0 (0.0%) |
 
 ## 7. Goalless matches
-- Overall: **13** of `237` (5.5%)
+- Overall: **56** of `913` (6.1%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 132 | 8 | 6.1% |
+| 2021-2022 | 132 | 5 | 3.8% |
+| 2022-2023 | 132 | 7 | 5.3% |
+| 2023-2024 | 132 | 12 | 9.1% |
+| 2024-2025 | 132 | 10 | 7.6% |
 | 2025-2026 | 195 | 12 | 6.2% |
-| 2026-2027 | 42 | 1 | 2.4% |
+| 2026-2027 | 58 | 2 | 3.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\austria1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\austria1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

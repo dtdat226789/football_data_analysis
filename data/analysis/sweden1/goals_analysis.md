@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-09-29T16:09:18+00:00
+- Generated: 2026-10-26T01:50:09+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`
@@ -8,86 +8,112 @@
 ## 1. Goals per match distribution
 | goals | matches | pct |
 |---|---|---|
-| 0 | 21 | 5.0% |
-| 1 | 64 | 15.4% |
-| 2 | 112 | 26.9% |
-| 3 | 93 | 22.4% |
-| 4 | 58 | 13.9% |
-| 5 | 37 | 8.9% |
-| 6 | 13 | 3.1% |
-| 7 | 12 | 2.9% |
-| 8 | 2 | 0.5% |
-| 9 | 2 | 0.5% |
-| 10 | 2 | 0.5% |
+| 0 | 101 | 6.2% |
+| 1 | 274 | 16.7% |
+| 2 | 388 | 23.7% |
+| 3 | 380 | 23.2% |
+| 4 | 253 | 15.4% |
+| 5 | 136 | 8.3% |
+| 6 | 62 | 3.8% |
+| 7 | 33 | 2.0% |
+| 8 | 6 | 0.4% |
+| 9 | 2 | 0.1% |
+| 10 | 2 | 0.1% |
+| 11 | 1 | 0.1% |
 
 ## 2. Goals per match per season
 | season | matches | total goals | avg home | avg away | avg total |
 |---|---|---|---|---|---|
+| 2020 | 240 | 674 | 1.483 | 1.325 | 2.808 |
+| 2021 | 240 | 638 | 1.521 | 1.137 | 2.658 |
+| 2022 | 240 | 662 | 1.546 | 1.212 | 2.758 |
+| 2023 | 240 | 665 | 1.554 | 1.217 | 2.771 |
+| 2024 | 240 | 680 | 1.567 | 1.267 | 2.833 |
 | 2025 | 240 | 683 | 1.475 | 1.371 | 2.846 |
-| 2026 | 176 | 517 | 1.619 | 1.318 | 2.938 |
+| 2026 | 198 | 580 | 1.606 | 1.323 | 2.929 |
 
 ## 3. Home vs away goal share
-- Home goals: **639** (53.2%)
-- Away goals: **561** (46.8%)
-- Home/away ratio: **1.139**
+- Home goals: **2513** (54.8%)
+- Away goals: **2069** (45.2%)
+- Home/away ratio: **1.215**
 
 | season | home goals | away goals | total | home pct | away pct |
 |---|---|---|---|---|---|
+| 2020 | 356 | 318 | 674 | 52.8% | 47.2% |
+| 2021 | 365 | 273 | 638 | 57.2% | 42.8% |
+| 2022 | 371 | 291 | 662 | 56.0% | 44.0% |
+| 2023 | 373 | 292 | 665 | 56.1% | 43.9% |
+| 2024 | 376 | 304 | 680 | 55.3% | 44.7% |
 | 2025 | 354 | 329 | 683 | 51.8% | 48.2% |
-| 2026 | 285 | 232 | 517 | 55.1% | 44.9% |
+| 2026 | 318 | 262 | 580 | 54.8% | 45.2% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **219** of `416` (52.6%)
+- Overall: **864** of `1638` (52.7%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
+| 2020 | 240 | 138 | 57.5% |
+| 2021 | 240 | 121 | 50.4% |
+| 2022 | 240 | 126 | 52.5% |
+| 2023 | 240 | 120 | 50.0% |
+| 2024 | 240 | 131 | 54.6% |
 | 2025 | 240 | 126 | 52.5% |
-| 2026 | 176 | 93 | 52.8% |
+| 2026 | 198 | 102 | 51.5% |
 
 ## 5. Clean sheets
-- Home clean sheets: **118** (28.4%)
-- Away clean sheets: **100** (24.0%)
-- Total clean sheets recorded: **218**
-- Matches with at least one clean sheet: **197** (47.4%)
-- Both teams kept clean sheets (0-0): **21**
+- Home clean sheets: **490** (29.9%)
+- Away clean sheets: **385** (23.5%)
+- Total clean sheets recorded: **875**
+- Matches with at least one clean sheet: **774** (47.3%)
+- Both teams kept clean sheets (0-0): **101**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
 |---|---|---|---|---|---|
+| 2020 | 240 | 61 | 58 | 119 | 102 (42.5%) |
+| 2021 | 240 | 82 | 56 | 138 | 119 (49.6%) |
+| 2022 | 240 | 78 | 51 | 129 | 114 (47.5%) |
+| 2023 | 240 | 78 | 59 | 137 | 120 (50.0%) |
+| 2024 | 240 | 66 | 54 | 120 | 109 (45.4%) |
 | 2025 | 240 | 67 | 61 | 128 | 114 (47.5%) |
-| 2026 | 176 | 51 | 39 | 90 | 83 (47.2%) |
+| 2026 | 198 | 58 | 46 | 104 | 96 (48.5%) |
 
 ## 6. Scoring intensity
-- First-half goals: **526** (43.8%)
-- Second-half goals: **674** (56.2%)
-- Avg first-half goals per match: **1.264**
-- Avg second-half goals per match: **1.62**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **108** (26.0%)
+- First-half goals: **2040** (44.5%)
+- Second-half goals: **2542** (55.5%)
+- Avg first-half goals per match: **1.245**
+- Avg second-half goals per match: **1.552**
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **376** (23.0%)
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
 |---|---|---|---|---|---|
+| 2020 | 240 | 308 | 366 | 45.7% | 54.3% |
+| 2021 | 240 | 290 | 348 | 45.5% | 54.5% |
+| 2022 | 240 | 291 | 371 | 44.0% | 56.0% |
+| 2023 | 240 | 294 | 371 | 44.2% | 55.8% |
+| 2024 | 240 | 305 | 375 | 44.9% | 55.1% |
 | 2025 | 240 | 294 | 389 | 43.0% | 57.0% |
-| 2026 | 176 | 232 | 285 | 44.9% | 55.1% |
+| 2026 | 198 | 258 | 322 | 44.5% | 55.5% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `395` of `416` (95.0%)
-- Goalless matches: `21`
-- Min `1` | Max `94` | Mean `31.45` | Median (p50) `25`
+- Matches with first-goal time recorded: `1537` of `1638` (93.8%)
+- Goalless matches: `101`
+- Min `1` | Max `101` | Mean `30.77` | Median (p50) `25`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 131 | 31.5% | 33.2% |
-| 16-30 | 92 | 22.1% | 23.3% |
-| 31-45 | 56 | 13.5% | 14.2% |
-| 46-60 | 69 | 16.6% | 17.5% |
-| 61-75 | 27 | 6.5% | 6.8% |
-| 76-90 | 14 | 3.4% | 3.5% |
-| 91-120 | 6 | 1.4% | 1.5% |
+| 1-15 | 519 | 31.7% | 33.8% |
+| 16-30 | 362 | 22.1% | 23.6% |
+| 31-45 | 242 | 14.8% | 15.7% |
+| 46-60 | 232 | 14.2% | 15.1% |
+| 61-75 | 91 | 5.6% | 5.9% |
+| 76-90 | 65 | 4.0% | 4.2% |
+| 91-120 | 26 | 1.6% | 1.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_goals.py` to regenerate.*
 
 ## Charts
 
-![goals_analysis_distribution](E:\football_data_analysis\data\analysis\sweden1\charts\goals_analysis_distribution.png)
-![goals_analysis_avg_per_season](E:\football_data_analysis\data\analysis\sweden1\charts\goals_analysis_avg_per_season.png)
+![goals_analysis_distribution](charts/goals_analysis_distribution.png)
+![goals_analysis_avg_per_season](charts/goals_analysis_avg_per_season.png)
 

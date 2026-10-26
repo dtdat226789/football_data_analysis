@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:08:47+00:00
+- Generated: 2026-10-26T01:49:33+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: LaLiga (Spain)
 - Scope: league `spain1`
@@ -8,34 +8,83 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 449 |
-| Home wins | 217 (48.3%) |
-| Draws | 110 (24.5%) |
-| Away wins | 122 (27.2%) |
-| Total goals | 1234 |
-| Average goals per match | 2.748 |
-| Goalless matches | 20 (4.5%) |
+| Matches | 2375 |
+| Home wins | 1068 (45.0%) |
+| Draws | 633 (26.7%) |
+| Away wins | 674 (28.4%) |
+| Total goals | 6169 |
+| Average goals per match | 2.597 |
+| Goalless matches | 175 (7.4%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 380 | 158 (41.6%) | 109 (28.7%) | 113 (29.7%) | 953 | 2.508 | 30 (7.9%) |
+| 2021-2022 | 380 | 165 (43.4%) | 111 (29.2%) | 104 (27.4%) | 951 | 2.503 | 43 (11.3%) |
+| 2022-2023 | 380 | 182 (47.9%) | 89 (23.4%) | 109 (28.7%) | 955 | 2.513 | 26 (6.8%) |
+| 2023-2024 | 380 | 167 (43.9%) | 107 (28.2%) | 106 (27.9%) | 1005 | 2.645 | 31 (8.2%) |
+| 2024-2025 | 380 | 169 (44.5%) | 97 (25.5%) | 114 (30.0%) | 995 | 2.618 | 21 (5.5%) |
 | 2025-2026 | 380 | 186 (48.9%) | 93 (24.5%) | 101 (26.6%) | 1024 | 2.695 | 15 (3.9%) |
-| 2026-2027 | 69 | 31 (44.9%) | 17 (24.6%) | 21 (30.4%) | 210 | 3.043 | 5 (7.2%) |
+| 2026-2027 | 95 | 41 (43.2%) | 27 (28.4%) | 27 (28.4%) | 286 | 3.011 | 9 (9.5%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 122 (77.7%) | 20 (12.7%) | 15 (9.6%) | 157 |
-| HT draw | 86 (44.6%) | 61 (31.6%) | 46 (23.8%) | 193 |
-| HT away lead | 9 (9.1%) | 29 (29.3%) | 61 (61.6%) | 99 |
+| HT home lead | 618 (77.5%) | 124 (15.6%) | 55 (6.9%) | 797 |
+| HT draw | 398 (37.9%) | 375 (35.7%) | 277 (26.4%) | 1050 |
+| HT away lead | 52 (9.9%) | 133 (25.2%) | 342 (64.9%) | 527 |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **9** (2.0%)
-- Away comebacks (trailing at HT, won at FT): **15** (3.3%)
+- Home comebacks (trailing at HT, won at FT): **52** (2.2%)
+- Away comebacks (trailing at HT, won at FT): **55** (2.3%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Ath Bilbao | Sevilla | 0-1 | 2-1 |
+| 2020-2021 | Valladolid | Osasuna | 1-2 | 3-2 |
+| 2020-2021 | Valencia | Villarreal | 0-1 | 2-1 |
+| 2020-2021 | Betis | Alaves | 0-2 | 3-2 |
+| 2020-2021 | Real Madrid | Villarreal | 0-1 | 2-1 |
+| 2021-2022 | Real Madrid | Celta Vigo | 1-2 | 5-2 |
+| 2021-2022 | Alaves | Levante | 0-1 | 2-1 |
+| 2021-2022 | Betis | Levante | 0-1 | 3-1 |
+| 2021-2022 | Espanyol | Levante | 1-2 | 4-3 |
+| 2021-2022 | Atl. Madrid | Valencia | 0-2 | 3-2 |
+| 2021-2022 | Elche | Alaves | 0-1 | 3-1 |
+| 2021-2022 | Levante | Alaves | 0-1 | 3-1 |
+| 2022-2023 | Villarreal | Almeria | 0-1 | 2-1 |
+| 2022-2023 | Almeria | Celta Vigo | 0-1 | 3-1 |
+| 2022-2023 | Girona | Sevilla | 0-1 | 2-1 |
+| 2022-2023 | Osasuna | Elche | 0-1 | 2-1 |
+| 2022-2023 | Mallorca | Getafe | 0-1 | 3-1 |
+| 2022-2023 | Valencia | Valladolid | 0-1 | 2-1 |
+| 2022-2023 | Villarreal | Espanyol | 0-1 | 4-2 |
+| 2022-2023 | Sevilla | Espanyol | 1-2 | 3-2 |
+| 2023-2024 | Real Madrid | Getafe | 0-1 | 2-1 |
+| 2023-2024 | Real Madrid | Real Sociedad | 0-1 | 2-1 |
+| 2023-2024 | Barcelona | Celta Vigo | 0-1 | 3-2 |
+| 2023-2024 | Real Sociedad | Getafe | 1-2 | 4-3 |
+| 2023-2024 | Atl. Madrid | Cadiz CF | 1-2 | 3-2 |
+| 2023-2024 | Barcelona | Alaves | 0-1 | 2-1 |
+| 2023-2024 | Real Madrid | Almeria | 0-2 | 3-2 |
+| 2023-2024 | Rayo Vallecano | Osasuna | 0-1 | 2-1 |
+| 2023-2024 | Barcelona | Valencia | 1-2 | 4-2 |
+| 2023-2024 | Girona | Barcelona | 1-2 | 4-2 |
+| 2023-2024 | Villarreal | Sevilla | 1-2 | 3-2 |
+| 2023-2024 | Celta Vigo | Ath Bilbao | 0-1 | 2-1 |
+| 2023-2024 | Almeria | Cadiz CF | 0-1 | 6-1 |
+| 2024-2025 | Celta Vigo | Alaves | 0-1 | 2-1 |
+| 2024-2025 | Villarreal | Celta Vigo | 1-2 | 4-3 |
+| 2024-2025 | Rayo Vallecano | Osasuna | 0-1 | 3-1 |
+| 2024-2025 | Atl. Madrid | Leganes | 0-1 | 3-1 |
+| 2024-2025 | Atl. Madrid | Alaves | 0-1 | 2-1 |
+| 2024-2025 | Atl. Madrid | Sevilla | 1-2 | 4-3 |
+| 2024-2025 | Celta Vigo | Betis | 0-2 | 3-2 |
+| 2024-2025 | Real Madrid | Leganes | 1-2 | 3-2 |
+| 2024-2025 | Ath Bilbao | Rayo Vallecano | 0-1 | 3-1 |
+| 2024-2025 | Real Madrid | Mallorca | 0-1 | 2-1 |
 | 2025-2026 | Espanyol | Atl. Madrid | 0-1 | 2-1 |
 | 2025-2026 | Villarreal | Osasuna | 0-1 | 2-1 |
 | 2025-2026 | Levante | Elche | 0-1 | 3-2 |
@@ -49,6 +98,45 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Betis | Real Madrid | 2-1 | 2-3 |
+| 2020-2021 | Betis | Barcelona | 1-0 | 2-3 |
+| 2020-2021 | Valladolid | Granada CF | 1-0 | 1-2 |
+| 2020-2021 | Celta Vigo | Sevilla | 3-2 | 3-4 |
+| 2020-2021 | Barcelona | Granada CF | 1-0 | 1-2 |
+| 2020-2021 | Cadiz CF | Elche | 1-0 | 1-3 |
+| 2020-2021 | Celta Vigo | Betis | 1-0 | 2-3 |
+| 2020-2021 | Valladolid | Atl. Madrid | 1-0 | 1-2 |
+| 2021-2022 | Cadiz CF | Osasuna | 1-0 | 2-3 |
+| 2021-2022 | Espanyol | Atl. Madrid | 1-0 | 1-2 |
+| 2021-2022 | Getafe | Atl. Madrid | 1-0 | 1-2 |
+| 2021-2022 | Granada CF | Real Sociedad | 1-0 | 2-3 |
+| 2021-2022 | Mallorca | Osasuna | 2-1 | 2-3 |
+| 2021-2022 | Levante | Valencia | 2-1 | 3-4 |
+| 2021-2022 | Elche | Barcelona | 1-0 | 1-2 |
+| 2021-2022 | Sevilla | Real Madrid | 2-0 | 2-3 |
+| 2021-2022 | Villarreal | Real Sociedad | 1-0 | 1-2 |
+| 2022-2023 | Almeria | Real Madrid | 1-0 | 1-2 |
+| 2022-2023 | Osasuna | Barcelona | 1-0 | 1-2 |
+| 2022-2023 | Elche | Betis | 2-0 | 2-3 |
+| 2022-2023 | Girona | Betis | 1-0 | 1-2 |
+| 2023-2024 | Barcelona | Real Madrid | 1-0 | 1-2 |
+| 2023-2024 | Las Palmas | Barcelona | 1-0 | 1-2 |
+| 2023-2024 | Granada CF | Real Sociedad | 2-1 | 2-3 |
+| 2023-2024 | Betis | Villarreal | 2-1 | 2-3 |
+| 2023-2024 | Sevilla | Celta Vigo | 1-0 | 1-2 |
+| 2024-2025 | Rayo Vallecano | Barcelona | 1-0 | 1-2 |
+| 2024-2025 | Rayo Vallecano | Ath Bilbao | 1-0 | 1-2 |
+| 2024-2025 | Barcelona | Atl. Madrid | 1-0 | 1-2 |
+| 2024-2025 | Valencia | Real Madrid | 1-0 | 1-2 |
+| 2024-2025 | Girona | Sevilla | 1-0 | 1-2 |
+| 2024-2025 | Leganes | Betis | 2-0 | 2-3 |
+| 2024-2025 | Osasuna | Getafe | 1-0 | 1-2 |
+| 2024-2025 | Atl. Madrid | Barcelona | 1-0 | 2-4 |
+| 2024-2025 | Mallorca | Celta Vigo | 1-0 | 1-2 |
+| 2024-2025 | Getafe | Las Palmas | 1-0 | 1-3 |
+| 2024-2025 | Valladolid | Barcelona | 1-0 | 1-2 |
+| 2024-2025 | Espanyol | Betis | 1-0 | 1-2 |
+| 2024-2025 | Barcelona | Villarreal | 2-1 | 2-3 |
 | 2025-2026 | Levante | Barcelona | 2-0 | 2-3 |
 | 2025-2026 | Oviedo | Barcelona | 1-0 | 1-3 |
 | 2025-2026 | Valencia | Oviedo | 1-0 | 1-2 |
@@ -64,47 +152,54 @@
 | 2025-2026 | Alaves | Ath Bilbao | 1-0 | 2-4 |
 | 2025-2026 | Alaves | Rayo Vallecano | 1-0 | 1-2 |
 | 2026-2027 | Celta Vigo | Osasuna | 1-0 | 1-2 |
+| 2026-2027 | Valencia | Villarreal | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 157 | 122 (77.7%) | 20 (12.7%) | 15 (9.6%) |
-| Away lead | 99 | 61 (61.6%) | 29 (29.3%) | 9 (9.1%) |
+| Home lead | 797 | 618 (77.5%) | 124 (15.6%) | 55 (6.9%) |
+| Away lead | 527 | 342 (64.9%) | 133 (25.2%) | 52 (9.9%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 86 | 44.6% |
-| Draw | 61 | 31.6% |
-| Away win | 46 | 23.8% |
+| Home win | 398 | 37.9% |
+| Draw | 375 | 35.7% |
+| Away win | 277 | 26.4% |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `429` of `449` (95.5%)
+- Matches with a first-goal time recorded: `2200` of `2375` (92.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 123 | 27.4% | 62 (50.4%) | 21 (17.1%) | 40 (32.5%) |
-| 16-30 | 97 | 21.6% | 52 (53.6%) | 20 (20.6%) | 25 (25.8%) |
-| 31-45 | 80 | 17.8% | 40 (50.0%) | 20 (25.0%) | 20 (25.0%) |
-| 46-60 | 66 | 14.7% | 31 (47.0%) | 20 (30.3%) | 15 (22.7%) |
-| 61-75 | 33 | 7.3% | 18 (54.5%) | 6 (18.2%) | 9 (27.3%) |
-| 76-90 | 28 | 6.2% | 13 (46.4%) | 3 (10.7%) | 12 (42.9%) |
-| 91-120 | 2 | 0.4% | 1 (50.0%) | 0 (0.0%) | 1 (50.0%) |
+| 1-15 | 694 | 29.2% | 336 (48.4%) | 159 (22.9%) | 199 (28.7%) |
+| 16-30 | 483 | 20.3% | 237 (49.1%) | 86 (17.8%) | 160 (33.1%) |
+| 31-45 | 374 | 15.7% | 181 (48.4%) | 100 (26.7%) | 93 (24.9%) |
+| 46-60 | 299 | 12.6% | 140 (46.8%) | 67 (22.4%) | 92 (30.8%) |
+| 61-75 | 183 | 7.7% | 93 (50.8%) | 30 (16.4%) | 60 (32.8%) |
+| 76-90 | 132 | 5.6% | 62 (47.0%) | 16 (12.1%) | 54 (40.9%) |
+| 91-120 | 35 | 1.5% | 19 (54.3%) | 0 (0.0%) | 16 (45.7%) |
 
 ## 7. Goalless matches
-- Overall: **20** of `449` (4.5%)
+- Overall: **175** of `2375` (7.4%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 380 | 30 | 7.9% |
+| 2021-2022 | 380 | 43 | 11.3% |
+| 2022-2023 | 380 | 26 | 6.8% |
+| 2023-2024 | 380 | 31 | 8.2% |
+| 2024-2025 | 380 | 21 | 5.5% |
 | 2025-2026 | 380 | 15 | 3.9% |
-| 2026-2027 | 69 | 5 | 7.2% |
+| 2026-2027 | 95 | 9 | 9.5% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\spain1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\spain1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

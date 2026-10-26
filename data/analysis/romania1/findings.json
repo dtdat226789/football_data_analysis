@@ -4,10 +4,10 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T16:04:55+00:00",
+  "generated_at": "2026-10-26T01:44:51+00:00",
   "config": {
     "league": "romania1",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\romania1",
+    "out_dir": "data/analysis/romania1",
     "out_stem": null
   },
   "league": {
@@ -26,52 +26,52 @@
   "sources": [
     {
       "report_name": "database_profile",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\database_profile.json",
+      "path": "data/analysis/romania1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 31.58
+      "size_kb": 50.86
     },
     {
       "report_name": "matches_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\matches_analysis.json",
+      "path": "data/analysis/romania1/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 9.05
+      "size_kb": 19.22
     },
     {
       "report_name": "goals_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\goals_analysis.json",
+      "path": "data/analysis/romania1/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 6.16
+      "size_kb": 12.42
     },
     {
       "report_name": "teams_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\teams_analysis.json",
+      "path": "data/analysis/romania1/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 30.97
+      "size_kb": 39.17
     },
     {
       "report_name": "season_trends",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\season_trends.json",
+      "path": "data/analysis/romania1/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.97
+      "size_kb": 10.47
     },
     {
       "report_name": "scoreline_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\scoreline_analysis.json",
+      "path": "data/analysis/romania1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 70.31
+      "size_kb": 238.94
     },
     {
       "report_name": "relationships",
-      "path": "E:\\football_data_analysis\\data\\analysis\\romania1\\relationships.json",
+      "path": "data/analysis/romania1/relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.35
+      "size_kb": 13.78
     }
   ],
   "coverage": {
@@ -83,98 +83,98 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "429 matches: home wins 46.4%, draws 27.3%, away wins 26.3% (199H / 117D / 113A)",
+      "detail": "1651 matches: home wins 42.3%, draws 29.3%, away wins 28.5% (698H / 483D / 470A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "11 home and 4 away comebacks (trailing at HT but winning at FT)",
+      "detail": "36 home and 24 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 123 times",
+      "detail": "home lead at HT -> home win occurred 399 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "429 matches produced 1095 goals (avg 2.552 per match)",
+      "detail": "1651 matches produced 3956 goals (avg 2.396 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 58.9% vs away 41.1% of 1095 goals in total (home/away ratio 1.43)",
+      "detail": "home 56.4% vs away 43.6% of 3956 goals in total (home/away ratio 1.29)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "217 of 429 matches (50.6%)",
+      "detail": "798 of 1651 matches (48.3%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 112 scoring matches, 28.2% of scoring)",
+      "detail": "minute 1-15 (first goal in 450 scoring matches, 30.2% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 33.53, median 29.0",
+      "detail": "mean 33.15, median 28.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Univ. Craiova leads with 102 points across 2 seasons (1 title(s), GD 47)",
+      "detail": "CFR Cluj leads with 395 points across 7 seasons (1 title(s), GD 142)",
       "importance": "high",
       "id": "F9"
     },
     {
       "source": "teams_analysis",
       "finding": "Team consistency",
-      "detail": "14 teams present in every one of the 2 seasons (CFR Cluj, Csikszereda M. Ciuc, Dinamo Bucuresti, FC Arges, FC Botosani...)",
+      "detail": "5 teams present in every one of the 7 seasons (CFR Cluj, FC Botosani, FCSB, UTA Arad, Univ. Craiova)",
       "importance": "medium",
       "id": "F10"
     },
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Univ. Craiova earns 26 more points at home than away (64 home vs 38 away)",
+      "detail": "Univ. Craiova earns 67 more points at home than away (221 home vs 154 away)",
       "importance": "medium",
       "id": "F11"
     },
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "Univ. Craiova won 1 of 2 championship(s) on record",
+      "detail": "FCSB won 3 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Dinamo Bucuresti beat FC Rapid Bucuresti by 2 pts",
+      "detail": "2020-2021: FCSB beat CFR Cluj by 1 pt",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.099 per match): first half 2.534 vs last half 2.633 across 2 seasons",
+      "detail": "up (+0.233 per match): first half 2.267 vs last half 2.5 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,84 +188,84 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.500)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.375)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 56 matches (13.1%)",
+      "detail": "1-1 in 234 matches (14.2%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (51 of 199 home matches, 25.6%)",
+      "detail": "1-0 (203 of 698 home matches, 29.1%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (56 of 117 draw matches, 47.9%)",
+      "detail": "1-1 (234 of 483 draw matches, 48.4%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (42 of 113 away matches, 37.2%)",
+      "detail": "0-1 (167 of 470 away matches, 35.5%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "4 match(es) with >= 7 total goals",
+      "detail": "22 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_position_before_match |corr| = 0.1577 (n=350 leakage-safe rows)",
+      "detail": "away_position_before_match |corr| = 0.1064 (n=1550 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 7.471: home 3.310, draw -0.156, away -4.162",
+      "detail": "points_difference spreads group means over 7.033: home 3.276, draw -1.453, away -3.756",
       "importance": "medium",
       "id": "F23"
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (15)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (49)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 429 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1651 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 429,
-    "avg_goals": 2.552,
-    "home_win_pct": 46.4,
-    "draw_pct": 27.3,
-    "away_win_pct": 26.3,
+    "n_matches": 1651,
+    "avg_goals": 2.396,
+    "home_win_pct": 42.3,
+    "draw_pct": 29.3,
+    "away_win_pct": 28.5,
     "most_common_scoreline": "1-1",
-    "dominant_team": "Univ. Craiova",
-    "champion_most_titles": "Univ. Craiova",
-    "btts_rate_pct": 50.6
+    "dominant_team": "CFR Cluj",
+    "champion_most_titles": "FCSB",
+    "btts_rate_pct": 48.3
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 31.58
+      "size_kb": 50.86
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 9.05
+      "size_kb": 19.22
     },
     {
       "module": "goals_analysis",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 6.16
+      "size_kb": 12.42
     },
     {
       "module": "teams_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 30.97
+      "size_kb": 39.17
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.97
+      "size_kb": 10.47
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 70.31
+      "size_kb": 238.94
     },
     {
       "module": "relationships",
@@ -359,10 +359,110 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.35
+      "size_kb": 13.78
     }
   ],
   "anomalies": [
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2020-2021 has 240 matches, expected 380",
+      "details": {
+        "season": "2020-2021",
+        "n_matches": 240,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2020-2021 has 16 teams, expected 20",
+      "details": {
+        "season": "2020-2021",
+        "n_teams": 16,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2021-2022 has 240 matches, expected 380",
+      "details": {
+        "season": "2021-2022",
+        "n_matches": 240,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2021-2022 has 16 teams, expected 20",
+      "details": {
+        "season": "2021-2022",
+        "n_teams": 16,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2022-2023 has 240 matches, expected 380",
+      "details": {
+        "season": "2022-2023",
+        "n_matches": 240,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2022-2023 has 16 teams, expected 20",
+      "details": {
+        "season": "2022-2023",
+        "n_teams": 16,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2023-2024 has 240 matches, expected 380",
+      "details": {
+        "season": "2023-2024",
+        "n_matches": 240,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2023-2024 has 16 teams, expected 20",
+      "details": {
+        "season": "2023-2024",
+        "n_teams": 16,
+        "expected": 20
+      }
+    },
+    {
+      "code": "MATCH_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2024-2025 has 240 matches, expected 380",
+      "details": {
+        "season": "2024-2025",
+        "n_matches": 240,
+        "expected": 380
+      }
+    },
+    {
+      "code": "TEAM_COUNT_UNEXPECTED",
+      "severity": "warning",
+      "message": "Season 2024-2025 has 16 teams, expected 20",
+      "details": {
+        "season": "2024-2025",
+        "n_teams": 16,
+        "expected": 20
+      }
+    },
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
@@ -386,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 79 matches, expected 380",
+      "message": "Season 2026-2027 has 101 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 79,
+        "n_matches": 101,
         "expected": 380
       }
     },
@@ -415,23 +515,142 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 55.7% vs overall 46.4%",
+      "message": "Season 2020-2021 home outcome share 34.6% vs overall 42.3%",
       "details": {
-        "season": "2026-2027",
+        "season": "2020-2021",
         "outcome": "home",
-        "season_share": 55.7,
-        "overall_share": 46.4
+        "season_share": 34.6,
+        "overall_share": 42.3
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 17.7% vs overall 26.3%",
+      "message": "Season 2020-2021 away outcome share 34.6% vs overall 28.5%",
+      "details": {
+        "season": "2020-2021",
+        "outcome": "away",
+        "season_share": 34.6,
+        "overall_share": 28.5
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2021-2022 goalless share 11.7% vs overall 9.6% (deviation 2.1 pp)",
+      "details": {
+        "season": "2021-2022",
+        "season_goalless_pct": 11.7,
+        "overall_goalless_pct": 9.6,
+        "deviation_pp": 2.1
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2022-2023 goalless share 7.1% vs overall 9.6% (deviation 2.5 pp)",
+      "details": {
+        "season": "2022-2023",
+        "season_goalless_pct": 7.1,
+        "overall_goalless_pct": 9.6,
+        "deviation_pp": 2.5
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2023-2024 goalless share 12.5% vs overall 9.6% (deviation 2.9 pp)",
+      "details": {
+        "season": "2023-2024",
+        "season_goalless_pct": 12.5,
+        "overall_goalless_pct": 9.6,
+        "deviation_pp": 2.9
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2025-2026 goalless share 7.1% vs overall 9.6% (deviation 2.5 pp)",
+      "details": {
+        "season": "2025-2026",
+        "season_goalless_pct": 7.1,
+        "overall_goalless_pct": 9.6,
+        "deviation_pp": 2.5
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 6.9% vs overall 9.6% (deviation 2.7 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 6.9,
+        "overall_goalless_pct": 9.6,
+        "deviation_pp": 2.7
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 53.5% vs overall 42.3%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "home",
+        "season_share": 53.5,
+        "overall_share": 42.3
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 draw outcome share 23.8% vs overall 29.3%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "draw",
+        "season_share": 23.8,
+        "overall_share": 29.3
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 away outcome share 22.8% vs overall 28.5%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 17.7,
-        "overall_share": 26.3
+        "season_share": 22.8,
+        "overall_share": 28.5
+      }
+    },
+    {
+      "code": "HIGH_SCORING_MATCHES",
+      "severity": "warning",
+      "message": "4 match(es) with >= 8 total goals (extreme scorelines)",
+      "details": {
+        "n_matches": 4,
+        "threshold": 8,
+        "examples": [
+          {
+            "scoreline": "2-8",
+            "total_goals": 10,
+            "count": 1
+          },
+          {
+            "scoreline": "8-0",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
+            "scoreline": "6-2",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
+            "scoreline": "3-5",
+            "total_goals": 8,
+            "count": 1
+          }
+        ]
       }
     },
     {
@@ -440,20 +659,215 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 26174,
-        "distinct": 26160,
+        "rows": 112983,
+        "distinct": 112969,
         "duplicates": 14
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=414, fgte=414 rows)",
       "details": {
-        "total": 26174,
-        "fgt_inconsistent": 24,
-        "fgte_inconsistent": 24,
-        "n_with_fgt": 24337
+        "total": 112983,
+        "fgt_inconsistent": 414,
+        "fgte_inconsistent": 414,
+        "n_with_fgt": 103924
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2020-2021/classic rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2020-2021",
+        "view": "classic",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2020-2021/goals rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2020-2021",
+        "view": "goals",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2020-2021/luck rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2020-2021",
+        "view": "luck",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2021-2022/classic rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2021-2022",
+        "view": "classic",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2021-2022/goals rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2021-2022",
+        "view": "goals",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2021-2022/luck rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2021-2022",
+        "view": "luck",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2022-2023/classic rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2022-2023",
+        "view": "classic",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2022-2023/goals rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2022-2023",
+        "view": "goals",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2022-2023/luck rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2022-2023",
+        "view": "luck",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/classic rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2023-2024",
+        "view": "classic",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/goals rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2023-2024",
+        "view": "goals",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2023-2024/luck rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2023-2024",
+        "view": "luck",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/classic rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2024-2025",
+        "view": "classic",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/goals rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2024-2025",
+        "view": "goals",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
+      }
+    },
+    {
+      "code": "STANDINGS_INCOMPLETE",
+      "severity": "warning",
+      "message": "Standings 2024-2025/luck rows=16 positions=1..16 teams=16",
+      "details": {
+        "season": "2024-2025",
+        "view": "luck",
+        "n_rows": 16,
+        "min_pos": 1,
+        "max_pos": 16,
+        "distinct_teams": 16
       }
     },
     {

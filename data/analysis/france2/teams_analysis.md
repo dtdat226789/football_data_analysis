@@ -1,163 +1,214 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:50:14+00:00
+- Generated: 2026-10-26T01:32:32+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ligue 2 (France)
 - Scope: league `france2`
 
-- Teams: **23** | Seasons: **2** | Matches: **373**
+- Teams: **40** | Seasons: **7** | Matches: **2224**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| St Etienne | 2 | 42 | 24 | 7 | 11 | 79 | 79 | 46 | 33 | 39.5 | 1 | 4 | 1 |
-| Red Star | 2 | 42 | 19 | 13 | 10 | 70 | 56 | 47 | 9 | 35.0 | 2 | 6 | 0 |
-| Reims | 2 | 41 | 17 | 18 | 6 | 69 | 68 | 44 | 24 | 34.5 | 3 | 5 | 0 |
-| Rodez | 2 | 43 | 18 | 14 | 11 | 68 | 62 | 58 | 4 | 34.0 | 3 | 14 | 0 |
-| Troyes | 1 | 34 | 20 | 7 | 7 | 67 | 60 | 33 | 27 | 67.0 | 1 | 1 | 1 |
-| Montpellier | 2 | 41 | 17 | 12 | 12 | 63 | 47 | 36 | 11 | 31.5 | 4 | 8 | 0 |
+| Paris FC | 5 | 186 | 89 | 50 | 47 | 317 | 256 | 190 | 66 | 63.4 | 2 | 8 | 0 |
+| Guingamp | 7 | 230 | 83 | 68 | 79 | 317 | 300 | 286 | 14 | 45.29 | 5 | 11 | 0 |
+| Grenoble | 7 | 230 | 80 | 64 | 86 | 304 | 244 | 259 | -15 | 43.43 | 4 | 16 | 0 |
+| Rodez | 7 | 232 | 73 | 83 | 76 | 302 | 291 | 299 | -8 | 43.14 | 3 | 17 | 0 |
+| Pau FC | 7 | 230 | 77 | 64 | 89 | 295 | 283 | 332 | -49 | 42.14 | 5 | 14 | 0 |
+| Amiens | 6 | 220 | 64 | 66 | 90 | 258 | 228 | 284 | -56 | 43.0 | 8 | 18 | 0 |
+| Bastia | 5 | 182 | 57 | 63 | 62 | 234 | 200 | 205 | -5 | 46.8 | 4 | 17 | 0 |
+| Caen | 5 | 186 | 60 | 50 | 76 | 230 | 219 | 237 | -18 | 46.0 | 5 | 18 | 0 |
+| Troyes | 4 | 144 | 65 | 34 | 45 | 229 | 198 | 153 | 45 | 57.25 | 1 | 17 | 2 |
+| Dunkerque | 6 | 192 | 61 | 46 | 85 | 229 | 212 | 253 | -41 | 38.17 | 4 | 19 | 0 |
+| Auxerre | 3 | 114 | 58 | 36 | 20 | 210 | 197 | 118 | 79 | 70.0 | 1 | 6 | 1 |
+| Annecy | 5 | 154 | 57 | 39 | 58 | 210 | 193 | 195 | -2 | 42.0 | 6 | 17 | 0 |
+| St Etienne | 4 | 121 | 61 | 26 | 34 | 209 | 194 | 134 | 60 | 52.25 | 1 | 6 | 1 |
+| AC Ajaccio | 4 | 148 | 57 | 38 | 53 | 209 | 138 | 150 | -12 | 52.25 | 2 | 15 | 0 |
+| Laval | 5 | 156 | 51 | 40 | 65 | 193 | 173 | 209 | -36 | 38.6 | 7 | 18 | 0 |
+| Sochaux | 4 | 124 | 48 | 38 | 38 | 182 | 154 | 124 | 30 | 45.5 | 5 | 12 | 0 |
+| Le Havre | 3 | 114 | 44 | 40 | 30 | 172 | 122 | 108 | 14 | 57.33 | 1 | 12 | 1 |
+| Valenciennes | 4 | 152 | 38 | 51 | 63 | 165 | 152 | 209 | -57 | 41.25 | 11 | 20 | 0 |
+| Metz | 3 | 82 | 41 | 28 | 13 | 151 | 141 | 81 | 60 | 50.33 | 2 | 8 | 0 |
+| Toulouse | 2 | 76 | 43 | 20 | 13 | 149 | 153 | 75 | 78 | 74.5 | 1 | 3 | 1 |
+| Clermont | 4 | 116 | 37 | 38 | 41 | 149 | 138 | 129 | 9 | 37.25 | 2 | 17 | 0 |
+| Nancy | 4 | 120 | 32 | 34 | 54 | 130 | 132 | 182 | -50 | 32.5 | 2 | 20 | 0 |
+| Quevilly Rouen | 3 | 114 | 29 | 41 | 44 | 128 | 131 | 154 | -23 | 42.67 | 11 | 18 | 0 |
+| Bordeaux | 3 | 76 | 34 | 18 | 24 | 120 | 101 | 80 | 21 | 40.0 | 3 | 19 | 0 |
+| Niort | 3 | 114 | 28 | 32 | 54 | 116 | 108 | 167 | -59 | 38.67 | 13 | 20 | 0 |
+| Red Star | 3 | 78 | 29 | 24 | 25 | 111 | 96 | 101 | -5 | 37.0 | 6 | 15 | 0 |
+| Dijon | 3 | 86 | 26 | 23 | 37 | 101 | 103 | 114 | -11 | 33.67 | 9 | 18 | 0 |
+| Nimes | 2 | 76 | 24 | 13 | 39 | 85 | 88 | 113 | -25 | 42.5 | 9 | 19 | 0 |
+| Reims | 2 | 43 | 18 | 19 | 6 | 73 | 72 | 46 | 26 | 36.5 | 4 | 5 | 0 |
+| Lorient | 1 | 34 | 22 | 5 | 7 | 71 | 68 | 31 | 37 | 71.0 | 1 | 1 | 1 |
+| Montpellier | 2 | 43 | 19 | 12 | 12 | 69 | 52 | 36 | 16 | 34.5 | 3 | 8 | 0 |
+| Angers | 1 | 38 | 20 | 8 | 10 | 68 | 56 | 42 | 14 | 68.0 | 2 | 2 | 0 |
 | Le Mans | 1 | 34 | 16 | 14 | 4 | 62 | 50 | 31 | 19 | 62.0 | 2 | 2 | 0 |
-| Annecy | 2 | 41 | 18 | 8 | 15 | 62 | 58 | 48 | 10 | 31.0 | 7 | 7 | 0 |
-| Pau FC | 2 | 41 | 14 | 11 | 16 | 53 | 54 | 68 | -14 | 26.5 | 9 | 10 | 0 |
-| Dunkerque | 2 | 41 | 13 | 12 | 16 | 51 | 63 | 57 | 6 | 25.5 | 10 | 11 | 0 |
-| Guingamp | 2 | 41 | 12 | 12 | 17 | 48 | 52 | 61 | -9 | 24.0 | 11 | 12 | 0 |
-| Grenoble | 2 | 41 | 10 | 17 | 14 | 47 | 41 | 50 | -9 | 23.5 | 12 | 13 | 0 |
-| Nancy | 2 | 41 | 12 | 11 | 18 | 47 | 43 | 59 | -16 | 23.5 | 6 | 14 | 0 |
-| Clermont | 2 | 41 | 9 | 16 | 16 | 43 | 42 | 50 | -8 | 21.5 | 13 | 16 | 0 |
-| Boulogne | 2 | 41 | 9 | 14 | 18 | 41 | 37 | 54 | -17 | 20.5 | 15 | 17 | 0 |
-| Laval | 2 | 43 | 8 | 17 | 18 | 41 | 40 | 63 | -23 | 20.5 | 16 | 18 | 0 |
-| Bastia | 1 | 34 | 5 | 14 | 15 | 29 | 23 | 39 | -16 | 29.0 | 17 | 17 | 0 |
-| Amiens | 1 | 34 | 6 | 6 | 22 | 24 | 37 | 65 | -28 | 24.0 | 18 | 18 | 0 |
-| Metz | 1 | 7 | 2 | 4 | 1 | 10 | 10 | 7 | 3 | 10.0 | 5 | 5 | 0 |
-| Sochaux | 1 | 7 | 2 | 4 | 1 | 10 | 4 | 5 | -1 | 10.0 | 8 | 8 | 0 |
-| Dijon | 1 | 7 | 2 | 3 | 2 | 9 | 10 | 10 | 0 | 9.0 | 9 | 9 | 0 |
-| Nantes | 1 | 7 | 2 | 1 | 4 | 7 | 9 | 13 | -4 | 7.0 | 15 | 15 | 0 |
+| Boulogne | 2 | 43 | 10 | 15 | 18 | 45 | 40 | 55 | -15 | 22.5 | 14 | 15 | 0 |
+| Concarneau | 1 | 38 | 10 | 8 | 20 | 38 | 39 | 57 | -18 | 38.0 | 19 | 19 | 0 |
+| Chambly | 1 | 38 | 9 | 11 | 18 | 38 | 41 | 64 | -23 | 38.0 | 19 | 19 | 0 |
+| Martigues | 1 | 34 | 9 | 5 | 20 | 32 | 29 | 56 | -27 | 32.0 | 17 | 17 | 0 |
+| Chateauroux | 1 | 38 | 4 | 11 | 23 | 23 | 32 | 58 | -26 | 23.0 | 20 | 20 | 0 |
+| Nantes | 1 | 10 | 2 | 2 | 6 | 8 | 11 | 17 | -6 | 8.0 | 15 | 15 | 0 |
 | Rouen | 1 | 2 | 0 | 1 | 1 | 1 | 1 | 2 | -1 | 1.0 | 19 | 19 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Troyes | 17 | 14 | 1 | 2 | 43 | 17 | 6 | 6 | 5 | 24 | 19 |
-| St Etienne | 21 | 15 | 2 | 4 | 47 | 21 | 9 | 5 | 7 | 32 | 15 |
-| Guingamp | 21 | 8 | 6 | 7 | 30 | 20 | 4 | 6 | 10 | 18 | 12 |
-| Reims | 21 | 10 | 8 | 3 | 38 | 20 | 7 | 10 | 3 | 31 | 7 |
-| Dunkerque | 21 | 7 | 8 | 6 | 29 | 20 | 6 | 4 | 10 | 22 | 7 |
-| Grenoble | 20 | 5 | 12 | 3 | 27 | 21 | 5 | 5 | 11 | 20 | 7 |
-| Clermont | 21 | 5 | 10 | 6 | 25 | 20 | 4 | 6 | 10 | 18 | 7 |
-| Metz | 4 | 2 | 2 | 0 | 8 | 3 | 0 | 2 | 1 | 2 | 6 |
+| AC Ajaccio | 74 | 40 | 18 | 16 | 138 | 74 | 17 | 20 | 37 | 71 | 67 |
+| Grenoble | 114 | 48 | 40 | 26 | 184 | 116 | 32 | 24 | 60 | 120 | 64 |
+| Caen | 93 | 40 | 26 | 27 | 146 | 93 | 20 | 24 | 49 | 84 | 62 |
+| Pau FC | 116 | 48 | 30 | 38 | 174 | 114 | 29 | 34 | 51 | 121 | 53 |
+| Troyes | 72 | 43 | 12 | 17 | 141 | 72 | 22 | 22 | 28 | 88 | 53 |
+| Bastia | 91 | 36 | 34 | 21 | 142 | 91 | 21 | 29 | 41 | 92 | 50 |
+| Amiens | 110 | 40 | 32 | 38 | 152 | 110 | 24 | 34 | 52 | 106 | 46 |
+| Paris FC | 93 | 53 | 21 | 19 | 180 | 93 | 36 | 29 | 28 | 137 | 43 |
+| St Etienne | 61 | 37 | 10 | 14 | 121 | 60 | 24 | 16 | 20 | 88 | 33 |
+| Dunkerque | 97 | 34 | 28 | 35 | 130 | 95 | 27 | 18 | 50 | 99 | 31 |
+| Bordeaux | 38 | 22 | 9 | 7 | 75 | 38 | 12 | 9 | 17 | 45 | 30 |
+| Toulouse | 38 | 27 | 8 | 3 | 89 | 38 | 16 | 12 | 10 | 60 | 29 |
+| Rodez | 115 | 40 | 44 | 31 | 164 | 117 | 33 | 39 | 45 | 138 | 26 |
+| Valenciennes | 76 | 22 | 28 | 26 | 94 | 76 | 16 | 23 | 37 | 71 | 23 |
+| Clermont | 59 | 21 | 23 | 15 | 86 | 57 | 16 | 15 | 26 | 63 | 23 |
+| Niort | 57 | 18 | 15 | 24 | 69 | 57 | 10 | 17 | 30 | 47 | 22 |
+| Dijon | 43 | 17 | 10 | 16 | 61 | 43 | 9 | 13 | 21 | 40 | 21 |
+| Lorient | 17 | 15 | 1 | 1 | 46 | 17 | 7 | 4 | 6 | 25 | 21 |
+| Annecy | 76 | 31 | 21 | 24 | 114 | 78 | 26 | 18 | 34 | 96 | 18 |
+| Auxerre | 57 | 33 | 15 | 9 | 114 | 57 | 25 | 21 | 11 | 96 | 18 |
+| Angers | 19 | 13 | 4 | 2 | 43 | 19 | 7 | 4 | 8 | 25 | 18 |
+| Metz | 41 | 23 | 15 | 3 | 84 | 41 | 18 | 13 | 10 | 67 | 17 |
+| Nimes | 38 | 15 | 6 | 17 | 51 | 38 | 9 | 7 | 22 | 34 | 17 |
+| Sochaux | 62 | 27 | 18 | 17 | 99 | 62 | 21 | 20 | 21 | 83 | 16 |
+| Chambly | 19 | 7 | 3 | 9 | 24 | 19 | 2 | 8 | 9 | 14 | 10 |
+| Laval | 78 | 27 | 20 | 31 | 101 | 78 | 24 | 20 | 34 | 92 | 9 |
+| Reims | 22 | 11 | 8 | 3 | 41 | 21 | 7 | 11 | 3 | 32 | 9 |
+| Nancy | 60 | 18 | 15 | 27 | 69 | 60 | 14 | 19 | 27 | 61 | 8 |
+| Quevilly Rouen | 57 | 15 | 23 | 19 | 68 | 57 | 14 | 18 | 25 | 60 | 8 |
+| Guingamp | 115 | 42 | 36 | 37 | 162 | 115 | 41 | 32 | 42 | 155 | 7 |
+| Chateauroux | 19 | 3 | 5 | 11 | 14 | 19 | 1 | 6 | 12 | 9 | 5 |
 | Le Mans | 17 | 9 | 6 | 2 | 33 | 17 | 7 | 8 | 2 | 29 | 4 |
-| Montpellier | 20 | 9 | 6 | 5 | 33 | 21 | 8 | 6 | 7 | 30 | 3 |
-| Rodez | 21 | 9 | 8 | 4 | 35 | 22 | 9 | 6 | 7 | 33 | 2 |
-| Sochaux | 3 | 2 | 0 | 1 | 6 | 4 | 0 | 4 | 0 | 4 | 2 |
-| Laval | 22 | 4 | 9 | 9 | 21 | 21 | 4 | 8 | 9 | 20 | 1 |
-| Bastia | 17 | 3 | 6 | 8 | 15 | 17 | 2 | 8 | 7 | 14 | 1 |
+| Montpellier | 21 | 10 | 6 | 5 | 36 | 22 | 9 | 6 | 7 | 33 | 3 |
+| Concarneau | 19 | 5 | 5 | 9 | 20 | 19 | 5 | 3 | 11 | 18 | 2 |
 | Rouen | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
-| Annecy | 20 | 8 | 7 | 5 | 31 | 21 | 10 | 1 | 10 | 31 | 0 |
-| Nantes | 3 | 1 | 0 | 2 | 3 | 4 | 1 | 1 | 2 | 4 | -1 |
-| Dijon | 3 | 1 | 0 | 2 | 3 | 4 | 1 | 3 | 0 | 6 | -3 |
-| Pau FC | 21 | 6 | 6 | 9 | 24 | 20 | 8 | 5 | 7 | 29 | -5 |
-| Nancy | 20 | 6 | 3 | 11 | 21 | 21 | 6 | 8 | 7 | 26 | -5 |
-| Boulogne | 21 | 4 | 6 | 11 | 18 | 20 | 5 | 8 | 7 | 23 | -5 |
-| Red Star | 21 | 8 | 8 | 5 | 32 | 21 | 11 | 5 | 5 | 38 | -6 |
-| Amiens | 17 | 2 | 3 | 12 | 9 | 17 | 4 | 3 | 10 | 15 | -6 |
+| Nantes | 5 | 1 | 1 | 3 | 4 | 5 | 1 | 1 | 3 | 4 | 0 |
+| Red Star | 39 | 14 | 13 | 12 | 55 | 39 | 15 | 11 | 13 | 56 | -1 |
+| Le Havre | 57 | 21 | 20 | 16 | 83 | 57 | 23 | 20 | 14 | 89 | -6 |
+| Martigues | 17 | 3 | 3 | 11 | 12 | 17 | 6 | 2 | 9 | 20 | -8 |
+| Boulogne | 21 | 4 | 6 | 11 | 18 | 22 | 6 | 9 | 7 | 27 | -9 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Troyes | 1.97 |
-| 2 | St Etienne | 1.88 |
-| 3 | Le Mans | 1.82 |
-| 4 | Reims | 1.68 |
-| 5 | Red Star | 1.67 |
+| 1 | Lorient | 2.09 |
+| 2 | Toulouse | 1.96 |
+| 3 | Auxerre | 1.84 |
+| 4 | Metz | 1.84 |
+| 5 | Le Mans | 1.82 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | St Etienne | 79 |
-| 2 | Reims | 68 |
-| 3 | Dunkerque | 63 |
-| 4 | Rodez | 62 |
-| 5 | Troyes | 60 |
+| 1 | Guingamp | 300 |
+| 2 | Rodez | 291 |
+| 3 | Pau FC | 283 |
+| 4 | Paris FC | 256 |
+| 5 | Grenoble | 244 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | St Etienne | 33 |
-| 2 | Troyes | 27 |
-| 3 | Reims | 24 |
-| 4 | Le Mans | 19 |
-| 5 | Montpellier | 11 |
+| 1 | Auxerre | 79 |
+| 2 | Toulouse | 78 |
+| 3 | Paris FC | 66 |
+| 4 | St Etienne | 60 |
+| 5 | Metz | 60 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Sochaux | 0.714 |
-| 2 | Montpellier | 0.878 |
+| 1 | Montpellier | 0.837 |
+| 2 | Lorient | 0.912 |
 | 3 | Le Mans | 0.912 |
-| 4 | Troyes | 0.971 |
-| 5 | Rouen | 1.000 |
+| 4 | Le Havre | 0.947 |
+| 5 | Toulouse | 0.987 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **14**
+- Teams present in all **7** seasons: **4**
 
-Annecy, Boulogne, Clermont, Dunkerque, Grenoble, Guingamp, Laval, Montpellier, Nancy, Pau FC, Red Star, Reims, Rodez, St Etienne
+Grenoble, Guingamp, Pau FC, Rodez
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **181** (showing the 15 most frequent)
+- Distinct fixtures: **540** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Rodez vs St Etienne | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| St Etienne vs Dunkerque | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Annecy vs Guingamp | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Annecy vs Pau FC | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Dunkerque vs Grenoble | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Dunkerque vs Nancy | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Guingamp vs Boulogne | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Pau FC vs Dunkerque | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Reims vs Annecy | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Rodez vs Annecy | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Rodez vs Grenoble | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| St Etienne vs Clermont | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| St Etienne vs Montpellier | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Dunkerque vs Clermont | 3 | 1 | 2 | 0 | 33.3% | 66.7% | 0.0% |
-| Grenoble vs Clermont | 3 | 1 | 2 | 0 | 33.3% | 66.7% | 0.0% |
+| Rodez vs Grenoble | 13 | 8 | 3 | 2 | 61.5% | 23.1% | 15.4% |
+| Guingamp vs Pau FC | 13 | 6 | 1 | 6 | 46.2% | 7.7% | 46.2% |
+| Rodez vs Pau FC | 13 | 5 | 5 | 3 | 38.5% | 38.5% | 23.1% |
+| Grenoble vs Pau FC | 13 | 4 | 6 | 3 | 30.8% | 46.2% | 23.1% |
+| Amiens vs Pau FC | 12 | 6 | 2 | 4 | 50.0% | 16.7% | 33.3% |
+| Guingamp vs Amiens | 12 | 6 | 3 | 3 | 50.0% | 25.0% | 25.0% |
+| Grenoble vs Amiens | 12 | 5 | 2 | 5 | 41.7% | 16.7% | 41.7% |
+| Rodez vs Amiens | 12 | 4 | 4 | 4 | 33.3% | 33.3% | 33.3% |
+| Grenoble vs Guingamp | 12 | 3 | 7 | 2 | 25.0% | 58.3% | 16.7% |
+| Rodez vs Guingamp | 12 | 3 | 7 | 2 | 25.0% | 58.3% | 16.7% |
+| Pau FC vs Dunkerque | 11 | 6 | 3 | 2 | 54.5% | 27.3% | 18.2% |
+| Grenoble vs Dunkerque | 11 | 5 | 3 | 3 | 45.5% | 27.3% | 27.3% |
+| Guingamp vs Caen | 10 | 6 | 1 | 3 | 60.0% | 10.0% | 30.0% |
+| Paris FC vs Grenoble | 10 | 6 | 1 | 3 | 60.0% | 10.0% | 30.0% |
+| Rodez vs Caen | 10 | 6 | 2 | 2 | 60.0% | 20.0% | 20.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| St Etienne | 4 | 1 |
-| Red Star | 6 | 2 |
-| Reims | 5 | 3 |
-| Rodez | 3 | 14 |
-| Troyes | 1 | - |
-| Montpellier | 8 | 4 |
-| Le Mans | 2 | - |
-| Annecy | 7 | 7 |
-| Pau FC | 9 | 10 |
-| Dunkerque | 10 | 11 |
-| Guingamp | 11 | 12 |
-| Grenoble | 12 | 13 |
-| Nancy | 14 | 6 |
-| Clermont | 13 | 16 |
-| Boulogne | 15 | 17 |
-| Laval | 16 | 18 |
-| Bastia | 17 | - |
-| Amiens | 18 | - |
-| Metz | - | 5 |
-| Sochaux | - | 8 |
-| Dijon | - | 9 |
-| Nantes | - | 15 |
-| Rouen | 19 | - |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Paris FC | 5 | 4 | 8 | 5 | 2 | - | - |
+| Guingamp | 9 | 6 | 7 | 9 | 5 | 11 | 11 |
+| Grenoble | 4 | 15 | 10 | 11 | 9 | 12 | 16 |
+| Rodez | 15 | 17 | 14 | 4 | 14 | 3 | 13 |
+| Pau FC | 14 | 10 | 12 | 10 | 13 | 9 | 5 |
+| Amiens | 10 | 14 | 13 | 8 | 11 | 18 | - |
+| Bastia | - | 12 | 4 | 13 | 8 | 17 | - |
+| Caen | 17 | 7 | 5 | 6 | 18 | - | - |
+| Troyes | 1 | - | - | 17 | 10 | 1 | - |
+| Dunkerque | 16 | 19 | - | 16 | 4 | 10 | 10 |
+| Auxerre | 6 | 3 | - | 1 | - | - | - |
+| Annecy | - | - | 17 | 14 | 6 | 7 | 7 |
+| St Etienne | - | - | 6 | 3 | - | 4 | 1 |
+| AC Ajaccio | 13 | 2 | - | 15 | 12 | - | - |
+| Laval | - | - | 15 | 7 | 7 | 16 | 18 |
+| Sochaux | 7 | 5 | 9 | - | - | - | 12 |
+| Le Havre | 12 | 8 | 1 | - | - | - | - |
+| Valenciennes | 11 | 16 | 16 | 20 | - | - | - |
+| Metz | - | - | 2 | - | 3 | - | 8 |
+| Toulouse | 3 | 1 | - | - | - | - | - |
+| Clermont | 2 | - | - | - | 16 | 13 | 17 |
+| Nancy | 8 | 20 | - | - | - | 14 | 2 |
+| Quevilly Rouen | - | 18 | 11 | 18 | - | - | - |
+| Bordeaux | - | - | 3 | 12 | 19 | - | - |
+| Niort | 18 | 13 | 20 | - | - | - | - |
+| Red Star | - | - | - | - | 15 | 6 | 6 |
+| Dijon | - | 11 | 18 | - | - | - | 9 |
+| Nimes | - | 9 | 19 | - | - | - | - |
+| Reims | - | - | - | - | - | 5 | 4 |
+| Lorient | - | - | - | - | 1 | - | - |
+| Montpellier | - | - | - | - | - | 8 | 3 |
+| Angers | - | - | - | 2 | - | - | - |
+| Le Mans | - | - | - | - | - | 2 | - |
+| Boulogne | - | - | - | - | - | 15 | 14 |
+| Concarneau | - | - | - | 19 | - | - | - |
+| Chambly | 19 | - | - | - | - | - | - |
+| Martigues | - | - | - | - | 17 | - | - |
+| Chateauroux | 20 | - | - | - | - | - | - |
+| Nantes | - | - | - | - | - | - | 15 |
+| Rouen | - | - | - | - | - | 19 | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\france2\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\france2\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

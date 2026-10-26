@@ -1,206 +1,184 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:45:21+00:00
+- Generated: 2026-10-26T01:27:23+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`
 
-- Teams: **44** | Seasons: **2** | Matches: **657**
+- Teams: **30** | Seasons: **7** | Matches: **2571**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Flamengo RJ | 2 | 66 | 41 | 16 | 9 | 139 | 133 | 50 | 83 | 69.5 | 1 | 1 | 2 |
-| Palmeiras | 2 | 66 | 39 | 16 | 11 | 133 | 113 | 54 | 59 | 66.5 | 2 | 2 | 0 |
-| Cruzeiro | 2 | 66 | 32 | 19 | 15 | 115 | 97 | 71 | 26 | 57.5 | 3 | 6 | 0 |
-| Fluminense | 2 | 66 | 32 | 16 | 18 | 112 | 94 | 75 | 19 | 56.0 | 4 | 5 | 0 |
-| Bahia | 2 | 66 | 29 | 19 | 18 | 106 | 93 | 81 | 12 | 53.0 | 5 | 7 | 0 |
-| Mirassol | 2 | 66 | 26 | 21 | 19 | 99 | 96 | 81 | 15 | 49.5 | 4 | 15 | 0 |
-| Botafogo RJ | 2 | 66 | 26 | 20 | 20 | 98 | 99 | 83 | 16 | 49.0 | 6 | 12 | 0 |
-| Atletico-MG | 2 | 65 | 23 | 19 | 23 | 88 | 79 | 76 | 3 | 44.0 | 7 | 21 | 0 |
-| Sao Paulo | 2 | 65 | 24 | 15 | 26 | 87 | 75 | 77 | -2 | 43.5 | 8 | 11 | 0 |
-| Santos | 2 | 65 | 22 | 19 | 24 | 85 | 86 | 90 | -4 | 42.5 | 8 | 11 | 0 |
-| Bragantino | 2 | 65 | 24 | 12 | 29 | 84 | 78 | 88 | -10 | 42.0 | 9 | 10 | 0 |
-| Corinthians | 2 | 66 | 20 | 19 | 27 | 79 | 71 | 79 | -8 | 39.5 | 12 | 14 | 0 |
-| Gremio | 2 | 66 | 20 | 18 | 28 | 78 | 77 | 88 | -11 | 39.0 | 10 | 17 | 0 |
-| Vitoria | 2 | 66 | 20 | 18 | 28 | 78 | 63 | 94 | -31 | 39.0 | 13 | 15 | 0 |
-| Vasco | 2 | 65 | 21 | 13 | 31 | 76 | 89 | 101 | -12 | 38.0 | 13 | 16 | 0 |
-| Internacional | 2 | 66 | 17 | 21 | 28 | 72 | 74 | 93 | -19 | 36.0 | 14 | 18 | 0 |
-| Athletico-PR | 1 | 28 | 14 | 7 | 7 | 49 | 43 | 32 | 11 | 49.0 | 3 | 3 | 0 |
-| Ceara | 1 | 38 | 11 | 10 | 17 | 43 | 34 | 40 | -6 | 43.0 | 16 | 16 | 0 |
-| Fortaleza | 1 | 38 | 11 | 10 | 17 | 43 | 43 | 58 | -15 | 43.0 | 17 | 17 | 0 |
-| Coritiba | 1 | 28 | 10 | 8 | 10 | 38 | 37 | 43 | -6 | 38.0 | 9 | 9 | 0 |
-| Juventude | 1 | 38 | 9 | 8 | 21 | 35 | 35 | 69 | -34 | 35.0 | 19 | 19 | 0 |
-| Remo | 1 | 28 | 5 | 8 | 15 | 23 | 32 | 47 | -15 | 23.0 | 19 | 19 | 0 |
-| Chapecoense-SC | 1 | 27 | 3 | 9 | 15 | 18 | 29 | 53 | -24 | 18.0 | 20 | 20 | 0 |
-| Sport Recife | 1 | 38 | 2 | 11 | 25 | 17 | 28 | 75 | -47 | 17.0 | 20 | 20 | 0 |
-| Atletico | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 18 | 18 | 0 |
-| MG-Bahia | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 39 | 39 | 0 |
-| MG-Botafogo RJ | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 36 | 36 | 0 |
-| MG-Bragantino | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 33 | 33 | 0 |
-| MG-Ceara | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 34 | 34 | 0 |
-| MG-Corinthians | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 30 | 30 | 0 |
-| MG-Cruzeiro | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 27 | 27 | 0 |
-| MG-Flamengo RJ | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 26 | 26 | 0 |
-| MG-Fluminense | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 32 | 32 | 0 |
-| MG-Fortaleza | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 24 | 24 | 0 |
-| MG-Gremio | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 23 | 23 | 0 |
-| MG-Internacional | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 38 | 38 | 0 |
-| MG-Juventude | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 31 | 31 | 0 |
-| MG-Mirassol | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 35 | 35 | 0 |
-| MG-Palmeiras | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 22 | 22 | 0 |
-| MG-Santos | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 28 | 28 | 0 |
-| MG-Sao Paulo | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 29 | 29 | 0 |
-| MG-Sport Recife | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 37 | 37 | 0 |
-| MG-Vasco | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 40 | 40 | 0 |
-| MG-Vitoria | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | 25 | 25 | 0 |
+| Palmeiras | 7 | 257 | 140 | 64 | 53 | 484 | 416 | 228 | 188 | 69.14 | 1 | 6 | 2 |
+| Flamengo RJ | 7 | 258 | 141 | 60 | 57 | 483 | 450 | 259 | 191 | 69.0 | 1 | 4 | 4 |
+| Atletico-MG | 7 | 258 | 116 | 70 | 72 | 418 | 359 | 281 | 78 | 59.71 | 7 | 21 | 0 |
+| Fluminense | 7 | 258 | 115 | 60 | 83 | 405 | 338 | 283 | 55 | 57.86 | 3 | 13 | 0 |
+| Internacional | 7 | 256 | 102 | 78 | 76 | 384 | 334 | 279 | 55 | 54.86 | 2 | 16 | 0 |
+| Sao Paulo | 7 | 258 | 98 | 76 | 84 | 370 | 316 | 285 | 31 | 52.86 | 3 | 14 | 0 |
+| Corinthians | 7 | 257 | 93 | 78 | 86 | 357 | 302 | 294 | 8 | 51.0 | 5 | 17 | 0 |
+| Bragantino | 7 | 257 | 89 | 77 | 91 | 344 | 326 | 318 | 8 | 49.14 | 3 | 14 | 0 |
+| Botafogo RJ | 6 | 219 | 87 | 60 | 72 | 321 | 290 | 256 | 34 | 53.5 | 1 | 20 | 1 |
+| Fortaleza | 6 | 228 | 87 | 58 | 83 | 319 | 265 | 269 | -4 | 53.17 | 4 | 17 | 0 |
+| Athletico-PR | 6 | 219 | 83 | 57 | 79 | 306 | 263 | 252 | 11 | 51.0 | 4 | 22 | 0 |
+| Gremio | 6 | 220 | 79 | 58 | 83 | 295 | 283 | 287 | -4 | 49.17 | 2 | 18 | 0 |
+| Bahia | 6 | 219 | 80 | 53 | 86 | 293 | 283 | 293 | -10 | 48.83 | 5 | 17 | 0 |
+| Santos | 6 | 218 | 71 | 66 | 81 | 279 | 258 | 289 | -31 | 46.5 | 7 | 15 | 0 |
+| Cruzeiro | 4 | 143 | 58 | 43 | 42 | 217 | 177 | 144 | 33 | 54.25 | 3 | 13 | 0 |
+| Vasco | 5 | 180 | 58 | 42 | 80 | 216 | 211 | 263 | -52 | 43.2 | 9 | 15 | 0 |
+| Ceara | 4 | 152 | 43 | 53 | 56 | 182 | 161 | 170 | -9 | 45.5 | 8 | 16 | 0 |
+| Cuiaba | 4 | 152 | 40 | 49 | 63 | 169 | 134 | 167 | -33 | 42.25 | 10 | 17 | 0 |
+| Atletico GO | 4 | 152 | 40 | 49 | 63 | 169 | 141 | 196 | -55 | 42.25 | 7 | 18 | 0 |
+| Juventude | 4 | 152 | 34 | 46 | 72 | 148 | 148 | 241 | -93 | 37.0 | 15 | 21 | 0 |
+| Coritiba | 4 | 141 | 36 | 30 | 75 | 138 | 143 | 229 | -86 | 34.5 | 10 | 20 | 0 |
+| America MG | 3 | 114 | 33 | 31 | 50 | 130 | 123 | 158 | -35 | 43.33 | 4 | 21 | 0 |
+| Vitoria | 3 | 106 | 34 | 26 | 46 | 128 | 113 | 148 | -35 | 42.67 | 11 | 15 | 0 |
+| Goias | 3 | 114 | 29 | 34 | 51 | 121 | 117 | 169 | -52 | 40.33 | 12 | 17 | 0 |
+| Mirassol | 2 | 68 | 26 | 22 | 20 | 100 | 97 | 83 | 14 | 50.0 | 4 | 15 | 0 |
+| Sport Recife | 3 | 114 | 23 | 28 | 63 | 97 | 83 | 162 | -79 | 32.33 | 16 | 20 | 0 |
+| Criciuma | 1 | 38 | 9 | 11 | 18 | 38 | 42 | 61 | -19 | 38.0 | 16 | 16 | 0 |
+| Avai | 1 | 38 | 9 | 8 | 21 | 35 | 34 | 60 | -26 | 35.0 | 18 | 18 | 0 |
+| Chapecoense-SC | 2 | 66 | 4 | 21 | 41 | 33 | 56 | 124 | -68 | 16.5 | 20 | 22 | 0 |
+| Remo | 1 | 30 | 5 | 10 | 15 | 25 | 33 | 48 | -15 | 25.0 | 19 | 19 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Fluminense | 33 | 25 | 4 | 4 | 79 | 33 | 7 | 12 | 14 | 33 | 46 |
-| Vitoria | 33 | 18 | 7 | 8 | 61 | 33 | 2 | 11 | 20 | 17 | 44 |
-| Gremio | 33 | 16 | 9 | 8 | 57 | 33 | 4 | 9 | 20 | 21 | 36 |
-| Sao Paulo | 32 | 18 | 7 | 7 | 61 | 33 | 6 | 8 | 19 | 26 | 35 |
-| Atletico-MG | 32 | 16 | 13 | 3 | 61 | 33 | 7 | 6 | 20 | 27 | 34 |
-| Mirassol | 34 | 18 | 12 | 4 | 66 | 32 | 8 | 9 | 15 | 33 | 33 |
-| Bahia | 33 | 20 | 9 | 4 | 69 | 33 | 9 | 10 | 14 | 37 | 32 |
-| Vasco | 33 | 15 | 6 | 12 | 51 | 32 | 6 | 7 | 19 | 25 | 26 |
-| Flamengo RJ | 33 | 24 | 8 | 1 | 80 | 33 | 17 | 8 | 8 | 59 | 21 |
-| Cruzeiro | 33 | 20 | 8 | 5 | 68 | 33 | 12 | 11 | 10 | 47 | 21 |
-| Botafogo RJ | 33 | 16 | 11 | 6 | 59 | 33 | 10 | 9 | 14 | 39 | 20 |
-| Santos | 33 | 14 | 10 | 9 | 52 | 32 | 8 | 9 | 15 | 33 | 19 |
-| Bragantino | 32 | 15 | 6 | 11 | 51 | 33 | 9 | 6 | 18 | 33 | 18 |
-| Corinthians | 34 | 13 | 9 | 12 | 48 | 32 | 7 | 10 | 15 | 31 | 17 |
-| Internacional | 33 | 11 | 11 | 11 | 44 | 33 | 6 | 10 | 17 | 28 | 16 |
-| Athletico-PR | 14 | 9 | 4 | 1 | 31 | 14 | 5 | 3 | 6 | 18 | 13 |
-| Fortaleza | 19 | 8 | 3 | 8 | 27 | 19 | 3 | 7 | 9 | 16 | 11 |
-| Juventude | 19 | 6 | 5 | 8 | 23 | 19 | 3 | 3 | 13 | 12 | 11 |
-| Palmeiras | 32 | 21 | 8 | 3 | 71 | 34 | 18 | 8 | 8 | 62 | 9 |
-| Ceara | 19 | 7 | 5 | 7 | 26 | 19 | 4 | 5 | 10 | 17 | 9 |
-| Remo | 14 | 3 | 5 | 6 | 14 | 14 | 2 | 3 | 9 | 9 | 5 |
-| Chapecoense-SC | 13 | 2 | 5 | 6 | 11 | 14 | 1 | 4 | 9 | 7 | 4 |
-| Sport Recife | 19 | 1 | 7 | 11 | 10 | 19 | 1 | 4 | 14 | 7 | 3 |
-| Coritiba | 14 | 5 | 4 | 5 | 19 | 14 | 5 | 4 | 5 | 19 | 0 |
+| Fluminense | 129 | 80 | 29 | 20 | 269 | 129 | 35 | 31 | 63 | 136 | 133 |
+| Sao Paulo | 129 | 69 | 35 | 25 | 242 | 129 | 29 | 41 | 59 | 128 | 114 |
+| Gremio | 110 | 57 | 26 | 27 | 197 | 110 | 22 | 32 | 56 | 98 | 99 |
+| Atletico-MG | 129 | 75 | 33 | 21 | 258 | 129 | 41 | 37 | 51 | 160 | 98 |
+| Bahia | 110 | 57 | 24 | 29 | 195 | 109 | 23 | 29 | 57 | 98 | 97 |
+| Fortaleza | 114 | 57 | 32 | 25 | 203 | 114 | 30 | 26 | 58 | 116 | 87 |
+| Bragantino | 128 | 59 | 38 | 31 | 215 | 129 | 30 | 39 | 60 | 129 | 86 |
+| Athletico-PR | 110 | 54 | 33 | 23 | 195 | 109 | 29 | 24 | 56 | 111 | 84 |
+| Corinthians | 128 | 59 | 42 | 27 | 219 | 129 | 34 | 36 | 59 | 138 | 81 |
+| Internacional | 128 | 65 | 37 | 26 | 232 | 128 | 37 | 41 | 50 | 152 | 80 |
+| Vasco | 90 | 41 | 19 | 30 | 142 | 90 | 17 | 23 | 50 | 74 | 68 |
+| Santos | 109 | 45 | 36 | 28 | 171 | 109 | 26 | 30 | 53 | 108 | 63 |
+| Palmeiras | 128 | 81 | 27 | 20 | 270 | 129 | 59 | 37 | 33 | 214 | 56 |
+| Flamengo RJ | 129 | 81 | 26 | 22 | 269 | 129 | 60 | 34 | 35 | 214 | 55 |
+| Juventude | 76 | 25 | 26 | 25 | 101 | 76 | 9 | 20 | 47 | 47 | 54 |
+| Vitoria | 53 | 27 | 10 | 16 | 91 | 53 | 7 | 16 | 30 | 37 | 54 |
+| Coritiba | 71 | 24 | 18 | 29 | 90 | 70 | 12 | 12 | 46 | 48 | 42 |
+| Ceara | 76 | 28 | 25 | 23 | 109 | 76 | 15 | 28 | 33 | 73 | 36 |
+| Cruzeiro | 72 | 35 | 21 | 16 | 126 | 71 | 23 | 22 | 26 | 91 | 35 |
+| America MG | 57 | 23 | 12 | 22 | 81 | 57 | 10 | 19 | 28 | 49 | 32 |
+| Mirassol | 34 | 18 | 12 | 4 | 66 | 34 | 8 | 10 | 16 | 34 | 32 |
+| Atletico GO | 76 | 23 | 29 | 24 | 98 | 76 | 17 | 20 | 39 | 71 | 27 |
+| Botafogo RJ | 110 | 48 | 29 | 33 | 173 | 109 | 39 | 31 | 39 | 148 | 25 |
+| Goias | 57 | 17 | 20 | 20 | 71 | 57 | 12 | 14 | 31 | 50 | 21 |
+| Sport Recife | 57 | 14 | 16 | 27 | 58 | 57 | 9 | 12 | 36 | 39 | 19 |
+| Avai | 19 | 7 | 4 | 8 | 25 | 19 | 2 | 4 | 13 | 10 | 15 |
+| Cuiaba | 76 | 22 | 25 | 29 | 91 | 76 | 18 | 24 | 34 | 78 | 13 |
+| Criciuma | 19 | 5 | 8 | 6 | 23 | 19 | 4 | 3 | 12 | 15 | 8 |
+| Remo | 15 | 3 | 6 | 6 | 15 | 15 | 2 | 4 | 9 | 10 | 5 |
+| Chapecoense-SC | 32 | 2 | 11 | 19 | 17 | 34 | 2 | 10 | 22 | 16 | 1 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Flamengo RJ | 2.11 |
-| 2 | Palmeiras | 2.02 |
-| 3 | Athletico-PR | 1.75 |
-| 4 | Cruzeiro | 1.74 |
-| 5 | Fluminense | 1.70 |
+| 1 | Palmeiras | 1.88 |
+| 2 | Flamengo RJ | 1.87 |
+| 3 | Atletico-MG | 1.62 |
+| 4 | Fluminense | 1.57 |
+| 5 | Cruzeiro | 1.52 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Flamengo RJ | 133 |
-| 2 | Palmeiras | 113 |
-| 3 | Botafogo RJ | 99 |
-| 4 | Cruzeiro | 97 |
-| 5 | Mirassol | 96 |
+| 1 | Flamengo RJ | 450 |
+| 2 | Palmeiras | 416 |
+| 3 | Atletico-MG | 359 |
+| 4 | Fluminense | 338 |
+| 5 | Internacional | 334 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Flamengo RJ | 83 |
-| 2 | Palmeiras | 59 |
-| 3 | Cruzeiro | 26 |
-| 4 | Fluminense | 19 |
-| 5 | Botafogo RJ | 16 |
+| 1 | Flamengo RJ | 191 |
+| 2 | Palmeiras | 188 |
+| 3 | Atletico-MG | 78 |
+| 4 | Fluminense | 55 |
+| 5 | Internacional | 55 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | MG-Palmeiras | 0.000 |
-| 2 | MG-Sao Paulo | 0.000 |
-| 3 | MG-Corinthians | 0.000 |
-| 4 | MG-Juventude | 0.000 |
-| 5 | Flamengo RJ | 0.754 |
+| 1 | Palmeiras | 0.898 |
+| 2 | Flamengo RJ | 0.963 |
+| 3 | Cruzeiro | 0.971 |
+| 4 | Cuiaba | 1.042 |
+| 5 | Internacional | 1.078 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **16**
+- Teams present in all **7** seasons: **8**
 
-Atletico-MG, Bahia, Botafogo RJ, Bragantino, Corinthians, Cruzeiro, Flamengo RJ, Fluminense, Gremio, Internacional, Mirassol, Palmeiras, Santos, Sao Paulo, Vasco, Vitoria
+Atletico-MG, Bragantino, Corinthians, Flamengo RJ, Fluminense, Internacional, Palmeiras, Sao Paulo
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **260** (showing the 15 most frequent)
+- Distinct fixtures: **401** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Fluminense vs Atletico-MG | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Fluminense vs Vasco | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Sao Paulo vs Gremio | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Botafogo RJ vs Gremio | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Cruzeiro vs Vasco | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Flamengo RJ vs Bragantino | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Flamengo RJ vs Cruzeiro | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Fluminense vs Botafogo RJ | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Gremio vs Atletico-MG | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Gremio vs Vitoria | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Palmeiras vs Gremio | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Palmeiras vs Vasco | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Sao Paulo vs Atletico-MG | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Vitoria vs Atletico-MG | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Bahia vs Bragantino | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
+| Flamengo RJ vs Bragantino | 14 | 8 | 4 | 2 | 57.1% | 28.6% | 14.3% |
+| Flamengo RJ vs Corinthians | 14 | 8 | 2 | 4 | 57.1% | 14.3% | 28.6% |
+| Flamengo RJ vs Sao Paulo | 14 | 8 | 3 | 3 | 57.1% | 21.4% | 21.4% |
+| Fluminense vs Atletico-MG | 14 | 8 | 5 | 1 | 57.1% | 35.7% | 7.1% |
+| Fluminense vs Palmeiras | 14 | 8 | 4 | 2 | 57.1% | 28.6% | 14.3% |
+| Palmeiras vs Corinthians | 14 | 8 | 4 | 2 | 57.1% | 28.6% | 14.3% |
+| Sao Paulo vs Atletico-MG | 14 | 8 | 5 | 1 | 57.1% | 35.7% | 7.1% |
+| Bragantino vs Atletico-MG | 14 | 7 | 5 | 2 | 50.0% | 35.7% | 14.3% |
+| Fluminense vs Corinthians | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Internacional vs Atletico-MG | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Internacional vs Palmeiras | 14 | 6 | 4 | 4 | 42.9% | 28.6% | 28.6% |
+| Sao Paulo vs Bragantino | 14 | 6 | 5 | 3 | 42.9% | 35.7% | 21.4% |
+| Bragantino vs Corinthians | 14 | 5 | 3 | 6 | 35.7% | 21.4% | 42.9% |
+| Internacional vs Sao Paulo | 14 | 5 | 4 | 5 | 35.7% | 28.6% | 35.7% |
+| Palmeiras vs Atletico-MG | 14 | 5 | 4 | 5 | 35.7% | 28.6% | 35.7% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| Flamengo RJ | 1 | 1 |
-| Palmeiras | 2 | 2 |
-| Cruzeiro | 3 | 6 |
-| Fluminense | 5 | 4 |
-| Bahia | 7 | 5 |
-| Mirassol | 4 | 15 |
-| Botafogo RJ | 6 | 12 |
-| Atletico-MG | 21 | 7 |
-| Sao Paulo | 8 | 11 |
-| Santos | 11 | 8 |
-| Bragantino | 9 | 10 |
-| Corinthians | 12 | 14 |
-| Gremio | 10 | 17 |
-| Vitoria | 15 | 13 |
-| Vasco | 13 | 16 |
-| Internacional | 14 | 18 |
-| Athletico-PR | - | 3 |
-| Ceara | 16 | - |
-| Fortaleza | 17 | - |
-| Coritiba | - | 9 |
-| Juventude | 19 | - |
-| Remo | - | 19 |
-| Chapecoense-SC | - | 20 |
-| Sport Recife | 20 | - |
-| Atletico | 18 | - |
-| MG-Bahia | 39 | - |
-| MG-Botafogo RJ | 36 | - |
-| MG-Bragantino | 33 | - |
-| MG-Ceara | 34 | - |
-| MG-Corinthians | 30 | - |
-| MG-Cruzeiro | 27 | - |
-| MG-Flamengo RJ | 26 | - |
-| MG-Fluminense | 32 | - |
-| MG-Fortaleza | 24 | - |
-| MG-Gremio | 23 | - |
-| MG-Internacional | 38 | - |
-| MG-Juventude | 31 | - |
-| MG-Mirassol | 35 | - |
-| MG-Palmeiras | 22 | - |
-| MG-Santos | 28 | - |
-| MG-Sao Paulo | 29 | - |
-| MG-Sport Recife | 37 | - |
-| MG-Vasco | 40 | - |
-| MG-Vitoria | 25 | - |
+| team | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|---|
+| Palmeiras | 6 | 2 | 1 | 1 | 2 | 2 | 2 |
+| Flamengo RJ | 1 | 1 | 4 | 4 | 3 | 1 | 1 |
+| Atletico-MG | 21 | 18 | 20 | 19 | 21 | 21 | 7 |
+| Fluminense | 4 | 10 | 3 | 6 | 13 | 5 | 3 |
+| Internacional | 2 | 11 | 2 | 8 | 5 | 14 | 16 |
+| Sao Paulo | 3 | 14 | 7 | 9 | 6 | 8 | 9 |
+| Corinthians | 11 | 6 | 5 | 11 | 7 | 12 | 17 |
+| Bragantino | 8 | 3 | 11 | 5 | 14 | 9 | 11 |
+| Botafogo RJ | 20 | - | 8 | 3 | 1 | 6 | 13 |
+| Fortaleza | 14 | 5 | 6 | 7 | 4 | 17 | - |
+| Athletico-PR | 22 | 21 | 22 | 22 | 22 | - | 4 |
+| Gremio | 5 | 16 | - | 2 | 12 | 10 | 18 |
+| Bahia | 13 | 17 | - | 12 | 10 | 7 | 5 |
+| Santos | 7 | 13 | 10 | 15 | - | 11 | 8 |
+| Cruzeiro | - | - | - | 13 | 8 | 3 | 6 |
+| Vasco | 15 | - | - | 14 | 9 | 13 | 14 |
+| Ceara | 9 | 8 | 16 | - | - | 16 | - |
+| Cuiaba | - | 12 | 14 | 10 | 17 | - | - |
+| Atletico GO | 10 | 7 | 17 | - | 18 | - | - |
+| Juventude | - | 15 | 21 | - | 15 | 19 | - |
+| Coritiba | 19 | - | 13 | 20 | - | - | 10 |
+| America MG | - | 4 | 9 | 21 | - | - | - |
+| Vitoria | - | - | - | - | 11 | 15 | 12 |
+| Goias | 17 | - | 12 | 16 | - | - | - |
+| Mirassol | - | - | - | - | - | 4 | 15 |
+| Sport Recife | 16 | 19 | - | - | - | 20 | - |
+| Criciuma | - | - | - | - | 16 | - | - |
+| Avai | - | - | 18 | - | - | - | - |
+| Chapecoense-SC | - | 22 | - | - | - | - | 20 |
+| Remo | - | - | - | - | - | - | 19 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\brazil1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\brazil1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

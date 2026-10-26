@@ -1,38 +1,83 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T15:47:55+00:00
+- Generated: 2026-10-26T01:29:56+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Superliga (Denmark)
 - Scope: league `denmark1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **248** across **2** seasons.
-- Distinct scorelines seen: **31**.
+- Matches analysed: **921** across **7** seasons.
+- Distinct scorelines seen: **32**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 27 | 10.9% |
-| 2-1 | 25 | 10.1% |
-| 1-0 | 22 | 8.9% |
-| 1-2 | 21 | 8.5% |
-| 0-2 | 17 | 6.9% |
-| 2-0 | 14 | 5.6% |
-| 2-2 | 14 | 5.6% |
-| 0-0 | 12 | 4.8% |
-| 2-3 | 10 | 4.0% |
-| 0-1 | 9 | 3.6% |
-| 3-3 | 8 | 3.2% |
-| 3-1 | 8 | 3.2% |
-| 3-2 | 8 | 3.2% |
-| 3-0 | 6 | 2.4% |
-| 1-3 | 6 | 2.4% |
-| 0-3 | 6 | 2.4% |
-| 0-4 | 5 | 2.0% |
-| 4-1 | 4 | 1.6% |
-| 1-4 | 4 | 1.6% |
-| 4-2 | 3 | 1.2% |
+| 1-1 | 117 | 12.7% |
+| 1-0 | 84 | 9.1% |
+| 2-1 | 82 | 8.9% |
+| 1-2 | 69 | 7.5% |
+| 0-2 | 63 | 6.8% |
+| 2-2 | 58 | 6.3% |
+| 2-0 | 56 | 6.1% |
+| 0-0 | 56 | 6.1% |
+| 0-1 | 45 | 4.9% |
+| 3-1 | 37 | 4.0% |
+| 3-2 | 31 | 3.4% |
+| 1-3 | 25 | 2.7% |
+| 2-3 | 24 | 2.6% |
+| 0-3 | 23 | 2.5% |
+| 3-0 | 23 | 2.5% |
+| 3-3 | 21 | 2.3% |
+| 4-1 | 19 | 2.1% |
+| 1-4 | 14 | 1.5% |
+| 4-2 | 13 | 1.4% |
+| 4-0 | 13 | 1.4% |
 
 ## 2. Scoreline frequency per season
+
+### 2020-2021
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 16 | 12.1% |
+| 1-2 | 14 | 10.6% |
+| 2-1 | 13 | 9.8% |
+| 0-0 | 10 | 7.6% |
+| 1-0 | 9 | 6.8% |
+
+### 2021-2022
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 23 | 17.4% |
+| 0-2 | 11 | 8.3% |
+| 1-0 | 11 | 8.3% |
+| 2-0 | 11 | 8.3% |
+| 2-2 | 9 | 6.8% |
+
+### 2022-2023
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 17 | 12.9% |
+| 1-0 | 16 | 12.1% |
+| 2-1 | 15 | 11.4% |
+| 0-2 | 14 | 10.6% |
+| 0-0 | 10 | 7.6% |
+
+### 2023-2024
+| scoreline | count | pct |
+|---|---|---|
+| 1-2 | 14 | 10.6% |
+| 1-1 | 14 | 10.6% |
+| 1-0 | 13 | 9.8% |
+| 2-0 | 11 | 8.3% |
+| 2-1 | 11 | 8.3% |
+
+### 2024-2025
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 19 | 14.4% |
+| 1-0 | 13 | 9.8% |
+| 2-2 | 13 | 9.8% |
+| 2-1 | 9 | 6.8% |
+| 3-2 | 9 | 6.8% |
 
 ### 2025-2026
 | scoreline | count | pct |
@@ -46,83 +91,87 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 9 | 16.4% |
-| 1-0 | 7 | 12.7% |
-| 2-2 | 6 | 10.9% |
-| 2-1 | 4 | 7.3% |
-| 2-0 | 4 | 7.3% |
+| 1-1 | 10 | 14.7% |
+| 1-0 | 7 | 10.3% |
+| 2-2 | 6 | 8.8% |
+| 2-1 | 6 | 8.8% |
+| 2-0 | 4 | 5.9% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 12 | 4.8% |
-| 1 | 31 | 12.5% |
-| 2 | 58 | 23.4% |
-| 3 | 58 | 23.4% |
-| 4 | 35 | 14.1% |
-| 5 | 30 | 12.1% |
-| 6 | 18 | 7.3% |
-| 7 | 4 | 1.6% |
-| 8 | 2 | 0.8% |
+| 0 | 56 | 6.1% |
+| 1 | 129 | 14.0% |
+| 2 | 236 | 25.6% |
+| 3 | 197 | 21.4% |
+| 4 | 143 | 15.5% |
+| 5 | 96 | 10.4% |
+| 6 | 54 | 5.9% |
+| 7 | 8 | 0.9% |
+| 8 | 2 | 0.2% |
 | 9 | 0 | 0.0% |
 | 10+ | 0 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **6**
+- Matches with 7+ total goals: **10**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
 | 2025-2026 | 2025-07-28 | 6-2 | 8 |
 | 2025-2026 | 2026-05-17 | 6-2 | 8 |
+| 2021-2022 | 2021-10-25 | 2-5 | 7 |
+| 2022-2023 | 2023-02-19 | 5-2 | 7 |
+| 2022-2023 | 2023-03-05 | 7-0 | 7 |
 | 2025-2026 | 2025-11-23 | 5-2 | 7 |
 | 2025-2026 | 2026-02-22 | 5-2 | 7 |
 | 2025-2026 | 2026-04-05 | 7-0 | 7 |
 | 2026-2027 | 2026-09-06 | 2-5 | 7 |
+| 2026-2027 | 2026-10-11 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **187** (draws: **61**)
-- Average winning margin: **1.89**
+- Decided matches: **669** (draws: **252**)
+- Average winning margin: **1.81**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 95 | 50.8% |
-| 2 | 49 | 26.2% |
-| 3+ | 43 | 23.0% |
+| 1 | 335 | 50.1% |
+| 2 | 198 | 29.6% |
+| 3+ | 136 | 20.3% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **104** | avg margin: **1.91** | max margin: **7**
+- Matches: **380** | avg margin: **1.81** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 55 | 52.9% |
-| 2 | 25 | 24.0% |
-| 3+ | 24 | 23.1% |
+| 1 | 197 | 51.8% |
+| 2 | 106 | 27.9% |
+| 3+ | 77 | 20.3% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **83** | avg margin: **1.86** | max margin: **5**
+- Matches: **289** | avg margin: **1.81** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 40 | 48.2% |
-| 2 | 24 | 28.9% |
-| 3+ | 19 | 22.9% |
+| 1 | 138 | 47.8% |
+| 2 | 92 | 31.8% |
+| 3+ | 59 | 20.4% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 104 | 2-1 | 25 | 24.0% |
-| draw | 61 | 1-1 | 27 | 44.3% |
-| away | 83 | 1-2 | 21 | 25.3% |
+| home | 380 | 1-0 | 84 | 22.1% |
+| draw | 252 | 1-1 | 117 | 46.4% |
+| away | 289 | 1-2 | 69 | 23.9% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\denmark1\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\denmark1\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

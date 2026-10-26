@@ -4,10 +4,10 @@
     "name": "backend/scripts/analyze_seasons.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T15:47:24+00:00",
+  "generated_at": "2026-10-26T01:29:20+00:00",
   "config": {
     "league": "czech3a",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\czech3a",
+    "out_dir": "data/analysis/czech3a",
     "out_stem": null
   },
   "league": {
@@ -25,26 +25,68 @@
   },
   "champions": [
     {
+      "season": "2022-2023",
+      "champion": "Domazlice",
+      "champion_id": 318,
+      "champion_pts": 65,
+      "runner_up": "Bohemians 1905 B",
+      "runner_up_id": 319,
+      "margin_pts": 8
+    },
+    {
+      "season": "2023-2024",
+      "champion": "Slavia Prague B",
+      "champion_id": 313,
+      "champion_pts": 70,
+      "runner_up": "Domazlice",
+      "runner_up_id": 318,
+      "margin_pts": 6
+    },
+    {
+      "season": "2024-2025",
+      "champion": "Domazlice",
+      "champion_id": 318,
+      "champion_pts": 63,
+      "runner_up": "Plzen B",
+      "runner_up_id": 320,
+      "margin_pts": 6
+    },
+    {
       "season": "2025-2026",
       "champion": "SK Kladno",
-      "champion_id": 298,
+      "champion_id": 316,
       "champion_pts": 72,
       "runner_up": "Domazlice",
-      "runner_up_id": 301,
+      "runner_up_id": 318,
       "margin_pts": 3
     },
     {
       "season": "2026-2027",
-      "champion": "Domazlice",
-      "champion_id": 301,
-      "champion_pts": 19,
+      "champion": "Ceske Budejovice",
+      "champion_id": 290,
+      "champion_pts": 26,
       "runner_up": "Kraluv Dvur",
-      "runner_up_id": 304,
+      "runner_up_id": 331,
       "margin_pts": 0
     }
   ],
   "title_race": {
     "per_season": [
+      {
+        "season": "2022-2023",
+        "margin": 8,
+        "tight": false
+      },
+      {
+        "season": "2023-2024",
+        "margin": 6,
+        "tight": false
+      },
+      {
+        "season": "2024-2025",
+        "margin": 6,
+        "tight": false
+      },
       {
         "season": "2025-2026",
         "margin": 3,
@@ -57,15 +99,48 @@
       }
     ],
     "tight_race_count": 2,
-    "total_seasons": 2,
+    "total_seasons": 5,
     "tightest": {
       "season": "2026-2027",
       "margin": 0,
-      "champion": "Domazlice",
+      "champion": "Ceske Budejovice",
       "runner_up": "Kraluv Dvur"
     }
   },
   "points_thresholds": [
+    {
+      "season": "2022-2023",
+      "positions": {
+        "1": 65,
+        "2": 57,
+        "4": 54,
+        "6": 40,
+        "13": 36,
+        "16": 23
+      }
+    },
+    {
+      "season": "2023-2024",
+      "positions": {
+        "1": 70,
+        "2": 64,
+        "4": 45,
+        "6": 43,
+        "13": 34,
+        "16": 26
+      }
+    },
+    {
+      "season": "2024-2025",
+      "positions": {
+        "1": 63,
+        "2": 57,
+        "4": 50,
+        "6": 46,
+        "13": 30,
+        "16": 22
+      }
+    },
     {
       "season": "2025-2026",
       "positions": {
@@ -80,16 +155,85 @@
     {
       "season": "2026-2027",
       "positions": {
-        "1": 19,
-        "2": 19,
-        "4": 16,
-        "6": 13,
-        "13": 7,
+        "1": 26,
+        "2": 26,
+        "4": 23,
+        "6": 18,
+        "13": 11,
         "16": 3
       }
     }
   ],
   "relegation_battle": [
+    {
+      "season": "2022-2023",
+      "safe_position": 13,
+      "safe_pts": 36,
+      "drop_position": 14,
+      "drop_pts": 35,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 35
+        },
+        {
+          "position": 15,
+          "points": 28
+        },
+        {
+          "position": 16,
+          "points": 23
+        }
+      ],
+      "bottom3_range": 12
+    },
+    {
+      "season": "2023-2024",
+      "safe_position": 13,
+      "safe_pts": 34,
+      "drop_position": 14,
+      "drop_pts": 33,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 33
+        },
+        {
+          "position": 15,
+          "points": 30
+        },
+        {
+          "position": 16,
+          "points": 26
+        }
+      ],
+      "bottom3_range": 7
+    },
+    {
+      "season": "2024-2025",
+      "safe_position": 13,
+      "safe_pts": 30,
+      "drop_position": 14,
+      "drop_pts": 29,
+      "gap": 1,
+      "bottom3": [
+        {
+          "position": 14,
+          "points": 29
+        },
+        {
+          "position": 15,
+          "points": 27
+        },
+        {
+          "position": 16,
+          "points": 22
+        }
+      ],
+      "bottom3_range": 7
+    },
     {
       "season": "2025-2026",
       "safe_position": 13,
@@ -116,28 +260,79 @@
     {
       "season": "2026-2027",
       "safe_position": 13,
-      "safe_pts": 7,
+      "safe_pts": 11,
       "drop_position": 14,
-      "drop_pts": 7,
-      "gap": 0,
+      "drop_pts": 10,
+      "gap": 1,
       "bottom3": [
         {
           "position": 14,
-          "points": 7
+          "points": 10
         },
         {
           "position": 15,
-          "points": 6
+          "points": 9
         },
         {
           "position": 16,
           "points": 3
         }
       ],
-      "bottom3_range": 4
+      "bottom3_range": 7
     }
   ],
   "league_trends": [
+    {
+      "season": "2022-2023",
+      "n_matches": 240,
+      "total_goals": 745,
+      "avg_goals": 3.104,
+      "home_wins": 121,
+      "draws": 50,
+      "away_wins": 69,
+      "home_win_pct": 50.4,
+      "draw_pct": 20.8,
+      "away_win_pct": 28.8,
+      "goalless": 15,
+      "goalless_pct": 6.2,
+      "total_points": 670,
+      "avg_points_per_team": 41.88,
+      "n_teams": 16
+    },
+    {
+      "season": "2023-2024",
+      "n_matches": 240,
+      "total_goals": 793,
+      "avg_goals": 3.304,
+      "home_wins": 117,
+      "draws": 54,
+      "away_wins": 69,
+      "home_win_pct": 48.8,
+      "draw_pct": 22.5,
+      "away_win_pct": 28.8,
+      "goalless": 11,
+      "goalless_pct": 4.6,
+      "total_points": 666,
+      "avg_points_per_team": 41.62,
+      "n_teams": 16
+    },
+    {
+      "season": "2024-2025",
+      "n_matches": 240,
+      "total_goals": 754,
+      "avg_goals": 3.142,
+      "home_wins": 102,
+      "draws": 50,
+      "away_wins": 88,
+      "home_win_pct": 42.5,
+      "draw_pct": 20.8,
+      "away_win_pct": 36.7,
+      "goalless": 10,
+      "goalless_pct": 4.2,
+      "total_points": 670,
+      "avg_points_per_team": 39.41,
+      "n_teams": 17
+    },
     {
       "season": "2025-2026",
       "n_matches": 272,
@@ -157,24 +352,39 @@
     },
     {
       "season": "2026-2027",
-      "n_matches": 65,
-      "total_goals": 216,
-      "avg_goals": 3.323,
-      "home_wins": 25,
-      "draws": 19,
-      "away_wins": 21,
-      "home_win_pct": 38.5,
-      "draw_pct": 29.2,
-      "away_win_pct": 32.3,
-      "goalless": 7,
-      "goalless_pct": 10.8,
-      "total_points": 176,
-      "avg_points_per_team": 11.0,
+      "n_matches": 94,
+      "total_goals": 336,
+      "avg_goals": 3.574,
+      "home_wins": 40,
+      "draws": 28,
+      "away_wins": 26,
+      "home_win_pct": 42.6,
+      "draw_pct": 29.8,
+      "away_win_pct": 27.7,
+      "goalless": 8,
+      "goalless_pct": 8.5,
+      "total_points": 254,
+      "avg_points_per_team": 15.88,
       "n_teams": 16
     }
   ],
   "view_divergence": {
     "per_season": [
+      {
+        "season": "2022-2023",
+        "luck": 3.0,
+        "goals": 6.375
+      },
+      {
+        "season": "2023-2024",
+        "luck": 3.5,
+        "goals": 3.875
+      },
+      {
+        "season": "2024-2025",
+        "luck": 3.294,
+        "goals": 5.059
+      },
       {
         "season": "2025-2026",
         "luck": 3.059,
@@ -182,14 +392,14 @@
       },
       {
         "season": "2026-2027",
-        "luck": 1.875,
-        "goals": 4.0
+        "luck": 1.75,
+        "goals": 3.875
       }
     ],
     "worst_divergence": {
-      "season": "2025-2026",
+      "season": "2022-2023",
       "view": "goals",
-      "avg_abs_diff": 4.471
+      "avg_abs_diff": 6.375
     }
   }
 }

@@ -4,10 +4,10 @@
     "name": "backend/scripts/analyze_matches.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T15:49:29+00:00",
+  "generated_at": "2026-10-26T01:31:40+00:00",
   "config": {
     "league": "finland1",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\finland1",
+    "out_dir": "data/analysis/finland1",
     "out_stem": null
   },
   "league": {
@@ -24,21 +24,101 @@
     "url": "https://www.football-charts.com/leagues/finland/veikkausliiga"
   },
   "overall": {
-    "n_matches": 273,
-    "home_wins": 119,
-    "draws": 67,
-    "away_wins": 87,
-    "home_win_pct": 43.6,
-    "draw_pct": 24.5,
-    "away_win_pct": 31.9,
-    "home_goals": 421,
-    "away_goals": 368,
-    "total_goals": 789,
-    "avg_goals": 2.89,
-    "goalless": 18,
+    "n_matches": 944,
+    "home_wins": 404,
+    "draws": 224,
+    "away_wins": 316,
+    "home_win_pct": 42.8,
+    "draw_pct": 23.7,
+    "away_win_pct": 33.5,
+    "home_goals": 1386,
+    "away_goals": 1226,
+    "total_goals": 2612,
+    "avg_goals": 2.767,
+    "goalless": 62,
     "goalless_pct": 6.6
   },
   "per_season": [
+    {
+      "season": "2020",
+      "n_matches": 132,
+      "home_wins": 53,
+      "draws": 33,
+      "away_wins": 46,
+      "home_win_pct": 40.2,
+      "draw_pct": 25.0,
+      "away_win_pct": 34.8,
+      "home_goals": 192,
+      "away_goals": 180,
+      "total_goals": 372,
+      "avg_goals": 2.818,
+      "goalless": 10,
+      "goalless_pct": 7.6
+    },
+    {
+      "season": "2021",
+      "n_matches": 132,
+      "home_wins": 57,
+      "draws": 25,
+      "away_wins": 50,
+      "home_win_pct": 43.2,
+      "draw_pct": 18.9,
+      "away_win_pct": 37.9,
+      "home_goals": 163,
+      "away_goals": 147,
+      "total_goals": 310,
+      "avg_goals": 2.348,
+      "goalless": 9,
+      "goalless_pct": 6.8
+    },
+    {
+      "season": "2022",
+      "n_matches": 132,
+      "home_wins": 54,
+      "draws": 31,
+      "away_wins": 47,
+      "home_win_pct": 40.9,
+      "draw_pct": 23.5,
+      "away_win_pct": 35.6,
+      "home_goals": 192,
+      "away_goals": 192,
+      "total_goals": 384,
+      "avg_goals": 2.909,
+      "goalless": 6,
+      "goalless_pct": 4.5
+    },
+    {
+      "season": "2023",
+      "n_matches": 132,
+      "home_wins": 54,
+      "draws": 34,
+      "away_wins": 44,
+      "home_win_pct": 40.9,
+      "draw_pct": 25.8,
+      "away_win_pct": 33.3,
+      "home_goals": 173,
+      "away_goals": 156,
+      "total_goals": 329,
+      "avg_goals": 2.492,
+      "goalless": 11,
+      "goalless_pct": 8.3
+    },
+    {
+      "season": "2024",
+      "n_matches": 132,
+      "home_wins": 62,
+      "draws": 33,
+      "away_wins": 37,
+      "home_win_pct": 47.0,
+      "draw_pct": 25.0,
+      "away_win_pct": 28.0,
+      "home_goals": 224,
+      "away_goals": 171,
+      "total_goals": 395,
+      "avg_goals": 2.992,
+      "goalless": 7,
+      "goalless_pct": 5.3
+    },
     {
       "season": "2025",
       "n_matches": 132,
@@ -57,19 +137,19 @@
     },
     {
       "season": "2026",
-      "n_matches": 141,
-      "home_wins": 63,
-      "draws": 38,
-      "away_wins": 40,
+      "n_matches": 152,
+      "home_wins": 68,
+      "draws": 39,
+      "away_wins": 45,
       "home_win_pct": 44.7,
-      "draw_pct": 27.0,
-      "away_win_pct": 28.4,
-      "home_goals": 199,
-      "away_goals": 157,
-      "total_goals": 356,
-      "avg_goals": 2.525,
-      "goalless": 10,
-      "goalless_pct": 7.1
+      "draw_pct": 25.7,
+      "away_win_pct": 29.6,
+      "home_goals": 220,
+      "away_goals": 169,
+      "total_goals": 389,
+      "avg_goals": 2.559,
+      "goalless": 11,
+      "goalless_pct": 7.2
     }
   ],
   "ht_ft_matrix": {
@@ -85,45 +165,206 @@
     ],
     "counts": {
       "home": {
-        "home": 69,
-        "draw": 15,
-        "away": 9
+        "home": 244,
+        "draw": 50,
+        "away": 25
       },
       "draw": {
-        "home": 39,
-        "draw": 42,
-        "away": 22
+        "home": 126,
+        "draw": 139,
+        "away": 105
       },
       "away": {
-        "home": 11,
-        "draw": 10,
-        "away": 56
+        "home": 34,
+        "draw": 35,
+        "away": 185
       }
     },
     "pcts": {
       "home": {
-        "home": 74.2,
-        "draw": 16.1,
-        "away": 9.7
+        "home": 76.5,
+        "draw": 15.7,
+        "away": 7.8
       },
       "draw": {
-        "home": 37.9,
-        "draw": 40.8,
-        "away": 21.4
+        "home": 34.1,
+        "draw": 37.6,
+        "away": 28.4
       },
       "away": {
-        "home": 14.3,
-        "draw": 13.0,
-        "away": 72.7
+        "home": 13.4,
+        "draw": 13.8,
+        "away": 72.8
       }
     },
-    "excluded_no_ht": 0
+    "excluded_no_ht": 1
   },
   "comebacks": {
     "home": {
-      "count": 11,
-      "pct": 4.0,
+      "count": 34,
+      "pct": 3.6,
       "matches": [
+        {
+          "season": "2020",
+          "home_team": "Ilves",
+          "away_team": "Mariehamn",
+          "ht_score": "0-1",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2020",
+          "home_team": "Lahti",
+          "away_team": "Mariehamn",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2021",
+          "home_team": "KuPS",
+          "away_team": "Honka",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021",
+          "home_team": "Honka",
+          "away_team": "Haka",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021",
+          "home_team": "Lahti",
+          "away_team": "SJK",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2021",
+          "home_team": "SJK",
+          "away_team": "Honka",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2021",
+          "home_team": "Honka",
+          "away_team": "KTP",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2022",
+          "home_team": "HJK",
+          "away_team": "Ilves",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022",
+          "home_team": "HJK",
+          "away_team": "Lahti",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2022",
+          "home_team": "KuPS",
+          "away_team": "AC Oulu",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2022",
+          "home_team": "SJK",
+          "away_team": "Honka",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2022",
+          "home_team": "Haka",
+          "away_team": "Honka",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2023",
+          "home_team": "Haka",
+          "away_team": "KTP",
+          "ht_score": "1-2",
+          "ft_score": "4-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "AC Oulu",
+          "away_team": "VPS",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2023",
+          "home_team": "HJK",
+          "away_team": "Inter Turku",
+          "ht_score": "0-1",
+          "ft_score": "4-1"
+        },
+        {
+          "season": "2023",
+          "home_team": "SJK",
+          "away_team": "Mariehamn",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "Lahti",
+          "away_team": "Ilves",
+          "ht_score": "0-1",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2024",
+          "home_team": "Mariehamn",
+          "away_team": "Inter Turku",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2024",
+          "home_team": "HJK",
+          "away_team": "KuPS",
+          "ht_score": "0-1",
+          "ft_score": "3-1"
+        },
+        {
+          "season": "2024",
+          "home_team": "Haka",
+          "away_team": "Ilves",
+          "ht_score": "1-2",
+          "ft_score": "4-3"
+        },
+        {
+          "season": "2024",
+          "home_team": "Ilves",
+          "away_team": "VPS",
+          "ht_score": "1-2",
+          "ft_score": "3-2"
+        },
+        {
+          "season": "2024",
+          "home_team": "Gnistan",
+          "away_team": "Mariehamn",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
+        {
+          "season": "2024",
+          "home_team": "Mariehamn",
+          "away_team": "AC Oulu",
+          "ht_score": "0-1",
+          "ft_score": "2-1"
+        },
         {
           "season": "2025",
           "home_team": "Ilves",
@@ -204,9 +445,121 @@
       ]
     },
     "away": {
-      "count": 9,
-      "pct": 3.3,
+      "count": 25,
+      "pct": 2.6,
       "matches": [
+        {
+          "season": "2020",
+          "home_team": "Lahti",
+          "away_team": "KuPS",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2020",
+          "home_team": "KuPS",
+          "away_team": "Haka",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2021",
+          "home_team": "HIFK",
+          "away_team": "KuPS",
+          "ht_score": "1-0",
+          "ft_score": "1-5"
+        },
+        {
+          "season": "2022",
+          "home_team": "Ilves",
+          "away_team": "HJK",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2022",
+          "home_team": "Inter Turku",
+          "away_team": "KuPS",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "Mariehamn",
+          "away_team": "Lahti",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2023",
+          "home_team": "Ilves",
+          "away_team": "AC Oulu",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "Lahti",
+          "away_team": "AC Oulu",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "Lahti",
+          "away_team": "HJK",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "SJK",
+          "away_team": "HJK",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2023",
+          "home_team": "SJK",
+          "away_team": "KTP",
+          "ht_score": "1-0",
+          "ft_score": "2-3"
+        },
+        {
+          "season": "2023",
+          "home_team": "Inter Turku",
+          "away_team": "HJK",
+          "ht_score": "1-0",
+          "ft_score": "1-3"
+        },
+        {
+          "season": "2023",
+          "home_team": "KTP",
+          "away_team": "Honka",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024",
+          "home_team": "Ilves",
+          "away_team": "Gnistan",
+          "ht_score": "2-0",
+          "ft_score": "4-6"
+        },
+        {
+          "season": "2024",
+          "home_team": "Ekenas",
+          "away_team": "KuPS",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
+        {
+          "season": "2024",
+          "home_team": "Ekenas",
+          "away_team": "Haka",
+          "ht_score": "1-0",
+          "ft_score": "1-2"
+        },
         {
           "season": "2025",
           "home_team": "Mariehamn",
@@ -275,107 +628,139 @@
   },
   "ht_lead_conversion": {
     "home_lead": {
-      "n_matches": 93,
+      "n_matches": 319,
       "home": {
-        "count": 69,
-        "pct": 74.2
+        "count": 244,
+        "pct": 76.5
       },
       "draw": {
-        "count": 15,
-        "pct": 16.1
+        "count": 50,
+        "pct": 15.7
       },
       "away": {
-        "count": 9,
-        "pct": 9.7
+        "count": 25,
+        "pct": 7.8
       }
     },
     "ht_draw": {
-      "n_matches": 103,
+      "n_matches": 370,
       "home": {
-        "count": 39,
-        "pct": 37.9
+        "count": 126,
+        "pct": 34.1
       },
       "draw": {
-        "count": 42,
-        "pct": 40.8
+        "count": 139,
+        "pct": 37.6
       },
       "away": {
-        "count": 22,
-        "pct": 21.4
+        "count": 105,
+        "pct": 28.4
       }
     },
     "away_lead": {
-      "n_matches": 77,
+      "n_matches": 254,
       "home": {
-        "count": 11,
-        "pct": 14.3
+        "count": 34,
+        "pct": 13.4
       },
       "draw": {
-        "count": 10,
-        "pct": 13.0
+        "count": 35,
+        "pct": 13.8
       },
       "away": {
-        "count": 56,
-        "pct": 72.7
+        "count": 185,
+        "pct": 72.8
       }
     },
-    "excluded_no_ht": 0
+    "excluded_no_ht": 1
   },
   "first_goal_timing": {
-    "n_total": 273,
-    "n_with_first_goal": 255,
-    "n_goalless": 18,
+    "n_total": 944,
+    "n_with_first_goal": 881,
+    "n_goalless": 63,
     "unbucketed": 0,
     "buckets": {
       "1-15": {
-        "n_matches": 85,
+        "n_matches": 292,
         "home": {
-          "count": 41,
-          "pct": 48.2
+          "count": 141,
+          "pct": 48.3
         },
         "draw": {
-          "count": 20,
-          "pct": 23.5
+          "count": 58,
+          "pct": 19.9
         },
         "away": {
-          "count": 24,
-          "pct": 28.2
+          "count": 93,
+          "pct": 31.8
         },
-        "pct_of_matches": 31.1
+        "pct_of_matches": 30.9
       },
       "16-30": {
-        "n_matches": 62,
+        "n_matches": 225,
         "home": {
-          "count": 27,
-          "pct": 43.5
+          "count": 107,
+          "pct": 47.6
         },
         "draw": {
-          "count": 9,
-          "pct": 14.5
+          "count": 41,
+          "pct": 18.2
         },
         "away": {
-          "count": 26,
-          "pct": 41.9
+          "count": 77,
+          "pct": 34.2
         },
-        "pct_of_matches": 22.7
+        "pct_of_matches": 23.8
       },
       "31-45": {
-        "n_matches": 43,
+        "n_matches": 138,
         "home": {
-          "count": 16,
-          "pct": 37.2
+          "count": 61,
+          "pct": 44.2
+        },
+        "draw": {
+          "count": 24,
+          "pct": 17.4
+        },
+        "away": {
+          "count": 53,
+          "pct": 38.4
+        },
+        "pct_of_matches": 14.6
+      },
+      "46-60": {
+        "n_matches": 123,
+        "home": {
+          "count": 47,
+          "pct": 38.2
+        },
+        "draw": {
+          "count": 24,
+          "pct": 19.5
+        },
+        "away": {
+          "count": 52,
+          "pct": 42.3
+        },
+        "pct_of_matches": 13.0
+      },
+      "61-75": {
+        "n_matches": 59,
+        "home": {
+          "count": 25,
+          "pct": 42.4
         },
         "draw": {
           "count": 10,
-          "pct": 23.3
+          "pct": 16.9
         },
         "away": {
-          "count": 17,
-          "pct": 39.5
+          "count": 24,
+          "pct": 40.7
         },
-        "pct_of_matches": 15.8
+        "pct_of_matches": 6.2
       },
-      "46-60": {
+      "76-90": {
         "n_matches": 37,
         "home": {
           "count": 21,
@@ -389,53 +774,21 @@
           "count": 12,
           "pct": 32.4
         },
-        "pct_of_matches": 13.6
-      },
-      "61-75": {
-        "n_matches": 15,
-        "home": {
-          "count": 6,
-          "pct": 40.0
-        },
-        "draw": {
-          "count": 4,
-          "pct": 26.7
-        },
-        "away": {
-          "count": 5,
-          "pct": 33.3
-        },
-        "pct_of_matches": 5.5
-      },
-      "76-90": {
-        "n_matches": 11,
-        "home": {
-          "count": 6,
-          "pct": 54.5
-        },
-        "draw": {
-          "count": 2,
-          "pct": 18.2
-        },
-        "away": {
-          "count": 3,
-          "pct": 27.3
-        },
-        "pct_of_matches": 4.0
+        "pct_of_matches": 3.9
       },
       "91-120": {
-        "n_matches": 2,
+        "n_matches": 7,
         "home": {
           "count": 2,
-          "pct": 100.0
+          "pct": 28.6
         },
         "draw": {
-          "count": 0,
-          "pct": 0.0
+          "count": 1,
+          "pct": 14.3
         },
         "away": {
-          "count": 0,
-          "pct": 0.0
+          "count": 4,
+          "pct": 57.1
         },
         "pct_of_matches": 0.7
       }
@@ -443,11 +796,41 @@
   },
   "goalless": {
     "overall": {
-      "n_matches": 273,
-      "count": 18,
+      "n_matches": 944,
+      "count": 62,
       "pct": 6.6
     },
     "per_season": [
+      {
+        "season": "2020",
+        "n_matches": 132,
+        "count": 10,
+        "pct": 7.6
+      },
+      {
+        "season": "2021",
+        "n_matches": 132,
+        "count": 9,
+        "pct": 6.8
+      },
+      {
+        "season": "2022",
+        "n_matches": 132,
+        "count": 6,
+        "pct": 4.5
+      },
+      {
+        "season": "2023",
+        "n_matches": 132,
+        "count": 11,
+        "pct": 8.3
+      },
+      {
+        "season": "2024",
+        "n_matches": 132,
+        "count": 7,
+        "pct": 5.3
+      },
       {
         "season": "2025",
         "n_matches": 132,
@@ -456,9 +839,9 @@
       },
       {
         "season": "2026",
-        "n_matches": 141,
-        "count": 10,
-        "pct": 7.1
+        "n_matches": 152,
+        "count": 11,
+        "pct": 7.2
       }
     ]
   }

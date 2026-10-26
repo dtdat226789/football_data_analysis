@@ -1,38 +1,83 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T16:09:38+00:00
+- Generated: 2026-10-26T01:50:36+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Superettan (Sweden)
 - Scope: league `sweden2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **440** across **2** seasons.
-- Distinct scorelines seen: **32**.
+- Matches analysed: **1660** across **7** seasons.
+- Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 45 | 10.2% |
-| 2-1 | 37 | 8.4% |
-| 2-2 | 35 | 8.0% |
-| 1-0 | 34 | 7.7% |
-| 0-1 | 33 | 7.5% |
-| 1-2 | 33 | 7.5% |
-| 0-0 | 31 | 7.0% |
-| 0-2 | 27 | 6.1% |
-| 2-0 | 24 | 5.5% |
-| 1-3 | 18 | 4.1% |
-| 3-1 | 16 | 3.6% |
-| 3-2 | 16 | 3.6% |
-| 3-0 | 13 | 3.0% |
-| 4-1 | 12 | 2.7% |
-| 4-0 | 10 | 2.3% |
-| 0-3 | 8 | 1.8% |
-| 3-3 | 7 | 1.6% |
-| 4-2 | 7 | 1.6% |
-| 2-3 | 6 | 1.4% |
-| 1-4 | 6 | 1.4% |
+| 1-1 | 191 | 11.5% |
+| 2-1 | 156 | 9.4% |
+| 1-0 | 147 | 8.9% |
+| 0-1 | 126 | 7.6% |
+| 0-0 | 120 | 7.2% |
+| 2-0 | 119 | 7.2% |
+| 1-2 | 114 | 6.9% |
+| 2-2 | 111 | 6.7% |
+| 0-2 | 75 | 4.5% |
+| 3-1 | 61 | 3.7% |
+| 3-2 | 55 | 3.3% |
+| 3-0 | 53 | 3.2% |
+| 1-3 | 53 | 3.2% |
+| 4-1 | 46 | 2.8% |
+| 0-3 | 39 | 2.3% |
+| 2-3 | 35 | 2.1% |
+| 4-0 | 34 | 2.0% |
+| 3-3 | 21 | 1.3% |
+| 1-4 | 19 | 1.1% |
+| 4-2 | 16 | 1.0% |
 
 ## 2. Scoreline frequency per season
+
+### 2020
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 31 | 12.9% |
+| 2-1 | 25 | 10.4% |
+| 0-1 | 22 | 9.2% |
+| 2-0 | 22 | 9.2% |
+| 1-0 | 18 | 7.5% |
+
+### 2021
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 31 | 12.9% |
+| 1-0 | 31 | 12.9% |
+| 2-1 | 21 | 8.8% |
+| 0-1 | 20 | 8.3% |
+| 0-0 | 19 | 7.9% |
+
+### 2022
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 30 | 12.5% |
+| 2-1 | 24 | 10.0% |
+| 2-0 | 19 | 7.9% |
+| 1-2 | 18 | 7.5% |
+| 0-1 | 17 | 7.1% |
+
+### 2023
+| scoreline | count | pct |
+|---|---|---|
+| 2-1 | 25 | 10.4% |
+| 1-1 | 24 | 10.0% |
+| 1-0 | 22 | 9.2% |
+| 2-2 | 19 | 7.9% |
+| 1-2 | 18 | 7.5% |
+
+### 2024
+| scoreline | count | pct |
+|---|---|---|
+| 1-0 | 28 | 11.7% |
+| 1-1 | 28 | 11.7% |
+| 2-1 | 23 | 9.6% |
+| 0-0 | 20 | 8.3% |
+| 2-2 | 18 | 7.5% |
 
 ### 2025
 | scoreline | count | pct |
@@ -46,83 +91,108 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 24 | 12.0% |
-| 1-0 | 17 | 8.5% |
-| 0-1 | 16 | 8.0% |
-| 2-1 | 16 | 8.0% |
-| 2-2 | 14 | 7.0% |
+| 1-1 | 26 | 11.8% |
+| 0-1 | 18 | 8.2% |
+| 1-0 | 17 | 7.7% |
+| 2-1 | 17 | 7.7% |
+| 2-2 | 15 | 6.8% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 31 | 7.0% |
-| 1 | 67 | 15.2% |
-| 2 | 96 | 21.8% |
-| 3 | 91 | 20.7% |
-| 4 | 81 | 18.4% |
-| 5 | 43 | 9.8% |
-| 6 | 25 | 5.7% |
-| 7 | 4 | 0.9% |
-| 8 | 1 | 0.2% |
-| 9 | 1 | 0.2% |
+| 0 | 120 | 7.2% |
+| 1 | 273 | 16.4% |
+| 2 | 385 | 23.2% |
+| 3 | 362 | 21.8% |
+| 4 | 265 | 16.0% |
+| 5 | 164 | 9.9% |
+| 6 | 60 | 3.6% |
+| 7 | 26 | 1.6% |
+| 8 | 3 | 0.2% |
+| 9 | 2 | 0.1% |
 | 10+ | 0 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **6**
+- Matches with 7+ total goals: **31**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
 | 2025 | 2025-09-20 | 4-5 | 9 |
+| 2026 | 2026-10-24 | 4-5 | 9 |
+| 2022 | 2022-08-16 | 4-4 | 8 |
+| 2023 | 2023-09-17 | 5-3 | 8 |
 | 2025 | 2025-05-21 | 4-4 | 8 |
+| 2020 | 2020-08-07 | 5-2 | 7 |
+| 2020 | 2020-11-28 | 2-5 | 7 |
+| 2021 | 2021-08-29 | 3-4 | 7 |
+| 2021 | 2021-11-07 | 3-4 | 7 |
+| 2022 | 2022-04-09 | 4-3 | 7 |
+| 2022 | 2022-05-07 | 5-2 | 7 |
+| 2022 | 2022-05-14 | 5-2 | 7 |
+| 2022 | 2022-07-24 | 5-2 | 7 |
+| 2022 | 2022-09-17 | 5-2 | 7 |
+| 2022 | 2022-10-30 | 5-2 | 7 |
+| 2023 | 2023-04-10 | 5-2 | 7 |
+| 2023 | 2023-05-01 | 3-4 | 7 |
+| 2023 | 2023-10-28 | 4-3 | 7 |
+| 2024 | 2024-05-22 | 4-3 | 7 |
+| 2024 | 2024-06-23 | 4-3 | 7 |
+| 2024 | 2024-06-24 | 4-3 | 7 |
+| 2024 | 2024-06-30 | 4-3 | 7 |
+| 2024 | 2024-09-30 | 5-2 | 7 |
+| 2024 | 2024-10-20 | 3-4 | 7 |
+| 2024 | 2024-11-03 | 5-2 | 7 |
 | 2025 | 2025-08-02 | 2-5 | 7 |
 | 2025 | 2025-10-04 | 1-6 | 7 |
 | 2026 | 2026-04-12 | 3-4 | 7 |
 | 2026 | 2026-06-21 | 5-2 | 7 |
+| 2026 | 2026-10-17 | 4-3 | 7 |
+| 2026 | 2026-10-23 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **321** (draws: **119**)
-- Average winning margin: **1.79**
+- Decided matches: **1215** (draws: **445**)
+- Average winning margin: **1.74**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 161 | 50.2% |
-| 2 | 96 | 29.9% |
-| 3+ | 64 | 19.9% |
+| 1 | 647 | 53.3% |
+| 2 | 331 | 27.2% |
+| 3+ | 237 | 19.5% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **178** | avg margin: **1.9** | max margin: **6**
+- Matches: **725** | avg margin: **1.82** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 87 | 48.9% |
-| 2 | 47 | 26.4% |
-| 3+ | 44 | 24.7% |
+| 1 | 365 | 50.3% |
+| 2 | 197 | 27.2% |
+| 3+ | 163 | 22.5% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **143** | avg margin: **1.66** | max margin: **5**
+- Matches: **490** | avg margin: **1.62** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 74 | 51.7% |
-| 2 | 49 | 34.3% |
-| 3+ | 20 | 14.0% |
+| 1 | 282 | 57.6% |
+| 2 | 134 | 27.3% |
+| 3+ | 74 | 15.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 178 | 2-1 | 37 | 20.8% |
-| draw | 119 | 1-1 | 45 | 37.8% |
-| away | 143 | 0-1 | 33 | 23.1% |
+| home | 725 | 2-1 | 156 | 21.5% |
+| draw | 445 | 1-1 | 191 | 42.9% |
+| away | 490 | 0-1 | 126 | 25.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\sweden2\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\sweden2\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

@@ -1,38 +1,83 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T15:57:41+00:00
+- Generated: 2026-10-26T01:38:08+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **440** across **2** seasons.
-- Distinct scorelines seen: **27**.
+- Matches analysed: **2368** across **7** seasons.
+- Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 69 | 15.7% |
-| 1-0 | 49 | 11.1% |
-| 2-1 | 39 | 8.9% |
-| 2-0 | 32 | 7.3% |
-| 1-2 | 32 | 7.3% |
-| 0-0 | 31 | 7.0% |
-| 2-2 | 30 | 6.8% |
-| 0-1 | 28 | 6.4% |
-| 3-1 | 24 | 5.5% |
-| 3-0 | 23 | 5.2% |
-| 0-2 | 16 | 3.6% |
-| 1-3 | 12 | 2.7% |
-| 3-2 | 11 | 2.5% |
-| 0-3 | 9 | 2.0% |
-| 5-0 | 5 | 1.1% |
-| 4-0 | 4 | 0.9% |
-| 4-1 | 4 | 0.9% |
-| 3-3 | 4 | 0.9% |
-| 2-3 | 4 | 0.9% |
-| 0-4 | 3 | 0.7% |
+| 1-1 | 367 | 15.5% |
+| 1-0 | 251 | 10.6% |
+| 0-0 | 217 | 9.2% |
+| 2-1 | 202 | 8.5% |
+| 0-1 | 188 | 7.9% |
+| 1-2 | 171 | 7.2% |
+| 2-0 | 160 | 6.8% |
+| 2-2 | 151 | 6.4% |
+| 0-2 | 114 | 4.8% |
+| 3-0 | 93 | 3.9% |
+| 3-1 | 87 | 3.7% |
+| 1-3 | 59 | 2.5% |
+| 3-2 | 49 | 2.1% |
+| 0-3 | 46 | 1.9% |
+| 2-3 | 38 | 1.6% |
+| 3-3 | 25 | 1.1% |
+| 4-0 | 25 | 1.1% |
+| 4-1 | 23 | 1.0% |
+| 1-4 | 15 | 0.6% |
+| 4-2 | 15 | 0.6% |
 
 ## 2. Scoreline frequency per season
+
+### 2020-2021
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 61 | 16.1% |
+| 1-0 | 40 | 10.5% |
+| 0-0 | 38 | 10.0% |
+| 2-2 | 28 | 7.4% |
+| 1-2 | 28 | 7.4% |
+
+### 2021-2022
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 68 | 17.9% |
+| 1-0 | 43 | 11.3% |
+| 0-1 | 35 | 9.2% |
+| 2-0 | 29 | 7.6% |
+| 0-0 | 27 | 7.1% |
+
+### 2022-2023
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 56 | 14.7% |
+| 1-0 | 45 | 11.8% |
+| 0-0 | 42 | 11.1% |
+| 2-1 | 40 | 10.5% |
+| 0-1 | 36 | 9.5% |
+
+### 2023-2024
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 56 | 14.7% |
+| 1-2 | 38 | 10.0% |
+| 0-0 | 37 | 9.7% |
+| 1-0 | 34 | 8.9% |
+| 0-1 | 33 | 8.7% |
+
+### 2024-2025
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 53 | 13.9% |
+| 1-0 | 40 | 10.5% |
+| 2-1 | 40 | 10.5% |
+| 0-0 | 40 | 10.5% |
+| 2-2 | 31 | 8.2% |
 
 ### 2025-2026
 | scoreline | count | pct |
@@ -46,82 +91,108 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 9 | 18.0% |
-| 1-0 | 6 | 12.0% |
-| 1-2 | 6 | 12.0% |
-| 0-1 | 5 | 10.0% |
-| 3-1 | 5 | 10.0% |
+| 1-1 | 13 | 16.7% |
+| 1-2 | 8 | 10.3% |
+| 0-1 | 8 | 10.3% |
+| 1-0 | 6 | 7.7% |
+| 3-1 | 6 | 7.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 31 | 7.0% |
-| 1 | 77 | 17.5% |
-| 2 | 117 | 26.6% |
-| 3 | 103 | 23.4% |
-| 4 | 73 | 16.6% |
-| 5 | 26 | 5.9% |
-| 6 | 8 | 1.8% |
-| 7 | 5 | 1.1% |
-| 8 | 0 | 0.0% |
+| 0 | 217 | 9.2% |
+| 1 | 439 | 18.5% |
+| 2 | 641 | 27.1% |
+| 3 | 512 | 21.6% |
+| 4 | 333 | 14.1% |
+| 5 | 140 | 5.9% |
+| 6 | 55 | 2.3% |
+| 7 | 22 | 0.9% |
+| 8 | 9 | 0.4% |
 | 9 | 0 | 0.0% |
 | 10+ | 0 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **5**
+- Matches with 7+ total goals: **31**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
+| 2020-2021 | 2020-10-31 | 4-4 | 8 |
+| 2020-2021 | 2020-11-21 | 7-1 | 8 |
+| 2021-2022 | 2022-04-18 | 4-4 | 8 |
+| 2022-2023 | 2022-10-01 | 6-2 | 8 |
+| 2023-2024 | 2024-01-12 | 5-3 | 8 |
+| 2023-2024 | 2024-01-14 | 5-3 | 8 |
+| 2024-2025 | 2024-10-20 | 3-5 | 8 |
+| 2024-2025 | 2025-01-19 | 5-3 | 8 |
+| 2024-2025 | 2025-04-06 | 5-3 | 8 |
+| 2020-2021 | 2020-12-12 | 2-5 | 7 |
+| 2020-2021 | 2021-05-07 | 4-3 | 7 |
+| 2021-2022 | 2021-08-22 | 4-3 | 7 |
+| 2021-2022 | 2022-04-06 | 4-3 | 7 |
+| 2022-2023 | 2022-08-13 | 4-3 | 7 |
+| 2022-2023 | 2023-02-04 | 3-4 | 7 |
+| 2022-2023 | 2023-02-24 | 3-4 | 7 |
+| 2022-2023 | 2023-03-17 | 5-2 | 7 |
+| 2022-2023 | 2023-04-01 | 4-3 | 7 |
+| 2022-2023 | 2023-05-19 | 4-3 | 7 |
+| 2023-2024 | 2023-09-03 | 3-4 | 7 |
+| 2023-2024 | 2024-04-01 | 4-3 | 7 |
+| 2023-2024 | 2024-04-20 | 2-5 | 7 |
+| 2023-2024 | 2024-05-01 | 4-3 | 7 |
+| 2024-2025 | 2024-10-05 | 6-1 | 7 |
+| 2024-2025 | 2024-10-19 | 2-5 | 7 |
 | 2025-2026 | 2025-09-21 | 3-4 | 7 |
 | 2025-2026 | 2025-11-01 | 4-3 | 7 |
 | 2025-2026 | 2026-01-24 | 2-5 | 7 |
 | 2025-2026 | 2026-04-18 | 6-1 | 7 |
 | 2025-2026 | 2026-05-08 | 3-4 | 7 |
+| 2026-2027 | 2026-10-24 | 1-6 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **306** (draws: **134**)
-- Average winning margin: **1.7**
+- Decided matches: **1606** (draws: **762**)
+- Average winning margin: **1.64**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 166 | 54.2% |
-| 2 | 87 | 28.4% |
-| 3+ | 53 | 17.3% |
+| 1 | 913 | 56.8% |
+| 2 | 444 | 27.6% |
+| 3+ | 249 | 15.5% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **196** | avg margin: **1.76** | max margin: **5**
+- Matches: **944** | avg margin: **1.71** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 100 | 51.0% |
-| 2 | 59 | 30.1% |
-| 3+ | 37 | 18.9% |
+| 1 | 511 | 54.1% |
+| 2 | 266 | 28.2% |
+| 3+ | 167 | 17.7% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **110** | avg margin: **1.58** | max margin: **4**
+- Matches: **662** | avg margin: **1.55** | max margin: **5**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 66 | 60.0% |
-| 2 | 28 | 25.5% |
-| 3+ | 16 | 14.5% |
+| 1 | 402 | 60.7% |
+| 2 | 178 | 26.9% |
+| 3+ | 82 | 12.4% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 196 | 1-0 | 49 | 25.0% |
-| draw | 134 | 1-1 | 69 | 51.5% |
-| away | 110 | 1-2 | 32 | 29.1% |
+| home | 944 | 1-0 | 251 | 26.6% |
+| draw | 762 | 1-1 | 367 | 48.2% |
+| away | 662 | 0-1 | 188 | 28.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\italy2\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\italy2\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

@@ -1,38 +1,74 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-09-29T15:55:12+00:00
+- Generated: 2026-10-26T01:36:36+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **247** across **2** seasons.
-- Distinct scorelines seen: **29**.
+- Matches analysed: **723** across **7** seasons.
+- Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 32 | 13.0% |
-| 1-0 | 24 | 9.7% |
-| 0-0 | 21 | 8.5% |
-| 1-2 | 19 | 7.7% |
-| 2-1 | 17 | 6.9% |
-| 2-0 | 16 | 6.5% |
-| 0-2 | 15 | 6.1% |
-| 3-0 | 14 | 5.7% |
-| 2-2 | 12 | 4.9% |
-| 0-1 | 12 | 4.9% |
-| 3-2 | 10 | 4.0% |
-| 1-3 | 10 | 4.0% |
-| 2-3 | 7 | 2.8% |
-| 0-3 | 7 | 2.8% |
-| 3-1 | 6 | 2.4% |
-| 4-2 | 4 | 1.6% |
-| 4-1 | 4 | 1.6% |
-| 0-4 | 3 | 1.2% |
-| 3-3 | 2 | 0.8% |
-| 2-4 | 2 | 0.8% |
+| 1-1 | 90 | 12.4% |
+| 1-0 | 69 | 9.5% |
+| 2-1 | 64 | 8.9% |
+| 0-0 | 52 | 7.2% |
+| 0-1 | 51 | 7.1% |
+| 1-2 | 47 | 6.5% |
+| 2-0 | 40 | 5.5% |
+| 2-2 | 38 | 5.3% |
+| 0-2 | 36 | 5.0% |
+| 3-1 | 29 | 4.0% |
+| 3-0 | 28 | 3.9% |
+| 1-3 | 25 | 3.5% |
+| 3-2 | 22 | 3.0% |
+| 0-3 | 21 | 2.9% |
+| 2-3 | 18 | 2.5% |
+| 4-2 | 12 | 1.7% |
+| 3-3 | 11 | 1.5% |
+| 4-1 | 11 | 1.5% |
+| 2-4 | 9 | 1.2% |
+| 0-4 | 9 | 1.2% |
 
 ## 2. Scoreline frequency per season
+
+### 2020-2021
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 16 | 14.5% |
+| 0-0 | 13 | 11.8% |
+| 0-1 | 12 | 10.9% |
+| 1-2 | 12 | 10.9% |
+| 2-2 | 11 | 10.0% |
+
+### 2021-2022
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 18 | 16.4% |
+| 2-1 | 12 | 10.9% |
+| 1-0 | 9 | 8.2% |
+| 0-1 | 7 | 6.4% |
+| 3-1 | 5 | 4.5% |
+
+### 2022-2023
+| scoreline | count | pct |
+|---|---|---|
+| 1-0 | 14 | 12.7% |
+| 3-1 | 10 | 9.1% |
+| 2-1 | 10 | 9.1% |
+| 0-1 | 9 | 8.2% |
+| 1-2 | 7 | 6.4% |
+
+### 2023-2024
+| scoreline | count | pct |
+|---|---|---|
+| 2-1 | 19 | 14.4% |
+| 1-0 | 15 | 11.4% |
+| 1-1 | 15 | 11.4% |
+| 0-1 | 11 | 8.3% |
+| 0-0 | 9 | 6.8% |
 
 ### 2024-2025
 | scoreline | count | pct |
@@ -52,74 +88,96 @@
 | 1-0 | 9 | 9.9% |
 | 2-0 | 8 | 8.8% |
 
+### 2026-2027
+| scoreline | count | pct |
+|---|---|---|
+| 1-1 | 3 | 21.4% |
+| 2-1 | 2 | 14.3% |
+| 3-2 | 1 | 7.1% |
+| 0-2 | 1 | 7.1% |
+| 1-0 | 1 | 7.1% |
+
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 21 | 8.5% |
-| 1 | 36 | 14.6% |
-| 2 | 63 | 25.5% |
-| 3 | 57 | 23.1% |
-| 4 | 32 | 13.0% |
-| 5 | 23 | 9.3% |
-| 6 | 12 | 4.9% |
-| 7 | 3 | 1.2% |
-| 8 | 0 | 0.0% |
+| 0 | 52 | 7.2% |
+| 1 | 120 | 16.6% |
+| 2 | 166 | 23.0% |
+| 3 | 160 | 22.1% |
+| 4 | 107 | 14.8% |
+| 5 | 61 | 8.4% |
+| 6 | 41 | 5.7% |
+| 7 | 10 | 1.4% |
+| 8 | 3 | 0.4% |
 | 9 | 0 | 0.0% |
-| 10+ | 0 | 0.0% |
+| 10+ | 3 | 0.4% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **3**
+- Matches with 7+ total goals: **16**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
+| 2020-2021 | 2021-02-27 | 6-5 | 11 |
+| 2021-2022 | 2021-11-30 | 6-4 | 10 |
+| 2022-2023 | 2022-12-10 | 3-7 | 10 |
+| 2021-2022 | 2022-03-06 | 4-4 | 8 |
+| 2022-2023 | 2022-11-12 | 2-6 | 8 |
+| 2022-2023 | 2023-02-11 | 3-5 | 8 |
+| 2020-2021 | 2021-02-24 | 1-6 | 7 |
+| 2021-2022 | 2021-12-07 | 3-4 | 7 |
+| 2021-2022 | 2021-12-28 | 6-1 | 7 |
+| 2022-2023 | 2022-10-16 | 2-5 | 7 |
+| 2022-2023 | 2022-12-29 | 6-1 | 7 |
+| 2022-2023 | 2023-02-24 | 4-3 | 7 |
+| 2023-2024 | 2024-03-13 | 3-4 | 7 |
 | 2024-2025 | 2024-12-23 | 2-5 | 7 |
 | 2024-2025 | 2025-03-09 | 5-2 | 7 |
 | 2025-2026 | 2026-03-23 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **180** (draws: **67**)
-- Average winning margin: **1.81**
+- Decided matches: **531** (draws: **192**)
+- Average winning margin: **1.77**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 89 | 49.4% |
-| 2 | 53 | 29.4% |
-| 3+ | 38 | 21.1% |
+| 1 | 275 | 51.8% |
+| 2 | 153 | 28.8% |
+| 3+ | 103 | 19.4% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **101** | avg margin: **1.82** | max margin: **7**
+- Matches: **295** | avg margin: **1.74** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 51 | 50.5% |
-| 2 | 26 | 25.7% |
-| 3+ | 24 | 23.8% |
+| 1 | 157 | 53.2% |
+| 2 | 82 | 27.8% |
+| 3+ | 56 | 19.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **79** | avg margin: **1.78** | max margin: **6**
+- Matches: **236** | avg margin: **1.81** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 38 | 48.1% |
-| 2 | 27 | 34.2% |
-| 3+ | 14 | 17.7% |
+| 1 | 118 | 50.0% |
+| 2 | 71 | 30.1% |
+| 3+ | 47 | 19.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 101 | 1-0 | 24 | 23.8% |
-| draw | 67 | 1-1 | 32 | 47.8% |
-| away | 79 | 1-2 | 19 | 24.1% |
+| home | 295 | 1-0 | 69 | 23.4% |
+| draw | 192 | 1-1 | 90 | 46.9% |
+| away | 236 | 0-1 | 51 | 21.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*
 
 ## Charts
 
-![scoreline_analysis_top_scorelines](E:\football_data_analysis\data\analysis\india1\charts\scoreline_analysis_top_scorelines.png)
-![scoreline_analysis_total_goals](E:\football_data_analysis\data\analysis\india1\charts\scoreline_analysis_total_goals.png)
+![scoreline_analysis_top_scorelines](charts/scoreline_analysis_top_scorelines.png)
+![scoreline_analysis_total_goals](charts/scoreline_analysis_total_goals.png)
 

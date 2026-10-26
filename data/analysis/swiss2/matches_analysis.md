@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T16:10:00+00:00
+- Generated: 2026-10-26T01:51:04+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Challenge League (Switzerland)
 - Scope: league `swiss2`
@@ -8,34 +8,63 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 231 |
-| Home wins | 103 (44.6%) |
-| Draws | 52 (22.5%) |
-| Away wins | 76 (32.9%) |
-| Total goals | 702 |
-| Average goals per match | 3.039 |
-| Goalless matches | 14 (6.1%) |
+| Matches | 1140 |
+| Home wins | 500 (43.9%) |
+| Draws | 284 (24.9%) |
+| Away wins | 356 (31.2%) |
+| Total goals | 3435 |
+| Average goals per match | 3.013 |
+| Goalless matches | 67 (5.9%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 180 | 84 (46.7%) | 45 (25.0%) | 51 (28.3%) | 503 | 2.794 | 10 (5.6%) |
+| 2021-2022 | 180 | 89 (49.4%) | 37 (20.6%) | 54 (30.0%) | 585 | 3.25 | 11 (6.1%) |
+| 2022-2023 | 180 | 74 (41.1%) | 49 (27.2%) | 57 (31.7%) | 564 | 3.133 | 9 (5.0%) |
+| 2023-2024 | 180 | 75 (41.7%) | 51 (28.3%) | 54 (30.0%) | 517 | 2.872 | 11 (6.1%) |
+| 2024-2025 | 180 | 72 (40.0%) | 47 (26.1%) | 61 (33.9%) | 540 | 3.0 | 11 (6.1%) |
 | 2025-2026 | 186 | 83 (44.6%) | 40 (21.5%) | 63 (33.9%) | 566 | 3.043 | 12 (6.5%) |
-| 2026-2027 | 45 | 20 (44.4%) | 12 (26.7%) | 13 (28.9%) | 136 | 3.022 | 2 (4.4%) |
+| 2026-2027 | 54 | 23 (42.6%) | 15 (27.8%) | 16 (29.6%) | 160 | 2.963 | 3 (5.6%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 60 (81.1%) | 12 (16.2%) | 2 (2.7%) | 74 |
-| HT draw | 39 (39.8%) | 30 (30.6%) | 29 (29.6%) | 98 |
-| HT away lead | 4 (6.8%) | 10 (16.9%) | 45 (76.3%) | 59 |
+| HT home lead | 309 (76.3%) | 70 (17.3%) | 26 (6.4%) | 405 |
+| HT draw | 164 (37.6%) | 160 (36.7%) | 112 (25.7%) | 436 |
+| HT away lead | 27 (9.1%) | 54 (18.1%) | 217 (72.8%) | 298 |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **4** (1.7%)
-- Away comebacks (trailing at HT, won at FT): **2** (0.9%)
+- Home comebacks (trailing at HT, won at FT): **27** (2.4%)
+- Away comebacks (trailing at HT, won at FT): **26** (2.3%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Wil | Thun | 0-1 | 3-1 |
+| 2020-2021 | Grasshoppers | Aarau | 0-1 | 2-1 |
+| 2020-2021 | Xamax | Chiasso | 0-1 | 2-1 |
+| 2020-2021 | Schaffhausen | Aarau | 0-1 | 3-2 |
+| 2021-2022 | Xamax | Aarau | 0-2 | 4-2 |
+| 2021-2022 | Thun | Xamax | 1-2 | 3-2 |
+| 2021-2022 | Xamax | Schaffhausen | 0-1 | 2-1 |
+| 2021-2022 | Vaduz | Kriens | 0-1 | 3-2 |
+| 2021-2022 | Winterthur | Lausanne Ouchy | 0-1 | 2-1 |
+| 2022-2023 | Bellinzona | Xamax | 0-1 | 3-1 |
+| 2022-2023 | Vaduz | Bellinzona | 0-1 | 2-1 |
+| 2023-2024 | Vaduz | Stade Nyonnais | 0-1 | 2-1 |
+| 2023-2024 | Aarau | Vaduz | 1-2 | 3-2 |
+| 2023-2024 | Sion | Schaffhausen | 0-1 | 2-1 |
+| 2023-2024 | Thun | Wil | 0-1 | 2-1 |
+| 2023-2024 | Bellinzona | Aarau | 1-2 | 5-2 |
+| 2024-2025 | Stade Nyonnais | Bellinzona | 0-1 | 2-1 |
+| 2024-2025 | Vaduz | Wil | 0-1 | 3-2 |
+| 2024-2025 | Xamax | Stade Nyonnais | 0-1 | 3-2 |
+| 2024-2025 | Etoile | Etoile-Carouge | 0-1 | 3-1 |
+| 2024-2025 | Stade Nyonnais | Wil | 0-1 | 3-1 |
+| 2024-2025 | Aarau | Bellinzona | 0-1 | 2-1 |
+| 2024-2025 | Wil | Schaffhausen | 0-1 | 3-1 |
 | 2025-2026 | Yverdon | Lausanne Ouchy | 1-2 | 3-2 |
 | 2025-2026 | Xamax | Wil | 0-1 | 3-1 |
 | 2025-2026 | Aarau | Rapperswil-Jona | 1-2 | 5-3 |
@@ -44,49 +73,79 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Aarau | Wil | 1-0 | 1-3 |
+| 2020-2021 | Aarau | Schaffhausen | 1-0 | 1-2 |
+| 2020-2021 | Winterthur | Grasshoppers | 2-1 | 2-3 |
+| 2020-2021 | Grasshoppers | Lausanne Ouchy | 1-0 | 1-2 |
+| 2021-2022 | Wil | Vaduz | 1-0 | 2-3 |
+| 2021-2022 | Wil | Aarau | 3-2 | 3-4 |
+| 2021-2022 | Lausanne Ouchy | Xamax | 1-0 | 1-3 |
+| 2021-2022 | Lausanne Ouchy | Schaffhausen | 1-0 | 1-2 |
+| 2022-2023 | Schaffhausen | Yverdon | 1-0 | 1-2 |
+| 2022-2023 | Bellinzona | Yverdon | 1-0 | 1-2 |
+| 2022-2023 | Schaffhausen | Yverdon | 3-1 | 3-4 |
+| 2022-2023 | Wil | Lausanne Ouchy | 1-0 | 1-2 |
+| 2022-2023 | Thun | Schaffhausen | 1-0 | 2-3 |
+| 2023-2024 | Sion | Thun | 2-0 | 2-3 |
+| 2023-2024 | Vaduz | Sion | 1-0 | 1-2 |
+| 2023-2024 | Baden | Stade Nyonnais | 1-0 | 2-3 |
+| 2023-2024 | Bellinzona | Xamax | 1-0 | 1-2 |
+| 2024-2025 | Aarau | Xamax | 1-0 | 1-3 |
+| 2024-2025 | Schaffhausen | Xamax | 1-0 | 1-2 |
+| 2024-2025 | Xamax | Thun | 1-0 | 2-3 |
+| 2024-2025 | Stade Nyonnais | Aarau | 1-0 | 1-2 |
+| 2024-2025 | Lausanne Ouchy | Aarau | 2-0 | 2-4 |
+| 2024-2025 | Etoile | Etoile-Carouge | 1-0 | 1-2 |
 | 2025-2026 | Wil | Yverdon | 2-0 | 2-4 |
 | 2025-2026 | Rapperswil-Jona | Xamax | 2-0 | 2-3 |
+| 2026-2027 | Aarau | Etoile-Carouge | 1-0 | 1-2 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 74 | 60 (81.1%) | 12 (16.2%) | 2 (2.7%) |
-| Away lead | 59 | 45 (76.3%) | 10 (16.9%) | 4 (6.8%) |
+| Home lead | 405 | 309 (76.3%) | 70 (17.3%) | 26 (6.4%) |
+| Away lead | 298 | 217 (72.8%) | 54 (18.1%) | 27 (9.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 39 | 39.8% |
-| Draw | 30 | 30.6% |
-| Away win | 29 | 29.6% |
+| Home win | 164 | 37.6% |
+| Draw | 160 | 36.7% |
+| Away win | 112 | 25.7% |
+- *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `217` of `231` (93.9%)
+- Matches with a first-goal time recorded: `1072` of `1140` (94.0%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 100 | 43.3% | 49 (49.0%) | 18 (18.0%) | 33 (33.0%) |
-| 16-30 | 38 | 16.5% | 18 (47.4%) | 7 (18.4%) | 13 (34.2%) |
-| 31-45 | 30 | 13.0% | 9 (30.0%) | 7 (23.3%) | 14 (46.7%) |
-| 46-60 | 22 | 9.5% | 12 (54.5%) | 3 (13.6%) | 7 (31.8%) |
-| 61-75 | 16 | 6.9% | 8 (50.0%) | 2 (12.5%) | 6 (37.5%) |
-| 76-90 | 6 | 2.6% | 3 (50.0%) | 1 (16.7%) | 2 (33.3%) |
-| 91-120 | 5 | 2.2% | 4 (80.0%) | 0 (0.0%) | 1 (20.0%) |
+| 1-15 | 424 | 37.2% | 208 (49.1%) | 76 (17.9%) | 140 (33.0%) |
+| 16-30 | 245 | 21.5% | 112 (45.7%) | 51 (20.8%) | 82 (33.5%) |
+| 31-45 | 166 | 14.6% | 66 (39.8%) | 40 (24.1%) | 60 (36.1%) |
+| 46-60 | 131 | 11.5% | 63 (48.1%) | 33 (25.2%) | 35 (26.7%) |
+| 61-75 | 64 | 5.6% | 27 (42.2%) | 13 (20.3%) | 24 (37.5%) |
+| 76-90 | 31 | 2.7% | 16 (51.6%) | 4 (12.9%) | 11 (35.5%) |
+| 91-120 | 11 | 1.0% | 8 (72.7%) | 0 (0.0%) | 3 (27.3%) |
 
 ## 7. Goalless matches
-- Overall: **14** of `231` (6.1%)
+- Overall: **67** of `1140` (5.9%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 180 | 10 | 5.6% |
+| 2021-2022 | 180 | 11 | 6.1% |
+| 2022-2023 | 180 | 9 | 5.0% |
+| 2023-2024 | 180 | 11 | 6.1% |
+| 2024-2025 | 180 | 11 | 6.1% |
 | 2025-2026 | 186 | 12 | 6.5% |
-| 2026-2027 | 45 | 2 | 4.4% |
+| 2026-2027 | 54 | 3 | 5.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\swiss2\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\swiss2\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

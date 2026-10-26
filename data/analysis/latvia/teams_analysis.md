@@ -1,130 +1,145 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:01:14+00:00
+- Generated: 2026-10-26T01:40:40+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`
 
-- Teams: **12** | Seasons: **2** | Matches: **336**
+- Teams: **17** | Seasons: **6** | Matches: **1020**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Riga FC | 2 | 67 | 49 | 14 | 4 | 161 | 171 | 56 | 115 | 80.5 | 1 | 2 | 1 |
-| RFS | 2 | 66 | 51 | 8 | 7 | 161 | 171 | 61 | 110 | 80.5 | 1 | 2 | 1 |
-| Auda | 2 | 67 | 31 | 13 | 23 | 106 | 93 | 79 | 14 | 53.0 | 3 | 5 | 0 |
-| FK Liepaja | 2 | 67 | 30 | 14 | 23 | 104 | 100 | 98 | 2 | 52.0 | 3 | 4 | 0 |
-| BFC Daugavpils | 2 | 67 | 23 | 18 | 26 | 87 | 87 | 97 | -10 | 43.5 | 4 | 5 | 0 |
-| Jelgava | 2 | 67 | 16 | 22 | 29 | 70 | 71 | 95 | -24 | 35.0 | 6 | 7 | 0 |
-| Super Nova | 2 | 66 | 16 | 19 | 31 | 67 | 73 | 96 | -23 | 33.5 | 6 | 9 | 0 |
-| Grobina | 2 | 69 | 14 | 20 | 35 | 62 | 55 | 116 | -61 | 31.0 | 8 | 8 | 0 |
-| Tukums 2000 | 2 | 67 | 14 | 18 | 35 | 60 | 83 | 124 | -41 | 30.0 | 7 | 9 | 0 |
-| Metta | 1 | 36 | 8 | 7 | 21 | 31 | 39 | 74 | -35 | 31.0 | 10 | 10 | 0 |
-| Ogre United | 1 | 31 | 4 | 6 | 21 | 18 | 30 | 76 | -46 | 18.0 | 10 | 10 | 0 |
-| Alberts JDFS | 1 | 2 | 0 | 1 | 1 | 1 | 0 | 1 | -1 | 1.0 | 11 | 11 | 0 |
+| RFS | 6 | 207 | 153 | 36 | 18 | 495 | 530 | 161 | 369 | 82.5 | 1 | 3 | 4 |
+| Riga FC | 6 | 207 | 147 | 38 | 22 | 479 | 491 | 150 | 341 | 79.83 | 1 | 4 | 1 |
+| FK Liepaja | 6 | 208 | 94 | 43 | 71 | 325 | 317 | 280 | 37 | 54.17 | 3 | 6 | 0 |
+| Auda | 5 | 177 | 81 | 35 | 61 | 278 | 246 | 192 | 54 | 55.6 | 3 | 5 | 0 |
+| Valmiera | 4 | 138 | 80 | 30 | 28 | 270 | 280 | 123 | 157 | 67.5 | 1 | 4 | 1 |
+| BFC Daugavpils | 6 | 207 | 65 | 48 | 94 | 243 | 245 | 333 | -88 | 40.5 | 4 | 8 | 0 |
+| Tukums 2000 | 5 | 178 | 43 | 40 | 95 | 169 | 206 | 361 | -155 | 33.8 | 6 | 9 | 0 |
+| Metta | 5 | 177 | 40 | 34 | 103 | 154 | 203 | 363 | -160 | 30.8 | 7 | 10 | 0 |
+| Jelgava | 4 | 141 | 32 | 39 | 70 | 135 | 143 | 241 | -98 | 33.75 | 6 | 10 | 0 |
+| Super Nova | 4 | 141 | 24 | 32 | 85 | 104 | 125 | 280 | -155 | 26.0 | 6 | 10 | 0 |
+| Grobina | 4 | 111 | 24 | 25 | 62 | 97 | 99 | 206 | -107 | 24.25 | 8 | 11 | 0 |
+| Spartaks | 2 | 65 | 20 | 7 | 38 | 67 | 77 | 116 | -39 | 33.5 | 6 | 8 | 0 |
+| Ogre United | 1 | 33 | 4 | 6 | 23 | 18 | 33 | 81 | -48 | 18.0 | 10 | 10 | 0 |
+| Ventspils | 1 | 14 | 2 | 3 | 9 | 9 | 14 | 23 | -9 | 9.0 | 8 | 8 | 0 |
+| Alberts JDFS | 2 | 4 | 1 | 1 | 2 | 4 | 3 | 5 | -2 | 2.0 | 11 | 11 | 0 |
+| Noah | 1 | 30 | 1 | 1 | 28 | 4 | 10 | 101 | -91 | 4.0 | 9 | 9 | 0 |
+| Skanste | 1 | 2 | 0 | 0 | 2 | 0 | 2 | 8 | -6 | 0.0 | 11 | 11 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| BFC Daugavpils | 34 | 18 | 4 | 12 | 58 | 33 | 5 | 14 | 14 | 29 | 29 |
-| Tukums 2000 | 34 | 11 | 10 | 13 | 43 | 33 | 3 | 8 | 22 | 17 | 26 |
-| Auda | 35 | 19 | 4 | 12 | 61 | 32 | 12 | 9 | 11 | 45 | 16 |
-| FK Liepaja | 32 | 17 | 9 | 6 | 60 | 35 | 13 | 5 | 17 | 44 | 16 |
-| Grobina | 34 | 9 | 12 | 13 | 39 | 35 | 5 | 8 | 22 | 23 | 16 |
-| Jelgava | 34 | 11 | 8 | 15 | 41 | 33 | 5 | 14 | 14 | 29 | 12 |
-| Metta | 18 | 5 | 4 | 9 | 19 | 18 | 3 | 3 | 12 | 12 | 7 |
-| Ogre United | 15 | 2 | 5 | 8 | 11 | 16 | 2 | 1 | 13 | 7 | 4 |
-| Riga FC | 34 | 24 | 8 | 2 | 80 | 33 | 25 | 6 | 2 | 81 | -1 |
-| Alberts JDFS | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | -1 |
-| Super Nova | 33 | 7 | 11 | 15 | 32 | 33 | 9 | 8 | 16 | 35 | -3 |
-| RFS | 32 | 24 | 5 | 3 | 77 | 34 | 27 | 3 | 4 | 84 | -7 |
+| BFC Daugavpils | 104 | 44 | 22 | 38 | 154 | 103 | 21 | 26 | 56 | 89 | 65 |
+| Tukums 2000 | 89 | 28 | 22 | 39 | 106 | 89 | 15 | 18 | 56 | 63 | 43 |
+| Riga FC | 104 | 79 | 16 | 9 | 253 | 103 | 68 | 22 | 13 | 226 | 27 |
+| Jelgava | 70 | 21 | 18 | 31 | 81 | 71 | 11 | 21 | 39 | 54 | 27 |
+| Metta | 88 | 22 | 22 | 44 | 88 | 89 | 18 | 12 | 59 | 66 | 22 |
+| Grobina | 55 | 15 | 14 | 26 | 59 | 56 | 9 | 11 | 36 | 38 | 21 |
+| Auda | 89 | 45 | 13 | 31 | 148 | 88 | 36 | 22 | 30 | 130 | 18 |
+| FK Liepaja | 104 | 49 | 24 | 31 | 171 | 104 | 45 | 19 | 40 | 154 | 17 |
+| Valmiera | 69 | 42 | 15 | 12 | 141 | 69 | 38 | 15 | 16 | 129 | 12 |
+| Ogre United | 16 | 2 | 5 | 9 | 11 | 17 | 2 | 1 | 14 | 7 | 4 |
+| Spartaks | 32 | 11 | 2 | 19 | 35 | 33 | 9 | 5 | 19 | 32 | 3 |
+| Ventspils | 8 | 1 | 3 | 4 | 6 | 6 | 1 | 0 | 5 | 3 | 3 |
+| RFS | 104 | 77 | 17 | 10 | 248 | 103 | 76 | 19 | 8 | 247 | 1 |
+| Super Nova | 70 | 12 | 16 | 42 | 52 | 71 | 12 | 16 | 43 | 52 | 0 |
+| Skanste | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| Alberts JDFS | 2 | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 | 4 | -4 |
+| Noah | 15 | 0 | 0 | 15 | 0 | 15 | 1 | 1 | 13 | 4 | -4 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | RFS | 2.44 |
-| 2 | Riga FC | 2.40 |
-| 3 | Auda | 1.58 |
-| 4 | FK Liepaja | 1.55 |
-| 5 | BFC Daugavpils | 1.30 |
+| 1 | RFS | 2.39 |
+| 2 | Riga FC | 2.31 |
+| 3 | Valmiera | 1.96 |
+| 4 | Auda | 1.57 |
+| 5 | FK Liepaja | 1.56 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Riga FC | 171 |
-| 2 | RFS | 171 |
-| 3 | FK Liepaja | 100 |
-| 4 | Auda | 93 |
-| 5 | BFC Daugavpils | 87 |
+| 1 | RFS | 530 |
+| 2 | Riga FC | 491 |
+| 3 | FK Liepaja | 317 |
+| 4 | Valmiera | 280 |
+| 5 | Auda | 246 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Riga FC | 115 |
-| 2 | RFS | 110 |
-| 3 | Auda | 14 |
-| 4 | FK Liepaja | 2 |
-| 5 | Alberts JDFS | -1 |
+| 1 | RFS | 369 |
+| 2 | Riga FC | 341 |
+| 3 | Valmiera | 157 |
+| 4 | Auda | 54 |
+| 5 | FK Liepaja | 37 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Alberts JDFS | 0.500 |
-| 2 | Riga FC | 0.836 |
-| 3 | RFS | 0.924 |
-| 4 | Auda | 1.179 |
-| 5 | Jelgava | 1.418 |
+| 1 | Riga FC | 0.725 |
+| 2 | RFS | 0.778 |
+| 3 | Valmiera | 0.891 |
+| 4 | Auda | 1.085 |
+| 5 | Alberts JDFS | 1.250 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **9**
+- Teams present in all **6** seasons: **4**
 
-Auda, BFC Daugavpils, FK Liepaja, Grobina, Jelgava, RFS, Riga FC, Super Nova, Tukums 2000
+BFC Daugavpils, FK Liepaja, RFS, Riga FC
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **55** (showing the 15 most frequent)
+- Distinct fixtures: **90** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| BFC Daugavpils vs Grobina | 8 | 6 | 1 | 1 | 75.0% | 12.5% | 12.5% |
-| Riga FC vs FK Liepaja | 8 | 6 | 0 | 2 | 75.0% | 0.0% | 25.0% |
-| FK Liepaja vs BFC Daugavpils | 8 | 5 | 2 | 1 | 62.5% | 25.0% | 12.5% |
-| Tukums 2000 vs Grobina | 8 | 5 | 3 | 0 | 62.5% | 37.5% | 0.0% |
-| Auda vs Grobina | 8 | 4 | 2 | 2 | 50.0% | 25.0% | 25.0% |
-| Jelgava vs Tukums 2000 | 8 | 4 | 3 | 1 | 50.0% | 37.5% | 12.5% |
-| RFS vs BFC Daugavpils | 8 | 4 | 0 | 4 | 50.0% | 0.0% | 50.0% |
-| RFS vs FK Liepaja | 8 | 4 | 2 | 2 | 50.0% | 25.0% | 25.0% |
-| Auda vs Super Nova | 8 | 3 | 2 | 3 | 37.5% | 25.0% | 37.5% |
-| Jelgava vs Grobina | 8 | 3 | 3 | 2 | 37.5% | 37.5% | 25.0% |
-| Jelgava vs Super Nova | 8 | 3 | 3 | 2 | 37.5% | 37.5% | 25.0% |
-| Riga FC vs Jelgava | 8 | 3 | 2 | 3 | 37.5% | 25.0% | 37.5% |
-| Tukums 2000 vs Super Nova | 8 | 3 | 3 | 2 | 37.5% | 37.5% | 25.0% |
-| RFS vs Auda | 8 | 2 | 2 | 4 | 25.0% | 25.0% | 50.0% |
-| Riga FC vs Auda | 8 | 2 | 2 | 4 | 25.0% | 25.0% | 50.0% |
+| FK Liepaja vs Riga FC | 24 | 14 | 2 | 8 | 58.3% | 8.3% | 33.3% |
+| RFS vs BFC Daugavpils | 24 | 12 | 1 | 11 | 50.0% | 4.2% | 45.8% |
+| FK Liepaja vs BFC Daugavpils | 24 | 11 | 7 | 6 | 45.8% | 29.2% | 25.0% |
+| RFS vs FK Liepaja | 24 | 10 | 6 | 8 | 41.7% | 25.0% | 33.3% |
+| Riga FC vs BFC Daugavpils | 24 | 10 | 6 | 8 | 41.7% | 25.0% | 33.3% |
+| RFS vs Riga FC | 23 | 5 | 12 | 6 | 21.7% | 52.2% | 26.1% |
+| BFC Daugavpils vs Metta | 20 | 11 | 5 | 4 | 55.0% | 25.0% | 20.0% |
+| RFS vs Metta | 20 | 11 | 3 | 6 | 55.0% | 15.0% | 30.0% |
+| BFC Daugavpils vs Auda | 20 | 9 | 2 | 9 | 45.0% | 10.0% | 45.0% |
+| RFS vs Tukums 2000 | 20 | 9 | 1 | 10 | 45.0% | 5.0% | 50.0% |
+| Riga FC vs Tukums 2000 | 20 | 9 | 2 | 9 | 45.0% | 10.0% | 45.0% |
+| FK Liepaja vs Auda | 20 | 8 | 6 | 6 | 40.0% | 30.0% | 30.0% |
+| FK Liepaja vs Metta | 20 | 8 | 4 | 8 | 40.0% | 20.0% | 40.0% |
+| FK Liepaja vs Tukums 2000 | 20 | 8 | 5 | 7 | 40.0% | 25.0% | 35.0% |
+| Riga FC vs Auda | 20 | 8 | 3 | 9 | 40.0% | 15.0% | 45.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| Riga FC | 1 | 2 |
-| RFS | 2 | 1 |
-| Auda | 5 | 3 |
-| FK Liepaja | 3 | 4 |
-| BFC Daugavpils | 4 | 5 |
-| Jelgava | 6 | 7 |
-| Super Nova | 9 | 6 |
-| Grobina | 8 | 8 |
-| Tukums 2000 | 7 | 9 |
-| Metta | 10 | - |
-| Ogre United | - | 10 |
-| Alberts JDFS | 11 | - |
+| team | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|
+| RFS | 1 | 3 | 1 | 1 | 2 | 1 |
+| Riga FC | 4 | 2 | 2 | 2 | 1 | 2 |
+| FK Liepaja | 3 | 4 | 5 | 6 | 3 | 4 |
+| Auda | - | 5 | 3 | 4 | 5 | 3 |
+| Valmiera | 2 | 1 | 4 | 3 | - | - |
+| BFC Daugavpils | 5 | 7 | 8 | 5 | 4 | 5 |
+| Tukums 2000 | - | 6 | 9 | 8 | 7 | 9 |
+| Metta | 7 | 9 | 7 | 7 | 10 | - |
+| Jelgava | - | - | 6 | 10 | 6 | 7 |
+| Super Nova | - | 10 | 10 | - | 9 | 6 |
+| Grobina | - | 11 | - | 9 | 8 | 8 |
+| Spartaks | 6 | 8 | - | - | - | - |
+| Ogre United | - | - | - | - | - | 10 |
+| Ventspils | 8 | - | - | - | - | - |
+| Alberts JDFS | - | - | - | 11 | 11 | - |
+| Noah | 9 | - | - | - | - | - |
+| Skanste | - | - | 11 | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\latvia\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\latvia\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

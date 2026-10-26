@@ -1,184 +1,229 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:09:05+00:00
+- Generated: 2026-10-26T01:49:54+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: LaLiga2 (Spain)
 - Scope: league `spain2`
 
-- Teams: **30** | Seasons: **2** | Matches: **586**
+- Teams: **45** | Seasons: **7** | Matches: **2935**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Castellon | 2 | 53 | 28 | 14 | 11 | 98 | 92 | 58 | 34 | 49.0 | 1 | 4 | 1 |
-| Almeria | 2 | 55 | 28 | 11 | 16 | 95 | 99 | 75 | 24 | 47.5 | 3 | 3 | 0 |
-| Racing Santander | 1 | 44 | 27 | 7 | 10 | 88 | 93 | 62 | 31 | 88.0 | 1 | 1 | 1 |
-| Burgos CF | 2 | 51 | 24 | 16 | 11 | 88 | 60 | 41 | 19 | 44.0 | 4 | 8 | 0 |
-| Eibar | 2 | 51 | 25 | 11 | 15 | 86 | 68 | 48 | 20 | 43.0 | 2 | 9 | 0 |
-| Malaga | 1 | 48 | 24 | 13 | 11 | 85 | 83 | 55 | 28 | 85.0 | 2 | 2 | 0 |
-| Las Palmas | 2 | 52 | 23 | 16 | 13 | 85 | 69 | 54 | 15 | 42.5 | 7 | 11 | 0 |
-| Dep. La Coruna | 1 | 41 | 22 | 11 | 8 | 77 | 64 | 42 | 22 | 77.0 | 5 | 5 | 0 |
+| Eibar | 6 | 223 | 104 | 58 | 61 | 370 | 295 | 225 | 70 | 61.67 | 3 | 9 | 0 |
+| Gijon | 7 | 264 | 95 | 78 | 91 | 363 | 303 | 285 | 18 | 51.86 | 5 | 17 | 0 |
+| Oviedo | 6 | 221 | 87 | 75 | 59 | 336 | 262 | 215 | 47 | 56.0 | 4 | 14 | 0 |
+| Almeria | 5 | 185 | 95 | 43 | 47 | 328 | 311 | 210 | 101 | 65.6 | 1 | 6 | 2 |
+| Mirandes | 6 | 254 | 86 | 64 | 104 | 322 | 299 | 329 | -30 | 53.67 | 3 | 20 | 0 |
+| Burgos CF | 6 | 222 | 84 | 62 | 76 | 314 | 229 | 222 | 7 | 52.33 | 8 | 14 | 0 |
+| Leganes | 6 | 223 | 82 | 67 | 74 | 313 | 247 | 223 | 24 | 52.17 | 1 | 17 | 1 |
+| Zaragoza | 6 | 254 | 70 | 87 | 97 | 297 | 250 | 296 | -46 | 49.5 | 10 | 23 | 0 |
+| Las Palmas | 5 | 182 | 75 | 62 | 45 | 287 | 225 | 191 | 34 | 57.4 | 2 | 13 | 0 |
+| Tenerife | 6 | 220 | 73 | 64 | 83 | 283 | 216 | 220 | -4 | 47.17 | 5 | 20 | 0 |
+| Malaga | 5 | 216 | 71 | 67 | 78 | 280 | 235 | 249 | -14 | 56.0 | 2 | 19 | 0 |
+| Racing Santander | 4 | 170 | 79 | 40 | 51 | 277 | 260 | 208 | 52 | 69.25 | 1 | 11 | 1 |
+| Albacete | 6 | 222 | 69 | 67 | 86 | 274 | 258 | 294 | -36 | 45.67 | 6 | 22 | 0 |
+| Huesca | 5 | 212 | 62 | 72 | 78 | 258 | 221 | 230 | -9 | 51.6 | 8 | 21 | 0 |
+| FC Cartagena SAD | 5 | 210 | 66 | 43 | 101 | 241 | 224 | 287 | -63 | 48.2 | 9 | 22 | 0 |
+| Valladolid | 4 | 139 | 60 | 32 | 47 | 212 | 183 | 155 | 28 | 53.0 | 2 | 18 | 0 |
+| Granada CF | 4 | 139 | 59 | 34 | 46 | 211 | 191 | 157 | 34 | 52.75 | 1 | 15 | 1 |
+| Levante | 3 | 126 | 53 | 51 | 22 | 210 | 164 | 117 | 47 | 70.0 | 1 | 8 | 1 |
+| Castellon | 4 | 140 | 54 | 34 | 52 | 196 | 196 | 177 | 19 | 49.0 | 2 | 21 | 0 |
+| Andorra | 4 | 138 | 47 | 32 | 59 | 173 | 157 | 163 | -6 | 43.25 | 7 | 21 | 0 |
+| Ponferradina | 3 | 126 | 41 | 41 | 44 | 164 | 142 | 158 | -16 | 54.67 | 8 | 20 | 0 |
+| Girona | 3 | 95 | 46 | 22 | 27 | 160 | 126 | 88 | 38 | 53.33 | 4 | 7 | 0 |
+| Espanyol | 2 | 84 | 41 | 28 | 15 | 151 | 130 | 68 | 62 | 75.5 | 1 | 4 | 1 |
+| Elche | 2 | 84 | 38 | 22 | 24 | 136 | 102 | 80 | 22 | 68.0 | 2 | 11 | 0 |
+| Cordoba | 3 | 97 | 36 | 23 | 38 | 131 | 134 | 149 | -15 | 43.67 | 11 | 13 | 0 |
+| Dep. La Coruna | 2 | 83 | 35 | 25 | 23 | 130 | 120 | 96 | 24 | 65.0 | 5 | 16 | 0 |
+| Lugo | 3 | 126 | 27 | 47 | 52 | 128 | 111 | 162 | -51 | 42.67 | 16 | 22 | 0 |
+| Alcorcon | 3 | 126 | 29 | 34 | 63 | 121 | 101 | 166 | -65 | 40.33 | 17 | 22 | 0 |
+| Eldense | 3 | 94 | 27 | 28 | 39 | 109 | 103 | 132 | -29 | 36.33 | 12 | 19 | 0 |
+| Cadiz CF | 3 | 96 | 26 | 28 | 42 | 106 | 109 | 130 | -21 | 35.33 | 12 | 20 | 0 |
+| Mallorca | 2 | 53 | 29 | 14 | 10 | 101 | 67 | 34 | 33 | 50.5 | 2 | 6 | 0 |
+| Real Sociedad B | 3 | 97 | 25 | 23 | 49 | 98 | 114 | 147 | -33 | 32.67 | 16 | 20 | 0 |
+| Villarreal B | 2 | 84 | 24 | 21 | 39 | 93 | 90 | 117 | -27 | 46.5 | 18 | 22 | 0 |
+| Racing Club Ferrol | 2 | 84 | 21 | 26 | 37 | 89 | 71 | 116 | -45 | 44.5 | 10 | 21 | 0 |
+| Amorebieta | 2 | 84 | 20 | 28 | 36 | 88 | 81 | 116 | -35 | 44.0 | 19 | 19 | 0 |
+| Fuenlabrada | 2 | 84 | 18 | 33 | 33 | 87 | 84 | 111 | -27 | 43.5 | 10 | 21 | 0 |
+| UD Ibiza | 2 | 84 | 19 | 29 | 36 | 86 | 86 | 125 | -39 | 43.0 | 15 | 21 | 0 |
 | Dep. A Coruna | 1 | 42 | 22 | 11 | 9 | 77 | 65 | 44 | 21 | 77.0 | 6 | 6 | 0 |
-| Gijon | 2 | 51 | 21 | 9 | 21 | 72 | 66 | 62 | 4 | 36.0 | 10 | 12 | 0 |
-| Andorra | 2 | 51 | 19 | 10 | 22 | 67 | 76 | 71 | 5 | 33.5 | 11 | 17 | 0 |
-| Cordoba | 2 | 51 | 19 | 10 | 22 | 67 | 68 | 82 | -14 | 33.5 | 12 | 18 | 0 |
-| Ceuta | 2 | 51 | 18 | 11 | 22 | 65 | 59 | 84 | -25 | 32.5 | 13 | 21 | 0 |
-| Albacete | 2 | 51 | 16 | 12 | 23 | 60 | 61 | 71 | -10 | 30.0 | 14 | 22 | 0 |
-| Granada CF | 2 | 51 | 15 | 14 | 22 | 59 | 63 | 70 | -7 | 29.5 | 13 | 15 | 0 |
-| Real Sociedad B | 2 | 51 | 15 | 13 | 23 | 58 | 66 | 74 | -8 | 29.0 | 14 | 16 | 0 |
-| Leganes | 2 | 51 | 14 | 16 | 21 | 58 | 52 | 62 | -10 | 29.0 | 10 | 17 | 0 |
-| Valladolid | 2 | 51 | 14 | 13 | 24 | 55 | 51 | 69 | -18 | 27.5 | 16 | 18 | 0 |
-| Cadiz CF | 2 | 51 | 11 | 15 | 25 | 48 | 50 | 74 | -24 | 24.0 | 19 | 20 | 0 |
-| Mirandes | 1 | 44 | 10 | 10 | 24 | 40 | 49 | 77 | -28 | 40.0 | 20 | 20 | 0 |
-| Huesca | 1 | 44 | 9 | 12 | 23 | 39 | 42 | 68 | -26 | 39.0 | 21 | 21 | 0 |
+| Alaves | 1 | 42 | 19 | 14 | 9 | 71 | 47 | 33 | 14 | 71.0 | 4 | 4 | 0 |
+| Rayo Vallecano | 1 | 42 | 19 | 10 | 13 | 67 | 52 | 40 | 12 | 67.0 | 6 | 6 | 0 |
+| Ceuta | 2 | 54 | 18 | 12 | 24 | 66 | 62 | 89 | -27 | 33.0 | 13 | 21 | 0 |
+| Sabadell | 2 | 52 | 15 | 17 | 20 | 62 | 50 | 56 | -6 | 31.0 | 10 | 19 | 0 |
+| UD Logrones | 1 | 42 | 11 | 11 | 20 | 44 | 28 | 53 | -25 | 44.0 | 20 | 20 | 0 |
 | Cultural Leonesa | 1 | 44 | 9 | 10 | 25 | 37 | 39 | 72 | -33 | 37.0 | 22 | 22 | 0 |
-| Zaragoza | 1 | 44 | 8 | 12 | 24 | 36 | 36 | 63 | -27 | 36.0 | 23 | 23 | 0 |
-| Girona | 1 | 7 | 4 | 1 | 2 | 13 | 14 | 8 | 6 | 13.0 | 5 | 5 | 0 |
-| Mallorca | 1 | 7 | 4 | 1 | 2 | 13 | 8 | 3 | 5 | 13.0 | 6 | 6 | 0 |
-| Sabadell | 1 | 7 | 3 | 3 | 1 | 12 | 8 | 6 | 2 | 12.0 | 7 | 7 | 0 |
-| Oviedo | 1 | 7 | 3 | 2 | 2 | 11 | 7 | 4 | 3 | 11.0 | 8 | 8 | 0 |
-| Tenerife | 1 | 7 | 3 | 2 | 2 | 11 | 8 | 9 | -1 | 11.0 | 9 | 9 | 0 |
-| Celta Vigo B | 1 | 7 | 2 | 2 | 3 | 8 | 8 | 11 | -3 | 8.0 | 15 | 15 | 0 |
-| Eldense | 1 | 7 | 1 | 2 | 4 | 5 | 4 | 9 | -5 | 5.0 | 19 | 19 | 0 |
+| Celta Vigo B | 1 | 11 | 3 | 3 | 5 | 12 | 16 | 21 | -5 | 12.0 | 16 | 16 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Eibar | 26 | 17 | 5 | 4 | 56 | 25 | 8 | 6 | 11 | 30 | 26 |
-| Almeria | 27 | 19 | 2 | 6 | 59 | 28 | 9 | 9 | 10 | 36 | 23 |
-| Ceuta | 26 | 13 | 5 | 8 | 44 | 25 | 5 | 6 | 14 | 21 | 23 |
-| Huesca | 22 | 7 | 8 | 7 | 29 | 22 | 2 | 4 | 16 | 10 | 19 |
-| Gijon | 26 | 12 | 8 | 6 | 44 | 25 | 9 | 1 | 15 | 28 | 16 |
-| Valladolid | 25 | 10 | 5 | 10 | 35 | 26 | 4 | 8 | 14 | 20 | 15 |
-| Racing Santander | 22 | 16 | 2 | 4 | 50 | 22 | 11 | 5 | 6 | 38 | 12 |
-| Malaga | 24 | 13 | 9 | 2 | 48 | 24 | 11 | 4 | 9 | 37 | 11 |
-| Castellon | 26 | 16 | 6 | 4 | 54 | 27 | 12 | 8 | 7 | 44 | 10 |
-| Burgos CF | 26 | 13 | 10 | 3 | 49 | 25 | 11 | 6 | 8 | 39 | 10 |
-| Leganes | 25 | 9 | 7 | 9 | 34 | 26 | 5 | 9 | 12 | 24 | 10 |
-| Las Palmas | 26 | 13 | 8 | 5 | 47 | 26 | 10 | 8 | 8 | 38 | 9 |
-| Mirandes | 22 | 6 | 5 | 11 | 23 | 22 | 4 | 5 | 13 | 17 | 6 |
-| Sabadell | 3 | 3 | 0 | 0 | 9 | 4 | 0 | 3 | 1 | 3 | 6 |
-| Andorra | 26 | 10 | 6 | 10 | 36 | 25 | 9 | 4 | 12 | 31 | 5 |
-| Mallorca | 4 | 3 | 0 | 1 | 9 | 3 | 1 | 1 | 1 | 4 | 5 |
-| Cordoba | 25 | 10 | 5 | 10 | 35 | 26 | 9 | 5 | 12 | 32 | 3 |
-| Tenerife | 4 | 2 | 1 | 1 | 7 | 3 | 1 | 1 | 1 | 4 | 3 |
-| Albacete | 25 | 9 | 4 | 12 | 31 | 26 | 7 | 8 | 11 | 29 | 2 |
-| Real Sociedad B | 25 | 7 | 9 | 9 | 30 | 26 | 8 | 4 | 14 | 28 | 2 |
-| Cadiz CF | 26 | 7 | 4 | 15 | 25 | 25 | 4 | 11 | 10 | 23 | 2 |
-| Granada CF | 25 | 7 | 9 | 9 | 30 | 26 | 8 | 5 | 13 | 29 | 1 |
-| Girona | 4 | 2 | 1 | 1 | 7 | 3 | 2 | 0 | 1 | 6 | 1 |
-| Zaragoza | 22 | 4 | 6 | 12 | 18 | 22 | 4 | 6 | 12 | 18 | 0 |
-| Celta Vigo B | 4 | 1 | 1 | 2 | 4 | 3 | 1 | 1 | 1 | 4 | 0 |
+| Gijon | 133 | 63 | 38 | 32 | 227 | 131 | 32 | 40 | 59 | 136 | 91 |
+| Eibar | 111 | 67 | 29 | 15 | 230 | 112 | 37 | 29 | 46 | 140 | 90 |
+| Mirandes | 127 | 57 | 34 | 36 | 205 | 127 | 29 | 30 | 68 | 117 | 88 |
+| Burgos CF | 112 | 54 | 37 | 21 | 199 | 110 | 30 | 25 | 55 | 115 | 84 |
+| Tenerife | 110 | 50 | 32 | 28 | 182 | 110 | 23 | 32 | 55 | 101 | 81 |
+| Leganes | 111 | 52 | 34 | 25 | 190 | 112 | 30 | 33 | 49 | 123 | 67 |
+| Oviedo | 110 | 56 | 33 | 21 | 201 | 111 | 31 | 42 | 38 | 135 | 66 |
+| Almeria | 93 | 58 | 22 | 13 | 196 | 92 | 37 | 21 | 34 | 132 | 64 |
+| Huesca | 106 | 40 | 38 | 28 | 158 | 106 | 22 | 34 | 50 | 100 | 58 |
+| Malaga | 108 | 43 | 39 | 26 | 168 | 108 | 28 | 28 | 52 | 112 | 56 |
+| Albacete | 110 | 44 | 31 | 35 | 163 | 112 | 25 | 36 | 51 | 111 | 52 |
+| Racing Santander | 85 | 49 | 17 | 19 | 164 | 85 | 30 | 23 | 32 | 113 | 51 |
+| FC Cartagena SAD | 105 | 43 | 17 | 45 | 146 | 105 | 23 | 26 | 56 | 95 | 51 |
+| Valladolid | 69 | 39 | 14 | 16 | 131 | 70 | 21 | 18 | 31 | 81 | 50 |
+| Zaragoza | 127 | 42 | 46 | 39 | 172 | 127 | 28 | 41 | 58 | 125 | 47 |
+| Las Palmas | 92 | 46 | 28 | 18 | 166 | 90 | 29 | 34 | 27 | 121 | 45 |
+| Granada CF | 69 | 36 | 20 | 13 | 128 | 70 | 23 | 14 | 33 | 83 | 45 |
+| Lugo | 63 | 20 | 26 | 17 | 86 | 63 | 7 | 21 | 35 | 42 | 44 |
+| Andorra | 69 | 31 | 13 | 25 | 106 | 69 | 16 | 19 | 34 | 67 | 39 |
+| Villarreal B | 42 | 18 | 12 | 12 | 66 | 42 | 6 | 9 | 27 | 27 | 39 |
+| Castellon | 69 | 34 | 13 | 22 | 115 | 71 | 20 | 21 | 30 | 81 | 34 |
+| Espanyol | 42 | 27 | 11 | 4 | 92 | 42 | 14 | 17 | 11 | 59 | 33 |
+| Levante | 63 | 33 | 22 | 8 | 121 | 63 | 20 | 29 | 14 | 89 | 32 |
+| Girona | 49 | 29 | 9 | 11 | 96 | 46 | 17 | 13 | 16 | 64 | 32 |
+| Elche | 42 | 25 | 9 | 8 | 84 | 42 | 13 | 13 | 16 | 52 | 32 |
+| Amorebieta | 42 | 15 | 14 | 13 | 59 | 42 | 5 | 14 | 23 | 29 | 30 |
+| Ponferradina | 63 | 25 | 21 | 17 | 96 | 63 | 16 | 20 | 27 | 68 | 28 |
+| Ceuta | 28 | 13 | 5 | 10 | 44 | 26 | 5 | 7 | 14 | 22 | 22 |
+| Alcorcon | 63 | 17 | 20 | 26 | 71 | 63 | 12 | 14 | 37 | 50 | 21 |
+| Racing Club Ferrol | 42 | 13 | 16 | 13 | 55 | 42 | 8 | 10 | 24 | 34 | 21 |
+| Alaves | 21 | 13 | 7 | 1 | 46 | 21 | 6 | 7 | 8 | 25 | 21 |
+| Cadiz CF | 49 | 17 | 11 | 21 | 62 | 47 | 9 | 17 | 21 | 44 | 18 |
+| Cordoba | 48 | 20 | 13 | 15 | 73 | 49 | 16 | 10 | 23 | 58 | 15 |
+| UD Ibiza | 42 | 11 | 17 | 14 | 50 | 42 | 8 | 12 | 22 | 36 | 14 |
+| Mallorca | 26 | 18 | 3 | 5 | 57 | 27 | 11 | 11 | 5 | 44 | 13 |
+| Eldense | 47 | 14 | 17 | 16 | 59 | 47 | 13 | 11 | 23 | 50 | 9 |
+| Rayo Vallecano | 21 | 11 | 4 | 6 | 37 | 21 | 8 | 6 | 7 | 30 | 7 |
+| Sabadell | 25 | 8 | 10 | 7 | 34 | 27 | 7 | 7 | 13 | 28 | 6 |
+| UD Logrones | 21 | 7 | 4 | 10 | 25 | 21 | 4 | 7 | 10 | 19 | 6 |
+| Fuenlabrada | 42 | 8 | 22 | 12 | 46 | 42 | 10 | 11 | 21 | 41 | 5 |
+| Celta Vigo B | 6 | 2 | 2 | 2 | 8 | 5 | 1 | 1 | 3 | 4 | 4 |
 | Dep. A Coruna | 21 | 11 | 5 | 5 | 38 | 21 | 11 | 6 | 4 | 39 | -1 |
-| Dep. La Coruna | 20 | 11 | 5 | 4 | 38 | 21 | 11 | 6 | 4 | 39 | -1 |
-| Oviedo | 4 | 1 | 2 | 1 | 5 | 3 | 2 | 0 | 1 | 6 | -1 |
-| Eldense | 3 | 0 | 2 | 1 | 2 | 4 | 1 | 0 | 3 | 3 | -1 |
+| Dep. La Coruna | 41 | 17 | 13 | 11 | 64 | 42 | 18 | 12 | 12 | 66 | -2 |
 | Cultural Leonesa | 22 | 4 | 5 | 13 | 17 | 22 | 5 | 5 | 12 | 20 | -3 |
+| Real Sociedad B | 48 | 11 | 13 | 24 | 46 | 49 | 14 | 10 | 25 | 52 | -6 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Racing Santander | 2.00 |
-| 2 | Dep. La Coruna | 1.88 |
-| 3 | Girona | 1.86 |
-| 4 | Mallorca | 1.86 |
-| 5 | Castellon | 1.85 |
+| 1 | Mallorca | 1.91 |
+| 2 | Dep. A Coruna | 1.83 |
+| 3 | Espanyol | 1.80 |
+| 4 | Almeria | 1.77 |
+| 5 | Alaves | 1.69 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Almeria | 99 |
-| 2 | Racing Santander | 93 |
-| 3 | Castellon | 92 |
-| 4 | Malaga | 83 |
-| 5 | Andorra | 76 |
+| 1 | Almeria | 311 |
+| 2 | Gijon | 303 |
+| 3 | Mirandes | 299 |
+| 4 | Eibar | 295 |
+| 5 | Oviedo | 262 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Castellon | 34 |
-| 2 | Racing Santander | 31 |
-| 3 | Malaga | 28 |
-| 4 | Almeria | 24 |
-| 5 | Dep. La Coruna | 22 |
+| 1 | Almeria | 101 |
+| 2 | Eibar | 70 |
+| 3 | Espanyol | 62 |
+| 4 | Racing Santander | 52 |
+| 5 | Oviedo | 47 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Mallorca | 0.429 |
-| 2 | Oviedo | 0.571 |
-| 3 | Burgos CF | 0.804 |
-| 4 | Sabadell | 0.857 |
-| 5 | Eibar | 0.941 |
+| 1 | Mallorca | 0.642 |
+| 2 | Alaves | 0.786 |
+| 3 | Espanyol | 0.810 |
+| 4 | Girona | 0.926 |
+| 5 | Levante | 0.929 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **15**
+- Teams present in all **7** seasons: **1**
 
-Albacete, Almeria, Andorra, Burgos CF, Cadiz CF, Castellon, Ceuta, Cordoba, Eibar, Gijon, Granada CF, Las Palmas, Leganes, Real Sociedad B, Valladolid
+Gijon
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **297** (showing the 15 most frequent)
+- Distinct fixtures: **747** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Almeria vs Castellon | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Malaga vs Almeria | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Malaga vs Las Palmas | 4 | 1 | 1 | 2 | 25.0% | 25.0% | 50.0% |
-| Burgos CF vs Cordoba | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Las Palmas vs Albacete | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Las Palmas vs Eibar | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Almeria vs Cadiz CF | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Andorra vs Ceuta | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Andorra vs Valladolid | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Burgos CF vs Ceuta | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Burgos CF vs Gijon | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Castellon vs Real Sociedad B | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Cordoba vs Valladolid | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Eibar vs Granada CF | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Eibar vs Valladolid | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
+| Zaragoza vs Gijon | 12 | 7 | 3 | 2 | 58.3% | 25.0% | 16.7% |
+| Mirandes vs Gijon | 12 | 6 | 2 | 4 | 50.0% | 16.7% | 33.3% |
+| Mirandes vs Zaragoza | 12 | 5 | 4 | 3 | 41.7% | 33.3% | 25.0% |
+| Burgos CF vs Gijon | 11 | 6 | 3 | 2 | 54.5% | 27.3% | 18.2% |
+| Oviedo vs Gijon | 11 | 5 | 4 | 2 | 45.5% | 36.4% | 18.2% |
+| Albacete vs Gijon | 11 | 3 | 4 | 4 | 27.3% | 36.4% | 36.4% |
+| Tenerife vs Gijon | 11 | 3 | 4 | 4 | 27.3% | 36.4% | 36.4% |
+| Mirandes vs FC Cartagena SAD | 10 | 8 | 0 | 2 | 80.0% | 0.0% | 20.0% |
+| FC Cartagena SAD vs Gijon | 10 | 7 | 2 | 1 | 70.0% | 20.0% | 10.0% |
+| Huesca vs Burgos CF | 10 | 7 | 2 | 1 | 70.0% | 20.0% | 10.0% |
+| Huesca vs Eibar | 10 | 7 | 1 | 2 | 70.0% | 10.0% | 20.0% |
+| Mirandes vs Burgos CF | 10 | 7 | 1 | 2 | 70.0% | 10.0% | 20.0% |
+| Burgos CF vs Eibar | 10 | 6 | 1 | 3 | 60.0% | 10.0% | 30.0% |
+| Mirandes vs Albacete | 10 | 6 | 2 | 2 | 60.0% | 20.0% | 20.0% |
+| Mirandes vs Malaga | 10 | 6 | 3 | 1 | 60.0% | 30.0% | 10.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Castellon | 4 | 1 |
-| Almeria | 3 | 3 |
-| Racing Santander | 1 | - |
-| Burgos CF | 8 | 4 |
-| Eibar | 9 | 2 |
-| Malaga | 2 | - |
-| Las Palmas | 7 | 11 |
-| Dep. La Coruna | 5 | - |
-| Dep. A Coruna | 6 | - |
-| Gijon | 10 | 12 |
-| Andorra | 11 | 17 |
-| Cordoba | 12 | 18 |
-| Ceuta | 13 | 21 |
-| Albacete | 14 | 22 |
-| Granada CF | 15 | 13 |
-| Real Sociedad B | 16 | 14 |
-| Leganes | 17 | 10 |
-| Valladolid | 18 | 16 |
-| Cadiz CF | 19 | 20 |
-| Mirandes | 20 | - |
-| Huesca | 21 | - |
-| Cultural Leonesa | 22 | - |
-| Zaragoza | 23 | - |
-| Girona | - | 5 |
-| Mallorca | - | 6 |
-| Sabadell | - | 7 |
-| Oviedo | - | 8 |
-| Tenerife | - | 9 |
-| Celta Vigo B | - | 15 |
-| Eldense | - | 19 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Eibar | - | 3 | 5 | 3 | 9 | 9 | 3 |
+| Gijon | 7 | 17 | 17 | 5 | 11 | 10 | 7 |
+| Oviedo | 14 | 6 | 8 | 6 | 4 | - | 8 |
+| Almeria | 3 | 1 | - | - | 6 | 3 | 1 |
+| Mirandes | 11 | 14 | 16 | 18 | 3 | 20 | - |
+| Burgos CF | - | 11 | 12 | 9 | 14 | 8 | 9 |
+| Leganes | 4 | 13 | 14 | 1 | - | 17 | 17 |
+| Zaragoza | 15 | 10 | 13 | 13 | 18 | 23 | - |
+| Las Palmas | 9 | 4 | 2 | - | - | 7 | 13 |
+| Tenerife | 13 | 5 | 10 | 12 | 20 | - | 14 |
+| Malaga | 12 | 18 | 19 | - | 17 | 2 | - |
+| Racing Santander | - | - | 11 | 7 | 5 | 1 | - |
+| Albacete | 22 | - | 6 | 14 | 10 | 14 | 22 |
+| Huesca | - | 12 | 15 | 17 | 8 | 21 | - |
+| FC Cartagena SAD | 16 | 9 | 9 | 15 | 22 | - | - |
+| Valladolid | - | 2 | - | 2 | - | 18 | 15 |
+| Granada CF | - | - | 1 | - | 7 | 15 | 5 |
+| Levante | - | - | 3 | 8 | 1 | - | - |
+| Castellon | 21 | - | - | - | 15 | 4 | 2 |
+| Andorra | - | - | 7 | 21 | - | 11 | 18 |
+| Ponferradina | 8 | 8 | 20 | - | - | - | - |
+| Girona | 5 | 7 | - | - | - | - | 4 |
+| Espanyol | 1 | - | - | 4 | - | - | - |
+| Elche | - | - | - | 11 | 2 | - | - |
+| Cordoba | - | - | - | - | 13 | 12 | 11 |
+| Dep. La Coruna | - | - | - | - | 16 | 5 | - |
+| Lugo | 18 | 16 | 22 | - | - | - | - |
+| Alcorcon | 17 | 22 | - | 20 | - | - | - |
+| Eldense | - | - | - | 16 | 19 | - | 12 |
+| Cadiz CF | - | - | - | - | 12 | 19 | 20 |
+| Mallorca | 2 | - | - | - | - | - | 6 |
+| Real Sociedad B | - | 20 | - | - | - | 16 | 19 |
+| Villarreal B | - | - | 18 | 22 | - | - | - |
+| Racing Club Ferrol | - | - | - | 10 | 21 | - | - |
+| Amorebieta | - | 19 | - | 19 | - | - | - |
+| Fuenlabrada | 10 | 21 | - | - | - | - | - |
+| UD Ibiza | - | 15 | 21 | - | - | - | - |
+| Dep. A Coruna | - | - | - | - | - | 6 | - |
+| Alaves | - | - | 4 | - | - | - | - |
+| Rayo Vallecano | 6 | - | - | - | - | - | - |
+| Ceuta | - | - | - | - | - | 13 | 21 |
+| Sabadell | 19 | - | - | - | - | - | 10 |
+| UD Logrones | 20 | - | - | - | - | - | - |
+| Cultural Leonesa | - | - | - | - | - | 22 | - |
+| Celta Vigo B | - | - | - | - | - | - | 16 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\spain2\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\spain2\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

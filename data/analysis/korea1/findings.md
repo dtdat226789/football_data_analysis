@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-29T16:00:19+00:00
+- Generated: 2026-10-26T01:39:50+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`
@@ -8,85 +8,114 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\korea1\database_profile.json | yes | yes | 32.39 |
-| matches_analysis | E:\football_data_analysis\data\analysis\korea1\matches_analysis.json | yes | yes | 9.00 |
-| goals_analysis | E:\football_data_analysis\data\analysis\korea1\goals_analysis.json | yes | yes | 6.21 |
-| teams_analysis | E:\football_data_analysis\data\analysis\korea1\teams_analysis.json | yes | yes | 22.98 |
-| season_trends | E:\football_data_analysis\data\analysis\korea1\season_trends.json | yes | yes | 3.89 |
-| scoreline_analysis | E:\football_data_analysis\data\analysis\korea1\scoreline_analysis.json | yes | yes | 59.73 |
-| relationships | E:\football_data_analysis\data\analysis\korea1\relationships.json | yes | yes | 14.32 |
+| database_profile | data/analysis/korea1/database_profile.json | yes | yes | 49.72 |
+| matches_analysis | data/analysis/korea1/matches_analysis.json | yes | yes | 20.12 |
+| goals_analysis | data/analysis/korea1/goals_analysis.json | yes | yes | 12.25 |
+| teams_analysis | data/analysis/korea1/teams_analysis.json | yes | yes | 25.91 |
+| season_trends | data/analysis/korea1/season_trends.json | yes | yes | 10.24 |
+| scoreline_analysis | data/analysis/korea1/scoreline_analysis.json | yes | yes | 190.87 |
+| relationships | data/analysis/korea1/relationships.json | yes | yes | 13.75 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 378 matches: home wins 36.2%, draws 29.9%, away wins 33.9% (137H / 113D / 128A)
-- **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 12 home and 4 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — level at HT -> draw occurred 75 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 378 matches produced 952 goals (avg 2.519 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 50.8% vs away 49.2% of 952 goals in total (home/away ratio 1.03)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 207 of 378 matches (54.8%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 92 scoring matches, 27.0% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 35.26, median 32.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Jeonbuk leads with 115 points across 2 seasons (1 title(s), GD 40)
-- **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 10 teams present in every one of the 2 seasons (Anyang, Daejeon, Gangwon, Gimcheon Sangmu, Gwangju FC...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Suwon FC earns 12 more points at home than away (25 home vs 13 away)
-- **F12** · `season_trends` · *[high]* — **Champion with most titles** — Jeonbuk won 1 of 2 championship(s) on record
-- **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026: Seoul beat Ulsan HD by 15 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — down (-0.142 per match): first half 2.586 vs last half 2.444 across 2 seasons
-- **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2026 (goals view, avg abs position diff 4.333)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2025 (luck view, avg abs position diff 1.667)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 54 matches (14.3%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (33 of 137 home matches, 24.1%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (54 of 113 draw matches, 47.8%)
-- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (38 of 128 away matches, 29.7%)
-- **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 5 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_goals_scored_last_5 |corr| = 0.2207 (n=198 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 3.919: home 2.169, draw -1.750, away -1.317
-- **F24** · `database_profile` · *[high]* — **Data-quality warnings (18)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 378 matches observed
+- **F1** Â· `matches_analysis` Â· *[medium]* â€” **Outcome split across all seasons** â€” 1320 matches: home wins 39.2%, draws 28.5%, away wins 32.3% (518H / 376D / 426A)
+- **F2** Â· `matches_analysis` Â· *[medium]* â€” **Comeback wins** â€” 42 home and 28 away comebacks (trailing at HT but winning at FT)
+- **F3** Â· `matches_analysis` Â· *[low]* â€” **Most common HT/FT flow** â€” home lead at HT -> home win occurred 258 times
+- **F4** Â· `goals_analysis` Â· *[medium]* â€” **Average goals per match** â€” 1320 matches produced 3367 goals (avg 2.551 per match)
+- **F5** Â· `goals_analysis` Â· *[medium]* â€” **Home goal share** â€” home 52.5% vs away 47.5% of 3367 goals in total (home/away ratio 1.11)
+- **F6** Â· `goals_analysis` Â· *[medium]* â€” **Both teams to score** â€” 709 of 1320 matches (53.7%)
+- **F7** Â· `goals_analysis` Â· *[low]* â€” **Most common first-goal bucket** â€” minute 1-15 (first goal in 304 scoring matches, 25.2% of scoring)
+- **F8** Â· `goals_analysis` Â· *[low]* â€” **Average first goal minute** â€” mean 36.21, median 31.0
+- **F9** Â· `teams_analysis` Â· *[high]* â€” **Dominant team by lifetime points** â€” Ulsan HD leads with 399 points across 7 seasons (4 title(s), GD 107)
+- **F10** Â· `teams_analysis` Â· *[medium]* â€” **Team consistency** â€” 5 teams present in every one of the 7 seasons (Gangwon, Jeonbuk, Pohang, Seoul, Ulsan HD)
+- **F11** Â· `teams_analysis` Â· *[medium]* â€” **Biggest home advantage** â€” Daegu earns 41 more points at home than away (135 home vs 94 away)
+- **F12** Â· `season_trends` Â· *[high]* â€” **Champion with most titles** â€” Ulsan HD won 4 of 7 championship(s) on record
+- **F13** Â· `season_trends` Â· *[medium]* â€” **Tightest title race** â€” 2021: Jeonbuk beat Ulsan HD by 0 pts
+- **F14** Â· `season_trends` Â· *[medium]* â€” **Average-goals trend** â€” up (+0.074 per match): first half 2.52 vs last half 2.594 across 7 seasons
+- **F15** Â· `season_trends` Â· *[low]* â€” **Largest view divergence** â€” 2022 (goals view, avg abs position diff 4.833)
+- **F16** Â· `season_trends` Â· *[low]* â€” **Smallest view divergence** â€” 2023 (luck view, avg abs position diff 1.333)
+- **F17** Â· `scoreline_analysis` Â· *[medium]* â€” **Most common scoreline** â€” 1-1 in 172 matches (13.0%)
+- **F18** Â· `scoreline_analysis` Â· *[low]* â€” **Most common home-win scoreline** â€” 1-0 (140 of 518 home matches, 27.0%)
+- **F19** Â· `scoreline_analysis` Â· *[low]* â€” **Most common draw scoreline** â€” 1-1 (172 of 376 draw matches, 45.7%)
+- **F20** Â· `scoreline_analysis` Â· *[low]* â€” **Most common away-win scoreline** â€” 0-1 (127 of 426 away matches, 29.8%)
+- **F21** Â· `scoreline_analysis` Â· *[low]* â€” **Extreme scorelines** â€” 22 match(es) with >= 7 total goals
+- **F22** Â· `relationships` Â· *[medium]* â€” **Strongest correlation with total goals** â€” home_team_home_goals_avg |corr| = 0.0829 (n=1122 leakage-safe rows)
+- **F23** Â· `relationships` Â· *[medium]* â€” **Most outcome-separating feature** â€” points_difference spreads group means over 3.921: home 1.767, draw -0.828, away -2.154
+- **F24** Â· `database_profile` Â· *[high]* â€” **Data-quality warnings (47)** â€” Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
+- **F25** Â· `database_profile` Â· *[medium]* â€” **Data coverage** â€” 7 of 7 registered seasons populated (100.0%); 1320 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 378 |
-| Average goals per match | 2.519 |
-| Home win rate | 36.2% |
-| Draw rate | 29.9% |
-| Away win rate | 33.9% |
+| Matches analysed | 1320 |
+| Average goals per match | 2.551 |
+| Home win rate | 39.2% |
+| Draw rate | 28.5% |
+| Away win rate | 32.3% |
 | Most common scoreline | 1-1 |
-| Dominant team (lifetime points) | Jeonbuk |
-| Champion with most titles | Jeonbuk |
-| BTTS rate | 54.8% |
+| Dominant team (lifetime points) | Ulsan HD |
+| Champion with most titles | Ulsan HD |
+| BTTS rate | 53.7% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 32.39 |
-| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 9.00 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 6.21 |
-| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 22.98 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.89 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 59.73 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.32 |
+| database_profile | database_profile | observed, calculated, warnings | 49.72 |
+| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 20.12 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.25 |
+| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 25.91 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.24 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 190.87 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.75 |
 
 ## 5. Notable anomalies
-- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 198 matches, expected 380
-- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 12 teams, expected 20
-- **3.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 180 matches, expected 380
-- **4.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 12 teams, expected 20
-- **5.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026 has data but state is 'in_progress'
-- **6.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2025 goalless share 8.1% vs overall 9.8% (deviation 1.7 pp)
-- **7.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2025 home outcome share 41.9% vs overall 36.2%
-- **8.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2026 goalless share 11.7% vs overall 9.8% (deviation 1.9 pp)
-- **9.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026 home outcome share 30.0% vs overall 36.2%
-- **10.** `HIGH_SCORING_MATCHES` *(warning)* — 1 match(es) with >= 8 total goals (extreme scorelines)
-- **11.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)
-- **12.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)
-- **13.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025/classic rows=12 positions=1..12 teams=12
-- **14.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025/goals rows=12 positions=1..12 teams=12
-- **15.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025/luck rows=12 positions=1..12 teams=12
-- **16.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026/classic rows=12 positions=1..12 teams=12
-- **17.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026/goals rows=12 positions=1..12 teams=12
-- **18.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026/luck rows=12 positions=1..12 teams=12
+- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2020 has 132 matches, expected 380
+- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2020 has 12 teams, expected 20
+- **3.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2021 has 198 matches, expected 380
+- **4.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2021 has 12 teams, expected 20
+- **5.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2022 has 198 matches, expected 380
+- **6.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2022 has 12 teams, expected 20
+- **7.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2023 has 198 matches, expected 380
+- **8.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2023 has 12 teams, expected 20
+- **9.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2024 has 198 matches, expected 380
+- **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2024 has 12 teams, expected 20
+- **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2025 has 198 matches, expected 380
+- **12.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2025 has 12 teams, expected 20
+- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2026 has 198 matches, expected 380
+- **14.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2026 has 12 teams, expected 20
+- **15.** `SEASON_STATE_NOT_COMPLETE` *(warning)* â€” Season 2026 has data but state is 'in_progress'
+- **16.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2021 goalless share 11.6% vs overall 8.6% (deviation 3.0 pp)
+- **17.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2022 goalless share 6.6% vs overall 8.6% (deviation 2.0 pp)
+- **18.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2024 goalless share 6.1% vs overall 8.6% (deviation 2.5 pp)
+- **19.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2024 home outcome share 46.0% vs overall 39.2%
+- **20.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2024 draw outcome share 23.2% vs overall 28.5%
+- **21.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2026 goalless share 11.1% vs overall 8.6% (deviation 2.5 pp)
+- **22.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2026 home outcome share 31.8% vs overall 39.2%
+- **23.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2026 draw outcome share 33.8% vs overall 28.5%
+- **24.** `HIGH_SCORING_MATCHES` *(warning)* â€” 5 match(es) with >= 8 total goals (extreme scorelines)
+- **25.** `DUPLICATE_ROWS` *(warning)* â€” Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)
+- **26.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* â€” first_goal_time/first_goal_time_extra NULL semantics broken (fgt=367, fgte=367 rows)
+- **27.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2020/classic rows=12 positions=1..12 teams=12
+- **28.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2020/goals rows=12 positions=1..12 teams=12
+- **29.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2020/luck rows=12 positions=1..12 teams=12
+- **30.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/classic rows=12 positions=1..12 teams=12
+- **31.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/goals rows=12 positions=1..12 teams=12
+- **32.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/luck rows=12 positions=1..12 teams=12
+- **33.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/classic rows=12 positions=1..12 teams=12
+- **34.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/goals rows=12 positions=1..12 teams=12
+- **35.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/luck rows=12 positions=1..12 teams=12
+- **36.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/classic rows=12 positions=1..12 teams=12
+- **37.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/goals rows=12 positions=1..12 teams=12
+- **38.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/luck rows=12 positions=1..12 teams=12
+- **39.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2024/classic rows=12 positions=1..12 teams=12
+- **40.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2024/goals rows=12 positions=1..12 teams=12
+- **41.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2024/luck rows=12 positions=1..12 teams=12
+- **42.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2025/classic rows=12 positions=1..12 teams=12
+- **43.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2025/goals rows=12 positions=1..12 teams=12
+- **44.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2025/luck rows=12 positions=1..12 teams=12
+- **45.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026/classic rows=12 positions=1..12 teams=12
+- **46.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026/goals rows=12 positions=1..12 teams=12
+- **47.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026/luck rows=12 positions=1..12 teams=12
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

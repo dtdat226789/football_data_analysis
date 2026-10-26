@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-29T16:01:21+00:00
+- Generated: 2026-10-26T01:40:47+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`
@@ -8,81 +8,104 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\latvia\database_profile.json | yes | yes | 31.86 |
-| matches_analysis | E:\football_data_analysis\data\analysis\latvia\matches_analysis.json | yes | yes | 8.66 |
-| goals_analysis | E:\football_data_analysis\data\analysis\latvia\goals_analysis.json | yes | yes | 6.18 |
-| teams_analysis | E:\football_data_analysis\data\analysis\latvia\teams_analysis.json | yes | yes | 20.88 |
-| season_trends | E:\football_data_analysis\data\analysis\latvia\season_trends.json | yes | yes | 3.83 |
-| scoreline_analysis | E:\football_data_analysis\data\analysis\latvia\scoreline_analysis.json | yes | yes | 59.06 |
-| relationships | E:\football_data_analysis\data\analysis\latvia\relationships.json | yes | yes | 14.31 |
+| database_profile | data/analysis/latvia/database_profile.json | yes | yes | 45.69 |
+| matches_analysis | data/analysis/latvia/matches_analysis.json | yes | yes | 14.69 |
+| goals_analysis | data/analysis/latvia/goals_analysis.json | yes | yes | 11.06 |
+| teams_analysis | data/analysis/latvia/teams_analysis.json | yes | yes | 25.50 |
+| season_trends | data/analysis/latvia/season_trends.json | yes | yes | 8.85 |
+| scoreline_analysis | data/analysis/latvia/scoreline_analysis.json | yes | yes | 168.82 |
+| relationships | data/analysis/latvia/relationships.json | yes | yes | 13.69 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 336 matches: home wins 43.8%, draws 23.8%, away wins 32.4% (147H / 80D / 109A)
-- **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 9 home and 5 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 97 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 336 matches produced 973 goals (avg 2.896 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 56.3% vs away 43.7% of 973 goals in total (home/away ratio 1.29)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 182 of 336 matches (54.2%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 104 scoring matches, 32.8% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 30.70, median 26.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Riga FC leads with 161 points across 2 seasons (1 title(s), GD 115)
-- **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 9 teams present in every one of the 2 seasons (Auda, BFC Daugavpils, FK Liepaja, Grobina, Jelgava...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — BFC Daugavpils earns 29 more points at home than away (58 home vs 29 away)
-- **F12** · `season_trends` · *[high]* — **Champion with most titles** — Riga FC won 1 of 2 championship(s) on record
-- **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2025: Riga FC beat RFS by 1 pt
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — down (-0.096 per match): first half 2.94 vs last half 2.844 across 2 seasons
-- **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2026 (goals view, avg abs position diff 3.200)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026 (luck view, avg abs position diff 1.800)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 40 matches (11.9%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (28 of 147 home matches, 19.0%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (40 of 80 draw matches, 50.0%)
-- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (36 of 109 away matches, 33.0%)
-- **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 11 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_rest_days |corr| = 0.1696 (n=176 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 18.049: home 6.639, draw -0.442, away -11.411
-- **F24** · `database_profile` · *[high]* — **Data-quality warnings (14)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 336 matches observed
+- **F1** Â· `matches_analysis` Â· *[medium]* â€” **Outcome split across all seasons** â€” 1020 matches: home wins 43.9%, draws 20.5%, away wins 35.6% (448H / 209D / 363A)
+- **F2** Â· `matches_analysis` Â· *[medium]* â€” **Comeback wins** â€” 23 home and 18 away comebacks (trailing at HT but winning at FT)
+- **F3** Â· `matches_analysis` Â· *[low]* â€” **Most common HT/FT flow** â€” home lead at HT -> home win occurred 291 times
+- **F4** Â· `goals_analysis` Â· *[medium]* â€” **Average goals per match** â€” 1020 matches produced 3024 goals (avg 2.965 per match)
+- **F5** Â· `goals_analysis` Â· *[medium]* â€” **Home goal share** â€” home 54.3% vs away 45.7% of 3024 goals in total (home/away ratio 1.19)
+- **F6** Â· `goals_analysis` Â· *[medium]* â€” **Both teams to score** â€” 500 of 1020 matches (49.0%)
+- **F7** Â· `goals_analysis` Â· *[low]* â€” **Most common first-goal bucket** â€” minute 1-15 (first goal in 332 scoring matches, 35.2% of scoring)
+- **F8** Â· `goals_analysis` Â· *[low]* â€” **Average first goal minute** â€” mean 29.33, median 23.0
+- **F9** Â· `teams_analysis` Â· *[high]* â€” **Dominant team by lifetime points** â€” RFS leads with 495 points across 6 seasons (4 title(s), GD 369)
+- **F10** Â· `teams_analysis` Â· *[medium]* â€” **Team consistency** â€” 4 teams present in every one of the 6 seasons (BFC Daugavpils, FK Liepaja, RFS, Riga FC)
+- **F11** Â· `teams_analysis` Â· *[medium]* â€” **Biggest home advantage** â€” BFC Daugavpils earns 65 more points at home than away (154 home vs 89 away)
+- **F12** Â· `season_trends` Â· *[high]* â€” **Champion with most titles** â€” RFS won 4 of 6 championship(s) on record
+- **F13** Â· `season_trends` Â· *[medium]* â€” **Tightest title race** â€” 2023: RFS beat Riga FC by 1 pt
+- **F14** Â· `season_trends` Â· *[medium]* â€” **Average-goals trend** â€” stable (+0.002 per match): first half 2.963 vs last half 2.965 across 6 seasons
+- **F15** Â· `season_trends` Â· *[low]* â€” **Largest view divergence** â€” 2023 (goals view, avg abs position diff 4.545)
+- **F16** Â· `season_trends` Â· *[low]* â€” **Smallest view divergence** â€” 2021 (luck view, avg abs position diff 0.889)
+- **F17** Â· `scoreline_analysis` Â· *[medium]* â€” **Most common scoreline** â€” 1-1 in 102 matches (10.0%)
+- **F18** Â· `scoreline_analysis` Â· *[low]* â€” **Most common home-win scoreline** â€” 1-0 (80 of 448 home matches, 17.9%)
+- **F19** Â· `scoreline_analysis` Â· *[low]* â€” **Most common draw scoreline** â€” 1-1 (102 of 209 draw matches, 48.8%)
+- **F20** Â· `scoreline_analysis` Â· *[low]* â€” **Most common away-win scoreline** â€” 0-1 (86 of 363 away matches, 23.7%)
+- **F21** Â· `scoreline_analysis` Â· *[low]* â€” **Extreme scorelines** â€” 42 match(es) with >= 7 total goals
+- **F22** Â· `relationships` Â· *[medium]* â€” **Strongest correlation with total goals** â€” home_points_before_match |corr| = 0.0742 (n=854 leakage-safe rows)
+- **F23** Â· `relationships` Â· *[medium]* â€” **Most outcome-separating feature** â€” points_difference spreads group means over 21.178: home 9.630, draw -1.491, away -11.547
+- **F24** Â· `database_profile` Â· *[high]* â€” **Data-quality warnings (37)** â€” Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
+- **F25** Â· `database_profile` Â· *[medium]* â€” **Data coverage** â€” 6 of 6 registered seasons populated (100.0%); 1020 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 336 |
-| Average goals per match | 2.896 |
-| Home win rate | 43.8% |
-| Draw rate | 23.8% |
-| Away win rate | 32.4% |
+| Matches analysed | 1020 |
+| Average goals per match | 2.965 |
+| Home win rate | 43.9% |
+| Draw rate | 20.5% |
+| Away win rate | 35.6% |
 | Most common scoreline | 1-1 |
-| Dominant team (lifetime points) | Riga FC |
-| Champion with most titles | Riga FC |
-| BTTS rate | 54.2% |
+| Dominant team (lifetime points) | RFS |
+| Champion with most titles | RFS |
+| BTTS rate | 49.0% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 31.86 |
-| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 8.66 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 6.18 |
-| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 20.88 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.83 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 59.06 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.31 |
+| database_profile | database_profile | observed, calculated, warnings | 45.69 |
+| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 14.69 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 11.06 |
+| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 25.50 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 8.85 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 168.82 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.69 |
 
 ## 5. Notable anomalies
-- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 182 matches, expected 380
-- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 11 teams, expected 20
-- **3.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 154 matches, expected 380
-- **4.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 10 teams, expected 20
-- **5.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026 has data but state is 'in_progress'
-- **6.** `HIGH_SCORING_MATCHES` *(warning)* — 4 match(es) with >= 8 total goals (extreme scorelines)
-- **7.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
-- **8.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)
-- **9.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025/classic rows=11 positions=1..11 teams=11
-- **10.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025/goals rows=11 positions=1..11 teams=11
-- **11.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2025/luck rows=11 positions=1..11 teams=11
-- **12.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026/classic rows=10 positions=1..10 teams=10
-- **13.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026/goals rows=10 positions=1..10 teams=10
-- **14.** `STANDINGS_INCOMPLETE` *(warning)* — Standings 2026/luck rows=10 positions=1..10 teams=10
+- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2021 has 126 matches, expected 380
+- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2021 has 9 teams, expected 20
+- **3.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2022 has 182 matches, expected 380
+- **4.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2022 has 11 teams, expected 20
+- **5.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2023 has 182 matches, expected 380
+- **6.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2023 has 11 teams, expected 20
+- **7.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2024 has 182 matches, expected 380
+- **8.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2024 has 11 teams, expected 20
+- **9.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2025 has 182 matches, expected 380
+- **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2025 has 11 teams, expected 20
+- **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2026 has 166 matches, expected 380
+- **12.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2026 has 10 teams, expected 20
+- **13.** `SEASON_STATE_NOT_COMPLETE` *(warning)* â€” Season 2026 has data but state is 'in_progress'
+- **14.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2021 goalless share 3.2% vs overall 5.9% (deviation 2.7 pp)
+- **15.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2021 draw outcome share 15.9% vs overall 20.5%
+- **16.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2025 away outcome share 30.8% vs overall 35.6%
+- **17.** `HIGH_SCORING_MATCHES` *(warning)* â€” 11 match(es) with >= 8 total goals (extreme scorelines)
+- **18.** `DUPLICATE_ROWS` *(warning)* â€” Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
+- **19.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* â€” first_goal_time/first_goal_time_extra NULL semantics broken (fgt=385, fgte=385 rows)
+- **20.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/classic rows=9 positions=1..9 teams=9
+- **21.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/goals rows=9 positions=1..9 teams=9
+- **22.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/luck rows=9 positions=1..9 teams=9
+- **23.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/classic rows=11 positions=1..11 teams=11
+- **24.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/goals rows=11 positions=1..11 teams=11
+- **25.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/luck rows=11 positions=1..11 teams=11
+- **26.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/classic rows=11 positions=1..11 teams=11
+- **27.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/goals rows=11 positions=1..11 teams=11
+- **28.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/luck rows=11 positions=1..11 teams=11
+- **29.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2024/classic rows=11 positions=1..11 teams=11
+- **30.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2024/goals rows=11 positions=1..11 teams=11
+- **31.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2024/luck rows=11 positions=1..11 teams=11
+- **32.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2025/classic rows=11 positions=1..11 teams=11
+- **33.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2025/goals rows=11 positions=1..11 teams=11
+- **34.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2025/luck rows=11 positions=1..11 teams=11
+- **35.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026/classic rows=10 positions=1..10 teams=10
+- **36.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026/goals rows=10 positions=1..10 teams=10
+- **37.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2026/luck rows=10 positions=1..10 teams=10
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

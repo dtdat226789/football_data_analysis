@@ -1,151 +1,169 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:09:20+00:00
+- Generated: 2026-10-26T01:50:11+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`
 
-- Teams: **19** | Seasons: **2** | Matches: **416**
+- Teams: **25** | Seasons: **7** | Matches: **1638**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Hammarby | 2 | 52 | 32 | 9 | 11 | 105 | 109 | 49 | 60 | 52.5 | 2 | 2 | 0 |
-| Mjallby | 2 | 52 | 28 | 13 | 11 | 97 | 84 | 56 | 28 | 48.5 | 1 | 12 | 1 |
-| Djurgarden | 2 | 52 | 26 | 12 | 14 | 90 | 99 | 53 | 46 | 45.0 | 3 | 5 | 0 |
-| Sirius | 2 | 52 | 27 | 9 | 16 | 90 | 105 | 79 | 26 | 45.0 | 1 | 9 | 1 |
-| Goteborg | 2 | 52 | 25 | 8 | 19 | 83 | 72 | 74 | -2 | 41.5 | 4 | 9 | 0 |
-| GAIS | 2 | 52 | 22 | 16 | 14 | 82 | 73 | 50 | 23 | 41.0 | 3 | 10 | 0 |
-| Malmo FF | 2 | 52 | 23 | 13 | 16 | 82 | 83 | 66 | 17 | 41.0 | 6 | 7 | 0 |
-| AIK | 2 | 52 | 22 | 15 | 15 | 81 | 71 | 67 | 4 | 40.5 | 7 | 8 | 0 |
-| Elfsborg | 2 | 52 | 22 | 11 | 19 | 77 | 76 | 73 | 3 | 38.5 | 4 | 8 | 0 |
-| Hacken | 2 | 52 | 18 | 17 | 17 | 71 | 81 | 80 | 1 | 35.5 | 5 | 10 | 0 |
-| Brommapojkarna | 2 | 52 | 16 | 10 | 26 | 58 | 70 | 83 | -13 | 29.0 | 11 | 12 | 0 |
-| Degerfors | 2 | 52 | 13 | 10 | 29 | 49 | 52 | 86 | -34 | 24.5 | 13 | 14 | 0 |
-| Halmstad | 2 | 52 | 13 | 10 | 29 | 49 | 40 | 90 | -50 | 24.5 | 11 | 16 | 0 |
-| Vasteras SK | 1 | 22 | 10 | 5 | 7 | 35 | 34 | 35 | -1 | 35.0 | 6 | 6 | 0 |
-| Norrkoping | 1 | 30 | 8 | 5 | 17 | 29 | 40 | 57 | -17 | 29.0 | 14 | 14 | 0 |
+| Malmo FF | 7 | 205 | 110 | 50 | 45 | 380 | 379 | 213 | 166 | 54.29 | 1 | 7 | 4 |
+| Djurgarden | 7 | 205 | 107 | 41 | 57 | 362 | 339 | 214 | 125 | 51.71 | 2 | 5 | 0 |
+| Hammarby | 7 | 204 | 101 | 53 | 50 | 356 | 360 | 229 | 131 | 50.86 | 2 | 8 | 0 |
+| Elfsborg | 7 | 205 | 98 | 52 | 55 | 346 | 348 | 253 | 95 | 49.43 | 2 | 8 | 0 |
+| Hacken | 7 | 205 | 90 | 58 | 57 | 328 | 372 | 282 | 90 | 46.86 | 1 | 12 | 1 |
+| AIK | 7 | 205 | 91 | 50 | 64 | 323 | 280 | 249 | 31 | 46.14 | 2 | 11 | 0 |
+| Mjallby | 7 | 204 | 87 | 56 | 61 | 317 | 276 | 231 | 45 | 45.29 | 1 | 12 | 1 |
+| Sirius | 7 | 205 | 80 | 47 | 78 | 287 | 320 | 319 | 1 | 41.0 | 1 | 11 | 1 |
+| Goteborg | 7 | 204 | 73 | 53 | 78 | 272 | 260 | 275 | -15 | 38.86 | 4 | 13 | 0 |
+| Norrkoping | 6 | 180 | 63 | 39 | 78 | 228 | 266 | 288 | -22 | 38.0 | 6 | 14 | 0 |
+| Kalmar | 6 | 175 | 61 | 40 | 74 | 223 | 208 | 254 | -46 | 37.17 | 4 | 15 | 0 |
+| Halmstad | 5 | 145 | 39 | 36 | 70 | 153 | 125 | 216 | -91 | 30.6 | 11 | 16 | 0 |
+| Degerfors | 5 | 145 | 37 | 30 | 78 | 141 | 150 | 255 | -105 | 28.2 | 13 | 15 | 0 |
+| Brommapojkarna | 4 | 115 | 36 | 23 | 56 | 131 | 165 | 196 | -31 | 32.75 | 10 | 14 | 0 |
+| GAIS | 3 | 84 | 36 | 22 | 26 | 130 | 111 | 89 | 22 | 43.33 | 3 | 11 | 0 |
+| Varnamo | 4 | 120 | 33 | 30 | 57 | 129 | 137 | 190 | -53 | 32.25 | 5 | 16 | 0 |
+| Varberg | 4 | 120 | 30 | 30 | 60 | 120 | 137 | 206 | -69 | 30.0 | 10 | 16 | 0 |
+| Vasteras SK | 2 | 55 | 17 | 10 | 28 | 61 | 62 | 81 | -19 | 30.5 | 6 | 16 | 0 |
+| Orebro | 2 | 60 | 16 | 12 | 32 | 60 | 60 | 99 | -39 | 30.0 | 7 | 15 | 0 |
+| Ostersund | 2 | 60 | 11 | 14 | 35 | 47 | 51 | 105 | -54 | 23.5 | 13 | 16 | 0 |
+| Helsingborg | 2 | 60 | 9 | 16 | 35 | 43 | 55 | 100 | -45 | 21.5 | 15 | 15 | 0 |
 | Oster | 1 | 30 | 6 | 8 | 16 | 26 | 29 | 48 | -19 | 26.0 | 15 | 15 | 0 |
-| Kalmar | 1 | 22 | 5 | 4 | 13 | 19 | 21 | 36 | -15 | 19.0 | 13 | 13 | 0 |
-| Varnamo | 1 | 30 | 3 | 7 | 20 | 16 | 36 | 69 | -33 | 16.0 | 16 | 16 | 0 |
-| Orgryte | 1 | 22 | 3 | 6 | 13 | 15 | 25 | 49 | -24 | 15.0 | 15 | 15 | 0 |
+| Falkenberg | 1 | 30 | 5 | 9 | 16 | 24 | 33 | 54 | -21 | 24.0 | 16 | 16 | 0 |
+| Orgryte | 1 | 25 | 4 | 7 | 14 | 19 | 31 | 56 | -25 | 19.0 | 15 | 15 | 0 |
+| Sundsvall | 1 | 30 | 4 | 2 | 24 | 14 | 28 | 80 | -52 | 14.0 | 16 | 16 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Hammarby | 26 | 21 | 2 | 3 | 65 | 26 | 11 | 7 | 8 | 40 | 25 |
-| Kalmar | 11 | 5 | 2 | 4 | 17 | 11 | 0 | 2 | 9 | 2 | 15 |
-| Elfsborg | 26 | 13 | 6 | 7 | 45 | 26 | 9 | 5 | 12 | 32 | 13 |
-| GAIS | 26 | 13 | 8 | 5 | 47 | 26 | 9 | 8 | 9 | 35 | 12 |
-| Halmstad | 26 | 8 | 5 | 13 | 29 | 26 | 5 | 5 | 16 | 20 | 9 |
-| Varnamo | 15 | 2 | 5 | 8 | 11 | 15 | 1 | 2 | 12 | 5 | 6 |
-| Norrkoping | 15 | 5 | 1 | 9 | 16 | 15 | 3 | 4 | 8 | 13 | 3 |
-| Orgryte | 11 | 1 | 6 | 4 | 9 | 11 | 2 | 0 | 9 | 6 | 3 |
-| Sirius | 26 | 14 | 4 | 8 | 46 | 26 | 13 | 5 | 8 | 44 | 2 |
-| AIK | 25 | 11 | 7 | 7 | 40 | 27 | 11 | 8 | 8 | 41 | -1 |
-| Djurgarden | 27 | 12 | 8 | 7 | 44 | 25 | 14 | 4 | 7 | 46 | -2 |
+| Hammarby | 102 | 62 | 28 | 12 | 214 | 102 | 39 | 25 | 38 | 142 | 72 |
+| AIK | 102 | 54 | 23 | 25 | 185 | 103 | 37 | 27 | 39 | 138 | 47 |
+| Malmo FF | 103 | 63 | 22 | 18 | 211 | 102 | 47 | 28 | 27 | 169 | 42 |
+| Elfsborg | 103 | 55 | 29 | 19 | 194 | 102 | 43 | 23 | 36 | 152 | 42 |
+| Hacken | 103 | 54 | 23 | 26 | 185 | 102 | 36 | 35 | 31 | 143 | 42 |
+| Djurgarden | 103 | 58 | 22 | 23 | 196 | 102 | 49 | 19 | 34 | 166 | 30 |
+| Norrkoping | 90 | 37 | 18 | 35 | 129 | 90 | 26 | 21 | 43 | 99 | 30 |
+| Halmstad | 72 | 23 | 22 | 27 | 91 | 73 | 16 | 14 | 43 | 62 | 29 |
+| GAIS | 42 | 22 | 12 | 8 | 78 | 42 | 14 | 10 | 18 | 52 | 26 |
+| Sirius | 103 | 45 | 19 | 39 | 154 | 102 | 35 | 28 | 39 | 133 | 21 |
+| Kalmar | 87 | 34 | 20 | 33 | 122 | 88 | 27 | 20 | 41 | 101 | 21 |
+| Degerfors | 72 | 21 | 16 | 35 | 79 | 73 | 16 | 14 | 43 | 62 | 17 |
+| Varberg | 60 | 17 | 17 | 26 | 68 | 60 | 13 | 13 | 34 | 52 | 16 |
+| Orebro | 30 | 10 | 7 | 13 | 37 | 30 | 6 | 5 | 19 | 23 | 14 |
+| Mjallby | 102 | 45 | 29 | 28 | 164 | 102 | 42 | 27 | 33 | 153 | 11 |
+| Sundsvall | 15 | 4 | 0 | 11 | 12 | 15 | 0 | 2 | 13 | 2 | 10 |
+| Vasteras SK | 28 | 9 | 7 | 12 | 34 | 27 | 8 | 3 | 16 | 27 | 7 |
+| Helsingborg | 30 | 5 | 9 | 16 | 24 | 30 | 4 | 7 | 19 | 19 | 5 |
+| Orgryte | 12 | 2 | 6 | 4 | 12 | 13 | 2 | 1 | 10 | 7 | 5 |
+| Falkenberg | 15 | 3 | 4 | 8 | 13 | 15 | 2 | 5 | 8 | 11 | 2 |
+| Goteborg | 102 | 37 | 25 | 40 | 136 | 102 | 36 | 28 | 38 | 136 | 0 |
 | Oster | 15 | 3 | 3 | 9 | 12 | 15 | 3 | 5 | 7 | 14 | -2 |
-| Mjallby | 26 | 14 | 5 | 7 | 47 | 26 | 14 | 8 | 4 | 50 | -3 |
-| Goteborg | 26 | 12 | 4 | 10 | 40 | 26 | 13 | 4 | 9 | 43 | -3 |
-| Vasteras SK | 11 | 4 | 4 | 3 | 16 | 11 | 6 | 1 | 4 | 19 | -3 |
-| Brommapojkarna | 26 | 8 | 3 | 15 | 27 | 26 | 8 | 7 | 11 | 31 | -4 |
-| Hacken | 26 | 8 | 9 | 9 | 33 | 26 | 10 | 8 | 8 | 38 | -5 |
-| Malmo FF | 26 | 11 | 5 | 10 | 38 | 26 | 12 | 8 | 6 | 44 | -6 |
-| Degerfors | 26 | 4 | 7 | 15 | 19 | 26 | 9 | 3 | 14 | 30 | -11 |
+| Varnamo | 60 | 15 | 17 | 28 | 62 | 60 | 18 | 13 | 29 | 67 | -5 |
+| Ostersund | 30 | 5 | 6 | 19 | 21 | 30 | 6 | 8 | 16 | 26 | -5 |
+| Brommapojkarna | 57 | 17 | 10 | 30 | 61 | 58 | 19 | 13 | 26 | 70 | -9 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Hammarby | 2.02 |
-| 2 | Mjallby | 1.86 |
-| 3 | Djurgarden | 1.73 |
-| 4 | Sirius | 1.73 |
-| 5 | Goteborg | 1.60 |
+| 1 | Malmo FF | 1.85 |
+| 2 | Djurgarden | 1.77 |
+| 3 | Hammarby | 1.75 |
+| 4 | Elfsborg | 1.69 |
+| 5 | Hacken | 1.60 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Hammarby | 109 |
-| 2 | Sirius | 105 |
-| 3 | Djurgarden | 99 |
-| 4 | Mjallby | 84 |
-| 5 | Malmo FF | 83 |
+| 1 | Malmo FF | 379 |
+| 2 | Hacken | 372 |
+| 3 | Hammarby | 360 |
+| 4 | Elfsborg | 348 |
+| 5 | Djurgarden | 339 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Hammarby | 60 |
-| 2 | Djurgarden | 46 |
-| 3 | Mjallby | 28 |
-| 4 | Sirius | 26 |
-| 5 | GAIS | 23 |
+| 1 | Malmo FF | 166 |
+| 2 | Hammarby | 131 |
+| 3 | Djurgarden | 125 |
+| 4 | Elfsborg | 95 |
+| 5 | Hacken | 90 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Hammarby | 0.942 |
-| 2 | GAIS | 0.962 |
-| 3 | Djurgarden | 1.019 |
-| 4 | Mjallby | 1.077 |
-| 5 | Malmo FF | 1.269 |
+| 1 | Malmo FF | 1.039 |
+| 2 | Djurgarden | 1.044 |
+| 3 | GAIS | 1.060 |
+| 4 | Hammarby | 1.123 |
+| 5 | Mjallby | 1.132 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **13**
+- Teams present in all **7** seasons: **9**
 
-AIK, Brommapojkarna, Degerfors, Djurgarden, Elfsborg, GAIS, Goteborg, Hacken, Halmstad, Hammarby, Malmo FF, Mjallby, Sirius
+AIK, Djurgarden, Elfsborg, Goteborg, Hacken, Hammarby, Malmo FF, Mjallby, Sirius
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **162** (showing the 15 most frequent)
+- Distinct fixtures: **256** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Elfsborg vs Brommapojkarna | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| AIK vs Halmstad | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Djurgarden vs Elfsborg | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Goteborg vs Degerfors | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Hammarby vs GAIS | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Hammarby vs Hacken | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| GAIS vs Djurgarden | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| GAIS vs Hacken | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| GAIS vs Malmo FF | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Goteborg vs Elfsborg | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Goteborg vs Halmstad | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Hacken vs Halmstad | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Hammarby vs AIK | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Hammarby vs Brommapojkarna | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Hammarby vs Degerfors | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
+| AIK vs Goteborg | 14 | 9 | 3 | 2 | 64.3% | 21.4% | 14.3% |
+| Hammarby vs AIK | 14 | 9 | 3 | 2 | 64.3% | 21.4% | 14.3% |
+| Elfsborg vs Sirius | 14 | 8 | 3 | 3 | 57.1% | 21.4% | 21.4% |
+| Malmo FF vs Elfsborg | 14 | 8 | 4 | 2 | 57.1% | 28.6% | 14.3% |
+| Hacken vs Hammarby | 14 | 7 | 7 | 0 | 50.0% | 50.0% | 0.0% |
+| Elfsborg vs Djurgarden | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
+| Elfsborg vs Goteborg | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
+| Hacken vs Mjallby | 14 | 6 | 4 | 4 | 42.9% | 28.6% | 28.6% |
+| Malmo FF vs Djurgarden | 14 | 6 | 2 | 6 | 42.9% | 14.3% | 42.9% |
+| Malmo FF vs Hacken | 14 | 6 | 5 | 3 | 42.9% | 35.7% | 21.4% |
+| Malmo FF vs Sirius | 14 | 6 | 1 | 7 | 42.9% | 7.1% | 50.0% |
+| Mjallby vs AIK | 14 | 6 | 5 | 3 | 42.9% | 35.7% | 21.4% |
+| Mjallby vs Sirius | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
+| Djurgarden vs AIK | 14 | 5 | 2 | 7 | 35.7% | 14.3% | 50.0% |
+| Djurgarden vs Hammarby | 14 | 5 | 6 | 3 | 35.7% | 42.9% | 21.4% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| Hammarby | 2 | 2 |
-| Mjallby | 1 | 12 |
-| Djurgarden | 5 | 3 |
-| Sirius | 9 | 1 |
-| Goteborg | 4 | 9 |
-| GAIS | 3 | 10 |
-| Malmo FF | 6 | 7 |
-| AIK | 7 | 8 |
-| Elfsborg | 8 | 4 |
-| Hacken | 10 | 5 |
-| Brommapojkarna | 12 | 11 |
-| Degerfors | 13 | 14 |
-| Halmstad | 11 | 16 |
-| Vasteras SK | - | 6 |
-| Norrkoping | 14 | - |
-| Oster | 15 | - |
-| Kalmar | - | 13 |
-| Varnamo | 16 | - |
-| Orgryte | - | 15 |
+| team | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|---|
+| Malmo FF | 1 | 1 | 7 | 1 | 1 | 6 | 7 |
+| Djurgarden | 4 | 3 | 2 | 4 | 4 | 5 | 2 |
+| Hammarby | 8 | 5 | 3 | 7 | 2 | 2 | 3 |
+| Elfsborg | 2 | 4 | 6 | 2 | 7 | 8 | 5 |
+| Hacken | 3 | 12 | 1 | 3 | 8 | 10 | 4 |
+| AIK | 9 | 2 | 5 | 11 | 3 | 7 | 8 |
+| Mjallby | 5 | 9 | 9 | 10 | 5 | 1 | 12 |
+| Sirius | 10 | 11 | 11 | 8 | 9 | 9 | 1 |
+| Goteborg | 12 | 8 | 8 | 13 | 13 | 4 | 9 |
+| Norrkoping | 6 | 7 | 12 | 9 | 11 | 14 | - |
+| Kalmar | 14 | 6 | 4 | 6 | 15 | - | 13 |
+| Halmstad | - | 14 | - | 12 | 12 | 11 | 16 |
+| Degerfors | - | 13 | 13 | 15 | - | 13 | 14 |
+| Brommapojkarna | - | - | - | 14 | 10 | 12 | 10 |
+| GAIS | - | - | - | - | 6 | 3 | 11 |
+| Varnamo | - | - | 10 | 5 | 14 | 16 | - |
+| Varberg | 11 | 10 | 14 | 16 | - | - | - |
+| Vasteras SK | - | - | - | - | 16 | - | 6 |
+| Orebro | 7 | 15 | - | - | - | - | - |
+| Ostersund | 13 | 16 | - | - | - | - | - |
+| Helsingborg | 15 | - | 15 | - | - | - | - |
+| Oster | - | - | - | - | - | 15 | - |
+| Falkenberg | 16 | - | - | - | - | - | - |
+| Orgryte | - | - | - | - | - | - | 15 |
+| Sundsvall | - | - | 16 | - | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\sweden1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\sweden1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

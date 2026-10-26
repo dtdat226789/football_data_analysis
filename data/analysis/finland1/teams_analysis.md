@@ -1,136 +1,148 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:49:32+00:00
+- Generated: 2026-10-26T01:31:43+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`
 
-- Teams: **14** | Seasons: **2** | Matches: **273**
+- Teams: **18** | Seasons: **7** | Matches: **944**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Inter Turku | 2 | 47 | 26 | 16 | 5 | 94 | 78 | 38 | 40 | 47.0 | 1 | 2 | 1 |
-| KuPS | 2 | 47 | 26 | 14 | 7 | 92 | 80 | 47 | 33 | 46.0 | 1 | 4 | 1 |
-| HJK | 2 | 47 | 26 | 8 | 13 | 86 | 98 | 58 | 40 | 43.0 | 3 | 3 | 0 |
-| Ilves | 2 | 44 | 21 | 7 | 16 | 70 | 81 | 64 | 17 | 35.0 | 2 | 9 | 0 |
-| Gnistan | 2 | 47 | 18 | 15 | 14 | 69 | 74 | 71 | 3 | 34.5 | 4 | 6 | 0 |
-| VPS | 2 | 47 | 16 | 13 | 18 | 61 | 62 | 59 | 3 | 30.5 | 5 | 7 | 0 |
-| SJK | 2 | 44 | 16 | 12 | 16 | 60 | 70 | 64 | 6 | 30.0 | 5 | 10 | 0 |
-| AC Oulu | 2 | 47 | 15 | 7 | 25 | 52 | 56 | 77 | -21 | 26.0 | 6 | 10 | 0 |
+| HJK | 7 | 160 | 98 | 34 | 28 | 328 | 311 | 148 | 163 | 46.86 | 1 | 3 | 3 |
+| KuPS | 7 | 160 | 94 | 37 | 29 | 319 | 268 | 142 | 126 | 45.57 | 1 | 4 | 2 |
+| Inter Turku | 7 | 161 | 80 | 38 | 43 | 278 | 264 | 167 | 97 | 39.71 | 1 | 7 | 2 |
+| SJK | 7 | 154 | 65 | 36 | 53 | 231 | 224 | 206 | 18 | 33.0 | 3 | 10 | 0 |
+| Ilves | 7 | 154 | 62 | 37 | 55 | 223 | 235 | 204 | 31 | 31.86 | 2 | 10 | 0 |
+| AC Oulu | 6 | 139 | 45 | 26 | 68 | 161 | 176 | 228 | -52 | 26.83 | 4 | 11 | 0 |
+| Haka | 6 | 132 | 42 | 32 | 58 | 158 | 171 | 217 | -46 | 26.33 | 4 | 11 | 0 |
+| Lahti | 6 | 132 | 37 | 44 | 51 | 155 | 152 | 187 | -35 | 25.83 | 6 | 11 | 0 |
+| VPS | 5 | 117 | 43 | 25 | 49 | 154 | 166 | 163 | 3 | 30.8 | 4 | 10 | 0 |
+| Mariehamn | 7 | 154 | 35 | 35 | 84 | 140 | 157 | 271 | -114 | 20.0 | 9 | 12 | 0 |
+| Honka | 4 | 88 | 38 | 25 | 25 | 139 | 122 | 84 | 38 | 34.75 | 3 | 8 | 0 |
+| Gnistan | 3 | 73 | 26 | 22 | 25 | 100 | 109 | 114 | -5 | 33.33 | 5 | 8 | 0 |
+| HIFK | 3 | 66 | 18 | 16 | 32 | 70 | 67 | 104 | -37 | 23.33 | 5 | 12 | 0 |
+| TPS | 2 | 44 | 14 | 10 | 20 | 52 | 51 | 62 | -11 | 26.0 | 8 | 11 | 0 |
+| KTP | 3 | 66 | 9 | 15 | 42 | 42 | 62 | 133 | -71 | 14.0 | 11 | 12 | 0 |
 | Jaro | 2 | 44 | 10 | 10 | 24 | 40 | 43 | 80 | -37 | 20.0 | 8 | 11 | 0 |
-| Mariehamn | 2 | 44 | 8 | 11 | 25 | 35 | 42 | 91 | -49 | 17.5 | 9 | 12 | 0 |
-| Lahti | 1 | 22 | 9 | 5 | 8 | 32 | 26 | 19 | 7 | 32.0 | 7 | 7 | 0 |
-| TPS | 1 | 22 | 8 | 7 | 7 | 31 | 28 | 23 | 5 | 31.0 | 8 | 8 | 0 |
-| Haka | 1 | 22 | 4 | 4 | 14 | 16 | 27 | 43 | -16 | 16.0 | 11 | 11 | 0 |
-| KTP | 1 | 22 | 3 | 5 | 14 | 14 | 24 | 55 | -31 | 14.0 | 12 | 12 | 0 |
+| Ekenas | 1 | 22 | 3 | 4 | 15 | 13 | 19 | 51 | -32 | 13.0 | 12 | 12 | 0 |
+| Rovaniemi | 1 | 22 | 1 | 2 | 19 | 5 | 15 | 51 | -36 | 5.0 | 12 | 12 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Ilves | 22 | 14 | 3 | 5 | 45 | 22 | 7 | 4 | 11 | 25 | 20 |
-| TPS | 11 | 7 | 2 | 2 | 23 | 11 | 1 | 5 | 5 | 8 | 15 |
-| AC Oulu | 24 | 9 | 4 | 11 | 31 | 23 | 6 | 3 | 14 | 21 | 10 |
-| KuPS | 23 | 15 | 5 | 3 | 50 | 24 | 11 | 9 | 4 | 42 | 8 |
-| VPS | 24 | 9 | 7 | 8 | 34 | 23 | 7 | 6 | 10 | 27 | 7 |
-| Mariehamn | 22 | 5 | 6 | 11 | 21 | 22 | 3 | 5 | 14 | 14 | 7 |
-| SJK | 22 | 9 | 6 | 7 | 33 | 22 | 7 | 6 | 9 | 27 | 6 |
-| Gnistan | 24 | 10 | 7 | 7 | 37 | 23 | 8 | 8 | 7 | 32 | 5 |
-| HJK | 23 | 14 | 3 | 6 | 45 | 24 | 12 | 5 | 7 | 41 | 4 |
+| Ilves | 77 | 40 | 16 | 21 | 136 | 77 | 22 | 21 | 34 | 87 | 49 |
+| Inter Turku | 80 | 46 | 20 | 14 | 158 | 81 | 34 | 18 | 29 | 120 | 38 |
+| SJK | 77 | 38 | 18 | 21 | 132 | 77 | 27 | 18 | 32 | 99 | 33 |
+| KuPS | 80 | 54 | 12 | 14 | 174 | 80 | 40 | 25 | 15 | 145 | 29 |
+| TPS | 22 | 12 | 3 | 7 | 39 | 22 | 2 | 7 | 13 | 13 | 26 |
+| HJK | 80 | 52 | 16 | 12 | 172 | 80 | 46 | 18 | 16 | 156 | 16 |
+| Mariehamn | 77 | 19 | 21 | 37 | 78 | 77 | 16 | 14 | 47 | 62 | 16 |
+| Honka | 44 | 22 | 11 | 11 | 77 | 44 | 16 | 14 | 14 | 62 | 15 |
+| AC Oulu | 69 | 24 | 15 | 30 | 87 | 70 | 21 | 11 | 38 | 74 | 13 |
+| Lahti | 66 | 21 | 20 | 25 | 83 | 66 | 16 | 24 | 26 | 72 | 11 |
+| Gnistan | 37 | 15 | 10 | 12 | 55 | 36 | 11 | 12 | 13 | 45 | 10 |
+| VPS | 59 | 22 | 15 | 22 | 81 | 58 | 21 | 10 | 27 | 73 | 8 |
+| Haka | 66 | 21 | 19 | 26 | 82 | 66 | 21 | 13 | 32 | 76 | 6 |
 | Jaro | 22 | 5 | 7 | 10 | 22 | 22 | 5 | 3 | 14 | 18 | 4 |
-| Lahti | 11 | 5 | 3 | 3 | 18 | 11 | 4 | 2 | 5 | 14 | 4 |
-| Inter Turku | 23 | 13 | 9 | 1 | 48 | 24 | 13 | 7 | 4 | 46 | 2 |
-| Haka | 11 | 3 | 0 | 8 | 9 | 11 | 1 | 4 | 6 | 7 | 2 |
-| KTP | 11 | 1 | 5 | 5 | 8 | 11 | 2 | 0 | 9 | 6 | 2 |
+| KTP | 33 | 4 | 10 | 19 | 22 | 33 | 5 | 5 | 23 | 20 | 2 |
+| Ekenas | 11 | 1 | 3 | 7 | 6 | 11 | 2 | 1 | 8 | 7 | -1 |
+| Rovaniemi | 11 | 0 | 2 | 9 | 2 | 11 | 1 | 0 | 10 | 3 | -1 |
+| HIFK | 33 | 8 | 6 | 19 | 30 | 33 | 10 | 10 | 13 | 40 | -10 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Inter Turku | 2.00 |
-| 2 | KuPS | 1.96 |
-| 3 | HJK | 1.83 |
-| 4 | Ilves | 1.59 |
-| 5 | Gnistan | 1.47 |
+| 1 | HJK | 2.05 |
+| 2 | KuPS | 1.99 |
+| 3 | Inter Turku | 1.73 |
+| 4 | Honka | 1.58 |
+| 5 | SJK | 1.50 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | HJK | 98 |
-| 2 | Ilves | 81 |
-| 3 | KuPS | 80 |
-| 4 | Inter Turku | 78 |
-| 5 | Gnistan | 74 |
+| 1 | HJK | 311 |
+| 2 | KuPS | 268 |
+| 3 | Inter Turku | 264 |
+| 4 | Ilves | 235 |
+| 5 | SJK | 224 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Inter Turku | 40 |
-| 2 | HJK | 40 |
-| 3 | KuPS | 33 |
-| 4 | Ilves | 17 |
-| 5 | Lahti | 7 |
+| 1 | HJK | 163 |
+| 2 | KuPS | 126 |
+| 3 | Inter Turku | 97 |
+| 4 | Honka | 38 |
+| 5 | Ilves | 31 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Inter Turku | 0.809 |
-| 2 | Lahti | 0.864 |
-| 3 | KuPS | 1.000 |
-| 4 | TPS | 1.045 |
-| 5 | HJK | 1.234 |
+| 1 | KuPS | 0.887 |
+| 2 | HJK | 0.925 |
+| 3 | Honka | 0.955 |
+| 4 | Inter Turku | 1.037 |
+| 5 | Ilves | 1.325 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **10**
+- Teams present in all **7** seasons: **6**
 
-AC Oulu, Gnistan, HJK, Ilves, Inter Turku, Jaro, KuPS, Mariehamn, SJK, VPS
+HJK, Ilves, Inter Turku, KuPS, Mariehamn, SJK
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **87** (showing the 15 most frequent)
+- Distinct fixtures: **137** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| VPS vs AC Oulu | 5 | 5 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Inter Turku vs VPS | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| KuPS vs Gnistan | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Gnistan vs AC Oulu | 5 | 1 | 0 | 4 | 20.0% | 0.0% | 80.0% |
-| HJK vs KuPS | 5 | 1 | 3 | 1 | 20.0% | 60.0% | 20.0% |
-| Inter Turku vs AC Oulu | 5 | 1 | 1 | 3 | 20.0% | 20.0% | 60.0% |
-| Inter Turku vs HJK | 5 | 1 | 3 | 1 | 20.0% | 60.0% | 20.0% |
-| KuPS vs VPS | 5 | 1 | 2 | 2 | 20.0% | 40.0% | 40.0% |
-| HJK vs Gnistan | 5 | 0 | 1 | 4 | 0.0% | 20.0% | 80.0% |
-| HJK vs SJK | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| HJK vs VPS | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Ilves vs Jaro | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Ilves vs Mariehamn | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Ilves vs VPS | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Inter Turku vs Ilves | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
+| Inter Turku vs KuPS | 15 | 8 | 4 | 3 | 53.3% | 26.7% | 20.0% |
+| HJK vs Inter Turku | 15 | 4 | 4 | 7 | 26.7% | 26.7% | 46.7% |
+| HJK vs KuPS | 15 | 4 | 9 | 2 | 26.7% | 60.0% | 13.3% |
+| Inter Turku vs Ilves | 14 | 9 | 2 | 3 | 64.3% | 14.3% | 21.4% |
+| HJK vs Mariehamn | 14 | 8 | 1 | 5 | 57.1% | 7.1% | 35.7% |
+| Ilves vs Mariehamn | 14 | 8 | 3 | 3 | 57.1% | 21.4% | 21.4% |
+| KuPS vs SJK | 14 | 8 | 4 | 2 | 57.1% | 28.6% | 14.3% |
+| HJK vs Ilves | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| HJK vs SJK | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Inter Turku vs Mariehamn | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| Inter Turku vs SJK | 14 | 7 | 3 | 4 | 50.0% | 21.4% | 28.6% |
+| SJK vs Mariehamn | 14 | 7 | 0 | 7 | 50.0% | 0.0% | 50.0% |
+| Inter Turku vs AC Oulu | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
+| KuPS vs Ilves | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
+| KuPS vs Mariehamn | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025 | 2026 |
-|---|---|---|
-| Inter Turku | 1 | 2 |
-| KuPS | 4 | 1 |
-| HJK | 3 | 3 |
-| Ilves | 2 | 9 |
-| Gnistan | 6 | 4 |
-| VPS | 7 | 5 |
-| SJK | 5 | 10 |
-| AC Oulu | 10 | 6 |
-| Jaro | 8 | 11 |
-| Mariehamn | 9 | 12 |
-| Lahti | - | 7 |
-| TPS | - | 8 |
-| Haka | 11 | - |
-| KTP | 12 | - |
+| team | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|---|
+| HJK | 1 | 2 | 1 | 1 | 2 | 3 | 2 |
+| KuPS | 3 | 1 | 2 | 2 | 1 | 4 | 3 |
+| Inter Turku | 2 | 3 | 5 | 6 | 7 | 1 | 1 |
+| SJK | 7 | 4 | 6 | 3 | 4 | 5 | 10 |
+| Ilves | 5 | 6 | 8 | 10 | 3 | 2 | 9 |
+| AC Oulu | - | 11 | 7 | 7 | 9 | 10 | 4 |
+| Haka | 10 | 9 | 4 | 8 | 5 | 11 | - |
+| Lahti | 6 | 7 | 11 | 9 | 11 | - | 7 |
+| VPS | - | - | 10 | 4 | 6 | 7 | 6 |
+| Mariehamn | 9 | 10 | 9 | 12 | 10 | 9 | 12 |
+| Honka | 4 | 8 | 3 | 5 | - | - | - |
+| Gnistan | - | - | - | - | 8 | 6 | 5 |
+| HIFK | 8 | 5 | 12 | - | - | - | - |
+| TPS | 11 | - | - | - | - | - | 8 |
+| KTP | - | 12 | - | 11 | - | 12 | - |
+| Jaro | - | - | - | - | - | 8 | 11 |
+| Ekenas | - | - | - | - | 12 | - | - |
+| Rovaniemi | 12 | - | - | - | - | - | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\finland1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\finland1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

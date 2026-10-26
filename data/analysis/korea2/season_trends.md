@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-09-29T16:00:38+00:00
+- Generated: 2026-10-26T01:40:03+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -8,15 +8,25 @@
 ## 1. Champions per season
 | season | champion | pts | runner-up | margin |
 |---|---|---|---|---|
+| 2020 | Jeju SK | 60 | Suwon FC | 6 pts |
+| 2021 | Gimcheon Sangmu | 69 | Anyang | 13 pts |
+| 2022 | Gwangju FC | 82 | Daejeon | 11 pts |
+| 2023 | Gimcheon Sangmu | 68 | Busan | 1 pts |
+| 2024 | Anyang | 60 | Asan | 3 pts |
 | 2025 | Incheon | 76 | Suwon Bluewings | 7 pts |
-| 2026 | Suwon Bluewings | 56 | Suwon FC | 7 pts |
+| 2026 | Suwon Bluewings | 62 | Suwon FC | 7 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **0** of 2 seasons
-- Tightest race: **2025** - Incheon beat Suwon Bluewings by **7** pts
+- Tight races (margin <= 3 pts): **2** of 7 seasons
+- Tightest race: **2023** - Gimcheon Sangmu beat Busan by **1** pts
 
 | season | margin | tight |
 |---|---|---|
+| 2020 | 6 pts |  |
+| 2021 | 13 pts |  |
+| 2022 | 11 pts |  |
+| 2023 | 1 pts | yes |
+| 2024 | 3 pts | yes |
 | 2025 | 7 pts |  |
 | 2026 | 7 pts |  |
 
@@ -25,36 +35,56 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 
 | season | pos 1 | pos 2 | pos 4 | pos 6 | pos 14 | pos 17 |
 |---|---|---|---|---|---|---|
-| 2025 | 76 | 69 | 61 | 54 | 28 | 3 |
-| 2026 | 56 | 49 | 46 | 41 | 24 | 14 |
+| 2020 | 60 | 54 | 39 | 38 | - | - |
+| 2021 | 69 | 56 | 50 | 38 | - | - |
+| 2022 | 82 | 71 | 60 | 51 | - | - |
+| 2023 | 68 | 67 | 57 | 51 | - | - |
+| 2024 | 60 | 57 | 56 | 50 | 26 | - |
+| 2025 | 76 | 69 | 61 | 54 | 28 | - |
+| 2026 | 62 | 55 | 52 | 45 | 27 | 18 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
 |---|---|---|---|---|---|
+| 2020 | 14 | - | 15 | - | - |
+| 2021 | 14 | - | 15 | - | - |
+| 2022 | 14 | - | 15 | - | - |
+| 2023 | 14 | - | 15 | - | - |
+| 2024 | 14 | 26 | 15 | - | - |
 | 2025 | 14 | 28 | 15 | 26 | 2 pts |
-| 2026 | 14 | 24 | 15 | 22 | 2 pts |
+| 2026 | 14 | 27 | 15 | 25 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
-| 2025 | 273 | 686 | 2.513 | 35.2% | 29.3% | 35.5% | 9.5% | 26.39 |
-| 2026 | 220 | 588 | 2.673 | 35.0% | 33.2% | 31.8% | 7.3% | 34.53 |
+| 2020 | 135 | 326 | 2.415 | 31.9% | 25.9% | 42.2% | 8.1% | 37.0 |
+| 2021 | 173 | 418 | 2.416 | 34.1% | 28.3% | 37.6% | 11.0% | 42.2 |
+| 2022 | 220 | 556 | 2.527 | 42.3% | 29.5% | 28.2% | 9.1% | 49.36 |
+| 2023 | 234 | 601 | 2.568 | 42.3% | 24.4% | 33.3% | 10.3% | 45.54 |
+| 2024 | 234 | 616 | 2.632 | 32.9% | 29.9% | 37.2% | 8.1% | 44.69 |
+| 2025 | 273 | 686 | 2.513 | 35.2% | 29.3% | 35.5% | 9.5% | 49.21 |
+| 2026 | 238 | 648 | 2.723 | 36.6% | 31.9% | 31.5% | 7.1% | 37.53 |
 
 ## 6. View divergence
-- Largest divergence: **2025** (goals view, avg abs position diff = 10.000)
+- Largest divergence: **2024** (goals view, avg abs position diff = 8.846)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
-| 2025 | 7.857 | 10.000 |
-| 2026 | 2.706 | 5.412 |
+| 2020 | 1.400 | 2.000 |
+| 2021 | 5.100 | 3.500 |
+| 2022 | 5.818 | 6.273 |
+| 2023 | 7.692 | 7.231 |
+| 2024 | 7.692 | 8.846 |
+| 2025 | 8.500 | 7.714 |
+| 2026 | 2.353 | 5.176 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*
 
 ## Charts
 
-![season_trends_champion_points](E:\football_data_analysis\data\analysis\korea2\charts\season_trends_champion_points.png)
-![season_trends_avg_goals](E:\football_data_analysis\data\analysis\korea2\charts\season_trends_avg_goals.png)
+![season_trends_champion_points](charts/season_trends_champion_points.png)
+![season_trends_avg_goals](charts/season_trends_avg_goals.png)
 

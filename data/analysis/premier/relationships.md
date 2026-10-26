@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-29T16:04:07+00:00
+- Generated: 2026-10-26T01:43:44+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
@@ -119,6 +119,6 @@ _Mean feature value per outcome; `range` is home-minus-away spread of the group 
 
 ## Charts
 
-![relationships_home_win_pct_by_form](E:\football_data_analysis\data\analysis\premier\charts\relationships_home_win_pct_by_form.png)
-![relationships_home_win_pct_by_position](E:\football_data_analysis\data\analysis\premier\charts\relationships_home_win_pct_by_position.png)
+![relationships_home_win_pct_by_form](charts/relationships_home_win_pct_by_form.png)
+![relationships_home_win_pct_by_position](charts/relationships_home_win_pct_by_position.png)
 

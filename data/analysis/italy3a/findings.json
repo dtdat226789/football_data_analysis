@@ -4,10 +4,10 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T15:58:19+00:00",
+  "generated_at": "2026-10-26T01:38:33+00:00",
   "config": {
     "league": "italy3a",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\italy3a",
+    "out_dir": "data/analysis/italy3a",
     "out_stem": null
   },
   "league": {
@@ -26,52 +26,52 @@
   "sources": [
     {
       "report_name": "database_profile",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\database_profile.json",
+      "path": "data/analysis/italy3a/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 29.53
+      "size_kb": 38.89
     },
     {
       "report_name": "matches_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\matches_analysis.json",
+      "path": "data/analysis/italy3a/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 9.37
+      "size_kb": 23.71
     },
     {
       "report_name": "goals_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\goals_analysis.json",
+      "path": "data/analysis/italy3a/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 6.26
+      "size_kb": 12.37
     },
     {
       "report_name": "teams_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\teams_analysis.json",
+      "path": "data/analysis/italy3a/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 34.65
+      "size_kb": 58.82
     },
     {
       "report_name": "season_trends",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\season_trends.json",
+      "path": "data/analysis/italy3a/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.94
+      "size_kb": 10.46
     },
     {
       "report_name": "scoreline_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\scoreline_analysis.json",
+      "path": "data/analysis/italy3a/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 69.13
+      "size_kb": 335.52
     },
     {
       "report_name": "relationships",
-      "path": "E:\\football_data_analysis\\data\\analysis\\italy3a\\relationships.json",
+      "path": "data/analysis/italy3a/relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.36
+      "size_kb": 13.8
     }
   ],
   "coverage": {
@@ -83,98 +83,98 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "450 matches: home wins 36.7%, draws 31.8%, away wins 31.6% (165H / 143D / 142A)",
+      "detail": "2383 matches: home wins 39.1%, draws 29.7%, away wins 31.2% (931H / 708D / 744A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "8 home and 9 away comebacks (trailing at HT but winning at FT)",
+      "detail": "48 home and 38 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 101 times",
+      "detail": "home lead at HT -> home win occurred 553 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "450 matches produced 1044 goals (avg 2.320 per match)",
+      "detail": "2383 matches produced 5441 goals (avg 2.283 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 53.1% vs away 46.9% of 1044 goals in total (home/away ratio 1.13)",
+      "detail": "home 53.9% vs away 46.1% of 5441 goals in total (home/away ratio 1.17)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "223 of 450 matches (49.6%)",
+      "detail": "1144 of 2383 matches (48.0%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 113 scoring matches, 28.2% of scoring)",
+      "detail": "minute 1-15 (first goal in 641 scoring matches, 29.9% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 33.83, median 27.5",
+      "detail": "mean 33.34, median 28.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "L.R. Vicenza leads with 89 points across 1 seasons (1 title(s), GD 43)",
+      "detail": "Renate leads with 353 points across 7 seasons (0 title(s), GD 18)",
       "importance": "high",
       "id": "F9"
     },
     {
       "source": "teams_analysis",
       "finding": "Team consistency",
-      "detail": "15 teams present in every one of the 2 seasons (AlbinoLeffe, Alcione Milano, Arzignano, Brescia, Cittadella...)",
+      "detail": "4 teams present in every one of the 7 seasons (AlbinoLeffe, Pergolettese, Pro Vercelli, Renate)",
       "importance": "medium",
       "id": "F10"
     },
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Triestina earns 20 more points at home than away (28 home vs 8 away)",
+      "detail": "Lecco earns 79 more points at home than away (188 home vs 109 away)",
       "importance": "medium",
       "id": "F11"
     },
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "L.R. Vicenza won 1 of 2 championship(s) on record",
+      "detail": "Como won 1 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Cittadella beat Brescia by 6 pts",
+      "detail": "2023-2024: Mantova beat Padova by 3 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.125 per match): first half 2.339 vs last half 2.214 across 2 seasons",
+      "detail": "up (+0.085 per match): first half 2.266 vs last half 2.351 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,62 +188,62 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.900)",
+      "detail": "2021-2022 (luck view, avg abs position diff 1.600)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 60 matches (13.3%)",
+      "detail": "1-1 in 342 matches (14.4%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (51 of 165 home matches, 30.9%)",
+      "detail": "1-0 (291 of 931 home matches, 31.3%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (60 of 143 draw matches, 42.0%)",
+      "detail": "1-1 (342 of 708 draw matches, 48.3%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (49 of 142 away matches, 34.5%)",
+      "detail": "0-1 (242 of 744 away matches, 32.5%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "3 match(es) with >= 7 total goals",
+      "detail": "14 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
     {
       "source": "relationships",
       "finding": "Strongest correlation with total goals",
-      "detail": "away_team_wins_last_5 |corr| = -0.1057 (n=380 leakage-safe rows)",
+      "detail": "home_team_points_last_5 |corr| = -0.0389 (n=2280 leakage-safe rows)",
       "importance": "medium",
       "id": "F22"
     },
     {
       "source": "relationships",
       "finding": "Most outcome-separating feature",
-      "detail": "points_difference spreads group means over 7.687: home 3.083, draw 0.357, away -4.603",
+      "detail": "points_difference spreads group means over 5.919: home 2.507, draw -0.189, away -3.412",
       "importance": "medium",
       "id": "F23"
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (8)",
+      "finding": "Data-quality warnings (10)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE",
       "importance": "high",
       "id": "F24"
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 450 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2383 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 450,
-    "avg_goals": 2.32,
-    "home_win_pct": 36.7,
-    "draw_pct": 31.8,
-    "away_win_pct": 31.6,
+    "n_matches": 2383,
+    "avg_goals": 2.283,
+    "home_win_pct": 39.1,
+    "draw_pct": 29.7,
+    "away_win_pct": 31.2,
     "most_common_scoreline": "1-1",
-    "dominant_team": "L.R. Vicenza",
-    "champion_most_titles": "L.R. Vicenza",
-    "btts_rate_pct": 49.6
+    "dominant_team": "Renate",
+    "champion_most_titles": "Como",
+    "btts_rate_pct": 48.0
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 29.53
+      "size_kb": 38.89
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 9.37
+      "size_kb": 23.71
     },
     {
       "module": "goals_analysis",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 6.26
+      "size_kb": 12.37
     },
     {
       "module": "teams_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 34.65
+      "size_kb": 58.82
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.94
+      "size_kb": 10.46
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 69.13
+      "size_kb": 335.52
     },
     {
       "module": "relationships",
@@ -359,17 +359,17 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.36
+      "size_kb": 13.8
     }
   ],
   "anomalies": [
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 70 matches, expected 380",
+      "message": "Season 2026-2027 has 103 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 70,
+        "n_matches": 103,
         "expected": 380
       }
     },
@@ -385,46 +385,78 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 18.6% vs overall 11.1% (deviation 7.5 pp)",
+      "message": "Season 2024-2025 goalless share 8.4% vs overall 10.1% (deviation 1.7 pp)",
       "details": {
-        "season": "2026-2027",
-        "season_goalless_pct": 18.6,
-        "overall_goalless_pct": 11.1,
-        "deviation_pp": 7.5
+        "season": "2024-2025",
+        "season_goalless_pct": 8.4,
+        "overall_goalless_pct": 10.1,
+        "deviation_pp": 1.7
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 30.0% vs overall 36.7%",
+      "message": "Season 2024-2025 home outcome share 43.7% vs overall 39.1%",
+      "details": {
+        "season": "2024-2025",
+        "outcome": "home",
+        "season_share": 43.7,
+        "overall_share": 39.1
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 14.6% vs overall 10.1% (deviation 4.5 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 14.6,
+        "overall_goalless_pct": 10.1,
+        "deviation_pp": 4.5
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 34.0% vs overall 39.1%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 30.0,
-        "overall_share": 36.7
+        "season_share": 34.0,
+        "overall_share": 39.1
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 40.0% vs overall 31.8%",
+      "message": "Season 2026-2027 draw outcome share 35.9% vs overall 29.7%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 40.0,
-        "overall_share": 31.8
+        "season_share": 35.9,
+        "overall_share": 29.7
       }
     },
     {
       "code": "HIGH_SCORING_MATCHES",
       "severity": "warning",
-      "message": "1 match(es) with >= 8 total goals (extreme scorelines)",
+      "message": "3 match(es) with >= 8 total goals (extreme scorelines)",
       "details": {
-        "n_matches": 1,
+        "n_matches": 3,
         "threshold": 8,
         "examples": [
           {
+            "scoreline": "4-5",
+            "total_goals": 9,
+            "count": 1
+          },
+          {
             "scoreline": "3-5",
+            "total_goals": 8,
+            "count": 1
+          },
+          {
+            "scoreline": "2-6",
             "total_goals": 8,
             "count": 1
           }
@@ -437,20 +469,20 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 16070,
-        "distinct": 16060,
+        "rows": 77016,
+        "distinct": 77006,
         "duplicates": 10
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=362, fgte=362 rows)",
       "details": {
-        "total": 16070,
-        "fgt_inconsistent": 17,
-        "fgte_inconsistent": 17,
-        "n_with_fgt": 14958
+        "total": 77016,
+        "fgt_inconsistent": 362,
+        "fgte_inconsistent": 362,
+        "n_with_fgt": 70963
       }
     }
   ],

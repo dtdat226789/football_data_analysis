@@ -1,136 +1,151 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:54:04+00:00
+- Generated: 2026-10-26T01:35:59+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: NB I. (Hungary)
 - Scope: league `hungary1`
 
-- Teams: **14** | Seasons: **2** | Matches: **245**
+- Teams: **19** | Seasons: **7** | Matches: **1250**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Gyor | 2 | 41 | 24 | 12 | 5 | 84 | 81 | 40 | 41 | 42.0 | 1 | 1 | 2 |
-| Ferencvaros | 2 | 40 | 24 | 8 | 8 | 80 | 78 | 39 | 39 | 40.0 | 2 | 5 | 0 |
-| Paks | 2 | 41 | 18 | 10 | 13 | 64 | 79 | 63 | 16 | 32.0 | 3 | 6 | 0 |
-| Debrecen | 2 | 41 | 16 | 14 | 11 | 62 | 63 | 56 | 7 | 31.0 | 4 | 9 | 0 |
-| Puskas Academy | 2 | 41 | 18 | 7 | 16 | 61 | 56 | 53 | 3 | 30.5 | 2 | 6 | 0 |
-| Zalaegerszegi | 2 | 41 | 15 | 9 | 17 | 54 | 56 | 60 | -4 | 27.0 | 5 | 12 | 0 |
-| Ujpest | 2 | 41 | 15 | 9 | 17 | 54 | 65 | 70 | -5 | 27.0 | 4 | 7 | 0 |
-| Kisvarda | 2 | 41 | 13 | 10 | 18 | 49 | 45 | 59 | -14 | 24.5 | 8 | 9 | 0 |
-| Nyiregyhaza | 2 | 41 | 12 | 12 | 17 | 48 | 56 | 71 | -15 | 24.0 | 8 | 10 | 0 |
-| MTK Budapest | 2 | 41 | 11 | 14 | 16 | 47 | 70 | 76 | -6 | 23.5 | 7 | 10 | 0 |
-| DVTK | 1 | 33 | 6 | 10 | 17 | 28 | 39 | 65 | -26 | 28.0 | 11 | 11 | 0 |
+| Ferencvaros | 7 | 207 | 131 | 44 | 32 | 437 | 415 | 188 | 227 | 62.43 | 1 | 6 | 5 |
+| Puskas Academy | 7 | 208 | 101 | 50 | 57 | 353 | 319 | 244 | 75 | 50.43 | 2 | 6 | 0 |
+| Paks | 7 | 208 | 92 | 48 | 68 | 324 | 407 | 338 | 69 | 46.29 | 2 | 7 | 0 |
+| Ujpest | 7 | 209 | 70 | 50 | 89 | 260 | 287 | 354 | -67 | 37.14 | 5 | 10 | 0 |
+| Zalaegerszegi | 7 | 209 | 65 | 55 | 89 | 250 | 290 | 326 | -36 | 35.71 | 5 | 11 | 0 |
+| Debrecen | 6 | 176 | 66 | 46 | 64 | 244 | 267 | 255 | 12 | 40.67 | 3 | 9 | 0 |
+| Kisvarda | 6 | 176 | 60 | 51 | 65 | 231 | 211 | 236 | -25 | 38.5 | 2 | 11 | 0 |
+| Videoton | 5 | 165 | 61 | 41 | 63 | 224 | 243 | 216 | 27 | 44.8 | 3 | 11 | 0 |
+| MTK Budapest | 6 | 175 | 57 | 47 | 71 | 218 | 239 | 287 | -48 | 36.33 | 5 | 10 | 0 |
+| DVTK | 4 | 132 | 38 | 36 | 58 | 150 | 166 | 225 | -59 | 37.5 | 6 | 11 | 0 |
+| Gyor | 3 | 77 | 40 | 23 | 14 | 143 | 133 | 79 | 54 | 47.67 | 1 | 4 | 2 |
+| Mezokovesd-Zsory | 4 | 132 | 37 | 32 | 63 | 143 | 148 | 201 | -53 | 35.75 | 12 | 13 | 0 |
+| Kecskemeti TE | 3 | 99 | 32 | 31 | 36 | 127 | 124 | 130 | -6 | 42.33 | 2 | 12 | 0 |
+| Honved | 4 | 109 | 29 | 31 | 49 | 118 | 141 | 167 | -26 | 29.5 | 8 | 10 | 0 |
+| Nyiregyhaza | 3 | 76 | 21 | 21 | 34 | 84 | 88 | 129 | -41 | 28.0 | 8 | 12 | 0 |
+| Vasas | 2 | 43 | 8 | 17 | 18 | 41 | 47 | 56 | -9 | 20.5 | 4 | 12 | 0 |
+| Gyirmot | 1 | 33 | 7 | 11 | 15 | 32 | 34 | 49 | -15 | 32.0 | 11 | 11 | 0 |
+| Budafoki | 1 | 33 | 7 | 6 | 20 | 27 | 34 | 74 | -40 | 27.0 | 12 | 12 | 0 |
 | Kazincbarcika | 1 | 33 | 6 | 4 | 23 | 22 | 31 | 70 | -39 | 22.0 | 12 | 12 | 0 |
-| Vasas | 1 | 8 | 4 | 2 | 2 | 14 | 17 | 11 | 6 | 14.0 | 3 | 3 | 0 |
-| Honved | 1 | 7 | 1 | 3 | 3 | 6 | 11 | 14 | -3 | 6.0 | 11 | 11 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| MTK Budapest | 22 | 9 | 4 | 9 | 31 | 19 | 2 | 10 | 7 | 16 | 15 |
-| Zalaegerszegi | 20 | 10 | 4 | 6 | 34 | 21 | 5 | 5 | 11 | 20 | 14 |
-| Ujpest | 21 | 9 | 5 | 7 | 32 | 20 | 6 | 4 | 10 | 22 | 10 |
-| Nyiregyhaza | 21 | 7 | 8 | 6 | 29 | 20 | 5 | 4 | 11 | 19 | 10 |
-| Kisvarda | 22 | 7 | 7 | 8 | 28 | 19 | 6 | 3 | 10 | 21 | 7 |
-| Paks | 20 | 10 | 5 | 5 | 35 | 21 | 8 | 5 | 8 | 29 | 6 |
-| DVTK | 16 | 3 | 7 | 6 | 16 | 17 | 3 | 3 | 11 | 12 | 4 |
-| Gyor | 20 | 13 | 4 | 3 | 43 | 21 | 11 | 8 | 2 | 41 | 2 |
-| Honved | 3 | 1 | 1 | 1 | 4 | 4 | 0 | 2 | 2 | 2 | 2 |
+| Paks | 104 | 57 | 18 | 29 | 189 | 104 | 35 | 30 | 39 | 135 | 54 |
+| Ujpest | 106 | 43 | 28 | 35 | 157 | 103 | 27 | 22 | 54 | 103 | 54 |
+| Videoton | 80 | 39 | 22 | 19 | 139 | 85 | 22 | 19 | 44 | 85 | 54 |
+| Zalaegerszegi | 105 | 39 | 30 | 36 | 147 | 104 | 26 | 25 | 53 | 103 | 44 |
+| Kecskemeti TE | 51 | 22 | 17 | 12 | 83 | 48 | 10 | 14 | 24 | 44 | 39 |
+| Kisvarda | 88 | 36 | 25 | 27 | 133 | 88 | 24 | 26 | 38 | 98 | 35 |
+| DVTK | 67 | 23 | 23 | 21 | 92 | 65 | 15 | 13 | 37 | 58 | 34 |
+| Debrecen | 88 | 39 | 21 | 28 | 138 | 88 | 27 | 25 | 36 | 106 | 32 |
+| MTK Budapest | 89 | 35 | 20 | 34 | 125 | 86 | 22 | 27 | 37 | 93 | 32 |
+| Mezokovesd-Zsory | 65 | 24 | 13 | 28 | 85 | 67 | 13 | 19 | 35 | 58 | 27 |
+| Nyiregyhaza | 39 | 14 | 13 | 12 | 55 | 37 | 7 | 8 | 22 | 29 | 26 |
+| Puskas Academy | 101 | 53 | 22 | 26 | 181 | 107 | 48 | 28 | 31 | 172 | 9 |
+| Gyor | 39 | 22 | 7 | 10 | 73 | 38 | 18 | 16 | 4 | 70 | 3 |
+| Vasas | 22 | 4 | 9 | 9 | 21 | 21 | 4 | 8 | 9 | 20 | 1 |
+| Budafoki | 17 | 4 | 2 | 11 | 14 | 16 | 3 | 4 | 9 | 13 | 1 |
 | Kazincbarcika | 17 | 3 | 2 | 12 | 11 | 16 | 3 | 2 | 11 | 11 | 0 |
-| Vasas | 4 | 2 | 1 | 1 | 7 | 4 | 2 | 1 | 1 | 7 | 0 |
-| Debrecen | 21 | 8 | 6 | 7 | 30 | 20 | 8 | 8 | 4 | 32 | -2 |
-| Puskas Academy | 20 | 7 | 4 | 9 | 25 | 21 | 11 | 3 | 7 | 36 | -11 |
-| Ferencvaros | 18 | 9 | 4 | 5 | 31 | 22 | 15 | 4 | 3 | 49 | -18 |
+| Gyirmot | 17 | 2 | 8 | 7 | 14 | 16 | 5 | 3 | 8 | 18 | -4 |
+| Honved | 54 | 12 | 19 | 23 | 55 | 55 | 17 | 12 | 26 | 63 | -8 |
+| Ferencvaros | 101 | 63 | 23 | 15 | 212 | 106 | 68 | 21 | 17 | 225 | -13 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Gyor | 2.05 |
-| 2 | Ferencvaros | 2.00 |
-| 3 | Vasas | 1.75 |
+| 1 | Ferencvaros | 2.11 |
+| 2 | Gyor | 1.86 |
+| 3 | Puskas Academy | 1.70 |
 | 4 | Paks | 1.56 |
-| 5 | Debrecen | 1.51 |
+| 5 | Debrecen | 1.39 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Gyor | 81 |
-| 2 | Paks | 79 |
-| 3 | Ferencvaros | 78 |
-| 4 | MTK Budapest | 70 |
-| 5 | Ujpest | 65 |
+| 1 | Ferencvaros | 415 |
+| 2 | Paks | 407 |
+| 3 | Puskas Academy | 319 |
+| 4 | Zalaegerszegi | 290 |
+| 5 | Ujpest | 287 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Gyor | 41 |
-| 2 | Ferencvaros | 39 |
-| 3 | Paks | 16 |
-| 4 | Debrecen | 7 |
-| 5 | Vasas | 6 |
+| 1 | Ferencvaros | 227 |
+| 2 | Puskas Academy | 75 |
+| 3 | Paks | 69 |
+| 4 | Gyor | 54 |
+| 5 | Videoton | 27 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Ferencvaros | 0.975 |
-| 2 | Gyor | 0.976 |
-| 3 | Puskas Academy | 1.293 |
-| 4 | Debrecen | 1.366 |
-| 5 | Vasas | 1.375 |
+| 1 | Ferencvaros | 0.910 |
+| 2 | Gyor | 1.026 |
+| 3 | Puskas Academy | 1.182 |
+| 4 | Videoton | 1.314 |
+| 5 | Vasas | 1.317 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **10**
+- Teams present in all **7** seasons: **5**
 
-Debrecen, Ferencvaros, Gyor, Kisvarda, MTK Budapest, Nyiregyhaza, Paks, Puskas Academy, Ujpest, Zalaegerszegi
+Ferencvaros, Paks, Puskas Academy, Ujpest, Zalaegerszegi
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **80** (showing the 15 most frequent)
+- Distinct fixtures: **150** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Debrecen vs Ujpest | 4 | 4 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Gyor vs Nyiregyhaza | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Nyiregyhaza vs MTK Budapest | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Paks vs Puskas Academy | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Puskas Academy vs Kisvarda | 4 | 3 | 0 | 1 | 75.0% | 0.0% | 25.0% |
-| Zalaegerszegi vs MTK Budapest | 4 | 3 | 1 | 0 | 75.0% | 25.0% | 0.0% |
-| Debrecen vs MTK Budapest | 4 | 2 | 2 | 0 | 50.0% | 50.0% | 0.0% |
-| Ferencvaros vs Paks | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Ferencvaros vs Zalaegerszegi | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Gyor vs Kisvarda | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Gyor vs Zalaegerszegi | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Kisvarda vs MTK Budapest | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Paks vs Debrecen | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 25.0% |
-| Paks vs Kisvarda | 4 | 2 | 0 | 2 | 50.0% | 0.0% | 50.0% |
-| Paks vs Nyiregyhaza | 4 | 2 | 2 | 0 | 50.0% | 50.0% | 0.0% |
+| Puskas Academy vs Paks | 19 | 12 | 1 | 6 | 63.2% | 5.3% | 31.6% |
+| Ferencvaros vs Paks | 19 | 10 | 1 | 8 | 52.6% | 5.3% | 42.1% |
+| Ferencvaros vs Ujpest | 19 | 10 | 3 | 6 | 52.6% | 15.8% | 31.6% |
+| Ujpest vs Zalaegerszegi | 19 | 10 | 4 | 5 | 52.6% | 21.1% | 26.3% |
+| Ferencvaros vs Zalaegerszegi | 19 | 8 | 2 | 9 | 42.1% | 10.5% | 47.4% |
+| Paks vs Ujpest | 19 | 8 | 3 | 8 | 42.1% | 15.8% | 42.1% |
+| Paks vs Zalaegerszegi | 19 | 7 | 8 | 4 | 36.8% | 42.1% | 21.1% |
+| Puskas Academy vs Ujpest | 19 | 7 | 5 | 7 | 36.8% | 26.3% | 36.8% |
+| Puskas Academy vs Zalaegerszegi | 19 | 7 | 3 | 9 | 36.8% | 15.8% | 47.4% |
+| Ferencvaros vs Puskas Academy | 19 | 6 | 7 | 6 | 31.6% | 36.8% | 31.6% |
+| Ujpest vs Debrecen | 16 | 10 | 2 | 4 | 62.5% | 12.5% | 25.0% |
+| Ujpest vs Kisvarda | 16 | 10 | 3 | 3 | 62.5% | 18.8% | 18.8% |
+| Zalaegerszegi vs Debrecen | 16 | 10 | 3 | 3 | 62.5% | 18.8% | 18.8% |
+| Paks vs MTK Budapest | 16 | 9 | 2 | 5 | 56.2% | 12.5% | 31.2% |
+| MTK Budapest vs Zalaegerszegi | 16 | 8 | 4 | 4 | 50.0% | 25.0% | 25.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Gyor | 1 | 1 |
-| Ferencvaros | 2 | 5 |
-| Paks | 3 | 6 |
-| Debrecen | 4 | 9 |
-| Puskas Academy | 6 | 2 |
-| Zalaegerszegi | 5 | 12 |
-| Ujpest | 7 | 4 |
-| Kisvarda | 9 | 8 |
-| Nyiregyhaza | 8 | 10 |
-| MTK Budapest | 10 | 7 |
-| DVTK | 11 | - |
-| Kazincbarcika | 12 | - |
-| Vasas | - | 3 |
-| Honved | - | 11 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Ferencvaros | 1 | 1 | 1 | 1 | 1 | 2 | 6 |
+| Puskas Academy | 2 | 3 | 3 | 4 | 2 | 6 | 2 |
+| Paks | 4 | 5 | 5 | 2 | 3 | 3 | 7 |
+| Ujpest | 5 | 6 | 7 | 10 | 7 | 7 | 5 |
+| Zalaegerszegi | 9 | 7 | 9 | 9 | 10 | 5 | 11 |
+| Debrecen | - | 9 | 4 | 5 | 9 | 4 | 3 |
+| Kisvarda | 6 | 2 | 6 | 11 | - | 9 | 9 |
+| Videoton | 3 | 4 | 8 | 3 | 11 | - | - |
+| MTK Budapest | 7 | 10 | - | 6 | 5 | 10 | 8 |
+| DVTK | 10 | - | - | 8 | 6 | 11 | - |
+| Gyor | - | - | - | - | 4 | 1 | 1 |
+| Mezokovesd-Zsory | 13 | 12 | 13 | 12 | - | - | - |
+| Kecskemeti TE | - | - | 2 | 7 | 12 | - | - |
+| Honved | 8 | 8 | 10 | - | - | - | 10 |
+| Nyiregyhaza | - | - | - | - | 8 | 8 | 12 |
+| Vasas | - | - | 12 | - | - | - | 4 |
+| Gyirmot | - | 11 | - | - | - | - | - |
+| Budafoki | 12 | - | - | - | - | - | - |
+| Kazincbarcika | - | - | - | - | - | 12 | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\hungary1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\hungary1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

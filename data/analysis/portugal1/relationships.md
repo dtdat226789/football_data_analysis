@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-09-29T16:03:33+00:00
+- Generated: 2026-10-26T01:43:04+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`
@@ -119,6 +119,6 @@ _Mean feature value per outcome; `range` is home-minus-away spread of the group 
 
 ## Charts
 
-![relationships_home_win_pct_by_form](E:\football_data_analysis\data\analysis\portugal1\charts\relationships_home_win_pct_by_form.png)
-![relationships_home_win_pct_by_position](E:\football_data_analysis\data\analysis\portugal1\charts\relationships_home_win_pct_by_position.png)
+![relationships_home_win_pct_by_form](charts/relationships_home_win_pct_by_form.png)
+![relationships_home_win_pct_by_position](charts/relationships_home_win_pct_by_position.png)
 

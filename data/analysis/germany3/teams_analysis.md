@@ -1,172 +1,232 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T15:51:25+00:00
+- Generated: 2026-10-26T01:34:02+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`
 
-- Teams: **26** | Seasons: **2** | Matches: **450**
+- Teams: **46** | Seasons: **7** | Matches: **2380**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Duisburg | 2 | 45 | 25 | 11 | 9 | 86 | 85 | 56 | 29 | 43.0 | 1 | 4 | 1 |
-| RW Essen | 2 | 45 | 24 | 12 | 9 | 84 | 91 | 75 | 16 | 42.0 | 3 | 3 | 0 |
-| VfL Osnabruck | 1 | 38 | 24 | 8 | 6 | 80 | 66 | 34 | 32 | 80.0 | 1 | 1 | 1 |
-| Hansa Rostock | 2 | 45 | 21 | 16 | 8 | 79 | 89 | 64 | 25 | 39.5 | 5 | 6 | 0 |
-| Alemannia Aachen | 2 | 45 | 22 | 9 | 14 | 75 | 87 | 65 | 22 | 37.5 | 7 | 7 | 0 |
-| Verl | 2 | 45 | 21 | 11 | 13 | 74 | 92 | 61 | 31 | 37.0 | 6 | 11 | 0 |
-| Cottbus | 1 | 38 | 21 | 9 | 8 | 72 | 72 | 51 | 21 | 72.0 | 2 | 2 | 0 |
-| Viktoria Koln | 2 | 45 | 20 | 6 | 19 | 66 | 70 | 62 | 8 | 33.0 | 2 | 11 | 0 |
-| Mannheim | 2 | 45 | 18 | 8 | 19 | 62 | 70 | 82 | -12 | 31.0 | 9 | 10 | 0 |
-| Wehen | 2 | 45 | 16 | 10 | 19 | 58 | 59 | 65 | -6 | 29.0 | 9 | 19 | 0 |
-| Ingolstadt | 2 | 45 | 15 | 12 | 18 | 57 | 72 | 67 | 5 | 28.5 | 12 | 14 | 0 |
-| Saarbrucken | 2 | 45 | 14 | 15 | 16 | 57 | 70 | 69 | 1 | 28.5 | 4 | 15 | 0 |
-| Munich 1860 | 1 | 38 | 15 | 11 | 12 | 56 | 54 | 53 | 1 | 56.0 | 8 | 8 | 0 |
-| Hoffenheim II | 2 | 45 | 16 | 8 | 21 | 56 | 79 | 79 | 0 | 28.0 | 5 | 16 | 0 |
-| Regensburg | 2 | 45 | 15 | 9 | 21 | 54 | 67 | 75 | -8 | 27.0 | 13 | 18 | 0 |
-| Stuttgart II | 2 | 45 | 15 | 8 | 22 | 53 | 69 | 84 | -15 | 26.5 | 14 | 15 | 0 |
-| TSV Havelse | 2 | 45 | 10 | 9 | 26 | 39 | 67 | 104 | -37 | 19.5 | 17 | 20 | 0 |
-| Aue | 1 | 38 | 7 | 13 | 18 | 34 | 51 | 70 | -19 | 34.0 | 18 | 18 | 0 |
-| Ulm | 1 | 38 | 9 | 6 | 23 | 33 | 49 | 78 | -29 | 33.0 | 19 | 19 | 0 |
+| Saarbrucken | 7 | 238 | 100 | 73 | 65 | 373 | 382 | 300 | 82 | 53.29 | 3 | 15 | 0 |
+| Munich 1860 | 6 | 228 | 94 | 58 | 76 | 340 | 350 | 296 | 54 | 56.67 | 4 | 15 | 0 |
+| Viktoria Koln | 7 | 238 | 93 | 57 | 88 | 336 | 350 | 346 | 4 | 48.0 | 2 | 13 | 0 |
+| Verl | 7 | 239 | 87 | 71 | 81 | 332 | 403 | 362 | 41 | 47.43 | 6 | 16 | 0 |
+| Mannheim | 7 | 238 | 90 | 60 | 88 | 330 | 343 | 353 | -10 | 47.14 | 4 | 16 | 0 |
+| Wehen | 6 | 201 | 85 | 48 | 68 | 303 | 310 | 277 | 33 | 50.5 | 4 | 9 | 0 |
+| Ingolstadt | 6 | 201 | 80 | 52 | 69 | 292 | 327 | 282 | 45 | 48.67 | 3 | 12 | 0 |
+| SG Dynamo Dresden | 4 | 152 | 82 | 30 | 40 | 276 | 255 | 153 | 102 | 69.0 | 1 | 6 | 1 |
+| Duisburg | 6 | 201 | 71 | 48 | 82 | 261 | 289 | 325 | -36 | 43.5 | 1 | 18 | 1 |
+| VfL Osnabruck | 4 | 152 | 75 | 35 | 42 | 260 | 242 | 187 | 55 | 65.0 | 1 | 14 | 1 |
+| RW Essen | 5 | 163 | 68 | 44 | 51 | 248 | 255 | 242 | 13 | 49.6 | 3 | 15 | 0 |
+| Hansa Rostock | 4 | 125 | 60 | 34 | 31 | 214 | 198 | 148 | 50 | 53.5 | 2 | 8 | 0 |
+| Dortmund II | 4 | 152 | 52 | 35 | 65 | 191 | 210 | 213 | -3 | 47.75 | 11 | 17 | 0 |
+| Aue | 4 | 152 | 50 | 39 | 63 | 189 | 203 | 244 | -41 | 47.25 | 6 | 18 | 0 |
+| Hallescher | 4 | 152 | 46 | 42 | 64 | 180 | 199 | 236 | -37 | 45.0 | 9 | 17 | 0 |
+| Freiburg II | 3 | 114 | 42 | 27 | 45 | 153 | 129 | 145 | -16 | 51.0 | 2 | 20 | 0 |
+| Meppen | 4 | 124 | 38 | 28 | 58 | 142 | 144 | 203 | -59 | 35.5 | 10 | 17 | 0 |
+| Cottbus | 2 | 76 | 39 | 17 | 20 | 134 | 136 | 105 | 31 | 67.0 | 2 | 4 | 0 |
+| Zwickau | 3 | 113 | 33 | 35 | 45 | 134 | 136 | 163 | -27 | 44.67 | 10 | 19 | 0 |
+| Magdeburg | 2 | 76 | 39 | 15 | 22 | 132 | 130 | 86 | 44 | 66.0 | 1 | 11 | 1 |
+| Alemannia Aachen | 3 | 87 | 36 | 23 | 28 | 131 | 137 | 118 | 19 | 43.67 | 5 | 12 | 0 |
+| Regensburg | 3 | 87 | 33 | 23 | 31 | 122 | 125 | 120 | 5 | 40.67 | 3 | 18 | 0 |
+| Arminia Bielefeld | 2 | 76 | 32 | 22 | 22 | 118 | 112 | 83 | 29 | 59.0 | 1 | 14 | 1 |
+| Unterhaching | 3 | 114 | 29 | 25 | 60 | 112 | 130 | 178 | -48 | 37.33 | 9 | 20 | 0 |
+| Ulm | 2 | 76 | 32 | 14 | 30 | 110 | 114 | 116 | -2 | 55.0 | 1 | 19 | 1 |
+| Kaiserslautern | 2 | 75 | 27 | 28 | 20 | 109 | 105 | 80 | 25 | 54.5 | 3 | 15 | 0 |
+| Stuttgart II | 3 | 87 | 29 | 20 | 38 | 107 | 124 | 148 | -24 | 35.67 | 12 | 15 | 0 |
+| Sandhausen | 2 | 76 | 24 | 19 | 33 | 91 | 107 | 126 | -19 | 45.5 | 8 | 19 | 0 |
+| Preussen Munster | 2 | 48 | 22 | 13 | 13 | 79 | 86 | 70 | 16 | 39.5 | 2 | 14 | 0 |
+| Turkgucu Munchen | 2 | 69 | 20 | 19 | 30 | 79 | 75 | 102 | -27 | 39.5 | 13 | 19 | 0 |
+| Elversberg | 1 | 38 | 22 | 8 | 8 | 74 | 80 | 40 | 40 | 74.0 | 1 | 1 | 1 |
+| Braunschweig | 1 | 37 | 19 | 10 | 8 | 67 | 63 | 36 | 27 | 67.0 | 2 | 2 | 0 |
+| Lubeck | 2 | 76 | 14 | 25 | 37 | 67 | 78 | 134 | -56 | 33.5 | 19 | 19 | 0 |
+| TSV Havelse | 3 | 86 | 16 | 19 | 51 | 67 | 99 | 186 | -87 | 22.33 | 17 | 20 | 0 |
+| Hoffenheim II | 2 | 48 | 17 | 8 | 23 | 59 | 85 | 86 | -1 | 29.5 | 7 | 16 | 0 |
+| Uerdingen | 1 | 38 | 11 | 11 | 16 | 44 | 38 | 50 | -12 | 44.0 | 14 | 14 | 0 |
+| Wurzburger Kickers | 2 | 48 | 11 | 11 | 26 | 44 | 51 | 83 | -32 | 22.0 | 17 | 18 | 0 |
+| Viktoria Berlin | 1 | 37 | 10 | 8 | 19 | 38 | 44 | 62 | -18 | 38.0 | 17 | 17 | 0 |
+| Bayern II | 1 | 38 | 8 | 13 | 17 | 37 | 47 | 58 | -11 | 37.0 | 18 | 18 | 0 |
+| Hannover II | 1 | 38 | 9 | 10 | 19 | 37 | 51 | 70 | -19 | 37.0 | 18 | 18 | 0 |
+| VfB Oldenburg | 1 | 38 | 9 | 8 | 21 | 35 | 42 | 64 | -22 | 35.0 | 18 | 18 | 0 |
+| Bayreuth | 1 | 38 | 9 | 5 | 24 | 32 | 39 | 81 | -42 | 32.0 | 20 | 20 | 0 |
 | Schweinfurt | 1 | 38 | 5 | 6 | 27 | 21 | 38 | 87 | -49 | 21.0 | 20 | 20 | 0 |
-| Preussen Munster | 1 | 7 | 3 | 2 | 2 | 11 | 12 | 13 | -1 | 11.0 | 8 | 8 | 0 |
-| Dusseldorf | 1 | 7 | 3 | 1 | 3 | 10 | 6 | 7 | -1 | 10.0 | 10 | 10 | 0 |
-| Fortuna Koln | 1 | 7 | 2 | 3 | 2 | 9 | 8 | 8 | 0 | 9.0 | 12 | 12 | 0 |
-| Grossaspach | 1 | 7 | 2 | 2 | 3 | 8 | 6 | 9 | -3 | 8.0 | 13 | 13 | 0 |
-| Wurzburger Kickers | 1 | 7 | 2 | 1 | 4 | 7 | 11 | 15 | -4 | 7.0 | 16 | 16 | 0 |
-| Meppen | 1 | 7 | 2 | 0 | 5 | 6 | 8 | 15 | -7 | 6.0 | 17 | 17 | 0 |
+| Dusseldorf | 1 | 11 | 4 | 3 | 4 | 15 | 12 | 14 | -2 | 15.0 | 10 | 10 | 0 |
+| Grossaspach | 1 | 11 | 3 | 3 | 5 | 12 | 13 | 25 | -12 | 12.0 | 16 | 16 | 0 |
+| Fortuna Koln | 1 | 10 | 2 | 4 | 4 | 10 | 8 | 11 | -3 | 10.0 | 19 | 19 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Duisburg | 22 | 17 | 5 | 0 | 56 | 23 | 8 | 6 | 9 | 30 | 26 |
-| TSV Havelse | 23 | 8 | 5 | 10 | 29 | 22 | 2 | 4 | 16 | 10 | 19 |
-| Verl | 23 | 14 | 4 | 5 | 46 | 22 | 7 | 7 | 8 | 28 | 18 |
-| Mannheim | 23 | 12 | 4 | 7 | 40 | 22 | 6 | 4 | 12 | 22 | 18 |
-| Saarbrucken | 23 | 10 | 7 | 6 | 37 | 22 | 4 | 8 | 10 | 20 | 17 |
-| RW Essen | 23 | 15 | 5 | 3 | 50 | 22 | 9 | 7 | 6 | 34 | 16 |
-| Wehen | 23 | 11 | 3 | 9 | 36 | 22 | 5 | 7 | 10 | 22 | 14 |
-| Munich 1860 | 19 | 9 | 7 | 3 | 34 | 19 | 6 | 4 | 9 | 22 | 12 |
-| Stuttgart II | 22 | 9 | 5 | 8 | 32 | 23 | 6 | 3 | 14 | 21 | 11 |
+| Mannheim | 119 | 59 | 27 | 33 | 204 | 119 | 31 | 33 | 55 | 126 | 78 |
+| RW Essen | 82 | 43 | 22 | 17 | 151 | 81 | 25 | 22 | 34 | 97 | 54 |
+| Duisburg | 100 | 43 | 27 | 30 | 156 | 101 | 28 | 21 | 52 | 105 | 51 |
+| Aue | 76 | 33 | 19 | 24 | 118 | 76 | 17 | 20 | 39 | 71 | 47 |
+| Hallescher | 76 | 30 | 22 | 24 | 112 | 76 | 16 | 20 | 40 | 68 | 44 |
+| Freiburg II | 57 | 27 | 16 | 14 | 97 | 57 | 15 | 11 | 31 | 56 | 41 |
+| Saarbrucken | 119 | 58 | 32 | 29 | 206 | 119 | 42 | 41 | 36 | 167 | 39 |
+| Viktoria Koln | 119 | 54 | 25 | 40 | 187 | 119 | 39 | 32 | 48 | 149 | 38 |
+| Wehen | 101 | 49 | 22 | 30 | 169 | 100 | 36 | 26 | 38 | 134 | 35 |
+| Unterhaching | 57 | 20 | 13 | 24 | 73 | 57 | 9 | 12 | 36 | 39 | 34 |
+| Munich 1860 | 114 | 52 | 29 | 33 | 185 | 114 | 42 | 29 | 43 | 155 | 30 |
+| Ingolstadt | 101 | 45 | 26 | 30 | 161 | 100 | 35 | 26 | 39 | 131 | 30 |
+| Stuttgart II | 43 | 20 | 8 | 15 | 68 | 44 | 9 | 12 | 23 | 39 | 29 |
+| Verl | 119 | 47 | 39 | 33 | 180 | 120 | 40 | 32 | 48 | 152 | 28 |
+| Meppen | 63 | 25 | 9 | 29 | 84 | 61 | 13 | 19 | 29 | 58 | 26 |
+| SG Dynamo Dresden | 76 | 44 | 18 | 14 | 150 | 76 | 38 | 12 | 26 | 126 | 24 |
+| Kaiserslautern | 37 | 17 | 15 | 5 | 66 | 38 | 10 | 13 | 15 | 43 | 23 |
+| Sandhausen | 38 | 16 | 7 | 15 | 55 | 38 | 8 | 12 | 18 | 36 | 19 |
+| TSV Havelse | 43 | 12 | 7 | 24 | 43 | 43 | 4 | 12 | 27 | 24 | 19 |
+| Preussen Munster | 24 | 13 | 8 | 3 | 47 | 24 | 9 | 5 | 10 | 32 | 15 |
+| Turkgucu Munchen | 34 | 12 | 11 | 11 | 47 | 35 | 8 | 8 | 19 | 32 | 15 |
+| Cottbus | 38 | 21 | 11 | 6 | 74 | 38 | 18 | 6 | 14 | 60 | 14 |
+| Lubeck | 38 | 8 | 16 | 14 | 40 | 38 | 6 | 9 | 23 | 27 | 13 |
+| Viktoria Berlin | 19 | 7 | 4 | 8 | 25 | 18 | 3 | 4 | 11 | 13 | 12 |
+| Alemannia Aachen | 44 | 20 | 11 | 13 | 71 | 43 | 16 | 12 | 15 | 60 | 11 |
 | Schweinfurt | 19 | 4 | 4 | 11 | 16 | 19 | 1 | 2 | 16 | 5 | 11 |
-| Cottbus | 19 | 11 | 7 | 1 | 40 | 19 | 10 | 2 | 7 | 32 | 8 |
-| Viktoria Koln | 23 | 11 | 3 | 9 | 36 | 22 | 9 | 3 | 10 | 30 | 6 |
-| Regensburg | 22 | 9 | 3 | 10 | 30 | 23 | 6 | 6 | 11 | 24 | 6 |
-| Aue | 19 | 4 | 8 | 7 | 20 | 19 | 3 | 5 | 11 | 14 | 6 |
-| Grossaspach | 4 | 2 | 1 | 1 | 7 | 3 | 0 | 1 | 2 | 1 | 6 |
-| Ulm | 19 | 6 | 1 | 12 | 19 | 19 | 3 | 5 | 11 | 14 | 5 |
-| Wurzburger Kickers | 3 | 2 | 0 | 1 | 6 | 4 | 0 | 1 | 3 | 1 | 5 |
-| Hoffenheim II | 23 | 8 | 6 | 9 | 30 | 22 | 8 | 2 | 12 | 26 | 4 |
-| Dusseldorf | 3 | 2 | 0 | 1 | 6 | 4 | 1 | 1 | 2 | 4 | 2 |
-| Meppen | 3 | 1 | 0 | 2 | 3 | 4 | 1 | 0 | 3 | 3 | 0 |
-| Preussen Munster | 3 | 1 | 2 | 0 | 5 | 4 | 2 | 0 | 2 | 6 | -1 |
-| Alemannia Aachen | 23 | 11 | 3 | 9 | 36 | 22 | 11 | 6 | 5 | 39 | -3 |
-| VfL Osnabruck | 19 | 11 | 5 | 3 | 38 | 19 | 13 | 3 | 3 | 42 | -4 |
-| Hansa Rostock | 22 | 10 | 7 | 5 | 37 | 23 | 11 | 9 | 3 | 42 | -5 |
-| Fortuna Koln | 3 | 0 | 2 | 1 | 2 | 4 | 2 | 1 | 1 | 7 | -5 |
-| Ingolstadt | 22 | 6 | 6 | 10 | 24 | 23 | 9 | 6 | 8 | 33 | -9 |
+| Hansa Rostock | 62 | 31 | 19 | 12 | 112 | 63 | 29 | 15 | 19 | 102 | 10 |
+| Regensburg | 43 | 18 | 12 | 13 | 66 | 44 | 15 | 11 | 18 | 56 | 10 |
+| Ulm | 38 | 18 | 6 | 14 | 60 | 38 | 14 | 8 | 16 | 50 | 10 |
+| Bayreuth | 19 | 6 | 3 | 10 | 21 | 19 | 3 | 2 | 14 | 11 | 10 |
+| Magdeburg | 38 | 20 | 10 | 8 | 70 | 38 | 19 | 5 | 14 | 62 | 8 |
+| Grossaspach | 6 | 3 | 1 | 2 | 10 | 5 | 0 | 2 | 3 | 2 | 8 |
+| Hoffenheim II | 24 | 9 | 6 | 9 | 33 | 24 | 8 | 2 | 14 | 26 | 7 |
+| VfL Osnabruck | 76 | 39 | 16 | 21 | 133 | 76 | 36 | 19 | 21 | 127 | 6 |
+| Elversberg | 19 | 12 | 4 | 3 | 40 | 19 | 10 | 4 | 5 | 34 | 6 |
+| Arminia Bielefeld | 38 | 16 | 13 | 9 | 61 | 38 | 16 | 9 | 13 | 57 | 4 |
+| Hannover II | 19 | 5 | 5 | 9 | 20 | 19 | 4 | 5 | 10 | 17 | 3 |
+| Zwickau | 56 | 18 | 14 | 24 | 68 | 57 | 15 | 21 | 21 | 66 | 2 |
+| Wurzburger Kickers | 24 | 6 | 5 | 13 | 23 | 24 | 5 | 6 | 13 | 21 | 2 |
+| Dortmund II | 76 | 26 | 18 | 32 | 96 | 76 | 26 | 17 | 33 | 95 | 1 |
+| Braunschweig | 19 | 9 | 6 | 4 | 33 | 18 | 10 | 4 | 4 | 34 | -1 |
+| Bayern II | 19 | 5 | 3 | 11 | 18 | 19 | 3 | 10 | 6 | 19 | -1 |
+| Dusseldorf | 5 | 2 | 1 | 2 | 7 | 6 | 2 | 2 | 2 | 8 | -1 |
+| Fortuna Koln | 5 | 0 | 3 | 2 | 3 | 5 | 2 | 1 | 2 | 7 | -4 |
+| VfB Oldenburg | 19 | 3 | 5 | 11 | 14 | 19 | 6 | 3 | 10 | 21 | -7 |
+| Uerdingen | 19 | 4 | 5 | 10 | 17 | 19 | 7 | 6 | 6 | 27 | -10 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | VfL Osnabruck | 2.10 |
-| 2 | Duisburg | 1.91 |
-| 3 | Cottbus | 1.90 |
-| 4 | RW Essen | 1.87 |
-| 5 | Hansa Rostock | 1.76 |
+| 1 | Elversberg | 1.95 |
+| 2 | SG Dynamo Dresden | 1.82 |
+| 3 | Braunschweig | 1.81 |
+| 4 | Cottbus | 1.76 |
+| 5 | Magdeburg | 1.74 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Verl | 92 |
-| 2 | RW Essen | 91 |
-| 3 | Hansa Rostock | 89 |
-| 4 | Alemannia Aachen | 87 |
-| 5 | Duisburg | 85 |
+| 1 | Verl | 403 |
+| 2 | Saarbrucken | 382 |
+| 3 | Munich 1860 | 350 |
+| 4 | Viktoria Koln | 350 |
+| 5 | Mannheim | 343 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | VfL Osnabruck | 32 |
-| 2 | Verl | 31 |
-| 3 | Duisburg | 29 |
-| 4 | Hansa Rostock | 25 |
-| 5 | Alemannia Aachen | 22 |
+| 1 | SG Dynamo Dresden | 102 |
+| 2 | Saarbrucken | 82 |
+| 3 | VfL Osnabruck | 55 |
+| 4 | Munich 1860 | 54 |
+| 5 | Hansa Rostock | 50 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | VfL Osnabruck | 0.895 |
-| 2 | Dusseldorf | 1.000 |
-| 3 | Fortuna Koln | 1.143 |
-| 4 | Duisburg | 1.244 |
-| 5 | Grossaspach | 1.286 |
+| 1 | Braunschweig | 0.973 |
+| 2 | SG Dynamo Dresden | 1.007 |
+| 3 | Elversberg | 1.053 |
+| 4 | Kaiserslautern | 1.067 |
+| 5 | Arminia Bielefeld | 1.092 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **14**
+- Teams present in all **7** seasons: **4**
 
-Alemannia Aachen, Duisburg, Hansa Rostock, Hoffenheim II, Ingolstadt, Mannheim, RW Essen, Regensburg, Saarbrucken, Stuttgart II, TSV Havelse, Verl, Viktoria Koln, Wehen
+Mannheim, Saarbrucken, Verl, Viktoria Koln
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **229** (showing the 15 most frequent)
+- Distinct fixtures: **669** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Regensburg vs Hoffenheim II | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Verl vs Alemannia Aachen | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Duisburg vs Wehen | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Hansa Rostock vs Stuttgart II | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Ingolstadt vs Saarbrucken | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Mannheim vs TSV Havelse | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| RW Essen vs Hansa Rostock | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| RW Essen vs Mannheim | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| RW Essen vs TSV Havelse | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| RW Essen vs Viktoria Koln | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Regensburg vs Stuttgart II | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Stuttgart II vs TSV Havelse | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Viktoria Koln vs Ingolstadt | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Viktoria Koln vs Stuttgart II | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Duisburg vs Regensburg | 3 | 1 | 0 | 2 | 33.3% | 0.0% | 66.7% |
+| Verl vs Viktoria Koln | 13 | 7 | 5 | 1 | 53.8% | 38.5% | 7.7% |
+| Verl vs Mannheim | 13 | 2 | 7 | 4 | 15.4% | 53.8% | 30.8% |
+| Munich 1860 vs Mannheim | 12 | 8 | 1 | 3 | 66.7% | 8.3% | 25.0% |
+| Saarbrucken vs Mannheim | 12 | 8 | 2 | 2 | 66.7% | 16.7% | 16.7% |
+| Saarbrucken vs Verl | 12 | 5 | 2 | 5 | 41.7% | 16.7% | 41.7% |
+| Munich 1860 vs Saarbrucken | 12 | 4 | 4 | 4 | 33.3% | 33.3% | 33.3% |
+| Munich 1860 vs Verl | 12 | 4 | 3 | 5 | 33.3% | 25.0% | 41.7% |
+| Munich 1860 vs Viktoria Koln | 12 | 4 | 3 | 5 | 33.3% | 25.0% | 41.7% |
+| Saarbrucken vs Viktoria Koln | 12 | 4 | 1 | 7 | 33.3% | 8.3% | 58.3% |
+| Mannheim vs Viktoria Koln | 12 | 3 | 3 | 6 | 25.0% | 25.0% | 50.0% |
+| Ingolstadt vs Viktoria Koln | 11 | 7 | 1 | 3 | 63.6% | 9.1% | 27.3% |
+| Ingolstadt vs Mannheim | 11 | 6 | 4 | 1 | 54.5% | 36.4% | 9.1% |
+| Viktoria Koln vs Duisburg | 11 | 5 | 5 | 1 | 45.5% | 45.5% | 9.1% |
+| Saarbrucken vs Duisburg | 11 | 4 | 3 | 4 | 36.4% | 27.3% | 36.4% |
+| Ingolstadt vs Saarbrucken | 11 | 3 | 4 | 4 | 27.3% | 36.4% | 36.4% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Duisburg | 4 | 1 |
-| RW Essen | 3 | 3 |
-| VfL Osnabruck | 1 | - |
-| Hansa Rostock | 5 | 6 |
-| Alemannia Aachen | 7 | 7 |
-| Verl | 6 | 11 |
-| Cottbus | 2 | - |
-| Viktoria Koln | 11 | 2 |
-| Mannheim | 10 | 9 |
-| Wehen | 9 | 19 |
-| Ingolstadt | 12 | 14 |
-| Saarbrucken | 15 | 4 |
-| Munich 1860 | 8 | - |
-| Hoffenheim II | 16 | 5 |
-| Regensburg | 13 | 18 |
-| Stuttgart II | 14 | 15 |
-| TSV Havelse | 17 | 20 |
-| Aue | 18 | - |
-| Ulm | 19 | - |
-| Schweinfurt | 20 | - |
-| Preussen Munster | - | 8 |
-| Dusseldorf | - | 10 |
-| Fortuna Koln | - | 12 |
-| Grossaspach | - | 13 |
-| Wurzburger Kickers | - | 16 |
-| Meppen | - | 17 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Saarbrucken | 5 | 7 | 5 | 5 | 3 | 15 | 4 |
+| Munich 1860 | 4 | 5 | 8 | 15 | 11 | 8 | - |
+| Viktoria Koln | 12 | 13 | 9 | 13 | 6 | 11 | 2 |
+| Verl | 7 | 16 | 10 | 12 | 7 | 6 | 15 |
+| Mannheim | 8 | 4 | 7 | 16 | 16 | 10 | 13 |
+| Wehen | 6 | 8 | 4 | - | 9 | 9 | 9 |
+| Ingolstadt | 3 | - | 11 | 10 | 10 | 12 | 6 |
+| SG Dynamo Dresden | 1 | - | 6 | 4 | 2 | - | - |
+| Duisburg | 16 | 15 | 12 | 18 | - | 4 | 1 |
+| VfL Osnabruck | - | 6 | 3 | - | 14 | 1 | - |
+| RW Essen | - | - | 15 | 7 | 8 | 3 | 3 |
+| Hansa Rostock | 2 | - | - | - | 5 | 5 | 8 |
+| Dortmund II | - | 11 | 13 | 11 | 17 | - | - |
+| Aue | - | - | 14 | 6 | 13 | 18 | - |
+| Hallescher | 9 | 14 | 16 | 17 | - | - | - |
+| Freiburg II | - | 9 | 2 | 20 | - | - | - |
+| Meppen | 17 | 10 | 17 | - | - | - | 11 |
+| Cottbus | - | - | - | - | 4 | 2 | - |
+| Zwickau | 10 | 12 | 19 | - | - | - | - |
+| Magdeburg | 11 | 1 | - | - | - | - | - |
+| Alemannia Aachen | - | - | - | - | 12 | 7 | 5 |
+| Regensburg | - | - | - | 3 | - | 13 | 18 |
+| Arminia Bielefeld | - | - | - | 14 | 1 | - | - |
+| Unterhaching | 20 | - | - | 9 | 20 | - | - |
+| Ulm | - | - | - | 1 | - | 19 | - |
+| Kaiserslautern | 15 | 3 | - | - | - | - | - |
+| Stuttgart II | - | - | - | - | 15 | 14 | 12 |
+| Sandhausen | - | - | - | 8 | 19 | - | - |
+| Preussen Munster | - | - | - | 2 | - | - | 14 |
+| Turkgucu Munchen | 13 | 19 | - | - | - | - | - |
+| Elversberg | - | - | 1 | - | - | - | - |
+| Braunschweig | - | 2 | - | - | - | - | - |
+| Lubeck | 19 | - | - | 19 | - | - | - |
+| TSV Havelse | - | 20 | - | - | - | 17 | 20 |
+| Hoffenheim II | - | - | - | - | - | 16 | 7 |
+| Uerdingen | 14 | - | - | - | - | - | - |
+| Wurzburger Kickers | - | 18 | - | - | - | - | 17 |
+| Viktoria Berlin | - | 17 | - | - | - | - | - |
+| Bayern II | 18 | - | - | - | - | - | - |
+| Hannover II | - | - | - | - | 18 | - | - |
+| VfB Oldenburg | - | - | 18 | - | - | - | - |
+| Bayreuth | - | - | 20 | - | - | - | - |
+| Schweinfurt | - | - | - | - | - | 20 | - |
+| Dusseldorf | - | - | - | - | - | - | 10 |
+| Grossaspach | - | - | - | - | - | - | 16 |
+| Fortuna Koln | - | - | - | - | - | - | 19 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\germany3\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\germany3\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

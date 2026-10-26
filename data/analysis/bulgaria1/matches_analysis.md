@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-09-29T15:45:53+00:00
+- Generated: 2026-10-26T01:27:52+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`
@@ -8,35 +8,53 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 363 |
-| Home wins | 156 (43.0%) |
-| Draws | 99 (27.3%) |
-| Away wins | 108 (29.8%) |
-| Total goals | 861 |
-| Average goals per match | 2.372 |
-| Goalless matches | 39 (10.7%) |
+| Matches | 1457 |
+| Home wins | 660 (45.3%) |
+| Draws | 358 (24.6%) |
+| Away wins | 439 (30.1%) |
+| Total goals | 3500 |
+| Average goals per match | 2.402 |
+| Goalless matches | 144 (9.9%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
 |---|---|---|---|---|---|---|---|
+| 2020-2021 | 182 | 84 (46.2%) | 50 (27.5%) | 48 (26.4%) | 439 | 2.412 | 22 (12.1%) |
+| 2021-2022 | 182 | 92 (50.5%) | 46 (25.3%) | 44 (24.2%) | 445 | 2.445 | 19 (10.4%) |
+| 2022-2023 | 240 | 109 (45.4%) | 55 (22.9%) | 76 (31.7%) | 560 | 2.333 | 25 (10.4%) |
+| 2023-2024 | 240 | 111 (46.2%) | 51 (21.2%) | 78 (32.5%) | 582 | 2.425 | 22 (9.2%) |
+| 2024-2025 | 240 | 104 (43.3%) | 55 (22.9%) | 81 (33.8%) | 584 | 2.433 | 17 (7.1%) |
 | 2025-2026 | 294 | 125 (42.5%) | 82 (27.9%) | 87 (29.6%) | 677 | 2.303 | 36 (12.2%) |
-| 2026-2027 | 69 | 31 (44.9%) | 17 (24.6%) | 21 (30.4%) | 184 | 2.667 | 3 (4.3%) |
+| 2026-2027 | 79 | 35 (44.3%) | 19 (24.1%) | 25 (31.6%) | 213 | 2.696 | 3 (3.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 89 (76.1%) | 19 (16.2%) | 9 (7.7%) | 117 |
-| HT draw | 61 (36.7%) | 66 (39.8%) | 39 (23.5%) | 166 |
-| HT away lead | 6 (7.6%) | 14 (17.7%) | 59 (74.7%) | 79 |
+| HT home lead | 404 (81.0%) | 67 (13.4%) | 28 (5.6%) | 499 |
+| HT draw | 237 (36.9%) | 233 (36.2%) | 173 (26.9%) | 643 |
+| HT away lead | 19 (6.1%) | 58 (18.5%) | 237 (75.5%) | 314 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **6** (1.7%)
-- Away comebacks (trailing at HT, won at FT): **9** (2.5%)
+- Home comebacks (trailing at HT, won at FT): **19** (1.3%)
+- Away comebacks (trailing at HT, won at FT): **28** (1.9%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Arda | Botev Plovdiv | 1-2 | 3-2 |
+| 2020-2021 | Arda | Slavia Sofia | 0-1 | 2-1 |
+| 2020-2021 | Slavia Sofia | Arda | 1-2 | 3-2 |
+| 2021-2022 | Levski Sofia | Tsarsko Selo | 0-1 | 3-1 |
+| 2021-2022 | CSKA Sofia | Arda | 0-1 | 2-1 |
+| 2021-2022 | Ludogorets | Levski Sofia | 0-1 | 2-1 |
+| 2022-2023 | Slavia Sofia | Lok. Sofia | 0-1 | 2-1 |
+| 2022-2023 | Cherno More | Botev Vratsa | 0-1 | 2-1 |
+| 2022-2023 | CSKA 1948 Sofia | Pirin Blagoevgrad | 0-1 | 2-1 |
+| 2022-2023 | Arda | Botev Plovdiv | 0-1 | 2-1 |
+| 2022-2023 | Ludogorets | Cherno More | 1-2 | 3-2 |
+| 2024-2025 | Spartak Varna | Lok. Sofia | 1-2 | 3-2 |
+| 2024-2025 | Botev Vratsa | Slavia Sofia | 0-1 | 3-2 |
 | 2025-2026 | Dobrudzha | CSKA 1948 Sofia | 0-1 | 2-1 |
 | 2025-2026 | Botev Plovdiv | Dobrudzha | 0-1 | 2-1 |
 | 2025-2026 | CSKA Sofia | Botev Plovdiv | 0-1 | 2-1 |
@@ -47,6 +65,24 @@
 ### Away comebacks
 | season | home | away | HT | FT |
 |---|---|---|---|---|
+| 2020-2021 | Levski Sofia | Cherno More | 1-0 | 1-2 |
+| 2020-2021 | Botev Vratsa | Levski Sofia | 1-0 | 1-3 |
+| 2021-2022 | Pirin Blagoevgrad | Beroe | 2-1 | 2-3 |
+| 2021-2022 | Pirin Blagoevgrad | Lok. Plovdiv | 1-0 | 2-3 |
+| 2021-2022 | Tsarsko Selo | Beroe | 1-0 | 1-2 |
+| 2022-2023 | Botev Plovdiv | Cherno More | 2-1 | 3-4 |
+| 2022-2023 | Levski Sofia | Slavia Sofia | 1-0 | 1-2 |
+| 2022-2023 | Beroe | Septemvri Sofia | 1-0 | 1-2 |
+| 2022-2023 | Arda | Ludogorets | 1-0 | 1-2 |
+| 2023-2024 | Botev Plovdiv | Krumovgrad | 1-0 | 1-2 |
+| 2023-2024 | Lok. Sofia | Ludogorets | 1-0 | 1-3 |
+| 2023-2024 | Pirin Blagoevgrad | CSKA Sofia | 1-0 | 1-2 |
+| 2023-2024 | Lok. Plovdiv | Hebar | 1-0 | 1-2 |
+| 2023-2024 | Lok. Sofia | Slavia Sofia | 1-0 | 1-2 |
+| 2023-2024 | CSKA 1948 Sofia | CSKA Sofia | 1-0 | 1-2 |
+| 2023-2024 | Arda | CSKA Sofia | 2-1 | 2-3 |
+| 2024-2025 | Septemvri Sofia | Lok. Plovdiv | 1-0 | 2-3 |
+| 2024-2025 | Levski Sofia | Cherno More | 1-0 | 1-2 |
 | 2025-2026 | Septemvri Sofia | Levski Sofia | 1-0 | 1-2 |
 | 2025-2026 | Cherno More | Levski Sofia | 1-0 | 1-3 |
 | 2025-2026 | Beroe | Cherno More | 1-0 | 1-2 |
@@ -56,48 +92,54 @@
 | 2026-2027 | Cherno More | Ludogorets | 1-0 | 2-3 |
 | 2026-2027 | Lok. Plovdiv | Dunav Ruse | 1-0 | 1-2 |
 | 2026-2027 | Slavia Sofia | CSKA 1948 Sofia | 1-0 | 1-2 |
+| 2026-2027 | Septemvri Sofia | Dunav Ruse | 2-0 | 2-3 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 117 | 89 (76.1%) | 19 (16.2%) | 9 (7.7%) |
-| Away lead | 79 | 59 (74.7%) | 14 (17.7%) | 6 (7.6%) |
+| Home lead | 499 | 404 (81.0%) | 67 (13.4%) | 28 (5.6%) |
+| Away lead | 314 | 237 (75.5%) | 58 (18.5%) | 19 (6.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 61 | 36.7% |
-| Draw | 66 | 39.8% |
-| Away win | 39 | 23.5% |
+| Home win | 237 | 36.9% |
+| Draw | 233 | 36.2% |
+| Away win | 173 | 26.9% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `323` of `363` (89.0%)
+- Matches with a first-goal time recorded: `1312` of `1457` (90.0%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 97 | 26.7% | 50 (51.5%) | 18 (18.6%) | 29 (29.9%) |
-| 16-30 | 71 | 19.6% | 31 (43.7%) | 13 (18.3%) | 27 (38.0%) |
-| 31-45 | 56 | 15.4% | 30 (53.6%) | 11 (19.6%) | 15 (26.8%) |
-| 46-60 | 48 | 13.2% | 21 (43.8%) | 10 (20.8%) | 17 (35.4%) |
-| 61-75 | 32 | 8.8% | 12 (37.5%) | 7 (21.9%) | 13 (40.6%) |
-| 76-90 | 14 | 3.9% | 9 (64.3%) | 1 (7.1%) | 4 (28.6%) |
-| 91-120 | 5 | 1.4% | 3 (60.0%) | 0 (0.0%) | 2 (40.0%) |
+| 1-15 | 379 | 26.0% | 192 (50.7%) | 63 (16.6%) | 124 (32.7%) |
+| 16-30 | 314 | 21.6% | 157 (50.0%) | 51 (16.2%) | 106 (33.8%) |
+| 31-45 | 226 | 15.5% | 115 (50.9%) | 44 (19.5%) | 67 (29.6%) |
+| 46-60 | 190 | 13.0% | 98 (51.6%) | 31 (16.3%) | 61 (32.1%) |
+| 61-75 | 111 | 7.6% | 42 (37.8%) | 18 (16.2%) | 51 (45.9%) |
+| 76-90 | 72 | 4.9% | 44 (61.1%) | 7 (9.7%) | 21 (29.2%) |
+| 91-120 | 20 | 1.4% | 12 (60.0%) | 0 (0.0%) | 8 (40.0%) |
 
 ## 7. Goalless matches
-- Overall: **39** of `363` (10.7%)
+- Overall: **144** of `1457` (9.9%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
+| 2020-2021 | 182 | 22 | 12.1% |
+| 2021-2022 | 182 | 19 | 10.4% |
+| 2022-2023 | 240 | 25 | 10.4% |
+| 2023-2024 | 240 | 22 | 9.2% |
+| 2024-2025 | 240 | 17 | 7.1% |
 | 2025-2026 | 294 | 36 | 12.2% |
-| 2026-2027 | 69 | 3 | 4.3% |
+| 2026-2027 | 79 | 3 | 3.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
 
 ## Charts
 
-![matches_analysis_ht_ft_matrix](E:\football_data_analysis\data\analysis\bulgaria1\charts\matches_analysis_ht_ft_matrix.png)
-![matches_analysis_home_win_rate](E:\football_data_analysis\data\analysis\bulgaria1\charts\matches_analysis_home_win_rate.png)
+![matches_analysis_ht_ft_matrix](charts/matches_analysis_ht_ft_matrix.png)
+![matches_analysis_home_win_rate](charts/matches_analysis_home_win_rate.png)
 

@@ -1,166 +1,232 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:05:33+00:00
+- Generated: 2026-10-26T01:45:41+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Division 1 (Saudi Arabia)
 - Scope: league `saudi2`
 
-- Teams: **24** | Seasons: **2** | Matches: **362**
+- Teams: **46** | Seasons: **7** | Matches: **2054**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Al-Ula | 2 | 41 | 27 | 8 | 6 | 89 | 85 | 37 | 48 | 44.5 | 1 | 4 | 1 |
-| Al Diriyah | 1 | 36 | 24 | 6 | 6 | 78 | 84 | 40 | 44 | 78.0 | 2 | 2 | 0 |
-| Abha | 1 | 34 | 24 | 5 | 5 | 77 | 64 | 35 | 29 | 77.0 | 1 | 1 | 1 |
-| Al-Faisaly | 1 | 34 | 21 | 10 | 3 | 73 | 76 | 32 | 44 | 73.0 | 3 | 3 | 0 |
-| Al Orubah | 2 | 41 | 21 | 9 | 11 | 72 | 61 | 44 | 17 | 36.0 | 5 | 12 | 0 |
-| Al Jabalain | 2 | 41 | 19 | 11 | 11 | 68 | 63 | 45 | 18 | 34.0 | 6 | 6 | 0 |
-| Al Raed | 2 | 40 | 16 | 11 | 13 | 59 | 71 | 56 | 15 | 29.5 | 7 | 13 | 0 |
-| Al Zulfi | 2 | 40 | 13 | 16 | 11 | 55 | 53 | 46 | 7 | 27.5 | 2 | 8 | 0 |
-| Al Taee | 2 | 40 | 15 | 9 | 16 | 54 | 57 | 61 | -4 | 27.0 | 3 | 9 | 0 |
-| Al Wehda | 2 | 40 | 13 | 12 | 15 | 51 | 61 | 65 | -4 | 25.5 | 7 | 10 | 0 |
-| Al Anwar | 2 | 40 | 12 | 14 | 14 | 50 | 58 | 57 | 1 | 25.0 | 4 | 12 | 0 |
-| Jeddah | 2 | 40 | 11 | 14 | 15 | 47 | 40 | 58 | -18 | 23.5 | 9 | 13 | 0 |
-| Al Bukiryah | 2 | 40 | 12 | 9 | 19 | 45 | 40 | 59 | -19 | 22.5 | 11 | 17 | 0 |
-| Al Adalah | 2 | 40 | 10 | 11 | 19 | 41 | 53 | 79 | -26 | 20.5 | 8 | 14 | 0 |
-| Al Jandal | 2 | 40 | 9 | 10 | 21 | 37 | 43 | 69 | -26 | 18.5 | 15 | 16 | 0 |
-| Al Batin | 1 | 34 | 5 | 7 | 22 | 22 | 39 | 69 | -30 | 22.0 | 16 | 16 | 0 |
-| Al Arabi | 1 | 34 | 5 | 6 | 23 | 21 | 24 | 67 | -43 | 21.0 | 17 | 17 | 0 |
-| Al Jubail | 1 | 34 | 3 | 5 | 26 | 14 | 28 | 73 | -45 | 14.0 | 18 | 18 | 0 |
-| Damac | 1 | 6 | 2 | 3 | 1 | 9 | 7 | 6 | 1 | 9.0 | 5 | 5 | 0 |
-| Al Saqer | 1 | 6 | 1 | 4 | 1 | 7 | 4 | 3 | 1 | 7.0 | 10 | 10 | 0 |
-| Al Najma | 1 | 6 | 1 | 4 | 1 | 7 | 7 | 7 | 0 | 7.0 | 11 | 11 | 0 |
-| Al Okhdood | 1 | 5 | 1 | 3 | 1 | 6 | 7 | 7 | 0 | 6.0 | 14 | 14 | 0 |
-| Hajer | 1 | 6 | 1 | 3 | 2 | 6 | 4 | 7 | -3 | 6.0 | 15 | 15 | 0 |
-| Al Jeel | 1 | 6 | 0 | 2 | 4 | 2 | 0 | 7 | -7 | 2.0 | 18 | 18 | 0 |
+| Al Jabalain | 7 | 221 | 97 | 67 | 57 | 358 | 297 | 232 | 65 | 51.14 | 3 | 8 | 0 |
+| Al Adalah | 6 | 186 | 70 | 63 | 53 | 273 | 253 | 238 | 15 | 45.5 | 3 | 14 | 0 |
+| Jeddah | 7 | 220 | 67 | 64 | 89 | 265 | 236 | 287 | -51 | 37.86 | 9 | 14 | 0 |
+| Al Orubah | 5 | 148 | 65 | 34 | 49 | 229 | 190 | 163 | 27 | 45.8 | 5 | 16 | 0 |
+| Al Hazem | 3 | 106 | 66 | 21 | 19 | 219 | 189 | 99 | 90 | 73.0 | 1 | 4 | 1 |
+| Al-Faisaly | 4 | 136 | 61 | 35 | 40 | 218 | 208 | 160 | 48 | 54.5 | 3 | 18 | 0 |
+| Ohod | 5 | 178 | 51 | 61 | 66 | 214 | 197 | 228 | -31 | 42.8 | 7 | 16 | 0 |
+| Hajer | 5 | 151 | 50 | 45 | 56 | 195 | 166 | 174 | -8 | 39.0 | 5 | 17 | 0 |
+| Al Taee | 4 | 114 | 54 | 25 | 35 | 187 | 167 | 141 | 26 | 46.75 | 5 | 12 | 0 |
+| Al Bukiryah | 5 | 148 | 49 | 34 | 65 | 181 | 150 | 178 | -28 | 36.2 | 6 | 18 | 0 |
+| Al Qadisiya | 3 | 106 | 46 | 30 | 30 | 168 | 133 | 95 | 38 | 56.0 | 1 | 15 | 1 |
+| Al Diriyah | 3 | 112 | 47 | 27 | 38 | 168 | 156 | 135 | 21 | 56.0 | 2 | 15 | 0 |
+| Al Arabi | 4 | 136 | 45 | 33 | 58 | 168 | 183 | 206 | -23 | 42.0 | 3 | 17 | 0 |
+| Al Ain | 4 | 140 | 38 | 48 | 54 | 162 | 142 | 180 | -38 | 40.5 | 11 | 15 | 0 |
+| Al Kholood | 3 | 106 | 44 | 27 | 35 | 159 | 128 | 97 | 31 | 53.0 | 2 | 12 | 0 |
+| Najran | 3 | 110 | 32 | 35 | 43 | 131 | 117 | 134 | -17 | 43.67 | 10 | 14 | 0 |
+| Al-Sahel | 3 | 110 | 30 | 36 | 44 | 126 | 120 | 142 | -22 | 42.0 | 17 | 18 | 0 |
+| Abha | 2 | 68 | 36 | 17 | 15 | 125 | 110 | 83 | 27 | 62.5 | 1 | 8 | 1 |
+| Al Najma | 3 | 76 | 35 | 19 | 22 | 124 | 121 | 93 | 28 | 41.33 | 2 | 11 | 0 |
+| Al Okhdood | 3 | 79 | 34 | 21 | 24 | 123 | 116 | 90 | 26 | 41.0 | 2 | 15 | 0 |
+| Al-Shoalah | 3 | 110 | 28 | 38 | 44 | 122 | 100 | 113 | -13 | 40.67 | 16 | 19 | 0 |
+| Al Wehda | 3 | 80 | 31 | 27 | 22 | 120 | 119 | 96 | 23 | 40.0 | 4 | 10 | 0 |
+| Al Khaleej | 2 | 76 | 31 | 25 | 20 | 118 | 93 | 83 | 10 | 59.0 | 2 | 8 | 0 |
+| Al Batin | 3 | 102 | 30 | 25 | 47 | 115 | 124 | 166 | -42 | 38.33 | 6 | 16 | 0 |
+| Al Jandal | 4 | 109 | 30 | 25 | 54 | 115 | 113 | 163 | -50 | 28.75 | 9 | 16 | 0 |
+| Al Zulfi | 3 | 75 | 24 | 30 | 21 | 102 | 91 | 82 | 9 | 34.0 | 4 | 10 | 0 |
+| Al Jeel | 3 | 82 | 22 | 27 | 33 | 93 | 74 | 110 | -36 | 31.0 | 12 | 19 | 0 |
+| Al-Ula | 2 | 41 | 27 | 8 | 6 | 89 | 85 | 37 | 48 | 44.5 | 2 | 4 | 0 |
+| Al Fayha | 1 | 38 | 24 | 9 | 5 | 81 | 72 | 27 | 45 | 81.0 | 3 | 3 | 0 |
+| Al-Nahda | 2 | 76 | 17 | 29 | 30 | 80 | 74 | 97 | -23 | 40.0 | 20 | 21 | 0 |
+| Neom SC | 1 | 34 | 24 | 7 | 3 | 79 | 80 | 27 | 53 | 79.0 | 1 | 1 | 1 |
+| Al-Kawkab | 2 | 76 | 17 | 28 | 31 | 79 | 77 | 102 | -25 | 39.5 | 17 | 19 | 0 |
+| Al Ahli SC | 1 | 34 | 21 | 9 | 4 | 72 | 48 | 24 | 24 | 72.0 | 3 | 3 | 0 |
+| Al-Qaisumah | 2 | 68 | 15 | 23 | 30 | 68 | 78 | 105 | -27 | 34.0 | 17 | 19 | 0 |
+| Al Safa | 2 | 68 | 18 | 14 | 36 | 68 | 82 | 122 | -40 | 34.0 | 10 | 17 | 0 |
+| Al Riyadh | 1 | 34 | 19 | 6 | 9 | 63 | 52 | 37 | 15 | 63.0 | 5 | 5 | 0 |
+| Al Raed | 2 | 42 | 17 | 11 | 14 | 62 | 72 | 58 | 14 | 31.0 | 7 | 11 | 0 |
+| Al Jubail | 2 | 68 | 12 | 17 | 39 | 53 | 62 | 117 | -55 | 26.5 | 11 | 18 | 0 |
+| Al Anwar | 2 | 42 | 12 | 16 | 14 | 52 | 60 | 59 | 1 | 26.0 | 9 | 12 | 0 |
+| Al Thuqbah | 1 | 38 | 10 | 7 | 21 | 37 | 45 | 60 | -15 | 37.0 | 15 | 15 | 0 |
+| Arar | 1 | 38 | 4 | 14 | 20 | 26 | 28 | 62 | -34 | 26.0 | 21 | 21 | 0 |
+| Bisha | 1 | 38 | 5 | 10 | 23 | 25 | 27 | 57 | -30 | 25.0 | 20 | 20 | 0 |
+| Al Najoom | 1 | 38 | 6 | 5 | 27 | 23 | 27 | 67 | -40 | 23.0 | 19 | 19 | 0 |
+| Al Taraji | 1 | 34 | 4 | 9 | 21 | 21 | 28 | 66 | -38 | 21.0 | 18 | 18 | 0 |
+| Damac | 1 | 8 | 3 | 3 | 2 | 12 | 11 | 10 | 1 | 12.0 | 8 | 8 | 0 |
+| Al Saqer | 1 | 8 | 2 | 4 | 2 | 10 | 7 | 6 | 1 | 10.0 | 10 | 10 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Al Diriyah | 19 | 16 | 1 | 2 | 49 | 17 | 8 | 5 | 4 | 29 | 20 |
-| Al Jubail | 17 | 3 | 4 | 10 | 13 | 17 | 0 | 1 | 16 | 1 | 12 |
-| Al Anwar | 20 | 9 | 3 | 8 | 30 | 20 | 3 | 11 | 6 | 20 | 10 |
-| Al Raed | 19 | 10 | 4 | 5 | 34 | 21 | 6 | 7 | 8 | 25 | 9 |
-| Al Jabalain | 20 | 11 | 5 | 4 | 38 | 21 | 8 | 6 | 7 | 30 | 8 |
-| Al Batin | 17 | 4 | 3 | 10 | 15 | 17 | 1 | 4 | 12 | 7 | 8 |
-| Al Wehda | 20 | 7 | 8 | 5 | 29 | 20 | 6 | 4 | 10 | 22 | 7 |
-| Al Jandal | 20 | 5 | 7 | 8 | 22 | 20 | 4 | 3 | 13 | 15 | 7 |
-| Al Arabi | 17 | 4 | 2 | 11 | 14 | 17 | 1 | 4 | 12 | 7 | 7 |
+| Al Jabalain | 109 | 58 | 29 | 22 | 203 | 112 | 39 | 38 | 35 | 155 | 48 |
+| Ohod | 89 | 32 | 31 | 26 | 127 | 89 | 19 | 30 | 40 | 87 | 40 |
+| Al Ain | 70 | 24 | 25 | 21 | 97 | 70 | 14 | 23 | 33 | 65 | 32 |
+| Al Bukiryah | 75 | 29 | 19 | 27 | 106 | 73 | 20 | 15 | 38 | 75 | 31 |
+| Hajer | 76 | 29 | 23 | 24 | 110 | 75 | 21 | 22 | 32 | 85 | 25 |
+| Al Kholood | 53 | 25 | 17 | 11 | 92 | 53 | 19 | 10 | 24 | 67 | 25 |
+| Al Jandal | 55 | 19 | 13 | 23 | 70 | 54 | 11 | 12 | 31 | 45 | 25 |
+| Al Qadisiya | 53 | 26 | 17 | 10 | 95 | 53 | 20 | 13 | 20 | 73 | 22 |
+| Al Arabi | 68 | 27 | 13 | 28 | 94 | 68 | 18 | 20 | 30 | 74 | 20 |
+| Al Hazem | 53 | 36 | 11 | 6 | 119 | 53 | 30 | 10 | 13 | 100 | 19 |
+| Al Jubail | 34 | 8 | 11 | 15 | 35 | 34 | 4 | 6 | 24 | 18 | 17 |
+| Al-Nahda | 38 | 11 | 15 | 12 | 48 | 38 | 6 | 14 | 18 | 32 | 16 |
+| Al Batin | 51 | 18 | 11 | 22 | 65 | 51 | 12 | 14 | 25 | 50 | 15 |
+| Al Fayha | 19 | 15 | 3 | 1 | 48 | 19 | 9 | 6 | 4 | 33 | 15 |
+| Najran | 55 | 19 | 15 | 21 | 72 | 55 | 13 | 20 | 22 | 59 | 13 |
+| Al Okhdood | 38 | 20 | 8 | 10 | 68 | 41 | 14 | 13 | 14 | 55 | 13 |
+| Al Khaleej | 38 | 18 | 11 | 9 | 65 | 38 | 13 | 14 | 11 | 53 | 12 |
+| Al Raed | 21 | 11 | 4 | 6 | 37 | 21 | 6 | 7 | 8 | 25 | 12 |
+| Al Orubah | 74 | 33 | 21 | 20 | 120 | 74 | 32 | 13 | 29 | 109 | 11 |
+| Al Safa | 34 | 11 | 6 | 17 | 39 | 34 | 7 | 8 | 19 | 29 | 10 |
+| Al Anwar | 21 | 9 | 4 | 8 | 31 | 21 | 3 | 12 | 6 | 21 | 10 |
+| Al Taraji | 17 | 3 | 6 | 8 | 15 | 17 | 1 | 3 | 13 | 6 | 9 |
+| Al Najma | 38 | 19 | 9 | 10 | 66 | 38 | 16 | 10 | 12 | 58 | 8 |
+| Al-Shoalah | 55 | 16 | 17 | 22 | 65 | 55 | 12 | 21 | 22 | 57 | 8 |
+| Al Zulfi | 37 | 14 | 13 | 10 | 55 | 38 | 10 | 17 | 11 | 47 | 8 |
+| Arar | 19 | 3 | 8 | 8 | 17 | 19 | 1 | 6 | 12 | 9 | 8 |
+| Al Adalah | 93 | 36 | 32 | 25 | 140 | 93 | 34 | 31 | 28 | 133 | 7 |
+| Jeddah | 110 | 32 | 40 | 38 | 136 | 110 | 35 | 24 | 51 | 129 | 7 |
+| Al Diriyah | 57 | 25 | 12 | 20 | 87 | 55 | 22 | 15 | 18 | 81 | 6 |
+| Al-Sahel | 55 | 16 | 18 | 21 | 66 | 55 | 14 | 18 | 23 | 60 | 6 |
+| Al-Qaisumah | 34 | 8 | 13 | 13 | 37 | 34 | 7 | 10 | 17 | 31 | 6 |
+| Abha | 34 | 18 | 11 | 5 | 65 | 34 | 18 | 6 | 10 | 60 | 5 |
 | Al-Ula | 21 | 14 | 5 | 2 | 47 | 20 | 13 | 3 | 4 | 42 | 5 |
-| Al Bukiryah | 21 | 7 | 4 | 10 | 25 | 19 | 5 | 5 | 9 | 20 | 5 |
-| Al Adalah | 20 | 5 | 7 | 8 | 22 | 20 | 5 | 4 | 11 | 19 | 3 |
-| Al Najma | 3 | 1 | 2 | 0 | 5 | 3 | 0 | 2 | 1 | 2 | 3 |
-| Al Jeel | 3 | 0 | 2 | 1 | 2 | 3 | 0 | 0 | 3 | 0 | 2 |
-| Abha | 17 | 12 | 3 | 2 | 39 | 17 | 12 | 2 | 3 | 38 | 1 |
-| Al Taee | 21 | 7 | 6 | 8 | 27 | 19 | 8 | 3 | 8 | 27 | 0 |
-| Damac | 3 | 1 | 1 | 1 | 4 | 3 | 1 | 2 | 0 | 5 | -1 |
-| Al-Faisaly | 17 | 10 | 5 | 2 | 35 | 17 | 11 | 5 | 1 | 38 | -3 |
-| Al Zulfi | 20 | 6 | 8 | 6 | 26 | 20 | 7 | 8 | 5 | 29 | -3 |
-| Al Saqer | 3 | 0 | 2 | 1 | 2 | 3 | 1 | 2 | 0 | 5 | -3 |
-| Al Okhdood | 1 | 0 | 1 | 0 | 1 | 4 | 1 | 2 | 1 | 5 | -4 |
-| Hajer | 3 | 0 | 1 | 2 | 1 | 3 | 1 | 2 | 0 | 5 | -4 |
-| Al Orubah | 20 | 9 | 4 | 7 | 31 | 21 | 12 | 5 | 4 | 41 | -10 |
-| Jeddah | 20 | 3 | 8 | 9 | 17 | 20 | 8 | 6 | 6 | 30 | -13 |
+| Al Thuqbah | 19 | 6 | 3 | 10 | 21 | 19 | 4 | 4 | 11 | 16 | 5 |
+| Al Wehda | 40 | 16 | 14 | 10 | 62 | 40 | 15 | 13 | 12 | 58 | 4 |
+| Al Najoom | 19 | 3 | 4 | 12 | 13 | 19 | 3 | 1 | 15 | 10 | 3 |
+| Damac | 4 | 2 | 1 | 1 | 7 | 4 | 1 | 2 | 1 | 5 | 2 |
+| Al Taee | 57 | 27 | 13 | 17 | 94 | 57 | 27 | 12 | 18 | 93 | 1 |
+| Bisha | 19 | 2 | 7 | 10 | 13 | 19 | 3 | 3 | 13 | 12 | 1 |
+| Al Ahli SC | 17 | 11 | 3 | 3 | 36 | 17 | 10 | 6 | 1 | 36 | 0 |
+| Al-Faisaly | 68 | 31 | 15 | 22 | 108 | 68 | 30 | 20 | 18 | 110 | -2 |
+| Al-Kawkab | 38 | 9 | 10 | 19 | 37 | 38 | 8 | 18 | 12 | 42 | -5 |
+| Neom SC | 17 | 10 | 7 | 0 | 37 | 17 | 14 | 0 | 3 | 42 | -5 |
+| Al Saqer | 4 | 0 | 2 | 2 | 2 | 4 | 2 | 2 | 0 | 8 | -6 |
+| Al Jeel | 41 | 11 | 10 | 20 | 43 | 41 | 11 | 17 | 13 | 50 | -7 |
+| Al Riyadh | 17 | 7 | 4 | 6 | 25 | 17 | 12 | 2 | 3 | 38 | -13 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Abha | 2.27 |
+| 1 | Neom SC | 2.32 |
 | 2 | Al-Ula | 2.17 |
-| 3 | Al Diriyah | 2.17 |
-| 4 | Al-Faisaly | 2.15 |
-| 5 | Al Orubah | 1.76 |
+| 3 | Al Fayha | 2.13 |
+| 4 | Al Ahli SC | 2.12 |
+| 5 | Al Hazem | 2.07 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Al-Ula | 85 |
-| 2 | Al Diriyah | 84 |
-| 3 | Al-Faisaly | 76 |
-| 4 | Al Raed | 71 |
-| 5 | Abha | 64 |
+| 1 | Al Jabalain | 297 |
+| 2 | Al Adalah | 253 |
+| 3 | Jeddah | 236 |
+| 4 | Al-Faisaly | 208 |
+| 5 | Ohod | 197 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Al-Ula | 48 |
-| 2 | Al Diriyah | 44 |
-| 3 | Al-Faisaly | 44 |
-| 4 | Abha | 29 |
-| 5 | Al Jabalain | 18 |
+| 1 | Al Hazem | 90 |
+| 2 | Al Jabalain | 65 |
+| 3 | Neom SC | 53 |
+| 4 | Al-Faisaly | 48 |
+| 5 | Al-Ula | 48 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Al Saqer | 0.500 |
-| 2 | Al-Ula | 0.872 |
-| 3 | Al-Faisaly | 0.941 |
-| 4 | Damac | 1.000 |
-| 5 | Abha | 1.029 |
+| 1 | Al Fayha | 0.647 |
+| 2 | Neom SC | 0.727 |
+| 3 | Al Ahli SC | 0.733 |
+| 4 | Al Saqer | 0.750 |
+| 5 | Al-Ula | 0.872 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **12**
+- Teams present in all **7** seasons: **2**
 
-Al Adalah, Al Anwar, Al Bukiryah, Al Jabalain, Al Jandal, Al Orubah, Al Raed, Al Taee, Al Wehda, Al Zulfi, Al-Ula, Jeddah
+Al Jabalain, Jeddah
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **184** (showing the 15 most frequent)
+- Distinct fixtures: **634** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Al Diriyah vs Al Jabalain | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Al-Ula vs Al Raed | 3 | 3 | 0 | 0 | 100.0% | 0.0% | 0.0% |
-| Al Adalah vs Al Jandal | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Al Diriyah vs Al-Ula | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Al Taee vs Al Bukiryah | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Al Taee vs Al Jandal | 3 | 2 | 1 | 0 | 66.7% | 33.3% | 0.0% |
-| Al-Ula vs Al Orubah | 3 | 2 | 0 | 1 | 66.7% | 0.0% | 33.3% |
-| Al Bukiryah vs Al Adalah | 3 | 1 | 0 | 2 | 33.3% | 0.0% | 66.7% |
-| Al Bukiryah vs Al Anwar | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Al Bukiryah vs Al Jandal | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Al Jabalain vs Al Wehda | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Al Raed vs Al Zulfi | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Al Taee vs Al Anwar | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Al Wehda vs Al Adalah | 3 | 1 | 1 | 1 | 33.3% | 33.3% | 33.3% |
-| Al Zulfi vs Al Wehda | 3 | 1 | 2 | 0 | 33.3% | 66.7% | 0.0% |
+| Al Jabalain vs Jeddah | 13 | 6 | 3 | 4 | 46.2% | 23.1% | 30.8% |
+| Al Jabalain vs Ohod | 10 | 4 | 5 | 1 | 40.0% | 50.0% | 10.0% |
+| Al Adalah vs Al Jabalain | 10 | 3 | 1 | 6 | 30.0% | 10.0% | 60.0% |
+| Al Adalah vs Jeddah | 10 | 3 | 4 | 3 | 30.0% | 40.0% | 30.0% |
+| Ohod vs Jeddah | 10 | 3 | 4 | 3 | 30.0% | 40.0% | 30.0% |
+| Al Jabalain vs Hajer | 9 | 4 | 1 | 4 | 44.4% | 11.1% | 44.4% |
+| Al Orubah vs Al Jabalain | 9 | 4 | 2 | 3 | 44.4% | 22.2% | 33.3% |
+| Al Orubah vs Jeddah | 9 | 4 | 1 | 4 | 44.4% | 11.1% | 44.4% |
+| Hajer vs Jeddah | 9 | 4 | 2 | 3 | 44.4% | 22.2% | 33.3% |
+| Al Adalah vs Al Bukiryah | 9 | 3 | 3 | 3 | 33.3% | 33.3% | 33.3% |
+| Al Ain vs Jeddah | 8 | 5 | 3 | 0 | 62.5% | 37.5% | 0.0% |
+| Al Jabalain vs Al Bukiryah | 8 | 5 | 0 | 3 | 62.5% | 0.0% | 37.5% |
+| Al Ain vs Al Jabalain | 8 | 4 | 2 | 2 | 50.0% | 25.0% | 25.0% |
+| Al-Faisaly vs Al Jabalain | 8 | 4 | 1 | 3 | 50.0% | 12.5% | 37.5% |
+| Hajer vs Ohod | 8 | 4 | 2 | 2 | 50.0% | 25.0% | 25.0% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Al-Ula | 4 | 1 |
-| Al Diriyah | 2 | - |
-| Abha | 1 | - |
-| Al-Faisaly | 3 | - |
-| Al Orubah | 5 | 12 |
-| Al Jabalain | 6 | 6 |
-| Al Raed | 7 | 13 |
-| Al Zulfi | 8 | 2 |
-| Al Taee | 9 | 3 |
-| Al Wehda | 10 | 7 |
-| Al Anwar | 12 | 4 |
-| Jeddah | 13 | 9 |
-| Al Bukiryah | 11 | 17 |
-| Al Adalah | 14 | 8 |
-| Al Jandal | 15 | 16 |
-| Al Batin | 16 | - |
-| Al Arabi | 17 | - |
-| Al Jubail | 18 | - |
-| Damac | - | 5 |
-| Al Saqer | - | 10 |
-| Al Najma | - | 11 |
-| Al Okhdood | - | 14 |
-| Hajer | - | 15 |
-| Al Jeel | - | 18 |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Al Jabalain | 4 | 6 | 8 | 7 | 5 | 6 | 3 |
+| Al Adalah | 11 | 3 | - | 4 | 3 | 14 | 7 |
+| Jeddah | 10 | 13 | 13 | 14 | 9 | 13 | 14 |
+| Al Orubah | - | 11 | 16 | 5 | - | 5 | 13 |
+| Al Hazem | 2 | - | 1 | - | 4 | - | - |
+| Al-Faisaly | - | - | 10 | 16 | 18 | 3 | - |
+| Ohod | 7 | 7 | 7 | 15 | 16 | - | - |
+| Hajer | 6 | 5 | 9 | 17 | - | - | 17 |
+| Al Taee | 5 | - | - | - | 7 | 9 | 12 |
+| Al Bukiryah | 13 | - | - | 13 | 6 | 11 | 18 |
+| Al Qadisiya | - | 9 | 15 | 1 | - | - | - |
+| Al Diriyah | 9 | 15 | - | - | - | 2 | - |
+| Al Arabi | - | - | 6 | 3 | 13 | 17 | - |
+| Al Ain | - | 12 | 11 | 12 | 15 | - | - |
+| Al Kholood | - | 8 | 12 | 2 | - | - | - |
+| Najran | 14 | 10 | 14 | - | - | - | - |
+| Al-Sahel | 18 | 17 | 18 | - | - | - | - |
+| Abha | - | - | - | - | 8 | 1 | - |
+| Al Najma | - | - | - | 11 | 2 | - | 5 |
+| Al Okhdood | - | 14 | 2 | - | - | - | 15 |
+| Al-Shoalah | 16 | 18 | 19 | - | - | - | - |
+| Al Wehda | - | 4 | - | - | - | 10 | 6 |
+| Al Khaleej | 8 | 2 | - | - | - | - | - |
+| Al Batin | - | - | - | 6 | 12 | 16 | - |
+| Al Jandal | - | - | - | 9 | 14 | 15 | 16 |
+| Al Zulfi | - | - | - | - | 10 | 8 | 4 |
+| Al Jeel | 12 | 16 | - | - | - | - | 19 |
+| Al-Ula | - | - | - | - | - | 4 | 2 |
+| Al Fayha | 3 | - | - | - | - | - | - |
+| Al-Nahda | 20 | 21 | - | - | - | - | - |
+| Neom SC | - | - | - | - | 1 | - | - |
+| Al-Kawkab | 17 | 19 | - | - | - | - | - |
+| Al Ahli SC | - | - | 3 | - | - | - | - |
+| Al-Qaisumah | - | - | 17 | 19 | - | - | - |
+| Al Safa | - | - | - | 10 | 17 | - | - |
+| Al Riyadh | - | - | 5 | - | - | - | - |
+| Al Raed | - | - | - | - | - | 7 | 11 |
+| Al Jubail | - | - | - | - | 11 | 18 | - |
+| Al Anwar | - | - | - | - | - | 12 | 9 |
+| Al Thuqbah | 15 | - | - | - | - | - | - |
+| Arar | 21 | - | - | - | - | - | - |
+| Bisha | - | 20 | - | - | - | - | - |
+| Al Najoom | 19 | - | - | - | - | - | - |
+| Al Taraji | - | - | - | 18 | - | - | - |
+| Damac | - | - | - | - | - | - | 8 |
+| Al Saqer | - | - | - | - | - | - | 10 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\saudi2\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\saudi2\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 

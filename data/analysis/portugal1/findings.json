@@ -4,10 +4,10 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-09-29T16:03:35+00:00",
+  "generated_at": "2026-10-26T01:43:05+00:00",
   "config": {
     "league": "portugal1",
-    "out_dir": "E:\\football_data_analysis\\data\\analysis\\portugal1",
+    "out_dir": "data/analysis/portugal1",
     "out_stem": null
   },
   "league": {
@@ -26,52 +26,52 @@
   "sources": [
     {
       "report_name": "database_profile",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\database_profile.json",
+      "path": "data/analysis/portugal1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 31.42
+      "size_kb": 31.31
     },
     {
       "report_name": "matches_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\matches_analysis.json",
+      "path": "data/analysis/portugal1/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 8.59
+      "size_kb": 8.51
     },
     {
       "report_name": "goals_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\goals_analysis.json",
+      "path": "data/analysis/portugal1/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 6.25
+      "size_kb": 5.95
     },
     {
       "report_name": "teams_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\teams_analysis.json",
+      "path": "data/analysis/portugal1/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 30.58
+      "size_kb": 29.11
     },
     {
       "report_name": "season_trends",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\season_trends.json",
+      "path": "data/analysis/portugal1/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 3.95
+      "size_kb": 3.73
     },
     {
       "report_name": "scoreline_analysis",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\scoreline_analysis.json",
+      "path": "data/analysis/portugal1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 61.28
+      "size_kb": 61.47
     },
     {
       "report_name": "relationships",
-      "path": "E:\\football_data_analysis\\data\\analysis\\portugal1\\relationships.json",
+      "path": "data/analysis/portugal1/relationships.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 14.35
+      "size_kb": 13.69
     }
   ],
   "coverage": {
@@ -83,63 +83,63 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "370 matches: home wins 40.8%, draws 27.6%, away wins 31.6% (151H / 102D / 117A)",
+      "detail": "384 matches: home wins 40.6%, draws 26.6%, away wins 32.8% (156H / 102D / 126A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "8 home and 5 away comebacks (trailing at HT but winning at FT)",
+      "detail": "8 home and 7 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 87 times",
+      "detail": "home lead at HT -> home win occurred 91 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "370 matches produced 993 goals (avg 2.684 per match)",
+      "detail": "384 matches produced 1030 goals (avg 2.682 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.6% vs away 45.4% of 993 goals in total (home/away ratio 1.20)",
+      "detail": "home 54.3% vs away 45.7% of 1030 goals in total (home/away ratio 1.19)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "178 of 370 matches (48.1%)",
+      "detail": "184 of 384 matches (47.9%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 120 scoring matches, 34.8% of scoring)",
+      "detail": "minute 1-15 (first goal in 122 scoring matches, 34.0% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.21, median 26.0",
+      "detail": "mean 31.48, median 27.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "FC Porto leads with 109 points across 2 seasons (2 title(s), GD 63)",
+      "detail": "FC Porto leads with 115 points across 2 seasons (2 title(s), GD 65)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Vitoria Guimaraes earns 19 more points at home than away (33 home vs 14 away)",
+      "detail": "Vitoria Guimaraes earns 22 more points at home than away (36 home vs 14 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -167,42 +167,42 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: FC Porto beat Benfica by 5 pts",
+      "detail": "2025-2026: FC Porto beat Sporting CP by 6 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.070 per match): first half 2.672 vs last half 2.742 across 2 seasons",
+      "detail": "up (+0.052 per match): first half 2.672 vs last half 2.724 across 2 seasons",
       "importance": "medium",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2026-2027 (goals view, avg abs position diff 5.111)",
+      "detail": "2026-2027 (goals view, avg abs position diff 5.778)",
       "importance": "low",
       "id": "F15"
     },
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 3.333)",
+      "detail": "2026-2027 (luck view, avg abs position diff 3.000)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 36 matches (9.7%)",
+      "detail": "0-1 in 38 matches (9.9%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (34 of 151 home matches, 22.5%)",
+      "detail": "1-0 (35 of 156 home matches, 22.4%)",
       "importance": "low",
       "id": "F18"
     },
@@ -216,7 +216,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (34 of 117 away matches, 29.1%)",
+      "detail": "0-1 (38 of 126 away matches, 30.2%)",
       "importance": "low",
       "id": "F20"
     },
@@ -243,29 +243,29 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (14)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (15)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "2 of 2 registered seasons populated (100.0%); 370 matches observed",
+      "detail": "2 of 2 registered seasons populated (100.0%); 384 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 370,
-    "avg_goals": 2.684,
-    "home_win_pct": 40.8,
-    "draw_pct": 27.6,
-    "away_win_pct": 31.6,
-    "most_common_scoreline": "1-1",
+    "n_matches": 384,
+    "avg_goals": 2.682,
+    "home_win_pct": 40.6,
+    "draw_pct": 26.6,
+    "away_win_pct": 32.8,
+    "most_common_scoreline": "0-1",
     "dominant_team": "FC Porto",
     "champion_most_titles": "FC Porto",
-    "btts_rate_pct": 48.1
+    "btts_rate_pct": 47.9
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 31.42
+      "size_kb": 31.31
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 8.59
+      "size_kb": 8.51
     },
     {
       "module": "goals_analysis",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 6.25
+      "size_kb": 5.95
     },
     {
       "module": "teams_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 30.58
+      "size_kb": 29.11
     },
     {
       "module": "season_trends",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 3.95
+      "size_kb": 3.73
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 61.28
+      "size_kb": 61.47
     },
     {
       "module": "relationships",
@@ -359,7 +359,7 @@
         "home_quality",
         "feature_by_result"
       ],
-      "size_kb": 14.35
+      "size_kb": 13.69
     }
   ],
   "anomalies": [
@@ -386,10 +386,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 62 matches, expected 380",
+      "message": "Season 2026-2027 has 76 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 62,
+        "n_matches": 76,
         "expected": 380
       }
     },
@@ -410,6 +410,17 @@
       "details": {
         "season": "2026-2027",
         "season_state": "in_progress"
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 away outcome share 38.2% vs overall 32.8%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "away",
+        "season_share": 38.2,
+        "overall_share": 32.8
       }
     },
     {
@@ -434,20 +445,20 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 22175,
-        "distinct": 22161,
+        "rows": 103077,
+        "distinct": 103063,
         "duplicates": 14
       }
     },
     {
       "code": "FIRST_GOAL_NULL_INCONSISTENCY",
       "severity": "warning",
-      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=24, fgte=24 rows)",
+      "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=397, fgte=397 rows)",
       "details": {
-        "total": 22175,
-        "fgt_inconsistent": 24,
-        "fgte_inconsistent": 24,
-        "n_with_fgt": 20633
+        "total": 103077,
+        "fgt_inconsistent": 397,
+        "fgte_inconsistent": 397,
+        "n_with_fgt": 94904
       }
     },
     {

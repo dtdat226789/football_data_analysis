@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-29T16:08:57+00:00
+- Generated: 2026-10-26T01:49:44+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: LaLiga (Spain)
 - Scope: league `spain1`
@@ -8,73 +8,77 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\spain1\database_profile.json | yes | yes | 29.18 |
-| matches_analysis | E:\football_data_analysis\data\analysis\spain1\matches_analysis.json | yes | yes | 10.58 |
-| goals_analysis | E:\football_data_analysis\data\analysis\spain1\goals_analysis.json | yes | yes | 6.31 |
-| teams_analysis | E:\football_data_analysis\data\analysis\spain1\teams_analysis.json | yes | yes | 32.72 |
-| season_trends | E:\football_data_analysis\data\analysis\spain1\season_trends.json | yes | yes | 3.93 |
-| scoreline_analysis | E:\football_data_analysis\data\analysis\spain1\scoreline_analysis.json | yes | yes | 76.69 |
-| relationships | E:\football_data_analysis\data\analysis\spain1\relationships.json | yes | yes | 14.33 |
+| database_profile | data/analysis/spain1/database_profile.json | yes | yes | 39.87 |
+| matches_analysis | data/analysis/spain1/matches_analysis.json | yes | yes | 27.22 |
+| goals_analysis | data/analysis/spain1/goals_analysis.json | yes | yes | 12.35 |
+| teams_analysis | data/analysis/spain1/teams_analysis.json | yes | yes | 41.28 |
+| season_trends | data/analysis/spain1/season_trends.json | yes | yes | 10.47 |
+| scoreline_analysis | data/analysis/spain1/scoreline_analysis.json | yes | yes | 355.94 |
+| relationships | data/analysis/spain1/relationships.json | yes | yes | 13.79 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 449 matches: home wins 48.3%, draws 24.5%, away wins 27.2% (217H / 110D / 122A)
-- **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 9 home and 15 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 122 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 449 matches produced 1234 goals (avg 2.748 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 58.0% vs away 42.0% of 1234 goals in total (home/away ratio 1.38)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 255 of 449 matches (56.8%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 123 scoring matches, 28.7% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 33.82, median 30.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Barcelona leads with 115 points across 2 seasons (2 title(s), GD 83)
-- **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 17 teams present in every one of the 2 seasons (Alaves, Ath Bilbao, Atl. Madrid, Barcelona, Betis...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Atl. Madrid earns 27 more points at home than away (56 home vs 29 away)
-- **F12** · `season_trends` · *[high]* — **Champion with most titles** — Barcelona won 2 of 2 championship(s) on record
-- **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: Barcelona beat Atl. Madrid by 5 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.348 per match): first half 2.695 vs last half 3.043 across 2 seasons
-- **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2026-2027 (goals view, avg abs position diff 6.200)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2025-2026 (luck view, avg abs position diff 3.400)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 68 matches (15.1%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (52 of 217 home matches, 24.0%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (68 of 110 draw matches, 61.8%)
-- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 1-2 (30 of 122 away matches, 24.6%)
-- **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 9 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.2264 (n=380 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 8.022: home 3.339, draw -3.022, away -4.683
-- **F24** · `database_profile` · *[high]* — **Data-quality warnings (6)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 449 matches observed
+- **F1** Â· `matches_analysis` Â· *[medium]* â€” **Outcome split across all seasons** â€” 2375 matches: home wins 45.0%, draws 26.7%, away wins 28.4% (1068H / 633D / 674A)
+- **F2** Â· `matches_analysis` Â· *[medium]* â€” **Comeback wins** â€” 52 home and 55 away comebacks (trailing at HT but winning at FT)
+- **F3** Â· `matches_analysis` Â· *[low]* â€” **Most common HT/FT flow** â€” home lead at HT -> home win occurred 618 times
+- **F4** Â· `goals_analysis` Â· *[medium]* â€” **Average goals per match** â€” 2375 matches produced 6169 goals (avg 2.597 per match)
+- **F5** Â· `goals_analysis` Â· *[medium]* â€” **Home goal share** â€” home 56.5% vs away 43.5% of 6169 goals in total (home/away ratio 1.30)
+- **F6** Â· `goals_analysis` Â· *[medium]* â€” **Both teams to score** â€” 1238 of 2375 matches (52.1%)
+- **F7** Â· `goals_analysis` Â· *[low]* â€” **Most common first-goal bucket** â€” minute 1-15 (first goal in 694 scoring matches, 31.5% of scoring)
+- **F8** Â· `goals_analysis` Â· *[low]* â€” **Average first goal minute** â€” mean 33.10, median 28.0
+- **F9** Â· `teams_analysis` Â· *[high]* â€” **Dominant team by lifetime points** â€” Barcelona leads with 534 points across 7 seasons (4 title(s), GD 314)
+- **F10** Â· `teams_analysis` Â· *[medium]* â€” **Team consistency** â€” 12 teams present in every one of the 7 seasons (Ath Bilbao, Atl. Madrid, Barcelona, Betis, Celta Vigo...)
+- **F11** Â· `teams_analysis` Â· *[medium]* â€” **Biggest home advantage** â€” Atl. Madrid earns 90 more points at home than away (285 home vs 195 away)
+- **F12** Â· `season_trends` Â· *[high]* â€” **Champion with most titles** â€” Barcelona won 4 of 7 championship(s) on record
+- **F13** Â· `season_trends` Â· *[medium]* â€” **Tightest title race** â€” 2020-2021: Atl. Madrid beat Real Madrid by 2 pts
+- **F14** Â· `season_trends` Â· *[medium]* â€” **Average-goals trend** â€” up (+0.267 per match): first half 2.508 vs last half 2.775 across 7 seasons
+- **F15** Â· `season_trends` Â· *[low]* â€” **Largest view divergence** â€” 2022-2023 (goals view, avg abs position diff 7.000)
+- **F16** Â· `season_trends` Â· *[low]* â€” **Smallest view divergence** â€” 2023-2024 (luck view, avg abs position diff 2.000)
+- **F17** Â· `scoreline_analysis` Â· *[medium]* â€” **Most common scoreline** â€” 1-1 in 327 matches (13.8%)
+- **F18** Â· `scoreline_analysis` Â· *[low]* â€” **Most common home-win scoreline** â€” 1-0 (290 of 1068 home matches, 27.2%)
+- **F19** Â· `scoreline_analysis` Â· *[low]* â€” **Most common draw scoreline** â€” 1-1 (327 of 633 draw matches, 51.7%)
+- **F20** Â· `scoreline_analysis` Â· *[low]* â€” **Most common away-win scoreline** â€” 0-1 (184 of 674 away matches, 27.3%)
+- **F21** Â· `scoreline_analysis` Â· *[low]* â€” **Extreme scorelines** â€” 55 match(es) with >= 7 total goals
+- **F22** Â· `relationships` Â· *[medium]* â€” **Strongest correlation with total goals** â€” home_team_home_goals_avg |corr| = 0.1141 (n=2280 leakage-safe rows)
+- **F23** Â· `relationships` Â· *[medium]* â€” **Most outcome-separating feature** â€” points_difference spreads group means over 10.388: home 4.323, draw -1.469, away -6.065
+- **F24** Â· `database_profile` Â· *[high]* â€” **Data-quality warnings (10)** â€” Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE
+- **F25** Â· `database_profile` Â· *[medium]* â€” **Data coverage** â€” 7 of 7 registered seasons populated (100.0%); 2375 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 449 |
-| Average goals per match | 2.748 |
-| Home win rate | 48.3% |
-| Draw rate | 24.5% |
-| Away win rate | 27.2% |
+| Matches analysed | 2375 |
+| Average goals per match | 2.597 |
+| Home win rate | 45.0% |
+| Draw rate | 26.7% |
+| Away win rate | 28.4% |
 | Most common scoreline | 1-1 |
 | Dominant team (lifetime points) | Barcelona |
 | Champion with most titles | Barcelona |
-| BTTS rate | 56.8% |
+| BTTS rate | 52.1% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 29.18 |
-| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 10.58 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 6.31 |
-| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 32.72 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.93 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 76.69 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.33 |
+| database_profile | database_profile | observed, calculated, warnings | 39.87 |
+| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 27.22 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.35 |
+| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 41.28 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.47 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 355.94 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.79 |
 
 ## 5. Notable anomalies
-- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 69 matches, expected 380
-- **2.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026-2027 has data but state is 'in_progress'
-- **3.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2026-2027 goalless share 7.2% vs overall 4.5% (deviation 2.7 pp)
-- **4.** `HIGH_SCORING_MATCHES` *(warning)* — 2 match(es) with >= 8 total goals (extreme scorelines)
-- **5.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)
-- **6.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=29, fgte=29 rows)
+- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2026-2027 has 95 matches, expected 380
+- **2.** `SEASON_STATE_NOT_COMPLETE` *(warning)* â€” Season 2026-2027 has data but state is 'in_progress'
+- **3.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2021-2022 goalless share 11.3% vs overall 7.4% (deviation 3.9 pp)
+- **4.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2024-2025 goalless share 5.5% vs overall 7.4% (deviation 1.9 pp)
+- **5.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2025-2026 goalless share 3.9% vs overall 7.4% (deviation 3.5 pp)
+- **6.** `SEASON_AVG_GOALS_OUTLIER` *(warning)* â€” Season 2026-2027 avg goals 3.011 vs overall 2.597 (deviation 0.414)
+- **7.** `GOALLESS_SHARE_OUTLIER` *(warning)* â€” Season 2026-2027 goalless share 9.5% vs overall 7.4% (deviation 2.1 pp)
+- **8.** `HIGH_SCORING_MATCHES` *(warning)* â€” 12 match(es) with >= 8 total goals (extreme scorelines)
+- **9.** `DUPLICATE_ROWS` *(warning)* â€” Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)
+- **10.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* â€” first_goal_time/first_goal_time_extra NULL semantics broken (fgt=439, fgte=439 rows)
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

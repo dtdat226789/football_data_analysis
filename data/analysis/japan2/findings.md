@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-09-29T15:59:50+00:00
+- Generated: 2026-10-26T01:39:30+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: J2 League (Japan)
 - Scope: league `japan2`
@@ -8,70 +8,91 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | E:\football_data_analysis\data\analysis\japan2\database_profile.json | yes | yes | 28.12 |
-| matches_analysis | E:\football_data_analysis\data\analysis\japan2\matches_analysis.json | yes | yes | 14.22 |
-| goals_analysis | E:\football_data_analysis\data\analysis\japan2\goals_analysis.json | yes | yes | 6.21 |
-| teams_analysis | E:\football_data_analysis\data\analysis\japan2\teams_analysis.json | yes | yes | 35.74 |
-| season_trends | E:\football_data_analysis\data\analysis\japan2\season_trends.json | yes | yes | 3.88 |
-| scoreline_analysis | E:\football_data_analysis\data\analysis\japan2\scoreline_analysis.json | yes | yes | 119.34 |
-| relationships | E:\football_data_analysis\data\analysis\japan2\relationships.json | yes | yes | 14.35 |
+| database_profile | data/analysis/japan2/database_profile.json | yes | yes | 41.76 |
+| matches_analysis | data/analysis/japan2/matches_analysis.json | yes | yes | 27.24 |
+| goals_analysis | data/analysis/japan2/goals_analysis.json | yes | yes | 11.04 |
+| teams_analysis | data/analysis/japan2/teams_analysis.json | yes | yes | 46.97 |
+| season_trends | data/analysis/japan2/season_trends.json | yes | yes | 8.97 |
+| scoreline_analysis | data/analysis/japan2/scoreline_analysis.json | yes | yes | 370.39 |
+| relationships | data/analysis/japan2/relationships.json | yes | yes | 13.78 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 760 matches: home wins 39.2%, draws 25.9%, away wins 34.9% (298H / 197D / 265A)
-- **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 15 home and 29 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 169 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 760 matches produced 1880 goals (avg 2.474 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 53.6% vs away 46.4% of 1880 goals in total (home/away ratio 1.15)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 378 of 760 matches (49.7%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 206 scoring matches, 30.1% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 32.32, median 27.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — V-Varen Nagasaki leads with 145 points across 2 seasons (0 title(s), GD 54)
-- **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 14 teams present in every one of the 2 seasons (Blaublitz, Chiba, Ehime, Fujieda MYFC, Iwaki...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Kagoshima Utd earns 18 more points at home than away (24 home vs 6 away)
-- **F12** · `season_trends` · *[high]* — **Champion with most titles** — Shimizu S-Pulse won 1 of 2 championship(s) on record
-- **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2025: Mito beat V-Varen Nagasaki by 0 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — stable (-0.031 per match): first half 2.489 vs last half 2.458 across 2 seasons
-- **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2024 (goals view, avg abs position diff 6.400)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2025 (luck view, avg abs position diff 1.400)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-0 in 89 matches (11.7%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (89 of 298 home matches, 29.9%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (79 of 197 draw matches, 40.1%)
-- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (77 of 265 away matches, 29.1%)
-- **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 11 match(es) with >= 7 total goals
-- **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_wins_last_5 |corr| = 0.0992 (n=760 leakage-safe rows)
-- **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 7.104: home 3.587, draw -0.604, away -3.517
-- **F24** · `database_profile` · *[high]* — **Data-quality warnings (3)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 2 of 2 registered seasons populated (100.0%); 760 matches observed
+- **F1** Â· `matches_analysis` Â· *[medium]* â€” **Outcome split across all seasons** â€” 2608 matches: home wins 38.1%, draws 27.6%, away wins 34.2% (994H / 721D / 893A)
+- **F2** Â· `matches_analysis` Â· *[medium]* â€” **Comeback wins** â€” 48 home and 64 away comebacks (trailing at HT but winning at FT)
+- **F3** Â· `matches_analysis` Â· *[low]* â€” **Most common HT/FT flow** â€” home lead at HT -> home win occurred 577 times
+- **F4** Â· `goals_analysis` Â· *[medium]* â€” **Average goals per match** â€” 2608 matches produced 6416 goals (avg 2.460 per match)
+- **F5** Â· `goals_analysis` Â· *[medium]* â€” **Home goal share** â€” home 52.6% vs away 47.4% of 6416 goals in total (home/away ratio 1.11)
+- **F6** Â· `goals_analysis` Â· *[medium]* â€” **Both teams to score** â€” 1302 of 2608 matches (49.9%)
+- **F7** Â· `goals_analysis` Â· *[low]* â€” **Most common first-goal bucket** â€” minute 1-15 (first goal in 710 scoring matches, 30.0% of scoring)
+- **F8** Â· `goals_analysis` Â· *[low]* â€” **Average first goal minute** â€” mean 33.05, median 28.0
+- **F9** Â· `teams_analysis` Â· *[high]* â€” **Dominant team by lifetime points** â€” V-Varen Nagasaki leads with 424 points across 6 seasons (0 title(s), GD 116)
+- **F10** Â· `teams_analysis` Â· *[medium]* â€” **Team consistency** â€” 6 teams present in every one of the 6 seasons (Chiba, Kofu, Mito, Montedio Yamagata, Renofa Yamaguchi...)
+- **F11** Â· `teams_analysis` Â· *[medium]* â€” **Biggest home advantage** â€” Renofa Yamaguchi earns 51 more points at home than away (155 home vs 104 away)
+- **F12** Â· `season_trends` Â· *[high]* â€” **Champion with most titles** â€” Tokushima won 1 of 6 championship(s) on record
+- **F13** Â· `season_trends` Â· *[medium]* â€” **Tightest title race** â€” 2020: Tokushima beat Avispa Fukuoka by 0 pts
+- **F14** Â· `season_trends` Â· *[medium]* â€” **Average-goals trend** â€” up (+0.078 per match): first half 2.422 vs last half 2.5 across 6 seasons
+- **F15** Â· `season_trends` Â· *[low]* â€” **Largest view divergence** â€” 2020 (goals view, avg abs position diff 7.909)
+- **F16** Â· `season_trends` Â· *[low]* â€” **Smallest view divergence** â€” 2025 (luck view, avg abs position diff 1.400)
+- **F17** Â· `scoreline_analysis` Â· *[medium]* â€” **Most common scoreline** â€” 1-1 in 319 matches (12.2%)
+- **F18** Â· `scoreline_analysis` Â· *[low]* â€” **Most common home-win scoreline** â€” 1-0 (294 of 994 home matches, 29.6%)
+- **F19** Â· `scoreline_analysis` Â· *[low]* â€” **Most common draw scoreline** â€” 1-1 (319 of 721 draw matches, 44.2%)
+- **F20** Â· `scoreline_analysis` Â· *[low]* â€” **Most common away-win scoreline** â€” 0-1 (290 of 893 away matches, 32.5%)
+- **F21** Â· `scoreline_analysis` Â· *[low]* â€” **Extreme scorelines** â€” 35 match(es) with >= 7 total goals
+- **F22** Â· `relationships` Â· *[medium]* â€” **Strongest correlation with total goals** â€” home_points_before_match |corr| = 0.04 (n=2608 leakage-safe rows)
+- **F23** Â· `relationships` Â· *[medium]* â€” **Most outcome-separating feature** â€” points_difference spreads group means over 6.088: home 3.059, draw -0.494, away -3.029
+- **F24** Â· `database_profile` Â· *[high]* â€” **Data-quality warnings (24)** â€” Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
+- **F25** Â· `database_profile` Â· *[medium]* â€” **Data coverage** â€” 6 of 6 registered seasons populated (100.0%); 2608 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 760 |
-| Average goals per match | 2.474 |
-| Home win rate | 39.2% |
-| Draw rate | 25.9% |
-| Away win rate | 34.9% |
-| Most common scoreline | 1-0 |
+| Matches analysed | 2608 |
+| Average goals per match | 2.46 |
+| Home win rate | 38.1% |
+| Draw rate | 27.6% |
+| Away win rate | 34.2% |
+| Most common scoreline | 1-1 |
 | Dominant team (lifetime points) | V-Varen Nagasaki |
-| Champion with most titles | Shimizu S-Pulse |
-| BTTS rate | 49.7% |
+| Champion with most titles | Tokushima |
+| BTTS rate | 49.9% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 28.12 |
-| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 14.22 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 6.21 |
-| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 35.74 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 3.88 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 119.34 |
-| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 14.35 |
+| database_profile | database_profile | observed, calculated, warnings | 41.76 |
+| matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 27.24 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 11.04 |
+| teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 46.97 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 8.97 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 370.39 |
+| relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.78 |
 
 ## 5. Notable anomalies
-- **1.** `HIGH_SCORING_MATCHES` *(warning)* — 2 match(es) with >= 8 total goals (extreme scorelines)
-- **2.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)
-- **3.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=17, fgte=17 rows)
+- **1.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2020 has 462 matches, expected 380
+- **2.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2020 has 22 teams, expected 20
+- **3.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2021 has 462 matches, expected 380
+- **4.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2021 has 22 teams, expected 20
+- **5.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2022 has 462 matches, expected 380
+- **6.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2022 has 22 teams, expected 20
+- **7.** `MATCH_COUNT_UNEXPECTED` *(warning)* â€” Season 2023 has 462 matches, expected 380
+- **8.** `TEAM_COUNT_UNEXPECTED` *(warning)* â€” Season 2023 has 22 teams, expected 20
+- **9.** `OUTCOME_SHARE_OUTLIER` *(warning)* â€” Season 2024 draw outcome share 23.4% vs overall 27.6%
+- **10.** `HIGH_SCORING_MATCHES` *(warning)* â€” 8 match(es) with >= 8 total goals (extreme scorelines)
+- **11.** `DUPLICATE_ROWS` *(warning)* â€” Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)
+- **12.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* â€” first_goal_time/first_goal_time_extra NULL semantics broken (fgt=366, fgte=366 rows)
+- **13.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2020/classic rows=22 positions=1..22 teams=22
+- **14.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2020/goals rows=22 positions=1..22 teams=22
+- **15.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2020/luck rows=22 positions=1..22 teams=22
+- **16.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/classic rows=22 positions=1..22 teams=22
+- **17.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/goals rows=22 positions=1..22 teams=22
+- **18.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2021/luck rows=22 positions=1..22 teams=22
+- **19.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/classic rows=22 positions=1..22 teams=22
+- **20.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/goals rows=22 positions=1..22 teams=22
+- **21.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2022/luck rows=22 positions=1..22 teams=22
+- **22.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/classic rows=22 positions=1..22 teams=22
+- **23.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/goals rows=22 positions=1..22 teams=22
+- **24.** `STANDINGS_INCOMPLETE` *(warning)* â€” Standings 2023/luck rows=22 positions=1..22 teams=22
 
 ## 6. Methodology
 - Exploratory-data-analysis only: SQL + Python over the analytics database; relationship statistics use leakage-safe pre-match features and imply no predictive power.

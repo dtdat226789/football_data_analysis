@@ -1,136 +1,142 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-09-29T16:09:49+00:00
+- Generated: 2026-10-26T01:50:51+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Super League (Switzerland)
 - Scope: league `swiss1`
 
-- Teams: **14** | Seasons: **2** | Matches: **284**
+- Teams: **16** | Seasons: **7** | Matches: **1229**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Lugano | 2 | 47 | 27 | 11 | 9 | 92 | 86 | 49 | 37 | 46.0 | 1 | 3 | 1 |
-| Thun | 2 | 47 | 27 | 4 | 16 | 85 | 95 | 75 | 20 | 42.5 | 1 | 9 | 1 |
-| St. Gallen | 2 | 47 | 24 | 11 | 12 | 83 | 88 | 66 | 22 | 41.5 | 2 | 5 | 0 |
-| Sion | 2 | 47 | 22 | 16 | 9 | 82 | 86 | 54 | 32 | 41.0 | 3 | 4 | 0 |
-| Young Boys | 2 | 47 | 20 | 14 | 13 | 74 | 111 | 87 | 24 | 37.0 | 2 | 6 | 0 |
-| Basel | 2 | 47 | 20 | 9 | 18 | 69 | 72 | 75 | -3 | 34.5 | 4 | 5 | 0 |
-| Luzern | 2 | 47 | 17 | 14 | 16 | 65 | 93 | 84 | 9 | 32.5 | 6 | 7 | 0 |
-| Servette | 2 | 47 | 16 | 15 | 16 | 63 | 82 | 76 | 6 | 31.5 | 8 | 8 | 0 |
-| Zurich | 2 | 47 | 14 | 7 | 26 | 49 | 63 | 92 | -29 | 24.5 | 7 | 10 | 0 |
-| Lausanne | 2 | 47 | 12 | 12 | 23 | 48 | 60 | 82 | -22 | 24.0 | 9 | 12 | 0 |
-| Grasshoppers | 2 | 49 | 11 | 12 | 26 | 45 | 63 | 99 | -36 | 22.5 | 10 | 11 | 0 |
-| Winterthur | 1 | 38 | 5 | 8 | 25 | 23 | 44 | 100 | -56 | 23.0 | 12 | 12 | 0 |
-| Vaduz | 1 | 9 | 2 | 0 | 7 | 6 | 18 | 21 | -3 | 6.0 | 11 | 11 | 0 |
+| Young Boys | 7 | 223 | 118 | 62 | 43 | 416 | 467 | 270 | 197 | 59.43 | 1 | 6 | 3 |
+| Lugano | 7 | 222 | 103 | 54 | 65 | 363 | 348 | 283 | 65 | 51.86 | 1 | 5 | 1 |
+| Servette | 7 | 223 | 89 | 66 | 68 | 333 | 340 | 328 | 12 | 47.57 | 2 | 8 | 0 |
+| Basel | 7 | 222 | 90 | 62 | 70 | 332 | 366 | 305 | 61 | 47.43 | 1 | 9 | 1 |
+| St. Gallen | 7 | 223 | 87 | 61 | 75 | 322 | 367 | 318 | 49 | 46.0 | 2 | 7 | 0 |
+| Zurich | 7 | 223 | 85 | 58 | 80 | 313 | 329 | 336 | -7 | 44.71 | 1 | 10 | 1 |
+| Luzern | 7 | 223 | 77 | 65 | 81 | 296 | 366 | 362 | 4 | 42.29 | 4 | 9 | 0 |
+| Sion | 6 | 189 | 57 | 57 | 75 | 228 | 262 | 306 | -44 | 38.0 | 3 | 10 | 0 |
+| Lausanne | 6 | 186 | 51 | 50 | 85 | 203 | 244 | 306 | -62 | 33.83 | 6 | 12 | 0 |
+| Grasshoppers | 6 | 188 | 47 | 51 | 90 | 192 | 243 | 314 | -71 | 32.0 | 7 | 11 | 0 |
+| Winterthur | 4 | 140 | 34 | 32 | 74 | 134 | 163 | 283 | -120 | 33.5 | 5 | 12 | 0 |
+| Thun | 2 | 48 | 27 | 4 | 17 | 85 | 97 | 79 | 18 | 42.5 | 1 | 9 | 1 |
+| Yverdon | 2 | 66 | 19 | 16 | 31 | 73 | 76 | 121 | -45 | 36.5 | 10 | 11 | 0 |
+| Vaduz | 2 | 47 | 12 | 9 | 26 | 45 | 58 | 81 | -23 | 22.5 | 10 | 10 | 0 |
+| Lausanne Ouchy | 1 | 33 | 5 | 8 | 20 | 23 | 33 | 66 | -33 | 23.0 | 12 | 12 | 0 |
 | Aarau | 1 | 2 | 0 | 1 | 1 | 1 | 1 | 2 | -1 | 1.0 | 13 | 13 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Lugano | 24 | 16 | 4 | 4 | 52 | 23 | 11 | 7 | 5 | 40 | 12 |
-| Young Boys | 24 | 12 | 7 | 5 | 43 | 23 | 8 | 7 | 8 | 31 | 12 |
-| Zurich | 23 | 9 | 1 | 13 | 28 | 24 | 5 | 6 | 13 | 21 | 7 |
-| Sion | 24 | 12 | 8 | 4 | 44 | 23 | 10 | 8 | 5 | 38 | 6 |
-| Vaduz | 4 | 2 | 0 | 2 | 6 | 5 | 0 | 0 | 5 | 0 | 6 |
-| Winterthur | 19 | 3 | 5 | 11 | 14 | 19 | 2 | 3 | 14 | 9 | 5 |
-| Grasshoppers | 24 | 6 | 6 | 12 | 24 | 25 | 5 | 6 | 14 | 21 | 3 |
-| Lausanne | 24 | 6 | 7 | 11 | 25 | 23 | 6 | 5 | 12 | 23 | 2 |
-| Servette | 23 | 8 | 8 | 7 | 32 | 24 | 8 | 7 | 9 | 31 | 1 |
+| Young Boys | 112 | 76 | 25 | 11 | 253 | 111 | 42 | 37 | 32 | 163 | 90 |
+| St. Gallen | 111 | 53 | 31 | 27 | 190 | 112 | 34 | 30 | 48 | 132 | 58 |
+| Lugano | 112 | 61 | 23 | 28 | 206 | 110 | 42 | 31 | 37 | 157 | 49 |
+| Lausanne | 93 | 35 | 21 | 37 | 126 | 93 | 16 | 29 | 48 | 77 | 49 |
+| Servette | 112 | 49 | 38 | 25 | 185 | 111 | 40 | 28 | 43 | 148 | 37 |
+| Yverdon | 33 | 16 | 7 | 10 | 55 | 33 | 3 | 9 | 21 | 18 | 37 |
+| Luzern | 111 | 44 | 33 | 34 | 165 | 112 | 33 | 32 | 47 | 131 | 34 |
+| Grasshoppers | 94 | 29 | 26 | 39 | 113 | 94 | 18 | 25 | 51 | 79 | 34 |
+| Winterthur | 70 | 23 | 15 | 32 | 84 | 70 | 11 | 17 | 42 | 50 | 34 |
+| Basel | 111 | 49 | 34 | 28 | 181 | 111 | 41 | 28 | 42 | 151 | 30 |
+| Zurich | 112 | 47 | 30 | 35 | 171 | 111 | 38 | 28 | 45 | 142 | 29 |
+| Sion | 94 | 30 | 31 | 33 | 121 | 95 | 27 | 26 | 42 | 107 | 14 |
+| Vaduz | 23 | 7 | 4 | 12 | 25 | 24 | 5 | 5 | 14 | 20 | 5 |
+| Lausanne Ouchy | 17 | 2 | 6 | 9 | 12 | 16 | 3 | 2 | 11 | 11 | 1 |
 | Aarau | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
-| Basel | 24 | 9 | 6 | 9 | 33 | 23 | 11 | 3 | 9 | 36 | -3 |
-| Luzern | 24 | 8 | 7 | 9 | 31 | 23 | 9 | 7 | 7 | 34 | -3 |
-| Thun | 23 | 12 | 3 | 8 | 39 | 24 | 15 | 1 | 8 | 46 | -7 |
-| St. Gallen | 23 | 11 | 4 | 8 | 37 | 24 | 13 | 7 | 4 | 46 | -9 |
+| Thun | 23 | 12 | 3 | 8 | 39 | 25 | 15 | 1 | 9 | 46 | -7 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Lugano | 1.96 |
-| 2 | Thun | 1.81 |
-| 3 | St. Gallen | 1.77 |
-| 4 | Sion | 1.75 |
-| 5 | Young Boys | 1.57 |
+| 1 | Young Boys | 1.86 |
+| 2 | Thun | 1.77 |
+| 3 | Lugano | 1.64 |
+| 4 | Basel | 1.50 |
+| 5 | Servette | 1.49 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Young Boys | 111 |
-| 2 | Thun | 95 |
-| 3 | Luzern | 93 |
-| 4 | St. Gallen | 88 |
-| 5 | Lugano | 86 |
+| 1 | Young Boys | 467 |
+| 2 | St. Gallen | 367 |
+| 3 | Basel | 366 |
+| 4 | Luzern | 366 |
+| 5 | Lugano | 348 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Lugano | 37 |
-| 2 | Sion | 32 |
-| 3 | Young Boys | 24 |
-| 4 | St. Gallen | 22 |
-| 5 | Thun | 20 |
+| 1 | Young Boys | 197 |
+| 2 | Lugano | 65 |
+| 3 | Basel | 61 |
+| 4 | St. Gallen | 49 |
+| 5 | Thun | 18 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
 | 1 | Aarau | 0.000 |
-| 2 | Lugano | 1.043 |
-| 3 | Sion | 1.149 |
-| 4 | St. Gallen | 1.404 |
-| 5 | Thun | 1.596 |
+| 2 | Young Boys | 1.211 |
+| 3 | Lugano | 1.275 |
+| 4 | Basel | 1.374 |
+| 5 | St. Gallen | 1.426 |
 
 ## 4. Team consistency
-- Teams present in all **2** seasons: **11**
+- Teams present in all **7** seasons: **7**
 
-Basel, Grasshoppers, Lausanne, Lugano, Luzern, Servette, Sion, St. Gallen, Thun, Young Boys, Zurich
+Basel, Lugano, Luzern, Servette, St. Gallen, Young Boys, Zurich
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **76** (showing the 15 most frequent)
+- Distinct fixtures: **100** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
-| Thun vs Sion | 5 | 4 | 0 | 1 | 80.0% | 0.0% | 20.0% |
-| Lugano vs Young Boys | 5 | 3 | 2 | 0 | 60.0% | 40.0% | 0.0% |
-| Luzern vs Grasshoppers | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Servette vs Zurich | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Sion vs Young Boys | 5 | 3 | 2 | 0 | 60.0% | 40.0% | 0.0% |
-| Thun vs Basel | 5 | 3 | 0 | 2 | 60.0% | 0.0% | 40.0% |
-| Zurich vs Grasshoppers | 5 | 3 | 1 | 1 | 60.0% | 20.0% | 20.0% |
-| Basel vs Young Boys | 5 | 2 | 3 | 0 | 40.0% | 60.0% | 0.0% |
-| Lugano vs Basel | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Lugano vs Sion | 5 | 2 | 2 | 1 | 40.0% | 40.0% | 20.0% |
-| Luzern vs Lausanne | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| Servette vs Grasshoppers | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| St. Gallen vs Basel | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| St. Gallen vs Lugano | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
-| St. Gallen vs Sion | 5 | 2 | 1 | 2 | 40.0% | 20.0% | 40.0% |
+| Young Boys vs St. Gallen | 23 | 14 | 4 | 5 | 60.9% | 17.4% | 21.7% |
+| Young Boys vs Lugano | 23 | 13 | 6 | 4 | 56.5% | 26.1% | 17.4% |
+| Young Boys vs Basel | 23 | 12 | 9 | 2 | 52.2% | 39.1% | 8.7% |
+| Basel vs Lugano | 23 | 10 | 6 | 7 | 43.5% | 26.1% | 30.4% |
+| Basel vs St. Gallen | 23 | 10 | 8 | 5 | 43.5% | 34.8% | 21.7% |
+| Luzern vs Zurich | 23 | 10 | 6 | 7 | 43.5% | 26.1% | 30.4% |
+| Servette vs Zurich | 23 | 10 | 5 | 8 | 43.5% | 21.7% | 34.8% |
+| Servette vs Luzern | 23 | 9 | 8 | 6 | 39.1% | 34.8% | 26.1% |
+| Lugano vs St. Gallen | 23 | 8 | 7 | 8 | 34.8% | 30.4% | 34.8% |
+| Basel vs Servette | 22 | 11 | 7 | 4 | 50.0% | 31.8% | 18.2% |
+| Lugano vs Zurich | 22 | 11 | 2 | 9 | 50.0% | 9.1% | 40.9% |
+| Young Boys vs Servette | 22 | 11 | 5 | 6 | 50.0% | 22.7% | 27.3% |
+| Young Boys vs Zurich | 22 | 11 | 6 | 5 | 50.0% | 27.3% | 22.7% |
+| Lugano vs Luzern | 22 | 9 | 4 | 9 | 40.9% | 18.2% | 40.9% |
+| Luzern vs St. Gallen | 22 | 9 | 11 | 2 | 40.9% | 50.0% | 9.1% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
-| team | 2025-2026 | 2026-2027 |
-|---|---|---|
-| Lugano | 3 | 1 |
-| Thun | 1 | 9 |
-| St. Gallen | 2 | 5 |
-| Sion | 4 | 3 |
-| Young Boys | 6 | 2 |
-| Basel | 5 | 4 |
-| Luzern | 7 | 6 |
-| Servette | 8 | 8 |
-| Zurich | 10 | 7 |
-| Lausanne | 9 | 12 |
-| Grasshoppers | 11 | 10 |
-| Winterthur | 12 | - |
-| Vaduz | - | 11 |
-| Aarau | 13 | - |
+| team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
+|---|---|---|---|---|---|---|---|
+| Young Boys | 1 | 3 | 1 | 1 | 3 | 6 | 2 |
+| Lugano | 4 | 4 | 3 | 2 | 5 | 3 | 1 |
+| Servette | 3 | 6 | 2 | 3 | 2 | 8 | 5 |
+| Basel | 2 | 2 | 5 | 9 | 1 | 5 | 7 |
+| St. Gallen | 7 | 5 | 6 | 4 | 7 | 2 | 6 |
+| Zurich | 8 | 1 | 8 | 6 | 8 | 10 | 4 |
+| Luzern | 5 | 9 | 4 | 7 | 4 | 7 | 8 |
+| Sion | 9 | 7 | 10 | - | 9 | 4 | 3 |
+| Lausanne | 6 | 10 | - | 8 | 6 | 9 | 12 |
+| Grasshoppers | - | 8 | 7 | 11 | 10 | 11 | 11 |
+| Winterthur | - | - | 9 | 5 | 12 | 12 | - |
+| Thun | - | - | - | - | - | 1 | 9 |
+| Yverdon | - | - | - | 10 | 11 | - | - |
+| Vaduz | 10 | - | - | - | - | - | 10 |
+| Lausanne Ouchy | - | - | - | 12 | - | - | - |
+| Aarau | - | - | - | - | - | 13 | - |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*
 
 ## Charts
 
-![teams_analysis_top_points](E:\football_data_analysis\data\analysis\swiss1\charts\teams_analysis_top_points.png)
-![teams_analysis_home_advantage](E:\football_data_analysis\data\analysis\swiss1\charts\teams_analysis_home_advantage.png)
+![teams_analysis_top_points](charts/teams_analysis_top_points.png)
+![teams_analysis_home_advantage](charts/teams_analysis_home_advantage.png)
 
