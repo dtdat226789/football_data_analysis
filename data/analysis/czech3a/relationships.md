@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:29:23+00:00
+- Generated: 2026-10-27T01:44:05+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: 3. CFL - Group A (Czech Republic)
 - Scope: league `czech3a`

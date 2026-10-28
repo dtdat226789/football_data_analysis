@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:27:54+00:00
+- Generated: 2026-10-27T01:42:03+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`

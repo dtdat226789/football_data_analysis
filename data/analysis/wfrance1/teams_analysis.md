@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:52:52+00:00
+- Generated: 2026-10-27T02:35:02+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premiere Ligue Women (France)
 - Scope: league `wfrance1`

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:49:23+00:00
+- Generated: 2026-10-27T02:31:35+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`

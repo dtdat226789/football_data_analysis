@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:51:07+00:00
+- Generated: 2026-10-27T02:33:26+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Challenge League (Switzerland)
 - Scope: league `swiss2`
 
-- Teams: **20** | Seasons: **7** | Matches: **1140**
+- Teams: **20** | Seasons: **7** | Matches: **1141**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -17,13 +17,13 @@
 | Vaduz | 5 | 178 | 76 | 50 | 52 | 278 | 310 | 255 | 55 | 55.6 | 1 | 8 | 1 |
 | Xamax | 7 | 225 | 70 | 55 | 100 | 265 | 314 | 355 | -41 | 37.86 | 4 | 10 | 0 |
 | Schaffhausen | 5 | 178 | 61 | 47 | 70 | 230 | 257 | 277 | -20 | 46.0 | 2 | 11 | 0 |
-| Yverdon | 4 | 118 | 56 | 28 | 34 | 196 | 199 | 162 | 37 | 49.0 | 1 | 8 | 1 |
+| Yverdon | 4 | 119 | 57 | 28 | 34 | 199 | 204 | 164 | 40 | 49.75 | 1 | 8 | 1 |
 | Bellinzona | 4 | 142 | 38 | 31 | 73 | 145 | 161 | 248 | -87 | 36.25 | 6 | 10 | 0 |
 | Winterthur | 3 | 83 | 35 | 24 | 24 | 129 | 149 | 108 | 41 | 43.0 | 1 | 6 | 1 |
 | Stade Nyonnais | 4 | 117 | 27 | 31 | 59 | 112 | 128 | 210 | -82 | 28.0 | 7 | 10 | 0 |
 | Etoile-Carouge | 3 | 89 | 24 | 24 | 41 | 96 | 110 | 135 | -25 | 32.0 | 6 | 8 | 0 |
 | Sion | 1 | 36 | 23 | 10 | 3 | 79 | 72 | 23 | 49 | 79.0 | 1 | 1 | 1 |
-| Kriens | 3 | 82 | 16 | 18 | 48 | 66 | 82 | 153 | -71 | 22.0 | 5 | 10 | 0 |
+| Kriens | 3 | 83 | 16 | 18 | 49 | 66 | 84 | 158 | -74 | 22.0 | 5 | 10 | 0 |
 | Grasshoppers | 1 | 36 | 19 | 8 | 9 | 65 | 60 | 43 | 17 | 65.0 | 1 | 1 | 1 |
 | Lausanne | 1 | 36 | 17 | 10 | 9 | 61 | 58 | 43 | 15 | 61.0 | 2 | 2 | 0 |
 | Rapperswil-Jona | 2 | 47 | 17 | 4 | 26 | 55 | 69 | 83 | -14 | 27.5 | 7 | 8 | 0 |
@@ -41,14 +41,14 @@
 | Etoile | 24 | 12 | 6 | 6 | 42 | 0 | 0 | 0 | 0 | 0 | 42 |
 | Winterthur | 42 | 23 | 11 | 8 | 80 | 41 | 12 | 13 | 16 | 49 | 31 |
 | Aarau | 114 | 59 | 24 | 31 | 201 | 111 | 48 | 28 | 35 | 172 | 29 |
+| Yverdon | 60 | 32 | 16 | 12 | 112 | 59 | 25 | 12 | 22 | 87 | 25 |
 | Bellinzona | 72 | 24 | 13 | 35 | 85 | 70 | 14 | 18 | 38 | 60 | 25 |
 | Lausanne Ouchy | 95 | 43 | 26 | 26 | 155 | 94 | 35 | 26 | 33 | 131 | 24 |
 | Stade Nyonnais | 59 | 18 | 14 | 27 | 68 | 58 | 9 | 17 | 32 | 44 | 24 |
 | Schaffhausen | 90 | 33 | 27 | 30 | 126 | 88 | 28 | 20 | 40 | 104 | 22 |
-| Yverdon | 59 | 31 | 16 | 12 | 109 | 59 | 25 | 12 | 22 | 87 | 22 |
 | Chiasso | 18 | 7 | 6 | 5 | 27 | 18 | 2 | 3 | 13 | 9 | 18 |
 | Lausanne | 18 | 11 | 6 | 1 | 39 | 18 | 6 | 4 | 8 | 22 | 17 |
-| Kriens | 42 | 10 | 10 | 22 | 40 | 40 | 6 | 8 | 26 | 26 | 14 |
+| Kriens | 42 | 10 | 10 | 22 | 40 | 41 | 6 | 8 | 27 | 26 | 14 |
 | Grasshoppers | 18 | 12 | 3 | 3 | 39 | 18 | 7 | 5 | 6 | 26 | 13 |
 | Rapperswil-Jona | 23 | 9 | 2 | 12 | 29 | 24 | 8 | 2 | 14 | 26 | 3 |
 | Baden | 18 | 3 | 4 | 11 | 13 | 18 | 3 | 4 | 11 | 13 | 0 |
@@ -130,9 +130,9 @@ _Cells show final position; '-' when the team was absent from that season._
 | Vaduz | - | 4 | 8 | 3 | 4 | 1 | - |
 | Xamax | 9 | 6 | 10 | 4 | 7 | 5 | 4 |
 | Schaffhausen | 4 | 2 | 7 | 9 | 11 | - | - |
-| Yverdon | - | 8 | 1 | - | - | 3 | 3 |
+| Yverdon | - | 8 | 1 | - | - | 3 | 2 |
 | Bellinzona | - | - | 9 | 8 | 6 | 10 | - |
-| Winterthur | 6 | 1 | - | - | - | - | 2 |
+| Winterthur | 6 | 1 | - | - | - | - | 3 |
 | Stade Nyonnais | - | - | - | 7 | 9 | 9 | 10 |
 | Etoile-Carouge | - | - | - | - | 8 | 6 | 7 |
 | Sion | - | - | - | 1 | - | - | - |

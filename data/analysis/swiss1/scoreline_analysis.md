@@ -1,32 +1,32 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:50:54+00:00
+- Generated: 2026-10-27T02:33:11+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Super League (Switzerland)
 - Scope: league `swiss1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1229** across **7** seasons.
+- Matches analysed: **1232** across **7** seasons.
 - Distinct scorelines seen: **41**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 159 | 12.9% |
 | 2-1 | 118 | 9.6% |
-| 1-0 | 93 | 7.6% |
+| 1-0 | 94 | 7.6% |
 | 2-2 | 91 | 7.4% |
 | 1-2 | 85 | 6.9% |
-| 0-1 | 72 | 5.9% |
-| 2-0 | 67 | 5.5% |
+| 0-1 | 72 | 5.8% |
+| 2-0 | 67 | 5.4% |
 | 3-1 | 62 | 5.0% |
-| 0-0 | 54 | 4.4% |
+| 0-0 | 55 | 4.5% |
 | 0-2 | 52 | 4.2% |
 | 3-0 | 47 | 3.8% |
-| 1-3 | 40 | 3.3% |
+| 1-3 | 40 | 3.2% |
 | 3-2 | 31 | 2.5% |
-| 2-3 | 29 | 2.4% |
+| 2-3 | 30 | 2.4% |
 | 0-3 | 28 | 2.3% |
-| 4-0 | 24 | 2.0% |
+| 4-0 | 24 | 1.9% |
 | 4-1 | 23 | 1.9% |
 | 3-3 | 22 | 1.8% |
 | 1-4 | 21 | 1.7% |
@@ -91,23 +91,23 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 8 | 12.7% |
-| 0-1 | 4 | 6.3% |
-| 4-2 | 4 | 6.3% |
-| 2-2 | 4 | 6.3% |
-| 1-2 | 4 | 6.3% |
+| 2-1 | 8 | 12.1% |
+| 0-1 | 4 | 6.1% |
+| 4-2 | 4 | 6.1% |
+| 2-2 | 4 | 6.1% |
+| 1-0 | 4 | 6.1% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 54 | 4.4% |
-| 1 | 165 | 13.4% |
+| 0 | 55 | 4.5% |
+| 1 | 166 | 13.5% |
 | 2 | 278 | 22.6% |
 | 3 | 278 | 22.6% |
 | 4 | 224 | 18.2% |
-| 5 | 119 | 9.7% |
+| 5 | 120 | 9.7% |
 | 6 | 75 | 6.1% |
 | 7 | 28 | 2.3% |
 | 8 | 6 | 0.5% |
@@ -152,46 +152,46 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-01-25 | 3-4 | 7 |
 | 2025-2026 | 2026-02-10 | 4-3 | 7 |
 | 2025-2026 | 2026-02-14 | 6-1 | 7 |
-| 2026-2027 | 2026-08-30 | 5-2 | 7 |
 | 2026-2027 | 2026-08-30 | 3-4 | 7 |
+| 2026-2027 | 2026-08-30 | 5-2 | 7 |
 | 2026-2027 | 2026-09-15 | 2-5 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **901** (draws: **328**)
+- Decided matches: **903** (draws: **329**)
 - Average winning margin: **1.88**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 437 | 48.5% |
-| 2 | 251 | 27.9% |
+| 1 | 439 | 48.6% |
+| 2 | 251 | 27.8% |
 | 3+ | 213 | 23.6% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **533** | avg margin: **1.96** | max margin: **6**
+- Matches: **534** | avg margin: **1.96** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 245 | 46.0% |
-| 2 | 149 | 28.0% |
-| 3+ | 139 | 26.1% |
+| 1 | 246 | 46.1% |
+| 2 | 149 | 27.9% |
+| 3+ | 139 | 26.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **368** | avg margin: **1.77** | max margin: **6**
+- Matches: **369** | avg margin: **1.77** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 192 | 52.2% |
-| 2 | 102 | 27.7% |
+| 1 | 193 | 52.3% |
+| 2 | 102 | 27.6% |
 | 3+ | 74 | 20.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 533 | 2-1 | 118 | 22.1% |
-| draw | 328 | 1-1 | 159 | 48.5% |
-| away | 368 | 1-2 | 85 | 23.1% |
+| home | 534 | 2-1 | 118 | 22.1% |
+| draw | 329 | 1-1 | 159 | 48.3% |
+| away | 369 | 1-2 | 85 | 23.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

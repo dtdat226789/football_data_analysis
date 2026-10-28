@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:43:55+00:00
+- Generated: 2026-10-27T02:26:06+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2007 |
+| Matches | 2008 |
 | Home wins | 900 (44.8%) |
-| Draws | 565 (28.2%) |
+| Draws | 566 (28.2%) |
 | Away wins | 542 (27.0%) |
 | Total goals | 4720 |
-| Average goals per match | 2.352 |
-| Goalless matches | 185 (9.2%) |
+| Average goals per match | 2.351 |
+| Goalless matches | 186 (9.3%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -24,13 +24,13 @@
 | 2023-2024 | 380 | 159 (41.8%) | 121 (31.8%) | 100 (26.3%) | 815 | 2.145 | 50 (13.2%) |
 | 2024-2025 | 380 | 172 (45.3%) | 112 (29.5%) | 96 (25.3%) | 930 | 2.447 | 25 (6.6%) |
 | 2025-2026 | 398 | 182 (45.7%) | 113 (28.4%) | 103 (25.9%) | 974 | 2.447 | 39 (9.8%) |
-| 2026-2027 | 89 | 43 (48.3%) | 22 (24.7%) | 24 (27.0%) | 232 | 2.607 | 5 (5.6%) |
+| 2026-2027 | 90 | 43 (47.8%) | 23 (25.6%) | 24 (26.7%) | 232 | 2.578 | 6 (6.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 513 (77.5%) | 111 (16.8%) | 38 (5.7%) | 662 |
-| HT draw | 335 (36.3%) | 366 (39.7%) | 222 (24.1%) | 923 |
+| HT draw | 335 (36.3%) | 367 (39.7%) | 222 (24.0%) | 924 |
 | HT away lead | 43 (10.6%) | 88 (21.7%) | 275 (67.7%) | 406 |
 - *16 match(es) excluded (no HT score recorded).*
 
@@ -137,17 +137,17 @@
 | FT result | count | pct |
 |---|---|---|
 | Home win | 335 | 36.3% |
-| Draw | 366 | 39.7% |
-| Away win | 222 | 24.1% |
+| Draw | 367 | 39.7% |
+| Away win | 222 | 24.0% |
 - *16 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1806` of `2007` (90.0%)
+- Matches with a first-goal time recorded: `1806` of `2008` (89.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 525 | 26.2% | 263 (50.1%) | 105 (20.0%) | 157 (29.9%) |
+| 1-15 | 525 | 26.1% | 263 (50.1%) | 105 (20.0%) | 157 (29.9%) |
 | 16-30 | 413 | 20.6% | 197 (47.7%) | 107 (25.9%) | 109 (26.4%) |
 | 31-45 | 315 | 15.7% | 159 (50.5%) | 61 (19.4%) | 95 (30.2%) |
 | 46-60 | 250 | 12.5% | 117 (46.8%) | 55 (22.0%) | 78 (31.2%) |
@@ -156,7 +156,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 34 | 1.7% | 20 (58.8%) | 1 (2.9%) | 13 (38.2%) |
 
 ## 7. Goalless matches
-- Overall: **185** of `2007` (9.2%)
+- Overall: **186** of `2008` (9.3%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -165,7 +165,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 50 | 13.2% |
 | 2024-2025 | 380 | 25 | 6.6% |
 | 2025-2026 | 398 | 39 | 9.8% |
-| 2026-2027 | 89 | 5 | 5.6% |
+| 2026-2027 | 90 | 6 | 6.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

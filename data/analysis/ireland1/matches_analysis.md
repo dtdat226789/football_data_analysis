@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:36:45+00:00
+- Generated: 2026-10-27T01:54:43+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`

@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:27:55+00:00
+- Generated: 2026-10-27T01:42:04+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`

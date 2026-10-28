@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:43:01+00:00
+- Generated: 2026-10-27T02:25:05+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`
@@ -26,7 +26,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | pos 1 | pos 2 | pos 4 | pos 6 | pos 15 | pos 18 |
 |---|---|---|---|---|---|---|
 | 2025-2026 | 88 | 82 | 59 | 50 | 34 | 21 |
-| 2026-2027 | 27 | 19 | 18 | 14 | 7 | 2 |
+| 2026-2027 | 27 | 19 | 18 | 17 | 7 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -38,17 +38,17 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025-2026 | 308 | 823 | 2.672 | 41.2% | 27.3% | 31.5% | 6.8% | 44.21 |
-| 2026-2027 | 76 | 207 | 2.724 | 38.2% | 23.7% | 38.2% | 5.3% | 11.67 |
+| 2026-2027 | 80 | 219 | 2.737 | 37.5% | 22.5% | 40.0% | 5.0% | 12.33 |
 
 ## 6. View divergence
-- Largest divergence: **2026-2027** (goals view, avg abs position diff = 5.778)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 5.889)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 3.368 | 4.737 |
-| 2026-2027 | 3.000 | 5.778 |
+| 2026-2027 | 3.778 | 5.889 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

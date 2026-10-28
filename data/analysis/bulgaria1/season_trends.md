@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:27:57+00:00
+- Generated: 2026-10-27T01:42:06+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:38:27+00:00
+- Generated: 2026-10-27T01:57:45+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie C - Group A (Italy)
 - Scope: league `italy3a`
@@ -14,7 +14,7 @@
 | 2023-2024 | Mantova | 80 | Padova | 3 pts |
 | 2024-2025 | Padova | 86 | L.R. Vicenza | 3 pts |
 | 2025-2026 | L.R. Vicenza | 89 | Brescia | 20 pts |
-| 2026-2027 | Cittadella | 27 | Brescia | 5 pts |
+| 2026-2027 | Cittadella | 27 | Trento | 4 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 3 pts | yes |
 | 2024-2025 | 3 pts | yes |
 | 2025-2026 | 20 pts |  |
-| 2026-2027 | 5 pts |  |
+| 2026-2027 | 4 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 17 = last safe, 20 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 80 | 77 | 64 | 56 | 43 | 23 |
 | 2024-2025 | 86 | 83 | 60 | 57 | 37 | 21 |
 | 2025-2026 | 89 | 69 | 64 | 59 | 40 | 23 |
-| 2026-2027 | 27 | 22 | 19 | 17 | 9 | 4 |
+| 2026-2027 | 27 | 23 | 20 | 18 | 10 | 5 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 17 | 43 | 18 | 38 | 5 pts |
 | 2024-2025 | 17 | 37 | 18 | 34 | 3 pts |
 | 2025-2026 | 17 | 40 | 18 | 36 | 4 pts |
-| 2026-2027 | 17 | 9 | 18 | 8 | 1 pts |
+| 2026-2027 | 17 | 10 | 18 | 10 | 0 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 847 | 2.229 | 37.1% | 29.5% | 33.4% | 11.1% | 51.4 |
 | 2024-2025 | 380 | 873 | 2.297 | 43.7% | 26.8% | 29.5% | 8.4% | 51.9 |
 | 2025-2026 | 380 | 889 | 2.339 | 37.9% | 30.3% | 31.8% | 9.7% | 51.25 |
-| 2026-2027 | 103 | 249 | 2.417 | 34.0% | 35.9% | 30.1% | 14.6% | 13.6 |
+| 2026-2027 | 110 | 267 | 2.427 | 35.5% | 35.5% | 29.1% | 14.5% | 14.55 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 8.100)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.700 | 4.900 |
 | 2024-2025 | 2.800 | 6.900 |
 | 2025-2026 | 2.600 | 8.100 |
-| 2026-2027 | 2.100 | 7.400 |
+| 2026-2027 | 1.800 | 7.600 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:41:32+00:00
+- Generated: 2026-10-27T02:23:16+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`

@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:41:28+00:00
+- Generated: 2026-10-27T02:23:12+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -213,8 +213,8 @@
 | 2026-2027 | Worthing | Boreham Wood | 1-0 | 2-3 |
 | 2026-2027 | Boston Utd | Hornchurch | 2-1 | 2-3 |
 | 2026-2027 | Solihull Moors | Aldershot | 1-0 | 1-2 |
-| 2026-2027 | Solihull Moors | Carlisle | 1-0 | 1-2 |
 | 2026-2027 | Yeovil | Altrincham | 1-0 | 1-2 |
+| 2026-2027 | Solihull Moors | Carlisle | 1-0 | 1-2 |
 | 2026-2027 | Kidderminster | Worthing | 1-0 | 1-2 |
 
 ## 5. HT lead conversion

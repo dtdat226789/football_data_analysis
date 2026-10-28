@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:27:48+00:00
+- Generated: 2026-10-27T01:41:55+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:35:11+00:00
+- Generated: 2026-10-27T01:51:35+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Eredivisie (Netherlands)
 - Scope: league `holland1`
@@ -14,7 +14,7 @@
 | 2023-2024 | PSV | 91 | Feyenoord | 7 pts |
 | 2024-2025 | PSV | 79 | Ajax | 1 pts |
 | 2025-2026 | PSV | 84 | Feyenoord | 19 pts |
-| 2026-2027 | Feyenoord | 23 | AZ Alkmaar | 3 pts |
+| 2026-2027 | Feyenoord | 24 | Ajax | 3 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 91 | 84 | 65 | 53 | 29 | 19 |
 | 2024-2025 | 79 | 78 | 64 | 54 | 33 | 22 |
 | 2025-2026 | 84 | 65 | 59 | 56 | 37 | 19 |
-| 2026-2027 | 23 | 20 | 18 | 15 | 8 | 2 |
+| 2026-2027 | 24 | 21 | 20 | 18 | 8 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 992 | 3.242 | 43.1% | 24.8% | 32.0% | 4.9% | 46.78 |
 | 2024-2025 | 306 | 914 | 2.987 | 45.4% | 25.2% | 29.4% | 3.9% | 46.72 |
 | 2025-2026 | 321 | 1016 | 3.165 | 44.5% | 25.9% | 29.6% | 3.1% | 36.29 |
-| 2026-2027 | 85 | 330 | 3.882 | 31.8% | 28.2% | 40.0% | 1.2% | 12.83 |
+| 2026-2027 | 90 | 342 | 3.8 | 31.1% | 28.9% | 40.0% | 1.1% | 13.56 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (luck view, avg abs position diff = 6.833)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.000 | 5.667 |
 | 2024-2025 | 4.333 | 3.111 |
 | 2025-2026 | 6.833 | 6.250 |
-| 2026-2027 | 3.222 | 5.111 |
+| 2026-2027 | 3.000 | 5.778 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

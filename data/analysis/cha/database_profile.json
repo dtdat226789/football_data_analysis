@@ -4,7 +4,7 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:28:09+00:00",
+  "generated_at": "2026-10-27T01:42:19+00:00",
   "config": {
     "league": "cha",
     "out_dir": "data/analysis/cha",
@@ -30,7 +30,7 @@
       "teams": 248,
       "team_aliases": 496,
       "team_seasons": 1138,
-      "matches": 18001,
+      "matches": 18009,
       "standings": 3414
     },
     "leagues": [
@@ -53,7 +53,7 @@
         "name": "Bundesliga",
         "country": "Austria",
         "n_registered_seasons": 7,
-        "n_matches": 913
+        "n_matches": 915
       },
       {
         "api_key": "austria2",
@@ -67,14 +67,14 @@
         "name": "Premier League",
         "country": "Azerbaijan",
         "n_registered_seasons": 7,
-        "n_matches": 1021
+        "n_matches": 1023
       },
       {
         "api_key": "belgium1",
         "name": "Jupiler Pro League",
         "country": "Belgium",
         "n_registered_seasons": 7,
-        "n_matches": 1795
+        "n_matches": 1799
       },
       {
         "api_key": "belgium2",
@@ -794,20 +794,20 @@
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 18001,
-        "distinct": 18001,
+        "rows": 18009,
+        "distinct": 18009,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 18001,
-        "distinct": 18001,
+        "rows": 18009,
+        "distinct": 18009,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 18001,
-        "distinct": 17999,
+        "rows": 18009,
+        "distinct": 18007,
         "duplicates": 2
       },
       {
@@ -860,65 +860,65 @@
       }
     ],
     "null_counts": {
-      "total": 18001,
+      "total": 18009,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 18001,
+          "n_not_null": 18009,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 18001,
+          "n_not_null": 18009,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 18001,
+          "n_not_null": 18009,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 18001,
+          "n_not_null": 18009,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 18001,
+          "n_not_null": 18009,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 18001,
+          "n_not_null": 18009,
           "null_pct": 0.0
         },
         "home_ht": {
           "n_null": 318,
-          "n_not_null": 17683,
+          "n_not_null": 17691,
           "null_pct": 1.8
         },
         "away_ht": {
           "n_null": 318,
-          "n_not_null": 17683,
+          "n_not_null": 17691,
           "null_pct": 1.8
         },
         "first_goal_time": {
-          "n_null": 1780,
-          "n_not_null": 16221,
+          "n_null": 1781,
+          "n_not_null": 16228,
           "null_pct": 9.9
         },
         "first_goal_time_extra": {
-          "n_null": 1780,
-          "n_not_null": 16221,
+          "n_null": 1781,
+          "n_not_null": 16228,
           "null_pct": 9.9
         }
       }
     },
     "first_goal_consistency": {
-      "total": 18001,
+      "total": 18009,
       "fgt_inconsistent": 296,
       "fgte_inconsistent": 296,
-      "n_with_fgt": 16221
+      "n_with_fgt": 16228
     },
     "value_ranges": {
       "min_home": 0,
@@ -1813,8 +1813,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 18001,
-        "distinct": 17999,
+        "rows": 18009,
+        "distinct": 18007,
         "duplicates": 2
       }
     },
@@ -1823,10 +1823,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=296, fgte=296 rows)",
       "details": {
-        "total": 18001,
+        "total": 18009,
         "fgt_inconsistent": 296,
         "fgte_inconsistent": 296,
-        "n_with_fgt": 16221
+        "n_with_fgt": 16228
       }
     },
     {

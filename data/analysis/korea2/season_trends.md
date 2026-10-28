@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:40:03+00:00
+- Generated: 2026-10-27T02:00:30+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -14,7 +14,7 @@
 | 2023 | Gimcheon Sangmu | 68 | Busan | 1 pts |
 | 2024 | Anyang | 60 | Asan | 3 pts |
 | 2025 | Incheon | 76 | Suwon Bluewings | 7 pts |
-| 2026 | Suwon Bluewings | 62 | Suwon FC | 7 pts |
+| 2026 | Suwon Bluewings | 65 | Suwon FC | 10 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023 | 1 pts | yes |
 | 2024 | 3 pts | yes |
 | 2025 | 7 pts |  |
-| 2026 | 7 pts |  |
+| 2026 | 10 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 14 = last safe, 17 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 68 | 67 | 57 | 51 | - | - |
 | 2024 | 60 | 57 | 56 | 50 | 26 | - |
 | 2025 | 76 | 69 | 61 | 54 | 28 | - |
-| 2026 | 62 | 55 | 52 | 45 | 27 | 18 |
+| 2026 | 65 | 55 | 52 | 46 | 30 | 18 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 14 | - | 15 | - | - |
 | 2024 | 14 | 26 | 15 | - | - |
 | 2025 | 14 | 28 | 15 | 26 | 2 pts |
-| 2026 | 14 | 27 | 15 | 25 | 2 pts |
+| 2026 | 14 | 30 | 15 | 25 | 5 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 234 | 601 | 2.568 | 42.3% | 24.4% | 33.3% | 10.3% | 45.54 |
 | 2024 | 234 | 616 | 2.632 | 32.9% | 29.9% | 37.2% | 8.1% | 44.69 |
 | 2025 | 273 | 686 | 2.513 | 35.2% | 29.3% | 35.5% | 9.5% | 49.21 |
-| 2026 | 238 | 648 | 2.723 | 36.6% | 31.9% | 31.5% | 7.1% | 37.53 |
+| 2026 | 244 | 663 | 2.717 | 36.5% | 31.6% | 32.0% | 7.0% | 38.53 |
 
 ## 6. View divergence
 - Largest divergence: **2024** (goals view, avg abs position diff = 8.846)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 7.692 | 7.231 |
 | 2024 | 7.692 | 8.846 |
 | 2025 | 8.500 | 7.714 |
-| 2026 | 2.353 | 5.176 |
+| 2026 | 2.118 | 5.412 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

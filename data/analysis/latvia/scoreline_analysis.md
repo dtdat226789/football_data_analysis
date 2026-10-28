@@ -1,18 +1,18 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:40:43+00:00
+- Generated: 2026-10-27T02:01:36+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1020** across **6** seasons.
+- Matches analysed: **1023** across **6** seasons.
 - Distinct scorelines seen: **45**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 102 | 10.0% |
-| 0-1 | 86 | 8.4% |
+| 0-1 | 87 | 8.5% |
 | 1-0 | 80 | 7.8% |
 | 2-0 | 80 | 7.8% |
 | 2-1 | 65 | 6.4% |
@@ -20,15 +20,15 @@
 | 0-0 | 60 | 5.9% |
 | 3-0 | 53 | 5.2% |
 | 0-2 | 43 | 4.2% |
-| 0-3 | 41 | 4.0% |
+| 0-3 | 42 | 4.1% |
 | 2-2 | 38 | 3.7% |
 | 3-1 | 32 | 3.1% |
 | 3-2 | 29 | 2.8% |
 | 1-3 | 29 | 2.8% |
 | 4-1 | 26 | 2.5% |
 | 4-0 | 26 | 2.5% |
-| 2-3 | 24 | 2.4% |
-| 1-4 | 17 | 1.7% |
+| 2-3 | 24 | 2.3% |
+| 1-4 | 18 | 1.8% |
 | 0-4 | 16 | 1.6% |
 | 5-0 | 12 | 1.2% |
 
@@ -82,11 +82,11 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 20 | 12.0% |
-| 0-1 | 18 | 10.8% |
-| 2-1 | 15 | 9.0% |
-| 1-2 | 13 | 7.8% |
-| 1-0 | 12 | 7.2% |
+| 1-1 | 20 | 11.8% |
+| 0-1 | 19 | 11.2% |
+| 2-1 | 15 | 8.9% |
+| 1-2 | 13 | 7.7% |
+| 1-0 | 12 | 7.1% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -94,11 +94,11 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 60 | 5.9% |
-| 1 | 166 | 16.3% |
-| 2 | 225 | 22.1% |
-| 3 | 223 | 21.9% |
+| 1 | 167 | 16.3% |
+| 2 | 225 | 22.0% |
+| 3 | 224 | 21.9% |
 | 4 | 141 | 13.8% |
-| 5 | 114 | 11.2% |
+| 5 | 115 | 11.2% |
 | 6 | 49 | 4.8% |
 | 7 | 31 | 3.0% |
 | 8 | 8 | 0.8% |
@@ -154,14 +154,14 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-10 | 6-1 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **811** (draws: **209**)
+- Decided matches: **814** (draws: **209**)
 - Average winning margin: **2.14**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 352 | 43.4% |
-| 2 | 198 | 24.4% |
-| 3+ | 261 | 32.2% |
+| 1 | 353 | 43.4% |
+| 2 | 198 | 24.3% |
+| 3+ | 263 | 32.3% |
 
 ## 6. Margin by outcome
 
@@ -175,12 +175,12 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **363** | avg margin: **2.03** | max margin: **10**
+- Matches: **366** | avg margin: **2.03** | max margin: **10**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 177 | 48.8% |
-| 2 | 78 | 21.5% |
-| 3+ | 108 | 29.8% |
+| 1 | 178 | 48.6% |
+| 2 | 78 | 21.3% |
+| 3+ | 110 | 30.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
@@ -188,7 +188,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|---|---|
 | home | 448 | 1-0 | 80 | 17.9% |
 | draw | 209 | 1-1 | 102 | 48.8% |
-| away | 363 | 0-1 | 86 | 23.7% |
+| away | 366 | 0-1 | 87 | 23.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

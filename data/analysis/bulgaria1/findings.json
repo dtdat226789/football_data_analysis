@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:28:03+00:00",
+  "generated_at": "2026-10-27T01:42:13+00:00",
   "config": {
     "league": "bulgaria1",
     "out_dir": "data/analysis/bulgaria1",
@@ -610,8 +610,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 14538,
-        "distinct": 14536,
+        "rows": 14546,
+        "distinct": 14544,
         "duplicates": 2
       }
     },
@@ -620,10 +620,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=295, fgte=295 rows)",
       "details": {
-        "total": 14538,
+        "total": 14546,
         "fgt_inconsistent": 295,
         "fgte_inconsistent": 295,
-        "n_with_fgt": 13029
+        "n_with_fgt": 13036
       }
     },
     {

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:42:27+00:00
+- Generated: 2026-10-27T02:24:19+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ekstraklasa (Poland)
 - Scope: league `poland1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Jagiellonia | 63 | Slask Wroclaw | 0 pts |
 | 2024-2025 | Lech Poznan | 70 | Rakow | 1 pts |
 | 2025-2026 | Lech Poznan | 60 | Jagiellonia | 4 pts |
-| 2026-2027 | Gornik Zabrze | 27 | Lech Poznan | 2 pts |
+| 2026-2027 | Lech Poznan | 28 | Gornik Zabrze | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 0 pts | yes |
 | 2024-2025 | 1 pts | yes |
 | 2025-2026 | 4 pts |  |
-| 2026-2027 | 2 pts | yes |
+| 2026-2027 | 1 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 15 = last safe, 18 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 63 | 63 | 55 | 53 | 38 | 24 |
 | 2024-2025 | 70 | 69 | 58 | 51 | 36 | 28 |
 | 2025-2026 | 60 | 56 | 55 | 49 | 42 | 36 |
-| 2026-2027 | 27 | 25 | 23 | 20 | 8 | 6 |
+| 2026-2027 | 28 | 27 | 23 | 20 | 9 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 15 | 38 | 16 | 37 | 1 pts |
 | 2024-2025 | 15 | 36 | 16 | 31 | 5 pts |
 | 2025-2026 | 15 | 42 | 16 | 42 | 0 pts |
-| 2026-2027 | 15 | 8 | 16 | 8 | 0 pts |
+| 2026-2027 | 15 | 9 | 16 | 8 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 823 | 2.69 | 43.5% | 30.4% | 26.1% | 8.2% | 45.83 |
 | 2024-2025 | 306 | 843 | 2.755 | 44.8% | 25.2% | 30.1% | 5.9% | 46.72 |
 | 2025-2026 | 306 | 837 | 2.735 | 45.1% | 27.8% | 27.1% | 7.5% | 46.72 |
-| 2026-2027 | 103 | 308 | 2.99 | 47.6% | 23.3% | 29.1% | 7.8% | 15.83 |
+| 2026-2027 | 106 | 314 | 2.962 | 48.1% | 22.6% | 29.2% | 7.5% | 16.33 |
 
 ## 6. View divergence
 - Largest divergence: **2020-2021** (goals view, avg abs position diff = 7.250)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.333 | 5.222 |
 | 2024-2025 | 2.778 | 5.889 |
 | 2025-2026 | 4.000 | 6.000 |
-| 2026-2027 | 1.222 | 6.778 |
+| 2026-2027 | 1.222 | 6.556 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

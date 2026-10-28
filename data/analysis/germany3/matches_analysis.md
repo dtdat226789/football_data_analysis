@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:33:59+00:00
+- Generated: 2026-10-27T01:49:44+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2380 |
-| Home wins | 1029 (43.2%) |
+| Matches | 2383 |
+| Home wins | 1032 (43.3%) |
 | Draws | 603 (25.3%) |
 | Away wins | 748 (31.4%) |
-| Total goals | 6894 |
-| Average goals per match | 2.897 |
+| Total goals | 6905 |
+| Average goals per match | 2.898 |
 | Goalless matches | 142 (6.0%) |
 
 ## 2. Per-season breakdown
@@ -25,18 +25,18 @@
 | 2023-2024 | 380 | 173 (45.5%) | 100 (26.3%) | 107 (28.2%) | 1066 | 2.805 | 26 (6.8%) |
 | 2024-2025 | 380 | 172 (45.3%) | 96 (25.3%) | 112 (29.5%) | 1103 | 2.903 | 19 (5.0%) |
 | 2025-2026 | 380 | 175 (46.1%) | 89 (23.4%) | 116 (30.5%) | 1219 | 3.208 | 23 (6.1%) |
-| 2026-2027 | 107 | 44 (41.1%) | 25 (23.4%) | 38 (35.5%) | 355 | 3.318 | 4 (3.7%) |
+| 2026-2027 | 110 | 47 (42.7%) | 25 (22.7%) | 38 (34.5%) | 366 | 3.327 | 4 (3.6%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 618 (75.6%) | 138 (16.9%) | 62 (7.6%) | 818 |
-| HT draw | 339 (36.4%) | 355 (38.1%) | 237 (25.5%) | 931 |
-| HT away lead | 72 (11.4%) | 110 (17.5%) | 448 (71.1%) | 630 |
+| HT draw | 341 (36.5%) | 355 (38.0%) | 237 (25.4%) | 933 |
+| HT away lead | 73 (11.6%) | 110 (17.4%) | 448 (71.0%) | 631 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **72** (3.0%)
+- Home comebacks (trailing at HT, won at FT): **73** (3.1%)
 - Away comebacks (trailing at HT, won at FT): **62** (2.6%)
 
 ### Home comebacks
@@ -114,6 +114,7 @@
 | 2026-2027 | Duisburg | Hoffenheim II | 0-2 | 3-2 |
 | 2026-2027 | Grossaspach | Preussen Munster | 0-2 | 3-2 |
 | 2026-2027 | Viktoria Koln | Verl | 0-1 | 3-1 |
+| 2026-2027 | Mannheim | Hoffenheim II | 0-1 | 4-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -185,32 +186,32 @@
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
 | Home lead | 818 | 618 (75.6%) | 138 (16.9%) | 62 (7.6%) |
-| Away lead | 630 | 448 (71.1%) | 110 (17.5%) | 72 (11.4%) |
+| Away lead | 631 | 448 (71.0%) | 110 (17.4%) | 73 (11.6%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 339 | 36.4% |
-| Draw | 355 | 38.1% |
-| Away win | 237 | 25.5% |
+| Home win | 341 | 36.5% |
+| Draw | 355 | 38.0% |
+| Away win | 237 | 25.4% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2237` of `2380` (94.0%)
+- Matches with a first-goal time recorded: `2240` of `2383` (94.0%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 788 | 33.1% | 359 (45.6%) | 158 (20.1%) | 271 (34.4%) |
+| 1-15 | 790 | 33.2% | 361 (45.7%) | 158 (20.0%) | 271 (34.3%) |
 | 16-30 | 555 | 23.3% | 241 (43.4%) | 126 (22.7%) | 188 (33.9%) |
-| 31-45 | 382 | 16.1% | 183 (47.9%) | 76 (19.9%) | 123 (32.2%) |
+| 31-45 | 382 | 16.0% | 183 (47.9%) | 76 (19.9%) | 123 (32.2%) |
 | 46-60 | 253 | 10.6% | 115 (45.5%) | 54 (21.3%) | 84 (33.2%) |
-| 61-75 | 144 | 6.1% | 68 (47.2%) | 30 (20.8%) | 46 (31.9%) |
-| 76-90 | 93 | 3.9% | 52 (55.9%) | 17 (18.3%) | 24 (25.8%) |
+| 61-75 | 144 | 6.0% | 68 (47.2%) | 30 (20.8%) | 46 (31.9%) |
+| 76-90 | 94 | 3.9% | 53 (56.4%) | 17 (18.1%) | 24 (25.5%) |
 | 91-120 | 22 | 0.9% | 11 (50.0%) | 0 (0.0%) | 11 (50.0%) |
 
 ## 7. Goalless matches
-- Overall: **142** of `2380` (6.0%)
+- Overall: **142** of `2383` (6.0%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -220,7 +221,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 26 | 6.8% |
 | 2024-2025 | 380 | 19 | 5.0% |
 | 2025-2026 | 380 | 23 | 6.1% |
-| 2026-2027 | 107 | 4 | 3.7% |
+| 2026-2027 | 110 | 4 | 3.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

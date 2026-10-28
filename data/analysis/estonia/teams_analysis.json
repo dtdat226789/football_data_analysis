@@ -4,7 +4,7 @@
     "name": "backend/scripts/analyze_teams.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:31:28+00:00",
+  "generated_at": "2026-10-27T01:46:45+00:00",
   "config": {
     "league": "estonia",
     "out_dir": "data/analysis/estonia",
@@ -47,14 +47,14 @@
       "team": "Flora",
       "slug": "flora",
       "seasons_played": 7,
-      "total_matches": 233,
+      "total_matches": 234,
       "wins": 165,
       "draws": 35,
-      "losses": 33,
+      "losses": 34,
       "points": 530,
-      "goals_for": 540,
-      "goals_against": 204,
-      "goal_difference": 336,
+      "goals_for": 541,
+      "goals_against": 206,
+      "goal_difference": 335,
       "avg_points_per_season": 75.71,
       "best_position": 1,
       "worst_position": 4,
@@ -83,15 +83,15 @@
       "team": "Kalju",
       "slug": "kalju",
       "seasons_played": 7,
-      "total_matches": 233,
-      "wins": 117,
+      "total_matches": 234,
+      "wins": 118,
       "draws": 52,
       "losses": 64,
-      "points": 403,
-      "goals_for": 414,
-      "goals_against": 251,
-      "goal_difference": 163,
-      "avg_points_per_season": 57.57,
+      "points": 406,
+      "goals_for": 416,
+      "goals_against": 252,
+      "goal_difference": 164,
+      "avg_points_per_season": 58.0,
       "best_position": 2,
       "worst_position": 5,
       "titles": 0
@@ -434,13 +434,36 @@
         "goals_against": 91
       },
       "away": {
-        "matches": 118,
+        "matches": 119,
         "wins": 80,
         "draws": 20,
-        "losses": 18,
+        "losses": 19,
         "points": 260,
-        "goals_for": 265,
-        "goals_against": 113
+        "goals_for": 266,
+        "goals_against": 115
+      },
+      "home_advantage": 10
+    },
+    {
+      "team_id": 523,
+      "team": "Kalju",
+      "home": {
+        "matches": 116,
+        "wins": 62,
+        "draws": 22,
+        "losses": 32,
+        "points": 208,
+        "goals_for": 222,
+        "goals_against": 124
+      },
+      "away": {
+        "matches": 118,
+        "wins": 56,
+        "draws": 30,
+        "losses": 32,
+        "points": 198,
+        "goals_for": 194,
+        "goals_against": 128
       },
       "home_advantage": 10
     },
@@ -514,29 +537,6 @@
       "home_advantage": 9
     },
     {
-      "team_id": 523,
-      "team": "Kalju",
-      "home": {
-        "matches": 115,
-        "wins": 61,
-        "draws": 22,
-        "losses": 32,
-        "points": 205,
-        "goals_for": 220,
-        "goals_against": 123
-      },
-      "away": {
-        "matches": 118,
-        "wins": 56,
-        "draws": 30,
-        "losses": 32,
-        "points": 198,
-        "goals_for": 194,
-        "goals_against": 128
-      },
-      "home_advantage": 7
-    },
-    {
       "team_id": 526,
       "team": "Legion",
       "home": {
@@ -572,7 +572,7 @@
         "rank": 2,
         "team_id": 520,
         "team": "Flora",
-        "value": 2.275
+        "value": 2.265
       },
       {
         "rank": 3,
@@ -584,7 +584,7 @@
         "rank": 4,
         "team_id": 523,
         "team": "Kalju",
-        "value": 1.73
+        "value": 1.735
       },
       {
         "rank": 5,
@@ -604,7 +604,7 @@
         "rank": 2,
         "team_id": 520,
         "team": "Flora",
-        "value": 540
+        "value": 541
       },
       {
         "rank": 3,
@@ -616,7 +616,7 @@
         "rank": 4,
         "team_id": 523,
         "team": "Kalju",
-        "value": 414
+        "value": 416
       },
       {
         "rank": 5,
@@ -636,7 +636,7 @@
         "rank": 2,
         "team_id": 520,
         "team": "Flora",
-        "value": 336
+        "value": 335
       },
       {
         "rank": 3,
@@ -648,7 +648,7 @@
         "rank": 4,
         "team_id": 523,
         "team": "Kalju",
-        "value": 163
+        "value": 164
       },
       {
         "rank": 5,
@@ -668,7 +668,7 @@
         "rank": 2,
         "team_id": 520,
         "team": "Flora",
-        "value": 0.876
+        "value": 0.88
       },
       {
         "rank": 3,
@@ -728,6 +728,19 @@
     "n_pairs_total": 74,
     "top_n": 15,
     "pairs": [
+      {
+        "team_a_id": 520,
+        "team_b_id": 523,
+        "team_a": "Flora",
+        "team_b": "Kalju",
+        "meetings": 27,
+        "home_wins": 13,
+        "draws": 6,
+        "away_wins": 8,
+        "home_win_pct": 48.1,
+        "draw_pct": 22.2,
+        "away_win_pct": 29.6
+      },
       {
         "team_a_id": 521,
         "team_b_id": 522,
@@ -791,19 +804,6 @@
         "away_wins": 8,
         "home_win_pct": 50.0,
         "draw_pct": 19.2,
-        "away_win_pct": 30.8
-      },
-      {
-        "team_a_id": 520,
-        "team_b_id": 523,
-        "team_a": "Flora",
-        "team_b": "Kalju",
-        "meetings": 26,
-        "home_wins": 12,
-        "draws": 6,
-        "away_wins": 8,
-        "home_win_pct": 46.2,
-        "draw_pct": 23.1,
         "away_win_pct": 30.8
       },
       {

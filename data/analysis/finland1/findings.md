@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:31:49+00:00
+- Generated: 2026-10-27T01:47:15+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`
@@ -18,40 +18,40 @@
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 944 matches: home wins 42.8%, draws 23.7%, away wins 33.5% (404H / 224D / 316A)
+- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 945 matches: home wins 42.8%, draws 23.8%, away wins 33.4% (404H / 225D / 316A)
 - **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 34 home and 25 away comebacks (trailing at HT but winning at FT)
 - **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 244 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 944 matches produced 2612 goals (avg 2.767 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 53.1% vs away 46.9% of 2612 goals in total (home/away ratio 1.13)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 498 of 944 matches (52.8%)
+- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 945 matches produced 2616 goals (avg 2.768 per match)
+- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 53.1% vs away 46.9% of 2616 goals in total (home/away ratio 1.13)
+- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 499 of 945 matches (52.8%)
 - **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 292 scoring matches, 33.1% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 30.06, median 25.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — HJK leads with 328 points across 7 seasons (3 title(s), GD 163)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 30.08, median 25.0
+- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — HJK leads with 329 points across 7 seasons (3 title(s), GD 163)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 6 teams present in every one of the 7 seasons (HJK, Ilves, Inter Turku, KuPS, Mariehamn...)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Ilves earns 49 more points at home than away (136 home vs 87 away)
 - **F12** · `season_trends` · *[high]* — **Champion with most titles** — HJK won 3 of 7 championship(s) on record
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2021: KuPS beat HJK by 0 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.252 per match): first half 2.692 vs last half 2.944 across 7 seasons
+- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.255 per match): first half 2.692 vs last half 2.947 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2026 (goals view, avg abs position diff 4.667)
 - **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2022 (luck view, avg abs position diff 1.500)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 107 matches (11.3%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (86 of 404 home matches, 21.3%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (107 of 224 draw matches, 47.8%)
+- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (107 of 225 draw matches, 47.6%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (79 of 316 away matches, 25.0%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 18 match(es) with >= 7 total goals
 - **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_rest_days |corr| = 0.0791 (n=756 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 6.859: home 2.848, draw -0.541, away -4.011
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (47)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 944 matches observed
+- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 945 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 944 |
-| Average goals per match | 2.767 |
+| Matches analysed | 945 |
+| Average goals per match | 2.768 |
 | Home win rate | 42.8% |
-| Draw rate | 23.7% |
-| Away win rate | 33.5% |
+| Draw rate | 23.8% |
+| Away win rate | 33.4% |
 | Most common scoreline | 1-1 |
 | Dominant team (lifetime points) | HJK |
 | Champion with most titles | HJK |
@@ -81,17 +81,17 @@
 - **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2024 has 12 teams, expected 20
 - **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 132 matches, expected 380
 - **12.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 12 teams, expected 20
-- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 152 matches, expected 380
+- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 153 matches, expected 380
 - **14.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 12 teams, expected 20
 - **15.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026 has data but state is 'in_progress'
-- **16.** `SEASON_AVG_GOALS_OUTLIER` *(warning)* — Season 2021 avg goals 2.348 vs overall 2.767 (deviation 0.419)
-- **17.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2021 draw outcome share 18.9% vs overall 23.7%
-- **18.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2021 away outcome share 37.9% vs overall 33.5%
+- **16.** `SEASON_AVG_GOALS_OUTLIER` *(warning)* — Season 2021 avg goals 2.348 vs overall 2.768 (deviation 0.420)
+- **17.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2021 draw outcome share 18.9% vs overall 23.8%
+- **18.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2021 away outcome share 37.9% vs overall 33.4%
 - **19.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2022 goalless share 4.5% vs overall 6.6% (deviation 2.1 pp)
 - **20.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2023 goalless share 8.3% vs overall 6.6% (deviation 1.7 pp)
 - **21.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2024 home outcome share 47.0% vs overall 42.8%
-- **22.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2024 away outcome share 28.0% vs overall 33.5%
-- **23.** `SEASON_AVG_GOALS_OUTLIER` *(warning)* — Season 2025 avg goals 3.28 vs overall 2.767 (deviation 0.513)
+- **22.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2024 away outcome share 28.0% vs overall 33.4%
+- **23.** `SEASON_AVG_GOALS_OUTLIER` *(warning)* — Season 2025 avg goals 3.28 vs overall 2.768 (deviation 0.512)
 - **24.** `HIGH_SCORING_MATCHES` *(warning)* — 4 match(es) with >= 8 total goals (extreme scorelines)
 - **25.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)
 - **26.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=313, fgte=313 rows)

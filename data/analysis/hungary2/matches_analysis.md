@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:36:14+00:00
+- Generated: 2026-10-27T01:53:41+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2012 |
+| Matches | 2013 |
 | Home wins | 873 (43.4%) |
 | Draws | 526 (26.1%) |
-| Away wins | 613 (30.5%) |
-| Total goals | 5201 |
-| Average goals per match | 2.585 |
+| Away wins | 614 (30.5%) |
+| Total goals | 5205 |
+| Average goals per match | 2.586 |
 | Goalless matches | 146 (7.3%) |
 
 ## 2. Per-season breakdown
@@ -25,14 +25,14 @@
 | 2023-2024 | 306 | 130 (42.5%) | 81 (26.5%) | 95 (31.0%) | 753 | 2.461 | 22 (7.2%) |
 | 2024-2025 | 240 | 105 (43.8%) | 70 (29.2%) | 65 (27.1%) | 653 | 2.721 | 20 (8.3%) |
 | 2025-2026 | 240 | 105 (43.8%) | 60 (25.0%) | 75 (31.2%) | 602 | 2.508 | 15 (6.2%) |
-| 2026-2027 | 86 | 42 (48.8%) | 20 (23.3%) | 24 (27.9%) | 256 | 2.977 | 2 (2.3%) |
+| 2026-2027 | 87 | 42 (48.3%) | 20 (23.0%) | 25 (28.7%) | 260 | 2.989 | 2 (2.3%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 520 (77.8%) | 108 (16.2%) | 40 (6.0%) | 668 |
 | HT draw | 301 (35.2%) | 306 (35.8%) | 247 (28.9%) | 854 |
-| HT away lead | 49 (10.1%) | 112 (23.0%) | 325 (66.9%) | 486 |
+| HT away lead | 49 (10.1%) | 112 (23.0%) | 326 (66.9%) | 487 |
 - *4 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
@@ -140,7 +140,7 @@
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
 | Home lead | 668 | 520 (77.8%) | 108 (16.2%) | 40 (6.0%) |
-| Away lead | 486 | 325 (66.9%) | 112 (23.0%) | 49 (10.1%) |
+| Away lead | 487 | 326 (66.9%) | 112 (23.0%) | 49 (10.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
@@ -151,12 +151,12 @@
 - *4 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1862` of `2012` (92.5%)
+- Matches with a first-goal time recorded: `1863` of `2013` (92.5%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 587 | 29.2% | 297 (50.6%) | 125 (21.3%) | 165 (28.1%) |
+| 1-15 | 588 | 29.2% | 297 (50.5%) | 125 (21.3%) | 166 (28.2%) |
 | 16-30 | 439 | 21.8% | 199 (45.3%) | 97 (22.1%) | 143 (32.6%) |
 | 31-45 | 337 | 16.7% | 150 (44.5%) | 73 (21.7%) | 114 (33.8%) |
 | 46-60 | 245 | 12.2% | 110 (44.9%) | 56 (22.9%) | 79 (32.2%) |
@@ -165,7 +165,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 18 | 0.9% | 8 (44.4%) | 0 (0.0%) | 10 (55.6%) |
 
 ## 7. Goalless matches
-- Overall: **146** of `2012` (7.3%)
+- Overall: **146** of `2013` (7.3%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -175,7 +175,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 306 | 22 | 7.2% |
 | 2024-2025 | 240 | 20 | 8.3% |
 | 2025-2026 | 240 | 15 | 6.2% |
-| 2026-2027 | 86 | 2 | 2.3% |
+| 2026-2027 | 87 | 2 | 2.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

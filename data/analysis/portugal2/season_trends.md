@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:43:17+00:00
+- Generated: 2026-10-27T02:25:28+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
@@ -14,11 +14,11 @@
 | 2023-2024 | Santa Clara | 73 | Nacional | 2 pts |
 | 2024-2025 | Tondela | 64 | Alverca | 1 pts |
 | 2025-2026 | Maritimo | 66 | Torreense | 6 pts |
-| 2026-2027 | Sporting CP B | 18 | Lusitania FC | 1 pts |
+| 2026-2027 | Lusitania FC | 18 | Sporting CP B | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
-- Tightest race: **2024-2025** - Tondela beat Alverca by **1** pts
+- Tightest race: **2026-2027** - Lusitania FC beat Sporting CP B by **0** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023-2024 | 2 pts | yes |
 | 2024-2025 | 1 pts | yes |
 | 2025-2026 | 6 pts |  |
-| 2026-2027 | 1 pts | yes |
+| 2026-2027 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 15 = last safe, 18 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 73 | 71 | 64 | 49 | 34 | 26 |
 | 2024-2025 | 64 | 63 | 55 | 52 | 34 | 27 |
 | 2025-2026 | 66 | 60 | 51 | 50 | 41 | 34 |
-| 2026-2027 | 18 | 17 | 15 | 14 | 6 | 2 |
+| 2026-2027 | 18 | 18 | 15 | 14 | 7 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 15 | 34 | 16 | 31 | 3 pts |
 | 2024-2025 | 15 | 34 | 16 | 33 | 1 pts |
 | 2025-2026 | 15 | 41 | 16 | 40 | 1 pts |
-| 2026-2027 | 15 | 6 | 16 | 6 | 0 pts |
+| 2026-2027 | 15 | 7 | 16 | 6 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 749 | 2.448 | 39.5% | 27.5% | 33.0% | 7.8% | 46.33 |
 | 2024-2025 | 306 | 769 | 2.513 | 39.2% | 29.4% | 31.4% | 8.2% | 46.0 |
 | 2025-2026 | 310 | 751 | 2.423 | 42.3% | 24.5% | 33.2% | 10.6% | 42.7 |
-| 2026-2027 | 68 | 162 | 2.382 | 42.6% | 20.6% | 36.8% | 7.4% | 10.56 |
+| 2026-2027 | 71 | 171 | 2.408 | 42.3% | 22.5% | 35.2% | 7.0% | 10.94 |
 
 ## 6. View divergence
 - Largest divergence: **2023-2024** (goals view, avg abs position diff = 6.000)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.667 | 6.000 |
 | 2024-2025 | 1.778 | 5.444 |
 | 2025-2026 | 5.600 | 5.200 |
-| 2026-2027 | 1.444 | 4.778 |
+| 2026-2027 | 1.556 | 4.667 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

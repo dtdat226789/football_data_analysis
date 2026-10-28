@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:27:08+00:00
+- Generated: 2026-10-27T01:41:06+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Jupiler Pro League (Belgium)
 - Scope: league `belgium1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Royale Union SG | 70 | Anderlecht | 7 pts |
 | 2024-2025 | Genk | 68 | Club Brugge KV | 9 pts |
 | 2025-2026 | Club Brugge KV | 88 | Royale Union SG | 2 pts |
-| 2026-2027 | Gent | 22 | Club Brugge KV | 1 pts |
+| 2026-2027 | Gent | 25 | Club Brugge KV | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 70 | 63 | 51 | 47 | 24 | - |
 | 2024-2025 | 68 | 59 | 51 | 45 | 26 | - |
 | 2025-2026 | 88 | 86 | 59 | 55 | 34 | 1 |
-| 2026-2027 | 22 | 21 | 20 | 14 | 6 | 3 |
+| 2026-2027 | 25 | 24 | 21 | 15 | 6 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,10 +63,10 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 672 | 2.8 | 45.0% | 27.1% | 27.9% | 5.0% | 40.94 |
 | 2024-2025 | 240 | 645 | 2.688 | 45.8% | 28.8% | 25.4% | 9.2% | 40.69 |
 | 2025-2026 | 321 | 864 | 2.692 | 41.1% | 25.2% | 33.6% | 7.8% | 43.8 |
-| 2026-2027 | 76 | 236 | 3.105 | 48.7% | 19.7% | 31.6% | 3.9% | 11.83 |
+| 2026-2027 | 80 | 255 | 3.188 | 51.2% | 18.8% | 30.0% | 3.8% | 12.5 |
 
 ## 6. View divergence
-- Largest divergence: **2026-2027** (goals view, avg abs position diff = 6.889)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 6.556)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.125 | 4.250 |
 | 2024-2025 | 2.875 | 5.625 |
 | 2025-2026 | 4.900 | 6.200 |
-| 2026-2027 | 1.556 | 6.889 |
+| 2026-2027 | 1.667 | 6.556 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

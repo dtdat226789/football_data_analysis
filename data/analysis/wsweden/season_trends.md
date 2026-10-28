@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:53:35+00:00
+- Generated: 2026-10-27T02:35:41+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Allsvenskan Women (Sweden)
 - Scope: league `wsweden`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 59 | 59 | 52 | 48 | 24 | 3 |
 | 2024 | 75 | 64 | 52 | 33 | 27 | 3 |
 | 2025 | 64 | 60 | 50 | 41 | 25 | 9 |
-| 2026 | 64 | 56 | 35 | 32 | 23 | 6 |
+| 2026 | 64 | 56 | 37 | 32 | 23 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 182 | 565 | 3.104 | 44.5% | 20.9% | 34.6% | 6.0% | 36.29 |
 | 2024 | 182 | 558 | 3.066 | 44.5% | 17.0% | 38.5% | 8.8% | 36.79 |
 | 2025 | 182 | 606 | 3.33 | 46.7% | 13.7% | 39.6% | 2.2% | 37.21 |
-| 2026 | 159 | 471 | 2.962 | 48.4% | 17.6% | 34.0% | 2.5% | 32.07 |
+| 2026 | 161 | 475 | 2.95 | 48.4% | 17.4% | 34.2% | 2.5% | 32.5 |
 
 ## 6. View divergence
 - Largest divergence: **2023** (goals view, avg abs position diff = 5.429)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 2.571 | 5.429 |
 | 2024 | 2.143 | 4.286 |
 | 2025 | 2.714 | 5.000 |
-| 2026 | 2.571 | 4.286 |
+| 2026 | 2.429 | 4.571 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

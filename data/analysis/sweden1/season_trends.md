@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:50:12+00:00
+- Generated: 2026-10-27T02:32:32+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`
@@ -14,7 +14,7 @@
 | 2023 | Malmo FF | 64 | Elfsborg | 0 pts |
 | 2024 | Malmo FF | 65 | Hammarby | 11 pts |
 | 2025 | Mjallby | 75 | Hammarby | 13 pts |
-| 2026 | Sirius | 55 | Djurgarden | 7 pts |
+| 2026 | Sirius | 55 | Hammarby | 6 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023 | 0 pts | yes |
 | 2024 | 11 pts |  |
 | 2025 | 13 pts |  |
-| 2026 | 7 pts |  |
+| 2026 | 6 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 64 | 64 | 50 | 45 | 34 | 15 |
 | 2024 | 65 | 54 | 53 | 48 | 31 | 23 |
 | 2025 | 75 | 62 | 51 | 49 | 30 | 16 |
-| 2026 | 55 | 48 | 45 | 38 | 22 | 17 |
+| 2026 | 55 | 49 | 45 | 38 | 22 | 17 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 240 | 665 | 2.771 | 46.7% | 19.6% | 33.8% | 7.1% | 42.06 |
 | 2024 | 240 | 680 | 2.833 | 45.4% | 21.7% | 32.9% | 4.6% | 41.75 |
 | 2025 | 240 | 683 | 2.846 | 40.0% | 22.1% | 37.9% | 5.8% | 41.69 |
-| 2026 | 198 | 580 | 2.929 | 40.4% | 23.2% | 36.4% | 4.0% | 34.25 |
+| 2026 | 200 | 584 | 2.92 | 40.0% | 23.5% | 36.5% | 4.0% | 34.56 |
 
 ## 6. View divergence
 - Largest divergence: **2025** (goals view, avg abs position diff = 7.000)

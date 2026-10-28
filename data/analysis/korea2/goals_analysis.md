@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:39:59+00:00
+- Generated: 2026-10-27T02:00:23+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -9,10 +9,10 @@
 | goals | matches | pct |
 |---|---|---|
 | 0 | 136 | 9.0% |
-| 1 | 291 | 19.3% |
-| 2 | 355 | 23.6% |
-| 3 | 334 | 22.2% |
-| 4 | 203 | 13.5% |
+| 1 | 292 | 19.3% |
+| 2 | 358 | 23.7% |
+| 3 | 334 | 22.1% |
+| 4 | 205 | 13.5% |
 | 5 | 127 | 8.4% |
 | 6 | 35 | 2.3% |
 | 7 | 20 | 1.3% |
@@ -29,11 +29,11 @@
 | 2023 | 234 | 601 | 1.363 | 1.205 | 2.568 |
 | 2024 | 234 | 616 | 1.291 | 1.342 | 2.632 |
 | 2025 | 273 | 686 | 1.319 | 1.194 | 2.513 |
-| 2026 | 238 | 648 | 1.416 | 1.307 | 2.723 |
+| 2026 | 244 | 663 | 1.41 | 1.307 | 2.717 |
 
 ## 3. Home vs away goal share
-- Home goals: **1991** (51.7%)
-- Away goals: **1860** (48.3%)
+- Home goals: **1998** (51.7%)
+- Away goals: **1868** (48.3%)
 - Home/away ratio: **1.07**
 
 | season | home goals | away goals | total | home pct | away pct |
@@ -44,10 +44,10 @@
 | 2023 | 319 | 282 | 601 | 53.1% | 46.9% |
 | 2024 | 302 | 314 | 616 | 49.0% | 51.0% |
 | 2025 | 360 | 326 | 686 | 52.5% | 47.5% |
-| 2026 | 337 | 311 | 648 | 52.0% | 48.0% |
+| 2026 | 344 | 319 | 663 | 51.9% | 48.1% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **801** of `1507` (53.2%)
+- Overall: **804** of `1513` (53.1%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
@@ -57,13 +57,13 @@
 | 2023 | 234 | 114 | 48.7% |
 | 2024 | 234 | 134 | 57.3% |
 | 2025 | 273 | 135 | 49.5% |
-| 2026 | 238 | 147 | 61.8% |
+| 2026 | 244 | 150 | 61.5% |
 
 ## 5. Clean sheets
-- Home clean sheets: **433** (28.7%)
-- Away clean sheets: **409** (27.1%)
-- Total clean sheets recorded: **842**
-- Matches with at least one clean sheet: **706** (46.8%)
+- Home clean sheets: **433** (28.6%)
+- Away clean sheets: **412** (27.2%)
+- Total clean sheets recorded: **845**
+- Matches with at least one clean sheet: **709** (46.9%)
 - Both teams kept clean sheets (0-0): **136**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
@@ -74,14 +74,14 @@
 | 2023 | 234 | 78 | 66 | 144 | 120 (51.3%) |
 | 2024 | 234 | 62 | 57 | 119 | 100 (42.7%) |
 | 2025 | 273 | 78 | 86 | 164 | 138 (50.5%) |
-| 2026 | 238 | 59 | 49 | 108 | 91 (38.2%) |
+| 2026 | 244 | 59 | 52 | 111 | 94 (38.5%) |
 
 ## 6. Scoring intensity
-- First-half goals: **1544** (40.1%)
-- Second-half goals: **2307** (59.9%)
-- Avg first-half goals per match: **1.025**
-- Avg second-half goals per match: **1.531**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **412** (27.3%)
+- First-half goals: **1552** (40.1%)
+- Second-half goals: **2314** (59.9%)
+- Avg first-half goals per match: **1.026**
+- Avg second-half goals per match: **1.529**
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **412** (27.2%)
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
 |---|---|---|---|---|---|
@@ -91,22 +91,22 @@
 | 2023 | 234 | 240 | 361 | 39.9% | 60.1% |
 | 2024 | 234 | 231 | 385 | 37.5% | 62.5% |
 | 2025 | 273 | 283 | 403 | 41.3% | 58.7% |
-| 2026 | 238 | 264 | 384 | 40.7% | 59.3% |
+| 2026 | 244 | 272 | 391 | 41.0% | 59.0% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `1371` of `1507` (91.0%)
+- Matches with first-goal time recorded: `1377` of `1513` (91.0%)
 - Goalless matches: `136`
-- Min `1` | Max `112` | Mean `35.69` | Median (p50) `32`
+- Min `1` | Max `112` | Mean `35.61` | Median (p50) `32`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 361 | 24.0% | 26.3% |
-| 16-30 | 300 | 19.9% | 21.9% |
-| 31-45 | 263 | 17.5% | 19.2% |
-| 46-60 | 201 | 13.3% | 14.7% |
-| 61-75 | 130 | 8.6% | 9.5% |
+| 1-15 | 364 | 24.1% | 26.4% |
+| 16-30 | 303 | 20.0% | 22.0% |
+| 31-45 | 263 | 17.4% | 19.1% |
+| 46-60 | 201 | 13.3% | 14.6% |
+| 61-75 | 130 | 8.6% | 9.4% |
 | 76-90 | 85 | 5.6% | 6.2% |
-| 91-120 | 31 | 2.1% | 2.3% |
+| 91-120 | 31 | 2.0% | 2.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_goals.py` to regenerate.*

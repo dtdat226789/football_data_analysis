@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:45:22+00:00
+- Generated: 2026-10-27T02:27:25+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:52:31+00:00
+- Generated: 2026-10-27T02:34:45+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League Women (Belgium)
 - Scope: league `wbelgium1`

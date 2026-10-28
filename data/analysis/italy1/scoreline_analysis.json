@@ -4,7 +4,7 @@
     "name": "backend/scripts/analyze_scorelines.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:37:29+00:00",
+  "generated_at": "2026-10-27T01:55:55+00:00",
   "config": {
     "league": "italy1",
     "out_dir": "data/analysis/italy1",
@@ -24,7 +24,7 @@
     "url": "https://www.football-charts.com/leagues/italy/serie-a"
   },
   "scoreline_frequency": {
-    "n_matches": 2355,
+    "n_matches": 2360,
     "n_distinct_scorelines": 41,
     "top": [
       {
@@ -34,12 +34,12 @@
       },
       {
         "scoreline": "1-0",
-        "count": 227,
-        "pct": 9.6
+        "count": 228,
+        "pct": 9.7
       },
       {
         "scoreline": "2-1",
-        "count": 192,
+        "count": 193,
         "pct": 8.2
       },
       {
@@ -69,8 +69,8 @@
       },
       {
         "scoreline": "0-2",
-        "count": 139,
-        "pct": 5.9
+        "count": 141,
+        "pct": 6.0
       },
       {
         "scoreline": "3-0",
@@ -315,34 +315,34 @@
       "top": [
         {
           "scoreline": "2-1",
-          "count": 9,
-          "pct": 12.0
+          "count": 10,
+          "pct": 12.5
         },
         {
           "scoreline": "1-1",
           "count": 8,
-          "pct": 10.7
+          "pct": 10.0
+        },
+        {
+          "scoreline": "0-2",
+          "count": 7,
+          "pct": 8.8
         },
         {
           "scoreline": "1-2",
           "count": 6,
-          "pct": 8.0
+          "pct": 7.5
         },
         {
           "scoreline": "2-0",
           "count": 6,
-          "pct": 8.0
-        },
-        {
-          "scoreline": "3-2",
-          "count": 6,
-          "pct": 8.0
+          "pct": 7.5
         }
       ]
     }
   ],
   "total_goal_histogram": {
-    "n_matches": 2355,
+    "n_matches": 2360,
     "cap": 10,
     "buckets": [
       {
@@ -354,26 +354,26 @@
       {
         "goals": 1,
         "label": "1",
-        "count": 406,
+        "count": 407,
         "pct": 17.2
       },
       {
         "goals": 2,
         "label": "2",
-        "count": 603,
+        "count": 605,
         "pct": 25.6
       },
       {
         "goals": 3,
         "label": "3",
-        "count": 530,
+        "count": 531,
         "pct": 22.5
       },
       {
         "goals": 4,
         "label": "4",
         "count": 348,
-        "pct": 14.8
+        "pct": 14.7
       },
       {
         "goals": 5,
@@ -385,7 +385,7 @@
         "goals": 6,
         "label": "6",
         "count": 79,
-        "pct": 3.4
+        "pct": 3.3
       },
       {
         "goals": 7,
@@ -396,8 +396,8 @@
       {
         "goals": 8,
         "label": "8",
-        "count": 8,
-        "pct": 0.3
+        "count": 9,
+        "pct": 0.4
       },
       {
         "goals": 9,
@@ -415,7 +415,7 @@
   },
   "extreme_scorelines": {
     "min_total": 7,
-    "count": 47,
+    "count": 48,
     "matches": [
       {
         "season": "2022-2023",
@@ -488,6 +488,14 @@
         "scoreline": "5-3",
         "total_goals": 8,
         "match_date": "2026-09-14"
+      },
+      {
+        "season": "2026-2027",
+        "home_score": 4,
+        "away_score": 4,
+        "scoreline": "4-4",
+        "total_goals": 8,
+        "match_date": "2026-10-25"
       },
       {
         "season": "2020-2021",
@@ -796,20 +804,20 @@
     ]
   },
   "margin_distribution": {
-    "n_decided": 1729,
-    "n_draws": 626,
+    "n_decided": 1733,
+    "n_draws": 627,
     "avg_margin": 1.76,
     "distribution": [
       {
         "margin": 1,
         "label": "1",
-        "count": 920,
+        "count": 922,
         "pct": 53.2
       },
       {
         "margin": 2,
         "label": "2",
-        "count": 473,
+        "count": 475,
         "pct": 27.4
       },
       {
@@ -822,7 +830,7 @@
   },
   "margin_by_outcome": {
     "home": {
-      "n_matches": 959,
+      "n_matches": 961,
       "matches": [
         {
           "season": "2020-2021",
@@ -8355,17 +8363,17 @@
         {
           "season": "2026-2027",
           "home_score": 2,
-          "away_score": 0,
-          "scoreline": "2-0",
-          "margin": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
           "match_date": "2026-09-20"
         },
         {
           "season": "2026-2027",
           "home_score": 2,
-          "away_score": 1,
-          "scoreline": "2-1",
-          "margin": 1,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
           "match_date": "2026-09-20"
         },
         {
@@ -8495,14 +8503,30 @@
           "scoreline": "2-1",
           "margin": 1,
           "match_date": "2026-10-24"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-10-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 0,
+          "scoreline": "1-0",
+          "margin": 1,
+          "match_date": "2026-10-25"
         }
       ],
       "distribution": [
         {
           "margin": 1,
           "label": "1",
-          "count": 493,
-          "pct": 51.4
+          "count": 495,
+          "pct": 51.5
         },
         {
           "margin": 2,
@@ -8514,14 +8538,14 @@
           "margin": 3,
           "label": "3+",
           "count": 204,
-          "pct": 21.3
+          "pct": 21.2
         }
       ],
       "avg_margin": 1.81,
       "max_margin": 7
     },
     "away": {
-      "n_matches": 770,
+      "n_matches": 772,
       "matches": [
         {
           "season": "2020-2021",
@@ -14494,17 +14518,17 @@
         {
           "season": "2026-2027",
           "home_score": 0,
-          "away_score": 2,
-          "scoreline": "0-2",
-          "margin": 2,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
           "match_date": "2026-08-23"
         },
         {
           "season": "2026-2027",
           "home_score": 0,
-          "away_score": 1,
-          "scoreline": "0-1",
-          "margin": 1,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
           "match_date": "2026-08-23"
         },
         {
@@ -14525,18 +14549,18 @@
         },
         {
           "season": "2026-2027",
-          "home_score": 0,
-          "away_score": 3,
-          "scoreline": "0-3",
-          "margin": 3,
-          "match_date": "2026-08-29"
-        },
-        {
-          "season": "2026-2027",
           "home_score": 2,
           "away_score": 3,
           "scoreline": "2-3",
           "margin": 1,
+          "match_date": "2026-08-29"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 3,
+          "scoreline": "0-3",
+          "margin": 3,
           "match_date": "2026-08-29"
         },
         {
@@ -14682,6 +14706,22 @@
           "scoreline": "0-2",
           "margin": 2,
           "match_date": "2026-10-24"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-10-25"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-10-25"
         }
       ],
       "distribution": [
@@ -14689,13 +14729,13 @@
           "margin": 1,
           "label": "1",
           "count": 427,
-          "pct": 55.5
+          "pct": 55.3
         },
         {
           "margin": 2,
           "label": "2",
-          "count": 211,
-          "pct": 27.4
+          "count": 213,
+          "pct": 27.6
         },
         {
           "margin": 3,
@@ -14710,22 +14750,22 @@
   },
   "common_scorelines": {
     "home": {
-      "n_matches": 959,
+      "n_matches": 961,
       "scoreline": "1-0",
-      "count": 227,
+      "count": 228,
       "pct": 23.7
     },
     "draw": {
-      "n_matches": 626,
+      "n_matches": 627,
       "scoreline": "1-1",
       "count": 297,
       "pct": 47.4
     },
     "away": {
-      "n_matches": 770,
+      "n_matches": 772,
       "scoreline": "1-2",
       "count": 186,
-      "pct": 24.2
+      "pct": 24.1
     }
   }
 }

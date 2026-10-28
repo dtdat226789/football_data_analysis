@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:42:09+00:00
+- Generated: 2026-10-27T02:24:00+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`
@@ -14,11 +14,11 @@
 | 2023 | Bodo/Glimt | 70 | Brann | 9 pts |
 | 2024 | Bodo/Glimt | 62 | Brann | 3 pts |
 | 2025 | Viking | 71 | Bodo/Glimt | 1 pts |
-| 2026 | Viking | 56 | Bodo/Glimt | 0 pts |
+| 2026 | Viking | 59 | Bodo/Glimt | 3 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
-- Tightest race: **2026** - Viking beat Bodo/Glimt by **0** pts
+- Tightest race: **2025** - Viking beat Bodo/Glimt by **1** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023 | 9 pts |  |
 | 2024 | 3 pts | yes |
 | 2025 | 1 pts | yes |
-| 2026 | 0 pts | yes |
+| 2026 | 3 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 70 | 61 | 58 | 43 | 31 | 18 |
 | 2024 | 62 | 59 | 53 | 51 | 33 | 23 |
 | 2025 | 71 | 70 | 56 | 43 | 34 | 9 |
-| 2026 | 56 | 56 | 40 | 36 | 24 | 16 |
+| 2026 | 59 | 56 | 40 | 39 | 24 | 19 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,10 +63,10 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 240 | 748 | 3.117 | 50.8% | 17.5% | 31.7% | 5.4% | 42.38 |
 | 2024 | 240 | 681 | 2.837 | 41.7% | 25.0% | 33.3% | 5.4% | 41.25 |
 | 2025 | 240 | 762 | 3.175 | 49.2% | 18.8% | 32.1% | 4.6% | 42.19 |
-| 2026 | 186 | 594 | 3.194 | 48.9% | 19.9% | 31.2% | 3.2% | 32.56 |
+| 2026 | 192 | 617 | 3.214 | 50.0% | 19.8% | 30.2% | 3.1% | 33.62 |
 
 ## 6. View divergence
-- Largest divergence: **2022** (goals view, avg abs position diff = 5.250)
+- Largest divergence: **2026** (goals view, avg abs position diff = 5.375)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 3.375 | 4.000 |
 | 2024 | 3.250 | 4.000 |
 | 2025 | 2.750 | 4.250 |
-| 2026 | 3.625 | 5.000 |
+| 2026 | 3.375 | 5.375 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

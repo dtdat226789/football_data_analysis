@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:47:17+00:00
+- Generated: 2026-10-27T02:29:18+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 1 (Spain)
 - Scope: league `segunda1`
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 15 | 34 | 16 | 30 | 4 pts |
 | 2024-2025 | 15 | 38 | 16 | 31 | 7 pts |
 | 2025-2026 | 15 | 40 | 16 | 36 | 4 pts |
-| 2026-2027 | 15 | 7 | 16 | 6 | 1 pts |
+| 2026-2027 | 15 | 7 | 16 | 7 | 0 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 718 | 2.346 | 43.1% | 31.7% | 25.2% | 11.4% | 45.61 |
 | 2024-2025 | 306 | 724 | 2.366 | 42.8% | 28.4% | 28.8% | 11.1% | 46.17 |
 | 2025-2026 | 306 | 776 | 2.536 | 41.5% | 27.5% | 31.0% | 9.2% | 46.33 |
-| 2026-2027 | 69 | 199 | 2.884 | 39.1% | 23.2% | 37.7% | 5.8% | 10.61 |
+| 2026-2027 | 72 | 206 | 2.861 | 38.9% | 25.0% | 36.1% | 6.9% | 11.0 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 7.667)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.444 | 6.111 |
 | 2024-2025 | 2.444 | 6.889 |
 | 2025-2026 | 4.222 | 7.667 |
-| 2026-2027 | 0.889 | 6.889 |
+| 2026-2027 | 0.667 | 6.889 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

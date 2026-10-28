@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:41:13+00:00
+- Generated: 2026-10-27T02:22:58+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`
@@ -14,11 +14,11 @@
 | 2023-2024 | Raja Casablanca | 72 | FAR Rabat | 1 pts |
 | 2024-2025 | Berkane | 70 | FAR Rabat | 13 pts |
 | 2025-2026 | Maghreb Fez | 59 | Raja Casablanca | 2 pts |
-| 2026-2027 | COD Meknes | 10 | Kawkab Marrakech | 1 pts |
+| 2026-2027 | COD Meknes | 10 | Kawkab Marrakech | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **5** of 7 seasons
-- Tightest race: **2022-2023** - FAR Rabat beat Wydad by **1** pts
+- Tightest race: **2026-2027** - COD Meknes beat Kawkab Marrakech by **0** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023-2024 | 1 pts | yes |
 | 2024-2025 | 13 pts |  |
 | 2025-2026 | 2 pts | yes |
-| 2026-2027 | 1 pts | yes |
+| 2026-2027 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 72 | 71 | 44 | 44 | 30 | 20 |
 | 2024-2025 | 70 | 57 | 53 | 47 | 29 | 4 |
 | 2025-2026 | 59 | 57 | 55 | 40 | 31 | 22 |
-| 2026-2027 | 10 | 9 | 7 | 7 | 3 | 1 |
+| 2026-2027 | 10 | 10 | 7 | 7 | 4 | 1 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 13 | 30 | 14 | 25 | 5 pts |
 | 2024-2025 | 13 | 29 | 14 | 25 | 4 pts |
 | 2025-2026 | 13 | 31 | 14 | 31 | 0 pts |
-| 2026-2027 | 13 | 3 | 14 | 3 | 0 pts |
+| 2026-2027 | 13 | 4 | 14 | 3 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 534 | 2.225 | 41.2% | 30.4% | 28.3% | 12.5% | 40.44 |
 | 2024-2025 | 240 | 555 | 2.312 | 43.3% | 28.3% | 28.3% | 9.2% | 40.75 |
 | 2025-2026 | 248 | 539 | 2.173 | 37.9% | 34.3% | 27.8% | 11.7% | 38.76 |
-| 2026-2027 | 33 | 85 | 2.576 | 24.2% | 30.3% | 45.5% | 15.2% | 5.56 |
+| 2026-2027 | 35 | 88 | 2.514 | 22.9% | 31.4% | 45.7% | 14.3% | 5.88 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 6.706)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.750 | 5.875 |
 | 2024-2025 | 2.625 | 5.000 |
 | 2025-2026 | 3.882 | 6.706 |
-| 2026-2027 | 1.500 | 4.875 |
+| 2026-2027 | 1.625 | 4.875 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

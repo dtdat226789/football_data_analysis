@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:30:37+00:00
+- Generated: 2026-10-27T01:45:36+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Premier League (Egypt)
 - Scope: league `egypt`

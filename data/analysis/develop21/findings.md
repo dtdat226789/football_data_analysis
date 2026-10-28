@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:30:29+00:00
+- Generated: 2026-10-27T01:45:25+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Professional Development League (England)
 - Scope: league `develop21`
@@ -32,7 +32,7 @@
 - **F12** · `season_trends` · *[high]* — **Champion with most titles** — Bolton U21 won 1 of 1 championship(s) on record
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: Bolton U21 beat Fleetwood U21 by 5 pts
 - **F14** · `season_trends` · *[low]* — **Largest view divergence** — 2026-2027 (goals view, avg abs position diff 6.118)
-- **F15** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.882)
+- **F15** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 2.000)
 - **F16** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 2-2 in 8 matches (13.1%)
 - **F17** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 3-1 (7 of 26 home matches, 26.9%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 2-2 (8 of 14 draw matches, 57.1%)

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:53:15+00:00
+- Generated: 2026-10-27T02:35:22+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Bundesliga Women (Germany)
 - Scope: league `wgermany1`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 60 | 53 | 35 | 31 | 15 | - |
 | 2024-2025 | 59 | 51 | 43 | 36 | 10 | - |
 | 2025-2026 | 74 | 58 | 46 | 43 | 22 | 11 |
-| 2026-2027 | 24 | 21 | 13 | 10 | 6 | 0 |
+| 2026-2027 | 24 | 21 | 13 | 12 | 8 | 0 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 11 | 15 | 12 | 4 | 11 pts |
 | 2024-2025 | 11 | 10 | 12 | 1 | 9 pts |
 | 2025-2026 | 11 | 22 | 12 | 18 | 4 pts |
-| 2026-2027 | 11 | 6 | 12 | 5 | 1 pts |
+| 2026-2027 | 11 | 8 | 12 | 6 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,10 +63,10 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 132 | 422 | 3.197 | 43.9% | 18.2% | 37.9% | 6.1% | 31.0 |
 | 2024-2025 | 132 | 411 | 3.114 | 47.0% | 13.6% | 39.4% | 3.8% | 31.5 |
 | 2025-2026 | 182 | 627 | 3.445 | 44.5% | 17.6% | 37.9% | 3.8% | 36.71 |
-| 2026-2027 | 51 | 177 | 3.471 | 47.1% | 11.8% | 41.2% | 0.0% | 10.5 |
+| 2026-2027 | 55 | 198 | 3.6 | 49.1% | 12.7% | 38.2% | 0.0% | 11.29 |
 
 ## 6. View divergence
-- Largest divergence: **2023-2024** (goals view, avg abs position diff = 4.500)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 4.571)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.333 | 4.500 |
 | 2024-2025 | 2.167 | 3.500 |
 | 2025-2026 | 2.429 | 4.286 |
-| 2026-2027 | 1.286 | 4.429 |
+| 2026-2027 | 1.286 | 4.571 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

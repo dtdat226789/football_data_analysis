@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:26:42+00:00
+- Generated: 2026-10-27T01:40:35+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: 2. Liga (Austria)
 - Scope: league `austria2`

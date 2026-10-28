@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:34:50+00:00
+- Generated: 2026-10-27T01:51:01+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League 2 (Greece)
 - Scope: league `greece2`
@@ -14,10 +14,10 @@
 | 2023-2024 | Levadiakos | 55 | AEL Larissa | 6 pts |
 | 2024-2025 | AEL Larissa | 48 | Kifisia | 3 pts |
 | 2025-2026 | Kalamata | 66 | Iraklis 1908 | 6 pts |
-| 2026-2027 | Marko | 19 | Athens Kallithea | 2 pts |
+| 2026-2027 | Marko | 22 | Athens Kallithea | 5 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **4** of 7 seasons
+- Tight races (margin <= 3 pts): **3** of 7 seasons
 - Tightest race: **2022-2023** - Panserraikos beat Kifisia by **1** pts
 
 | season | margin | tight |
@@ -28,7 +28,7 @@
 | 2023-2024 | 6 pts |  |
 | 2024-2025 | 3 pts | yes |
 | 2025-2026 | 6 pts |  |
-| 2026-2027 | 2 pts | yes |
+| 2026-2027 | 5 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 55 | 49 | 44 | 36 | 29 | 25 |
 | 2024-2025 | 48 | 45 | 36 | 31 | 19 | 15 |
 | 2025-2026 | 66 | 60 | 48 | 45 | 35 | 23 |
-| 2026-2027 | 19 | 17 | 14 | 11 | 8 | 3 |
+| 2026-2027 | 22 | 17 | 14 | 11 | 8 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 264 | 584 | 2.212 | 49.2% | 23.9% | 26.9% | 9.8% | 29.16 |
 | 2024-2025 | 180 | 412 | 2.289 | 42.8% | 27.8% | 29.4% | 11.1% | 24.5 |
 | 2025-2026 | 265 | 607 | 2.291 | 44.2% | 23.0% | 32.8% | 7.9% | 36.7 |
-| 2026-2027 | 60 | 124 | 2.067 | 51.7% | 31.7% | 16.7% | 11.7% | 10.06 |
+| 2026-2027 | 63 | 133 | 2.111 | 50.8% | 31.7% | 17.5% | 11.1% | 10.56 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 13.000)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 5.840 | 9.360 |
 | 2024-2025 | 2.600 | 4.500 |
 | 2025-2026 | 3.700 | 7.500 |
-| 2026-2027 | 2.500 | 4.875 |
+| 2026-2027 | 3.125 | 4.250 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

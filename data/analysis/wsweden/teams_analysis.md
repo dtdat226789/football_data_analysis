@@ -1,28 +1,28 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:53:33+00:00
+- Generated: 2026-10-27T02:35:39+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Allsvenskan Women (Sweden)
 - Scope: league `wsweden`
 
-- Teams: **21** | Seasons: **7** | Matches: **1151**
+- Teams: **21** | Seasons: **7** | Matches: **1153**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Hacken W | 6 | 149 | 112 | 21 | 16 | 357 | 400 | 93 | 307 | 59.5 | 1 | 2 | 2 |
-| Rosengard W | 7 | 170 | 103 | 29 | 38 | 338 | 398 | 157 | 241 | 48.29 | 1 | 11 | 3 |
+| Rosengard W | 7 | 171 | 103 | 29 | 39 | 338 | 398 | 159 | 239 | 48.29 | 1 | 11 | 3 |
 | Hammarby W | 6 | 149 | 99 | 18 | 32 | 315 | 335 | 128 | 207 | 52.5 | 1 | 7 | 1 |
 | Kristianstad W | 7 | 171 | 90 | 38 | 43 | 308 | 325 | 212 | 113 | 44.0 | 3 | 6 | 0 |
-| Vittsjo W | 7 | 170 | 71 | 38 | 61 | 251 | 236 | 225 | 11 | 35.86 | 5 | 10 | 0 |
+| Vittsjo W | 7 | 171 | 71 | 38 | 62 | 251 | 236 | 227 | 9 | 35.86 | 5 | 10 | 0 |
 | Linkoping W | 6 | 148 | 67 | 27 | 54 | 228 | 261 | 230 | 31 | 38.0 | 3 | 13 | 0 |
-| Pitea W | 7 | 170 | 63 | 32 | 75 | 221 | 199 | 231 | -32 | 31.57 | 4 | 11 | 0 |
+| Pitea W | 7 | 171 | 64 | 32 | 75 | 224 | 201 | 231 | -30 | 32.0 | 4 | 11 | 0 |
 | Djurgarden W | 7 | 171 | 57 | 32 | 82 | 203 | 210 | 282 | -72 | 29.0 | 4 | 11 | 0 |
 | Vaxjo DFF W | 6 | 145 | 39 | 25 | 81 | 142 | 144 | 274 | -130 | 23.67 | 6 | 13 | 0 |
 | KIF Orebro W | 5 | 122 | 40 | 17 | 65 | 137 | 134 | 198 | -64 | 27.4 | 7 | 13 | 0 |
 | Norrkoping W | 4 | 101 | 36 | 23 | 42 | 131 | 120 | 137 | -17 | 32.75 | 5 | 12 | 0 |
 | Eskilstuna Utd W | 4 | 93 | 38 | 14 | 41 | 128 | 112 | 119 | -7 | 32.0 | 4 | 10 | 0 |
-| AIK W | 5 | 122 | 35 | 17 | 70 | 122 | 135 | 245 | -110 | 24.4 | 5 | 14 | 0 |
+| AIK W | 5 | 123 | 36 | 17 | 70 | 125 | 137 | 245 | -108 | 25.0 | 4 | 14 | 0 |
 | IF Brommapojkarna W | 5 | 127 | 31 | 21 | 75 | 114 | 155 | 273 | -118 | 22.8 | 7 | 12 | 0 |
 | Malmo FF W | 2 | 49 | 31 | 9 | 9 | 102 | 103 | 44 | 59 | 51.0 | 3 | 3 | 0 |
 | Goteborg W | 1 | 22 | 17 | 3 | 2 | 54 | 55 | 10 | 45 | 54.0 | 1 | 1 | 1 |
@@ -36,11 +36,11 @@
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Djurgarden W | 85 | 35 | 18 | 32 | 123 | 86 | 22 | 14 | 50 | 80 | 43 |
+| AIK W | 62 | 25 | 8 | 29 | 83 | 61 | 11 | 9 | 41 | 42 | 41 |
 | Linkoping W | 74 | 39 | 17 | 18 | 134 | 74 | 28 | 10 | 36 | 94 | 40 |
-| AIK W | 61 | 24 | 8 | 29 | 80 | 61 | 11 | 9 | 41 | 42 | 38 |
-| Vittsjo W | 85 | 41 | 18 | 26 | 141 | 85 | 30 | 20 | 35 | 110 | 31 |
-| Pitea W | 85 | 37 | 15 | 33 | 126 | 85 | 26 | 17 | 42 | 95 | 31 |
-| Rosengard W | 85 | 57 | 11 | 17 | 182 | 85 | 46 | 18 | 21 | 156 | 26 |
+| Vittsjo W | 86 | 41 | 18 | 27 | 141 | 85 | 30 | 20 | 35 | 110 | 31 |
+| Pitea W | 85 | 37 | 15 | 33 | 126 | 86 | 27 | 17 | 42 | 98 | 28 |
+| Rosengard W | 85 | 57 | 11 | 17 | 182 | 86 | 46 | 18 | 22 | 156 | 26 |
 | Hammarby W | 75 | 54 | 6 | 15 | 168 | 74 | 45 | 12 | 17 | 147 | 21 |
 | KIF Orebro W | 61 | 23 | 10 | 28 | 79 | 61 | 17 | 7 | 37 | 58 | 21 |
 | Eskilstuna Utd W | 47 | 22 | 8 | 17 | 74 | 46 | 16 | 6 | 24 | 54 | 20 |
@@ -65,7 +65,7 @@
 | 2 | Hacken W | 2.40 |
 | 3 | Hammarby W | 2.11 |
 | 4 | Malmo FF W | 2.08 |
-| 5 | Rosengard W | 1.99 |
+| 5 | Rosengard W | 1.98 |
 
 ### Most goals scored
 | rank | team | goals |
@@ -80,7 +80,7 @@
 | rank | team | GD |
 |---|---|---|
 | 1 | Hacken W | 307 |
-| 2 | Rosengard W | 241 |
+| 2 | Rosengard W | 239 |
 | 3 | Hammarby W | 207 |
 | 4 | Kristianstad W | 113 |
 | 5 | Malmo FF W | 59 |
@@ -92,7 +92,7 @@
 | 2 | Hacken W | 0.624 |
 | 3 | Hammarby W | 0.859 |
 | 4 | Malmo FF W | 0.898 |
-| 5 | Rosengard W | 0.924 |
+| 5 | Rosengard W | 0.930 |
 
 ## 4. Team consistency
 - Teams present in all **7** seasons: **5**
@@ -105,6 +105,7 @@ Djurgarden W, Kristianstad W, Pitea W, Rosengard W, Vittsjo W
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
 | Rosengard W vs Pitea W | 14 | 9 | 1 | 4 | 64.3% | 7.1% | 28.6% |
+| Vittsjo W vs Pitea W | 14 | 8 | 2 | 4 | 57.1% | 14.3% | 28.6% |
 | Kristianstad W vs Djurgarden W | 14 | 7 | 2 | 5 | 50.0% | 14.3% | 35.7% |
 | Pitea W vs Djurgarden W | 14 | 7 | 4 | 3 | 50.0% | 28.6% | 21.4% |
 | Rosengard W vs Vittsjo W | 14 | 7 | 4 | 3 | 50.0% | 28.6% | 21.4% |
@@ -112,7 +113,6 @@ Djurgarden W, Kristianstad W, Pitea W, Rosengard W, Vittsjo W
 | Rosengard W vs Djurgarden W | 14 | 6 | 3 | 5 | 42.9% | 21.4% | 35.7% |
 | Kristianstad W vs Vittsjo W | 14 | 4 | 5 | 5 | 28.6% | 35.7% | 35.7% |
 | Rosengard W vs Kristianstad W | 14 | 4 | 6 | 4 | 28.6% | 42.9% | 28.6% |
-| Vittsjo W vs Pitea W | 13 | 8 | 2 | 3 | 61.5% | 15.4% | 23.1% |
 | Vittsjo W vs Djurgarden W | 13 | 5 | 4 | 4 | 38.5% | 30.8% | 30.8% |
 | Djurgarden W vs Hammarby W | 12 | 8 | 0 | 4 | 66.7% | 0.0% | 33.3% |
 | Hacken W vs Hammarby W | 12 | 8 | 0 | 4 | 66.7% | 0.0% | 33.3% |
@@ -128,16 +128,16 @@ _Cells show final position; '-' when the team was absent from that season._
 | Hacken W | - | 2 | 2 | 2 | 2 | 1 | 1 |
 | Rosengard W | 2 | 1 | 1 | 7 | 1 | 11 | 11 |
 | Hammarby W | - | 7 | 5 | 1 | 3 | 2 | 2 |
-| Kristianstad W | 3 | 3 | 4 | 6 | 4 | 6 | 4 |
+| Kristianstad W | 3 | 3 | 4 | 6 | 4 | 6 | 5 |
 | Vittsjo W | 5 | 5 | 6 | 5 | 10 | 7 | 6 |
 | Linkoping W | 4 | 6 | 3 | 3 | 9 | 13 | - |
-| Pitea W | 8 | 11 | 7 | 4 | 6 | 9 | 10 |
-| Djurgarden W | 9 | 9 | 10 | 11 | 7 | 4 | 9 |
+| Pitea W | 8 | 11 | 7 | 4 | 6 | 9 | 9 |
+| Djurgarden W | 9 | 9 | 10 | 11 | 7 | 4 | 10 |
 | Vaxjo DFF W | 6 | 12 | - | 8 | 8 | 10 | 13 |
 | KIF Orebro W | 7 | 8 | 9 | 10 | 13 | - | - |
 | Norrkoping W | - | - | - | 9 | 5 | 5 | 12 |
 | Eskilstuna Utd W | 10 | 4 | 8 | - | - | - | 8 |
-| AIK W | - | 10 | 14 | - | 12 | 8 | 5 |
+| AIK W | - | 10 | 14 | - | 12 | 8 | 4 |
 | IF Brommapojkarna W | - | - | 12 | 12 | 11 | 12 | 7 |
 | Malmo FF W | - | - | - | - | - | 3 | 3 |
 | Goteborg W | 1 | - | - | - | - | - | - |

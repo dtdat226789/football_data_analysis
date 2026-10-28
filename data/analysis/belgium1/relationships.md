@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:27:11+00:00
+- Generated: 2026-10-27T01:41:10+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Jupiler Pro League (Belgium)
 - Scope: league `belgium1`

@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:49:59+00:00
+- Generated: 2026-10-27T02:32:17+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: LaLiga2 (Spain)
 - Scope: league `spain2`

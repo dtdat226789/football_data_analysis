@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:34:04+00:00
+- Generated: 2026-10-27T01:49:51+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 77 | 67 | 62 | 60 | 40 | 30 |
 | 2024-2025 | 72 | 70 | 62 | 59 | 43 | 25 |
 | 2025-2026 | 80 | 72 | 68 | 64 | 35 | 21 |
-| 2026-2027 | 25 | 23 | 17 | 17 | 11 | 6 |
+| 2026-2027 | 25 | 23 | 17 | 17 | 11 | 9 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 1066 | 2.805 | 45.5% | 26.3% | 28.2% | 6.8% | 52.0 |
 | 2024-2025 | 380 | 1103 | 2.903 | 45.3% | 25.3% | 29.5% | 5.0% | 52.2 |
 | 2025-2026 | 380 | 1219 | 3.208 | 46.1% | 23.4% | 30.5% | 6.1% | 52.55 |
-| 2026-2027 | 107 | 355 | 3.318 | 41.1% | 23.4% | 35.5% | 3.7% | 14.8 |
+| 2026-2027 | 110 | 366 | 3.327 | 42.7% | 22.7% | 34.5% | 3.6% | 15.25 |
 
 ## 6. View divergence
 - Largest divergence: **2023-2024** (goals view, avg abs position diff = 7.500)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.300 | 7.500 |
 | 2024-2025 | 2.700 | 7.500 |
 | 2025-2026 | 2.100 | 7.200 |
-| 2026-2027 | 2.800 | 5.900 |
+| 2026-2027 | 3.200 | 5.900 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

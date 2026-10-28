@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:27:59+00:00
+- Generated: 2026-10-27T01:42:08+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`

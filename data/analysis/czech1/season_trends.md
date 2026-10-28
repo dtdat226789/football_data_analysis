@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:28:48+00:00
+- Generated: 2026-10-27T01:43:12+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Chance Liga (Czech Republic)
 - Scope: league `czech1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Sparta Prague | 76 | Slavia Prague | 4 pts |
 | 2024-2025 | Slavia Prague | 78 | Plzen | 13 pts |
 | 2025-2026 | Slavia Prague | 80 | Sparta Prague | 4 pts |
-| 2026-2027 | Slavia Prague | 28 | Mlada Boleslav | 7 pts |
+| 2026-2027 | Slavia Prague | 28 | Sparta Prague | 6 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 4 pts |  |
 | 2024-2025 | 13 pts |  |
 | 2025-2026 | 4 pts |  |
-| 2026-2027 | 7 pts |  |
+| 2026-2027 | 6 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 76 | 72 | 45 | 41 | 28 | 24 |
 | 2024-2025 | 78 | 65 | 62 | 43 | 30 | 5 |
 | 2025-2026 | 80 | 76 | 56 | 52 | 36 | 26 |
-| 2026-2027 | 28 | 21 | 20 | 19 | 11 | 2 |
+| 2026-2027 | 28 | 22 | 21 | 20 | 11 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 678 | 2.825 | 44.2% | 26.2% | 29.6% | 7.1% | 41.06 |
 | 2024-2025 | 240 | 627 | 2.612 | 44.6% | 22.5% | 32.9% | 9.2% | 41.62 |
 | 2025-2026 | 280 | 740 | 2.643 | 42.1% | 23.9% | 33.9% | 8.2% | 42.61 |
-| 2026-2027 | 91 | 241 | 2.648 | 42.9% | 24.2% | 33.0% | 7.7% | 15.69 |
+| 2026-2027 | 94 | 253 | 2.691 | 42.6% | 23.4% | 34.0% | 7.4% | 16.25 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 5.889)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.125 | 4.125 |
 | 2024-2025 | 1.500 | 4.250 |
 | 2025-2026 | 3.333 | 5.889 |
-| 2026-2027 | 2.250 | 4.750 |
+| 2026-2027 | 3.125 | 4.625 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,25 +1,25 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:37:29+00:00
+- Generated: 2026-10-27T01:55:55+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Serie A (Italy)
 - Scope: league `italy1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **2355** across **7** seasons.
+- Matches analysed: **2360** across **7** seasons.
 - Distinct scorelines seen: **41**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 297 | 12.6% |
-| 1-0 | 227 | 9.6% |
-| 2-1 | 192 | 8.2% |
+| 1-0 | 228 | 9.7% |
+| 2-1 | 193 | 8.2% |
 | 1-2 | 186 | 7.9% |
 | 0-1 | 179 | 7.6% |
 | 2-0 | 167 | 7.1% |
 | 0-0 | 156 | 6.6% |
 | 2-2 | 146 | 6.2% |
-| 0-2 | 139 | 5.9% |
+| 0-2 | 141 | 6.0% |
 | 3-0 | 87 | 3.7% |
 | 3-1 | 77 | 3.3% |
 | 3-2 | 65 | 2.8% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 9 | 12.0% |
-| 1-1 | 8 | 10.7% |
-| 1-2 | 6 | 8.0% |
-| 2-0 | 6 | 8.0% |
-| 3-2 | 6 | 8.0% |
+| 2-1 | 10 | 12.5% |
+| 1-1 | 8 | 10.0% |
+| 0-2 | 7 | 8.8% |
+| 1-2 | 6 | 7.5% |
+| 2-0 | 6 | 7.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,19 +103,19 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 156 | 6.6% |
-| 1 | 406 | 17.2% |
-| 2 | 603 | 25.6% |
-| 3 | 530 | 22.5% |
-| 4 | 348 | 14.8% |
+| 1 | 407 | 17.2% |
+| 2 | 605 | 25.6% |
+| 3 | 531 | 22.5% |
+| 4 | 348 | 14.7% |
 | 5 | 186 | 7.9% |
-| 6 | 79 | 3.4% |
+| 6 | 79 | 3.3% |
 | 7 | 38 | 1.6% |
-| 8 | 8 | 0.3% |
+| 8 | 9 | 0.4% |
 | 9 | 0 | 0.0% |
 | 10+ | 1 | 0.0% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **47**
+- Matches with 7+ total goals: **48**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
@@ -128,6 +128,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2024-2025 | 2024-10-27 | 4-4 | 8 |
 | 2025-2026 | 2026-01-23 | 6-2 | 8 |
 | 2026-2027 | 2026-09-14 | 5-3 | 8 |
+| 2026-2027 | 2026-10-25 | 4-4 | 8 |
 | 2020-2021 | 2020-09-26 | 4-3 | 7 |
 | 2020-2021 | 2020-09-30 | 2-5 | 7 |
 | 2020-2021 | 2020-10-04 | 5-2 | 7 |
@@ -168,41 +169,41 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-12 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1729** (draws: **626**)
+- Decided matches: **1733** (draws: **627**)
 - Average winning margin: **1.76**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 920 | 53.2% |
-| 2 | 473 | 27.4% |
+| 1 | 922 | 53.2% |
+| 2 | 475 | 27.4% |
 | 3+ | 336 | 19.4% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **959** | avg margin: **1.81** | max margin: **7**
+- Matches: **961** | avg margin: **1.81** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 493 | 51.4% |
+| 1 | 495 | 51.5% |
 | 2 | 262 | 27.3% |
-| 3+ | 204 | 21.3% |
+| 3+ | 204 | 21.2% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **770** | avg margin: **1.69** | max margin: **7**
+- Matches: **772** | avg margin: **1.69** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 427 | 55.5% |
-| 2 | 211 | 27.4% |
+| 1 | 427 | 55.3% |
+| 2 | 213 | 27.6% |
 | 3+ | 132 | 17.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 959 | 1-0 | 227 | 23.7% |
-| draw | 626 | 1-1 | 297 | 47.4% |
-| away | 770 | 1-2 | 186 | 24.2% |
+| home | 961 | 1-0 | 228 | 23.7% |
+| draw | 627 | 1-1 | 297 | 47.4% |
+| away | 772 | 1-2 | 186 | 24.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

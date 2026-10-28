@@ -1,24 +1,24 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:33:26+00:00
+- Generated: 2026-10-27T01:49:06+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Bundesliga (Germany)
 - Scope: league `germany1`
 
-- Teams: **26** | Seasons: **7** | Matches: **1688**
+- Teams: **26** | Seasons: **7** | Matches: **1690**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Bayern Munich | 7 | 198 | 142 | 34 | 22 | 460 | 597 | 224 | 373 | 65.71 | 1 | 3 | 5 |
-| Dortmund | 7 | 199 | 119 | 35 | 45 | 392 | 434 | 256 | 178 | 56.0 | 1 | 5 | 1 |
-| Bayer Leverkusen | 7 | 198 | 107 | 48 | 43 | 369 | 408 | 245 | 163 | 52.71 | 1 | 6 | 1 |
+| Bayern Munich | 7 | 199 | 143 | 34 | 22 | 463 | 600 | 225 | 375 | 66.14 | 1 | 3 | 6 |
+| Dortmund | 7 | 199 | 119 | 35 | 45 | 392 | 434 | 256 | 178 | 56.0 | 2 | 5 | 0 |
+| Bayer Leverkusen | 7 | 199 | 107 | 48 | 44 | 369 | 408 | 248 | 160 | 52.71 | 1 | 6 | 1 |
 | RB Leipzig | 7 | 198 | 105 | 44 | 49 | 359 | 394 | 244 | 150 | 51.29 | 2 | 7 | 0 |
-| Freiburg | 7 | 197 | 82 | 46 | 69 | 292 | 291 | 303 | -12 | 41.71 | 3 | 10 | 0 |
-| Eintracht Frankfurt | 7 | 199 | 74 | 66 | 59 | 288 | 336 | 313 | 23 | 41.14 | 3 | 13 | 0 |
+| Freiburg | 7 | 198 | 82 | 46 | 70 | 292 | 292 | 306 | -14 | 41.71 | 3 | 10 | 0 |
+| Eintracht Frankfurt | 7 | 199 | 74 | 66 | 59 | 288 | 336 | 313 | 23 | 41.14 | 3 | 14 | 0 |
 | Stuttgart | 7 | 198 | 76 | 51 | 71 | 279 | 339 | 306 | 33 | 39.86 | 2 | 15 | 0 |
 | Union Berlin | 7 | 199 | 70 | 56 | 73 | 266 | 253 | 299 | -46 | 38.0 | 4 | 17 | 0 |
-| Hoffenheim | 7 | 197 | 69 | 46 | 82 | 253 | 320 | 338 | -18 | 36.14 | 5 | 14 | 0 |
+| Hoffenheim | 7 | 198 | 70 | 46 | 82 | 256 | 323 | 338 | -15 | 36.57 | 5 | 14 | 0 |
 | Wolfsburg | 6 | 194 | 67 | 47 | 80 | 248 | 288 | 301 | -13 | 41.33 | 4 | 15 | 0 |
 | Mainz | 7 | 198 | 64 | 55 | 79 | 247 | 274 | 300 | -26 | 35.29 | 6 | 13 | 0 |
 | Augsburg | 7 | 199 | 57 | 48 | 94 | 219 | 242 | 340 | -98 | 31.29 | 9 | 14 | 0 |
@@ -30,11 +30,11 @@
 | Arminia Bielefeld | 2 | 64 | 14 | 20 | 30 | 62 | 51 | 95 | -44 | 31.0 | 14 | 16 | 0 |
 | St. Pauli | 2 | 64 | 14 | 15 | 35 | 57 | 56 | 92 | -36 | 28.5 | 13 | 17 | 0 |
 | Schalke | 3 | 71 | 11 | 18 | 42 | 51 | 61 | 155 | -94 | 17.0 | 16 | 17 | 0 |
-| Hamburger SV | 2 | 39 | 12 | 9 | 18 | 45 | 46 | 70 | -24 | 22.5 | 10 | 12 | 0 |
+| Hamburger SV | 2 | 39 | 12 | 9 | 18 | 45 | 46 | 70 | -24 | 22.5 | 11 | 12 | 0 |
 | Holstein Kiel | 1 | 32 | 5 | 7 | 20 | 22 | 44 | 73 | -29 | 22.0 | 16 | 16 | 0 |
 | Greuther Furth | 1 | 32 | 3 | 9 | 20 | 18 | 28 | 76 | -48 | 18.0 | 17 | 17 | 0 |
 | Darmstadt | 1 | 32 | 3 | 6 | 23 | 15 | 27 | 83 | -56 | 15.0 | 17 | 17 | 0 |
-| Paderborn | 2 | 9 | 3 | 3 | 3 | 12 | 8 | 10 | -2 | 6.0 | 12 | 18 | 0 |
+| Paderborn | 2 | 9 | 3 | 3 | 3 | 12 | 8 | 10 | -2 | 6.0 | 13 | 18 | 0 |
 | Elversberg | 1 | 6 | 2 | 1 | 3 | 7 | 8 | 12 | -4 | 7.0 | 8 | 8 | 0 |
 
 ## 2. Home vs away split
@@ -43,16 +43,16 @@
 | RB Leipzig | 99 | 64 | 19 | 16 | 211 | 99 | 41 | 25 | 33 | 148 | 63 |
 | Union Berlin | 100 | 43 | 35 | 22 | 164 | 99 | 27 | 21 | 51 | 102 | 62 |
 | Dortmund | 100 | 69 | 13 | 18 | 220 | 99 | 50 | 22 | 27 | 172 | 48 |
-| Freiburg | 98 | 48 | 26 | 24 | 170 | 99 | 34 | 20 | 45 | 122 | 48 |
+| Freiburg | 99 | 48 | 26 | 25 | 170 | 99 | 34 | 20 | 45 | 122 | 48 |
 | Eintracht Frankfurt | 99 | 45 | 33 | 21 | 168 | 100 | 29 | 33 | 38 | 120 | 48 |
 | Augsburg | 100 | 34 | 30 | 36 | 132 | 99 | 23 | 18 | 58 | 87 | 45 |
 | Bochum | 64 | 23 | 18 | 23 | 87 | 64 | 11 | 12 | 41 | 45 | 42 |
-| Bayern Munich | 99 | 78 | 15 | 6 | 249 | 99 | 64 | 19 | 16 | 211 | 38 |
 | Stuttgart | 98 | 45 | 23 | 30 | 158 | 100 | 31 | 28 | 41 | 121 | 37 |
-| Hoffenheim | 99 | 41 | 20 | 38 | 143 | 98 | 28 | 26 | 44 | 110 | 33 |
+| Hoffenheim | 100 | 42 | 20 | 38 | 146 | 98 | 28 | 26 | 44 | 110 | 36 |
+| Bayern Munich | 99 | 78 | 15 | 6 | 249 | 100 | 65 | 19 | 16 | 214 | 35 |
 | Mainz | 100 | 35 | 31 | 34 | 136 | 98 | 29 | 24 | 45 | 111 | 25 |
 | FC Koln | 83 | 26 | 22 | 35 | 100 | 83 | 15 | 31 | 37 | 76 | 24 |
-| Bayer Leverkusen | 99 | 59 | 18 | 22 | 195 | 99 | 48 | 30 | 21 | 174 | 21 |
+| Bayer Leverkusen | 99 | 59 | 18 | 22 | 195 | 100 | 48 | 30 | 22 | 174 | 21 |
 | Hertha Berlin | 48 | 14 | 13 | 21 | 55 | 48 | 8 | 10 | 30 | 34 | 21 |
 | Schalke | 35 | 8 | 9 | 18 | 33 | 36 | 3 | 9 | 24 | 18 | 15 |
 | Hamburger SV | 19 | 8 | 5 | 6 | 29 | 20 | 4 | 4 | 12 | 16 | 13 |
@@ -71,16 +71,16 @@
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Bayern Munich | 2.32 |
+| 1 | Bayern Munich | 2.33 |
 | 2 | Dortmund | 1.97 |
-| 3 | Bayer Leverkusen | 1.86 |
+| 3 | Bayer Leverkusen | 1.85 |
 | 4 | RB Leipzig | 1.81 |
 | 5 | Freiburg | 1.48 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Bayern Munich | 597 |
+| 1 | Bayern Munich | 600 |
 | 2 | Dortmund | 434 |
 | 3 | Bayer Leverkusen | 408 |
 | 4 | RB Leipzig | 394 |
@@ -89,9 +89,9 @@
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Bayern Munich | 373 |
+| 1 | Bayern Munich | 375 |
 | 2 | Dortmund | 178 |
-| 3 | Bayer Leverkusen | 163 |
+| 3 | Bayer Leverkusen | 160 |
 | 4 | RB Leipzig | 150 |
 | 5 | Stuttgart | 33 |
 
@@ -99,9 +99,9 @@
 | rank | team | GA/match |
 |---|---|---|
 | 1 | Paderborn | 1.125 |
-| 2 | Bayern Munich | 1.129 |
+| 2 | Bayern Munich | 1.128 |
 | 3 | RB Leipzig | 1.209 |
-| 4 | Bayer Leverkusen | 1.229 |
+| 4 | Bayer Leverkusen | 1.237 |
 | 5 | Dortmund | 1.299 |
 
 ## 4. Team consistency
@@ -120,46 +120,46 @@ Augsburg, Bayer Leverkusen, Bayern Munich, Dortmund, Eintracht Frankfurt, Freibu
 | Bayer Leverkusen vs Augsburg | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
 | Bayer Leverkusen vs Freiburg | 13 | 6 | 3 | 4 | 46.2% | 23.1% | 30.8% |
 | Bayer Leverkusen vs Union Berlin | 13 | 6 | 5 | 2 | 46.2% | 38.5% | 15.4% |
+| Bayern Munich vs Freiburg | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
 | Bayern Munich vs Stuttgart | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
 | Bayern Munich vs Union Berlin | 13 | 6 | 5 | 2 | 46.2% | 38.5% | 15.4% |
 | RB Leipzig vs Bayer Leverkusen | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
 | RB Leipzig vs Eintracht Frankfurt | 13 | 6 | 5 | 2 | 46.2% | 38.5% | 15.4% |
+| Bayer Leverkusen vs Hoffenheim | 13 | 5 | 2 | 6 | 38.5% | 15.4% | 46.2% |
 | Bayern Munich vs RB Leipzig | 13 | 5 | 4 | 4 | 38.5% | 30.8% | 30.8% |
 | Eintracht Frankfurt vs Mainz | 13 | 5 | 5 | 3 | 38.5% | 38.5% | 23.1% |
 | Eintracht Frankfurt vs Union Berlin | 13 | 5 | 5 | 3 | 38.5% | 38.5% | 23.1% |
-| Union Berlin vs Augsburg | 13 | 5 | 5 | 3 | 38.5% | 38.5% | 23.1% |
-| Bayer Leverkusen vs Mainz | 13 | 4 | 3 | 6 | 30.8% | 23.1% | 46.2% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
 
 | team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
 |---|---|---|---|---|---|---|---|
-| Bayern Munich | 1 | 1 | 1 | 3 | 1 | 1 | 2 |
-| Dortmund | 3 | 2 | 2 | 5 | 4 | 2 | 1 |
+| Bayern Munich | 1 | 1 | 1 | 3 | 1 | 1 | 1 |
+| Dortmund | 3 | 2 | 2 | 5 | 4 | 2 | 2 |
 | Bayer Leverkusen | 6 | 3 | 6 | 1 | 2 | 6 | 4 |
 | RB Leipzig | 2 | 4 | 3 | 4 | 7 | 3 | 5 |
 | Freiburg | 9 | 6 | 5 | 10 | 5 | 7 | 3 |
-| Eintracht Frankfurt | 5 | 10 | 7 | 6 | 3 | 8 | 13 |
+| Eintracht Frankfurt | 5 | 10 | 7 | 6 | 3 | 8 | 14 |
 | Stuttgart | 8 | 14 | 15 | 2 | 9 | 4 | 15 |
 | Union Berlin | 7 | 5 | 4 | 14 | 12 | 11 | 17 |
-| Hoffenheim | 10 | 9 | 11 | 7 | 14 | 5 | 14 |
+| Hoffenheim | 10 | 9 | 11 | 7 | 14 | 5 | 10 |
 | Wolfsburg | 4 | 11 | 8 | 12 | 10 | 15 | - |
 | Mainz | 11 | 8 | 9 | 13 | 6 | 10 | 7 |
 | Augsburg | 12 | 13 | 14 | 11 | 11 | 9 | 9 |
 | Werder Bremen | 16 | - | 12 | 9 | 8 | 14 | 6 |
-| FC Koln | 15 | 7 | 10 | 16 | - | 13 | 11 |
+| FC Koln | 15 | 7 | 10 | 16 | - | 13 | 12 |
 | Bochum | - | 12 | 13 | 15 | 17 | - | - |
 | Heidenheim | - | - | - | 8 | 15 | 16 | - |
 | Hertha Berlin | 13 | 15 | 17 | - | - | - | - |
 | Arminia Bielefeld | 14 | 16 | - | - | - | - | - |
 | St. Pauli | - | - | - | - | 13 | 17 | - |
 | Schalke | 17 | - | 16 | - | - | - | 16 |
-| Hamburger SV | - | - | - | - | - | 12 | 10 |
+| Hamburger SV | - | - | - | - | - | 12 | 11 |
 | Holstein Kiel | - | - | - | - | 16 | - | - |
 | Greuther Furth | - | 17 | - | - | - | - | - |
 | Darmstadt | - | - | - | 17 | - | - | - |
-| Paderborn | - | - | - | - | - | 18 | 12 |
+| Paderborn | - | - | - | - | - | 18 | 13 |
 | Elversberg | - | - | - | - | - | - | 8 |
 
 ---

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:53:01+00:00
+- Generated: 2026-10-27T02:35:10+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Premiere Ligue Women (France)
 - Scope: league `wfrance1`

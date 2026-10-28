@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:31:33+00:00
+- Generated: 2026-10-27T01:46:52+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`

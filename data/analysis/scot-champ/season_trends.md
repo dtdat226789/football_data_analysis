@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:46:00+00:00
+- Generated: 2026-10-27T02:28:04+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Championship (Scotland)
 - Scope: league `scot-champ`

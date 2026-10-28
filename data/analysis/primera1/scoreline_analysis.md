@@ -1,20 +1,20 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:44:04+00:00
+- Generated: 2026-10-27T02:26:14+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **2007** across **6** seasons.
+- Matches analysed: **2008** across **6** seasons.
 - Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 282 | 14.1% |
+| 1-1 | 282 | 14.0% |
 | 1-0 | 275 | 13.7% |
 | 2-1 | 190 | 9.5% |
-| 0-0 | 185 | 9.2% |
+| 0-0 | 186 | 9.3% |
 | 0-1 | 167 | 8.3% |
 | 2-0 | 157 | 7.8% |
 | 1-2 | 135 | 6.7% |
@@ -82,18 +82,18 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 16 | 18.0% |
-| 1-1 | 12 | 13.5% |
-| 2-0 | 9 | 10.1% |
+| 1-0 | 16 | 17.8% |
+| 1-1 | 12 | 13.3% |
+| 2-0 | 9 | 10.0% |
+| 0-0 | 6 | 6.7% |
 | 2-1 | 6 | 6.7% |
-| 1-2 | 6 | 6.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 185 | 9.2% |
+| 0 | 186 | 9.3% |
 | 1 | 442 | 22.0% |
 | 2 | 540 | 26.9% |
 | 3 | 440 | 21.9% |
@@ -132,7 +132,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-09-12 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1442** (draws: **565**)
+- Decided matches: **1442** (draws: **566**)
 - Average winning margin: **1.62**
 
 | margin | matches | pct |
@@ -165,7 +165,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 900 | 1-0 | 275 | 30.6% |
-| draw | 565 | 1-1 | 282 | 49.9% |
+| draw | 566 | 1-1 | 282 | 49.8% |
 | away | 542 | 0-1 | 167 | 30.8% |
 
 ---

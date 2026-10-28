@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:26:42+00:00",
+  "generated_at": "2026-10-27T01:40:35+00:00",
   "config": {
     "league": "austria2",
     "out_dir": "data/analysis/austria2",
@@ -624,8 +624,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 5074,
-        "distinct": 5072,
+        "rows": 5076,
+        "distinct": 5074,
         "duplicates": 2
       }
     },
@@ -634,10 +634,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=8, fgte=8 rows)",
       "details": {
-        "total": 5074,
+        "total": 5076,
         "fgt_inconsistent": 8,
         "fgte_inconsistent": 8,
-        "n_with_fgt": 4669
+        "n_with_fgt": 4671
       }
     },
     {

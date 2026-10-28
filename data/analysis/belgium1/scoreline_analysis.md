@@ -1,32 +1,32 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:27:09+00:00
+- Generated: 2026-10-27T01:41:08+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Jupiler Pro League (Belgium)
 - Scope: league `belgium1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1795** across **7** seasons.
+- Matches analysed: **1799** across **7** seasons.
 - Distinct scorelines seen: **46**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 212 | 11.8% |
-| 2-1 | 154 | 8.6% |
+| 2-1 | 155 | 8.6% |
 | 1-0 | 138 | 7.7% |
 | 0-1 | 135 | 7.5% |
 | 1-2 | 129 | 7.2% |
 | 2-0 | 129 | 7.2% |
 | 0-0 | 103 | 5.7% |
 | 2-2 | 99 | 5.5% |
-| 0-2 | 89 | 5.0% |
+| 0-2 | 89 | 4.9% |
 | 3-0 | 86 | 4.8% |
 | 1-3 | 67 | 3.7% |
 | 3-1 | 66 | 3.7% |
-| 3-2 | 55 | 3.1% |
+| 3-2 | 56 | 3.1% |
 | 2-3 | 45 | 2.5% |
 | 0-3 | 43 | 2.4% |
-| 4-0 | 33 | 1.8% |
+| 4-0 | 34 | 1.9% |
 | 4-1 | 31 | 1.7% |
 | 4-2 | 29 | 1.6% |
 | 0-4 | 20 | 1.1% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 3-0 | 9 | 11.8% |
-| 1-0 | 6 | 7.9% |
-| 0-1 | 6 | 7.9% |
-| 2-0 | 5 | 6.6% |
-| 2-1 | 5 | 6.6% |
+| 3-0 | 9 | 11.2% |
+| 2-1 | 6 | 7.5% |
+| 1-0 | 6 | 7.5% |
+| 0-1 | 6 | 7.5% |
+| 2-0 | 5 | 6.2% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -104,18 +104,18 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|
 | 0 | 103 | 5.7% |
 | 1 | 273 | 15.2% |
-| 2 | 430 | 24.0% |
-| 3 | 412 | 23.0% |
-| 4 | 285 | 15.9% |
-| 5 | 174 | 9.7% |
+| 2 | 430 | 23.9% |
+| 3 | 413 | 23.0% |
+| 4 | 286 | 15.9% |
+| 5 | 175 | 9.7% |
 | 6 | 73 | 4.1% |
-| 7 | 29 | 1.6% |
+| 7 | 30 | 1.7% |
 | 8 | 8 | 0.4% |
 | 9 | 4 | 0.2% |
 | 10+ | 4 | 0.2% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **45**
+- Matches with 7+ total goals: **46**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
@@ -164,26 +164,27 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-02-07 | 3-4 | 7 |
 | 2025-2026 | 2026-04-22 | 6-1 | 7 |
 | 2026-2027 | 2026-10-11 | 4-3 | 7 |
+| 2026-2027 | 2026-10-25 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1359** (draws: **436**)
+- Decided matches: **1363** (draws: **436**)
 - Average winning margin: **1.85**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 668 | 49.2% |
+| 1 | 670 | 49.2% |
 | 2 | 392 | 28.8% |
-| 3+ | 299 | 22.0% |
+| 3+ | 301 | 22.1% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **773** | avg margin: **1.94** | max margin: **7**
+- Matches: **777** | avg margin: **1.94** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 353 | 45.7% |
-| 2 | 224 | 29.0% |
-| 3+ | 196 | 25.4% |
+| 1 | 355 | 45.7% |
+| 2 | 224 | 28.8% |
+| 3+ | 198 | 25.5% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -198,7 +199,7 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 773 | 2-1 | 154 | 19.9% |
+| home | 777 | 2-1 | 155 | 19.9% |
 | draw | 436 | 1-1 | 212 | 48.6% |
 | away | 586 | 0-1 | 135 | 23.0% |
 

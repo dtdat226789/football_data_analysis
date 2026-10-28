@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:50:52+00:00
+- Generated: 2026-10-27T02:33:09+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League (Switzerland)
 - Scope: league `swiss1`
@@ -14,11 +14,11 @@
 | 2023-2024 | Young Boys | 65 | Lugano | 6 pts |
 | 2024-2025 | Basel | 61 | Servette | 6 pts |
 | 2025-2026 | Thun | 75 | St. Gallen | 5 pts |
-| 2026-2027 | Lugano | 28 | Young Boys | 3 pts |
+| 2026-2027 | Lugano | 31 | Young Boys | 6 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **1** of 7 seasons
-- Tightest race: **2026-2027** - Lugano beat Young Boys by **3** pts
+- Tight races (margin <= 3 pts): **0** of 7 seasons
+- Tightest race: **2025-2026** - Thun beat St. Gallen by **5** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023-2024 | 6 pts |  |
 | 2024-2025 | 6 pts |  |
 | 2025-2026 | 5 pts |  |
-| 2026-2027 | 3 pts | yes |
+| 2026-2027 | 6 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 9 = last safe, 12 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 65 | 59 | 50 | 48 | 40 | 23 |
 | 2024-2025 | 61 | 55 | 51 | 47 | 36 | 30 |
 | 2025-2026 | 75 | 70 | 63 | 55 | 42 | 23 |
-| 2026-2027 | 28 | 25 | 17 | 16 | 10 | 6 |
+| 2026-2027 | 31 | 25 | 17 | 16 | 10 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 198 | 569 | 2.874 | 50.0% | 24.7% | 25.3% | 4.0% | 45.42 |
 | 2024-2025 | 198 | 565 | 2.854 | 47.0% | 26.3% | 26.8% | 4.5% | 45.17 |
 | 2025-2026 | 230 | 753 | 3.274 | 40.4% | 24.8% | 34.8% | 4.3% | 48.46 |
-| 2026-2027 | 63 | 236 | 3.746 | 46.0% | 15.9% | 38.1% | 1.6% | 14.92 |
+| 2026-2027 | 66 | 242 | 3.667 | 45.5% | 16.7% | 37.9% | 3.0% | 15.58 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 4.769)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.333 | 3.500 |
 | 2024-2025 | 3.500 | 2.500 |
 | 2025-2026 | 1.846 | 4.769 |
-| 2026-2027 | 1.333 | 3.500 |
+| 2026-2027 | 1.167 | 3.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

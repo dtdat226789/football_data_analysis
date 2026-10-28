@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:47:37+00:00
+- Generated: 2026-10-27T02:29:38+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 2 (Spain)
 - Scope: league `segunda2`
@@ -14,10 +14,10 @@
 | 2023-2024 | Ath Bilbao B | 82 | Barakaldo | 6 pts |
 | 2024-2025 | Arenas Getxo | 70 | SD Logrones | 4 pts |
 | 2025-2026 | R. Union | 69 | Alaves B | 7 pts |
-| 2026-2027 | Barcelona B | 19 | Manresa | 5 pts |
+| 2026-2027 | Barcelona B | 19 | Espanyol B | 3 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **2** of 7 seasons
+- Tight races (margin <= 3 pts): **3** of 7 seasons
 - Tightest race: **2020-2021** - Real Sociedad B beat Ath Bilbao B by **1** pts
 
 | season | margin | tight |
@@ -28,7 +28,7 @@
 | 2023-2024 | 6 pts |  |
 | 2024-2025 | 4 pts |  |
 | 2025-2026 | 7 pts |  |
-| 2026-2027 | 5 pts |  |
+| 2026-2027 | 3 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 15 = last safe, 18 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 82 | 76 | 61 | 52 | 33 | 21 |
 | 2024-2025 | 70 | 66 | 61 | 55 | 38 | 21 |
 | 2025-2026 | 69 | 62 | 58 | 50 | 35 | 25 |
-| 2026-2027 | 19 | 14 | 14 | 13 | 5 | 3 |
+| 2026-2027 | 19 | 16 | 15 | 14 | 5 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 708 | 2.314 | 45.4% | 26.1% | 28.4% | 12.7% | 46.56 |
 | 2024-2025 | 306 | 719 | 2.35 | 44.1% | 24.8% | 31.0% | 9.2% | 46.78 |
 | 2025-2026 | 306 | 769 | 2.513 | 42.5% | 29.1% | 28.4% | 9.2% | 46.06 |
-| 2026-2027 | 67 | 167 | 2.493 | 38.8% | 32.8% | 28.4% | 11.9% | 9.94 |
+| 2026-2027 | 71 | 173 | 2.437 | 40.8% | 32.4% | 26.8% | 12.7% | 10.56 |
 
 ## 6. View divergence
 - Largest divergence: **2022-2023** (goals view, avg abs position diff = 7.667)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.333 | 4.778 |
 | 2024-2025 | 2.111 | 7.222 |
 | 2025-2026 | 2.778 | 5.556 |
-| 2026-2027 | 1.667 | 6.333 |
+| 2026-2027 | 2.000 | 5.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

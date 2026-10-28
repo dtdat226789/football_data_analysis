@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:47:51+00:00
+- Generated: 2026-10-27T02:29:52+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Segunda RFEF - Group 3 (Spain)
 - Scope: league `segunda3`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1795 |
-| Home wins | 775 (43.2%) |
-| Draws | 545 (30.4%) |
-| Away wins | 475 (26.5%) |
-| Total goals | 4138 |
-| Average goals per match | 2.305 |
-| Goalless matches | 190 (10.6%) |
+| Matches | 1801 |
+| Home wins | 780 (43.3%) |
+| Draws | 545 (30.3%) |
+| Away wins | 476 (26.4%) |
+| Total goals | 4159 |
+| Average goals per match | 2.309 |
+| Goalless matches | 190 (10.5%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,17 +25,17 @@
 | 2023-2024 | 306 | 135 (44.1%) | 86 (28.1%) | 85 (27.8%) | 742 | 2.425 | 31 (10.1%) |
 | 2024-2025 | 306 | 114 (37.3%) | 89 (29.1%) | 103 (33.7%) | 724 | 2.366 | 27 (8.8%) |
 | 2025-2026 | 306 | 140 (45.8%) | 97 (31.7%) | 69 (22.5%) | 742 | 2.425 | 33 (10.8%) |
-| 2026-2027 | 65 | 30 (46.2%) | 16 (24.6%) | 19 (29.2%) | 166 | 2.554 | 2 (3.1%) |
+| 2026-2027 | 71 | 35 (49.3%) | 16 (22.5%) | 20 (28.2%) | 187 | 2.634 | 2 (2.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 431 (74.7%) | 110 (19.1%) | 36 (6.2%) | 577 |
-| HT draw | 301 (35.2%) | 347 (40.6%) | 206 (24.1%) | 854 |
-| HT away lead | 43 (11.8%) | 88 (24.2%) | 233 (64.0%) | 364 |
+| HT home lead | 432 (74.7%) | 110 (19.0%) | 36 (6.2%) | 578 |
+| HT draw | 304 (35.5%) | 347 (40.5%) | 206 (24.0%) | 857 |
+| HT away lead | 44 (12.0%) | 88 (24.0%) | 234 (63.9%) | 366 |
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **43** (2.4%)
+- Home comebacks (trailing at HT, won at FT): **44** (2.4%)
 - Away comebacks (trailing at HT, won at FT): **36** (2.0%)
 
 ### Home comebacks
@@ -84,6 +84,7 @@
 | 2025-2026 | Sant Andreu | Espanyol B | 0-1 | 2-1 |
 | 2025-2026 | Girona B | Olot | 0-1 | 4-1 |
 | 2025-2026 | Barcelona B | Atletic Lleida | 0-1 | 2-1 |
+| 2026-2027 | Real Murcia B | Lorca Deportiva | 0-1 | 3-2 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -128,32 +129,32 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 577 | 431 (74.7%) | 110 (19.1%) | 36 (6.2%) |
-| Away lead | 364 | 233 (64.0%) | 88 (24.2%) | 43 (11.8%) |
+| Home lead | 578 | 432 (74.7%) | 110 (19.0%) | 36 (6.2%) |
+| Away lead | 366 | 234 (63.9%) | 88 (24.0%) | 44 (12.0%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 301 | 35.2% |
-| Draw | 347 | 40.6% |
-| Away win | 206 | 24.1% |
+| Home win | 304 | 35.5% |
+| Draw | 347 | 40.5% |
+| Away win | 206 | 24.0% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1605` of `1795` (89.4%)
+- Matches with a first-goal time recorded: `1611` of `1801` (89.5%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 461 | 25.7% | 226 (49.0%) | 108 (23.4%) | 127 (27.5%) |
-| 16-30 | 361 | 20.1% | 169 (46.8%) | 91 (25.2%) | 101 (28.0%) |
-| 31-45 | 283 | 15.8% | 133 (47.0%) | 65 (23.0%) | 85 (30.0%) |
+| 1-15 | 463 | 25.7% | 227 (49.0%) | 108 (23.3%) | 128 (27.6%) |
+| 16-30 | 362 | 20.1% | 170 (47.0%) | 91 (25.1%) | 101 (27.9%) |
+| 31-45 | 284 | 15.8% | 134 (47.2%) | 65 (22.9%) | 85 (29.9%) |
 | 46-60 | 214 | 11.9% | 104 (48.6%) | 49 (22.9%) | 61 (28.5%) |
-| 61-75 | 150 | 8.4% | 69 (46.0%) | 24 (16.0%) | 57 (38.0%) |
-| 76-90 | 116 | 6.5% | 63 (54.3%) | 18 (15.5%) | 35 (30.2%) |
+| 61-75 | 151 | 8.4% | 70 (46.4%) | 24 (15.9%) | 57 (37.7%) |
+| 76-90 | 117 | 6.5% | 64 (54.7%) | 18 (15.4%) | 35 (29.9%) |
 | 91-120 | 20 | 1.1% | 11 (55.0%) | 0 (0.0%) | 9 (45.0%) |
 
 ## 7. Goalless matches
-- Overall: **190** of `1795` (10.6%)
+- Overall: **190** of `1801` (10.5%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -163,7 +164,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 306 | 31 | 10.1% |
 | 2024-2025 | 306 | 27 | 8.8% |
 | 2025-2026 | 306 | 33 | 10.8% |
-| 2026-2027 | 65 | 2 | 3.1% |
+| 2026-2027 | 71 | 2 | 2.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

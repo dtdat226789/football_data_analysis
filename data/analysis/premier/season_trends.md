@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:43:39+00:00
+- Generated: 2026-10-27T02:25:49+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 91 | 89 | 68 | 63 | 36 | 16 |
 | 2024-2025 | 84 | 74 | 69 | 66 | 38 | 12 |
 | 2025-2026 | 85 | 78 | 65 | 57 | 41 | 20 |
-| 2026-2027 | 21 | 21 | 13 | 11 | 6 | 4 |
+| 2026-2027 | 21 | 21 | 15 | 11 | 7 | 5 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 17 | 36 | 18 | 26 | 10 pts |
 | 2024-2025 | 17 | 38 | 18 | 25 | 13 pts |
 | 2025-2026 | 17 | 41 | 18 | 39 | 2 pts |
-| 2026-2027 | 17 | 6 | 18 | 6 | 0 pts |
+| 2026-2027 | 17 | 7 | 18 | 6 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 1246 | 3.279 | 46.1% | 21.6% | 32.4% | 2.9% | 52.9 |
 | 2024-2025 | 380 | 1115 | 2.934 | 40.8% | 24.5% | 34.7% | 4.2% | 52.35 |
 | 2025-2026 | 380 | 1045 | 2.75 | 42.6% | 27.4% | 30.0% | 7.1% | 51.8 |
-| 2026-2027 | 75 | 213 | 2.84 | 40.0% | 28.0% | 32.0% | 6.7% | 10.2 |
+| 2026-2027 | 80 | 222 | 2.775 | 38.8% | 28.8% | 32.5% | 7.5% | 10.85 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 7.100)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.600 | 5.700 |
 | 2024-2025 | 4.600 | 7.100 |
 | 2025-2026 | 4.300 | 5.400 |
-| 2026-2027 | 2.700 | 6.300 |
+| 2026-2027 | 2.900 | 5.600 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

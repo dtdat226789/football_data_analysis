@@ -4,7 +4,7 @@
     "name": "backend/scripts/analyze_teams.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:38:04+00:00",
+  "generated_at": "2026-10-27T01:57:02+00:00",
   "config": {
     "league": "italy2",
     "out_dir": "data/analysis/italy2",
@@ -47,15 +47,15 @@
       "team": "Pisa",
       "slug": "pisa",
       "seasons_played": 6,
-      "total_matches": 197,
+      "total_matches": 198,
       "wins": 78,
-      "draws": 63,
+      "draws": 64,
       "losses": 56,
-      "points": 297,
-      "goals_for": 279,
-      "goals_against": 235,
+      "points": 298,
+      "goals_for": 280,
+      "goals_against": 236,
       "goal_difference": 44,
-      "avg_points_per_season": 49.5,
+      "avg_points_per_season": 49.67,
       "best_position": 2,
       "worst_position": 13,
       "titles": 0
@@ -101,15 +101,15 @@
       "team": "Palermo",
       "slug": "palermo",
       "seasons_played": 5,
-      "total_matches": 161,
-      "wins": 67,
+      "total_matches": 162,
+      "wins": 68,
       "draws": 50,
       "losses": 44,
-      "points": 251,
-      "goals_for": 241,
-      "goals_against": 188,
-      "goal_difference": 53,
-      "avg_points_per_season": 50.2,
+      "points": 254,
+      "goals_for": 243,
+      "goals_against": 189,
+      "goal_difference": 54,
+      "avg_points_per_season": 50.8,
       "best_position": 1,
       "worst_position": 9,
       "titles": 1
@@ -569,14 +569,14 @@
       "team": "Carrarese",
       "slug": "carrarese",
       "seasons_played": 3,
-      "total_matches": 83,
+      "total_matches": 84,
       "wins": 23,
       "draws": 27,
-      "losses": 33,
+      "losses": 34,
       "points": 96,
-      "goals_for": 92,
-      "goals_against": 108,
-      "goal_difference": -16,
+      "goals_for": 93,
+      "goals_against": 110,
+      "goal_difference": -17,
       "avg_points_per_season": 32.0,
       "best_position": 12,
       "worst_position": 16,
@@ -596,7 +596,7 @@
       "goals_against": 127,
       "goal_difference": -30,
       "avg_points_per_season": 30.33,
-      "best_position": 13,
+      "best_position": 14,
       "worst_position": 17,
       "titles": 0
     },
@@ -650,7 +650,7 @@
       "goals_against": 124,
       "goal_difference": -48,
       "avg_points_per_season": 24.67,
-      "best_position": 12,
+      "best_position": 13,
       "worst_position": 20,
       "titles": 0
     },
@@ -857,21 +857,44 @@
       "team": "Verona",
       "slug": "verona",
       "seasons_played": 1,
-      "total_matches": 7,
+      "total_matches": 8,
       "wins": 2,
-      "draws": 2,
+      "draws": 3,
       "losses": 3,
-      "points": 8,
-      "goals_for": 14,
-      "goals_against": 12,
+      "points": 9,
+      "goals_for": 15,
+      "goals_against": 13,
       "goal_difference": 2,
-      "avg_points_per_season": 8.0,
-      "best_position": 14,
-      "worst_position": 14,
+      "avg_points_per_season": 9.0,
+      "best_position": 12,
+      "worst_position": 12,
       "titles": 0
     }
   ],
   "home_away": [
+    {
+      "team_id": 1105,
+      "team": "Palermo",
+      "home": {
+        "matches": 81,
+        "wins": 43,
+        "draws": 21,
+        "losses": 17,
+        "points": 150,
+        "goals_for": 132,
+        "goals_against": 78
+      },
+      "away": {
+        "matches": 81,
+        "wins": 25,
+        "draws": 29,
+        "losses": 27,
+        "points": 104,
+        "goals_for": 111,
+        "goals_against": 111
+      },
+      "home_advantage": 46
+    },
     {
       "team_id": 1032,
       "team": "Venezia",
@@ -894,52 +917,6 @@
         "goals_against": 83
       },
       "home_advantage": 44
-    },
-    {
-      "team_id": 1038,
-      "team": "Pisa",
-      "home": {
-        "matches": 99,
-        "wins": 45,
-        "draws": 35,
-        "losses": 19,
-        "points": 170,
-        "goals_for": 152,
-        "goals_against": 105
-      },
-      "away": {
-        "matches": 98,
-        "wins": 33,
-        "draws": 28,
-        "losses": 37,
-        "points": 127,
-        "goals_for": 127,
-        "goals_against": 130
-      },
-      "home_advantage": 43
-    },
-    {
-      "team_id": 1105,
-      "team": "Palermo",
-      "home": {
-        "matches": 80,
-        "wins": 42,
-        "draws": 21,
-        "losses": 17,
-        "points": 147,
-        "goals_for": 130,
-        "goals_against": 77
-      },
-      "away": {
-        "matches": 81,
-        "wins": 25,
-        "draws": 29,
-        "losses": 27,
-        "points": 104,
-        "goals_for": 111,
-        "goals_against": 111
-      },
-      "home_advantage": 43
     },
     {
       "team_id": 1096,
@@ -965,6 +942,29 @@
       "home_advantage": 43
     },
     {
+      "team_id": 1038,
+      "team": "Pisa",
+      "home": {
+        "matches": 99,
+        "wins": 45,
+        "draws": 35,
+        "losses": 19,
+        "points": 170,
+        "goals_for": 152,
+        "goals_against": 105
+      },
+      "away": {
+        "matches": 99,
+        "wins": 33,
+        "draws": 29,
+        "losses": 37,
+        "points": 128,
+        "goals_for": 128,
+        "goals_against": 131
+      },
+      "home_advantage": 42
+    },
+    {
       "team_id": 1112,
       "team": "Carrarese",
       "home": {
@@ -977,13 +977,13 @@
         "goals_against": 40
       },
       "away": {
-        "matches": 41,
+        "matches": 42,
         "wins": 5,
         "draws": 14,
-        "losses": 22,
+        "losses": 23,
         "points": 29,
-        "goals_for": 39,
-        "goals_against": 68
+        "goals_for": 40,
+        "goals_against": 70
       },
       "home_advantage": 38
     },
@@ -1747,6 +1747,29 @@
       "home_advantage": 8
     },
     {
+      "team_id": 1019,
+      "team": "Verona",
+      "home": {
+        "matches": 5,
+        "wins": 2,
+        "draws": 2,
+        "losses": 1,
+        "points": 8,
+        "goals_for": 11,
+        "goals_against": 6
+      },
+      "away": {
+        "matches": 3,
+        "wins": 0,
+        "draws": 1,
+        "losses": 2,
+        "points": 1,
+        "goals_for": 4,
+        "goals_against": 7
+      },
+      "home_advantage": 7
+    },
+    {
       "team_id": 1017,
       "team": "Sassuolo",
       "home": {
@@ -1766,29 +1789,6 @@
         "points": 38,
         "goals_for": 35,
         "goals_against": 21
-      },
-      "home_advantage": 6
-    },
-    {
-      "team_id": 1019,
-      "team": "Verona",
-      "home": {
-        "matches": 4,
-        "wins": 2,
-        "draws": 1,
-        "losses": 1,
-        "points": 7,
-        "goals_for": 10,
-        "goals_against": 5
-      },
-      "away": {
-        "matches": 3,
-        "wins": 0,
-        "draws": 1,
-        "losses": 2,
-        "points": 1,
-        "goals_for": 4,
-        "goals_against": 7
       },
       "home_advantage": 6
     },
@@ -1992,7 +1992,7 @@
         "rank": 1,
         "team_id": 1038,
         "team": "Pisa",
-        "value": 279
+        "value": 280
       },
       {
         "rank": 2,
@@ -2010,7 +2010,7 @@
         "rank": 4,
         "team_id": 1105,
         "team": "Palermo",
-        "value": 241
+        "value": 243
       },
       {
         "rank": 5,
@@ -2042,7 +2042,7 @@
         "rank": 4,
         "team_id": 1105,
         "team": "Palermo",
-        "value": 53
+        "value": 54
       },
       {
         "rank": 5,
@@ -2090,7 +2090,7 @@
     "teams": []
   },
   "head_to_head": {
-    "n_pairs_total": 706,
+    "n_pairs_total": 707,
     "top_n": 15,
     "pairs": [
       {
@@ -2714,7 +2714,7 @@
           null,
           null,
           null,
-          13
+          14
         ]
       },
       {
@@ -2753,7 +2753,7 @@
           null,
           null,
           15,
-          12
+          13
         ]
       },
       {
@@ -2909,7 +2909,7 @@
           null,
           null,
           null,
-          14
+          12
         ]
       }
     ]

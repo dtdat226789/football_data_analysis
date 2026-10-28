@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:41:58+00:00
+- Generated: 2026-10-27T02:23:47+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: National League North (England)
 - Scope: league `north`

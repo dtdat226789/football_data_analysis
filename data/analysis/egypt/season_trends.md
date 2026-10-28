@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:30:41+00:00
+- Generated: 2026-10-27T01:45:41+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (Egypt)
 - Scope: league `egypt`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.778 | 5.000 |
 | 2024-2025 | 2.222 | 3.778 |
 | 2025-2026 | 3.429 | 4.762 |
-| 2026-2027 | 2.200 | 4.900 |
+| 2026-2027 | 2.100 | 4.900 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,20 +1,20 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:40:58+00:00
+- Generated: 2026-10-27T02:22:38+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: TOPLYGA (Lithuania)
 - Scope: league `lithuania`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1110** across **7** seasons.
+- Matches analysed: **1112** across **7** seasons.
 - Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 126 | 11.4% |
+| 1-1 | 126 | 11.3% |
 | 0-1 | 113 | 10.2% |
-| 0-0 | 100 | 9.0% |
-| 2-1 | 96 | 8.6% |
+| 0-0 | 101 | 9.1% |
+| 2-1 | 97 | 8.7% |
 | 1-0 | 88 | 7.9% |
 | 2-0 | 86 | 7.7% |
 | 0-2 | 63 | 5.7% |
@@ -22,10 +22,10 @@
 | 2-2 | 54 | 4.9% |
 | 3-0 | 43 | 3.9% |
 | 3-1 | 39 | 3.5% |
-| 0-3 | 35 | 3.2% |
+| 0-3 | 35 | 3.1% |
 | 1-3 | 34 | 3.1% |
-| 4-0 | 25 | 2.3% |
-| 3-2 | 25 | 2.3% |
+| 4-0 | 25 | 2.2% |
+| 3-2 | 25 | 2.2% |
 | 2-3 | 21 | 1.9% |
 | 5-0 | 13 | 1.2% |
 | 4-1 | 11 | 1.0% |
@@ -91,21 +91,21 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 18 | 12.0% |
-| 0-0 | 16 | 10.7% |
-| 1-2 | 12 | 8.0% |
-| 1-0 | 12 | 8.0% |
-| 2-0 | 9 | 6.0% |
+| 1-1 | 18 | 11.8% |
+| 0-0 | 17 | 11.2% |
+| 1-2 | 12 | 7.9% |
+| 1-0 | 12 | 7.9% |
+| 2-1 | 10 | 6.6% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 100 | 9.0% |
+| 0 | 101 | 9.1% |
 | 1 | 201 | 18.1% |
-| 2 | 275 | 24.8% |
-| 3 | 235 | 21.2% |
+| 2 | 275 | 24.7% |
+| 3 | 236 | 21.2% |
 | 4 | 162 | 14.6% |
 | 5 | 87 | 7.8% |
 | 6 | 38 | 3.4% |
@@ -133,23 +133,23 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-09 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **820** (draws: **290**)
+- Decided matches: **821** (draws: **291**)
 - Average winning margin: **1.87**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 407 | 49.6% |
-| 2 | 235 | 28.7% |
+| 1 | 408 | 49.7% |
+| 2 | 235 | 28.6% |
 | 3+ | 178 | 21.7% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **445** | avg margin: **1.94** | max margin: **6**
+- Matches: **446** | avg margin: **1.94** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 210 | 47.2% |
-| 2 | 129 | 29.0% |
+| 1 | 211 | 47.3% |
+| 2 | 129 | 28.9% |
 | 3+ | 106 | 23.8% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
@@ -165,8 +165,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 445 | 2-1 | 96 | 21.6% |
-| draw | 290 | 1-1 | 126 | 43.4% |
+| home | 446 | 2-1 | 97 | 21.7% |
+| draw | 291 | 1-1 | 126 | 43.3% |
 | away | 375 | 0-1 | 113 | 30.1% |
 
 ---

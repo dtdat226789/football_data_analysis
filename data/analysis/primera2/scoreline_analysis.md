@@ -1,22 +1,22 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:44:26+00:00
+- Generated: 2026-10-27T02:26:33+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1985** across **6** seasons.
+- Matches analysed: **1990** across **6** seasons.
 - Distinct scorelines seen: **35**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 277 | 14.0% |
-| 1-1 | 259 | 13.0% |
+| 1-0 | 277 | 13.9% |
+| 1-1 | 260 | 13.1% |
 | 0-0 | 228 | 11.5% |
 | 0-1 | 175 | 8.8% |
-| 2-1 | 162 | 8.2% |
-| 2-0 | 157 | 7.9% |
+| 2-1 | 162 | 8.1% |
+| 2-0 | 158 | 7.9% |
 | 1-2 | 116 | 5.8% |
 | 2-2 | 90 | 4.5% |
 | 3-0 | 83 | 4.2% |
@@ -26,11 +26,11 @@
 | 0-3 | 39 | 2.0% |
 | 3-2 | 38 | 1.9% |
 | 2-3 | 30 | 1.5% |
-| 4-1 | 26 | 1.3% |
+| 4-1 | 27 | 1.4% |
 | 4-0 | 22 | 1.1% |
 | 1-4 | 17 | 0.9% |
-| 3-3 | 15 | 0.8% |
-| 5-0 | 12 | 0.6% |
+| 3-3 | 16 | 0.8% |
+| 4-2 | 13 | 0.7% |
 
 ## 2. Scoreline frequency per season
 
@@ -82,11 +82,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 12 | 14.1% |
-| 1-1 | 10 | 11.8% |
-| 2-0 | 9 | 10.6% |
-| 2-2 | 8 | 9.4% |
-| 1-2 | 7 | 8.2% |
+| 1-0 | 12 | 13.3% |
+| 1-1 | 11 | 12.2% |
+| 2-0 | 10 | 11.1% |
+| 2-2 | 8 | 8.9% |
+| 1-2 | 7 | 7.8% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -94,12 +94,12 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 228 | 11.5% |
-| 1 | 452 | 22.8% |
-| 2 | 491 | 24.7% |
-| 3 | 400 | 20.2% |
+| 1 | 452 | 22.7% |
+| 2 | 493 | 24.8% |
+| 3 | 400 | 20.1% |
 | 4 | 228 | 11.5% |
-| 5 | 123 | 6.2% |
-| 6 | 41 | 2.1% |
+| 5 | 124 | 6.2% |
+| 6 | 43 | 2.2% |
 | 7 | 16 | 0.8% |
 | 8 | 5 | 0.3% |
 | 9 | 1 | 0.1% |
@@ -134,24 +134,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-09-13 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1392** (draws: **593**)
+- Decided matches: **1395** (draws: **595**)
 - Average winning margin: **1.64**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 807 | 58.0% |
-| 2 | 358 | 25.7% |
-| 3+ | 227 | 16.3% |
+| 1 | 807 | 57.8% |
+| 2 | 360 | 25.8% |
+| 3+ | 228 | 16.3% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **882** | avg margin: **1.71** | max margin: **6**
+- Matches: **885** | avg margin: **1.71** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 484 | 54.9% |
-| 2 | 235 | 26.6% |
-| 3+ | 163 | 18.5% |
+| 1 | 484 | 54.7% |
+| 2 | 237 | 26.8% |
+| 3+ | 164 | 18.5% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -166,8 +166,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 882 | 1-0 | 277 | 31.4% |
-| draw | 593 | 1-1 | 259 | 43.7% |
+| home | 885 | 1-0 | 277 | 31.3% |
+| draw | 595 | 1-1 | 260 | 43.7% |
 | away | 510 | 0-1 | 175 | 34.3% |
 
 ---

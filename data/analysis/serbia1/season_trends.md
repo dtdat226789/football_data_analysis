@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:48:46+00:00
+- Generated: 2026-10-27T02:30:54+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Crvena zvezda | 77 | Partizan | 7 pts |
 | 2024-2025 | Crvena zvezda | 86 | Partizan | 23 pts |
 | 2025-2026 | Crvena zvezda | 86 | Vojvodina | 10 pts |
-| 2026-2027 | Crvena zvezda | 34 | Vojvodina | 5 pts |
+| 2026-2027 | Crvena zvezda | 37 | Vojvodina | 8 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **1** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 7 pts |  |
 | 2024-2025 | 23 pts |  |
 | 2025-2026 | 10 pts |  |
-| 2026-2027 | 5 pts |  |
+| 2026-2027 | 8 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 11 = last safe, 14 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 77 | 70 | 50 | 48 | 33 | 30 |
 | 2024-2025 | 86 | 63 | 45 | 42 | 35 | 32 |
 | 2025-2026 | 86 | 76 | 59 | 50 | 46 | 42 |
-| 2026-2027 | 34 | 29 | 21 | 18 | 11 | 6 |
+| 2026-2027 | 37 | 29 | 21 | 18 | 11 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 650 | 2.708 | 47.5% | 19.6% | 32.9% | 4.6% | 42.06 |
 | 2024-2025 | 240 | 677 | 2.821 | 40.8% | 23.3% | 35.8% | 8.3% | 41.5 |
 | 2025-2026 | 297 | 790 | 2.66 | 41.8% | 29.0% | 29.3% | 12.1% | 50.31 |
-| 2026-2027 | 88 | 228 | 2.591 | 50.0% | 25.0% | 25.0% | 8.0% | 17.29 |
+| 2026-2027 | 89 | 229 | 2.573 | 49.4% | 24.7% | 25.8% | 7.9% | 17.5 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 4.875)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.250 | 3.125 |
 | 2024-2025 | 4.000 | 4.000 |
 | 2025-2026 | 2.375 | 4.375 |
-| 2026-2027 | 1.429 | 3.714 |
+| 2026-2027 | 1.286 | 3.857 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:27:44+00:00
+- Generated: 2026-10-27T01:41:50+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`

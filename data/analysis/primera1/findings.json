@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:44:09+00:00",
+  "generated_at": "2026-10-27T02:26:18+00:00",
   "config": {
     "league": "primera1",
     "out_dir": "data/analysis/primera1",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "2007 matches: home wins 44.8%, draws 28.2%, away wins 27.0% (900H / 565D / 542A)",
+      "detail": "2008 matches: home wins 44.8%, draws 28.2%, away wins 27.0% (900H / 566D / 542A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,7 +104,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "2007 matches produced 4720 goals (avg 2.352 per match)",
+      "detail": "2008 matches produced 4720 goals (avg 2.351 per match)",
       "importance": "medium",
       "id": "F4"
     },
@@ -118,7 +118,7 @@
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "965 of 2007 matches (48.1%)",
+      "detail": "965 of 2008 matches (48.1%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.234 per match): first half 2.267 vs last half 2.5 across 6 seasons",
+      "detail": "up (+0.224 per match): first half 2.267 vs last half 2.491 across 6 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -195,7 +195,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 282 matches (14.1%)",
+      "detail": "1-1 in 282 matches (14.0%)",
       "importance": "medium",
       "id": "F17"
     },
@@ -209,7 +209,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (282 of 565 draw matches, 49.9%)",
+      "detail": "1-1 (282 of 566 draw matches, 49.8%)",
       "importance": "low",
       "id": "F19"
     },
@@ -251,14 +251,14 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "6 of 6 registered seasons populated (100.0%); 2007 matches observed",
+      "detail": "6 of 6 registered seasons populated (100.0%); 2008 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 2007,
-    "avg_goals": 2.352,
+    "n_matches": 2008,
+    "avg_goals": 2.351,
     "home_win_pct": 44.8,
     "draw_pct": 28.2,
     "away_win_pct": 27.0,
@@ -396,10 +396,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 89 matches, expected 380",
+      "message": "Season 2026-2027 has 90 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 89,
+        "n_matches": 90,
         "expected": 380
       }
     },
@@ -415,34 +415,34 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2023-2024 goalless share 13.2% vs overall 9.2% (deviation 4.0 pp)",
+      "message": "Season 2023-2024 goalless share 13.2% vs overall 9.3% (deviation 3.9 pp)",
       "details": {
         "season": "2023-2024",
         "season_goalless_pct": 13.2,
-        "overall_goalless_pct": 9.2,
-        "deviation_pp": 4.0
+        "overall_goalless_pct": 9.3,
+        "deviation_pp": 3.9
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024-2025 goalless share 6.6% vs overall 9.2% (deviation 2.6 pp)",
+      "message": "Season 2024-2025 goalless share 6.6% vs overall 9.3% (deviation 2.7 pp)",
       "details": {
         "season": "2024-2025",
         "season_goalless_pct": 6.6,
-        "overall_goalless_pct": 9.2,
-        "deviation_pp": 2.6
+        "overall_goalless_pct": 9.3,
+        "deviation_pp": 2.7
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 5.6% vs overall 9.2% (deviation 3.6 pp)",
+      "message": "Season 2026-2027 goalless share 6.7% vs overall 9.3% (deviation 2.6 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 5.6,
-        "overall_goalless_pct": 9.2,
-        "deviation_pp": 3.6
+        "season_goalless_pct": 6.7,
+        "overall_goalless_pct": 9.3,
+        "deviation_pp": 2.6
       }
     },
     {
@@ -487,8 +487,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 109347,
-        "distinct": 109333,
+        "rows": 109468,
+        "distinct": 109454,
         "duplicates": 14
       }
     },
@@ -497,10 +497,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=413, fgte=413 rows)",
       "details": {
-        "total": 109347,
+        "total": 109468,
         "fgt_inconsistent": 413,
         "fgte_inconsistent": 413,
-        "n_with_fgt": 100675
+        "n_with_fgt": 100787
       }
     },
     {

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:30:59+00:00
+- Generated: 2026-10-27T01:46:03+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: League One (England)
 - Scope: league `eng1`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.917 | 6.833 |
 | 2024-2025 | 4.750 | 9.000 |
 | 2025-2026 | 3.917 | 6.333 |
-| 2026-2027 | 3.000 | 7.000 |
+| 2026-2027 | 2.917 | 7.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

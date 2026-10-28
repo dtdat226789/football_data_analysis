@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:30:54+00:00
+- Generated: 2026-10-27T01:45:56+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: League One (England)
 - Scope: league `eng1`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:29:38+00:00
+- Generated: 2026-10-27T01:44:23+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`
@@ -14,7 +14,7 @@
 | 2023-2024 | Zapy | 62 | Velvary | 0 pts |
 | 2024-2025 | Usti nad Labem | 79 | SK Kladno | 13 pts |
 | 2025-2026 | FK Ceska Lipa | 88 | Zapy | 14 pts |
-| 2026-2027 | Mlada Boleslav B | 26 | Jablonec B | 2 pts |
+| 2026-2027 | Jablonec B | 27 | Mlada Boleslav B | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 0 pts | yes |
 | 2024-2025 | 13 pts |  |
 | 2025-2026 | 14 pts |  |
-| 2026-2027 | 2 pts | yes |
+| 2026-2027 | 1 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 62 | 62 | 49 | 37 | 32 | - |
 | 2024-2025 | 79 | 66 | 49 | 42 | 35 | 30 |
 | 2025-2026 | 88 | 74 | 61 | 44 | 34 | 25 |
-| 2026-2027 | 26 | 24 | 21 | 16 | 10 | 8 |
+| 2026-2027 | 27 | 26 | 21 | 18 | 12 | 8 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 13 | 32 | 14 | 31 | 1 pts |
 | 2024-2025 | 13 | 35 | 14 | 32 | 3 pts |
 | 2025-2026 | 13 | 34 | 14 | 31 | 3 pts |
-| 2026-2027 | 13 | 10 | 14 | 9 | 1 pts |
+| 2026-2027 | 13 | 12 | 14 | 9 | 3 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 720 | 3.0 | 49.2% | 23.3% | 27.5% | 5.8% | 39.06 |
 | 2024-2025 | 272 | 796 | 2.926 | 46.0% | 24.3% | 29.8% | 7.0% | 41.53 |
 | 2025-2026 | 272 | 912 | 3.353 | 44.1% | 22.1% | 33.8% | 2.6% | 44.47 |
-| 2026-2027 | 90 | 286 | 3.178 | 38.9% | 25.6% | 35.6% | 7.8% | 15.44 |
+| 2026-2027 | 94 | 302 | 3.213 | 40.4% | 24.5% | 35.1% | 7.4% | 16.19 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (luck view, avg abs position diff = 10.529)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 9.125 | 7.812 |
 | 2024-2025 | 10.529 | 6.941 |
 | 2025-2026 | 2.235 | 5.529 |
-| 2026-2027 | 2.625 | 5.250 |
+| 2026-2027 | 2.875 | 5.750 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

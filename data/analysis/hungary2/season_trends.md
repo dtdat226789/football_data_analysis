@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:36:19+00:00
+- Generated: 2026-10-27T01:53:51+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 76 | 69 | 57 | 46 | 38 | 31 |
 | 2024-2025 | 55 | 52 | 43 | 38 | 29 | 22 |
 | 2025-2026 | 64 | 59 | 48 | 46 | 33 | 28 |
-| 2026-2027 | 24 | 23 | 20 | 18 | 10 | 4 |
+| 2026-2027 | 24 | 23 | 20 | 20 | 10 | 4 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 753 | 2.461 | 42.5% | 26.5% | 31.0% | 7.2% | 43.83 |
 | 2024-2025 | 240 | 653 | 2.721 | 43.8% | 29.2% | 27.1% | 8.3% | 36.12 |
 | 2025-2026 | 240 | 602 | 2.508 | 43.8% | 25.0% | 31.2% | 6.2% | 41.25 |
-| 2026-2027 | 86 | 256 | 2.977 | 48.8% | 23.3% | 27.9% | 2.3% | 14.88 |
+| 2026-2027 | 87 | 260 | 2.989 | 48.3% | 23.0% | 28.7% | 2.3% | 15.06 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (luck view, avg abs position diff = 18.250)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 10.444 | 7.000 |
 | 2024-2025 | 18.250 | 10.875 |
 | 2025-2026 | 2.875 | 4.375 |
-| 2026-2027 | 1.625 | 2.625 |
+| 2026-2027 | 1.750 | 2.750 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

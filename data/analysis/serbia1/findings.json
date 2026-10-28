@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:48:51+00:00",
+  "generated_at": "2026-10-27T02:31:00+00:00",
   "config": {
     "league": "serbia1",
     "out_dir": "data/analysis/serbia1",
@@ -43,7 +43,7 @@
       "path": "data/analysis/serbia1/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 12.37
+      "size_kb": 12.36
     },
     {
       "report_name": "teams_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/serbia1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 270.57
+      "size_kb": 270.76
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1725 matches: home wins 45.3%, draws 23.3%, away wins 31.4% (781H / 402D / 542A)",
+      "detail": "1726 matches: home wins 45.2%, draws 23.3%, away wins 31.5% (781H / 402D / 543A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,42 +104,42 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1725 matches produced 4575 goals (avg 2.652 per match)",
+      "detail": "1726 matches produced 4576 goals (avg 2.651 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 55.8% vs away 44.2% of 4575 goals in total (home/away ratio 1.26)",
+      "detail": "home 55.8% vs away 44.2% of 4576 goals in total (home/away ratio 1.26)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "835 of 1725 matches (48.4%)",
+      "detail": "835 of 1726 matches (48.4%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 509 scoring matches, 32.3% of scoring)",
+      "detail": "minute 1-15 (first goal in 509 scoring matches, 32.2% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 30.53, median 25.0",
+      "detail": "mean 30.54, median 25.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Crvena zvezda leads with 554 points across 7 seasons (7 title(s), GD 459)",
+      "detail": "Crvena zvezda leads with 557 points across 7 seasons (7 title(s), GD 460)",
       "importance": "high",
       "id": "F9"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.117 per match): first half 2.573 vs last half 2.691 across 7 seasons",
+      "detail": "up (+0.111 per match): first half 2.573 vs last half 2.685 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.429)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.286)",
       "importance": "low",
       "id": "F16"
     },
@@ -216,7 +216,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (127 of 542 away matches, 23.4%)",
+      "detail": "0-1 (128 of 543 away matches, 23.6%)",
       "importance": "low",
       "id": "F20"
     },
@@ -251,17 +251,17 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1725 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1726 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1725,
-    "avg_goals": 2.652,
-    "home_win_pct": 45.3,
+    "n_matches": 1726,
+    "avg_goals": 2.651,
+    "home_win_pct": 45.2,
     "draw_pct": 23.3,
-    "away_win_pct": 31.4,
+    "away_win_pct": 31.5,
     "most_common_scoreline": "1-0",
     "dominant_team": "Crvena zvezda",
     "champion_most_titles": "Crvena zvezda",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 12.37
+      "size_kb": 12.36
     },
     {
       "module": "teams_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 270.57
+      "size_kb": 270.76
     },
     {
       "module": "relationships",
@@ -466,10 +466,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 88 matches, expected 380",
+      "message": "Season 2026-2027 has 89 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 88,
+        "n_matches": 89,
         "expected": 380
       }
     },
@@ -506,12 +506,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020-2021 home outcome share 50.5% vs overall 45.3%",
+      "message": "Season 2020-2021 home outcome share 50.5% vs overall 45.2%",
       "details": {
         "season": "2020-2021",
         "outcome": "home",
         "season_share": 50.5,
-        "overall_share": 45.3
+        "overall_share": 45.2
       }
     },
     {
@@ -550,23 +550,23 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024-2025 home outcome share 40.8% vs overall 45.3%",
+      "message": "Season 2024-2025 home outcome share 40.8% vs overall 45.2%",
       "details": {
         "season": "2024-2025",
         "outcome": "home",
         "season_share": 40.8,
-        "overall_share": 45.3
+        "overall_share": 45.2
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024-2025 away outcome share 35.8% vs overall 31.4%",
+      "message": "Season 2024-2025 away outcome share 35.8% vs overall 31.5%",
       "details": {
         "season": "2024-2025",
         "outcome": "away",
         "season_share": 35.8,
-        "overall_share": 31.4
+        "overall_share": 31.5
       }
     },
     {
@@ -594,23 +594,23 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 50.0% vs overall 45.3%",
+      "message": "Season 2026-2027 home outcome share 49.4% vs overall 45.2%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 50.0,
-        "overall_share": 45.3
+        "season_share": 49.4,
+        "overall_share": 45.2
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 25.0% vs overall 31.4%",
+      "message": "Season 2026-2027 away outcome share 25.8% vs overall 31.5%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 25.0,
-        "overall_share": 31.4
+        "season_share": 25.8,
+        "overall_share": 31.5
       }
     },
     {
@@ -660,8 +660,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (31 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 133489,
-        "distinct": 133458,
+        "rows": 133646,
+        "distinct": 133615,
         "duplicates": 31
       }
     },
@@ -670,10 +670,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=434, fgte=434 rows)",
       "details": {
-        "total": 133489,
+        "total": 133646,
         "fgt_inconsistent": 434,
         "fgte_inconsistent": 434,
-        "n_with_fgt": 122554
+        "n_with_fgt": 122699
       }
     },
     {

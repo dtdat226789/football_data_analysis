@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:51:27+00:00
+- Generated: 2026-10-27T02:33:46+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`
@@ -13,7 +13,7 @@
 | 2023-2024 | Buriram | 69 | Bangkok Utd | 8 pts |
 | 2024-2025 | Buriram | 70 | Bangkok Utd | 1 pts |
 | 2025-2026 | Buriram | 70 | Port MTI FC | 10 pts |
-| 2026-2027 | Port MTI FC | 15 | Buriram | 2 pts |
+| 2026-2027 | Port MTI FC | 15 | Prachuap | 2 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 6 seasons
@@ -58,7 +58,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 736 | 3.067 | 46.7% | 27.5% | 25.8% | 7.1% | 40.88 |
 | 2024-2025 | 240 | 732 | 3.05 | 49.2% | 25.4% | 25.4% | 6.7% | 41.19 |
 | 2025-2026 | 240 | 642 | 2.675 | 43.3% | 31.2% | 25.4% | 7.1% | 40.31 |
-| 2026-2027 | 44 | 130 | 2.955 | 43.2% | 15.9% | 40.9% | 2.3% | 7.81 |
+| 2026-2027 | 48 | 142 | 2.958 | 41.7% | 16.7% | 41.7% | 4.2% | 8.5 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 5.500)
@@ -72,7 +72,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.625 | 5.000 |
 | 2024-2025 | 3.500 | 5.500 |
 | 2025-2026 | 2.125 | 4.625 |
-| 2026-2027 | 3.250 | 4.625 |
+| 2026-2027 | 3.375 | 4.875 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:27:20+00:00
+- Generated: 2026-10-27T01:41:20+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:42:34+00:00",
+  "generated_at": "2026-10-27T02:24:26+00:00",
   "config": {
     "league": "poland1",
     "out_dir": "data/analysis/poland1",
@@ -29,7 +29,7 @@
       "path": "data/analysis/poland1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 48.95
+      "size_kb": 49.55
     },
     {
       "report_name": "matches_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/poland1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 280.1
+      "size_kb": 280.68
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1873 matches: home wins 43.7%, draws 27.2%, away wins 29.0% (819H / 510D / 544A)",
+      "detail": "1876 matches: home wins 43.8%, draws 27.2%, away wins 29.1% (821H / 510D / 545A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,28 +97,28 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 489 times",
+      "detail": "home lead at HT -> home win occurred 490 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1873 matches produced 4976 goals (avg 2.657 per match)",
+      "detail": "1876 matches produced 4982 goals (avg 2.656 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 56.1% vs away 43.9% of 4976 goals in total (home/away ratio 1.28)",
+      "detail": "home 56.1% vs away 43.9% of 4982 goals in total (home/away ratio 1.28)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1010 of 1873 matches (53.9%)",
+      "detail": "1011 of 1876 matches (53.9%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -132,7 +132,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 32.00, median 27.0",
+      "detail": "mean 32.04, median 27.0",
       "importance": "low",
       "id": "F8"
     },
@@ -160,7 +160,7 @@
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "Lech Poznan won 3 of 7 championship(s) on record",
+      "detail": "Lech Poznan won 4 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.292 per match): first half 2.535 vs last half 2.827 across 7 seasons",
+      "detail": "up (+0.283 per match): first half 2.535 vs last half 2.817 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -202,7 +202,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (188 of 819 home matches, 23.0%)",
+      "detail": "1-0 (189 of 821 home matches, 23.0%)",
       "importance": "low",
       "id": "F18"
     },
@@ -216,7 +216,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (149 of 544 away matches, 27.4%)",
+      "detail": "0-1 (149 of 545 away matches, 27.3%)",
       "importance": "low",
       "id": "F20"
     },
@@ -243,25 +243,25 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (41)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (43)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1873 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1876 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1873,
-    "avg_goals": 2.657,
-    "home_win_pct": 43.7,
+    "n_matches": 1876,
+    "avg_goals": 2.656,
+    "home_win_pct": 43.8,
     "draw_pct": 27.2,
-    "away_win_pct": 29.0,
+    "away_win_pct": 29.1,
     "most_common_scoreline": "1-1",
     "dominant_team": "Rakow",
     "champion_most_titles": "Lech Poznan",
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 48.95
+      "size_kb": 49.55
     },
     {
       "module": "matches_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 280.1
+      "size_kb": 280.68
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 103 matches, expected 380",
+      "message": "Season 2026-2027 has 106 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 103,
+        "n_matches": 106,
         "expected": 380
       }
     },
@@ -532,6 +532,28 @@
         "season_goalless_pct": 5.9,
         "overall_goalless_pct": 7.5,
         "deviation_pp": 1.6
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 home outcome share 48.1% vs overall 43.8%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "home",
+        "season_share": 48.1,
+        "overall_share": 43.8
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 draw outcome share 22.6% vs overall 27.2%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "draw",
+        "season_share": 22.6,
+        "overall_share": 27.2
       }
     },
     {
@@ -586,8 +608,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 100731,
-        "distinct": 100717,
+        "rows": 100836,
+        "distinct": 100822,
         "duplicates": 14
       }
     },
@@ -596,10 +618,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=395, fgte=395 rows)",
       "details": {
-        "total": 100731,
+        "total": 100836,
         "fgt_inconsistent": 395,
         "fgte_inconsistent": 395,
-        "n_with_fgt": 92731
+        "n_with_fgt": 92829
       }
     },
     {

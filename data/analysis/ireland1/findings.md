@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:36:55+00:00
+- Generated: 2026-10-27T01:54:59+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`

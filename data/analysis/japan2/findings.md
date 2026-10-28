@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:39:30+00:00
+- Generated: 2026-10-27T01:59:36+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: J2 League (Japan)
 - Scope: league `japan2`

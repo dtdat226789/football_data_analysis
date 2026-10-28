@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:45:48+00:00
+- Generated: 2026-10-27T02:27:52+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Division 1 (Saudi Arabia)
 - Scope: league `saudi2`

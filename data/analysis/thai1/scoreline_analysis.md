@@ -1,34 +1,34 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:51:29+00:00
+- Generated: 2026-10-27T02:33:48+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1244** across **6** seasons.
+- Matches analysed: **1248** across **6** seasons.
 - Distinct scorelines seen: **44**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 168 | 13.5% |
-| 1-0 | 129 | 10.4% |
+| 1-0 | 129 | 10.3% |
 | 2-1 | 116 | 9.3% |
-| 2-0 | 89 | 7.2% |
-| 1-2 | 87 | 7.0% |
-| 0-0 | 85 | 6.8% |
+| 2-0 | 89 | 7.1% |
+| 1-2 | 88 | 7.1% |
+| 0-0 | 86 | 6.9% |
 | 0-1 | 76 | 6.1% |
 | 2-2 | 72 | 5.8% |
-| 3-1 | 58 | 4.7% |
-| 3-0 | 43 | 3.5% |
+| 3-1 | 59 | 4.7% |
+| 3-0 | 43 | 3.4% |
 | 0-2 | 42 | 3.4% |
 | 3-2 | 35 | 2.8% |
 | 1-3 | 35 | 2.8% |
-| 2-3 | 28 | 2.3% |
+| 2-3 | 28 | 2.2% |
 | 4-0 | 20 | 1.6% |
 | 4-1 | 20 | 1.6% |
 | 0-3 | 18 | 1.4% |
-| 1-4 | 16 | 1.3% |
+| 1-4 | 17 | 1.4% |
 | 4-2 | 14 | 1.1% |
 | 5-0 | 10 | 0.8% |
 
@@ -82,23 +82,23 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-2 | 6 | 13.6% |
-| 1-1 | 6 | 13.6% |
-| 2-1 | 5 | 11.4% |
-| 1-0 | 4 | 9.1% |
-| 0-1 | 4 | 9.1% |
+| 1-2 | 7 | 14.6% |
+| 1-1 | 6 | 12.5% |
+| 2-1 | 5 | 10.4% |
+| 1-0 | 4 | 8.3% |
+| 0-1 | 4 | 8.3% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 85 | 6.8% |
-| 1 | 205 | 16.5% |
+| 0 | 86 | 6.9% |
+| 1 | 205 | 16.4% |
 | 2 | 299 | 24.0% |
-| 3 | 264 | 21.2% |
-| 4 | 193 | 15.5% |
-| 5 | 113 | 9.1% |
+| 3 | 265 | 21.2% |
+| 4 | 194 | 15.5% |
+| 5 | 114 | 9.1% |
 | 6 | 47 | 3.8% |
 | 7 | 24 | 1.9% |
 | 8 | 9 | 0.7% |
@@ -150,41 +150,41 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-05-03 | 6-1 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **908** (draws: **336**)
-- Average winning margin: **1.83**
+- Decided matches: **911** (draws: **337**)
+- Average winning margin: **1.84**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 478 | 52.6% |
-| 2 | 245 | 27.0% |
-| 3+ | 185 | 20.4% |
+| 1 | 479 | 52.6% |
+| 2 | 246 | 27.0% |
+| 3+ | 186 | 20.4% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **579** | avg margin: **1.93** | max margin: **9**
+- Matches: **580** | avg margin: **1.93** | max margin: **9**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 286 | 49.4% |
-| 2 | 163 | 28.2% |
-| 3+ | 130 | 22.5% |
+| 1 | 286 | 49.3% |
+| 2 | 164 | 28.3% |
+| 3+ | 130 | 22.4% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **329** | avg margin: **1.67** | max margin: **7**
+- Matches: **331** | avg margin: **1.67** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 192 | 58.4% |
-| 2 | 82 | 24.9% |
-| 3+ | 55 | 16.7% |
+| 1 | 193 | 58.3% |
+| 2 | 82 | 24.8% |
+| 3+ | 56 | 16.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 579 | 1-0 | 129 | 22.3% |
-| draw | 336 | 1-1 | 168 | 50.0% |
-| away | 329 | 1-2 | 87 | 26.4% |
+| home | 580 | 1-0 | 129 | 22.2% |
+| draw | 337 | 1-1 | 168 | 49.9% |
+| away | 331 | 1-2 | 88 | 26.6% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

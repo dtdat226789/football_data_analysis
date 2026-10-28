@@ -1,35 +1,35 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:42:11+00:00
+- Generated: 2026-10-27T02:24:02+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1626** across **7** seasons.
+- Matches analysed: **1632** across **7** seasons.
 - Distinct scorelines seen: **47**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 168 | 10.3% |
-| 2-1 | 140 | 8.6% |
-| 1-0 | 129 | 7.9% |
-| 1-2 | 115 | 7.1% |
-| 2-2 | 96 | 5.9% |
+| 2-1 | 141 | 8.6% |
+| 1-0 | 130 | 8.0% |
+| 1-2 | 115 | 7.0% |
+| 2-2 | 97 | 5.9% |
 | 0-1 | 94 | 5.8% |
 | 2-0 | 94 | 5.8% |
+| 3-1 | 78 | 4.8% |
 | 0-0 | 77 | 4.7% |
-| 3-1 | 77 | 4.7% |
 | 3-0 | 75 | 4.6% |
 | 0-2 | 68 | 4.2% |
-| 1-3 | 61 | 3.8% |
-| 3-2 | 59 | 3.6% |
+| 1-3 | 61 | 3.7% |
+| 3-2 | 60 | 3.7% |
 | 2-3 | 44 | 2.7% |
 | 0-3 | 44 | 2.7% |
 | 4-0 | 42 | 2.6% |
 | 4-1 | 38 | 2.3% |
-| 5-0 | 22 | 1.4% |
-| 5-1 | 22 | 1.4% |
+| 5-1 | 23 | 1.4% |
+| 5-0 | 22 | 1.3% |
 | 1-4 | 21 | 1.3% |
 
 ## 2. Scoreline frequency per season
@@ -91,11 +91,11 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 21 | 11.3% |
-| 1-1 | 20 | 10.8% |
-| 2-0 | 16 | 8.6% |
-| 1-2 | 14 | 7.5% |
-| 0-2 | 11 | 5.9% |
+| 2-1 | 22 | 11.5% |
+| 1-1 | 20 | 10.4% |
+| 2-0 | 16 | 8.3% |
+| 1-2 | 14 | 7.3% |
+| 1-0 | 11 | 5.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,12 +103,12 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 77 | 4.7% |
-| 1 | 223 | 13.7% |
-| 2 | 330 | 20.3% |
-| 3 | 374 | 23.0% |
-| 4 | 291 | 17.9% |
-| 5 | 192 | 11.8% |
-| 6 | 78 | 4.8% |
+| 1 | 224 | 13.7% |
+| 2 | 330 | 20.2% |
+| 3 | 375 | 23.0% |
+| 4 | 293 | 18.0% |
+| 5 | 193 | 11.8% |
+| 6 | 79 | 4.8% |
 | 7 | 40 | 2.5% |
 | 8 | 12 | 0.7% |
 | 9 | 7 | 0.4% |
@@ -182,24 +182,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-10-18 | 6-1 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1262** (draws: **364**)
+- Decided matches: **1267** (draws: **365**)
 - Average winning margin: **1.96**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 598 | 47.4% |
-| 2 | 332 | 26.3% |
-| 3+ | 332 | 26.3% |
+| 1 | 601 | 47.4% |
+| 2 | 333 | 26.3% |
+| 3+ | 333 | 26.3% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **757** | avg margin: **2.08** | max margin: **7**
+- Matches: **762** | avg margin: **2.08** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 339 | 44.8% |
-| 2 | 188 | 24.8% |
-| 3+ | 230 | 30.4% |
+| 1 | 342 | 44.9% |
+| 2 | 189 | 24.8% |
+| 3+ | 231 | 30.3% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -214,8 +214,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 757 | 2-1 | 140 | 18.5% |
-| draw | 364 | 1-1 | 168 | 46.2% |
+| home | 762 | 2-1 | 141 | 18.5% |
+| draw | 365 | 1-1 | 168 | 46.0% |
 | away | 505 | 1-2 | 115 | 22.8% |
 
 ---

@@ -1,17 +1,17 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:31:43+00:00
+- Generated: 2026-10-27T01:47:07+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`
 
-- Teams: **18** | Seasons: **7** | Matches: **944**
+- Teams: **18** | Seasons: **7** | Matches: **945**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| HJK | 7 | 160 | 98 | 34 | 28 | 328 | 311 | 148 | 163 | 46.86 | 1 | 3 | 3 |
-| KuPS | 7 | 160 | 94 | 37 | 29 | 319 | 268 | 142 | 126 | 45.57 | 1 | 4 | 2 |
+| HJK | 7 | 161 | 98 | 35 | 28 | 329 | 313 | 150 | 163 | 47.0 | 1 | 3 | 3 |
+| KuPS | 7 | 161 | 94 | 38 | 29 | 320 | 270 | 144 | 126 | 45.71 | 1 | 4 | 2 |
 | Inter Turku | 7 | 161 | 80 | 38 | 43 | 278 | 264 | 167 | 97 | 39.71 | 1 | 7 | 2 |
 | SJK | 7 | 154 | 65 | 36 | 53 | 231 | 224 | 206 | 18 | 33.0 | 3 | 10 | 0 |
 | Ilves | 7 | 154 | 62 | 37 | 55 | 223 | 235 | 204 | 31 | 31.86 | 2 | 10 | 0 |
@@ -35,9 +35,9 @@
 | Ilves | 77 | 40 | 16 | 21 | 136 | 77 | 22 | 21 | 34 | 87 | 49 |
 | Inter Turku | 80 | 46 | 20 | 14 | 158 | 81 | 34 | 18 | 29 | 120 | 38 |
 | SJK | 77 | 38 | 18 | 21 | 132 | 77 | 27 | 18 | 32 | 99 | 33 |
-| KuPS | 80 | 54 | 12 | 14 | 174 | 80 | 40 | 25 | 15 | 145 | 29 |
+| KuPS | 80 | 54 | 12 | 14 | 174 | 81 | 40 | 26 | 15 | 146 | 28 |
 | TPS | 22 | 12 | 3 | 7 | 39 | 22 | 2 | 7 | 13 | 13 | 26 |
-| HJK | 80 | 52 | 16 | 12 | 172 | 80 | 46 | 18 | 16 | 156 | 16 |
+| HJK | 81 | 52 | 17 | 12 | 173 | 80 | 46 | 18 | 16 | 156 | 17 |
 | Mariehamn | 77 | 19 | 21 | 37 | 78 | 77 | 16 | 14 | 47 | 62 | 16 |
 | Honka | 44 | 22 | 11 | 11 | 77 | 44 | 16 | 14 | 14 | 62 | 15 |
 | AC Oulu | 69 | 24 | 15 | 30 | 87 | 70 | 21 | 11 | 38 | 74 | 13 |
@@ -55,7 +55,7 @@
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | HJK | 2.05 |
+| 1 | HJK | 2.04 |
 | 2 | KuPS | 1.99 |
 | 3 | Inter Turku | 1.73 |
 | 4 | Honka | 1.58 |
@@ -64,8 +64,8 @@
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | HJK | 311 |
-| 2 | KuPS | 268 |
+| 1 | HJK | 313 |
+| 2 | KuPS | 270 |
 | 3 | Inter Turku | 264 |
 | 4 | Ilves | 235 |
 | 5 | SJK | 224 |
@@ -82,8 +82,8 @@
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | KuPS | 0.887 |
-| 2 | HJK | 0.925 |
+| 1 | KuPS | 0.894 |
+| 2 | HJK | 0.932 |
 | 3 | Honka | 0.955 |
 | 4 | Inter Turku | 1.037 |
 | 5 | Ilves | 1.325 |
@@ -98,9 +98,9 @@ HJK, Ilves, Inter Turku, KuPS, Mariehamn, SJK
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
+| HJK vs KuPS | 16 | 4 | 10 | 2 | 25.0% | 62.5% | 12.5% |
 | Inter Turku vs KuPS | 15 | 8 | 4 | 3 | 53.3% | 26.7% | 20.0% |
 | HJK vs Inter Turku | 15 | 4 | 4 | 7 | 26.7% | 26.7% | 46.7% |
-| HJK vs KuPS | 15 | 4 | 9 | 2 | 26.7% | 60.0% | 13.3% |
 | Inter Turku vs Ilves | 14 | 9 | 2 | 3 | 64.3% | 14.3% | 21.4% |
 | HJK vs Mariehamn | 14 | 8 | 1 | 5 | 57.1% | 7.1% | 35.7% |
 | Ilves vs Mariehamn | 14 | 8 | 3 | 3 | 57.1% | 21.4% | 21.4% |

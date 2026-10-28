@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:47:02+00:00
+- Generated: 2026-10-27T02:29:03+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: League Two (Scotland)
 - Scope: league `scot2`

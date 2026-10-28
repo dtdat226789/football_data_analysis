@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:45:04+00:00
+- Generated: 2026-10-27T02:27:08+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (Russia)
 - Scope: league `russia`
@@ -14,11 +14,11 @@
 | 2023-2024 | Zenit | 57 | Krasnodar | 1 pts |
 | 2024-2025 | Krasnodar | 67 | Zenit | 1 pts |
 | 2025-2026 | Zenit | 68 | Krasnodar | 2 pts |
-| 2026-2027 | CSKA Moscow | 25 | Dynamo Moscow | 0 pts |
+| 2026-2027 | CSKA Moscow | 28 | Zenit | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
-- Tightest race: **2026-2027** - CSKA Moscow beat Dynamo Moscow by **0** pts
+- Tightest race: **2023-2024** - Zenit beat Krasnodar by **1** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023-2024 | 1 pts | yes |
 | 2024-2025 | 1 pts | yes |
 | 2025-2026 | 2 pts | yes |
-| 2026-2027 | 0 pts | yes |
+| 2026-2027 | 1 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 57 | 56 | 53 | 48 | 30 | 24 |
 | 2024-2025 | 67 | 66 | 57 | 53 | 27 | 18 |
 | 2025-2026 | 68 | 66 | 52 | 46 | 30 | 22 |
-| 2026-2027 | 25 | 25 | 24 | 17 | 11 | 6 |
+| 2026-2027 | 28 | 27 | 24 | 18 | 11 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,10 +63,10 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 637 | 2.654 | 47.1% | 27.5% | 25.4% | 8.3% | 40.88 |
 | 2024-2025 | 240 | 648 | 2.7 | 42.9% | 27.1% | 30.0% | 8.3% | 40.94 |
 | 2025-2026 | 244 | 615 | 2.52 | 45.1% | 27.5% | 27.5% | 6.1% | 36.94 |
-| 2026-2027 | 97 | 271 | 2.794 | 35.1% | 34.0% | 30.9% | 8.2% | 16.12 |
+| 2026-2027 | 100 | 277 | 2.77 | 37.0% | 33.0% | 30.0% | 8.0% | 16.69 |
 
 ## 6. View divergence
-- Largest divergence: **2026-2027** (goals view, avg abs position diff = 5.125)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 5.250)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.250 | 4.875 |
 | 2024-2025 | 2.250 | 4.875 |
 | 2025-2026 | 3.556 | 4.667 |
-| 2026-2027 | 1.875 | 5.125 |
+| 2026-2027 | 2.125 | 5.250 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:31:29+00:00
+- Generated: 2026-10-27T01:46:48+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 79 | 77 | 53 | 48 | 43 | 23 |
 | 2024 | 87 | 72 | 70 | 42 | 35 | 15 |
 | 2025 | 82 | 79 | 70 | 49 | 36 | 17 |
-| 2026 | 84 | 60 | 51 | 47 | 36 | 20 |
+| 2026 | 84 | 60 | 54 | 47 | 36 | 20 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 180 | 458 | 2.544 | 37.2% | 27.8% | 35.0% | 9.4% | 49.0 |
 | 2024 | 180 | 539 | 2.994 | 41.7% | 22.2% | 36.1% | 5.6% | 50.0 |
 | 2025 | 180 | 572 | 3.178 | 46.7% | 13.3% | 40.0% | 2.2% | 51.6 |
-| 2026 | 165 | 514 | 3.115 | 48.5% | 12.1% | 39.4% | 3.0% | 47.5 |
+| 2026 | 166 | 517 | 3.114 | 48.8% | 12.0% | 39.2% | 3.0% | 47.8 |
 
 ## 6. View divergence
 - Largest divergence: **2022** (goals view, avg abs position diff = 4.200)

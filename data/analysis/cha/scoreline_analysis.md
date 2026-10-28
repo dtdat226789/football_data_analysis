@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:28:16+00:00
+- Generated: 2026-10-27T01:42:31+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Championship (England)
 - Scope: league `cha`

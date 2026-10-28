@@ -4,7 +4,7 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:29:15+00:00",
+  "generated_at": "2026-10-27T01:43:52+00:00",
   "config": {
     "league": "czech3a",
     "out_dir": "data/analysis/czech3a",
@@ -30,7 +30,7 @@
       "teams": 341,
       "team_aliases": 682,
       "team_seasons": 1560,
-      "matches": 23683,
+      "matches": 23696,
       "standings": 4680
     },
     "leagues": [
@@ -53,7 +53,7 @@
         "name": "Bundesliga",
         "country": "Austria",
         "n_registered_seasons": 7,
-        "n_matches": 913
+        "n_matches": 915
       },
       {
         "api_key": "austria2",
@@ -67,14 +67,14 @@
         "name": "Premier League",
         "country": "Azerbaijan",
         "n_registered_seasons": 7,
-        "n_matches": 1021
+        "n_matches": 1023
       },
       {
         "api_key": "belgium1",
         "name": "Jupiler Pro League",
         "country": "Belgium",
         "n_registered_seasons": 7,
-        "n_matches": 1795
+        "n_matches": 1799
       },
       {
         "api_key": "belgium2",
@@ -123,21 +123,21 @@
         "name": "Chance Liga",
         "country": "Czech Republic",
         "n_registered_seasons": 7,
-        "n_matches": 1637
+        "n_matches": 1640
       },
       {
         "api_key": "czech2",
         "name": "ChNL",
         "country": "Czech Republic",
         "n_registered_seasons": 7,
-        "n_matches": 1477
+        "n_matches": 1478
       },
       {
         "api_key": "czech3a",
         "name": "3. CFL - Group A",
         "country": "Czech Republic",
         "n_registered_seasons": 5,
-        "n_matches": 1086
+        "n_matches": 1087
       },
       {
         "api_key": "czech3b",
@@ -766,30 +766,30 @@
           "season": "2026-2027",
           "declared_by_api": true,
           "season_state": "in_progress",
-          "n_matches": 94,
+          "n_matches": 95,
           "n_teams": 16,
           "min_date": "2026-08-07",
-          "max_date": "2026-10-24"
+          "max_date": "2026-10-25"
         }
       ]
     },
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 23683,
-        "distinct": 23683,
+        "rows": 23696,
+        "distinct": 23696,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 23683,
-        "distinct": 23683,
+        "rows": 23696,
+        "distinct": 23696,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 23683,
-        "distinct": 23680,
+        "rows": 23696,
+        "distinct": 23693,
         "duplicates": 3
       },
       {
@@ -842,65 +842,65 @@
       }
     ],
     "null_counts": {
-      "total": 23683,
+      "total": 23696,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 23683,
+          "n_not_null": 23696,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 23683,
+          "n_not_null": 23696,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 23683,
+          "n_not_null": 23696,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 23683,
+          "n_not_null": 23696,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 23683,
+          "n_not_null": 23696,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 23683,
+          "n_not_null": 23696,
           "null_pct": 0.0
         },
         "home_ht": {
           "n_null": 330,
-          "n_not_null": 23353,
+          "n_not_null": 23366,
           "null_pct": 1.4
         },
         "away_ht": {
           "n_null": 330,
-          "n_not_null": 23353,
+          "n_not_null": 23366,
           "null_pct": 1.4
         },
         "first_goal_time": {
-          "n_null": 2163,
-          "n_not_null": 21520,
+          "n_null": 2164,
+          "n_not_null": 21532,
           "null_pct": 9.1
         },
         "first_goal_time_extra": {
-          "n_null": 2163,
-          "n_not_null": 21520,
+          "n_null": 2164,
+          "n_not_null": 21532,
           "null_pct": 9.1
         }
       }
     },
     "first_goal_consistency": {
-      "total": 23683,
+      "total": 23696,
       "fgt_inconsistent": 307,
       "fgte_inconsistent": 307,
-      "n_with_fgt": 21520
+      "n_with_fgt": 21532
     },
     "value_ranges": {
       "min_home": 0,
@@ -917,19 +917,19 @@
   },
   "calculated": {
     "overall": {
-      "n_matches": 1086,
+      "n_matches": 1087,
       "home_wins": 504,
       "draws": 239,
-      "away_wins": 343,
+      "away_wins": 344,
       "home_win_pct": 46.4,
       "draw_pct": 22.0,
       "away_win_pct": 31.6,
       "home_goals": 1939,
-      "away_goals": 1558,
-      "total_goals": 3497,
-      "avg_goals": 3.22,
-      "avg_home_goals": 1.785,
-      "avg_away_goals": 1.435,
+      "away_goals": 1559,
+      "total_goals": 3498,
+      "avg_goals": 3.218,
+      "avg_home_goals": 1.784,
+      "avg_away_goals": 1.434,
       "home_goal_share": 55.4,
       "goalless": 61,
       "goalless_pct": 5.6
@@ -1013,31 +1013,31 @@
       },
       {
         "season": "2026-2027",
-        "n_matches": 94,
+        "n_matches": 95,
         "home_wins": 40,
         "draws": 28,
-        "away_wins": 26,
-        "home_win_pct": 42.6,
-        "draw_pct": 29.8,
-        "away_win_pct": 27.7,
+        "away_wins": 27,
+        "home_win_pct": 42.1,
+        "draw_pct": 29.5,
+        "away_win_pct": 28.4,
         "home_goals": 191,
-        "away_goals": 145,
-        "total_goals": 336,
-        "avg_goals": 3.574,
-        "avg_home_goals": 2.032,
-        "avg_away_goals": 1.543,
-        "home_goal_share": 56.8,
+        "away_goals": 146,
+        "total_goals": 337,
+        "avg_goals": 3.547,
+        "avg_home_goals": 2.011,
+        "avg_away_goals": 1.537,
+        "home_goal_share": 56.7,
         "goalless": 8,
-        "goalless_pct": 8.5
+        "goalless_pct": 8.4
       }
     ],
     "first_goal": {
-      "n_with_fgt": 1024,
+      "n_with_fgt": 1025,
       "summary": {
-        "n": 1024,
+        "n": 1025,
         "min": 1,
         "max": 95,
-        "mean": 26.45,
+        "mean": 26.5,
         "p25": 10.0,
         "p50": 20.0,
         "p75": 38.0
@@ -1047,7 +1047,7 @@
         "16-30": 244,
         "31-45": 162,
         "46-60": 98,
-        "61-75": 47,
+        "61-75": 48,
         "76-90": 40,
         "91-120": 4
       },
@@ -1137,22 +1137,22 @@
           }
         },
         "2026-2027": {
-          "n_with_fgt": 86,
+          "n_with_fgt": 87,
           "summary": {
-            "n": 86,
+            "n": 87,
             "min": 1,
             "max": 89,
-            "mean": 20.9,
+            "mean": 21.48,
             "p25": 8.0,
             "p50": 17.0,
-            "p75": 27.75
+            "p75": 28.0
           },
           "buckets": {
             "1-15": 38,
             "16-30": 29,
             "31-45": 10,
             "46-60": 5,
-            "61-75": 3,
+            "61-75": 4,
             "76-90": 1,
             "91-120": 0
           }
@@ -1291,7 +1291,7 @@
       {
         "dow": 0,
         "label": "Sun",
-        "n": 372,
+        "n": 373,
         "pct": 34.3
       },
       {
@@ -1367,7 +1367,7 @@
         },
         {
           "scoreline": "0-1",
-          "count": 55
+          "count": 56
         },
         {
           "scoreline": "0-2",
@@ -1530,10 +1530,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 94 matches, expected 380",
+      "message": "Season 2026-2027 has 95 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 94,
+        "n_matches": 95,
         "expected": 380
       }
     },
@@ -1568,35 +1568,35 @@
       }
     },
     {
-      "code": "SEASON_AVG_GOALS_OUTLIER",
-      "severity": "warning",
-      "message": "Season 2026-2027 avg goals 3.574 vs overall 3.22 (deviation 0.354)",
-      "details": {
-        "season": "2026-2027",
-        "season_avg_goals": 3.574,
-        "overall_avg_goals": 3.22,
-        "deviation": 0.354
-      }
-    },
-    {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 8.5% vs overall 5.6% (deviation 2.9 pp)",
+      "message": "Season 2026-2027 goalless share 8.4% vs overall 5.6% (deviation 2.8 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 8.5,
+        "season_goalless_pct": 8.4,
         "overall_goalless_pct": 5.6,
-        "deviation_pp": 2.9
+        "deviation_pp": 2.8
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 29.8% vs overall 22.0%",
+      "message": "Season 2026-2027 home outcome share 42.1% vs overall 46.4%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "home",
+        "season_share": 42.1,
+        "overall_share": 46.4
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 draw outcome share 29.5% vs overall 22.0%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 29.8,
+        "season_share": 29.5,
         "overall_share": 22.0
       }
     },
@@ -1657,8 +1657,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (3 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 23683,
-        "distinct": 23680,
+        "rows": 23696,
+        "distinct": 23693,
         "duplicates": 3
       }
     },
@@ -1667,10 +1667,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=307, fgte=307 rows)",
       "details": {
-        "total": 23683,
+        "total": 23696,
         "fgt_inconsistent": 307,
         "fgte_inconsistent": 307,
-        "n_with_fgt": 21520
+        "n_with_fgt": 21532
       }
     },
     {

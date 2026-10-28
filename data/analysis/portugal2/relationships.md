@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:43:21+00:00
+- Generated: 2026-10-27T02:25:32+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`

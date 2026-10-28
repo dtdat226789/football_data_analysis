@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:44:30+00:00",
+  "generated_at": "2026-10-27T02:26:37+00:00",
   "config": {
     "league": "primera2",
     "out_dir": "data/analysis/primera2",
@@ -29,7 +29,7 @@
       "path": "data/analysis/primera2/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 37.93
+      "size_kb": 38.55
     },
     {
       "report_name": "matches_analysis",
@@ -50,7 +50,7 @@
       "path": "data/analysis/primera2/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 69.07
+      "size_kb": 69.09
     },
     {
       "report_name": "season_trends",
@@ -64,7 +64,7 @@
       "path": "data/analysis/primera2/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 281.74
+      "size_kb": 282.32
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1985 matches: home wins 44.4%, draws 29.9%, away wins 25.7% (882H / 593D / 510A)",
+      "detail": "1990 matches: home wins 44.5%, draws 29.9%, away wins 25.6% (885H / 595D / 510A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,42 +97,42 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 520 times",
+      "detail": "home lead at HT -> home win occurred 522 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1985 matches produced 4568 goals (avg 2.301 per match)",
+      "detail": "1990 matches produced 4589 goals (avg 2.306 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 58.1% vs away 41.9% of 4568 goals in total (home/away ratio 1.38)",
+      "detail": "home 58.1% vs away 41.9% of 4589 goals in total (home/away ratio 1.39)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "911 of 1985 matches (45.9%)",
+      "detail": "915 of 1990 matches (46.0%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 521 scoring matches, 29.7% of scoring)",
+      "detail": "minute 1-15 (first goal in 523 scoring matches, 29.7% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 33.88, median 29.0",
+      "detail": "mean 33.83, median 29.0",
       "importance": "low",
       "id": "F8"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Gimnastic earns 58 more points at home than away (115 home vs 57 away)",
+      "detail": "Gimnastic earns 61 more points at home than away (118 home vs 57 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.144 per match): first half 2.269 vs last half 2.414 across 6 seasons",
+      "detail": "up (+0.174 per match): first half 2.269 vs last half 2.443 across 6 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -195,21 +195,21 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-0 in 277 matches (14.0%)",
+      "detail": "1-0 in 277 matches (13.9%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (277 of 882 home matches, 31.4%)",
+      "detail": "1-0 (277 of 885 home matches, 31.3%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (259 of 593 draw matches, 43.7%)",
+      "detail": "1-1 (260 of 595 draw matches, 43.7%)",
       "importance": "low",
       "id": "F19"
     },
@@ -243,29 +243,29 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (11)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE",
+      "finding": "Data-quality warnings (13)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "6 of 6 registered seasons populated (100.0%); 1985 matches observed",
+      "detail": "6 of 6 registered seasons populated (100.0%); 1990 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1985,
-    "avg_goals": 2.301,
-    "home_win_pct": 44.4,
+    "n_matches": 1990,
+    "avg_goals": 2.306,
+    "home_win_pct": 44.5,
     "draw_pct": 29.9,
-    "away_win_pct": 25.7,
+    "away_win_pct": 25.6,
     "most_common_scoreline": "1-0",
     "dominant_team": "Murcia",
     "champion_most_titles": "Eldense",
-    "btts_rate_pct": 45.9
+    "btts_rate_pct": 46.0
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 37.93
+      "size_kb": 38.55
     },
     {
       "module": "matches_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 69.07
+      "size_kb": 69.09
     },
     {
       "module": "season_trends",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 281.74
+      "size_kb": 282.32
     },
     {
       "module": "relationships",
@@ -366,10 +366,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 85 matches, expected 380",
+      "message": "Season 2026-2027 has 90 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 85,
+        "n_matches": 90,
         "expected": 380
       }
     },
@@ -438,14 +438,36 @@
       }
     },
     {
-      "code": "GOALLESS_SHARE_OUTLIER",
+      "code": "SEASON_AVG_GOALS_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 7.1% vs overall 11.5% (deviation 4.4 pp)",
+      "message": "Season 2026-2027 avg goals 2.7 vs overall 2.306 (deviation 0.394)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 7.1,
+        "season_avg_goals": 2.7,
+        "overall_avg_goals": 2.306,
+        "deviation": 0.394
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 goalless share 6.7% vs overall 11.5% (deviation 4.8 pp)",
+      "details": {
+        "season": "2026-2027",
+        "season_goalless_pct": 6.7,
         "overall_goalless_pct": 11.5,
-        "deviation_pp": 4.4
+        "deviation_pp": 4.8
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 away outcome share 21.1% vs overall 25.6%",
+      "details": {
+        "season": "2026-2027",
+        "outcome": "away",
+        "season_share": 21.1,
+        "overall_share": 25.6
       }
     },
     {
@@ -490,8 +512,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 111332,
-        "distinct": 111318,
+        "rows": 111458,
+        "distinct": 111444,
         "duplicates": 14
       }
     },
@@ -500,10 +522,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=413, fgte=413 rows)",
       "details": {
-        "total": 111332,
+        "total": 111458,
         "fgt_inconsistent": 413,
         "fgte_inconsistent": 413,
-        "n_with_fgt": 102432
+        "n_with_fgt": 102549
       }
     }
   ],

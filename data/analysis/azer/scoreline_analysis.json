@@ -4,7 +4,7 @@
     "name": "backend/scripts/analyze_scorelines.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:26:54+00:00",
+  "generated_at": "2026-10-27T01:40:50+00:00",
   "config": {
     "league": "azer",
     "out_dir": "data/analysis/azer",
@@ -24,13 +24,13 @@
     "url": "https://www.football-charts.com/leagues/azerbaijan/premier-league"
   },
   "scoreline_frequency": {
-    "n_matches": 1021,
+    "n_matches": 1023,
     "n_distinct_scorelines": 37,
     "top": [
       {
         "scoreline": "1-1",
         "count": 120,
-        "pct": 11.8
+        "pct": 11.7
       },
       {
         "scoreline": "1-0",
@@ -44,18 +44,18 @@
       },
       {
         "scoreline": "0-0",
-        "count": 86,
-        "pct": 8.4
+        "count": 87,
+        "pct": 8.5
       },
       {
         "scoreline": "2-1",
-        "count": 72,
+        "count": 73,
         "pct": 7.1
       },
       {
         "scoreline": "2-0",
         "count": 70,
-        "pct": 6.9
+        "pct": 6.8
       },
       {
         "scoreline": "0-2",
@@ -316,57 +316,57 @@
         {
           "scoreline": "1-0",
           "count": 7,
-          "pct": 12.3
+          "pct": 11.9
+        },
+        {
+          "scoreline": "0-0",
+          "count": 6,
+          "pct": 10.2
         },
         {
           "scoreline": "0-1",
           "count": 6,
-          "pct": 10.5
+          "pct": 10.2
         },
         {
           "scoreline": "1-1",
           "count": 6,
-          "pct": 10.5
+          "pct": 10.2
         },
         {
-          "scoreline": "0-0",
+          "scoreline": "2-1",
           "count": 5,
-          "pct": 8.8
-        },
-        {
-          "scoreline": "3-1",
-          "count": 4,
-          "pct": 7.0
+          "pct": 8.5
         }
       ]
     }
   ],
   "total_goal_histogram": {
-    "n_matches": 1021,
+    "n_matches": 1023,
     "cap": 10,
     "buckets": [
       {
         "goals": 0,
         "label": "0",
-        "count": 86,
-        "pct": 8.4
+        "count": 87,
+        "pct": 8.5
       },
       {
         "goals": 1,
         "label": "1",
         "count": 205,
-        "pct": 20.1
+        "pct": 20.0
       },
       {
         "goals": 2,
         "label": "2",
         "count": 250,
-        "pct": 24.5
+        "pct": 24.4
       },
       {
         "goals": 3,
         "label": "3",
-        "count": 211,
+        "count": 212,
         "pct": 20.7
       },
       {
@@ -540,15 +540,15 @@
     ]
   },
   "margin_distribution": {
-    "n_decided": 759,
-    "n_draws": 262,
+    "n_decided": 760,
+    "n_draws": 263,
     "avg_margin": 1.88,
     "distribution": [
       {
         "margin": 1,
         "label": "1",
-        "count": 378,
-        "pct": 49.8
+        "count": 379,
+        "pct": 49.9
       },
       {
         "margin": 2,
@@ -560,13 +560,13 @@
         "margin": 3,
         "label": "3+",
         "count": 175,
-        "pct": 23.1
+        "pct": 23.0
       }
     ]
   },
   "margin_by_outcome": {
     "home": {
-      "n_matches": 414,
+      "n_matches": 415,
       "matches": [
         {
           "season": "2020-2021",
@@ -3879,26 +3879,34 @@
           "scoreline": "3-2",
           "margin": 1,
           "match_date": "2026-10-23"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 1,
+          "scoreline": "2-1",
+          "margin": 1,
+          "match_date": "2026-10-25"
         }
       ],
       "distribution": [
         {
           "margin": 1,
           "label": "1",
-          "count": 203,
-          "pct": 49.0
+          "count": 204,
+          "pct": 49.2
         },
         {
           "margin": 2,
           "label": "2",
           "count": 113,
-          "pct": 27.3
+          "pct": 27.2
         },
         {
           "margin": 3,
           "label": "3+",
           "count": 98,
-          "pct": 23.7
+          "pct": 23.6
         }
       ],
       "avg_margin": 1.93,
@@ -6694,16 +6702,16 @@
   },
   "common_scorelines": {
     "home": {
-      "n_matches": 414,
+      "n_matches": 415,
       "scoreline": "1-0",
       "count": 106,
-      "pct": 25.6
+      "pct": 25.5
     },
     "draw": {
-      "n_matches": 262,
+      "n_matches": 263,
       "scoreline": "1-1",
       "count": 120,
-      "pct": 45.8
+      "pct": 45.6
     },
     "away": {
       "n_matches": 345,

@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:30:21+00:00
+- Generated: 2026-10-27T01:45:17+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Professional Development League (England)
 - Scope: league `develop21`

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:45:26+00:00
+- Generated: 2026-10-27T02:27:29+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`

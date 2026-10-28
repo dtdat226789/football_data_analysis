@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:30:25+00:00
+- Generated: 2026-10-27T01:45:21+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Professional Development League (England)
 - Scope: league `develop21`
@@ -42,7 +42,7 @@ _Avg absolute position difference between classic view and alternative view per 
 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
-| 2026-2027 | 1.882 | 6.118 |
+| 2026-2027 | 2.000 | 6.118 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

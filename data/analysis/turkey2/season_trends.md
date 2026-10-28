@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:52:09+00:00
+- Generated: 2026-10-27T02:34:26+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 1. Lig (Turkey)
 - Scope: league `turkey2`
@@ -14,7 +14,7 @@
 | 2023-2024 | Eyupspor | 75 | Goztepe | 5 pts |
 | 2024-2025 | Kocaelispor | 72 | Genclerbirligi | 4 pts |
 | 2025-2026 | Erzurumspor | 81 | Corum | 4 pts |
-| 2026-2027 | Kayserispor | 26 | Igdir FK | 0 pts |
+| 2026-2027 | Bursaspor | 28 | Kayserispor | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 5 pts |  |
 | 2024-2025 | 4 pts |  |
 | 2025-2026 | 4 pts |  |
-| 2026-2027 | 0 pts | yes |
+| 2026-2027 | 1 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 17 = last safe, 20 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 75 | 70 | 57 | 55 | 19 | - |
 | 2024-2025 | 72 | 68 | 64 | 64 | 48 | 0 |
 | 2025-2026 | 81 | 77 | 74 | 63 | 39 | 6 |
-| 2026-2027 | 26 | 26 | 20 | 18 | 10 | 4 |
+| 2026-2027 | 28 | 27 | 23 | 18 | 11 | 4 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 17 | 19 | 18 | 10 | 9 pts |
 | 2024-2025 | 17 | 48 | 18 | 40 | 8 pts |
 | 2025-2026 | 17 | 39 | 18 | 34 | 5 pts |
-| 2026-2027 | 17 | 10 | 18 | 10 | 0 pts |
+| 2026-2027 | 17 | 11 | 18 | 10 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 725 | 2.369 | 41.8% | 25.2% | 33.0% | 9.2% | 46.72 |
 | 2024-2025 | 380 | 1011 | 2.661 | 45.8% | 23.9% | 30.3% | 7.4% | 52.45 |
 | 2025-2026 | 385 | 1125 | 2.922 | 45.5% | 24.7% | 29.9% | 7.3% | 52.85 |
-| 2026-2027 | 115 | 309 | 2.687 | 33.9% | 30.4% | 35.7% | 6.1% | 15.5 |
+| 2026-2027 | 119 | 327 | 2.748 | 33.6% | 30.3% | 36.1% | 5.9% | 16.05 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 8.000)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.222 | 5.333 |
 | 2024-2025 | 2.600 | 8.000 |
 | 2025-2026 | 4.300 | 7.300 |
-| 2026-2027 | 1.700 | 7.200 |
+| 2026-2027 | 2.000 | 6.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

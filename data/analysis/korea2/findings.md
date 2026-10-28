@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:40:09+00:00
+- Generated: 2026-10-27T02:00:40+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: K League 2 (South Korea)
 - Scope: league `korea2`
@@ -13,49 +13,49 @@
 | goals_analysis | data/analysis/korea2/goals_analysis.json | yes | yes | 12.25 |
 | teams_analysis | data/analysis/korea2/teams_analysis.json | yes | yes | 33.47 |
 | season_trends | data/analysis/korea2/season_trends.json | yes | yes | 10.37 |
-| scoreline_analysis | data/analysis/korea2/scoreline_analysis.json | yes | yes | 216.28 |
+| scoreline_analysis | data/analysis/korea2/scoreline_analysis.json | yes | yes | 217.22 |
 | relationships | data/analysis/korea2/relationships.json | yes | yes | 13.76 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 1507 matches: home wins 36.8%, draws 28.7%, away wins 34.6% (554H / 432D / 521A)
+- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 1513 matches: home wins 36.7%, draws 28.6%, away wins 34.6% (556H / 433D / 524A)
 - **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 30 home and 44 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 299 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1507 matches produced 3851 goals (avg 2.555 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 51.7% vs away 48.3% of 3851 goals in total (home/away ratio 1.07)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 801 of 1507 matches (53.2%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 361 scoring matches, 26.3% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 35.69, median 32.0
+- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 301 times
+- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1513 matches produced 3866 goals (avg 2.555 per match)
+- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 51.7% vs away 48.3% of 3866 goals in total (home/away ratio 1.07)
+- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 804 of 1513 matches (53.1%)
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 364 scoring matches, 26.4% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 35.61, median 32.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Seoul E-Land leads with 333 points across 7 seasons (0 title(s), GD 41)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 5 teams present in every one of the 7 seasons (Ansan Greeners, Asan, Gyeongnam, Jeonnam, Seoul E-Land)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Asan earns 52 more points at home than away (177 home vs 125 away)
+- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Asan earns 49 more points at home than away (177 home vs 128 away)
 - **F12** · `season_trends` · *[high]* — **Champion with most titles** — Gimcheon Sangmu won 2 of 7 championship(s) on record
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2023: Gimcheon Sangmu beat Busan by 1 pt
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.170 per match): first half 2.453 vs last half 2.623 across 7 seasons
+- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.168 per match): first half 2.453 vs last half 2.621 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2024 (goals view, avg abs position diff 8.846)
 - **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2020 (luck view, avg abs position diff 1.400)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 196 matches (13.0%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (143 of 554 home matches, 25.8%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (196 of 432 draw matches, 45.4%)
-- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (148 of 521 away matches, 28.4%)
+- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 197 matches (13.0%)
+- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (143 of 556 home matches, 25.7%)
+- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (197 of 433 draw matches, 45.5%)
+- **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (149 of 524 away matches, 28.4%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 26 match(es) with >= 7 total goals
 - **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_scored_last_5 |corr| = 0.0782 (n=1269 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 6.686: home 3.191, draw 0.110, away -3.496
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (47)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 1507 matches observed
+- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 1513 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 1507 |
+| Matches analysed | 1513 |
 | Average goals per match | 2.555 |
-| Home win rate | 36.8% |
-| Draw rate | 28.7% |
+| Home win rate | 36.7% |
+| Draw rate | 28.6% |
 | Away win rate | 34.6% |
 | Most common scoreline | 1-1 |
 | Dominant team (lifetime points) | Seoul E-Land |
 | Champion with most titles | Gimcheon Sangmu |
-| BTTS rate | 53.2% |
+| BTTS rate | 53.1% |
 
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
@@ -65,7 +65,7 @@
 | goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.25 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 33.47 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.37 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 216.28 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 217.22 |
 | relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.76 |
 
 ## 5. Notable anomalies
@@ -81,17 +81,17 @@
 - **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2024 has 13 teams, expected 20
 - **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 273 matches, expected 380
 - **12.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025 has 14 teams, expected 20
-- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 238 matches, expected 380
+- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 244 matches, expected 380
 - **14.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026 has 17 teams, expected 20
 - **15.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026 has data but state is 'in_progress'
-- **16.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2020 home outcome share 31.9% vs overall 36.8%
+- **16.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2020 home outcome share 31.9% vs overall 36.7%
 - **17.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2020 away outcome share 42.2% vs overall 34.6%
 - **18.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2021 goalless share 11.0% vs overall 9.0% (deviation 2.0 pp)
-- **19.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2022 home outcome share 42.3% vs overall 36.8%
+- **19.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2022 home outcome share 42.3% vs overall 36.7%
 - **20.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2022 away outcome share 28.2% vs overall 34.6%
-- **21.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2023 home outcome share 42.3% vs overall 36.8%
-- **22.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2023 draw outcome share 24.4% vs overall 28.7%
-- **23.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2026 goalless share 7.1% vs overall 9.0% (deviation 1.9 pp)
+- **21.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2023 home outcome share 42.3% vs overall 36.7%
+- **22.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2023 draw outcome share 24.4% vs overall 28.6%
+- **23.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2026 goalless share 7.0% vs overall 9.0% (deviation 2.0 pp)
 - **24.** `HIGH_SCORING_MATCHES` *(warning)* — 6 match(es) with >= 8 total goals (extreme scorelines)
 - **25.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
 - **26.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=367, fgte=367 rows)

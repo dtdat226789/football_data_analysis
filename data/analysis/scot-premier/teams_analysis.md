@@ -1,21 +1,21 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:46:20+00:00
+- Generated: 2026-10-27T02:28:21+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`
 
-- Teams: **18** | Seasons: **7** | Matches: **1282**
+- Teams: **18** | Seasons: **7** | Matches: **1284**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Celtic | 7 | 212 | 160 | 28 | 24 | 508 | 520 | 162 | 358 | 72.57 | 1 | 2 | 6 |
+| Celtic | 7 | 213 | 161 | 28 | 24 | 511 | 522 | 163 | 359 | 73.0 | 1 | 2 | 6 |
 | Rangers | 7 | 213 | 147 | 39 | 27 | 480 | 459 | 179 | 280 | 68.57 | 1 | 3 | 1 |
-| Hearts | 6 | 179 | 89 | 36 | 54 | 303 | 280 | 209 | 71 | 50.5 | 2 | 7 | 0 |
-| Hibernian | 7 | 212 | 78 | 60 | 74 | 294 | 289 | 270 | 19 | 42.0 | 3 | 12 | 0 |
+| Hearts | 6 | 180 | 90 | 36 | 54 | 306 | 282 | 209 | 73 | 51.0 | 2 | 7 | 0 |
+| Hibernian | 7 | 213 | 78 | 60 | 75 | 294 | 290 | 272 | 18 | 42.0 | 3 | 12 | 0 |
 | Aberdeen | 7 | 213 | 75 | 49 | 89 | 274 | 254 | 291 | -37 | 39.14 | 3 | 9 | 0 |
-| Motherwell | 7 | 212 | 66 | 59 | 87 | 257 | 267 | 308 | -41 | 36.71 | 4 | 10 | 0 |
+| Motherwell | 7 | 213 | 66 | 59 | 88 | 257 | 267 | 310 | -43 | 36.71 | 4 | 10 | 0 |
 | St. Mirren | 7 | 215 | 67 | 54 | 94 | 255 | 224 | 308 | -84 | 36.43 | 5 | 11 | 0 |
 | Dundee Utd | 6 | 180 | 55 | 56 | 69 | 221 | 200 | 252 | -52 | 36.83 | 4 | 10 | 0 |
 | Kilmarnock | 6 | 180 | 50 | 43 | 87 | 193 | 203 | 288 | -85 | 32.17 | 4 | 11 | 0 |
@@ -34,15 +34,15 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Aberdeen | 107 | 50 | 26 | 31 | 176 | 106 | 25 | 23 | 58 | 98 | 78 |
 | Kilmarnock | 89 | 37 | 22 | 30 | 133 | 91 | 13 | 21 | 57 | 60 | 73 |
-| Hearts | 89 | 57 | 16 | 16 | 187 | 90 | 32 | 20 | 38 | 116 | 71 |
+| Hearts | 89 | 57 | 16 | 16 | 187 | 91 | 33 | 20 | 38 | 119 | 68 |
 | St. Mirren | 108 | 39 | 31 | 38 | 148 | 107 | 28 | 23 | 56 | 107 | 41 |
-| Celtic | 107 | 87 | 12 | 8 | 273 | 105 | 73 | 16 | 16 | 235 | 38 |
 | Rangers | 106 | 82 | 13 | 11 | 259 | 107 | 65 | 26 | 16 | 221 | 38 |
 | Dundee FC | 74 | 25 | 21 | 28 | 96 | 73 | 14 | 18 | 41 | 60 | 36 |
+| Celtic | 107 | 87 | 12 | 8 | 273 | 106 | 74 | 16 | 16 | 238 | 35 |
 | Dundee Utd | 90 | 35 | 22 | 33 | 127 | 90 | 20 | 34 | 36 | 94 | 33 |
 | Ross County | 83 | 24 | 23 | 36 | 95 | 82 | 17 | 15 | 50 | 66 | 29 |
-| Hibernian | 107 | 43 | 30 | 34 | 159 | 105 | 35 | 30 | 40 | 135 | 24 |
-| Motherwell | 105 | 37 | 28 | 40 | 139 | 107 | 29 | 31 | 47 | 118 | 21 |
+| Hibernian | 108 | 43 | 30 | 35 | 159 | 105 | 35 | 30 | 40 | 135 | 24 |
+| Motherwell | 106 | 37 | 28 | 41 | 139 | 107 | 29 | 31 | 47 | 118 | 21 |
 | Livingston | 84 | 22 | 26 | 36 | 92 | 86 | 17 | 20 | 49 | 71 | 21 |
 | St Johnstone | 87 | 23 | 23 | 41 | 92 | 88 | 21 | 20 | 47 | 83 | 9 |
 | Falkirk | 25 | 9 | 5 | 11 | 32 | 23 | 8 | 5 | 10 | 29 | 3 |
@@ -57,26 +57,26 @@
 |---|---|---|
 | 1 | Celtic | 2.40 |
 | 2 | Rangers | 2.25 |
-| 3 | Hearts | 1.69 |
-| 4 | Hibernian | 1.39 |
+| 3 | Hearts | 1.70 |
+| 4 | Hibernian | 1.38 |
 | 5 | Aberdeen | 1.29 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Celtic | 520 |
+| 1 | Celtic | 522 |
 | 2 | Rangers | 459 |
-| 3 | Hibernian | 289 |
-| 4 | Hearts | 280 |
+| 3 | Hibernian | 290 |
+| 4 | Hearts | 282 |
 | 5 | Motherwell | 267 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Celtic | 358 |
+| 1 | Celtic | 359 |
 | 2 | Rangers | 280 |
-| 3 | Hearts | 71 |
-| 4 | Hibernian | 19 |
+| 3 | Hearts | 73 |
+| 4 | Hibernian | 18 |
 | 5 | Dunfermline | 0 |
 
 ### Best defence (goals against per match, standings)
@@ -84,7 +84,7 @@
 |---|---|---|
 | 1 | Arbroath | 0.500 |
 | 2 | Dunfermline | 0.750 |
-| 3 | Celtic | 0.764 |
+| 3 | Celtic | 0.765 |
 | 4 | Rangers | 0.840 |
 | 5 | Partick Thistle | 1.000 |
 
@@ -102,6 +102,7 @@ Aberdeen, Celtic, Hibernian, Motherwell, Rangers, St. Mirren
 | Rangers vs Celtic | 20 | 9 | 5 | 6 | 45.0% | 25.0% | 30.0% |
 | Celtic vs Motherwell | 20 | 8 | 2 | 10 | 40.0% | 10.0% | 50.0% |
 | Rangers vs Hibernian | 20 | 8 | 4 | 8 | 40.0% | 20.0% | 40.0% |
+| Celtic vs Hibernian | 20 | 7 | 5 | 8 | 35.0% | 25.0% | 40.0% |
 | Rangers vs Motherwell | 20 | 6 | 6 | 8 | 30.0% | 30.0% | 40.0% |
 | Hibernian vs Motherwell | 20 | 4 | 7 | 9 | 20.0% | 35.0% | 45.0% |
 | Hibernian vs Aberdeen | 19 | 12 | 3 | 4 | 63.2% | 15.8% | 21.1% |
@@ -110,7 +111,6 @@ Aberdeen, Celtic, Hibernian, Motherwell, Rangers, St. Mirren
 | Celtic vs St. Mirren | 19 | 9 | 1 | 9 | 47.4% | 5.3% | 47.4% |
 | Rangers vs Aberdeen | 19 | 9 | 4 | 6 | 47.4% | 21.1% | 31.6% |
 | Aberdeen vs Motherwell | 19 | 8 | 4 | 7 | 42.1% | 21.1% | 36.8% |
-| Celtic vs Hibernian | 19 | 7 | 5 | 7 | 36.8% | 26.3% | 36.8% |
 | St. Mirren vs Motherwell | 19 | 5 | 9 | 5 | 26.3% | 47.4% | 26.3% |
 | Hibernian vs St. Mirren | 18 | 5 | 5 | 8 | 27.8% | 27.8% | 44.4% |
 

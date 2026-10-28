@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:30:29+00:00",
+  "generated_at": "2026-10-27T01:45:25+00:00",
   "config": {
     "league": "develop21",
     "out_dir": "data/analysis/develop21",
@@ -181,7 +181,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.882)",
+      "detail": "2026-2027 (luck view, avg abs position diff 2.000)",
       "importance": "low",
       "id": "F15"
     },
@@ -399,8 +399,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 26930,
-        "distinct": 26925,
+        "rows": 26951,
+        "distinct": 26946,
         "duplicates": 5
       }
     },
@@ -409,10 +409,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=310, fgte=310 rows)",
       "details": {
-        "total": 26930,
+        "total": 26951,
         "fgt_inconsistent": 310,
         "fgte_inconsistent": 310,
-        "n_with_fgt": 24581
+        "n_with_fgt": 24601
       }
     },
     {

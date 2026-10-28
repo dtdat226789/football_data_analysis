@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:36:17+00:00
+- Generated: 2026-10-27T01:53:47+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`
 
-- Teams: **36** | Seasons: **7** | Matches: **2012**
+- Teams: **36** | Seasons: **7** | Matches: **2013**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -14,7 +14,7 @@
 | Szeged | 7 | 218 | 89 | 67 | 62 | 334 | 270 | 229 | 41 | 47.71 | 4 | 13 | 0 |
 | Ajka | 7 | 219 | 89 | 43 | 87 | 310 | 268 | 258 | 10 | 44.29 | 3 | 14 | 0 |
 | Soroksar | 7 | 219 | 82 | 61 | 76 | 307 | 326 | 304 | 22 | 43.86 | 1 | 12 | 1 |
-| Csakvari | 7 | 218 | 63 | 63 | 92 | 252 | 282 | 327 | -45 | 36.0 | 5 | 17 | 0 |
+| Csakvari | 7 | 219 | 63 | 63 | 93 | 252 | 282 | 331 | -49 | 36.0 | 5 | 17 | 0 |
 | Gyirmot | 5 | 151 | 66 | 40 | 45 | 238 | 228 | 186 | 42 | 47.6 | 3 | 13 | 0 |
 | Nyiregyhaza | 4 | 148 | 62 | 38 | 48 | 224 | 200 | 164 | 36 | 56.0 | 1 | 18 | 1 |
 | Gyor | 4 | 148 | 61 | 34 | 53 | 217 | 212 | 173 | 39 | 54.25 | 2 | 12 | 0 |
@@ -32,7 +32,7 @@
 | Honved | 3 | 94 | 40 | 23 | 31 | 143 | 129 | 101 | 28 | 47.67 | 2 | 9 | 0 |
 | BVSC-Zuglo | 4 | 104 | 33 | 29 | 42 | 128 | 107 | 116 | -9 | 32.0 | 7 | 19 | 0 |
 | Dorogi | 3 | 114 | 29 | 29 | 56 | 116 | 101 | 171 | -70 | 38.67 | 14 | 20 | 0 |
-| Mezokovesd-Zsory | 3 | 70 | 30 | 17 | 23 | 107 | 97 | 80 | 17 | 35.67 | 6 | 16 | 0 |
+| Mezokovesd-Zsory | 3 | 71 | 31 | 17 | 23 | 110 | 101 | 80 | 21 | 36.67 | 4 | 16 | 0 |
 | Budaorsi SC | 2 | 76 | 26 | 19 | 31 | 97 | 102 | 120 | -18 | 48.5 | 6 | 19 | 0 |
 | Szolnoki MAV | 2 | 76 | 24 | 23 | 29 | 95 | 78 | 95 | -17 | 47.5 | 9 | 18 | 0 |
 | Debrecen | 1 | 38 | 24 | 8 | 6 | 80 | 89 | 40 | 49 | 80.0 | 1 | 1 | 1 |
@@ -60,7 +60,7 @@
 | Bekescsaba 1912 | 87 | 25 | 34 | 28 | 109 | 87 | 18 | 21 | 48 | 75 | 34 |
 | Tiszakecske | 76 | 31 | 16 | 29 | 109 | 75 | 17 | 24 | 34 | 75 | 34 |
 | Ajka | 110 | 48 | 25 | 37 | 169 | 109 | 41 | 18 | 50 | 141 | 28 |
-| Csakvari | 109 | 37 | 29 | 43 | 140 | 109 | 26 | 34 | 49 | 112 | 28 |
+| Csakvari | 110 | 37 | 29 | 44 | 140 | 109 | 26 | 34 | 49 | 112 | 28 |
 | Kecskemeti TE | 39 | 28 | 4 | 7 | 88 | 40 | 18 | 9 | 13 | 63 | 25 |
 | Honved | 47 | 25 | 9 | 13 | 84 | 47 | 15 | 14 | 18 | 59 | 25 |
 | Gyirmot | 77 | 37 | 20 | 20 | 131 | 74 | 29 | 20 | 25 | 107 | 24 |
@@ -74,7 +74,7 @@
 | Debrecen | 19 | 16 | 1 | 2 | 49 | 19 | 8 | 7 | 4 | 31 | 18 |
 | Debreceni EAC | 19 | 6 | 2 | 11 | 20 | 19 | 0 | 3 | 16 | 3 | 17 |
 | Szeged | 107 | 50 | 25 | 32 | 175 | 111 | 39 | 42 | 30 | 159 | 16 |
-| Mezokovesd-Zsory | 36 | 17 | 10 | 9 | 61 | 34 | 13 | 7 | 14 | 46 | 15 |
+| Mezokovesd-Zsory | 36 | 17 | 10 | 9 | 61 | 35 | 14 | 7 | 14 | 49 | 12 |
 | Kisvarda | 15 | 10 | 4 | 1 | 34 | 15 | 7 | 3 | 5 | 24 | 10 |
 | Karcagi | 20 | 8 | 4 | 8 | 28 | 21 | 3 | 9 | 9 | 18 | 10 |
 | Budaorsi SC | 38 | 15 | 8 | 15 | 53 | 38 | 11 | 11 | 16 | 44 | 9 |
@@ -157,10 +157,10 @@ _Cells show final position; '-' when the team was absent from that season._
 |---|---|---|---|---|---|---|---|
 | Vasas | 2 | 1 | - | 3 | 2 | 1 | - |
 | Szeged | 10 | 4 | 4 | 4 | 6 | 10 | 13 |
-| Ajka | 5 | 9 | 3 | 12 | 9 | 14 | 6 |
+| Ajka | 5 | 9 | 3 | 12 | 9 | 14 | 7 |
 | Soroksar | 8 | 8 | 5 | 11 | 12 | 12 | 1 |
 | Csakvari | 17 | 12 | 15 | 10 | 10 | 5 | 16 |
-| Gyirmot | 3 | - | 6 | 6 | 13 | - | 5 |
+| Gyirmot | 3 | - | 6 | 6 | 13 | - | 6 |
 | Nyiregyhaza | 7 | 10 | 18 | 1 | - | - | - |
 | Gyor | 12 | 7 | 11 | 2 | - | - | - |
 | Szentlorinc | 16 | 15 | 17 | - | 4 | 13 | 9 |
@@ -168,7 +168,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Haladas | 11 | 6 | 9 | 13 | - | - | - |
 | Budafoki | - | 13 | 10 | 8 | 11 | 15 | - |
 | Kozarmisleny SE | - | - | 16 | 5 | 5 | 4 | 15 |
-| Kazincbarcika | 18 | - | 14 | 7 | 3 | - | 4 |
+| Kazincbarcika | 18 | - | 14 | 7 | 3 | - | 5 |
 | Siofok | 13 | 5 | 8 | 16 | - | - | - |
 | Tiszakecske | - | 16 | 13 | 15 | - | 9 | 2 |
 | Bekescsaba 1912 | 15 | 14 | 19 | - | 8 | 16 | - |
@@ -177,7 +177,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Honved | - | - | - | 9 | 7 | 2 | - |
 | BVSC-Zuglo | - | - | - | 19 | 17 | 7 | 11 |
 | Dorogi | 14 | 17 | 20 | - | - | - | - |
-| Mezokovesd-Zsory | - | - | - | - | 16 | 6 | 7 |
+| Mezokovesd-Zsory | - | - | - | - | 16 | 6 | 4 |
 | Budaorsi SC | 6 | 19 | - | - | - | - | - |
 | Szolnoki MAV | 9 | 18 | - | - | - | - | - |
 | Debrecen | 1 | - | - | - | - | - | - |

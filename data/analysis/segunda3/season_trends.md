@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:47:57+00:00
+- Generated: 2026-10-27T02:29:57+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 3 (Spain)
 - Scope: league `segunda3`
@@ -14,7 +14,7 @@
 | 2023-2024 | Hercules | 65 | CE Europa | 2 pts |
 | 2024-2025 | CE Europa | 69 | Baleares | 7 pts |
 | 2025-2026 | Baleares | 66 | Sant Andreu | 0 pts |
-| 2026-2027 | Castellonense | 18 | UCAM Murcia | 3 pts |
+| 2026-2027 | Castellonense | 18 | Cieza | 3 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 65 | 63 | 58 | 50 | 37 | 21 |
 | 2024-2025 | 69 | 62 | 56 | 53 | 35 | 17 |
 | 2025-2026 | 66 | 66 | 55 | 52 | 33 | 27 |
-| 2026-2027 | 18 | 15 | 14 | 12 | 6 | 4 |
+| 2026-2027 | 18 | 15 | 15 | 14 | 7 | 4 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 15 | 37 | 16 | 34 | 3 pts |
 | 2024-2025 | 15 | 35 | 16 | 30 | 5 pts |
 | 2025-2026 | 15 | 33 | 16 | 30 | 3 pts |
-| 2026-2027 | 15 | 6 | 16 | 5 | 1 pts |
+| 2026-2027 | 15 | 7 | 16 | 7 | 0 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 742 | 2.425 | 44.1% | 28.1% | 27.8% | 10.1% | 46.22 |
 | 2024-2025 | 306 | 724 | 2.366 | 37.3% | 29.1% | 33.7% | 8.8% | 46.06 |
 | 2025-2026 | 306 | 742 | 2.425 | 45.8% | 31.7% | 22.5% | 10.8% | 45.61 |
-| 2026-2027 | 65 | 166 | 2.554 | 46.2% | 24.6% | 29.2% | 3.1% | 9.94 |
+| 2026-2027 | 71 | 187 | 2.634 | 49.3% | 22.5% | 28.2% | 2.8% | 10.94 |
 
 ## 6. View divergence
 - Largest divergence: **2020-2021** (goals view, avg abs position diff = 7.429)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.333 | 5.444 |
 | 2024-2025 | 2.111 | 5.778 |
 | 2025-2026 | 2.111 | 6.556 |
-| 2026-2027 | 2.111 | 5.556 |
+| 2026-2027 | 2.333 | 5.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

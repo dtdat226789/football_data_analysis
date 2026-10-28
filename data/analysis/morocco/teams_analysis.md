@@ -1,27 +1,27 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:41:11+00:00
+- Generated: 2026-10-27T02:22:56+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`
 
-- Teams: **26** | Seasons: **7** | Matches: **1481**
+- Teams: **26** | Seasons: **7** | Matches: **1483**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| FAR Rabat | 7 | 182 | 99 | 56 | 27 | 353 | 288 | 147 | 141 | 50.43 | 1 | 11 | 1 |
+| FAR Rabat | 7 | 182 | 99 | 56 | 27 | 353 | 288 | 147 | 141 | 50.43 | 1 | 12 | 1 |
 | Raja Casablanca | 7 | 184 | 95 | 60 | 29 | 345 | 251 | 133 | 118 | 49.29 | 1 | 10 | 1 |
 | Wydad | 6 | 158 | 90 | 44 | 24 | 314 | 241 | 130 | 111 | 52.33 | 1 | 17 | 2 |
-| Berkane | 7 | 183 | 85 | 57 | 41 | 312 | 240 | 164 | 76 | 44.57 | 1 | 13 | 1 |
-| FUS Rabat | 7 | 184 | 69 | 61 | 54 | 268 | 220 | 176 | 44 | 38.29 | 3 | 15 | 0 |
+| Berkane | 7 | 183 | 85 | 57 | 41 | 312 | 240 | 164 | 76 | 44.57 | 1 | 14 | 1 |
+| FUS Rabat | 7 | 185 | 70 | 61 | 54 | 271 | 221 | 176 | 45 | 38.71 | 3 | 11 | 0 |
 | Maghreb Fez | 7 | 184 | 61 | 78 | 45 | 261 | 198 | 169 | 29 | 37.29 | 1 | 11 | 1 |
 | Olympique de Safi | 6 | 181 | 55 | 68 | 58 | 233 | 184 | 199 | -15 | 38.83 | 4 | 16 | 0 |
 | Hassania Agadir | 7 | 185 | 54 | 52 | 79 | 214 | 184 | 213 | -29 | 30.57 | 4 | 13 | 0 |
 | IR Tanger | 7 | 185 | 53 | 55 | 77 | 214 | 181 | 229 | -48 | 30.57 | 5 | 14 | 0 |
-| Difaa El Jadidi | 6 | 154 | 45 | 51 | 58 | 186 | 165 | 211 | -46 | 31.0 | 6 | 16 | 0 |
+| Difaa El Jadidi | 6 | 155 | 45 | 52 | 58 | 187 | 166 | 212 | -46 | 31.17 | 6 | 16 | 0 |
 | Union Touarga | 5 | 125 | 37 | 42 | 46 | 153 | 134 | 150 | -16 | 30.6 | 5 | 13 | 0 |
-| Renaissance Zemamra | 5 | 125 | 40 | 31 | 54 | 151 | 134 | 154 | -20 | 30.2 | 6 | 16 | 0 |
+| Renaissance Zemamra | 5 | 126 | 40 | 31 | 55 | 151 | 134 | 155 | -21 | 30.2 | 6 | 16 | 0 |
 | Mouloudia Oujda | 4 | 120 | 32 | 36 | 52 | 132 | 123 | 154 | -31 | 33.0 | 5 | 15 | 0 |
 | Chabab Mohammedia | 5 | 150 | 29 | 42 | 79 | 129 | 112 | 204 | -92 | 25.8 | 9 | 16 | 0 |
 | Jeunesse Sportive Soualem | 4 | 120 | 32 | 31 | 57 | 127 | 120 | 166 | -46 | 31.75 | 9 | 14 | 0 |
@@ -31,18 +31,18 @@
 | Olympique Khouribga | 2 | 60 | 13 | 25 | 22 | 64 | 61 | 73 | -12 | 32.0 | 10 | 15 | 0 |
 | Rapide Oued Zem | 2 | 60 | 14 | 20 | 26 | 62 | 47 | 75 | -28 | 31.0 | 13 | 15 | 0 |
 | Wydad AC | 2 | 35 | 15 | 6 | 14 | 51 | 44 | 37 | 7 | 25.5 | 3 | 5 | 0 |
-| Kawkab Marrakech | 2 | 35 | 11 | 12 | 12 | 45 | 33 | 31 | 2 | 22.5 | 2 | 9 | 0 |
+| Kawkab Marrakech | 2 | 36 | 11 | 13 | 12 | 46 | 34 | 32 | 2 | 23.0 | 2 | 9 | 0 |
 | Yacoub El Mansour | 1 | 31 | 7 | 10 | 14 | 31 | 35 | 45 | -10 | 31.0 | 14 | 14 | 0 |
 | Dcheira | 1 | 30 | 7 | 9 | 14 | 30 | 29 | 40 | -11 | 30.0 | 15 | 15 | 0 |
-| Widad Temara | 1 | 5 | 2 | 0 | 3 | 6 | 6 | 4 | 2 | 6.0 | 8 | 8 | 0 |
-| Amal Tiznit | 1 | 5 | 1 | 1 | 3 | 4 | 6 | 11 | -5 | 4.0 | 12 | 12 | 0 |
+| Widad Temara | 1 | 5 | 2 | 0 | 3 | 6 | 6 | 4 | 2 | 6.0 | 9 | 9 | 0 |
+| Amal Tiznit | 1 | 5 | 1 | 1 | 3 | 4 | 6 | 11 | -5 | 4.0 | 13 | 13 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Raja Casablanca | 91 | 59 | 23 | 9 | 200 | 93 | 36 | 37 | 20 | 145 | 55 |
 | FAR Rabat | 91 | 58 | 27 | 6 | 201 | 91 | 41 | 29 | 21 | 152 | 49 |
-| Difaa El Jadidi | 78 | 29 | 29 | 20 | 116 | 76 | 16 | 22 | 38 | 70 | 46 |
+| Difaa El Jadidi | 78 | 29 | 29 | 20 | 116 | 77 | 16 | 23 | 38 | 71 | 45 |
 | Wydad | 79 | 54 | 14 | 11 | 176 | 79 | 36 | 30 | 13 | 138 | 38 |
 | Hassania Agadir | 93 | 32 | 30 | 31 | 126 | 92 | 22 | 22 | 48 | 88 | 38 |
 | Maghreb Fez | 92 | 39 | 31 | 22 | 148 | 92 | 22 | 47 | 23 | 113 | 35 |
@@ -50,16 +50,16 @@
 | IR Tanger | 92 | 30 | 32 | 30 | 122 | 93 | 23 | 23 | 47 | 92 | 30 |
 | COD Meknes | 33 | 16 | 7 | 10 | 55 | 33 | 5 | 12 | 16 | 27 | 28 |
 | Olympique de Safi | 92 | 29 | 42 | 21 | 129 | 89 | 26 | 26 | 37 | 104 | 25 |
-| FUS Rabat | 92 | 37 | 34 | 21 | 145 | 92 | 32 | 27 | 33 | 123 | 22 |
 | Union Touarga | 63 | 22 | 21 | 20 | 87 | 62 | 15 | 21 | 26 | 66 | 21 |
 | Moghreb Tetouan | 63 | 14 | 30 | 19 | 72 | 62 | 10 | 21 | 31 | 51 | 21 |
+| FUS Rabat | 92 | 37 | 34 | 21 | 145 | 93 | 33 | 27 | 33 | 126 | 19 |
 | Chabab Mohammedia | 75 | 19 | 17 | 39 | 74 | 75 | 10 | 25 | 40 | 55 | 19 |
 | Youssoufia Berrechid | 44 | 11 | 14 | 19 | 47 | 46 | 5 | 17 | 24 | 32 | 15 |
 | Olympique Khouribga | 30 | 8 | 15 | 7 | 39 | 30 | 5 | 10 | 15 | 25 | 14 |
 | Rapide Oued Zem | 30 | 11 | 5 | 14 | 38 | 30 | 3 | 15 | 12 | 24 | 14 |
-| Renaissance Zemamra | 61 | 21 | 19 | 21 | 82 | 64 | 19 | 12 | 33 | 69 | 13 |
+| Kawkab Marrakech | 18 | 8 | 6 | 4 | 30 | 18 | 3 | 7 | 8 | 16 | 14 |
+| Renaissance Zemamra | 62 | 21 | 19 | 22 | 82 | 64 | 19 | 12 | 33 | 69 | 13 |
 | Jeunesse Sportive Soualem | 60 | 17 | 19 | 24 | 70 | 60 | 15 | 12 | 33 | 57 | 13 |
-| Kawkab Marrakech | 17 | 8 | 5 | 4 | 29 | 18 | 3 | 7 | 8 | 16 | 13 |
 | Mouloudia Oujda | 60 | 17 | 18 | 25 | 69 | 60 | 15 | 18 | 27 | 63 | 6 |
 | Yacoub El Mansour | 16 | 4 | 6 | 6 | 18 | 15 | 3 | 4 | 8 | 13 | 5 |
 | Wydad AC | 18 | 7 | 4 | 7 | 25 | 17 | 8 | 2 | 7 | 26 | -1 |
@@ -75,7 +75,7 @@
 | 2 | FAR Rabat | 1.94 |
 | 3 | Raja Casablanca | 1.88 |
 | 4 | Berkane | 1.71 |
-| 5 | Wydad AC | 1.46 |
+| 5 | FUS Rabat | 1.47 |
 
 ### Most goals scored
 | rank | team | goals |
@@ -84,7 +84,7 @@
 | 2 | Raja Casablanca | 251 |
 | 3 | Wydad | 241 |
 | 4 | Berkane | 240 |
-| 5 | FUS Rabat | 220 |
+| 5 | FUS Rabat | 221 |
 
 ### Best goal difference
 | rank | team | GD |
@@ -93,7 +93,7 @@
 | 2 | Raja Casablanca | 118 |
 | 3 | Wydad | 111 |
 | 4 | Berkane | 76 |
-| 5 | FUS Rabat | 44 |
+| 5 | FUS Rabat | 45 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
@@ -102,7 +102,7 @@
 | 2 | Widad Temara | 0.800 |
 | 3 | FAR Rabat | 0.808 |
 | 4 | Wydad | 0.823 |
-| 5 | Kawkab Marrakech | 0.886 |
+| 5 | Kawkab Marrakech | 0.889 |
 
 ## 4. Team consistency
 - Teams present in all **7** seasons: **7**
@@ -135,22 +135,22 @@ _Cells show final position; '-' when the team was absent from that season._
 
 | team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
 |---|---|---|---|---|---|---|---|
-| FAR Rabat | 3 | 3 | 1 | 2 | 2 | 4 | 11 |
+| FAR Rabat | 3 | 3 | 1 | 2 | 2 | 4 | 12 |
 | Raja Casablanca | 2 | 2 | 5 | 1 | 5 | 2 | 10 |
 | Wydad | 1 | 1 | 2 | 4 | 3 | 17 | - |
-| Berkane | 4 | 6 | 6 | 3 | 1 | 3 | 13 |
-| FUS Rabat | 10 | 5 | 3 | 7 | 4 | 8 | 15 |
+| Berkane | 4 | 6 | 6 | 3 | 1 | 3 | 14 |
+| FUS Rabat | 10 | 5 | 3 | 7 | 4 | 8 | 11 |
 | Maghreb Fez | 7 | 4 | 10 | 11 | 7 | 1 | 6 |
 | Olympique de Safi | 12 | 7 | 4 | 6 | 8 | 16 | - |
 | Hassania Agadir | 6 | 11 | 7 | 10 | 13 | 12 | 4 |
 | IR Tanger | 8 | 14 | 14 | 12 | 10 | 7 | 5 |
-| Difaa El Jadidi | 11 | 8 | 16 | - | 9 | 6 | 9 |
-| Union Touarga | - | - | 8 | 5 | 12 | 13 | 7 |
+| Difaa El Jadidi | 11 | 8 | 16 | - | 9 | 6 | 7 |
+| Union Touarga | - | - | 8 | 5 | 12 | 13 | 8 |
 | Renaissance Zemamra | 16 | - | - | 8 | 6 | 11 | 16 |
 | Mouloudia Oujda | 5 | 13 | 11 | 15 | - | - | - |
 | Chabab Mohammedia | 9 | 12 | 12 | 14 | 16 | - | - |
 | Jeunesse Sportive Soualem | - | 9 | 9 | 13 | 14 | - | - |
-| Moghreb Tetouan | 15 | - | 13 | 9 | 15 | - | 14 |
+| Moghreb Tetouan | 15 | - | 13 | 9 | 15 | - | 15 |
 | COD Meknes | - | - | - | - | 11 | 10 | 1 |
 | Youssoufia Berrechid | 14 | 16 | - | 16 | - | - | - |
 | Olympique Khouribga | - | 10 | 15 | - | - | - | - |
@@ -159,8 +159,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | Kawkab Marrakech | - | - | - | - | - | 9 | 2 |
 | Yacoub El Mansour | - | - | - | - | - | 14 | - |
 | Dcheira | - | - | - | - | - | 15 | - |
-| Widad Temara | - | - | - | - | - | - | 8 |
-| Amal Tiznit | - | - | - | - | - | - | 12 |
+| Widad Temara | - | - | - | - | - | - | 9 |
+| Amal Tiznit | - | - | - | - | - | - | 13 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*

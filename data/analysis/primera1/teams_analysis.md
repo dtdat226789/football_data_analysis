@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:43:59+00:00
+- Generated: 2026-10-27T02:26:10+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`
 
-- Teams: **59** | Seasons: **6** | Matches: **2007**
+- Teams: **59** | Seasons: **6** | Matches: **2008**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -15,7 +15,7 @@
 | Cultural Leonesa | 5 | 161 | 61 | 51 | 49 | 234 | 202 | 176 | 26 | 46.8 | 2 | 12 | 0 |
 | Dep. La Coruna | 3 | 114 | 62 | 33 | 19 | 219 | 176 | 85 | 91 | 73.0 | 1 | 4 | 1 |
 | Racing Club Ferrol | 4 | 124 | 61 | 30 | 33 | 213 | 157 | 107 | 50 | 53.25 | 1 | 13 | 1 |
-| Ponferradina | 4 | 124 | 56 | 35 | 33 | 203 | 146 | 106 | 40 | 50.75 | 1 | 9 | 1 |
+| Ponferradina | 4 | 124 | 56 | 35 | 33 | 203 | 146 | 106 | 40 | 50.75 | 1 | 10 | 1 |
 | Lugo | 4 | 124 | 46 | 36 | 42 | 174 | 127 | 141 | -14 | 43.5 | 1 | 15 | 1 |
 | Zamora | 4 | 124 | 44 | 34 | 46 | 166 | 140 | 134 | 6 | 41.5 | 3 | 17 | 0 |
 | Ath Bilbao B | 4 | 124 | 43 | 34 | 47 | 163 | 140 | 151 | -11 | 40.75 | 7 | 15 | 0 |
@@ -42,7 +42,7 @@
 | Tenerife | 1 | 39 | 23 | 10 | 6 | 79 | 65 | 24 | 41 | 79.0 | 1 | 1 | 1 |
 | Merida AD | 2 | 56 | 21 | 15 | 20 | 78 | 66 | 64 | 2 | 39.0 | 9 | 21 | 0 |
 | Alcorcon | 1 | 38 | 21 | 11 | 6 | 74 | 53 | 23 | 30 | 74.0 | 2 | 2 | 0 |
-| AD Merida | 2 | 46 | 18 | 10 | 18 | 64 | 62 | 65 | -3 | 32.0 | 10 | 10 | 0 |
+| AD Merida | 2 | 47 | 18 | 11 | 18 | 65 | 62 | 65 | -3 | 32.5 | 9 | 10 | 0 |
 | Cacereno | 2 | 48 | 15 | 17 | 16 | 62 | 52 | 55 | -3 | 31.0 | 4 | 14 | 0 |
 | Andorra | 1 | 38 | 16 | 12 | 10 | 60 | 49 | 38 | 11 | 60.0 | 4 | 4 | 0 |
 | Linares | 1 | 38 | 17 | 8 | 13 | 59 | 53 | 53 | 0 | 59.0 | 6 | 6 | 0 |
@@ -66,7 +66,7 @@
 | Extremadura UD | 1 | 38 | 5 | 5 | 28 | 20 | 22 | 80 | -58 | 20.0 | 20 | 20 | 0 |
 | Mirandes | 1 | 9 | 4 | 2 | 3 | 14 | 12 | 10 | 2 | 14.0 | 5 | 5 | 0 |
 | CD Extremadura | 1 | 9 | 4 | 1 | 4 | 13 | 16 | 10 | 6 | 13.0 | 7 | 7 | 0 |
-| CD Coria | 1 | 8 | 2 | 2 | 4 | 8 | 12 | 16 | -4 | 8.0 | 17 | 17 | 0 |
+| CD Coria | 1 | 9 | 2 | 3 | 4 | 9 | 12 | 16 | -4 | 9.0 | 17 | 17 | 0 |
 | Dep. Fabril | 1 | 9 | 2 | 2 | 5 | 8 | 8 | 16 | -8 | 8.0 | 18 | 18 | 0 |
 | UD Ourense | 1 | 9 | 1 | 2 | 6 | 5 | 3 | 15 | -12 | 5.0 | 19 | 19 | 0 |
 
@@ -95,10 +95,10 @@
 | SD Logrones | 38 | 14 | 12 | 12 | 54 | 38 | 7 | 8 | 23 | 29 | 25 |
 | Ponferradina | 62 | 33 | 13 | 16 | 112 | 62 | 23 | 22 | 17 | 91 | 21 |
 | Real Madrid B | 38 | 20 | 13 | 5 | 73 | 39 | 15 | 9 | 15 | 54 | 19 |
+| AD Merida | 24 | 12 | 6 | 6 | 42 | 23 | 6 | 5 | 12 | 23 | 19 |
 | Linares | 19 | 12 | 3 | 4 | 39 | 19 | 5 | 5 | 9 | 20 | 19 |
 | Amorebieta | 19 | 8 | 6 | 5 | 30 | 19 | 2 | 5 | 12 | 11 | 19 |
 | Merida AD | 28 | 14 | 6 | 8 | 48 | 28 | 7 | 9 | 12 | 30 | 18 |
-| AD Merida | 23 | 12 | 5 | 6 | 41 | 23 | 6 | 5 | 12 | 23 | 18 |
 | Andorra | 19 | 11 | 6 | 2 | 39 | 19 | 5 | 6 | 8 | 21 | 18 |
 | Ath Bilbao B | 61 | 24 | 18 | 19 | 90 | 63 | 19 | 16 | 28 | 73 | 17 |
 | Sabadell | 19 | 8 | 4 | 7 | 28 | 19 | 3 | 5 | 11 | 14 | 14 |
@@ -121,9 +121,9 @@
 | UD Logrones | 23 | 13 | 5 | 5 | 44 | 24 | 11 | 5 | 8 | 38 | 6 |
 | Calahorra | 19 | 8 | 5 | 6 | 29 | 19 | 6 | 5 | 8 | 23 | 6 |
 | Mirandes | 4 | 3 | 1 | 0 | 10 | 5 | 1 | 1 | 3 | 4 | 6 |
-| CD Coria | 4 | 2 | 1 | 1 | 7 | 4 | 0 | 1 | 3 | 1 | 6 |
 | Dep. Fabril | 5 | 2 | 1 | 2 | 7 | 4 | 0 | 1 | 3 | 1 | 6 |
 | Osasuna B | 57 | 17 | 17 | 23 | 68 | 57 | 16 | 15 | 26 | 63 | 5 |
+| CD Coria | 4 | 2 | 1 | 1 | 7 | 5 | 0 | 2 | 3 | 2 | 5 |
 | Extremadura UD | 19 | 3 | 3 | 13 | 12 | 19 | 2 | 2 | 15 | 8 | 4 |
 | UD Ourense | 4 | 1 | 1 | 2 | 4 | 5 | 0 | 1 | 4 | 1 | 3 |
 | Sestao | 38 | 11 | 13 | 14 | 46 | 38 | 11 | 11 | 16 | 44 | 2 |
@@ -176,7 +176,7 @@
 Unionistas
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **798** (showing the 15 most frequent)
+- Distinct fixtures: **799** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -206,7 +206,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Cultural Leonesa | 12 | 10 | 6 | 2 | - | 12 |
 | Dep. La Coruna | 2 | 4 | 1 | - | - | - |
 | Racing Club Ferrol | 3 | 1 | - | - | 13 | 3 |
-| Ponferradina | - | - | 5 | 1 | 4 | 9 |
+| Ponferradina | - | - | 5 | 1 | 4 | 10 |
 | Lugo | - | - | 10 | 15 | 9 | 1 |
 | Zamora | 17 | - | - | 8 | 3 | 13 |
 | Ath Bilbao B | 15 | - | - | 7 | 11 | 11 |
@@ -233,7 +233,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Tenerife | - | - | - | - | 1 | - |
 | Merida AD | - | 9 | - | - | 21 | - |
 | Alcorcon | - | 2 | - | - | - | - |
-| AD Merida | - | - | - | - | 10 | 10 |
+| AD Merida | - | - | - | - | 10 | 9 |
 | Cacereno | - | - | - | - | 14 | 4 |
 | Andorra | - | - | - | 4 | - | - |
 | Linares | - | 6 | - | - | - | - |

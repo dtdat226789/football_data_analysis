@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:42:15+00:00",
+  "generated_at": "2026-10-27T02:24:06+00:00",
   "config": {
     "league": "norway",
     "out_dir": "data/analysis/norway",
@@ -29,14 +29,14 @@
       "path": "data/analysis/norway/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 49.73
+      "size_kb": 50.04
     },
     {
       "report_name": "matches_analysis",
       "path": "data/analysis/norway/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 22.59
+      "size_kb": 22.77
     },
     {
       "report_name": "goals_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/norway/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 257.73
+      "size_kb": 258.67
     },
     {
       "report_name": "relationships",
@@ -83,56 +83,56 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1626 matches: home wins 46.6%, draws 22.4%, away wins 31.1% (757H / 364D / 505A)",
+      "detail": "1632 matches: home wins 46.7%, draws 22.4%, away wins 30.9% (762H / 365D / 505A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "51 home and 33 away comebacks (trailing at HT but winning at FT)",
+      "detail": "52 home and 33 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 472 times",
+      "detail": "home lead at HT -> home win occurred 475 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1626 matches produced 5056 goals (avg 3.109 per match)",
+      "detail": "1632 matches produced 5079 goals (avg 3.112 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 56.7% vs away 43.3% of 5056 goals in total (home/away ratio 1.31)",
+      "detail": "home 56.7% vs away 43.3% of 5079 goals in total (home/away ratio 1.31)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "948 of 1626 matches (58.3%)",
+      "detail": "953 of 1632 matches (58.4%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 547 scoring matches, 35.3% of scoring)",
+      "detail": "minute 1-15 (first goal in 549 scoring matches, 35.3% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 29.38, median 24.0",
+      "detail": "mean 29.37, median 24.0",
       "importance": "low",
       "id": "F8"
     },
@@ -167,21 +167,21 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026: Viking beat Bodo/Glimt by 0 pts",
+      "detail": "2025: Viking beat Bodo/Glimt by 1 pt",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.085 per match): first half 3.154 vs last half 3.069 across 7 seasons",
+      "detail": "down (-0.079 per match): first half 3.154 vs last half 3.075 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
     {
       "source": "season_trends",
       "finding": "Largest view divergence",
-      "detail": "2022 (goals view, avg abs position diff 5.250)",
+      "detail": "2026 (goals view, avg abs position diff 5.375)",
       "importance": "low",
       "id": "F15"
     },
@@ -202,14 +202,14 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "2-1 (140 of 757 home matches, 18.5%)",
+      "detail": "2-1 (141 of 762 home matches, 18.5%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (168 of 364 draw matches, 46.2%)",
+      "detail": "1-1 (168 of 365 draw matches, 46.0%)",
       "importance": "low",
       "id": "F19"
     },
@@ -243,7 +243,7 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (44)",
+      "finding": "Data-quality warnings (45)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1626 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1632 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1626,
-    "avg_goals": 3.109,
-    "home_win_pct": 46.6,
+    "n_matches": 1632,
+    "avg_goals": 3.112,
+    "home_win_pct": 46.7,
     "draw_pct": 22.4,
-    "away_win_pct": 31.1,
+    "away_win_pct": 30.9,
     "most_common_scoreline": "1-1",
     "dominant_team": "Bodo/Glimt",
     "champion_most_titles": "Bodo/Glimt",
-    "btts_rate_pct": 58.3
+    "btts_rate_pct": 58.4
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 49.73
+      "size_kb": 50.04
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 22.59
+      "size_kb": 22.77
     },
     {
       "module": "goals_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 257.73
+      "size_kb": 258.67
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 186 matches, expected 380",
+      "message": "Season 2026 has 192 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 186,
+        "n_matches": 192,
         "expected": 380
       }
     },
@@ -537,12 +537,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2023 home outcome share 50.8% vs overall 46.6%",
+      "message": "Season 2023 home outcome share 50.8% vs overall 46.7%",
       "details": {
         "season": "2023",
         "outcome": "home",
         "season_share": 50.8,
-        "overall_share": 46.6
+        "overall_share": 46.7
       }
     },
     {
@@ -559,12 +559,23 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024 home outcome share 41.7% vs overall 46.6%",
+      "message": "Season 2024 home outcome share 41.7% vs overall 46.7%",
       "details": {
         "season": "2024",
         "outcome": "home",
         "season_share": 41.7,
-        "overall_share": 46.6
+        "overall_share": 46.7
+      }
+    },
+    {
+      "code": "GOALLESS_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026 goalless share 3.1% vs overall 4.7% (deviation 1.6 pp)",
+      "details": {
+        "season": "2026",
+        "season_goalless_pct": 3.1,
+        "overall_goalless_pct": 4.7,
+        "deviation_pp": 1.6
       }
     },
     {
@@ -624,8 +635,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 98858,
-        "distinct": 98844,
+        "rows": 98960,
+        "distinct": 98946,
         "duplicates": 14
       }
     },
@@ -634,10 +645,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=394, fgte=394 rows)",
       "details": {
-        "total": 98858,
+        "total": 98960,
         "fgt_inconsistent": 394,
         "fgte_inconsistent": 394,
-        "n_with_fgt": 90999
+        "n_with_fgt": 91094
       }
     },
     {

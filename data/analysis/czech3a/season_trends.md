@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:29:20+00:00
+- Generated: 2026-10-27T01:44:00+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 3. CFL - Group A (Czech Republic)
 - Scope: league `czech3a`
@@ -35,7 +35,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 70 | 64 | 45 | 43 | 34 | 26 |
 | 2024-2025 | 63 | 57 | 50 | 46 | 30 | 22 |
 | 2025-2026 | 72 | 69 | 52 | 48 | 38 | 28 |
-| 2026-2027 | 26 | 26 | 23 | 18 | 11 | 3 |
+| 2026-2027 | 26 | 26 | 23 | 18 | 12 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -44,7 +44,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 13 | 34 | 14 | 33 | 1 pts |
 | 2024-2025 | 13 | 30 | 14 | 29 | 1 pts |
 | 2025-2026 | 13 | 38 | 14 | 34 | 4 pts |
-| 2026-2027 | 13 | 11 | 14 | 10 | 1 pts |
+| 2026-2027 | 13 | 12 | 14 | 10 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -53,7 +53,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 793 | 3.304 | 48.8% | 22.5% | 28.8% | 4.6% | 41.62 |
 | 2024-2025 | 240 | 754 | 3.142 | 42.5% | 20.8% | 36.7% | 4.2% | 39.41 |
 | 2025-2026 | 272 | 869 | 3.195 | 45.6% | 21.0% | 33.5% | 6.2% | 44.65 |
-| 2026-2027 | 94 | 336 | 3.574 | 42.6% | 29.8% | 27.7% | 8.5% | 15.88 |
+| 2026-2027 | 95 | 337 | 3.547 | 42.1% | 29.5% | 28.4% | 8.4% | 16.06 |
 
 ## 6. View divergence
 - Largest divergence: **2022-2023** (goals view, avg abs position diff = 6.375)
@@ -66,7 +66,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.500 | 3.875 |
 | 2024-2025 | 3.294 | 5.059 |
 | 2025-2026 | 3.059 | 4.471 |
-| 2026-2027 | 1.750 | 3.875 |
+| 2026-2027 | 2.375 | 3.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

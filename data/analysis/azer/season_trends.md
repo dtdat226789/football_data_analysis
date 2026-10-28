@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:26:52+00:00
+- Generated: 2026-10-27T01:40:48+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (Azerbaijan)
 - Scope: league `azer`
@@ -14,11 +14,11 @@
 | 2023-2024 | Qarabag | 83 | Zira | 25 pts |
 | 2024-2025 | Qarabag | 89 | Zira | 15 pts |
 | 2025-2026 | Sabah Baku | 78 | Qarabag | 9 pts |
-| 2026-2027 | Sabah FC | 19 | Sabah Baku | 0 pts |
+| 2026-2027 | Sabah FC | 20 | Sabah Baku | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
-- Tightest race: **2026-2027** - Sabah FC beat Sabah Baku by **0** pts
+- Tightest race: **2026-2027** - Sabah FC beat Sabah Baku by **1** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023-2024 | 25 pts |  |
 | 2024-2025 | 15 pts |  |
 | 2025-2026 | 9 pts |  |
-| 2026-2027 | 0 pts | yes |
+| 2026-2027 | 1 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 9 = last safe, 12 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 83 | 58 | 57 | 48 | 35 | - |
 | 2024-2025 | 89 | 74 | 55 | 43 | 32 | - |
 | 2025-2026 | 78 | 69 | 59 | 46 | 34 | 15 |
-| 2026-2027 | 19 | 19 | 17 | 15 | 8 | 3 |
+| 2026-2027 | 20 | 19 | 18 | 15 | 10 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 9 | 35 | 10 | 26 | 9 pts |
 | 2024-2025 | 9 | 32 | 10 | 22 | 10 pts |
 | 2025-2026 | 9 | 34 | 10 | 31 | 3 pts |
-| 2026-2027 | 9 | 8 | 10 | 7 | 1 pts |
+| 2026-2027 | 9 | 10 | 10 | 8 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,10 +63,10 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 180 | 471 | 2.617 | 43.9% | 22.8% | 33.3% | 6.1% | 49.9 |
 | 2024-2025 | 180 | 432 | 2.4 | 40.6% | 27.8% | 31.7% | 8.3% | 49.0 |
 | 2025-2026 | 200 | 515 | 2.575 | 37.5% | 24.5% | 38.0% | 9.0% | 42.38 |
-| 2026-2027 | 57 | 150 | 2.632 | 45.6% | 22.8% | 31.6% | 8.8% | 12.15 |
+| 2026-2027 | 59 | 153 | 2.593 | 45.8% | 23.7% | 30.5% | 10.2% | 12.54 |
 
 ## 6. View divergence
-- Largest divergence: **2023-2024** (goals view, avg abs position diff = 3.600)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 4.462)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.000 | 3.600 |
 | 2024-2025 | 1.600 | 3.200 |
 | 2025-2026 | 2.462 | 2.923 |
-| 2026-2027 | 1.538 | 3.385 |
+| 2026-2027 | 2.308 | 4.462 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

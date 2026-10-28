@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:31:46+00:00
+- Generated: 2026-10-27T01:47:11+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **944** across **7** seasons.
+- Matches analysed: **945** across **7** seasons.
 - Distinct scorelines seen: **38**.
 
 | scoreline | count | pct |
@@ -17,9 +17,9 @@
 | 0-1 | 79 | 8.4% |
 | 0-0 | 62 | 6.6% |
 | 0-2 | 61 | 6.5% |
-| 1-2 | 60 | 6.4% |
+| 1-2 | 60 | 6.3% |
 | 2-0 | 49 | 5.2% |
-| 2-2 | 47 | 5.0% |
+| 2-2 | 48 | 5.1% |
 | 3-2 | 45 | 4.8% |
 | 3-0 | 43 | 4.6% |
 | 3-1 | 36 | 3.8% |
@@ -91,10 +91,10 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 22 | 14.5% |
-| 1-0 | 21 | 13.8% |
-| 0-1 | 13 | 8.6% |
-| 2-1 | 12 | 7.9% |
+| 1-1 | 22 | 14.4% |
+| 1-0 | 21 | 13.7% |
+| 0-1 | 13 | 8.5% |
+| 2-1 | 12 | 7.8% |
 | 0-0 | 11 | 7.2% |
 
 ## 3. Total-goal histogram
@@ -105,8 +105,8 @@ _10+ groups all matches with 10 or more total goals._
 | 0 | 62 | 6.6% |
 | 1 | 165 | 17.5% |
 | 2 | 217 | 23.0% |
-| 3 | 213 | 22.6% |
-| 4 | 137 | 14.5% |
+| 3 | 213 | 22.5% |
+| 4 | 138 | 14.6% |
 | 5 | 102 | 10.8% |
 | 6 | 30 | 3.2% |
 | 7 | 14 | 1.5% |
@@ -139,7 +139,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-10-24 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **720** (draws: **224**)
+- Decided matches: **720** (draws: **225**)
 - Average winning margin: **1.78**
 
 | margin | matches | pct |
@@ -172,7 +172,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 404 | 1-0 | 86 | 21.3% |
-| draw | 224 | 1-1 | 107 | 47.8% |
+| draw | 225 | 1-1 | 107 | 47.6% |
 | away | 316 | 0-1 | 79 | 25.0% |
 
 ---

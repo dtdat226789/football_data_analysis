@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:36:38+00:00
+- Generated: 2026-10-27T01:54:29+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`

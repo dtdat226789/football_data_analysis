@@ -1,34 +1,34 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:53:17+00:00
+- Generated: 2026-10-27T02:35:24+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Bundesliga Women (Germany)
 - Scope: league `wgermany1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **893** across **7** seasons.
+- Matches analysed: **897** across **7** seasons.
 - Distinct scorelines seen: **48**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 65 | 7.3% |
+| 2-1 | 65 | 7.2% |
 | 1-1 | 61 | 6.8% |
 | 0-1 | 57 | 6.4% |
-| 2-0 | 52 | 5.8% |
+| 2-0 | 53 | 5.9% |
 | 1-0 | 51 | 5.7% |
 | 3-0 | 48 | 5.4% |
 | 1-2 | 48 | 5.4% |
 | 0-2 | 48 | 5.4% |
-| 0-0 | 46 | 5.2% |
+| 0-0 | 46 | 5.1% |
 | 0-3 | 45 | 5.0% |
 | 4-0 | 31 | 3.5% |
-| 3-1 | 29 | 3.2% |
+| 3-1 | 30 | 3.3% |
 | 1-3 | 27 | 3.0% |
 | 0-4 | 26 | 2.9% |
 | 3-2 | 25 | 2.8% |
-| 1-4 | 21 | 2.4% |
-| 2-3 | 21 | 2.4% |
-| 4-1 | 21 | 2.4% |
+| 1-4 | 21 | 2.3% |
+| 2-3 | 21 | 2.3% |
+| 4-1 | 21 | 2.3% |
 | 2-2 | 20 | 2.2% |
 | 5-0 | 16 | 1.8% |
 
@@ -91,31 +91,31 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-2 | 6 | 11.8% |
-| 1-1 | 5 | 9.8% |
-| 2-1 | 5 | 9.8% |
-| 2-0 | 3 | 5.9% |
-| 1-0 | 3 | 5.9% |
+| 1-2 | 6 | 10.9% |
+| 1-1 | 5 | 9.1% |
+| 2-1 | 5 | 9.1% |
+| 2-0 | 4 | 7.3% |
+| 1-0 | 3 | 5.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 46 | 5.2% |
-| 1 | 108 | 12.1% |
-| 2 | 161 | 18.0% |
-| 3 | 206 | 23.1% |
-| 4 | 133 | 14.9% |
-| 5 | 115 | 12.9% |
+| 0 | 46 | 5.1% |
+| 1 | 108 | 12.0% |
+| 2 | 162 | 18.1% |
+| 3 | 206 | 23.0% |
+| 4 | 134 | 14.9% |
+| 5 | 115 | 12.8% |
 | 6 | 76 | 8.5% |
-| 7 | 21 | 2.4% |
-| 8 | 20 | 2.2% |
+| 7 | 22 | 2.5% |
+| 8 | 21 | 2.3% |
 | 9 | 2 | 0.2% |
 | 10+ | 5 | 0.6% |
 
 ## 4. Extreme scorelines
-- Matches with 7+ total goals: **48**
+- Matches with 7+ total goals: **50**
 
 | season | date | scoreline | total goals |
 |---|---|---|---|
@@ -146,6 +146,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2025-10-04 | 0-8 | 8 |
 | 2025-2026 | 2025-12-10 | 5-3 | 8 |
 | 2025-2026 | 2026-04-27 | 6-2 | 8 |
+| 2026-2027 | 2026-10-25 | 4-4 | 8 |
 | 2020-2021 | 2020-10-18 | 5-2 | 7 |
 | 2020-2021 | 2020-11-08 | 2-5 | 7 |
 | 2020-2021 | 2020-11-21 | 1-6 | 7 |
@@ -167,26 +168,27 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-25 | 4-3 | 7 |
 | 2025-2026 | 2026-05-10 | 7-0 | 7 |
 | 2026-2027 | 2026-09-19 | 5-2 | 7 |
+| 2026-2027 | 2026-10-25 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **755** (draws: **138**)
-- Average winning margin: **2.48**
+- Decided matches: **758** (draws: **139**)
+- Average winning margin: **2.47**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 271 | 35.9% |
-| 2 | 177 | 23.4% |
-| 3+ | 307 | 40.7% |
+| 1 | 272 | 35.9% |
+| 2 | 179 | 23.6% |
+| 3+ | 307 | 40.5% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **411** | avg margin: **2.59** | max margin: **10**
+- Matches: **414** | avg margin: **2.58** | max margin: **10**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 143 | 34.8% |
-| 2 | 94 | 22.9% |
-| 3+ | 174 | 42.3% |
+| 1 | 144 | 34.8% |
+| 2 | 96 | 23.2% |
+| 3+ | 174 | 42.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -201,8 +203,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 411 | 2-1 | 65 | 15.8% |
-| draw | 138 | 1-1 | 61 | 44.2% |
+| home | 414 | 2-1 | 65 | 15.7% |
+| draw | 139 | 1-1 | 61 | 43.9% |
 | away | 344 | 0-1 | 57 | 16.6% |
 
 ---

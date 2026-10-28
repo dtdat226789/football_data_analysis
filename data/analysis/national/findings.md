@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:41:41+00:00
+- Generated: 2026-10-27T02:23:25+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2022-2023: Wrexham beat Notts Co by 4 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.087 per match): first half 2.823 vs last half 2.91 across 6 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2024-2025 (goals view, avg abs position diff 8.500)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.917)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.833)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 361 matches (12.5%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (265 of 1251 home matches, 21.2%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (361 of 713 draw matches, 50.6%)

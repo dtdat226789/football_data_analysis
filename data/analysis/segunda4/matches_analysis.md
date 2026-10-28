@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:48:08+00:00
+- Generated: 2026-10-27T02:30:10+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Segunda RFEF - Group 4 (Spain)
 - Scope: league `segunda4`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1794 |
-| Home wins | 809 (45.1%) |
-| Draws | 509 (28.4%) |
+| Matches | 1799 |
+| Home wins | 813 (45.2%) |
+| Draws | 510 (28.3%) |
 | Away wins | 476 (26.5%) |
-| Total goals | 3986 |
-| Average goals per match | 2.222 |
-| Goalless matches | 201 (11.2%) |
+| Total goals | 3995 |
+| Average goals per match | 2.221 |
+| Goalless matches | 202 (11.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,18 +25,18 @@
 | 2023-2024 | 306 | 141 (46.1%) | 96 (31.4%) | 69 (22.5%) | 631 | 2.062 | 46 (15.0%) |
 | 2024-2025 | 306 | 130 (42.5%) | 84 (27.5%) | 92 (30.1%) | 629 | 2.056 | 33 (10.8%) |
 | 2025-2026 | 323 | 162 (50.2%) | 84 (26.0%) | 77 (23.8%) | 738 | 2.285 | 28 (8.7%) |
-| 2026-2027 | 67 | 30 (44.8%) | 21 (31.3%) | 16 (23.9%) | 181 | 2.701 | 7 (10.4%) |
+| 2026-2027 | 72 | 34 (47.2%) | 22 (30.6%) | 16 (22.2%) | 190 | 2.639 | 8 (11.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 447 (80.5%) | 79 (14.2%) | 29 (5.2%) | 555 |
-| HT draw | 317 (36.0%) | 355 (40.3%) | 209 (23.7%) | 881 |
+| HT home lead | 450 (80.6%) | 79 (14.2%) | 29 (5.2%) | 558 |
+| HT draw | 318 (36.0%) | 356 (40.3%) | 209 (23.7%) | 883 |
 | HT away lead | 44 (12.4%) | 75 (21.1%) | 237 (66.6%) | 356 |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **44** (2.5%)
+- Home comebacks (trailing at HT, won at FT): **44** (2.4%)
 - Away comebacks (trailing at HT, won at FT): **29** (1.6%)
 
 ### Home comebacks
@@ -123,33 +123,33 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 555 | 447 (80.5%) | 79 (14.2%) | 29 (5.2%) |
+| Home lead | 558 | 450 (80.6%) | 79 (14.2%) | 29 (5.2%) |
 | Away lead | 356 | 237 (66.6%) | 75 (21.1%) | 44 (12.4%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 317 | 36.0% |
-| Draw | 355 | 40.3% |
+| Home win | 318 | 36.0% |
+| Draw | 356 | 40.3% |
 | Away win | 209 | 23.7% |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1591` of `1794` (88.7%)
+- Matches with a first-goal time recorded: `1595` of `1799` (88.7%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 432 | 24.1% | 225 (52.1%) | 79 (18.3%) | 128 (29.6%) |
-| 16-30 | 385 | 21.5% | 198 (51.4%) | 76 (19.7%) | 111 (28.8%) |
-| 31-45 | 274 | 15.3% | 143 (52.2%) | 63 (23.0%) | 68 (24.8%) |
+| 1-15 | 433 | 24.1% | 226 (52.2%) | 79 (18.2%) | 128 (29.6%) |
+| 16-30 | 386 | 21.5% | 199 (51.6%) | 76 (19.7%) | 111 (28.8%) |
+| 31-45 | 275 | 15.3% | 144 (52.4%) | 63 (22.9%) | 68 (24.7%) |
 | 46-60 | 214 | 11.9% | 100 (46.7%) | 46 (21.5%) | 68 (31.8%) |
-| 61-75 | 138 | 7.7% | 74 (53.6%) | 32 (23.2%) | 32 (23.2%) |
+| 61-75 | 139 | 7.7% | 75 (54.0%) | 32 (23.0%) | 32 (23.0%) |
 | 76-90 | 121 | 6.7% | 54 (44.6%) | 12 (9.9%) | 55 (45.5%) |
 | 91-120 | 27 | 1.5% | 14 (51.9%) | 0 (0.0%) | 13 (48.1%) |
 
 ## 7. Goalless matches
-- Overall: **201** of `1794` (11.2%)
+- Overall: **202** of `1799` (11.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -159,7 +159,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 306 | 46 | 15.0% |
 | 2024-2025 | 306 | 33 | 10.8% |
 | 2025-2026 | 323 | 28 | 8.7% |
-| 2026-2027 | 67 | 7 | 10.4% |
+| 2026-2027 | 72 | 8 | 11.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

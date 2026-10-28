@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:29:07+00:00
+- Generated: 2026-10-27T01:43:39+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1477** across **7** seasons.
+- Matches analysed: **1478** across **7** seasons.
 - Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 2-2 | 13 | 13.7% |
-| 1-1 | 11 | 11.6% |
-| 2-1 | 8 | 8.4% |
-| 2-0 | 6 | 6.3% |
-| 1-0 | 6 | 6.3% |
+| 2-2 | 13 | 13.5% |
+| 1-1 | 11 | 11.5% |
+| 2-1 | 8 | 8.3% |
+| 2-0 | 6 | 6.2% |
+| 1-0 | 6 | 6.2% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -108,7 +108,7 @@ _10+ groups all matches with 10 or more total goals._
 | 3 | 334 | 22.6% |
 | 4 | 227 | 15.4% |
 | 5 | 109 | 7.4% |
-| 6 | 58 | 3.9% |
+| 6 | 59 | 4.0% |
 | 7 | 20 | 1.4% |
 | 8 | 7 | 0.5% |
 | 9 | 7 | 0.5% |
@@ -155,24 +155,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-08-15 | 2-5 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1087** (draws: **390**)
+- Decided matches: **1088** (draws: **390**)
 - Average winning margin: **1.77**
 
 | margin | matches | pct |
 |---|---|---|
 | 1 | 573 | 52.7% |
 | 2 | 299 | 27.5% |
-| 3+ | 215 | 19.8% |
+| 3+ | 216 | 19.9% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **652** | avg margin: **1.86** | max margin: **6**
+- Matches: **653** | avg margin: **1.87** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 322 | 49.4% |
+| 1 | 322 | 49.3% |
 | 2 | 180 | 27.6% |
-| 3+ | 150 | 23.0% |
+| 3+ | 151 | 23.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -187,7 +187,7 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 652 | 1-0 | 155 | 23.8% |
+| home | 653 | 1-0 | 155 | 23.7% |
 | draw | 390 | 1-1 | 174 | 44.6% |
 | away | 435 | 0-1 | 117 | 26.9% |
 

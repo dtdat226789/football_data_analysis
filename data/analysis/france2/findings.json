@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:32:40+00:00",
+  "generated_at": "2026-10-27T01:48:15+00:00",
   "config": {
     "league": "france2",
     "out_dir": "data/analysis/france2",
@@ -583,8 +583,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 43014,
-        "distinct": 43009,
+        "rows": 43043,
+        "distinct": 43038,
         "duplicates": 5
       }
     },
@@ -593,10 +593,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=317, fgte=317 rows)",
       "details": {
-        "total": 43014,
+        "total": 43043,
         "fgt_inconsistent": 317,
         "fgte_inconsistent": 317,
-        "n_with_fgt": 39351
+        "n_with_fgt": 39377
       }
     },
     {

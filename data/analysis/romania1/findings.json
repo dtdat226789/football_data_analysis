@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:44:51+00:00",
+  "generated_at": "2026-10-27T02:26:56+00:00",
   "config": {
     "league": "romania1",
     "out_dir": "data/analysis/romania1",
@@ -64,7 +64,7 @@
       "path": "data/analysis/romania1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 238.94
+      "size_kb": 239.31
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1651 matches: home wins 42.3%, draws 29.3%, away wins 28.5% (698H / 483D / 470A)",
+      "detail": "1653 matches: home wins 42.3%, draws 29.3%, away wins 28.4% (699H / 484D / 470A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 399 times",
+      "detail": "home lead at HT -> home win occurred 400 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1651 matches produced 3956 goals (avg 2.396 per match)",
+      "detail": "1653 matches produced 3967 goals (avg 2.400 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 56.4% vs away 43.6% of 3956 goals in total (home/away ratio 1.29)",
+      "detail": "home 56.4% vs away 43.6% of 3967 goals in total (home/away ratio 1.29)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "798 of 1651 matches (48.3%)",
+      "detail": "800 of 1653 matches (48.4%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 450 scoring matches, 30.2% of scoring)",
+      "detail": "minute 1-15 (first goal in 451 scoring matches, 30.2% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 33.15, median 28.0",
+      "detail": "mean 33.13, median 28.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "CFR Cluj leads with 395 points across 7 seasons (1 title(s), GD 142)",
+      "detail": "CFR Cluj leads with 396 points across 7 seasons (1 title(s), GD 142)",
       "importance": "high",
       "id": "F9"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.233 per match): first half 2.267 vs last half 2.5 across 7 seasons",
+      "detail": "up (+0.252 per match): first half 2.267 vs last half 2.519 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -202,14 +202,14 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (203 of 698 home matches, 29.1%)",
+      "detail": "1-0 (203 of 699 home matches, 29.0%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (234 of 483 draw matches, 48.4%)",
+      "detail": "1-1 (234 of 484 draw matches, 48.3%)",
       "importance": "low",
       "id": "F19"
     },
@@ -223,7 +223,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "22 match(es) with >= 7 total goals",
+      "detail": "23 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1651 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1653 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1651,
-    "avg_goals": 2.396,
+    "n_matches": 1653,
+    "avg_goals": 2.4,
     "home_win_pct": 42.3,
     "draw_pct": 29.3,
-    "away_win_pct": 28.5,
+    "away_win_pct": 28.4,
     "most_common_scoreline": "1-1",
     "dominant_team": "CFR Cluj",
     "champion_most_titles": "FCSB",
-    "btts_rate_pct": 48.3
+    "btts_rate_pct": 48.4
   },
   "comparison": [
     {
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 238.94
+      "size_kb": 239.31
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 101 matches, expected 380",
+      "message": "Season 2026-2027 has 103 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 101,
+        "n_matches": 103,
         "expected": 380
       }
     },
@@ -526,12 +526,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020-2021 away outcome share 34.6% vs overall 28.5%",
+      "message": "Season 2020-2021 away outcome share 34.6% vs overall 28.4%",
       "details": {
         "season": "2020-2021",
         "outcome": "away",
         "season_share": 34.6,
-        "overall_share": 28.5
+        "overall_share": 28.4
       }
     },
     {
@@ -581,45 +581,45 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 6.9% vs overall 9.6% (deviation 2.7 pp)",
+      "message": "Season 2026-2027 goalless share 6.8% vs overall 9.6% (deviation 2.8 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 6.9,
+        "season_goalless_pct": 6.8,
         "overall_goalless_pct": 9.6,
-        "deviation_pp": 2.7
+        "deviation_pp": 2.8
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 53.5% vs overall 42.3%",
+      "message": "Season 2026-2027 home outcome share 53.4% vs overall 42.3%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 53.5,
+        "season_share": 53.4,
         "overall_share": 42.3
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 23.8% vs overall 29.3%",
+      "message": "Season 2026-2027 draw outcome share 24.3% vs overall 29.3%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 23.8,
+        "season_share": 24.3,
         "overall_share": 29.3
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 22.8% vs overall 28.5%",
+      "message": "Season 2026-2027 away outcome share 22.3% vs overall 28.4%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 22.8,
-        "overall_share": 28.5
+        "season_share": 22.3,
+        "overall_share": 28.4
       }
     },
     {
@@ -659,8 +659,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 112983,
-        "distinct": 112969,
+        "rows": 113111,
+        "distinct": 113097,
         "duplicates": 14
       }
     },
@@ -669,10 +669,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=414, fgte=414 rows)",
       "details": {
-        "total": 112983,
+        "total": 113111,
         "fgt_inconsistent": 414,
         "fgte_inconsistent": 414,
-        "n_with_fgt": 103924
+        "n_with_fgt": 104043
       }
     },
     {

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:29:05+00:00
+- Generated: 2026-10-27T01:43:37+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 687 | 2.862 | 46.2% | 25.4% | 28.3% | 7.1% | 41.19 |
 | 2024-2025 | 240 | 605 | 2.521 | 40.4% | 31.2% | 28.3% | 9.6% | 40.31 |
 | 2025-2026 | 240 | 643 | 2.679 | 46.2% | 20.8% | 32.9% | 5.8% | 41.88 |
-| 2026-2027 | 95 | 291 | 3.063 | 38.9% | 32.6% | 28.4% | 4.2% | 15.88 |
+| 2026-2027 | 96 | 297 | 3.094 | 39.6% | 32.3% | 28.1% | 4.2% | 16.06 |
 
 ## 6. View divergence
 - Largest divergence: **2023-2024** (goals view, avg abs position diff = 6.750)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.125 | 6.750 |
 | 2024-2025 | 2.250 | 6.000 |
 | 2025-2026 | 2.250 | 4.250 |
-| 2026-2027 | 2.000 | 4.375 |
+| 2026-2027 | 1.875 | 4.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

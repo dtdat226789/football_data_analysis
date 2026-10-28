@@ -1,21 +1,21 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:33:11+00:00
+- Generated: 2026-10-27T01:48:52+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1696** across **7** seasons.
+- Matches analysed: **1699** across **7** seasons.
 - Distinct scorelines seen: **56**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 175 | 10.3% |
-| 2-1 | 118 | 7.0% |
+| 2-1 | 118 | 6.9% |
 | 2-0 | 102 | 6.0% |
 | 1-0 | 99 | 5.8% |
-| 2-2 | 98 | 5.8% |
+| 2-2 | 99 | 5.8% |
 | 1-2 | 97 | 5.7% |
 | 0-1 | 97 | 5.7% |
 | 3-1 | 86 | 5.1% |
@@ -24,9 +24,9 @@
 | 0-2 | 71 | 4.2% |
 | 0-3 | 66 | 3.9% |
 | 3-2 | 65 | 3.8% |
-| 3-0 | 54 | 3.2% |
+| 3-0 | 55 | 3.2% |
+| 4-1 | 48 | 2.8% |
 | 2-3 | 48 | 2.8% |
-| 4-1 | 47 | 2.8% |
 | 4-0 | 42 | 2.5% |
 | 0-4 | 30 | 1.8% |
 | 3-3 | 24 | 1.4% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 11 | 8.7% |
-| 0-3 | 8 | 6.3% |
-| 0-2 | 8 | 6.3% |
-| 2-0 | 8 | 6.3% |
-| 3-2 | 8 | 6.3% |
+| 1-1 | 11 | 8.5% |
+| 0-3 | 8 | 6.2% |
+| 0-2 | 8 | 6.2% |
+| 2-2 | 8 | 6.2% |
+| 2-0 | 8 | 6.2% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,11 +103,11 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 78 | 4.6% |
-| 1 | 196 | 11.6% |
+| 1 | 196 | 11.5% |
 | 2 | 348 | 20.5% |
-| 3 | 335 | 19.8% |
-| 4 | 331 | 19.5% |
-| 5 | 213 | 12.6% |
+| 3 | 336 | 19.8% |
+| 4 | 332 | 19.5% |
+| 5 | 214 | 12.6% |
 | 6 | 100 | 5.9% |
 | 7 | 46 | 2.7% |
 | 8 | 30 | 1.8% |
@@ -216,24 +216,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-24 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1314** (draws: **382**)
+- Decided matches: **1316** (draws: **383**)
 - Average winning margin: **2.1**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 544 | 41.4% |
+| 1 | 544 | 41.3% |
 | 2 | 384 | 29.2% |
-| 3+ | 386 | 29.4% |
+| 3+ | 388 | 29.5% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **724** | avg margin: **2.16** | max margin: **9**
+- Matches: **726** | avg margin: **2.17** | max margin: **9**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 288 | 39.8% |
-| 2 | 212 | 29.3% |
-| 3+ | 224 | 30.9% |
+| 1 | 288 | 39.7% |
+| 2 | 212 | 29.2% |
+| 3+ | 226 | 31.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -248,8 +248,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 724 | 2-1 | 118 | 16.3% |
-| draw | 382 | 1-1 | 175 | 45.8% |
+| home | 726 | 2-1 | 118 | 16.3% |
+| draw | 383 | 1-1 | 175 | 45.7% |
 | away | 590 | 1-2 | 97 | 16.4% |
 
 ---

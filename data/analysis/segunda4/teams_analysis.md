@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:48:12+00:00
+- Generated: 2026-10-27T02:30:14+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Segunda RFEF - Group 4 (Spain)
 - Scope: league `segunda4`
 
-- Teams: **59** | Seasons: **7** | Matches: **1794**
+- Teams: **59** | Seasons: **7** | Matches: **1799**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -19,25 +19,25 @@
 | La Union | 3 | 103 | 49 | 14 | 40 | 161 | 121 | 99 | 22 | 53.67 | 2 | 10 | 0 |
 | Recreativo Huelva | 4 | 95 | 44 | 28 | 23 | 160 | 128 | 83 | 45 | 40.0 | 1 | 15 | 1 |
 | Antoniano | 4 | 111 | 42 | 29 | 40 | 155 | 119 | 130 | -11 | 38.75 | 4 | 18 | 0 |
-| Sevilla FC B | 4 | 93 | 41 | 27 | 25 | 150 | 127 | 82 | 45 | 37.5 | 1 | 11 | 1 |
+| Sevilla FC B | 4 | 94 | 42 | 27 | 25 | 153 | 129 | 82 | 47 | 38.25 | 1 | 8 | 1 |
 | Betis B | 4 | 94 | 35 | 37 | 22 | 142 | 113 | 83 | 30 | 35.5 | 2 | 12 | 0 |
 | Linares | 4 | 95 | 37 | 30 | 28 | 141 | 110 | 105 | 5 | 35.25 | 2 | 9 | 0 |
 | San Roque | 3 | 102 | 35 | 30 | 37 | 135 | 108 | 97 | 11 | 45.0 | 6 | 15 | 0 |
+| Xerez CD | 3 | 77 | 35 | 18 | 24 | 123 | 72 | 56 | 16 | 41.0 | 4 | 13 | 0 |
 | Velez | 3 | 102 | 33 | 23 | 46 | 122 | 111 | 155 | -44 | 40.67 | 11 | 17 | 0 |
-| Xerez CD | 3 | 76 | 34 | 18 | 24 | 120 | 71 | 56 | 15 | 40.0 | 4 | 13 | 0 |
 | Antequera | 2 | 68 | 33 | 18 | 17 | 117 | 94 | 61 | 33 | 58.5 | 1 | 12 | 1 |
 | Linense | 3 | 86 | 29 | 25 | 32 | 112 | 79 | 87 | -8 | 37.33 | 8 | 14 | 0 |
 | Cordoba | 2 | 52 | 32 | 13 | 7 | 109 | 107 | 45 | 62 | 54.5 | 1 | 9 | 1 |
 | Deportiva Minera | 2 | 69 | 31 | 15 | 23 | 108 | 89 | 77 | 12 | 54.0 | 1 | 11 | 1 |
 | Granada CF B | 3 | 86 | 30 | 18 | 38 | 108 | 96 | 106 | -10 | 36.0 | 3 | 18 | 0 |
 | Torremolinos | 2 | 68 | 27 | 21 | 20 | 102 | 83 | 66 | 17 | 51.0 | 1 | 16 | 1 |
+| Sanluqueno | 3 | 60 | 27 | 18 | 15 | 99 | 79 | 62 | 17 | 33.0 | 4 | 11 | 0 |
 | Orihuela | 2 | 68 | 26 | 19 | 23 | 97 | 67 | 64 | 3 | 48.5 | 4 | 10 | 0 |
-| Sanluqueno | 3 | 59 | 26 | 18 | 15 | 96 | 75 | 61 | 14 | 32.0 | 4 | 12 | 0 |
 | San Fernando | 3 | 86 | 24 | 23 | 39 | 95 | 79 | 105 | -26 | 31.67 | 4 | 16 | 0 |
 | Villanovense | 2 | 68 | 23 | 19 | 26 | 88 | 72 | 67 | 5 | 44.0 | 7 | 13 | 0 |
 | Racing Cartagena MM | 2 | 68 | 21 | 22 | 25 | 85 | 52 | 64 | -12 | 42.5 | 10 | 14 | 0 |
-| Don Benito | 3 | 76 | 20 | 21 | 35 | 81 | 87 | 104 | -17 | 27.0 | 4 | 17 | 0 |
-| Marbella | 3 | 59 | 21 | 17 | 21 | 80 | 67 | 60 | 7 | 26.67 | 3 | 17 | 0 |
+| Don Benito | 3 | 76 | 20 | 21 | 35 | 81 | 87 | 104 | -17 | 27.0 | 5 | 17 | 0 |
+| Marbella | 3 | 60 | 21 | 17 | 22 | 80 | 67 | 61 | 6 | 26.67 | 3 | 17 | 0 |
 | Almeria B | 2 | 69 | 20 | 16 | 33 | 76 | 65 | 89 | -24 | 38.0 | 7 | 17 | 0 |
 | FC Cartagena SAD B | 2 | 68 | 16 | 20 | 32 | 68 | 63 | 93 | -30 | 34.0 | 9 | 18 | 0 |
 | CD Extremadura | 1 | 35 | 18 | 12 | 5 | 66 | 57 | 40 | 17 | 66.0 | 2 | 2 | 0 |
@@ -45,12 +45,12 @@
 | Jaen | 1 | 35 | 17 | 10 | 8 | 61 | 46 | 33 | 13 | 61.0 | 5 | 5 | 0 |
 | Cacereno | 1 | 34 | 17 | 10 | 7 | 61 | 48 | 37 | 11 | 61.0 | 3 | 3 | 0 |
 | El Ejido | 2 | 52 | 15 | 13 | 24 | 58 | 51 | 62 | -11 | 29.0 | 15 | 16 | 0 |
-| Tamaraceite | 3 | 59 | 14 | 16 | 29 | 58 | 62 | 93 | -31 | 19.33 | 10 | 17 | 0 |
+| Tamaraceite | 3 | 60 | 14 | 16 | 30 | 58 | 62 | 94 | -32 | 19.33 | 10 | 17 | 0 |
 | Lorca Deportiva | 2 | 53 | 14 | 15 | 24 | 57 | 49 | 70 | -21 | 28.5 | 10 | 20 | 0 |
-| Las Palmas B | 3 | 59 | 12 | 21 | 26 | 57 | 57 | 88 | -31 | 19.0 | 14 | 17 | 0 |
+| Las Palmas B | 3 | 60 | 12 | 21 | 27 | 57 | 58 | 92 | -34 | 19.0 | 14 | 17 | 0 |
 | Ceuta | 1 | 34 | 14 | 12 | 8 | 54 | 46 | 32 | 14 | 54.0 | 4 | 4 | 0 |
 | CD Coria | 1 | 34 | 15 | 8 | 11 | 53 | 42 | 40 | 2 | 53.0 | 5 | 5 | 0 |
-| Puente Genil | 2 | 42 | 13 | 12 | 17 | 51 | 36 | 43 | -7 | 25.5 | 9 | 14 | 0 |
+| Puente Genil | 2 | 43 | 13 | 13 | 17 | 52 | 36 | 43 | -7 | 26.0 | 10 | 14 | 0 |
 | Montijo | 1 | 34 | 13 | 8 | 13 | 47 | 37 | 38 | -1 | 47.0 | 9 | 9 | 0 |
 | Ciudad Real | 1 | 34 | 9 | 14 | 11 | 41 | 29 | 36 | -7 | 41.0 | 13 | 13 | 0 |
 | Melilla | 1 | 35 | 8 | 13 | 14 | 37 | 38 | 41 | -3 | 37.0 | 15 | 15 | 0 |
@@ -63,11 +63,11 @@
 | Malaga B | 1 | 34 | 5 | 6 | 23 | 21 | 32 | 66 | -34 | 21.0 | 18 | 18 | 0 |
 | CD Utrera | 1 | 34 | 5 | 4 | 25 | 19 | 27 | 67 | -40 | 19.0 | 18 | 18 | 0 |
 | Ciudad de Lucena | 1 | 8 | 4 | 3 | 1 | 15 | 14 | 8 | 6 | 15.0 | 3 | 3 | 0 |
-| CD Badajoz | 1 | 7 | 4 | 2 | 1 | 14 | 8 | 5 | 3 | 14.0 | 5 | 5 | 0 |
+| CD Badajoz | 1 | 8 | 4 | 3 | 1 | 15 | 8 | 5 | 3 | 15.0 | 4 | 4 | 0 |
 | Mijas Las Lagunas | 1 | 8 | 3 | 4 | 1 | 13 | 17 | 13 | 4 | 13.0 | 6 | 6 | 0 |
-| Tenerife B | 1 | 7 | 3 | 1 | 3 | 10 | 11 | 11 | 0 | 10.0 | 10 | 10 | 0 |
+| Tenerife B | 1 | 8 | 3 | 1 | 4 | 10 | 11 | 13 | -2 | 10.0 | 12 | 12 | 0 |
 | CD Marino | 1 | 18 | 2 | 4 | 12 | 10 | 11 | 33 | -22 | 10.0 | 19 | 19 | 0 |
-| Atletico Central | 1 | 7 | 2 | 0 | 5 | 6 | 10 | 15 | -5 | 6.0 | 15 | 15 | 0 |
+| Atletico Central | 1 | 8 | 3 | 0 | 5 | 9 | 11 | 15 | -4 | 9.0 | 14 | 14 | 0 |
 | Malagueno | 1 | 17 | 1 | 3 | 13 | 6 | 10 | 29 | -19 | 6.0 | 19 | 19 | 0 |
 
 ## 2. Home vs away split
@@ -78,25 +78,25 @@
 | Recreativo Huelva | 48 | 32 | 8 | 8 | 104 | 47 | 12 | 20 | 15 | 56 | 48 |
 | Xerez D.F.C. | 69 | 26 | 25 | 18 | 103 | 68 | 14 | 19 | 35 | 61 | 42 |
 | Velez | 51 | 22 | 14 | 15 | 80 | 51 | 11 | 9 | 31 | 42 | 38 |
+| Sevilla FC B | 47 | 27 | 14 | 6 | 95 | 47 | 15 | 13 | 19 | 58 | 37 |
 | Cadiz CF B | 77 | 32 | 20 | 25 | 116 | 77 | 18 | 26 | 33 | 80 | 36 |
-| Sevilla FC B | 46 | 26 | 14 | 6 | 92 | 47 | 15 | 13 | 19 | 58 | 34 |
 | Yeclano | 60 | 28 | 16 | 16 | 100 | 61 | 17 | 19 | 25 | 70 | 30 |
 | Aguilas FC | 51 | 27 | 15 | 9 | 96 | 52 | 15 | 21 | 16 | 66 | 30 |
 | San Roque | 51 | 22 | 16 | 13 | 82 | 51 | 13 | 14 | 24 | 53 | 29 |
 | Racing Cartagena MM | 34 | 15 | 12 | 7 | 57 | 34 | 6 | 10 | 18 | 28 | 29 |
 | Villanovense | 34 | 16 | 10 | 8 | 58 | 34 | 7 | 9 | 18 | 30 | 28 |
 | Betis B | 46 | 23 | 15 | 8 | 84 | 48 | 12 | 22 | 14 | 58 | 26 |
-| Tamaraceite | 30 | 12 | 6 | 12 | 42 | 29 | 2 | 10 | 17 | 16 | 26 |
+| Tamaraceite | 30 | 12 | 6 | 12 | 42 | 30 | 2 | 10 | 18 | 16 | 26 |
 | Linares | 48 | 23 | 14 | 11 | 83 | 47 | 14 | 16 | 17 | 58 | 25 |
+| Xerez CD | 40 | 22 | 8 | 10 | 74 | 37 | 13 | 10 | 14 | 49 | 25 |
+| Sanluqueno | 30 | 18 | 8 | 4 | 62 | 30 | 9 | 10 | 11 | 37 | 25 |
 | San Fernando | 43 | 16 | 12 | 15 | 60 | 43 | 8 | 11 | 24 | 35 | 25 |
 | Melilla | 18 | 8 | 7 | 3 | 31 | 17 | 0 | 6 | 11 | 6 | 25 |
 | Deportiva Minera | 34 | 19 | 9 | 6 | 66 | 35 | 12 | 6 | 17 | 42 | 24 |
 | CD Extremadura | 18 | 14 | 3 | 1 | 45 | 17 | 4 | 9 | 4 | 21 | 24 |
+| Puente Genil | 22 | 9 | 11 | 2 | 38 | 21 | 4 | 2 | 15 | 14 | 24 |
 | La Union | 51 | 28 | 8 | 15 | 92 | 52 | 21 | 6 | 25 | 69 | 23 |
-| Puente Genil | 21 | 9 | 10 | 2 | 37 | 21 | 4 | 2 | 15 | 14 | 23 |
-| Xerez CD | 39 | 21 | 8 | 10 | 71 | 37 | 13 | 10 | 14 | 49 | 22 |
-| Sanluqueno | 29 | 17 | 8 | 4 | 59 | 30 | 9 | 10 | 11 | 37 | 22 |
-| Marbella | 30 | 13 | 10 | 7 | 49 | 29 | 8 | 7 | 14 | 31 | 18 |
+| Marbella | 30 | 13 | 10 | 7 | 49 | 30 | 8 | 7 | 15 | 31 | 18 |
 | Cordoba | 26 | 20 | 3 | 3 | 63 | 26 | 12 | 10 | 4 | 46 | 17 |
 | Don Benito | 38 | 12 | 13 | 13 | 49 | 38 | 8 | 8 | 22 | 32 | 17 |
 | Jaen | 18 | 12 | 3 | 3 | 39 | 17 | 5 | 7 | 5 | 22 | 17 |
@@ -109,21 +109,21 @@
 | Antequera | 34 | 18 | 9 | 7 | 63 | 34 | 15 | 9 | 10 | 54 | 9 |
 | Orihuela | 34 | 15 | 8 | 11 | 53 | 34 | 11 | 11 | 12 | 44 | 9 |
 | Cacereno | 17 | 10 | 5 | 2 | 35 | 17 | 7 | 5 | 5 | 26 | 9 |
-| Las Palmas B | 30 | 7 | 12 | 11 | 33 | 29 | 5 | 9 | 15 | 24 | 9 |
+| Las Palmas B | 30 | 7 | 12 | 11 | 33 | 30 | 5 | 9 | 16 | 24 | 9 |
 | CD Coria | 17 | 9 | 4 | 4 | 31 | 17 | 6 | 4 | 7 | 22 | 9 |
 | Ciudad Real | 17 | 6 | 7 | 4 | 25 | 17 | 3 | 7 | 7 | 16 | 9 |
+| Atletico Central | 4 | 3 | 0 | 1 | 9 | 4 | 0 | 0 | 4 | 0 | 9 |
 | Granada CF B | 43 | 16 | 10 | 17 | 58 | 43 | 14 | 8 | 21 | 50 | 8 |
 | Almeria B | 34 | 12 | 6 | 16 | 42 | 35 | 8 | 10 | 17 | 34 | 8 |
 | Ceuta | 17 | 8 | 7 | 2 | 31 | 17 | 6 | 5 | 6 | 23 | 8 |
 | Mancha | 17 | 5 | 4 | 8 | 19 | 17 | 3 | 3 | 11 | 12 | 7 |
-| Atletico Central | 3 | 2 | 0 | 1 | 6 | 4 | 0 | 0 | 4 | 0 | 6 |
 | Linense | 43 | 14 | 16 | 13 | 58 | 43 | 15 | 9 | 19 | 54 | 4 |
-| CD Badajoz | 4 | 3 | 0 | 1 | 9 | 3 | 1 | 2 | 0 | 5 | 4 |
 | CD Marino | 9 | 1 | 4 | 4 | 7 | 9 | 1 | 0 | 8 | 3 | 4 |
+| CD Badajoz | 4 | 3 | 0 | 1 | 9 | 4 | 1 | 3 | 0 | 6 | 3 |
 | Mijas Las Lagunas | 4 | 2 | 2 | 0 | 8 | 4 | 1 | 2 | 1 | 5 | 3 |
 | El Palo | 17 | 4 | 7 | 6 | 19 | 17 | 4 | 5 | 8 | 17 | 2 |
 | Algeciras | 9 | 5 | 2 | 2 | 17 | 9 | 4 | 3 | 2 | 15 | 2 |
-| Tenerife B | 3 | 2 | 0 | 1 | 6 | 4 | 1 | 1 | 2 | 4 | 2 |
+| Tenerife B | 3 | 2 | 0 | 1 | 6 | 5 | 1 | 1 | 3 | 4 | 2 |
 | Malagueno | 8 | 1 | 1 | 6 | 4 | 9 | 0 | 2 | 7 | 2 | 2 |
 | Panaderia | 17 | 2 | 7 | 8 | 13 | 17 | 3 | 3 | 11 | 12 | 1 |
 | Torremolinos | 34 | 14 | 9 | 11 | 51 | 34 | 13 | 12 | 9 | 51 | 0 |
@@ -138,9 +138,9 @@
 | rank | team | PPG |
 |---|---|---|
 | 1 | Cordoba | 2.10 |
-| 2 | CD Badajoz | 2.00 |
-| 3 | CD Extremadura | 1.89 |
-| 4 | Ciudad de Lucena | 1.88 |
+| 2 | CD Extremadura | 1.89 |
+| 3 | Ciudad de Lucena | 1.88 |
+| 4 | CD Badajoz | 1.88 |
 | 5 | Merida AD | 1.82 |
 
 ### Most goals scored
@@ -149,24 +149,24 @@
 | 1 | UCAM Murcia | 205 |
 | 2 | Cadiz CF B | 164 |
 | 3 | CD Estepona | 132 |
-| 4 | Recreativo Huelva | 128 |
-| 5 | Sevilla FC B | 127 |
+| 4 | Sevilla FC B | 129 |
+| 5 | Recreativo Huelva | 128 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
 | 1 | UCAM Murcia | 64 |
 | 2 | Cordoba | 62 |
-| 3 | Recreativo Huelva | 45 |
-| 4 | Sevilla FC B | 45 |
+| 3 | Sevilla FC B | 47 |
+| 4 | Recreativo Huelva | 45 |
 | 5 | Aguilas FC | 34 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Aguilas FC | 0.699 |
-| 2 | CD Badajoz | 0.714 |
-| 3 | Xerez CD | 0.737 |
+| 1 | CD Badajoz | 0.625 |
+| 2 | Aguilas FC | 0.699 |
+| 3 | Xerez CD | 0.727 |
 | 4 | Merida AD | 0.765 |
 | 5 | Cordoba | 0.865 |
 
@@ -174,7 +174,7 @@
 - Teams present in all **7** seasons: **0**
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **734** (showing the 15 most frequent)
+- Distinct fixtures: **738** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -203,30 +203,30 @@ _Cells show final position; '-' when the team was absent from that season._
 | Cadiz CF B | 12 | 8 | 11 | 12 | 15 | - | - |
 | Yeclano | 18 | - | 6 | 2 | - | 11 | - |
 | Xerez D.F.C. | - | 10 | 14 | - | 12 | 16 | - |
-| CD Estepona | - | - | - | 6 | 5 | 12 | 7 |
+| CD Estepona | - | - | - | 6 | 5 | 12 | 8 |
 | Aguilas FC | - | - | - | 7 | 8 | 3 | - |
 | La Union | - | - | - | 10 | 2 | 8 | - |
 | Recreativo Huelva | 15 | - | 2 | - | - | 6 | 1 |
 | Antoniano | - | - | - | 11 | 4 | 13 | 18 |
-| Sevilla FC B | 6 | - | 8 | 1 | - | - | 11 |
+| Sevilla FC B | 6 | - | 8 | 1 | - | - | 7 |
 | Betis B | 7 | - | 12 | 5 | - | - | 2 |
-| Linares | 2 | - | - | - | 9 | 9 | 8 |
+| Linares | 2 | - | - | - | 9 | 9 | 9 |
 | San Roque | - | 6 | 7 | 15 | - | - | - |
-| Velez | - | 11 | 13 | 17 | - | - | - |
 | Xerez CD | - | - | - | - | 6 | 4 | 13 |
+| Velez | - | 11 | 13 | 17 | - | - | - |
 | Antequera | - | 12 | 1 | - | - | - | - |
 | Linense | 8 | - | - | 9 | 14 | - | - |
 | Cordoba | 9 | 1 | - | - | - | - | - |
 | Deportiva Minera | - | - | - | - | 11 | 1 | - |
 | Granada CF B | 13 | - | 3 | - | 18 | - | - |
 | Torremolinos | - | - | 16 | - | 1 | - | - |
+| Sanluqueno | 5 | - | 4 | - | - | - | 11 |
 | Orihuela | - | - | - | 4 | 10 | - | - |
-| Sanluqueno | 5 | - | 4 | - | - | - | 12 |
 | San Fernando | 4 | 16 | - | - | 16 | - | - |
 | Villanovense | - | 7 | - | - | 13 | - | - |
 | Racing Cartagena MM | - | - | 10 | 14 | - | - | - |
-| Don Benito | - | 13 | - | - | 17 | - | 4 |
-| Marbella | 17 | - | - | 3 | - | - | 14 |
+| Don Benito | - | 13 | - | - | 17 | - | 5 |
+| Marbella | 17 | - | - | 3 | - | - | 15 |
 | Almeria B | - | - | - | - | 7 | 17 | - |
 | FC Cartagena SAD B | - | - | 9 | 18 | - | - | - |
 | CD Extremadura | - | - | - | - | - | 2 | - |
@@ -239,7 +239,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Las Palmas B | 14 | 15 | - | - | - | - | 17 |
 | Ceuta | - | 4 | - | - | - | - | - |
 | CD Coria | - | 5 | - | - | - | - | - |
-| Puente Genil | - | - | - | - | - | 14 | 9 |
+| Puente Genil | - | - | - | - | - | 14 | 10 |
 | Montijo | - | 9 | - | - | - | - | - |
 | Ciudad Real | - | - | - | 13 | - | - | - |
 | Melilla | - | - | - | - | - | 15 | - |
@@ -252,11 +252,11 @@ _Cells show final position; '-' when the team was absent from that season._
 | Malaga B | - | - | - | - | - | 18 | - |
 | CD Utrera | - | - | 18 | - | - | - | - |
 | Ciudad de Lucena | - | - | - | - | - | - | 3 |
-| CD Badajoz | - | - | - | - | - | - | 5 |
+| CD Badajoz | - | - | - | - | - | - | 4 |
 | Mijas Las Lagunas | - | - | - | - | - | - | 6 |
-| Tenerife B | - | - | - | - | - | - | 10 |
+| Tenerife B | - | - | - | - | - | - | 12 |
 | CD Marino | 19 | - | - | - | - | - | - |
-| Atletico Central | - | - | - | - | - | - | 15 |
+| Atletico Central | - | - | - | - | - | - | 14 |
 | Malagueno | - | - | - | - | - | 19 | - |
 
 ---

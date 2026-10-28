@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:34:45+00:00
+- Generated: 2026-10-27T01:50:53+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Super League 2 (Greece)
 - Scope: league `greece2`
@@ -9,10 +9,10 @@
 | goals | matches | pct |
 |---|---|---|
 | 0 | 204 | 11.1% |
-| 1 | 456 | 24.9% |
+| 1 | 457 | 24.9% |
 | 2 | 446 | 24.3% |
 | 3 | 370 | 20.2% |
-| 4 | 202 | 11.0% |
+| 4 | 204 | 11.1% |
 | 5 | 92 | 5.0% |
 | 6 | 49 | 2.7% |
 | 7 | 12 | 0.7% |
@@ -28,12 +28,12 @@
 | 2023-2024 | 264 | 584 | 1.314 | 0.898 | 2.212 |
 | 2024-2025 | 180 | 412 | 1.278 | 1.011 | 2.289 |
 | 2025-2026 | 265 | 607 | 1.313 | 0.977 | 2.291 |
-| 2026-2027 | 60 | 124 | 1.267 | 0.8 | 2.067 |
+| 2026-2027 | 63 | 133 | 1.254 | 0.857 | 2.111 |
 
 ## 3. Home vs away goal share
-- Home goals: **2390** (58.1%)
-- Away goals: **1723** (41.9%)
-- Home/away ratio: **1.387**
+- Home goals: **2393** (58.1%)
+- Away goals: **1729** (41.9%)
+- Home/away ratio: **1.384**
 
 | season | home goals | away goals | total | home pct | away pct |
 |---|---|---|---|---|---|
@@ -43,10 +43,10 @@
 | 2023-2024 | 347 | 237 | 584 | 59.4% | 40.6% |
 | 2024-2025 | 230 | 182 | 412 | 55.8% | 44.2% |
 | 2025-2026 | 348 | 259 | 607 | 57.3% | 42.7% |
-| 2026-2027 | 76 | 48 | 124 | 61.3% | 38.7% |
+| 2026-2027 | 79 | 54 | 133 | 59.4% | 40.6% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **715** of `1832` (39.0%)
+- Overall: **716** of `1835` (39.0%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
@@ -56,13 +56,13 @@
 | 2023-2024 | 264 | 105 | 39.8% |
 | 2024-2025 | 180 | 74 | 41.1% |
 | 2025-2026 | 265 | 106 | 40.0% |
-| 2026-2027 | 60 | 26 | 43.3% |
+| 2026-2027 | 63 | 27 | 42.9% |
 
 ## 5. Clean sheets
-- Home clean sheets: **771** (42.1%)
-- Away clean sheets: **550** (30.0%)
-- Total clean sheets recorded: **1321**
-- Matches with at least one clean sheet: **1117** (61.0%)
+- Home clean sheets: **772** (42.1%)
+- Away clean sheets: **551** (30.0%)
+- Total clean sheets recorded: **1323**
+- Matches with at least one clean sheet: **1119** (61.0%)
 - Both teams kept clean sheets (0-0): **204**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
@@ -73,12 +73,12 @@
 | 2023-2024 | 264 | 111 | 74 | 185 | 159 (60.2%) |
 | 2024-2025 | 180 | 70 | 56 | 126 | 106 (58.9%) |
 | 2025-2026 | 265 | 105 | 75 | 180 | 159 (60.0%) |
-| 2026-2027 | 60 | 29 | 12 | 41 | 34 (56.7%) |
+| 2026-2027 | 63 | 30 | 13 | 43 | 36 (57.1%) |
 
 ## 6. Scoring intensity
-- First-half goals: **1857** (45.4%)
-- Second-half goals: **2232** (54.6%)
-- Avg first-half goals per match: **1.018**
+- First-half goals: **1862** (45.4%)
+- Second-half goals: **2236** (54.6%)
+- Avg first-half goals per match: **1.019**
 - Avg second-half goals per match: **1.224**
 - Second-half-only scoring (HT 0-0, FT goals >= 1): **468** (25.5%)
 - *8 match(es) excluded (no HT score recorded).*
@@ -91,18 +91,18 @@
 | 2023-2024 | 264 | 279 | 305 | 47.8% | 52.2% |
 | 2024-2025 | 180 | 190 | 222 | 46.1% | 53.9% |
 | 2025-2026 | 265 | 276 | 331 | 45.5% | 54.5% |
-| 2026-2027 | 60 | 44 | 80 | 35.5% | 64.5% |
+| 2026-2027 | 63 | 49 | 84 | 36.8% | 63.2% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `1620` of `1832` (88.4%)
+- Matches with first-goal time recorded: `1623` of `1835` (88.4%)
 - Goalless matches: `212`
-- Min `1` | Max `99` | Mean `33.58` | Median (p50) `28.0`
+- Min `1` | Max `99` | Mean `33.58` | Median (p50) `28`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 468 | 25.5% | 28.9% |
-| 16-30 | 393 | 21.5% | 24.3% |
-| 31-45 | 259 | 14.1% | 16.0% |
+| 1-15 | 468 | 25.5% | 28.8% |
+| 16-30 | 394 | 21.5% | 24.3% |
+| 31-45 | 261 | 14.2% | 16.1% |
 | 46-60 | 229 | 12.5% | 14.1% |
 | 61-75 | 161 | 8.8% | 9.9% |
 | 76-90 | 82 | 4.5% | 5.1% |

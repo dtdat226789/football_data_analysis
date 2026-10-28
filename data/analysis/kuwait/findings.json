@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:40:28+00:00",
+  "generated_at": "2026-10-27T02:01:12+00:00",
   "config": {
     "league": "kuwait",
     "out_dir": "data/analysis/kuwait",
@@ -668,8 +668,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 87742,
-        "distinct": 87728,
+        "rows": 87831,
+        "distinct": 87817,
         "duplicates": 14
       }
     },
@@ -678,10 +678,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=368, fgte=368 rows)",
       "details": {
-        "total": 87742,
+        "total": 87831,
         "fgt_inconsistent": 368,
         "fgte_inconsistent": 368,
-        "n_with_fgt": 80714
+        "n_with_fgt": 80797
       }
     },
     {

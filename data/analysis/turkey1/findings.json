@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:51:55+00:00",
+  "generated_at": "2026-10-27T02:34:12+00:00",
   "config": {
     "league": "turkey1",
     "out_dir": "data/analysis/turkey1",
@@ -43,7 +43,7 @@
       "path": "data/analysis/turkey1/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 12.35
+      "size_kb": 12.36
     },
     {
       "report_name": "teams_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/turkey1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 344.88
+      "size_kb": 345.26
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "2246 matches: home wins 44.9%, draws 25.2%, away wins 29.9% (1009H / 565D / 672A)",
+      "detail": "2248 matches: home wins 45.0%, draws 25.1%, away wins 29.9% (1011H / 565D / 672A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,42 +97,42 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 604 times",
+      "detail": "home lead at HT -> home win occurred 606 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "2246 matches produced 6341 goals (avg 2.823 per match)",
+      "detail": "2248 matches produced 6345 goals (avg 2.823 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 55.9% vs away 44.1% of 6341 goals in total (home/away ratio 1.26)",
+      "detail": "home 55.9% vs away 44.1% of 6345 goals in total (home/away ratio 1.27)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1242 of 2246 matches (55.3%)",
+      "detail": "1242 of 2248 matches (55.2%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 651 scoring matches, 31.7% of scoring)",
+      "detail": "minute 1-15 (first goal in 652 scoring matches, 31.7% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.07, median 26.0",
+      "detail": "mean 31.06, median 26.0",
       "importance": "low",
       "id": "F8"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "stable (-0.028 per match): first half 2.852 vs last half 2.824 across 7 seasons",
+      "detail": "stable (-0.036 per match): first half 2.852 vs last half 2.816 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -202,7 +202,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "2-1 (209 of 1009 home matches, 20.7%)",
+      "detail": "2-1 (209 of 1011 home matches, 20.7%)",
       "importance": "low",
       "id": "F18"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 2246 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2248 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 2246,
+    "n_matches": 2248,
     "avg_goals": 2.823,
-    "home_win_pct": 44.9,
-    "draw_pct": 25.2,
+    "home_win_pct": 45.0,
+    "draw_pct": 25.1,
     "away_win_pct": 29.9,
     "most_common_scoreline": "1-1",
     "dominant_team": "Galatasaray",
     "champion_most_titles": "Galatasaray",
-    "btts_rate_pct": 55.3
+    "btts_rate_pct": 55.2
   },
   "comparison": [
     {
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 12.35
+      "size_kb": 12.36
     },
     {
       "module": "teams_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 344.88
+      "size_kb": 345.26
     },
     {
       "module": "relationships",
@@ -446,10 +446,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 76 matches, expected 380",
+      "message": "Season 2026-2027 has 78 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 76,
+        "n_matches": 78,
         "expected": 380
       }
     },
@@ -508,33 +508,33 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 5.3% vs overall 7.2% (deviation 1.9 pp)",
+      "message": "Season 2026-2027 goalless share 5.1% vs overall 7.2% (deviation 2.1 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 5.3,
+        "season_goalless_pct": 5.1,
         "overall_goalless_pct": 7.2,
-        "deviation_pp": 1.9
+        "deviation_pp": 2.1
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 18.4% vs overall 25.2%",
+      "message": "Season 2026-2027 draw outcome share 17.9% vs overall 25.1%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 18.4,
-        "overall_share": 25.2
+        "season_share": 17.9,
+        "overall_share": 25.1
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 35.5% vs overall 29.9%",
+      "message": "Season 2026-2027 away outcome share 34.6% vs overall 29.9%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 35.5,
+        "season_share": 34.6,
         "overall_share": 29.9
       }
     },
@@ -595,8 +595,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 152082,
-        "distinct": 152037,
+        "rows": 152261,
+        "distinct": 152216,
         "duplicates": 45
       }
     },
@@ -605,10 +605,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=474, fgte=474 rows)",
       "details": {
-        "total": 152082,
+        "total": 152261,
         "fgt_inconsistent": 474,
         "fgte_inconsistent": 474,
-        "n_with_fgt": 139763
+        "n_with_fgt": 139927
       }
     },
     {

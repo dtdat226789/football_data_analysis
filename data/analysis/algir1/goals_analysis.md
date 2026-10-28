@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:25:46+00:00
+- Generated: 2026-10-27T01:39:16+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`

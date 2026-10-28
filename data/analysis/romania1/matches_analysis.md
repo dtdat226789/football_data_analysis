@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:44:39+00:00
+- Generated: 2026-10-27T02:26:44+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Superliga (Romania)
 - Scope: league `romania1`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1651 |
-| Home wins | 698 (42.3%) |
-| Draws | 483 (29.3%) |
-| Away wins | 470 (28.5%) |
-| Total goals | 3956 |
-| Average goals per match | 2.396 |
+| Matches | 1653 |
+| Home wins | 699 (42.3%) |
+| Draws | 484 (29.3%) |
+| Away wins | 470 (28.4%) |
+| Total goals | 3967 |
+| Average goals per match | 2.400 |
 | Goalless matches | 158 (9.6%) |
 
 ## 2. Per-season breakdown
@@ -25,12 +25,12 @@
 | 2023-2024 | 240 | 96 (40.0%) | 80 (33.3%) | 64 (26.7%) | 615 | 2.562 | 30 (12.5%) |
 | 2024-2025 | 240 | 100 (41.7%) | 78 (32.5%) | 62 (25.8%) | 553 | 2.304 | 26 (10.8%) |
 | 2025-2026 | 350 | 155 (44.3%) | 96 (27.4%) | 99 (28.3%) | 887 | 2.534 | 25 (7.1%) |
-| 2026-2027 | 101 | 54 (53.5%) | 24 (23.8%) | 23 (22.8%) | 269 | 2.663 | 7 (6.9%) |
+| 2026-2027 | 103 | 55 (53.4%) | 25 (24.3%) | 23 (22.3%) | 280 | 2.718 | 7 (6.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 399 (76.1%) | 101 (19.3%) | 24 (4.6%) | 524 |
+| HT home lead | 400 (76.0%) | 102 (19.4%) | 24 (4.6%) | 526 |
 | HT draw | 263 (35.2%) | 288 (38.5%) | 197 (26.3%) | 748 |
 | HT away lead | 36 (9.5%) | 94 (24.9%) | 248 (65.6%) | 378 |
 - *1 match(es) excluded (no HT score recorded).*
@@ -110,7 +110,7 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 524 | 399 (76.1%) | 101 (19.3%) | 24 (4.6%) |
+| Home lead | 526 | 400 (76.0%) | 102 (19.4%) | 24 (4.6%) |
 | Away lead | 378 | 248 (65.6%) | 94 (24.9%) | 36 (9.5%) |
 
 ### Matches level at half-time
@@ -122,13 +122,13 @@
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1492` of `1651` (90.4%)
+- Matches with a first-goal time recorded: `1494` of `1653` (90.4%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 450 | 27.3% | 221 (49.1%) | 102 (22.7%) | 127 (28.2%) |
-| 16-30 | 357 | 21.6% | 169 (47.3%) | 82 (23.0%) | 106 (29.7%) |
+| 1-15 | 451 | 27.3% | 222 (49.2%) | 102 (22.6%) | 127 (28.2%) |
+| 16-30 | 358 | 21.7% | 169 (47.2%) | 83 (23.2%) | 106 (29.6%) |
 | 31-45 | 241 | 14.6% | 107 (44.4%) | 65 (27.0%) | 69 (28.6%) |
 | 46-60 | 207 | 12.5% | 87 (42.0%) | 50 (24.2%) | 70 (33.8%) |
 | 61-75 | 137 | 8.3% | 60 (43.8%) | 20 (14.6%) | 57 (41.6%) |
@@ -136,7 +136,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 28 | 1.7% | 18 (64.3%) | 0 (0.0%) | 10 (35.7%) |
 
 ## 7. Goalless matches
-- Overall: **158** of `1651` (9.6%)
+- Overall: **158** of `1653` (9.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -146,7 +146,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 240 | 30 | 12.5% |
 | 2024-2025 | 240 | 26 | 10.8% |
 | 2025-2026 | 350 | 25 | 7.1% |
-| 2026-2027 | 101 | 7 | 6.9% |
+| 2026-2027 | 103 | 7 | 6.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

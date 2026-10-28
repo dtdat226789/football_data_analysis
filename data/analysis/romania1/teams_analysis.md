@@ -1,21 +1,21 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:44:43+00:00
+- Generated: 2026-10-27T02:26:48+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Superliga (Romania)
 - Scope: league `romania1`
 
-- Teams: **29** | Seasons: **7** | Matches: **1651**
+- Teams: **29** | Seasons: **7** | Matches: **1653**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CFR Cluj | 7 | 203 | 116 | 47 | 40 | 395 | 329 | 187 | 142 | 56.43 | 1 | 9 | 1 |
+| CFR Cluj | 7 | 204 | 116 | 48 | 40 | 396 | 331 | 189 | 142 | 56.57 | 1 | 9 | 1 |
 | FCSB | 7 | 206 | 114 | 50 | 42 | 392 | 348 | 213 | 135 | 56.0 | 1 | 7 | 3 |
 | Univ. Craiova | 7 | 204 | 106 | 57 | 41 | 375 | 312 | 181 | 131 | 53.57 | 1 | 4 | 1 |
 | FC Rapid Bucuresti | 6 | 175 | 77 | 57 | 41 | 288 | 244 | 173 | 71 | 48.0 | 2 | 9 | 0 |
 | UTA Arad | 7 | 204 | 64 | 68 | 72 | 260 | 215 | 244 | -29 | 37.14 | 6 | 14 | 0 |
-| Farul Constanta | 6 | 175 | 68 | 51 | 56 | 255 | 234 | 198 | 36 | 42.5 | 1 | 13 | 1 |
+| Farul Constanta | 6 | 176 | 69 | 51 | 56 | 258 | 238 | 201 | 37 | 43.0 | 1 | 13 | 1 |
 | FC Botosani | 7 | 205 | 56 | 74 | 75 | 242 | 228 | 265 | -37 | 34.57 | 6 | 16 | 0 |
 | Sepsi Sf. Gheorghe | 6 | 162 | 56 | 56 | 50 | 224 | 212 | 172 | 40 | 37.33 | 4 | 12 | 0 |
 | U. Cluj | 5 | 145 | 61 | 40 | 44 | 223 | 189 | 162 | 27 | 44.6 | 2 | 11 | 0 |
@@ -24,10 +24,10 @@
 | Petrolul | 5 | 144 | 43 | 47 | 54 | 176 | 138 | 172 | -34 | 35.2 | 4 | 14 | 0 |
 | Din. Bucuresti | 5 | 149 | 46 | 38 | 65 | 176 | 155 | 200 | -45 | 35.2 | 5 | 15 | 0 |
 | FC Voluntari | 6 | 135 | 38 | 38 | 59 | 152 | 140 | 180 | -40 | 25.33 | 6 | 18 | 0 |
-| Otelul | 4 | 113 | 31 | 42 | 40 | 135 | 125 | 134 | -9 | 33.75 | 9 | 14 | 0 |
+| Otelul | 4 | 114 | 31 | 42 | 41 | 135 | 128 | 138 | -10 | 33.75 | 9 | 14 | 0 |
 | Chindia Targoviste | 4 | 92 | 25 | 32 | 35 | 107 | 83 | 96 | -13 | 26.75 | 8 | 19 | 0 |
 | U Craiova 1948 | 3 | 90 | 28 | 20 | 42 | 104 | 108 | 118 | -10 | 34.67 | 8 | 13 | 0 |
-| Dinamo Bucuresti | 2 | 53 | 26 | 16 | 11 | 94 | 83 | 49 | 34 | 47.0 | 1 | 5 | 1 |
+| Dinamo Bucuresti | 2 | 54 | 26 | 17 | 11 | 95 | 85 | 51 | 34 | 47.5 | 1 | 5 | 1 |
 | Poli Iasi | 3 | 90 | 22 | 23 | 45 | 89 | 91 | 154 | -63 | 29.67 | 12 | 16 | 0 |
 | Unirea Slobozia | 2 | 71 | 16 | 12 | 43 | 60 | 66 | 108 | -42 | 30.0 | 15 | 16 | 0 |
 | LPS HD Clinceni | 2 | 60 | 13 | 19 | 28 | 58 | 51 | 90 | -39 | 29.0 | 5 | 16 | 0 |
@@ -44,12 +44,12 @@
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Univ. Craiova | 103 | 66 | 23 | 14 | 221 | 101 | 40 | 34 | 27 | 154 | 67 |
-| Farul Constanta | 87 | 46 | 20 | 21 | 158 | 88 | 22 | 31 | 35 | 97 | 61 |
+| Farul Constanta | 88 | 47 | 20 | 21 | 161 | 88 | 22 | 31 | 35 | 97 | 64 |
 | FC Botosani | 102 | 35 | 42 | 25 | 147 | 103 | 21 | 32 | 50 | 95 | 52 |
 | FC Rapid Bucuresti | 88 | 48 | 25 | 15 | 169 | 87 | 29 | 32 | 26 | 119 | 50 |
 | FC Hermannstadt | 81 | 31 | 25 | 25 | 118 | 82 | 14 | 27 | 41 | 69 | 49 |
 | FCSB | 104 | 64 | 26 | 14 | 218 | 102 | 50 | 24 | 28 | 174 | 44 |
-| CFR Cluj | 100 | 65 | 21 | 14 | 216 | 103 | 51 | 26 | 26 | 179 | 37 |
+| CFR Cluj | 101 | 65 | 22 | 14 | 217 | 103 | 51 | 26 | 26 | 179 | 38 |
 | Din. Bucuresti | 75 | 28 | 20 | 27 | 104 | 74 | 18 | 18 | 38 | 72 | 32 |
 | UTA Arad | 102 | 37 | 33 | 32 | 144 | 102 | 27 | 35 | 40 | 116 | 28 |
 | FC Voluntari | 68 | 24 | 18 | 26 | 90 | 67 | 14 | 20 | 33 | 62 | 28 |
@@ -58,8 +58,8 @@
 | Petrolul | 71 | 26 | 23 | 22 | 101 | 73 | 17 | 24 | 32 | 75 | 26 |
 | Sepsi Sf. Gheorghe | 80 | 32 | 28 | 20 | 124 | 82 | 24 | 28 | 30 | 100 | 24 |
 | Csikszereda M. Ciuc | 26 | 10 | 9 | 7 | 39 | 28 | 4 | 4 | 20 | 16 | 23 |
-| Dinamo Bucuresti | 27 | 17 | 6 | 4 | 57 | 26 | 9 | 10 | 7 | 37 | 20 |
-| Otelul | 58 | 18 | 23 | 17 | 77 | 55 | 13 | 19 | 23 | 58 | 19 |
+| Otelul | 58 | 18 | 23 | 17 | 77 | 56 | 13 | 19 | 24 | 58 | 19 |
+| Dinamo Bucuresti | 27 | 17 | 6 | 4 | 57 | 27 | 9 | 11 | 7 | 38 | 19 |
 | Poli Iasi | 45 | 14 | 12 | 19 | 54 | 45 | 8 | 11 | 26 | 35 | 19 |
 | FC Arges | 73 | 26 | 21 | 26 | 99 | 72 | 24 | 17 | 31 | 89 | 10 |
 | Gloria Buzau | 15 | 4 | 3 | 8 | 15 | 15 | 1 | 2 | 12 | 5 | 10 |
@@ -77,20 +77,20 @@
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | CFR Cluj | 1.95 |
+| 1 | CFR Cluj | 1.94 |
 | 2 | FCSB | 1.90 |
 | 3 | Univ. Craiova | 1.84 |
-| 4 | Dinamo Bucuresti | 1.77 |
+| 4 | Dinamo Bucuresti | 1.76 |
 | 5 | FC Rapid Bucuresti | 1.65 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
 | 1 | FCSB | 348 |
-| 2 | CFR Cluj | 329 |
+| 2 | CFR Cluj | 331 |
 | 3 | Univ. Craiova | 312 |
 | 4 | FC Rapid Bucuresti | 244 |
-| 5 | Farul Constanta | 234 |
+| 5 | Farul Constanta | 238 |
 
 ### Best goal difference
 | rank | team | GD |
@@ -105,8 +105,8 @@
 | rank | team | GA/match |
 |---|---|---|
 | 1 | Univ. Craiova | 0.887 |
-| 2 | Dinamo Bucuresti | 0.904 |
-| 3 | CFR Cluj | 0.921 |
+| 2 | Dinamo Bucuresti | 0.925 |
+| 3 | CFR Cluj | 0.926 |
 | 4 | FC Rapid Bucuresti | 0.989 |
 | 5 | FCSB | 1.025 |
 
@@ -145,8 +145,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | FCSB | 1 | 2 | 3 | 1 | 1 | 7 | 6 |
 | Univ. Craiova | 3 | 3 | 4 | 4 | 3 | 1 | 3 |
 | FC Rapid Bucuresti | - | 9 | 5 | 2 | 6 | 4 | 2 |
-| UTA Arad | 10 | 8 | 14 | 9 | 11 | 6 | 7 |
-| Farul Constanta | - | 4 | 1 | 6 | 10 | 13 | 8 |
+| UTA Arad | 10 | 8 | 14 | 9 | 11 | 6 | 8 |
+| Farul Constanta | - | 4 | 1 | 6 | 10 | 13 | 7 |
 | FC Botosani | 6 | 7 | 13 | 16 | 13 | 10 | 11 |
 | Sepsi Sf. Gheorghe | 4 | 10 | 6 | 5 | 7 | - | 12 |
 | U. Cluj | - | - | 11 | 7 | 4 | 2 | 5 |

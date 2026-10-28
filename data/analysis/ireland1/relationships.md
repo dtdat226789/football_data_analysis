@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:36:53+00:00
+- Generated: 2026-10-27T01:54:56+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`

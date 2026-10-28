@@ -1,19 +1,19 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:31:28+00:00
+- Generated: 2026-10-27T01:46:45+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
 
-- Teams: **13** | Seasons: **7** | Matches: **1166**
+- Teams: **13** | Seasons: **7** | Matches: **1167**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Levadia | 7 | 233 | 163 | 41 | 29 | 530 | 542 | 197 | 345 | 75.71 | 1 | 3 | 3 |
-| Flora | 7 | 233 | 165 | 35 | 33 | 530 | 540 | 204 | 336 | 75.71 | 1 | 4 | 4 |
+| Flora | 7 | 234 | 165 | 35 | 34 | 530 | 541 | 206 | 335 | 75.71 | 1 | 4 | 4 |
 | Paide | 7 | 234 | 130 | 47 | 57 | 437 | 456 | 251 | 205 | 62.43 | 2 | 4 | 0 |
-| Kalju | 7 | 233 | 117 | 52 | 64 | 403 | 414 | 251 | 163 | 57.57 | 2 | 5 | 0 |
+| Kalju | 7 | 234 | 118 | 52 | 64 | 406 | 416 | 252 | 164 | 58.0 | 2 | 5 | 0 |
 | Narva | 7 | 234 | 66 | 45 | 123 | 243 | 266 | 413 | -147 | 34.71 | 5 | 10 | 0 |
 | Kuressaare | 7 | 234 | 64 | 50 | 120 | 242 | 258 | 406 | -148 | 34.57 | 5 | 9 | 0 |
 | Tammeka | 7 | 232 | 64 | 47 | 121 | 239 | 274 | 424 | -150 | 34.14 | 5 | 9 | 0 |
@@ -34,11 +34,11 @@
 | Harju JK Laagri | 54 | 18 | 7 | 29 | 61 | 52 | 12 | 9 | 31 | 45 | 16 |
 | Levadia | 118 | 83 | 23 | 12 | 272 | 115 | 80 | 18 | 17 | 258 | 14 |
 | Parnu JK Vaprus | 100 | 27 | 21 | 52 | 102 | 103 | 24 | 17 | 62 | 89 | 13 |
-| Flora | 115 | 85 | 15 | 15 | 270 | 118 | 80 | 20 | 18 | 260 | 10 |
+| Flora | 115 | 85 | 15 | 15 | 270 | 119 | 80 | 20 | 19 | 260 | 10 |
+| Kalju | 116 | 62 | 22 | 32 | 208 | 118 | 56 | 30 | 32 | 198 | 10 |
 | Tallinna Kalev | 88 | 23 | 14 | 51 | 83 | 86 | 19 | 16 | 51 | 73 | 10 |
 | Tulevik | 27 | 10 | 4 | 13 | 34 | 27 | 7 | 3 | 17 | 24 | 10 |
 | Nomme Utd | 35 | 8 | 5 | 22 | 29 | 34 | 5 | 5 | 24 | 20 | 9 |
-| Kalju | 115 | 61 | 22 | 32 | 205 | 118 | 56 | 30 | 32 | 198 | 7 |
 | Legion | 46 | 13 | 11 | 22 | 50 | 47 | 12 | 9 | 26 | 45 | 5 |
 
 ## 3. Top performers
@@ -48,32 +48,32 @@
 | 1 | Levadia | 2.27 |
 | 2 | Flora | 2.27 |
 | 3 | Paide | 1.87 |
-| 4 | Kalju | 1.73 |
+| 4 | Kalju | 1.74 |
 | 5 | Tulevik | 1.07 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
 | 1 | Levadia | 542 |
-| 2 | Flora | 540 |
+| 2 | Flora | 541 |
 | 3 | Paide | 456 |
-| 4 | Kalju | 414 |
+| 4 | Kalju | 416 |
 | 5 | Tammeka | 274 |
 
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
 | 1 | Levadia | 345 |
-| 2 | Flora | 336 |
+| 2 | Flora | 335 |
 | 3 | Paide | 205 |
-| 4 | Kalju | 163 |
+| 4 | Kalju | 164 |
 | 5 | Tulevik | -36 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
 | 1 | Levadia | 0.845 |
-| 2 | Flora | 0.876 |
+| 2 | Flora | 0.880 |
 | 3 | Paide | 1.073 |
 | 4 | Kalju | 1.077 |
 | 5 | Harju JK Laagri | 1.708 |
@@ -88,12 +88,12 @@ Flora, Kalju, Kuressaare, Levadia, Narva, Paide, Tammeka
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
+| Flora vs Kalju | 27 | 13 | 6 | 8 | 48.1% | 22.2% | 29.6% |
 | Paide vs Levadia | 27 | 12 | 5 | 10 | 44.4% | 18.5% | 37.0% |
 | Narva vs Kuressaare | 27 | 11 | 5 | 11 | 40.7% | 18.5% | 40.7% |
 | Flora vs Tammeka | 26 | 14 | 3 | 9 | 53.8% | 11.5% | 34.6% |
 | Tammeka vs Narva | 26 | 14 | 5 | 7 | 53.8% | 19.2% | 26.9% |
 | Paide vs Narva | 26 | 13 | 5 | 8 | 50.0% | 19.2% | 30.8% |
-| Flora vs Kalju | 26 | 12 | 6 | 8 | 46.2% | 23.1% | 30.8% |
 | Flora vs Kuressaare | 26 | 12 | 2 | 12 | 46.2% | 7.7% | 46.2% |
 | Kalju vs Narva | 26 | 12 | 6 | 8 | 46.2% | 23.1% | 30.8% |
 | Levadia vs Kalju | 26 | 12 | 6 | 8 | 46.2% | 23.1% | 30.8% |

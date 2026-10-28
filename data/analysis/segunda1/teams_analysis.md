@@ -1,32 +1,32 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:47:15+00:00
+- Generated: 2026-10-27T02:29:16+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Segunda RFEF - Group 1 (Spain)
 - Scope: league `segunda1`
 
-- Teams: **55** | Seasons: **7** | Matches: **1779**
+- Teams: **55** | Seasons: **7** | Matches: **1782**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Coruxo FC | 7 | 196 | 72 | 50 | 74 | 266 | 224 | 212 | 12 | 38.0 | 4 | 16 | 0 |
 | Langreo | 6 | 188 | 65 | 62 | 61 | 257 | 198 | 215 | -17 | 42.83 | 6 | 14 | 0 |
-| Marino de Luanco | 7 | 195 | 65 | 57 | 73 | 252 | 195 | 193 | 2 | 36.0 | 9 | 16 | 0 |
+| Marino de Luanco | 7 | 196 | 65 | 58 | 73 | 253 | 195 | 193 | 2 | 36.14 | 9 | 15 | 0 |
 | Pontevedra | 4 | 120 | 64 | 34 | 22 | 226 | 205 | 115 | 90 | 56.5 | 1 | 13 | 2 |
 | Compostela | 6 | 162 | 57 | 54 | 51 | 225 | 192 | 171 | 21 | 37.5 | 4 | 14 | 0 |
 | Valladolid Promesas | 5 | 154 | 60 | 42 | 52 | 222 | 221 | 211 | 10 | 44.4 | 3 | 12 | 0 |
 | Real Aviles | 4 | 136 | 51 | 49 | 36 | 202 | 174 | 143 | 31 | 50.5 | 2 | 12 | 0 |
 | Rayo Cantabria | 5 | 144 | 52 | 44 | 48 | 200 | 219 | 194 | 25 | 40.0 | 4 | 17 | 0 |
 | Bergantinos | 5 | 144 | 48 | 39 | 57 | 183 | 182 | 185 | -3 | 36.6 | 3 | 18 | 0 |
-| Oviedo B | 5 | 127 | 47 | 29 | 51 | 170 | 148 | 161 | -13 | 34.0 | 2 | 17 | 0 |
+| Oviedo B | 5 | 128 | 47 | 30 | 51 | 171 | 148 | 161 | -13 | 34.2 | 2 | 17 | 0 |
 | Dep. Fabril | 3 | 102 | 47 | 26 | 29 | 167 | 155 | 98 | 57 | 55.67 | 1 | 9 | 1 |
 | Salamanca | 4 | 120 | 42 | 31 | 47 | 157 | 129 | 136 | -7 | 39.25 | 7 | 17 | 0 |
 | Numancia | 3 | 86 | 40 | 28 | 18 | 148 | 124 | 69 | 55 | 49.33 | 2 | 9 | 0 |
 | Zamora | 3 | 86 | 40 | 27 | 19 | 147 | 98 | 71 | 27 | 49.0 | 3 | 6 | 0 |
 | Guijuelo | 4 | 120 | 36 | 39 | 45 | 147 | 110 | 135 | -25 | 36.75 | 5 | 20 | 0 |
-| Torrelavega | 4 | 109 | 32 | 32 | 45 | 128 | 118 | 144 | -26 | 32.0 | 8 | 18 | 0 |
-| Ourense CF | 3 | 75 | 35 | 21 | 19 | 126 | 95 | 63 | 32 | 42.0 | 1 | 13 | 1 |
+| Ourense CF | 3 | 76 | 36 | 21 | 19 | 129 | 98 | 63 | 35 | 43.0 | 1 | 13 | 1 |
+| Torrelavega | 4 | 110 | 32 | 32 | 46 | 128 | 118 | 147 | -29 | 32.0 | 8 | 18 | 0 |
 | Arenteiro | 2 | 68 | 31 | 25 | 12 | 118 | 79 | 54 | 25 | 59.0 | 1 | 10 | 1 |
 | Real Avila | 2 | 68 | 29 | 15 | 24 | 102 | 83 | 81 | 2 | 51.0 | 5 | 8 | 0 |
 | Palencia CA | 2 | 68 | 24 | 21 | 23 | 93 | 76 | 73 | 3 | 46.5 | 5 | 14 | 0 |
@@ -62,9 +62,9 @@
 | Gijon B | 1 | 18 | 3 | 7 | 8 | 16 | 16 | 24 | -8 | 16.0 | 18 | 18 | 0 |
 | UD Samano | 1 | 34 | 3 | 6 | 25 | 15 | 23 | 87 | -64 | 15.0 | 18 | 18 | 0 |
 | Amorebieta | 1 | 8 | 4 | 1 | 3 | 13 | 10 | 8 | 2 | 13.0 | 6 | 6 | 0 |
-| Portugalete | 1 | 7 | 3 | 2 | 2 | 11 | 7 | 7 | 0 | 11.0 | 7 | 7 | 0 |
-| Gernika | 1 | 8 | 2 | 4 | 2 | 10 | 15 | 9 | 6 | 10.0 | 8 | 8 | 0 |
-| Basconia | 1 | 7 | 2 | 3 | 2 | 9 | 11 | 12 | -1 | 9.0 | 11 | 11 | 0 |
+| Portugalete | 1 | 8 | 3 | 3 | 2 | 12 | 9 | 9 | 0 | 12.0 | 8 | 8 | 0 |
+| Gernika | 1 | 8 | 2 | 4 | 2 | 10 | 15 | 9 | 6 | 10.0 | 10 | 10 | 0 |
+| Basconia | 1 | 8 | 2 | 4 | 2 | 10 | 13 | 14 | -1 | 10.0 | 11 | 11 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
@@ -73,16 +73,16 @@
 | Coruxo FC | 97 | 42 | 31 | 24 | 157 | 99 | 30 | 19 | 50 | 109 | 48 |
 | Guijuelo | 60 | 26 | 17 | 17 | 95 | 60 | 10 | 22 | 28 | 52 | 43 |
 | Real Aviles | 68 | 34 | 20 | 14 | 122 | 68 | 17 | 29 | 22 | 80 | 42 |
-| Marino de Luanco | 97 | 39 | 29 | 29 | 146 | 98 | 26 | 28 | 44 | 106 | 40 |
+| Marino de Luanco | 98 | 39 | 30 | 29 | 147 | 98 | 26 | 28 | 44 | 106 | 41 |
 | Pontevedra | 60 | 41 | 10 | 9 | 133 | 60 | 23 | 24 | 13 | 93 | 40 |
 | Numancia | 43 | 28 | 9 | 6 | 93 | 43 | 12 | 19 | 12 | 55 | 38 |
-| Oviedo B | 63 | 29 | 13 | 21 | 100 | 64 | 18 | 16 | 30 | 70 | 30 |
+| Oviedo B | 63 | 29 | 13 | 21 | 100 | 65 | 18 | 17 | 30 | 71 | 29 |
 | Gimnastica Segoviana | 34 | 17 | 9 | 8 | 60 | 34 | 8 | 9 | 17 | 33 | 27 |
 | Covadonga | 26 | 9 | 7 | 10 | 34 | 26 | 2 | 3 | 21 | 9 | 25 |
+| Ourense CF | 39 | 23 | 7 | 9 | 76 | 37 | 13 | 14 | 10 | 53 | 23 |
 | Llanera | 38 | 14 | 12 | 12 | 54 | 38 | 8 | 7 | 23 | 31 | 23 |
 | Langreo | 94 | 34 | 37 | 23 | 139 | 94 | 31 | 25 | 38 | 118 | 21 |
-| Torrelavega | 55 | 19 | 17 | 19 | 74 | 54 | 13 | 15 | 26 | 54 | 20 |
-| Ourense CF | 38 | 22 | 7 | 9 | 73 | 37 | 13 | 14 | 10 | 53 | 20 |
+| Torrelavega | 55 | 19 | 17 | 19 | 74 | 55 | 13 | 15 | 27 | 54 | 20 |
 | Salamanca | 60 | 23 | 19 | 18 | 88 | 60 | 19 | 12 | 29 | 69 | 19 |
 | Rayo Cantabria | 72 | 29 | 21 | 22 | 108 | 72 | 23 | 23 | 26 | 92 | 16 |
 | Arosa SC | 21 | 8 | 7 | 6 | 31 | 21 | 3 | 6 | 12 | 15 | 16 |
@@ -115,10 +115,10 @@
 | Leganes B | 17 | 7 | 4 | 6 | 25 | 17 | 6 | 5 | 6 | 23 | 2 |
 | Unionistas | 9 | 5 | 1 | 3 | 16 | 9 | 3 | 5 | 1 | 14 | 2 |
 | Gijon B | 9 | 2 | 3 | 4 | 9 | 9 | 1 | 4 | 4 | 7 | 2 |
+| Basconia | 4 | 1 | 3 | 0 | 6 | 4 | 1 | 1 | 2 | 4 | 2 |
 | Racing Club Ferrol | 9 | 4 | 2 | 3 | 14 | 9 | 3 | 4 | 2 | 13 | 1 |
 | Sestao | 4 | 3 | 1 | 0 | 10 | 4 | 3 | 0 | 1 | 9 | 1 |
-| Basconia | 3 | 1 | 2 | 0 | 5 | 4 | 1 | 1 | 2 | 4 | 1 |
-| Portugalete | 4 | 1 | 2 | 1 | 5 | 3 | 2 | 0 | 1 | 6 | -1 |
+| Portugalete | 4 | 1 | 2 | 1 | 5 | 4 | 2 | 1 | 1 | 7 | -2 |
 | Gernika | 4 | 1 | 1 | 2 | 4 | 4 | 1 | 3 | 0 | 6 | -2 |
 | Escobedo | 17 | 4 | 8 | 5 | 20 | 17 | 6 | 5 | 6 | 23 | -3 |
 | Amorebieta | 4 | 1 | 1 | 2 | 4 | 4 | 3 | 0 | 1 | 9 | -5 |
@@ -150,7 +150,7 @@
 | 1 | Pontevedra | 90 |
 | 2 | Dep. Fabril | 57 |
 | 3 | Numancia | 55 |
-| 4 | Ourense CF | 32 |
+| 4 | Ourense CF | 35 |
 | 5 | Real Aviles | 31 |
 
 ### Best defence (goals against per match, standings)
@@ -168,7 +168,7 @@
 Coruxo FC, Marino de Luanco
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **619** (showing the 15 most frequent)
+- Distinct fixtures: **620** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -178,11 +178,11 @@ Coruxo FC, Marino de Luanco
 | Valladolid Promesas vs Langreo | 10 | 4 | 5 | 1 | 40.0% | 50.0% | 10.0% |
 | Valladolid Promesas vs Marino de Luanco | 10 | 4 | 3 | 3 | 40.0% | 30.0% | 30.0% |
 | Langreo vs Coruxo FC | 10 | 3 | 5 | 2 | 30.0% | 50.0% | 20.0% |
+| Marino de Luanco vs Oviedo B | 9 | 5 | 4 | 0 | 55.6% | 44.4% | 0.0% |
 | Coruxo FC vs Bergantinos | 9 | 4 | 2 | 3 | 44.4% | 22.2% | 33.3% |
 | Coruxo FC vs Rayo Cantabria | 9 | 4 | 3 | 2 | 44.4% | 33.3% | 22.2% |
 | Compostela vs Marino de Luanco | 9 | 2 | 4 | 3 | 22.2% | 44.4% | 33.3% |
 | Coruxo FC vs Salamanca | 8 | 5 | 1 | 2 | 62.5% | 12.5% | 25.0% |
-| Marino de Luanco vs Oviedo B | 8 | 5 | 3 | 0 | 62.5% | 37.5% | 0.0% |
 | Pontevedra vs Coruxo FC | 8 | 5 | 1 | 2 | 62.5% | 12.5% | 25.0% |
 | Real Aviles vs Compostela | 8 | 5 | 3 | 0 | 62.5% | 37.5% | 0.0% |
 | Compostela vs Guijuelo | 8 | 4 | 2 | 2 | 50.0% | 25.0% | 25.0% |
@@ -195,26 +195,26 @@ _Cells show final position; '-' when the team was absent from that season._
 |---|---|---|---|---|---|---|---|
 | Coruxo FC | 16 | 4 | 11 | 10 | 10 | 5 | 12 |
 | Langreo | 11 | 11 | 12 | 6 | 6 | 14 | - |
-| Marino de Luanco | 12 | 12 | 9 | 11 | 11 | 11 | 16 |
+| Marino de Luanco | 12 | 12 | 9 | 11 | 11 | 11 | 15 |
 | Pontevedra | 13 | 1 | - | 2 | 1 | - | - |
 | Compostela | 10 | 8 | 4 | 7 | 14 | - | 5 |
 | Valladolid Promesas | 3 | - | 3 | 8 | 12 | 12 | - |
 | Real Aviles | - | 9 | 2 | 12 | 3 | - | - |
 | Rayo Cantabria | - | - | 10 | 4 | 7 | 9 | 17 |
 | Bergantinos | - | 6 | 18 | - | 8 | 10 | 3 |
-| Oviedo B | 14 | - | 7 | 17 | - | 2 | 10 |
+| Oviedo B | 14 | - | 7 | 17 | - | 2 | 9 |
 | Dep. Fabril | - | - | - | 9 | 4 | 1 | - |
 | Salamanca | 17 | 14 | - | - | 9 | 7 | - |
 | Numancia | 9 | - | - | - | 2 | 3 | - |
 | Zamora | 6 | - | 6 | 3 | - | - | - |
 | Guijuelo | 20 | - | 5 | 5 | 17 | - | - |
+| Ourense CF | - | - | 13 | 1 | - | - | 7 |
 | Torrelavega | - | - | 8 | 13 | 16 | - | 18 |
-| Ourense CF | - | - | 13 | 1 | - | - | 9 |
 | Arenteiro | - | 10 | 1 | - | - | - | - |
 | Real Avila | - | - | - | - | 5 | 8 | - |
 | Palencia CA | - | 5 | 14 | - | - | - | - |
 | Gimnastica Segoviana | - | 13 | - | - | - | 6 | - |
-| Llanera | - | 16 | - | - | 15 | - | 15 |
+| Llanera | - | 16 | - | - | 15 | - | 16 |
 | Burgos CF B | - | - | 16 | - | - | 16 | - |
 | Union Adarve | - | 2 | - | - | - | - | - |
 | Laredo | - | - | 15 | - | 18 | - | - |
@@ -245,8 +245,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | Gijon B | 18 | - | - | - | - | - | - |
 | UD Samano | - | - | - | - | - | 18 | - |
 | Amorebieta | - | - | - | - | - | - | 6 |
-| Portugalete | - | - | - | - | - | - | 7 |
-| Gernika | - | - | - | - | - | - | 8 |
+| Portugalete | - | - | - | - | - | - | 8 |
+| Gernika | - | - | - | - | - | - | 10 |
 | Basconia | - | - | - | - | - | - | 11 |
 
 ---

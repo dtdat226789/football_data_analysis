@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:42:40+00:00
+- Generated: 2026-10-27T02:24:37+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Division 1 (Poland)
 - Scope: league `poland2`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1962 |
-| Home wins | 802 (40.9%) |
+| Matches | 1965 |
+| Home wins | 804 (40.9%) |
 | Draws | 536 (27.3%) |
-| Away wins | 624 (31.8%) |
-| Total goals | 5201 |
-| Average goals per match | 2.651 |
+| Away wins | 625 (31.8%) |
+| Total goals | 5207 |
+| Average goals per match | 2.650 |
 | Goalless matches | 146 (7.4%) |
 
 ## 2. Per-season breakdown
@@ -25,18 +25,18 @@
 | 2023-2024 | 306 | 130 (42.5%) | 78 (25.5%) | 98 (32.0%) | 814 | 2.66 | 23 (7.5%) |
 | 2024-2025 | 306 | 117 (38.2%) | 83 (27.1%) | 106 (34.6%) | 831 | 2.716 | 24 (7.8%) |
 | 2025-2026 | 328 | 136 (41.5%) | 89 (27.1%) | 103 (31.4%) | 991 | 3.021 | 15 (4.6%) |
-| 2026-2027 | 104 | 46 (44.2%) | 26 (25.0%) | 32 (30.8%) | 284 | 2.731 | 5 (4.8%) |
+| 2026-2027 | 107 | 48 (44.9%) | 26 (24.3%) | 33 (30.8%) | 290 | 2.71 | 5 (4.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 495 (74.8%) | 121 (18.3%) | 46 (6.9%) | 662 |
-| HT draw | 264 (33.3%) | 304 (38.3%) | 225 (28.4%) | 793 |
-| HT away lead | 41 (8.1%) | 111 (22.0%) | 353 (69.9%) | 505 |
+| HT home lead | 496 (74.8%) | 121 (18.3%) | 46 (6.9%) | 663 |
+| HT draw | 264 (33.2%) | 304 (38.3%) | 226 (28.5%) | 794 |
+| HT away lead | 42 (8.3%) | 111 (21.9%) | 353 (69.8%) | 506 |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **41** (2.1%)
+- Home comebacks (trailing at HT, won at FT): **42** (2.1%)
 - Away comebacks (trailing at HT, won at FT): **46** (2.3%)
 
 ### Home comebacks
@@ -83,6 +83,7 @@
 | 2025-2026 | LKS Lodz | Leczna | 0-1 | 3-1 |
 | 2026-2027 | Polonia Warszawa | Skierniewice | 0-1 | 3-1 |
 | 2026-2027 | Skierniewice | Grodzisk M. | 0-1 | 3-2 |
+| 2026-2027 | Podbeskidzie | S. Rzeszow | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -137,33 +138,33 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 662 | 495 (74.8%) | 121 (18.3%) | 46 (6.9%) |
-| Away lead | 505 | 353 (69.9%) | 111 (22.0%) | 41 (8.1%) |
+| Home lead | 663 | 496 (74.8%) | 121 (18.3%) | 46 (6.9%) |
+| Away lead | 506 | 353 (69.8%) | 111 (21.9%) | 42 (8.3%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 264 | 33.3% |
+| Home win | 264 | 33.2% |
 | Draw | 304 | 38.3% |
-| Away win | 225 | 28.4% |
+| Away win | 226 | 28.5% |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1814` of `1962` (92.5%)
+- Matches with a first-goal time recorded: `1817` of `1965` (92.5%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 584 | 29.8% | 256 (43.8%) | 141 (24.1%) | 187 (32.0%) |
-| 16-30 | 426 | 21.7% | 184 (43.2%) | 98 (23.0%) | 144 (33.8%) |
-| 31-45 | 318 | 16.2% | 154 (48.4%) | 60 (18.9%) | 104 (32.7%) |
-| 46-60 | 232 | 11.8% | 92 (39.7%) | 55 (23.7%) | 85 (36.6%) |
+| 1-15 | 584 | 29.7% | 256 (43.8%) | 141 (24.1%) | 187 (32.0%) |
+| 16-30 | 427 | 21.7% | 185 (43.3%) | 98 (23.0%) | 144 (33.7%) |
+| 31-45 | 319 | 16.2% | 155 (48.6%) | 60 (18.8%) | 104 (32.6%) |
+| 46-60 | 233 | 11.9% | 92 (39.5%) | 55 (23.6%) | 86 (36.9%) |
 | 61-75 | 129 | 6.6% | 58 (45.0%) | 24 (18.6%) | 47 (36.4%) |
 | 76-90 | 99 | 5.0% | 44 (44.4%) | 10 (10.1%) | 45 (45.5%) |
 | 91-120 | 26 | 1.3% | 12 (46.2%) | 2 (7.7%) | 12 (46.2%) |
 
 ## 7. Goalless matches
-- Overall: **146** of `1962` (7.4%)
+- Overall: **146** of `1965` (7.4%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -173,7 +174,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 306 | 23 | 7.5% |
 | 2024-2025 | 306 | 24 | 7.8% |
 | 2025-2026 | 328 | 15 | 4.6% |
-| 2026-2027 | 104 | 5 | 4.8% |
+| 2026-2027 | 107 | 5 | 4.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

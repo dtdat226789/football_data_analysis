@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:42:13+00:00
+- Generated: 2026-10-27T02:24:04+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`

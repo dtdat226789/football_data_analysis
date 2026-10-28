@@ -1,16 +1,16 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:48:44+00:00
+- Generated: 2026-10-27T02:30:52+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`
 
-- Teams: **29** | Seasons: **7** | Matches: **1725**
+- Teams: **29** | Seasons: **7** | Matches: **1726**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Crvena zvezda | 7 | 207 | 178 | 20 | 9 | 554 | 589 | 130 | 459 | 79.14 | 1 | 1 | 7 |
+| Crvena zvezda | 7 | 208 | 179 | 20 | 9 | 557 | 590 | 130 | 460 | 79.57 | 1 | 1 | 7 |
 | Partizan | 7 | 207 | 138 | 34 | 35 | 448 | 434 | 189 | 245 | 64.0 | 2 | 10 | 0 |
 | Vojvodina | 7 | 208 | 103 | 52 | 53 | 361 | 338 | 237 | 101 | 51.57 | 2 | 7 | 0 |
 | Cukaricki | 7 | 208 | 93 | 61 | 54 | 340 | 320 | 235 | 85 | 48.57 | 3 | 13 | 0 |
@@ -26,7 +26,7 @@
 | Javor | 4 | 135 | 38 | 34 | 63 | 148 | 142 | 201 | -59 | 37.0 | 12 | 16 | 0 |
 | Zeleznicar Pancevo | 4 | 109 | 39 | 26 | 44 | 143 | 140 | 143 | -3 | 35.75 | 3 | 15 | 0 |
 | IMT Novi Beograd | 4 | 110 | 38 | 26 | 46 | 140 | 127 | 153 | -26 | 35.0 | 4 | 12 | 0 |
-| OFK Beograd Mozzart Bet | 3 | 79 | 27 | 25 | 27 | 106 | 103 | 108 | -5 | 35.33 | 3 | 11 | 0 |
+| OFK Beograd Mozzart Bet | 3 | 80 | 27 | 25 | 28 | 106 | 103 | 109 | -6 | 35.33 | 3 | 11 | 0 |
 | Proleter | 2 | 68 | 23 | 13 | 32 | 82 | 63 | 96 | -33 | 41.0 | 8 | 14 | 0 |
 | Metalac | 2 | 68 | 20 | 19 | 29 | 79 | 84 | 105 | -21 | 39.5 | 10 | 15 | 0 |
 | Kolubara | 2 | 60 | 20 | 11 | 29 | 71 | 55 | 101 | -46 | 35.5 | 9 | 12 | 0 |
@@ -58,8 +58,8 @@
 | Partizan | 104 | 72 | 19 | 13 | 235 | 103 | 66 | 15 | 22 | 213 | 22 |
 | Sp. Subotica | 97 | 29 | 24 | 44 | 111 | 98 | 22 | 23 | 53 | 89 | 22 |
 | Macva | 25 | 8 | 3 | 14 | 27 | 26 | 1 | 5 | 20 | 8 | 19 |
-| Crvena zvezda | 105 | 92 | 10 | 3 | 286 | 102 | 86 | 10 | 6 | 268 | 18 |
 | Proleter | 34 | 14 | 7 | 13 | 49 | 34 | 9 | 6 | 19 | 33 | 16 |
+| Crvena zvezda | 105 | 92 | 10 | 3 | 286 | 103 | 87 | 10 | 6 | 271 | 15 |
 | FK Indjija | 19 | 8 | 1 | 10 | 25 | 19 | 2 | 4 | 13 | 10 | 15 |
 | Metalac | 34 | 11 | 13 | 10 | 46 | 34 | 9 | 6 | 19 | 33 | 13 |
 | TSC | 98 | 46 | 21 | 31 | 159 | 97 | 40 | 28 | 29 | 148 | 11 |
@@ -71,7 +71,7 @@
 | Tekstilac Odzaci | 15 | 5 | 2 | 8 | 17 | 15 | 4 | 2 | 9 | 14 | 3 |
 | Mladost GAT | 15 | 2 | 3 | 10 | 9 | 15 | 2 | 5 | 8 | 11 | -2 |
 | Zlatibor Cajetina | 19 | 3 | 4 | 12 | 13 | 19 | 4 | 4 | 11 | 16 | -3 |
-| OFK Beograd Mozzart Bet | 38 | 10 | 14 | 14 | 44 | 41 | 17 | 11 | 13 | 62 | -18 |
+| OFK Beograd Mozzart Bet | 39 | 10 | 14 | 15 | 44 | 41 | 17 | 11 | 13 | 62 | -18 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
@@ -86,7 +86,7 @@
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Crvena zvezda | 589 |
+| 1 | Crvena zvezda | 590 |
 | 2 | Partizan | 434 |
 | 3 | Vojvodina | 338 |
 | 4 | Cukaricki | 320 |
@@ -95,7 +95,7 @@
 ### Best goal difference
 | rank | team | GD |
 |---|---|---|
-| 1 | Crvena zvezda | 459 |
+| 1 | Crvena zvezda | 460 |
 | 2 | Partizan | 245 |
 | 3 | Vojvodina | 101 |
 | 4 | Cukaricki | 85 |
@@ -104,7 +104,7 @@
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Crvena zvezda | 0.628 |
+| 1 | Crvena zvezda | 0.625 |
 | 2 | Partizan | 0.913 |
 | 3 | Cukaricki | 1.130 |
 | 4 | Vojvodina | 1.139 |

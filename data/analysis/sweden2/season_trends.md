@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:50:34+00:00
+- Generated: 2026-10-27T02:32:51+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Superettan (Sweden)
 - Scope: league `sweden2`
@@ -14,7 +14,7 @@
 | 2023 | Vasteras SK | 63 | GAIS | 6 pts |
 | 2024 | Degerfors | 55 | Oster | 1 pts |
 | 2025 | Vasteras SK | 65 | Kalmar | 1 pts |
-| 2026 | Norrkoping | 59 | Falkenberg | 8 pts |
+| 2026 | Norrkoping | 62 | Falkenberg | 11 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023 | 6 pts |  |
 | 2024 | 1 pts | yes |
 | 2025 | 1 pts | yes |
-| 2026 | 8 pts |  |
+| 2026 | 11 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 63 | 57 | 54 | 41 | 33 | 31 |
 | 2024 | 55 | 54 | 47 | 43 | 34 | 25 |
 | 2025 | 65 | 64 | 48 | 43 | 30 | 19 |
-| 2026 | 59 | 51 | 46 | 42 | 27 | 19 |
+| 2026 | 62 | 51 | 46 | 42 | 27 | 19 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 240 | 673 | 2.804 | 46.2% | 26.7% | 27.1% | 7.1% | 41.0 |
 | 2024 | 240 | 633 | 2.638 | 45.0% | 27.9% | 27.1% | 8.3% | 40.81 |
 | 2025 | 240 | 686 | 2.858 | 42.1% | 27.1% | 30.8% | 7.5% | 40.94 |
-| 2026 | 220 | 645 | 2.932 | 40.0% | 26.8% | 33.2% | 6.8% | 37.56 |
+| 2026 | 222 | 651 | 2.932 | 39.6% | 27.0% | 33.3% | 6.8% | 37.88 |
 
 ## 6. View divergence
 - Largest divergence: **2021** (goals view, avg abs position diff = 5.750)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 2.875 | 5.250 |
 | 2024 | 4.000 | 5.125 |
 | 2025 | 1.750 | 4.875 |
-| 2026 | 2.125 | 5.000 |
+| 2026 | 2.000 | 5.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

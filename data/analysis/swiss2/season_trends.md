@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:51:09+00:00
+- Generated: 2026-10-27T02:33:28+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Challenge League (Switzerland)
 - Scope: league `swiss2`
@@ -14,10 +14,10 @@
 | 2023-2024 | Sion | 79 | Thun | 3 pts |
 | 2024-2025 | Thun | 68 | Aarau | 10 pts |
 | 2025-2026 | Vaduz | 81 | Aarau | 1 pts |
-| 2026-2027 | Lausanne Ouchy | 25 | Winterthur | 4 pts |
+| 2026-2027 | Lausanne Ouchy | 25 | Yverdon | 3 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **4** of 7 seasons
+- Tight races (margin <= 3 pts): **5** of 7 seasons
 - Tightest race: **2021-2022** - Winterthur beat Schaffhausen by **0** pts
 
 | season | margin | tight |
@@ -28,7 +28,7 @@
 | 2023-2024 | 3 pts | yes |
 | 2024-2025 | 10 pts |  |
 | 2025-2026 | 1 pts | yes |
-| 2026-2027 | 4 pts |  |
+| 2026-2027 | 3 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 7 = last safe, 10 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 79 | 76 | 49 | 43 | 43 | 26 |
 | 2024-2025 | 68 | 58 | 51 | 43 | 41 | 34 |
 | 2025-2026 | 81 | 80 | 50 | 48 | 44 | 23 |
-| 2026-2027 | 25 | 21 | 16 | 12 | 12 | 5 |
+| 2026-2027 | 25 | 22 | 16 | 12 | 12 | 5 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 180 | 517 | 2.872 | 41.7% | 28.3% | 30.0% | 6.1% | 48.9 |
 | 2024-2025 | 180 | 540 | 3.0 | 40.0% | 26.1% | 33.9% | 6.1% | 44.82 |
 | 2025-2026 | 186 | 566 | 3.043 | 44.6% | 21.5% | 33.9% | 6.5% | 47.09 |
-| 2026-2027 | 54 | 160 | 2.963 | 42.6% | 27.8% | 29.6% | 5.6% | 14.7 |
+| 2026-2027 | 55 | 167 | 3.036 | 43.6% | 27.3% | 29.1% | 5.5% | 15.0 |
 
 ## 6. View divergence
 - Largest divergence: **2026-2027** (goals view, avg abs position diff = 4.600)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.800 | 2.800 |
 | 2024-2025 | 2.000 | 4.000 |
 | 2025-2026 | 1.455 | 2.000 |
-| 2026-2027 | 1.200 | 4.600 |
+| 2026-2027 | 0.800 | 4.600 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

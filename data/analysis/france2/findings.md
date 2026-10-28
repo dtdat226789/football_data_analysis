@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:32:40+00:00
+- Generated: 2026-10-27T01:48:15+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Ligue 2 (France)
 - Scope: league `france2`

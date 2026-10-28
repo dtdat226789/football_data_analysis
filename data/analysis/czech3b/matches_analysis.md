@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:29:32+00:00
+- Generated: 2026-10-27T01:44:17+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1417 |
-| Home wins | 663 (46.8%) |
-| Draws | 313 (22.1%) |
-| Away wins | 441 (31.1%) |
-| Total goals | 4372 |
-| Average goals per match | 3.085 |
+| Matches | 1421 |
+| Home wins | 666 (46.9%) |
+| Draws | 313 (22.0%) |
+| Away wins | 442 (31.1%) |
+| Total goals | 4388 |
+| Average goals per match | 3.088 |
 | Goalless matches | 74 (5.2%) |
 
 ## 2. Per-season breakdown
@@ -25,18 +25,18 @@
 | 2023-2024 | 240 | 118 (49.2%) | 56 (23.3%) | 66 (27.5%) | 720 | 3.0 | 14 (5.8%) |
 | 2024-2025 | 272 | 125 (46.0%) | 66 (24.3%) | 81 (29.8%) | 796 | 2.926 | 19 (7.0%) |
 | 2025-2026 | 272 | 120 (44.1%) | 60 (22.1%) | 92 (33.8%) | 912 | 3.353 | 7 (2.6%) |
-| 2026-2027 | 90 | 35 (38.9%) | 23 (25.6%) | 32 (35.6%) | 286 | 3.178 | 7 (7.8%) |
+| 2026-2027 | 94 | 38 (40.4%) | 23 (24.5%) | 33 (35.1%) | 302 | 3.213 | 7 (7.4%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 437 (81.8%) | 65 (12.2%) | 32 (6.0%) | 534 |
+| HT home lead | 439 (81.9%) | 65 (12.1%) | 32 (6.0%) | 536 |
 | HT draw | 191 (37.4%) | 176 (34.4%) | 144 (28.2%) | 511 |
-| HT away lead | 29 (8.0%) | 72 (19.9%) | 261 (72.1%) | 362 |
+| HT away lead | 30 (8.2%) | 72 (19.8%) | 262 (72.0%) | 364 |
 - *10 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **29** (2.0%)
+- Home comebacks (trailing at HT, won at FT): **30** (2.1%)
 - Away comebacks (trailing at HT, won at FT): **32** (2.3%)
 
 ### Home comebacks
@@ -71,6 +71,7 @@
 | 2025-2026 | Hradec Kralove B | Varnsdorf | 1-2 | 3-2 |
 | 2025-2026 | Hradec Kralove B | Usti nad Orlici | 0-1 | 3-1 |
 | 2025-2026 | Zapy | Kolin | 0-1 | 2-1 |
+| 2026-2027 | Varnsdorf | Brozany | 0-2 | 3-2 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -111,8 +112,8 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 534 | 437 (81.8%) | 65 (12.2%) | 32 (6.0%) |
-| Away lead | 362 | 261 (72.1%) | 72 (19.9%) | 29 (8.0%) |
+| Home lead | 536 | 439 (81.9%) | 65 (12.1%) | 32 (6.0%) |
+| Away lead | 364 | 262 (72.0%) | 72 (19.8%) | 30 (8.2%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
@@ -123,21 +124,21 @@
 - *10 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1340` of `1417` (94.6%)
+- Matches with a first-goal time recorded: `1344` of `1421` (94.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 483 | 34.1% | 240 (49.7%) | 88 (18.2%) | 155 (32.1%) |
-| 16-30 | 367 | 25.9% | 186 (50.7%) | 62 (16.9%) | 119 (32.4%) |
-| 31-45 | 228 | 16.1% | 110 (48.2%) | 51 (22.4%) | 67 (29.4%) |
+| 1-15 | 484 | 34.1% | 241 (49.8%) | 88 (18.2%) | 155 (32.0%) |
+| 16-30 | 370 | 26.0% | 188 (50.8%) | 62 (16.8%) | 120 (32.4%) |
+| 31-45 | 228 | 16.0% | 110 (48.2%) | 51 (22.4%) | 67 (29.4%) |
 | 46-60 | 143 | 10.1% | 62 (43.4%) | 22 (15.4%) | 59 (41.3%) |
 | 61-75 | 63 | 4.4% | 32 (50.8%) | 13 (20.6%) | 18 (28.6%) |
 | 76-90 | 48 | 3.4% | 25 (52.1%) | 3 (6.2%) | 20 (41.7%) |
 | 91-120 | 8 | 0.6% | 7 (87.5%) | 0 (0.0%) | 1 (12.5%) |
 
 ## 7. Goalless matches
-- Overall: **74** of `1417` (5.2%)
+- Overall: **74** of `1421` (5.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -147,7 +148,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 240 | 14 | 5.8% |
 | 2024-2025 | 272 | 19 | 7.0% |
 | 2025-2026 | 272 | 7 | 2.6% |
-| 2026-2027 | 90 | 7 | 7.8% |
+| 2026-2027 | 94 | 7 | 7.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

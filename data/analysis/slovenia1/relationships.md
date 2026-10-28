@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:49:06+00:00
+- Generated: 2026-10-27T02:31:16+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Prva liga (Slovenia)
 - Scope: league `slovenia1`

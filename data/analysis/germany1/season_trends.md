@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:33:27+00:00
+- Generated: 2026-10-27T01:49:09+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Bundesliga (Germany)
 - Scope: league `germany1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Bayer Leverkusen | 90 | Stuttgart | 17 pts |
 | 2024-2025 | Bayern Munich | 82 | Bayer Leverkusen | 13 pts |
 | 2025-2026 | Bayern Munich | 89 | Dortmund | 16 pts |
-| 2026-2027 | Dortmund | 17 | Bayern Munich | 3 pts |
+| 2026-2027 | Bayern Munich | 17 | Dortmund | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 17 pts |  |
 | 2024-2025 | 13 pts |  |
 | 2025-2026 | 16 pts |  |
-| 2026-2027 | 3 pts | yes |
+| 2026-2027 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 15 = last safe, 18 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 90 | 73 | 65 | 47 | 33 | - |
 | 2024-2025 | 82 | 69 | 57 | 52 | 29 | - |
 | 2025-2026 | 89 | 73 | 62 | 59 | 30 | 1 |
-| 2026-2027 | 17 | 14 | 13 | 12 | 6 | - |
+| 2026-2027 | 17 | 17 | 13 | 12 | 6 | - |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 272 | 862 | 3.169 | 44.5% | 25.0% | 30.5% | 3.7% | 47.24 |
 | 2024-2025 | 272 | 847 | 3.114 | 37.9% | 26.1% | 36.0% | 7.7% | 46.82 |
 | 2025-2026 | 274 | 898 | 3.277 | 43.8% | 23.7% | 32.5% | 2.9% | 44.83 |
-| 2026-2027 | 54 | 184 | 3.407 | 51.9% | 24.1% | 24.1% | 9.3% | 9.82 |
+| 2026-2027 | 56 | 191 | 3.411 | 51.8% | 23.2% | 25.0% | 8.9% | 10.18 |
 
 ## 6. View divergence
 - Largest divergence: **2022-2023** (goals view, avg abs position diff = 4.824)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.588 | 3.529 |
 | 2024-2025 | 3.882 | 4.118 |
 | 2025-2026 | 2.222 | 3.222 |
-| 2026-2027 | 3.765 | 3.765 |
+| 2026-2027 | 4.118 | 3.529 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

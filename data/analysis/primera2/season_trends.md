@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:44:24+00:00
+- Generated: 2026-10-27T02:26:31+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`
@@ -13,7 +13,7 @@
 | 2023-2024 | Castellon | 82 | Cordoba | 5 pts |
 | 2024-2025 | Ceuta | 67 | Murcia | 3 pts |
 | 2025-2026 | Eldense | 69 | Sabadell | 1 pts |
-| 2026-2027 | Zaragoza | 20 | Villarreal B | 3 pts |
+| 2026-2027 | Villarreal B | 20 | Zaragoza | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 6 seasons
@@ -26,7 +26,7 @@
 | 2023-2024 | 5 pts |  |
 | 2024-2025 | 3 pts | yes |
 | 2025-2026 | 1 pts | yes |
-| 2026-2027 | 3 pts | yes |
+| 2026-2027 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 17 = last safe, 20 = bottom._
@@ -38,7 +38,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 82 | 77 | 68 | 61 | 39 | 27 |
 | 2024-2025 | 67 | 64 | 58 | 54 | 43 | 35 |
 | 2025-2026 | 69 | 68 | 63 | 57 | 45 | 28 |
-| 2026-2027 | 20 | 17 | 15 | 13 | 7 | 6 |
+| 2026-2027 | 20 | 20 | 16 | 14 | 7 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -58,7 +58,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 862 | 2.268 | 46.1% | 25.5% | 28.4% | 11.3% | 52.15 |
 | 2024-2025 | 380 | 903 | 2.376 | 40.8% | 34.7% | 24.5% | 11.3% | 50.4 |
 | 2025-2026 | 380 | 856 | 2.253 | 45.5% | 29.7% | 24.7% | 12.1% | 51.35 |
-| 2026-2027 | 85 | 222 | 2.612 | 47.1% | 30.6% | 22.4% | 7.1% | 11.45 |
+| 2026-2027 | 90 | 243 | 2.7 | 47.8% | 31.1% | 21.1% | 6.7% | 12.1 |
 
 ## 6. View divergence
 - Largest divergence: **2022-2023** (goals view, avg abs position diff = 6.700)
@@ -72,7 +72,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.000 | 5.000 |
 | 2024-2025 | 2.900 | 6.500 |
 | 2025-2026 | 2.800 | 5.100 |
-| 2026-2027 | 2.200 | 6.300 |
+| 2026-2027 | 2.000 | 5.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

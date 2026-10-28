@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:28:11+00:00
+- Generated: 2026-10-27T01:42:23+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Championship (England)
 - Scope: league `cha`

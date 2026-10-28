@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:41:20+00:00",
+  "generated_at": "2026-10-27T02:23:04+00:00",
   "config": {
     "league": "morocco",
     "out_dir": "data/analysis/morocco",
@@ -29,7 +29,7 @@
       "path": "data/analysis/morocco/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 49.39
+      "size_kb": 48.74
     },
     {
       "report_name": "matches_analysis",
@@ -57,14 +57,14 @@
       "path": "data/analysis/morocco/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 10.47
+      "size_kb": 10.48
     },
     {
       "report_name": "scoreline_analysis",
       "path": "data/analysis/morocco/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 206.71
+      "size_kb": 206.9
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1481 matches: home wins 40.0%, draws 32.0%, away wins 28.0% (592H / 474D / 415A)",
+      "detail": "1483 matches: home wins 39.9%, draws 32.0%, away wins 28.1% (592H / 475D / 416A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,21 +104,21 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1481 matches produced 3284 goals (avg 2.217 per match)",
+      "detail": "1483 matches produced 3287 goals (avg 2.216 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.0% vs away 46.0% of 3284 goals in total (home/away ratio 1.17)",
+      "detail": "home 54.0% vs away 46.0% of 3287 goals in total (home/away ratio 1.17)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "708 of 1481 matches (47.8%)",
+      "detail": "709 of 1483 matches (47.8%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -132,7 +132,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 34.92, median 31.0",
+      "detail": "mean 34.93, median 31.0",
       "importance": "low",
       "id": "F8"
     },
@@ -167,14 +167,14 @@
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2022-2023: FAR Rabat beat Wydad by 1 pt",
+      "detail": "2026-2027: COD Meknes beat Kawkab Marrakech by 0 pts",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.172 per match): first half 2.182 vs last half 2.354 across 7 seasons",
+      "detail": "up (+0.151 per match): first half 2.182 vs last half 2.333 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,14 +188,14 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.500)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.625)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 216 matches (14.6%)",
+      "detail": "1-1 in 217 matches (14.6%)",
       "importance": "medium",
       "id": "F17"
     },
@@ -209,14 +209,14 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (216 of 474 draw matches, 45.6%)",
+      "detail": "1-1 (217 of 475 draw matches, 45.7%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (133 of 415 away matches, 32.0%)",
+      "detail": "0-1 (134 of 416 away matches, 32.2%)",
       "importance": "low",
       "id": "F20"
     },
@@ -243,25 +243,25 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (45)",
-      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
+      "finding": "Data-quality warnings (43)",
+      "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
     },
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1481 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1483 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1481,
-    "avg_goals": 2.217,
-    "home_win_pct": 40.0,
+    "n_matches": 1483,
+    "avg_goals": 2.216,
+    "home_win_pct": 39.9,
     "draw_pct": 32.0,
-    "away_win_pct": 28.0,
+    "away_win_pct": 28.1,
     "most_common_scoreline": "1-1",
     "dominant_team": "FAR Rabat",
     "champion_most_titles": "Wydad",
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 49.39
+      "size_kb": 48.74
     },
     {
       "module": "matches_analysis",
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 10.47
+      "size_kb": 10.48
     },
     {
       "module": "scoreline_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 206.71
+      "size_kb": 206.9
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 33 matches, expected 380",
+      "message": "Season 2026-2027 has 35 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 33,
+        "n_matches": 35,
         "expected": 380
       }
     },
@@ -535,47 +535,25 @@
       }
     },
     {
-      "code": "SEASON_AVG_GOALS_OUTLIER",
-      "severity": "warning",
-      "message": "Season 2026-2027 avg goals 2.576 vs overall 2.217 (deviation 0.359)",
-      "details": {
-        "season": "2026-2027",
-        "season_avg_goals": 2.576,
-        "overall_avg_goals": 2.217,
-        "deviation": 0.359
-      }
-    },
-    {
-      "code": "GOALLESS_SHARE_OUTLIER",
-      "severity": "warning",
-      "message": "Season 2026-2027 goalless share 15.2% vs overall 13.1% (deviation 2.1 pp)",
-      "details": {
-        "season": "2026-2027",
-        "season_goalless_pct": 15.2,
-        "overall_goalless_pct": 13.1,
-        "deviation_pp": 2.1
-      }
-    },
-    {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 24.2% vs overall 40.0%",
+      "message": "Season 2026-2027 home outcome share 22.9% vs overall 39.9%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 24.2,
-        "overall_share": 40.0
+        "season_share": 22.9,
+        "overall_share": 39.9
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 45.5% vs overall 28.0%",
+      "message": "Season 2026-2027 away outcome share 45.7% vs overall 28.1%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 45.5,
-        "overall_share": 28.0
+        "season_share": 45.7,
+        "overall_share": 28.1
       }
     },
     {
@@ -610,8 +588,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 91353,
-        "distinct": 91339,
+        "rows": 91449,
+        "distinct": 91435,
         "duplicates": 14
       }
     },
@@ -620,10 +598,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=388, fgte=388 rows)",
       "details": {
-        "total": 91353,
+        "total": 91449,
         "fgt_inconsistent": 388,
         "fgte_inconsistent": 388,
-        "n_with_fgt": 83951
+        "n_with_fgt": 84040
       }
     },
     {

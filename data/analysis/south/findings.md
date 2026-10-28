@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-26T01:49:27+00:00
+- Generated: 2026-10-27T02:31:39+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2024-2025: Truro beat Torquay by 0 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — down (-0.081 per match): first half 2.91 vs last half 2.828 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025-2026 (goals view, avg abs position diff 21.083)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 2.667)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 2.583)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 346 matches (11.5%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (295 of 1299 home matches, 22.7%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (346 of 714 draw matches, 48.5%)

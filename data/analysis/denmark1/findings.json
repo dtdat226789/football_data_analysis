@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:30:00+00:00",
+  "generated_at": "2026-10-27T01:44:52+00:00",
   "config": {
     "league": "denmark1",
     "out_dir": "data/analysis/denmark1",
@@ -29,7 +29,7 @@
       "path": "data/analysis/denmark1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 48.49
+      "size_kb": 48.79
     },
     {
       "report_name": "matches_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/denmark1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 140.23
+      "size_kb": 140.81
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "921 matches: home wins 41.3%, draws 27.4%, away wins 31.4% (380H / 252D / 289A)",
+      "detail": "925 matches: home wins 41.4%, draws 27.4%, away wins 31.2% (383H / 253D / 289A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 238 times",
+      "detail": "home lead at HT -> home win occurred 241 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "921 matches produced 2640 goals (avg 2.866 per match)",
+      "detail": "925 matches produced 2656 goals (avg 2.871 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 53.1% vs away 46.9% of 2640 goals in total (home/away ratio 1.13)",
+      "detail": "home 53.2% vs away 46.8% of 2656 goals in total (home/away ratio 1.14)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "534 of 921 matches (58.0%)",
+      "detail": "538 of 925 matches (58.2%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 315 scoring matches, 36.4% of scoring)",
+      "detail": "minute 1-15 (first goal in 317 scoring matches, 36.5% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 29.54, median 25.0",
+      "detail": "mean 29.49, median 24.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Midtjylland leads with 291 points across 7 seasons (2 title(s), GD 114)",
+      "detail": "Midtjylland leads with 294 points across 7 seasons (3 title(s), GD 115)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,28 +153,28 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Nordsjaelland earns 56 more points at home than away (145 home vs 89 away)",
+      "detail": "Nordsjaelland earns 55 more points at home than away (145 home vs 90 away)",
       "importance": "medium",
       "id": "F11"
     },
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "FC Copenhagen won 2 of 7 championship(s) on record",
+      "detail": "Midtjylland won 3 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: FC Copenhagen beat Midtjylland by 0 pts",
+      "detail": "2022-2023: Nordsjaelland beat FC Copenhagen by 1 pt",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.367 per match): first half 2.707 vs last half 3.075 across 7 seasons",
+      "detail": "up (+0.385 per match): first half 2.707 vs last half 3.092 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -195,21 +195,21 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 117 matches (12.7%)",
+      "detail": "1-1 in 118 matches (12.8%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (84 of 380 home matches, 22.1%)",
+      "detail": "1-0 (84 of 383 home matches, 21.9%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (117 of 252 draw matches, 46.4%)",
+      "detail": "1-1 (118 of 253 draw matches, 46.6%)",
       "importance": "low",
       "id": "F19"
     },
@@ -243,7 +243,7 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (44)",
+      "finding": "Data-quality warnings (45)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 921 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 925 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 921,
-    "avg_goals": 2.866,
-    "home_win_pct": 41.3,
+    "n_matches": 925,
+    "avg_goals": 2.871,
+    "home_win_pct": 41.4,
     "draw_pct": 27.4,
-    "away_win_pct": 31.4,
+    "away_win_pct": 31.2,
     "most_common_scoreline": "1-1",
     "dominant_team": "Midtjylland",
-    "champion_most_titles": "FC Copenhagen",
-    "btts_rate_pct": 58.0
+    "champion_most_titles": "Midtjylland",
+    "btts_rate_pct": 58.2
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 48.49
+      "size_kb": 48.79
     },
     {
       "module": "matches_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 140.23
+      "size_kb": 140.81
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 68 matches, expected 380",
+      "message": "Season 2026-2027 has 72 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 68,
+        "n_matches": 72,
         "expected": 380
       }
     },
@@ -526,12 +526,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024-2025 away outcome share 24.2% vs overall 31.4%",
+      "message": "Season 2024-2025 away outcome share 24.2% vs overall 31.2%",
       "details": {
         "season": "2024-2025",
         "outcome": "away",
         "season_share": 24.2,
-        "overall_share": 31.4
+        "overall_share": 31.2
       }
     },
     {
@@ -546,25 +546,36 @@
       }
     },
     {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2025-2026 away outcome share 35.2% vs overall 31.2%",
+      "details": {
+        "season": "2025-2026",
+        "outcome": "away",
+        "season_share": 35.2,
+        "overall_share": 31.2
+      }
+    },
+    {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 4.4% vs overall 6.1% (deviation 1.7 pp)",
+      "message": "Season 2026-2027 goalless share 4.2% vs overall 6.1% (deviation 1.9 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 4.4,
+        "season_goalless_pct": 4.2,
         "overall_goalless_pct": 6.1,
-        "deviation_pp": 1.7
+        "deviation_pp": 1.9
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 26.5% vs overall 31.4%",
+      "message": "Season 2026-2027 away outcome share 25.0% vs overall 31.2%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 26.5,
-        "overall_share": 31.4
+        "season_share": 25.0,
+        "overall_share": 31.2
       }
     },
     {
@@ -589,8 +600,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 26021,
-        "distinct": 26016,
+        "rows": 26042,
+        "distinct": 26037,
         "duplicates": 5
       }
     },
@@ -599,10 +610,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=310, fgte=310 rows)",
       "details": {
-        "total": 26021,
+        "total": 26042,
         "fgt_inconsistent": 310,
         "fgte_inconsistent": 310,
-        "n_with_fgt": 23725
+        "n_with_fgt": 23745
       }
     },
     {

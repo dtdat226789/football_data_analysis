@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:28:32+00:00
+- Generated: 2026-10-27T01:42:53+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League (China)
 - Scope: league `china`

@@ -1,20 +1,20 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:38:04+00:00
+- Generated: 2026-10-27T01:57:02+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`
 
-- Teams: **47** | Seasons: **7** | Matches: **2368**
+- Teams: **47** | Seasons: **7** | Matches: **2370**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Frosinone | 5 | 190 | 83 | 63 | 44 | 312 | 272 | 197 | 75 | 62.4 | 1 | 16 | 1 |
-| Pisa | 6 | 197 | 78 | 63 | 56 | 297 | 279 | 235 | 44 | 49.5 | 2 | 13 | 0 |
+| Pisa | 6 | 198 | 78 | 64 | 56 | 298 | 280 | 236 | 44 | 49.67 | 2 | 13 | 0 |
 | Venezia | 4 | 152 | 73 | 41 | 38 | 260 | 250 | 166 | 84 | 65.0 | 2 | 8 | 0 |
 | Brescia | 5 | 190 | 62 | 70 | 58 | 256 | 238 | 233 | 5 | 51.2 | 5 | 16 | 0 |
-| Palermo | 5 | 161 | 67 | 50 | 44 | 251 | 241 | 188 | 53 | 50.2 | 1 | 9 | 1 |
+| Palermo | 5 | 162 | 68 | 50 | 44 | 254 | 243 | 189 | 54 | 50.8 | 1 | 9 | 1 |
 | Cremonese | 5 | 160 | 68 | 47 | 45 | 251 | 221 | 170 | 51 | 50.2 | 2 | 18 | 0 |
 | Cittadella | 5 | 190 | 58 | 63 | 69 | 237 | 190 | 219 | -29 | 47.4 | 6 | 19 | 0 |
 | Monza | 3 | 118 | 60 | 34 | 24 | 214 | 178 | 108 | 70 | 71.33 | 1 | 3 | 1 |
@@ -40,11 +40,11 @@
 | Mantova | 3 | 84 | 28 | 23 | 33 | 107 | 106 | 121 | -15 | 35.67 | 2 | 13 | 0 |
 | Cesena | 3 | 84 | 27 | 26 | 31 | 107 | 99 | 115 | -16 | 35.67 | 7 | 15 | 0 |
 | Perugia | 2 | 76 | 24 | 25 | 27 | 97 | 80 | 84 | -4 | 48.5 | 9 | 18 | 0 |
-| Carrarese | 3 | 83 | 23 | 27 | 33 | 96 | 92 | 108 | -16 | 32.0 | 12 | 16 | 0 |
-| L.R. Vicenza | 3 | 84 | 22 | 25 | 37 | 91 | 97 | 127 | -30 | 30.33 | 13 | 17 | 0 |
+| Carrarese | 3 | 84 | 23 | 27 | 34 | 96 | 93 | 110 | -17 | 32.0 | 12 | 16 | 0 |
+| L.R. Vicenza | 3 | 84 | 22 | 25 | 37 | 91 | 97 | 127 | -30 | 30.33 | 14 | 17 | 0 |
 | Sassuolo | 1 | 38 | 25 | 7 | 6 | 82 | 78 | 38 | 40 | 82.0 | 1 | 1 | 1 |
 | Genoa | 1 | 38 | 21 | 11 | 6 | 74 | 53 | 28 | 25 | 74.0 | 2 | 2 | 0 |
-| Entella | 3 | 84 | 16 | 26 | 42 | 74 | 76 | 124 | -48 | 24.67 | 12 | 20 | 0 |
+| Entella | 3 | 84 | 16 | 26 | 42 | 74 | 76 | 124 | -48 | 24.67 | 13 | 20 | 0 |
 | Pescara | 2 | 76 | 14 | 25 | 37 | 67 | 80 | 126 | -46 | 33.5 | 19 | 19 | 0 |
 | Pordenone | 2 | 76 | 13 | 24 | 39 | 63 | 69 | 110 | -41 | 31.5 | 15 | 20 | 0 |
 | Cagliari | 1 | 38 | 15 | 15 | 8 | 60 | 50 | 34 | 16 | 60.0 | 5 | 5 | 0 |
@@ -56,16 +56,16 @@
 | Crotone | 1 | 38 | 4 | 14 | 20 | 26 | 41 | 61 | -20 | 26.0 | 19 | 19 | 0 |
 | Lecco | 1 | 38 | 6 | 8 | 24 | 26 | 35 | 74 | -39 | 26.0 | 20 | 20 | 0 |
 | Arezzo | 1 | 8 | 3 | 1 | 4 | 10 | 8 | 17 | -9 | 10.0 | 11 | 11 | 0 |
-| Verona | 1 | 7 | 2 | 2 | 3 | 8 | 14 | 12 | 2 | 8.0 | 14 | 14 | 0 |
+| Verona | 1 | 8 | 2 | 3 | 3 | 9 | 15 | 13 | 2 | 9.0 | 12 | 12 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| Palermo | 81 | 43 | 21 | 17 | 150 | 81 | 25 | 29 | 27 | 104 | 46 |
 | Venezia | 76 | 47 | 11 | 18 | 152 | 76 | 26 | 30 | 20 | 108 | 44 |
-| Pisa | 99 | 45 | 35 | 19 | 170 | 98 | 33 | 28 | 37 | 127 | 43 |
-| Palermo | 80 | 42 | 21 | 17 | 147 | 81 | 25 | 29 | 27 | 104 | 43 |
 | Cosenza | 95 | 28 | 33 | 34 | 117 | 95 | 13 | 35 | 47 | 74 | 43 |
-| Carrarese | 42 | 18 | 13 | 11 | 67 | 41 | 5 | 14 | 22 | 29 | 38 |
+| Pisa | 99 | 45 | 35 | 19 | 170 | 99 | 33 | 29 | 37 | 128 | 42 |
+| Carrarese | 42 | 18 | 13 | 11 | 67 | 42 | 5 | 14 | 23 | 29 | 38 |
 | Monza | 59 | 37 | 14 | 8 | 125 | 59 | 23 | 20 | 16 | 89 | 36 |
 | Bari | 77 | 27 | 33 | 17 | 114 | 77 | 18 | 28 | 31 | 82 | 32 |
 | Spezia | 57 | 23 | 18 | 16 | 87 | 57 | 11 | 25 | 21 | 58 | 29 |
@@ -99,8 +99,8 @@
 | Lecce | 38 | 19 | 14 | 5 | 71 | 38 | 16 | 14 | 8 | 62 | 9 |
 | Benevento | 43 | 16 | 12 | 15 | 60 | 41 | 13 | 13 | 15 | 52 | 8 |
 | Alessandria | 19 | 5 | 6 | 8 | 21 | 19 | 3 | 4 | 12 | 13 | 8 |
+| Verona | 5 | 2 | 2 | 1 | 8 | 3 | 0 | 1 | 2 | 1 | 7 |
 | Sassuolo | 19 | 14 | 2 | 3 | 44 | 19 | 11 | 5 | 3 | 38 | 6 |
-| Verona | 4 | 2 | 1 | 1 | 7 | 3 | 0 | 1 | 2 | 1 | 6 |
 | L.R. Vicenza | 41 | 11 | 15 | 15 | 48 | 43 | 11 | 10 | 22 | 43 | 5 |
 | Perugia | 38 | 12 | 14 | 12 | 50 | 38 | 12 | 11 | 15 | 47 | 3 |
 | Spal | 57 | 16 | 21 | 20 | 69 | 57 | 15 | 22 | 20 | 67 | 2 |
@@ -122,10 +122,10 @@
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Pisa | 279 |
+| 1 | Pisa | 280 |
 | 2 | Frosinone | 272 |
 | 3 | Venezia | 250 |
-| 4 | Palermo | 241 |
+| 4 | Palermo | 243 |
 | 5 | Brescia | 238 |
 
 ### Best goal difference
@@ -134,7 +134,7 @@
 | 1 | Venezia | 84 |
 | 2 | Frosinone | 75 |
 | 3 | Monza | 70 |
-| 4 | Palermo | 53 |
+| 4 | Palermo | 54 |
 | 5 | Cremonese | 51 |
 
 ### Best defence (goals against per match, standings)
@@ -150,7 +150,7 @@
 - Teams present in all **7** seasons: **0**
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **706** (showing the 15 most frequent)
+- Distinct fixtures: **707** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -206,10 +206,10 @@ _Cells show final position; '-' when the team was absent from that season._
 | Cesena | - | - | - | - | 7 | 10 | 15 |
 | Perugia | - | 9 | 18 | - | - | - | - |
 | Carrarese | - | - | - | - | 12 | 12 | 16 |
-| L.R. Vicenza | 14 | 17 | - | - | - | - | 13 |
+| L.R. Vicenza | 14 | 17 | - | - | - | - | 14 |
 | Sassuolo | - | - | - | - | 1 | - | - |
 | Genoa | - | - | 2 | - | - | - | - |
-| Entella | 20 | - | - | - | - | 15 | 12 |
+| Entella | 20 | - | - | - | - | 15 | 13 |
 | Pescara | 19 | - | - | - | - | 19 | - |
 | Pordenone | 15 | 20 | - | - | - | - | - |
 | Cagliari | - | - | 5 | - | - | - | - |
@@ -221,7 +221,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Crotone | - | 19 | - | - | - | - | - |
 | Lecco | - | - | - | 20 | - | - | - |
 | Arezzo | - | - | - | - | - | - | 11 |
-| Verona | - | - | - | - | - | - | 14 |
+| Verona | - | - | - | - | - | - | 12 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*

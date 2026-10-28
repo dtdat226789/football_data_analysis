@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-26T01:41:30+00:00
+- Generated: 2026-10-27T02:23:14+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`

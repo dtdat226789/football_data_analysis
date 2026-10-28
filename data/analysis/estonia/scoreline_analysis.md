@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:31:31+00:00
+- Generated: 2026-10-27T01:46:50+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1166** across **7** seasons.
+- Matches analysed: **1167** across **7** seasons.
 - Distinct scorelines seen: **52**.
 
 | scoreline | count | pct |
@@ -15,7 +15,7 @@
 | 1-2 | 98 | 8.4% |
 | 1-0 | 94 | 8.1% |
 | 0-1 | 86 | 7.4% |
-| 2-1 | 84 | 7.2% |
+| 2-1 | 85 | 7.3% |
 | 2-0 | 70 | 6.0% |
 | 0-2 | 67 | 5.7% |
 | 0-0 | 57 | 4.9% |
@@ -92,10 +92,10 @@
 | scoreline | count | pct |
 |---|---|---|
 | 1-2 | 22 | 13.3% |
-| 1-0 | 15 | 9.1% |
-| 0-1 | 11 | 6.7% |
-| 2-1 | 11 | 6.7% |
-| 2-0 | 10 | 6.1% |
+| 1-0 | 15 | 9.0% |
+| 2-1 | 12 | 7.2% |
+| 0-1 | 11 | 6.6% |
+| 2-0 | 10 | 6.0% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -105,7 +105,7 @@ _10+ groups all matches with 10 or more total goals._
 | 0 | 57 | 4.9% |
 | 1 | 180 | 15.4% |
 | 2 | 239 | 20.5% |
-| 3 | 279 | 23.9% |
+| 3 | 280 | 24.0% |
 | 4 | 205 | 17.6% |
 | 5 | 107 | 9.2% |
 | 6 | 52 | 4.5% |
@@ -168,24 +168,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-07-19 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **947** (draws: **219**)
+- Decided matches: **948** (draws: **219**)
 - Average winning margin: **2.09**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 420 | 44.4% |
+| 1 | 421 | 44.4% |
 | 2 | 254 | 26.8% |
 | 3+ | 273 | 28.8% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **505** | avg margin: **2.21** | max margin: **10**
+- Matches: **506** | avg margin: **2.21** | max margin: **10**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 205 | 40.6% |
+| 1 | 206 | 40.7% |
 | 2 | 133 | 26.3% |
-| 3+ | 167 | 33.1% |
+| 3+ | 167 | 33.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -200,7 +200,7 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 505 | 1-0 | 94 | 18.6% |
+| home | 506 | 1-0 | 94 | 18.6% |
 | draw | 219 | 1-1 | 102 | 46.6% |
 | away | 442 | 1-2 | 98 | 22.2% |
 

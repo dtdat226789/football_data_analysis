@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-26T01:40:45+00:00
+- Generated: 2026-10-27T02:01:39+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`

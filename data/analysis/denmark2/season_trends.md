@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:30:11+00:00
+- Generated: 2026-10-27T01:45:05+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 1st Division (Denmark)
 - Scope: league `denmark2`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.273 | 4.000 |
 | 2024-2025 | 1.818 | 2.909 |
 | 2025-2026 | 1.818 | 3.636 |
-| 2026-2027 | 1.500 | 4.500 |
+| 2026-2027 | 1.667 | 4.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

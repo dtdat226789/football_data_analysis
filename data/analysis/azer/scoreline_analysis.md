@@ -1,22 +1,22 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-26T01:26:54+00:00
+- Generated: 2026-10-27T01:40:50+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier League (Azerbaijan)
 - Scope: league `azer`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1021** across **7** seasons.
+- Matches analysed: **1023** across **7** seasons.
 - Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 120 | 11.8% |
+| 1-1 | 120 | 11.7% |
 | 1-0 | 106 | 10.4% |
 | 0-1 | 99 | 9.7% |
-| 0-0 | 86 | 8.4% |
-| 2-1 | 72 | 7.1% |
-| 2-0 | 70 | 6.9% |
+| 0-0 | 87 | 8.5% |
+| 2-1 | 73 | 7.1% |
+| 2-0 | 70 | 6.8% |
 | 0-2 | 60 | 5.9% |
 | 1-2 | 60 | 5.9% |
 | 2-2 | 49 | 4.8% |
@@ -91,21 +91,21 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 7 | 12.3% |
-| 0-1 | 6 | 10.5% |
-| 1-1 | 6 | 10.5% |
-| 0-0 | 5 | 8.8% |
-| 3-1 | 4 | 7.0% |
+| 1-0 | 7 | 11.9% |
+| 0-0 | 6 | 10.2% |
+| 0-1 | 6 | 10.2% |
+| 1-1 | 6 | 10.2% |
+| 2-1 | 5 | 8.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 86 | 8.4% |
-| 1 | 205 | 20.1% |
-| 2 | 250 | 24.5% |
-| 3 | 211 | 20.7% |
+| 0 | 87 | 8.5% |
+| 1 | 205 | 20.0% |
+| 2 | 250 | 24.4% |
+| 3 | 212 | 20.7% |
 | 4 | 147 | 14.4% |
 | 5 | 77 | 7.5% |
 | 6 | 30 | 2.9% |
@@ -136,24 +136,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-05-22 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **759** (draws: **262**)
+- Decided matches: **760** (draws: **263**)
 - Average winning margin: **1.88**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 378 | 49.8% |
+| 1 | 379 | 49.9% |
 | 2 | 206 | 27.1% |
-| 3+ | 175 | 23.1% |
+| 3+ | 175 | 23.0% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **414** | avg margin: **1.93** | max margin: **8**
+- Matches: **415** | avg margin: **1.93** | max margin: **8**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 203 | 49.0% |
-| 2 | 113 | 27.3% |
-| 3+ | 98 | 23.7% |
+| 1 | 204 | 49.2% |
+| 2 | 113 | 27.2% |
+| 3+ | 98 | 23.6% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -168,8 +168,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 414 | 1-0 | 106 | 25.6% |
-| draw | 262 | 1-1 | 120 | 45.8% |
+| home | 415 | 1-0 | 106 | 25.5% |
+| draw | 263 | 1-1 | 120 | 45.6% |
 | away | 345 | 0-1 | 99 | 28.7% |
 
 ---

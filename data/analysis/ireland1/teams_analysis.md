@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:36:48+00:00
+- Generated: 2026-10-27T01:54:48+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premier Division (Ireland)
 - Scope: league `ireland1`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:26:05+00:00
+- Generated: 2026-10-27T01:39:44+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: A-League (Australia)
 - Scope: league `australia`

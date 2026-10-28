@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:45:24+00:00
+- Generated: 2026-10-27T02:27:27+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`

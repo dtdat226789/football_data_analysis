@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-26T01:52:29+00:00
+- Generated: 2026-10-27T02:34:43+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Super League Women (Belgium)
 - Scope: league `wbelgium1`

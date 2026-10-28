@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:48:30+00:00
+- Generated: 2026-10-27T02:30:36+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`
@@ -14,7 +14,7 @@
 | 2023-2024 | San Sebastian Reyes | 61 | Gimnastica Segoviana | 0 pts |
 | 2024-2025 | Guadalajara | 74 | Cacereno | 6 pts |
 | 2025-2026 | Rayo Majadahonda | 70 | San Sebastian Reyes | 0 pts |
-| 2026-2027 | San Sebastian Reyes | 19 | Atl. Madrid C | 2 pts |
+| 2026-2027 | San Sebastian Reyes | 19 | Valladolid Promesas | 2 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **5** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 61 | 61 | 57 | 49 | 38 | 23 |
 | 2024-2025 | 74 | 68 | 55 | 53 | 33 | 21 |
 | 2025-2026 | 70 | 70 | 57 | 51 | 37 | 30 |
-| 2026-2027 | 19 | 17 | 16 | 13 | 7 | 4 |
+| 2026-2027 | 19 | 17 | 17 | 15 | 7 | 5 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 681 | 2.225 | 43.1% | 29.1% | 27.8% | 12.7% | 46.06 |
 | 2024-2025 | 306 | 754 | 2.464 | 47.7% | 25.8% | 26.5% | 9.5% | 46.61 |
 | 2025-2026 | 306 | 783 | 2.559 | 45.1% | 25.2% | 29.7% | 8.8% | 46.72 |
-| 2026-2027 | 74 | 197 | 2.662 | 48.6% | 32.4% | 18.9% | 13.5% | 11.0 |
+| 2026-2027 | 79 | 217 | 2.747 | 48.1% | 32.9% | 19.0% | 12.7% | 11.72 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 6.667)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.111 | 5.889 |
 | 2024-2025 | 1.667 | 6.667 |
 | 2025-2026 | 3.111 | 6.444 |
-| 2026-2027 | 1.667 | 5.333 |
+| 2026-2027 | 1.778 | 4.889 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

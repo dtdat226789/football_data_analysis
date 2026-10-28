@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-26T01:49:07+00:00",
+  "generated_at": "2026-10-27T02:31:19+00:00",
   "config": {
     "league": "slovenia1",
     "out_dir": "data/analysis/slovenia1",
@@ -664,8 +664,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (34 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 134615,
-        "distinct": 134581,
+        "rows": 134772,
+        "distinct": 134738,
         "duplicates": 34
       }
     },
@@ -674,10 +674,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=438, fgte=438 rows)",
       "details": {
-        "total": 134615,
+        "total": 134772,
         "fgt_inconsistent": 438,
         "fgte_inconsistent": 438,
-        "n_with_fgt": 123582
+        "n_with_fgt": 123727
       }
     },
     {

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:48:14+00:00
+- Generated: 2026-10-27T02:30:16+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 4 (Spain)
 - Scope: league `segunda4`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 66 | 60 | 54 | 49 | 36 | 23 |
 | 2024-2025 | 68 | 67 | 59 | 52 | 36 | 26 |
 | 2025-2026 | 66 | 66 | 62 | 60 | 37 | 21 |
-| 2026-2027 | 17 | 15 | 14 | 13 | 6 | 3 |
+| 2026-2027 | 17 | 15 | 15 | 13 | 6 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 631 | 2.062 | 46.1% | 31.4% | 22.5% | 15.0% | 45.67 |
 | 2024-2025 | 306 | 629 | 2.056 | 42.5% | 27.5% | 30.1% | 10.8% | 46.33 |
 | 2025-2026 | 323 | 738 | 2.285 | 50.2% | 26.0% | 23.8% | 8.7% | 46.58 |
-| 2026-2027 | 67 | 181 | 2.701 | 44.8% | 31.3% | 23.9% | 10.4% | 10.0 |
+| 2026-2027 | 72 | 190 | 2.639 | 47.2% | 30.6% | 22.2% | 11.1% | 10.78 |
 
 ## 6. View divergence
 - Largest divergence: **2020-2021** (goals view, avg abs position diff = 8.900)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.444 | 5.889 |
 | 2024-2025 | 2.444 | 6.889 |
 | 2025-2026 | 2.211 | 6.632 |
-| 2026-2027 | 2.556 | 6.111 |
+| 2026-2027 | 2.444 | 5.778 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

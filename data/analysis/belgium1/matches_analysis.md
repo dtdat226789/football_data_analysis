@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:27:03+00:00
+- Generated: 2026-10-27T01:41:00+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Jupiler Pro League (Belgium)
 - Scope: league `belgium1`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1795 |
-| Home wins | 773 (43.1%) |
-| Draws | 436 (24.3%) |
+| Matches | 1799 |
+| Home wins | 777 (43.2%) |
+| Draws | 436 (24.2%) |
 | Away wins | 586 (32.6%) |
-| Total goals | 5160 |
-| Average goals per match | 2.875 |
+| Total goals | 5179 |
+| Average goals per match | 2.879 |
 | Goalless matches | 103 (5.7%) |
 
 ## 2. Per-season breakdown
@@ -25,18 +25,18 @@
 | 2023-2024 | 240 | 108 (45.0%) | 65 (27.1%) | 67 (27.9%) | 672 | 2.8 | 12 (5.0%) |
 | 2024-2025 | 240 | 110 (45.8%) | 69 (28.8%) | 61 (25.4%) | 645 | 2.688 | 22 (9.2%) |
 | 2025-2026 | 321 | 132 (41.1%) | 81 (25.2%) | 108 (33.6%) | 864 | 2.692 | 25 (7.8%) |
-| 2026-2027 | 76 | 37 (48.7%) | 15 (19.7%) | 24 (31.6%) | 236 | 3.105 | 3 (3.9%) |
+| 2026-2027 | 80 | 41 (51.2%) | 15 (18.8%) | 24 (30.0%) | 255 | 3.188 | 3 (3.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 485 (77.8%) | 90 (14.4%) | 48 (7.7%) | 623 |
+| HT home lead | 488 (78.0%) | 90 (14.4%) | 48 (7.7%) | 626 |
 | HT draw | 242 (35.0%) | 248 (35.8%) | 202 (29.2%) | 692 |
-| HT away lead | 42 (8.9%) | 98 (20.7%) | 334 (70.5%) | 474 |
+| HT away lead | 43 (9.1%) | 98 (20.6%) | 334 (70.3%) | 475 |
 - *6 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **42** (2.3%)
+- Home comebacks (trailing at HT, won at FT): **43** (2.4%)
 - Away comebacks (trailing at HT, won at FT): **48** (2.7%)
 
 ### Home comebacks
@@ -84,6 +84,7 @@
 | 2025-2026 | Lommel SK | Dender | 0-1 | 3-2 |
 | 2026-2027 | Waregem | Genk | 0-1 | 2-1 |
 | 2026-2027 | Antwerp | Beveren | 0-1 | 2-1 |
+| 2026-2027 | Royale Union SG | Cercle Brugge KSV | 0-1 | 5-2 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -140,8 +141,8 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 623 | 485 (77.8%) | 90 (14.4%) | 48 (7.7%) |
-| Away lead | 474 | 334 (70.5%) | 98 (20.7%) | 42 (8.9%) |
+| Home lead | 626 | 488 (78.0%) | 90 (14.4%) | 48 (7.7%) |
+| Away lead | 475 | 334 (70.3%) | 98 (20.6%) | 43 (9.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
@@ -152,21 +153,21 @@
 - *6 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1686` of `1795` (93.9%)
+- Matches with a first-goal time recorded: `1690` of `1799` (93.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 567 | 31.6% | 255 (45.0%) | 120 (21.2%) | 192 (33.9%) |
-| 16-30 | 390 | 21.7% | 178 (45.6%) | 79 (20.3%) | 133 (34.1%) |
-| 31-45 | 316 | 17.6% | 154 (48.7%) | 66 (20.9%) | 96 (30.4%) |
+| 1-15 | 568 | 31.6% | 256 (45.1%) | 120 (21.1%) | 192 (33.8%) |
+| 16-30 | 392 | 21.8% | 180 (45.9%) | 79 (20.2%) | 133 (33.9%) |
+| 31-45 | 317 | 17.6% | 155 (48.9%) | 66 (20.8%) | 96 (30.3%) |
 | 46-60 | 209 | 11.6% | 93 (44.5%) | 37 (17.7%) | 79 (37.8%) |
 | 61-75 | 104 | 5.8% | 42 (40.4%) | 18 (17.3%) | 44 (42.3%) |
 | 76-90 | 86 | 4.8% | 41 (47.7%) | 13 (15.1%) | 32 (37.2%) |
 | 91-120 | 14 | 0.8% | 6 (42.9%) | 0 (0.0%) | 8 (57.1%) |
 
 ## 7. Goalless matches
-- Overall: **103** of `1795` (5.7%)
+- Overall: **103** of `1799` (5.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -176,7 +177,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 240 | 12 | 5.0% |
 | 2024-2025 | 240 | 22 | 9.2% |
 | 2025-2026 | 321 | 25 | 7.8% |
-| 2026-2027 | 76 | 3 | 3.9% |
+| 2026-2027 | 80 | 3 | 3.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:36:35+00:00
+- Generated: 2026-10-27T01:54:23+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Mohun Bagan | 48 | Mumbai City | 1 pts |
 | 2024-2025 | Mohun Bagan | 56 | Goa | 8 pts |
 | 2025-2026 | East Bengal | 26 | Mohun Bagan | 0 pts |
-| 2026-2027 | North East Utd | 7 | East Bengal | 1 pts |
+| 2026-2027 | North East Utd | 7 | Punjab | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 1 pts | yes |
 | 2024-2025 | 8 pts |  |
 | 2025-2026 | 0 pts | yes |
-| 2026-2027 | 1 pts | yes |
+| 2026-2027 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 7 = last safe, 10 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 48 | 47 | 39 | 27 | 26 | 22 |
 | 2024-2025 | 56 | 48 | 38 | 36 | 33 | 28 |
 | 2025-2026 | 26 | 26 | 23 | 22 | 20 | 13 |
-| 2026-2027 | 7 | 6 | 4 | 3 | 3 | 1 |
+| 2026-2027 | 7 | 7 | 6 | 3 | 3 | 1 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 132 | 363 | 2.75 | 45.5% | 24.2% | 30.3% | 6.8% | 30.33 |
 | 2024-2025 | 156 | 448 | 2.872 | 42.3% | 24.4% | 33.3% | 7.1% | 33.08 |
 | 2025-2026 | 91 | 221 | 2.429 | 38.5% | 31.9% | 29.7% | 11.0% | 17.43 |
-| 2026-2027 | 14 | 40 | 2.857 | 42.9% | 28.6% | 28.6% | 7.1% | 2.92 |
+| 2026-2027 | 16 | 45 | 2.812 | 37.5% | 31.2% | 31.2% | 12.5% | 3.31 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 4.714)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 0.833 | 2.667 |
 | 2024-2025 | 1.692 | 3.538 |
 | 2025-2026 | 2.714 | 4.714 |
-| 2026-2027 | 1.692 | 3.692 |
+| 2026-2027 | 1.846 | 3.538 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

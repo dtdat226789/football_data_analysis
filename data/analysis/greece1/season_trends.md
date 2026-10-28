@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-26T01:34:27+00:00
+- Generated: 2026-10-27T01:50:24+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`
@@ -14,7 +14,7 @@
 | 2023-2024 | PAOK | 60 | AEK Athens FC | 1 pts |
 | 2024-2025 | Olympiacos Piraeus | 60 | AEK Athens FC | 7 pts |
 | 2025-2026 | AEK Athens | 72 | Olympiacos Piraeus | 3 pts |
-| 2026-2027 | Panathinaikos | 18 | AEK Athens | 1 pts |
+| 2026-2027 | Panathinaikos | 21 | Olympiacos Piraeus | 2 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 1 pts | yes |
 | 2024-2025 | 7 pts |  |
 | 2025-2026 | 3 pts | yes |
-| 2026-2027 | 1 pts | yes |
+| 2026-2027 | 2 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 11 = last safe, 14 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 60 | 59 | 56 | 34 | 21 | 18 |
 | 2024-2025 | 60 | 53 | 46 | 36 | 28 | 15 |
 | 2025-2026 | 72 | 69 | 52 | 46 | 36 | 29 |
-| 2026-2027 | 18 | 17 | 15 | 11 | 6 | 2 |
+| 2026-2027 | 21 | 19 | 16 | 13 | 6 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 182 | 545 | 2.995 | 45.6% | 26.9% | 27.5% | 4.4% | 35.5 |
 | 2024-2025 | 182 | 436 | 2.396 | 40.1% | 23.1% | 36.8% | 7.7% | 36.0 |
 | 2025-2026 | 246 | 624 | 2.537 | 41.5% | 27.6% | 30.9% | 8.9% | 44.67 |
-| 2026-2027 | 51 | 139 | 2.725 | 47.1% | 21.6% | 31.4% | 7.8% | 10.14 |
+| 2026-2027 | 55 | 152 | 2.764 | 49.1% | 20.0% | 30.9% | 7.3% | 11.0 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 5.429)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.429 | 2.571 |
 | 2024-2025 | 3.857 | 5.429 |
 | 2025-2026 | 3.600 | 4.667 |
-| 2026-2027 | 2.714 | 3.000 |
+| 2026-2027 | 2.429 | 3.143 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

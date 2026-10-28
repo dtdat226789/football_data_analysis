@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-26T01:42:04+00:00
+- Generated: 2026-10-27T02:23:55+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1626 |
-| Home wins | 757 (46.6%) |
-| Draws | 364 (22.4%) |
-| Away wins | 505 (31.1%) |
-| Total goals | 5056 |
-| Average goals per match | 3.109 |
+| Matches | 1632 |
+| Home wins | 762 (46.7%) |
+| Draws | 365 (22.4%) |
+| Away wins | 505 (30.9%) |
+| Total goals | 5079 |
+| Average goals per match | 3.112 |
 | Goalless matches | 77 (4.7%) |
 
 ## 2. Per-season breakdown
@@ -25,18 +25,18 @@
 | 2023 | 240 | 122 (50.8%) | 42 (17.5%) | 76 (31.7%) | 748 | 3.117 | 13 (5.4%) |
 | 2024 | 240 | 100 (41.7%) | 60 (25.0%) | 80 (33.3%) | 681 | 2.837 | 13 (5.4%) |
 | 2025 | 240 | 118 (49.2%) | 45 (18.8%) | 77 (32.1%) | 762 | 3.175 | 11 (4.6%) |
-| 2026 | 186 | 91 (48.9%) | 37 (19.9%) | 58 (31.2%) | 594 | 3.194 | 6 (3.2%) |
+| 2026 | 192 | 96 (50.0%) | 38 (19.8%) | 58 (30.2%) | 617 | 3.214 | 6 (3.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 472 (82.5%) | 67 (11.7%) | 33 (5.8%) | 572 |
-| HT draw | 233 (37.8%) | 212 (34.4%) | 171 (27.8%) | 616 |
-| HT away lead | 51 (11.7%) | 85 (19.5%) | 301 (68.9%) | 437 |
+| HT home lead | 475 (82.5%) | 68 (11.8%) | 33 (5.7%) | 576 |
+| HT draw | 234 (37.9%) | 212 (34.4%) | 171 (27.7%) | 617 |
+| HT away lead | 52 (11.9%) | 85 (19.4%) | 301 (68.7%) | 438 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **51** (3.1%)
+- Home comebacks (trailing at HT, won at FT): **52** (3.2%)
 - Away comebacks (trailing at HT, won at FT): **33** (2.0%)
 
 ### Home comebacks
@@ -93,6 +93,7 @@
 | 2026 | Fredrikstad | Start | 0-1 | 2-1 |
 | 2026 | Viking | Aalesund | 0-1 | 2-1 |
 | 2026 | Viking | Fredrikstad | 1-2 | 3-2 |
+| 2026 | Sarpsborg 08 | Aalesund | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -134,33 +135,33 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 572 | 472 (82.5%) | 67 (11.7%) | 33 (5.8%) |
-| Away lead | 437 | 301 (68.9%) | 85 (19.5%) | 51 (11.7%) |
+| Home lead | 576 | 475 (82.5%) | 68 (11.8%) | 33 (5.7%) |
+| Away lead | 438 | 301 (68.7%) | 85 (19.4%) | 52 (11.9%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 233 | 37.8% |
+| Home win | 234 | 37.9% |
 | Draw | 212 | 34.4% |
-| Away win | 171 | 27.8% |
+| Away win | 171 | 27.7% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1548` of `1626` (95.2%)
+- Matches with a first-goal time recorded: `1554` of `1632` (95.2%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 547 | 33.6% | 275 (50.3%) | 84 (15.4%) | 188 (34.4%) |
-| 16-30 | 382 | 23.5% | 188 (49.2%) | 79 (20.7%) | 115 (30.1%) |
-| 31-45 | 248 | 15.3% | 115 (46.4%) | 48 (19.4%) | 85 (34.3%) |
+| 1-15 | 549 | 33.6% | 276 (50.3%) | 85 (15.5%) | 188 (34.2%) |
+| 16-30 | 385 | 23.6% | 191 (49.6%) | 79 (20.5%) | 115 (29.9%) |
+| 31-45 | 248 | 15.2% | 115 (46.4%) | 48 (19.4%) | 85 (34.3%) |
 | 46-60 | 191 | 11.7% | 89 (46.6%) | 43 (22.5%) | 59 (30.9%) |
-| 61-75 | 107 | 6.6% | 50 (46.7%) | 24 (22.4%) | 33 (30.8%) |
+| 61-75 | 108 | 6.6% | 51 (47.2%) | 24 (22.2%) | 33 (30.6%) |
 | 76-90 | 57 | 3.5% | 32 (56.1%) | 5 (8.8%) | 20 (35.1%) |
 | 91-120 | 16 | 1.0% | 7 (43.8%) | 4 (25.0%) | 5 (31.2%) |
 
 ## 7. Goalless matches
-- Overall: **77** of `1626` (4.7%)
+- Overall: **77** of `1632` (4.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -170,7 +171,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023 | 240 | 13 | 5.4% |
 | 2024 | 240 | 13 | 5.4% |
 | 2025 | 240 | 11 | 4.6% |
-| 2026 | 186 | 6 | 3.2% |
+| 2026 | 192 | 6 | 3.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*
