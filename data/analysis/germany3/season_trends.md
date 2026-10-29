@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:49:51+00:00
+- Generated: 2026-10-29T02:01:30+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`

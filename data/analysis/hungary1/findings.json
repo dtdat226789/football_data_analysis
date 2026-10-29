@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:53:26+00:00",
+  "generated_at": "2026-10-29T02:03:25+00:00",
   "config": {
     "league": "hungary1",
     "out_dir": "data/analysis/hungary1",
@@ -668,8 +668,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 62983,
-        "distinct": 62973,
+        "rows": 63012,
+        "distinct": 63002,
         "duplicates": 10
       }
     },
@@ -678,10 +678,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=340, fgte=340 rows)",
       "details": {
-        "total": 62983,
+        "total": 63012,
         "fgt_inconsistent": 340,
         "fgte_inconsistent": 340,
-        "n_with_fgt": 58021
+        "n_with_fgt": 58049
       }
     },
     {

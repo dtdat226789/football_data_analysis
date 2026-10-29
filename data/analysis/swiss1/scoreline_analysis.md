@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:33:11+00:00
+- Generated: 2026-10-29T02:17:53+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Super League (Switzerland)
 - Scope: league `swiss1`

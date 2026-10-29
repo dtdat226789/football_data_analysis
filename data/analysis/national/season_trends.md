@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:23:18+00:00
+- Generated: 2026-10-29T02:08:39+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -13,7 +13,7 @@
 | 2023-2024 | Chesterfield | 98 | Barnet | 12 pts |
 | 2024-2025 | Barnet | 102 | York City | 6 pts |
 | 2025-2026 | Rochdale | 112 | York City | 4 pts |
-| 2026-2027 | Boreham Wood | 38 | Harrogate | 7 pts |
+| 2026-2027 | Boreham Wood | 41 | Harrogate | 10 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **0** of 6 seasons
@@ -26,7 +26,7 @@
 | 2023-2024 | 12 pts |  |
 | 2024-2025 | 6 pts |  |
 | 2025-2026 | 4 pts |  |
-| 2026-2027 | 7 pts |  |
+| 2026-2027 | 10 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 21 = last safe, 24 = bottom._
@@ -38,7 +38,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 98 | 86 | 77 | 75 | 52 | 33 |
 | 2024-2025 | 102 | 96 | 74 | 70 | 52 | 22 |
 | 2025-2026 | 112 | 108 | 90 | 81 | 42 | 34 |
-| 2026-2027 | 38 | 31 | 27 | 25 | 12 | 4 |
+| 2026-2027 | 41 | 31 | 28 | 28 | 15 | 4 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -48,7 +48,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 21 | 52 | 22 | 46 | 6 pts |
 | 2024-2025 | 21 | 52 | 22 | 52 | 0 pts |
 | 2025-2026 | 21 | 42 | 22 | 38 | 4 pts |
-| 2026-2027 | 21 | 12 | 22 | 10 | 2 pts |
+| 2026-2027 | 21 | 15 | 22 | 10 | 5 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -58,7 +58,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 552 | 1623 | 2.94 | 42.2% | 25.5% | 32.2% | 6.0% | 63.12 |
 | 2024-2025 | 552 | 1488 | 2.696 | 42.2% | 28.4% | 29.3% | 6.7% | 62.46 |
 | 2025-2026 | 557 | 1626 | 2.919 | 43.4% | 23.0% | 33.6% | 5.0% | 63.92 |
-| 2026-2027 | 166 | 517 | 3.114 | 45.8% | 17.5% | 36.7% | 1.2% | 19.54 |
+| 2026-2027 | 175 | 551 | 3.149 | 45.1% | 17.7% | 37.1% | 1.7% | 20.58 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 8.500)
@@ -72,7 +72,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.583 | 6.917 |
 | 2024-2025 | 5.500 | 8.500 |
 | 2025-2026 | 2.833 | 7.083 |
-| 2026-2027 | 1.833 | 6.583 |
+| 2026-2027 | 2.083 | 6.833 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

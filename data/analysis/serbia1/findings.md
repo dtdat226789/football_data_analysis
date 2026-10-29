@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:31:00+00:00
+- Generated: 2026-10-29T02:15:46+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`

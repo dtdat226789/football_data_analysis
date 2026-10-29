@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:47:49+00:00
+- Generated: 2026-10-29T01:59:42+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ligue 1 (France)
 - Scope: league `france1`
@@ -14,7 +14,7 @@
 | 2023-2024 | PSG | 76 | Monaco | 9 pts |
 | 2024-2025 | PSG | 84 | Marseille | 19 pts |
 | 2025-2026 | PSG | 76 | Lens | 6 pts |
-| 2026-2027 | Rennes | 16 | Lille | 1 pts |
+| 2026-2027 | PSG | 17 | Rennes | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 76 | 67 | 59 | 53 | 32 | 25 |
 | 2024-2025 | 84 | 65 | 60 | 57 | 34 | 16 |
 | 2025-2026 | 76 | 70 | 60 | 59 | 35 | 17 |
-| 2026-2027 | 16 | 15 | 14 | 14 | 7 | 2 |
+| 2026-2027 | 17 | 16 | 15 | 14 | 7 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,10 +63,10 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 826 | 2.699 | 39.2% | 26.5% | 34.3% | 8.8% | 46.5 |
 | 2024-2025 | 306 | 911 | 2.977 | 46.7% | 20.3% | 33.0% | 4.6% | 47.56 |
 | 2025-2026 | 310 | 874 | 2.819 | 46.1% | 24.5% | 29.4% | 8.1% | 40.52 |
-| 2026-2027 | 71 | 212 | 2.986 | 43.7% | 26.8% | 29.6% | 8.5% | 10.78 |
+| 2026-2027 | 72 | 214 | 2.972 | 44.4% | 26.4% | 29.2% | 8.3% | 10.94 |
 
 ## 6. View divergence
-- Largest divergence: **2026-2027** (goals view, avg abs position diff = 6.667)
+- Largest divergence: **2026-2027** (goals view, avg abs position diff = 6.889)
 
 _Avg absolute position difference between classic view and alternative view per season._
 
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.111 | 4.778 |
 | 2024-2025 | 4.222 | 4.444 |
 | 2025-2026 | 4.857 | 5.810 |
-| 2026-2027 | 2.556 | 6.667 |
+| 2026-2027 | 2.667 | 6.889 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

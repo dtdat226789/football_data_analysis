@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:24:26+00:00",
+  "generated_at": "2026-10-29T02:09:39+00:00",
   "config": {
     "league": "poland1",
     "out_dir": "data/analysis/poland1",
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.222)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.333)",
       "importance": "low",
       "id": "F16"
     },
@@ -608,8 +608,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 100836,
-        "distinct": 100822,
+        "rows": 100897,
+        "distinct": 100883,
         "duplicates": 14
       }
     },
@@ -618,10 +618,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=395, fgte=395 rows)",
       "details": {
-        "total": 100836,
+        "total": 100897,
         "fgt_inconsistent": 395,
         "fgte_inconsistent": 395,
-        "n_with_fgt": 92829
+        "n_with_fgt": 92887
       }
     },
     {

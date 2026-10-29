@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T01:56:39+00:00
+- Generated: 2026-10-29T02:05:10+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -8,7 +8,7 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | data/analysis/italy19/database_profile.json | yes | yes | 46.79 |
+| database_profile | data/analysis/italy19/database_profile.json | yes | yes | 46.80 |
 | matches_analysis | data/analysis/italy19/matches_analysis.json | yes | yes | 24.81 |
 | goals_analysis | data/analysis/italy19/goals_analysis.json | yes | yes | 12.34 |
 | teams_analysis | data/analysis/italy19/teams_analysis.json | yes | yes | 59.92 |
@@ -20,12 +20,12 @@
 ## 2. Key findings
 - **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 2000 matches: home wins 42.9%, draws 25.6%, away wins 31.4% (858H / 513D / 629A)
 - **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 41 home and 50 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 517 times
+- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 518 times
 - **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 2000 matches produced 5992 goals (avg 2.996 per match)
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 54.9% vs away 45.1% of 5992 goals in total (home/away ratio 1.22)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 1203 of 2000 matches (60.1%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 706 scoring matches, 37.3% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 28.57, median 22.0
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 708 scoring matches, 37.4% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 28.49, median 22.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — AS Roma U19 leads with 246 points across 4 seasons (1 title(s), GD 102)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 0 teams present in every one of the 7 seasons
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Sassuolo U19 earns 47 more points at home than away (125 home vs 78 away)
@@ -60,7 +60,7 @@
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 46.79 |
+| database_profile | database_profile | observed, calculated, warnings | 46.80 |
 | matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 24.81 |
 | goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.34 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 59.92 |

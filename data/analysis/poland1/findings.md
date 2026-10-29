@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:24:26+00:00
+- Generated: 2026-10-29T02:09:39+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Ekstraklasa (Poland)
 - Scope: league `poland1`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2023-2024: Jagiellonia beat Slask Wroclaw by 0 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.283 per match): first half 2.535 vs last half 2.817 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2020-2021 (goals view, avg abs position diff 7.250)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.222)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.333)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 246 matches (13.1%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (189 of 821 home matches, 23.0%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (246 of 510 draw matches, 48.2%)

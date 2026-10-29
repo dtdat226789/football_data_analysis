@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:45:56+00:00
+- Generated: 2026-10-29T01:58:11+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: League One (England)
 - Scope: league `eng1`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 3455 |
-| Home wins | 1496 (43.3%) |
-| Draws | 864 (25.0%) |
-| Away wins | 1095 (31.7%) |
-| Total goals | 9053 |
-| Average goals per match | 2.620 |
+| Matches | 3460 |
+| Home wins | 1500 (43.4%) |
+| Draws | 865 (25.0%) |
+| Away wins | 1095 (31.6%) |
+| Total goals | 9068 |
+| Average goals per match | 2.621 |
 | Goalless matches | 244 (7.1%) |
 
 ## 2. Per-season breakdown
@@ -25,13 +25,13 @@
 | 2023-2024 | 552 | 234 (42.4%) | 135 (24.5%) | 183 (33.2%) | 1427 | 2.585 | 38 (6.9%) |
 | 2024-2025 | 552 | 238 (43.1%) | 132 (23.9%) | 182 (33.0%) | 1427 | 2.585 | 46 (8.3%) |
 | 2025-2026 | 557 | 257 (46.1%) | 139 (25.0%) | 161 (28.9%) | 1462 | 2.625 | 33 (5.9%) |
-| 2026-2027 | 138 | 56 (40.6%) | 40 (29.0%) | 42 (30.4%) | 387 | 2.804 | 11 (8.0%) |
+| 2026-2027 | 143 | 60 (42.0%) | 41 (28.7%) | 42 (29.4%) | 402 | 2.811 | 11 (7.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 877 (78.2%) | 177 (15.8%) | 68 (6.1%) | 1122 |
-| HT draw | 533 (38.0%) | 492 (35.1%) | 378 (26.9%) | 1403 |
+| HT home lead | 880 (78.2%) | 177 (15.7%) | 68 (6.0%) | 1125 |
+| HT draw | 534 (38.0%) | 493 (35.1%) | 378 (26.9%) | 1405 |
 | HT away lead | 86 (9.2%) | 195 (21.0%) | 649 (69.8%) | 930 |
 
 ## 4. Comeback matches
@@ -125,8 +125,8 @@
 | 2026-2027 | Notts County | Burton | 0-1 | 2-1 |
 | 2026-2027 | Cambridge Utd | Reading | 0-1 | 2-1 |
 | 2026-2027 | Stockport County | Barnsley | 0-1 | 3-1 |
-| 2026-2027 | Reading | Barnsley | 0-1 | 2-1 |
 | 2026-2027 | Burton | Leyton Orient | 0-1 | 2-1 |
+| 2026-2027 | Reading | Barnsley | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -203,32 +203,32 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 1122 | 877 (78.2%) | 177 (15.8%) | 68 (6.1%) |
+| Home lead | 1125 | 880 (78.2%) | 177 (15.7%) | 68 (6.0%) |
 | Away lead | 930 | 649 (69.8%) | 195 (21.0%) | 86 (9.2%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 533 | 38.0% |
-| Draw | 492 | 35.1% |
+| Home win | 534 | 38.0% |
+| Draw | 493 | 35.1% |
 | Away win | 378 | 26.9% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `3211` of `3455` (92.9%)
+- Matches with a first-goal time recorded: `3216` of `3460` (92.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
 | 1-15 | 1064 | 30.8% | 497 (46.7%) | 212 (19.9%) | 355 (33.4%) |
-| 16-30 | 788 | 22.8% | 362 (45.9%) | 170 (21.6%) | 256 (32.5%) |
-| 31-45 | 516 | 14.9% | 237 (45.9%) | 98 (19.0%) | 181 (35.1%) |
-| 46-60 | 415 | 12.0% | 187 (45.1%) | 84 (20.2%) | 144 (34.7%) |
+| 16-30 | 789 | 22.8% | 363 (46.0%) | 170 (21.5%) | 256 (32.4%) |
+| 31-45 | 519 | 15.0% | 240 (46.2%) | 98 (18.9%) | 181 (34.9%) |
+| 46-60 | 416 | 12.0% | 187 (45.0%) | 85 (20.4%) | 144 (34.6%) |
 | 61-75 | 244 | 7.1% | 116 (47.5%) | 46 (18.9%) | 82 (33.6%) |
 | 76-90 | 146 | 4.2% | 73 (50.0%) | 10 (6.8%) | 63 (43.2%) |
 | 91-120 | 38 | 1.1% | 24 (63.2%) | 0 (0.0%) | 14 (36.8%) |
 
 ## 7. Goalless matches
-- Overall: **244** of `3455` (7.1%)
+- Overall: **244** of `3460` (7.1%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -238,7 +238,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 552 | 38 | 6.9% |
 | 2024-2025 | 552 | 46 | 8.3% |
 | 2025-2026 | 557 | 33 | 5.9% |
-| 2026-2027 | 138 | 11 | 8.0% |
+| 2026-2027 | 143 | 11 | 7.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

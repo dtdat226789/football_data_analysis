@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:40:48+00:00
+- Generated: 2026-10-29T01:53:57+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (Azerbaijan)
 - Scope: league `azer`

@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:28:06+00:00
+- Generated: 2026-10-29T02:12:55+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Championship (Scotland)
 - Scope: league `scot-champ`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1105** across **7** seasons.
+- Matches analysed: **1106** across **7** seasons.
 - Distinct scorelines seen: **38**.
 
 | scoreline | count | pct |
@@ -15,7 +15,7 @@
 | 0-0 | 107 | 9.7% |
 | 1-0 | 103 | 9.3% |
 | 2-1 | 98 | 8.9% |
-| 0-1 | 94 | 8.5% |
+| 0-1 | 95 | 8.6% |
 | 2-0 | 78 | 7.1% |
 | 1-2 | 75 | 6.8% |
 | 2-2 | 60 | 5.4% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 2-0 | 12 | 20.0% |
-| 1-1 | 8 | 13.3% |
-| 1-0 | 7 | 11.7% |
-| 0-1 | 6 | 10.0% |
-| 1-2 | 6 | 10.0% |
+| 2-0 | 12 | 19.7% |
+| 1-1 | 8 | 13.1% |
+| 0-1 | 7 | 11.5% |
+| 1-0 | 7 | 11.5% |
+| 1-2 | 6 | 9.8% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,10 +103,10 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 107 | 9.7% |
-| 1 | 197 | 17.8% |
+| 1 | 198 | 17.9% |
 | 2 | 273 | 24.7% |
 | 3 | 239 | 21.6% |
-| 4 | 142 | 12.9% |
+| 4 | 142 | 12.8% |
 | 5 | 88 | 8.0% |
 | 6 | 36 | 3.3% |
 | 7 | 17 | 1.5% |
@@ -144,14 +144,14 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2025-11-15 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **783** (draws: **322**)
+- Decided matches: **784** (draws: **322**)
 - Average winning margin: **1.8**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 423 | 54.0% |
+| 1 | 424 | 54.1% |
 | 2 | 199 | 25.4% |
-| 3+ | 161 | 20.6% |
+| 3+ | 161 | 20.5% |
 
 ## 6. Margin by outcome
 
@@ -165,12 +165,12 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **336** | avg margin: **1.73** | max margin: **6**
+- Matches: **337** | avg margin: **1.73** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 192 | 57.1% |
-| 2 | 81 | 24.1% |
-| 3+ | 63 | 18.8% |
+| 1 | 193 | 57.3% |
+| 2 | 81 | 24.0% |
+| 3+ | 63 | 18.7% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
@@ -178,7 +178,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|---|---|
 | home | 447 | 1-0 | 103 | 23.0% |
 | draw | 322 | 1-1 | 138 | 42.9% |
-| away | 336 | 0-1 | 94 | 28.0% |
+| away | 337 | 0-1 | 95 | 28.2% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T02:25:22+00:00
+- Generated: 2026-10-29T02:10:20+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1911 |
-| Home wins | 769 (40.2%) |
+| Matches | 1912 |
+| Home wins | 770 (40.3%) |
 | Draws | 528 (27.6%) |
 | Away wins | 614 (32.1%) |
-| Total goals | 4748 |
-| Average goals per match | 2.485 |
+| Total goals | 4749 |
+| Average goals per match | 2.484 |
 | Goalless matches | 164 (8.6%) |
 
 ## 2. Per-season breakdown
@@ -25,12 +25,12 @@
 | 2023-2024 | 306 | 121 (39.5%) | 84 (27.5%) | 101 (33.0%) | 749 | 2.448 | 24 (7.8%) |
 | 2024-2025 | 306 | 120 (39.2%) | 90 (29.4%) | 96 (31.4%) | 769 | 2.513 | 25 (8.2%) |
 | 2025-2026 | 310 | 131 (42.3%) | 76 (24.5%) | 103 (33.2%) | 751 | 2.423 | 33 (10.6%) |
-| 2026-2027 | 71 | 30 (42.3%) | 16 (22.5%) | 25 (35.2%) | 171 | 2.408 | 5 (7.0%) |
+| 2026-2027 | 72 | 31 (43.1%) | 16 (22.2%) | 25 (34.7%) | 172 | 2.389 | 5 (6.9%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 435 (76.2%) | 94 (16.5%) | 42 (7.4%) | 571 |
+| HT home lead | 436 (76.2%) | 94 (16.4%) | 42 (7.3%) | 572 |
 | HT draw | 272 (32.6%) | 333 (39.9%) | 230 (27.5%) | 835 |
 | HT away lead | 62 (12.3%) | 101 (20.0%) | 342 (67.7%) | 505 |
 
@@ -153,7 +153,7 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 571 | 435 (76.2%) | 94 (16.5%) | 42 (7.4%) |
+| Home lead | 572 | 436 (76.2%) | 94 (16.4%) | 42 (7.3%) |
 | Away lead | 505 | 342 (67.7%) | 101 (20.0%) | 62 (12.3%) |
 
 ### Matches level at half-time
@@ -164,12 +164,12 @@
 | Away win | 230 | 27.5% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1747` of `1911` (91.4%)
+- Matches with a first-goal time recorded: `1748` of `1912` (91.4%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 546 | 28.6% | 243 (44.5%) | 125 (22.9%) | 178 (32.6%) |
+| 1-15 | 547 | 28.6% | 244 (44.6%) | 125 (22.9%) | 178 (32.5%) |
 | 16-30 | 430 | 22.5% | 187 (43.5%) | 83 (19.3%) | 160 (37.2%) |
 | 31-45 | 288 | 15.1% | 132 (45.8%) | 56 (19.4%) | 100 (34.7%) |
 | 46-60 | 244 | 12.8% | 109 (44.7%) | 58 (23.8%) | 77 (31.6%) |
@@ -178,7 +178,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 30 | 1.6% | 15 (50.0%) | 2 (6.7%) | 13 (43.3%) |
 
 ## 7. Goalless matches
-- Overall: **164** of `1911` (8.6%)
+- Overall: **164** of `1912` (8.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -188,7 +188,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 306 | 24 | 7.8% |
 | 2024-2025 | 306 | 25 | 8.2% |
 | 2025-2026 | 310 | 33 | 10.6% |
-| 2026-2027 | 71 | 5 | 7.0% |
+| 2026-2027 | 72 | 5 | 6.9% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

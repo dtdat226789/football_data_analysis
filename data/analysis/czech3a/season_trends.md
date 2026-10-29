@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:44:00+00:00
+- Generated: 2026-10-29T01:56:37+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: 3. CFL - Group A (Czech Republic)
 - Scope: league `czech3a`

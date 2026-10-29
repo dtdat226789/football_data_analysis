@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:30:36+00:00
+- Generated: 2026-10-29T02:15:23+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.111 | 5.889 |
 | 2024-2025 | 1.667 | 6.667 |
 | 2025-2026 | 3.111 | 6.444 |
-| 2026-2027 | 1.778 | 4.889 |
+| 2026-2027 | 1.667 | 4.889 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

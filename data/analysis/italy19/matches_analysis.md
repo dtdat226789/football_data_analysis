@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:56:17+00:00
+- Generated: 2026-10-29T02:04:59+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -30,10 +30,10 @@
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 517 (75.5%) | 118 (17.2%) | 50 (7.3%) | 685 |
-| HT draw | 295 (37.5%) | 274 (34.9%) | 217 (27.6%) | 786 |
+| HT home lead | 518 (75.5%) | 118 (17.2%) | 50 (7.3%) | 686 |
+| HT draw | 296 (37.6%) | 275 (34.9%) | 217 (27.5%) | 788 |
 | HT away lead | 41 (7.9%) | 118 (22.7%) | 361 (69.4%) | 520 |
-- *9 match(es) excluded (no HT score recorded).*
+- *6 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **41** (2.0%)
@@ -141,16 +141,16 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 685 | 517 (75.5%) | 118 (17.2%) | 50 (7.3%) |
+| Home lead | 686 | 518 (75.5%) | 118 (17.2%) | 50 (7.3%) |
 | Away lead | 520 | 361 (69.4%) | 118 (22.7%) | 41 (7.9%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 295 | 37.5% |
-| Draw | 274 | 34.9% |
-| Away win | 217 | 27.6% |
-- *9 match(es) excluded (no HT score recorded).*
+| Home win | 296 | 37.6% |
+| Draw | 275 | 34.9% |
+| Away win | 217 | 27.5% |
+- *6 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
 - Matches with a first-goal time recorded: `1892` of `2000` (94.6%)
@@ -158,9 +158,9 @@
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 706 | 35.3% | 303 (42.9%) | 166 (23.5%) | 237 (33.6%) |
-| 16-30 | 467 | 23.4% | 206 (44.1%) | 107 (22.9%) | 154 (33.0%) |
-| 31-45 | 284 | 14.2% | 133 (46.8%) | 60 (21.1%) | 91 (32.0%) |
+| 1-15 | 708 | 35.4% | 304 (42.9%) | 167 (23.6%) | 237 (33.5%) |
+| 16-30 | 469 | 23.4% | 207 (44.1%) | 108 (23.0%) | 154 (32.8%) |
+| 31-45 | 280 | 14.0% | 131 (46.8%) | 58 (20.7%) | 91 (32.5%) |
 | 46-60 | 221 | 11.1% | 107 (48.4%) | 49 (22.2%) | 65 (29.4%) |
 | 61-75 | 118 | 5.9% | 60 (50.8%) | 21 (17.8%) | 37 (31.4%) |
 | 76-90 | 82 | 4.1% | 37 (45.1%) | 10 (12.2%) | 35 (42.7%) |

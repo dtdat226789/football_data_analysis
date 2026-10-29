@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:57:45+00:00
+- Generated: 2026-10-29T02:05:42+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie C - Group A (Italy)
 - Scope: league `italy3a`

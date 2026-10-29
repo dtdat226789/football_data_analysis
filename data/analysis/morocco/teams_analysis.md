@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:22:56+00:00
+- Generated: 2026-10-29T02:08:19+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`

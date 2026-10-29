@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T02:00:03+00:00
+- Generated: 2026-10-29T02:06:58+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`

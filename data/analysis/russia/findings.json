@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:27:14+00:00",
+  "generated_at": "2026-10-29T02:12:04+00:00",
   "config": {
     "league": "russia",
     "out_dir": "data/analysis/russia",
@@ -592,8 +592,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (18 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 114655,
-        "distinct": 114637,
+        "rows": 114720,
+        "distinct": 114702,
         "duplicates": 18
       }
     },
@@ -602,10 +602,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=417, fgte=417 rows)",
       "details": {
-        "total": 114655,
+        "total": 114720,
         "fgt_inconsistent": 417,
         "fgte_inconsistent": 417,
-        "n_with_fgt": 105472
+        "n_with_fgt": 105534
       }
     },
     {

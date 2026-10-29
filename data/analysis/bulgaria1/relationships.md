@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T01:42:10+00:00
+- Generated: 2026-10-29T01:55:15+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`

@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T01:51:04+00:00
+- Generated: 2026-10-29T02:02:08+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Super League 2 (Greece)
 - Scope: league `greece2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1835** across **7** seasons.
+- Matches analysed: **1836** across **7** seasons.
 - Distinct scorelines seen: **34**.
 
 | scoreline | count | pct |
@@ -18,14 +18,14 @@
 | 2-0 | 153 | 8.3% |
 | 2-1 | 121 | 6.6% |
 | 1-2 | 107 | 5.8% |
-| 0-2 | 89 | 4.9% |
-| 3-0 | 89 | 4.9% |
+| 0-2 | 89 | 4.8% |
+| 3-0 | 89 | 4.8% |
 | 2-2 | 64 | 3.5% |
 | 3-1 | 62 | 3.4% |
 | 0-3 | 53 | 2.9% |
 | 1-3 | 35 | 1.9% |
 | 4-0 | 33 | 1.8% |
-| 2-3 | 25 | 1.4% |
+| 2-3 | 26 | 1.4% |
 | 3-2 | 22 | 1.2% |
 | 4-1 | 18 | 1.0% |
 | 5-0 | 13 | 0.7% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 14 | 22.2% |
-| 1-1 | 9 | 14.3% |
-| 0-0 | 7 | 11.1% |
-| 2-1 | 7 | 11.1% |
-| 2-0 | 6 | 9.5% |
+| 1-0 | 14 | 21.9% |
+| 1-1 | 9 | 14.1% |
+| 0-0 | 7 | 10.9% |
+| 2-1 | 7 | 10.9% |
+| 2-0 | 6 | 9.4% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -107,7 +107,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2 | 446 | 24.3% |
 | 3 | 370 | 20.2% |
 | 4 | 204 | 11.1% |
-| 5 | 92 | 5.0% |
+| 5 | 93 | 5.1% |
 | 6 | 49 | 2.7% |
 | 7 | 12 | 0.7% |
 | 8 | 0 | 0.0% |
@@ -134,12 +134,12 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-26 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1354** (draws: **481**)
+- Decided matches: **1355** (draws: **481**)
 - Average winning margin: **1.76**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 735 | 54.3% |
+| 1 | 736 | 54.3% |
 | 2 | 355 | 26.2% |
 | 3+ | 264 | 19.5% |
 
@@ -155,12 +155,12 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **533** | avg margin: **1.61** | max margin: **6**
+- Matches: **534** | avg margin: **1.61** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 321 | 60.2% |
+| 1 | 322 | 60.3% |
 | 2 | 129 | 24.2% |
-| 3+ | 83 | 15.6% |
+| 3+ | 83 | 15.5% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
@@ -168,7 +168,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|---|---|
 | home | 821 | 1-0 | 268 | 32.6% |
 | draw | 481 | 1-1 | 204 | 42.4% |
-| away | 533 | 0-1 | 189 | 35.5% |
+| away | 534 | 0-1 | 189 | 35.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

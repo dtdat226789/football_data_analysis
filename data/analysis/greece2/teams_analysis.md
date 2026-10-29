@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:50:56+00:00
+- Generated: 2026-10-29T02:02:04+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Super League 2 (Greece)
 - Scope: league `greece2`
 
-- Teams: **58** | Seasons: **7** | Matches: **1835**
+- Teams: **58** | Seasons: **7** | Matches: **1836**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -19,7 +19,7 @@
 | PAOK B | 6 | 135 | 55 | 29 | 51 | 194 | 190 | 158 | 32 | 32.33 | 5 | 16 | 0 |
 | Karditsa | 5 | 113 | 50 | 26 | 37 | 176 | 134 | 104 | 30 | 35.2 | 7 | 14 | 0 |
 | Levadiakos | 3 | 76 | 50 | 18 | 8 | 168 | 136 | 40 | 96 | 56.0 | 1 | 2 | 1 |
-| Olympiacos Piraeus B | 5 | 111 | 44 | 30 | 37 | 162 | 143 | 136 | 7 | 32.4 | 8 | 14 | 0 |
+| Olympiacos Piraeus B | 5 | 111 | 44 | 30 | 37 | 162 | 143 | 136 | 7 | 32.4 | 8 | 15 | 0 |
 | PAE Egaleo | 5 | 127 | 43 | 33 | 51 | 162 | 111 | 139 | -28 | 32.4 | 9 | 17 | 0 |
 | Kifisia | 3 | 75 | 46 | 14 | 15 | 152 | 130 | 60 | 70 | 50.67 | 2 | 12 | 0 |
 | Diagoras | 5 | 121 | 36 | 31 | 54 | 139 | 103 | 149 | -46 | 27.8 | 6 | 22 | 0 |
@@ -58,16 +58,16 @@
 | Proodeftiki | 1 | 27 | 7 | 5 | 15 | 26 | 20 | 37 | -17 | 26.0 | 24 | 24 | 0 |
 | Panargiakos | 2 | 46 | 5 | 10 | 31 | 25 | 28 | 78 | -50 | 12.5 | 17 | 20 | 0 |
 | Kozani FC | 1 | 22 | 6 | 6 | 10 | 24 | 10 | 17 | -7 | 24.0 | 17 | 17 | 0 |
-| Zakynthos | 2 | 39 | 5 | 9 | 25 | 24 | 23 | 73 | -50 | 12.0 | 16 | 33 | 0 |
+| Zakynthos | 2 | 40 | 5 | 9 | 26 | 24 | 25 | 76 | -51 | 12.0 | 16 | 33 | 0 |
 | Iraklis Larissa | 1 | 27 | 6 | 5 | 16 | 23 | 14 | 42 | -28 | 23.0 | 25 | 25 | 0 |
 | Giouchtas | 1 | 22 | 5 | 7 | 10 | 22 | 20 | 28 | -8 | 22.0 | 19 | 19 | 0 |
 | Doxa Dramas | 1 | 22 | 6 | 3 | 13 | 21 | 17 | 37 | -20 | 21.0 | 10 | 10 | 0 |
 | Aiolikos | 1 | 22 | 4 | 7 | 11 | 19 | 20 | 36 | -16 | 19.0 | 22 | 22 | 0 |
 | Tilikratis L. | 1 | 22 | 5 | 3 | 14 | 18 | 17 | 37 | -20 | 18.0 | 23 | 23 | 0 |
 | Panthrakikos | 1 | 8 | 2 | 4 | 2 | 10 | 9 | 8 | 1 | 10.0 | 9 | 9 | 0 |
+| Pyrgos | 1 | 8 | 2 | 2 | 4 | 8 | 5 | 9 | -4 | 8.0 | 13 | 13 | 0 |
 | Ethnikos Neou | 1 | 18 | 1 | 5 | 12 | 8 | 8 | 23 | -15 | 8.0 | 20 | 20 | 0 |
 | Rouf FC | 1 | 26 | 1 | 3 | 22 | 6 | 19 | 60 | -41 | 6.0 | 29 | 29 | 0 |
-| Pyrgos | 1 | 7 | 1 | 2 | 4 | 5 | 2 | 7 | -5 | 5.0 | 15 | 15 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
@@ -103,7 +103,7 @@
 | Asteras Vlachioti | 16 | 6 | 6 | 4 | 24 | 16 | 3 | 2 | 11 | 11 | 13 |
 | Kavala | 39 | 10 | 15 | 14 | 45 | 39 | 8 | 9 | 22 | 33 | 12 |
 | Chrisoupolis | 18 | 9 | 3 | 6 | 30 | 18 | 4 | 6 | 8 | 18 | 12 |
-| Zakynthos | 18 | 4 | 6 | 8 | 18 | 21 | 1 | 3 | 17 | 6 | 12 |
+| Zakynthos | 19 | 4 | 6 | 9 | 18 | 21 | 1 | 3 | 17 | 6 | 12 |
 | Tilikratis L. | 11 | 4 | 3 | 4 | 15 | 11 | 1 | 0 | 10 | 3 | 12 |
 | Kalamata | 62 | 40 | 12 | 10 | 132 | 62 | 35 | 16 | 11 | 121 | 11 |
 | Ionikos | 22 | 14 | 5 | 3 | 47 | 22 | 10 | 6 | 6 | 36 | 11 |
@@ -123,11 +123,11 @@
 | Ilioupoli | 48 | 17 | 8 | 23 | 59 | 48 | 15 | 12 | 21 | 57 | 2 |
 | Kozani FC | 11 | 4 | 1 | 6 | 13 | 11 | 2 | 5 | 4 | 11 | 2 |
 | Episkopi | 28 | 8 | 7 | 13 | 31 | 29 | 8 | 6 | 15 | 30 | 1 |
-| Pyrgos | 3 | 1 | 0 | 2 | 3 | 4 | 0 | 2 | 2 | 2 | 1 |
 | Apollon Smyrnis | 14 | 8 | 4 | 2 | 28 | 14 | 8 | 4 | 2 | 28 | 0 |
 | Proodeftiki | 14 | 4 | 1 | 9 | 13 | 13 | 3 | 4 | 6 | 13 | 0 |
 | Rouf FC | 13 | 0 | 3 | 10 | 3 | 13 | 1 | 0 | 12 | 3 | 0 |
 | Ellas Syrou | 18 | 7 | 6 | 5 | 27 | 18 | 7 | 7 | 4 | 28 | -1 |
+| Pyrgos | 3 | 1 | 0 | 2 | 3 | 5 | 1 | 2 | 2 | 5 | -2 |
 | Ethnikos Neou | 9 | 0 | 2 | 7 | 2 | 9 | 1 | 3 | 5 | 6 | -4 |
 | Panargiakos | 23 | 2 | 4 | 17 | 10 | 23 | 3 | 6 | 14 | 15 | -5 |
 
@@ -172,7 +172,7 @@
 - Teams present in all **7** seasons: **0**
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **639** (showing the 15 most frequent)
+- Distinct fixtures: **640** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -203,10 +203,10 @@ _Cells show final position; '-' when the team was absent from that season._
 | PAE Chania | 5 | 6 | 7 | 4 | 14 | 15 | - |
 | Iraklis 1908 | - | 13 | 8 | 13 | 4 | 2 | - |
 | Niki Volos | - | 8 | 6 | 9 | 10 | 4 | 6 |
-| PAOK B | - | 16 | 9 | 12 | 11 | 5 | 13 |
+| PAOK B | - | 16 | 9 | 12 | 11 | 5 | 14 |
 | Karditsa | - | 10 | 12 | 14 | - | 8 | 7 |
 | Levadiakos | 2 | 2 | - | 1 | - | - | - |
-| Olympiacos Piraeus B | - | 11 | 13 | 8 | - | 14 | 14 |
+| Olympiacos Piraeus B | - | 11 | 13 | 8 | - | 14 | 15 |
 | PAE Egaleo | - | 15 | 17 | 16 | 9 | 12 | - |
 | Kifisia | - | 12 | 2 | - | 2 | - | - |
 | Diagoras | 6 | 22 | 20 | 15 | 15 | - | - |
@@ -252,9 +252,9 @@ _Cells show final position; '-' when the team was absent from that season._
 | Aiolikos | - | - | - | 22 | - | - | - |
 | Tilikratis L. | - | - | - | 23 | - | - | - |
 | Panthrakikos | - | - | - | - | - | - | 9 |
+| Pyrgos | - | - | - | - | - | - | 13 |
 | Ethnikos Neou | - | - | - | - | 20 | - | - |
 | Rouf FC | - | - | 29 | - | - | - | - |
-| Pyrgos | - | - | - | - | - | - | 15 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_teams.py` to regenerate.*

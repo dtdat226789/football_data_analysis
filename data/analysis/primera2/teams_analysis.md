@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:26:29+00:00
+- Generated: 2026-10-29T02:11:19+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`

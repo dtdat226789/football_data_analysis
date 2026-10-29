@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:43:45+00:00",
+  "generated_at": "2026-10-29T01:56:27+00:00",
   "config": {
     "league": "czech2",
     "out_dir": "data/analysis/czech2",
@@ -663,8 +663,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 22609,
-        "distinct": 22607,
+        "rows": 22617,
+        "distinct": 22615,
         "duplicates": 2
       }
     },
@@ -673,10 +673,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=306, fgte=306 rows)",
       "details": {
-        "total": 22609,
+        "total": 22617,
         "fgt_inconsistent": 306,
         "fgte_inconsistent": 306,
-        "n_with_fgt": 20507
+        "n_with_fgt": 20514
       }
     },
     {

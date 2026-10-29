@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T02:30:49+00:00
+- Generated: 2026-10-29T02:15:36+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:23:04+00:00",
+  "generated_at": "2026-10-29T02:08:26+00:00",
   "config": {
     "league": "morocco",
     "out_dir": "data/analysis/morocco",
@@ -588,8 +588,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 91449,
-        "distinct": 91435,
+        "rows": 91491,
+        "distinct": 91477,
         "duplicates": 14
       }
     },
@@ -598,10 +598,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=388, fgte=388 rows)",
       "details": {
-        "total": 91449,
+        "total": 91491,
         "fgt_inconsistent": 388,
         "fgte_inconsistent": 388,
-        "n_with_fgt": 84040
+        "n_with_fgt": 84080
       }
     },
     {

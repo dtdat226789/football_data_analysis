@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:27:33+00:00
+- Generated: 2026-10-29T02:12:22+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`
@@ -12,7 +12,7 @@
 | matches_analysis | data/analysis/saudi1/matches_analysis.json | yes | yes | 23.83 |
 | goals_analysis | data/analysis/saudi1/goals_analysis.json | yes | yes | 12.45 |
 | teams_analysis | data/analysis/saudi1/teams_analysis.json | yes | yes | 38.82 |
-| season_trends | data/analysis/saudi1/season_trends.json | yes | yes | 10.54 |
+| season_trends | data/analysis/saudi1/season_trends.json | yes | yes | 10.53 |
 | scoreline_analysis | data/analysis/saudi1/scoreline_analysis.json | yes | yes | 275.99 |
 | relationships | data/analysis/saudi1/relationships.json | yes | yes | 13.80 |
 - Coverage: **7** of **7** module reports found (all reports present)
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2025-2026: Al Nassr beat Al Hilal by 1 pt
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.115 per match): first half 2.821 vs last half 2.936 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2020-2021 (luck view, avg abs position diff 9.312)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 2.444)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 2.389)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 197 matches (11.3%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (174 of 751 home matches, 23.2%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (197 of 403 draw matches, 48.9%)
@@ -64,7 +64,7 @@
 | matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 23.83 |
 | goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.45 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 38.82 |
-| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.54 |
+| season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.53 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 275.99 |
 | relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.80 |
 

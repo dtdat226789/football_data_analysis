@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:42:01+00:00
+- Generated: 2026-10-29T01:55:06+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1457 |
-| Home wins | 660 (45.3%) |
-| Draws | 358 (24.6%) |
-| Away wins | 439 (30.1%) |
-| Total goals | 3500 |
-| Average goals per match | 2.402 |
-| Goalless matches | 144 (9.9%) |
+| Matches | 1461 |
+| Home wins | 662 (45.3%) |
+| Draws | 360 (24.6%) |
+| Away wins | 439 (30.0%) |
+| Total goals | 3506 |
+| Average goals per match | 2.400 |
+| Goalless matches | 145 (9.9%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,13 +25,13 @@
 | 2023-2024 | 240 | 111 (46.2%) | 51 (21.2%) | 78 (32.5%) | 582 | 2.425 | 22 (9.2%) |
 | 2024-2025 | 240 | 104 (43.3%) | 55 (22.9%) | 81 (33.8%) | 584 | 2.433 | 17 (7.1%) |
 | 2025-2026 | 294 | 125 (42.5%) | 82 (27.9%) | 87 (29.6%) | 677 | 2.303 | 36 (12.2%) |
-| 2026-2027 | 79 | 35 (44.3%) | 19 (24.1%) | 25 (31.6%) | 213 | 2.696 | 3 (3.8%) |
+| 2026-2027 | 83 | 37 (44.6%) | 21 (25.3%) | 25 (30.1%) | 219 | 2.639 | 4 (4.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 404 (81.0%) | 67 (13.4%) | 28 (5.6%) | 499 |
-| HT draw | 237 (36.9%) | 233 (36.2%) | 173 (26.9%) | 643 |
+| HT home lead | 406 (80.9%) | 68 (13.5%) | 28 (5.6%) | 502 |
+| HT draw | 237 (36.8%) | 234 (36.3%) | 173 (26.9%) | 644 |
 | HT away lead | 19 (6.1%) | 58 (18.5%) | 237 (75.5%) | 314 |
 - *1 match(es) excluded (no HT score recorded).*
 
@@ -97,25 +97,25 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 499 | 404 (81.0%) | 67 (13.4%) | 28 (5.6%) |
+| Home lead | 502 | 406 (80.9%) | 68 (13.5%) | 28 (5.6%) |
 | Away lead | 314 | 237 (75.5%) | 58 (18.5%) | 19 (6.1%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 237 | 36.9% |
-| Draw | 233 | 36.2% |
+| Home win | 237 | 36.8% |
+| Draw | 234 | 36.3% |
 | Away win | 173 | 26.9% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1312` of `1457` (90.0%)
+- Matches with a first-goal time recorded: `1315` of `1461` (90.0%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 379 | 26.0% | 192 (50.7%) | 63 (16.6%) | 124 (32.7%) |
-| 16-30 | 314 | 21.6% | 157 (50.0%) | 51 (16.2%) | 106 (33.8%) |
+| 1-15 | 380 | 26.0% | 193 (50.8%) | 63 (16.6%) | 124 (32.6%) |
+| 16-30 | 316 | 21.6% | 158 (50.0%) | 52 (16.5%) | 106 (33.5%) |
 | 31-45 | 226 | 15.5% | 115 (50.9%) | 44 (19.5%) | 67 (29.6%) |
 | 46-60 | 190 | 13.0% | 98 (51.6%) | 31 (16.3%) | 61 (32.1%) |
 | 61-75 | 111 | 7.6% | 42 (37.8%) | 18 (16.2%) | 51 (45.9%) |
@@ -123,7 +123,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 20 | 1.4% | 12 (60.0%) | 0 (0.0%) | 8 (40.0%) |
 
 ## 7. Goalless matches
-- Overall: **144** of `1457` (9.9%)
+- Overall: **145** of `1461` (9.9%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -133,7 +133,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 240 | 22 | 9.2% |
 | 2024-2025 | 240 | 17 | 7.1% |
 | 2025-2026 | 294 | 36 | 12.2% |
-| 2026-2027 | 79 | 3 | 3.8% |
+| 2026-2027 | 83 | 4 | 4.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

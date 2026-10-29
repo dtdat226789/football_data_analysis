@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:23:41+00:00
+- Generated: 2026-10-29T02:08:58+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: National League North (England)
 - Scope: league `north`
@@ -14,11 +14,11 @@
 | 2023-2024 | Tamworth | 96 | Scunthorpe | 8 pts |
 | 2024-2025 | Brackley Town | 92 | Scunthorpe | 2 pts |
 | 2025-2026 | AFC Fylde | 100 | South Shields | 2 pts |
-| 2026-2027 | Hereford | 26 | Oxford City | 2 pts |
+| 2026-2027 | Oxford City | 27 | South Shields | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
-- Tightest race: **2022-2023** - AFC Fylde beat King’s Lynn by **2** pts
+- Tightest race: **2026-2027** - Oxford City beat South Shields by **0** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023-2024 | 8 pts |  |
 | 2024-2025 | 2 pts | yes |
 | 2025-2026 | 2 pts | yes |
-| 2026-2027 | 2 pts | yes |
+| 2026-2027 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 21 = last safe, 24 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 96 | 88 | 83 | 75 | 50 | 21 |
 | 2024-2025 | 92 | 90 | 87 | 79 | 39 | 26 |
 | 2025-2026 | 100 | 98 | 82 | 76 | 52 | 29 |
-| 2026-2027 | 26 | 24 | 24 | 21 | 13 | 7 |
+| 2026-2027 | 27 | 27 | 24 | 23 | 15 | 7 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 21 | 50 | 22 | 38 | 12 pts |
 | 2024-2025 | 21 | 39 | 22 | 35 | 4 pts |
 | 2025-2026 | 21 | 52 | 22 | 50 | 2 pts |
-| 2026-2027 | 21 | 13 | 22 | 11 | 2 pts |
+| 2026-2027 | 21 | 15 | 22 | 11 | 4 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 552 | 1474 | 2.67 | 44.2% | 21.9% | 33.9% | 7.2% | 63.96 |
 | 2024-2025 | 552 | 1420 | 2.572 | 43.7% | 23.0% | 33.3% | 7.6% | 63.71 |
 | 2025-2026 | 560 | 1707 | 3.048 | 42.7% | 22.5% | 34.8% | 4.1% | 64.75 |
-| 2026-2027 | 151 | 415 | 2.748 | 48.3% | 21.9% | 29.8% | 4.0% | 17.5 |
+| 2026-2027 | 161 | 440 | 2.733 | 49.1% | 21.1% | 29.8% | 3.7% | 18.71 |
 
 ## 6. View divergence
 - Largest divergence: **2023-2024** (goals view, avg abs position diff = 9.250)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.250 | 9.250 |
 | 2024-2025 | 2.917 | 8.833 |
 | 2025-2026 | 3.333 | 7.417 |
-| 2026-2027 | 3.000 | 8.667 |
+| 2026-2027 | 3.167 | 8.667 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

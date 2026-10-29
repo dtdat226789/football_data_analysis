@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:51:58+00:00
+- Generated: 2026-10-29T02:02:38+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Eerste Divisie (Netherlands)
 - Scope: league `holland2`

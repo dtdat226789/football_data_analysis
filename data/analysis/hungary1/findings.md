@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T01:53:26+00:00
+- Generated: 2026-10-29T02:03:25+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: NB I. (Hungary)
 - Scope: league `hungary1`

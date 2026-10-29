@@ -215,13 +215,16 @@ def test_team_detail(client):
 
 
 def test_list_teams_search_narrows_the_registry(client):
-    """`q` filters server-side, so a term is found off the first page.
+    """`q` filters server-side, so `total` reflects the filtered set.
 
-    The registry spans every league, so a client-side filter over one page of
-    50 could only match rows it had already fetched.
+    CI builds the database from the committed premier raw data only, so the
+    registry can be a single league. Requiring more than one page of teams made
+    this guard fail on that offline build. What matters is that the filter runs
+    before pagination, which the narrowed `total` proves even for a small
+    registry.
     """
     everything = client.get("/api/v1/teams", params={"limit": 1}).json()
-    assert everything["total"] > 50, "guard: registry must exceed one page"
+    assert everything["total"] > 1, "guard: need more than one team to narrow"
 
     r = client.get("/api/v1/teams", params={"q": "arsenal"})
     assert r.status_code == 200

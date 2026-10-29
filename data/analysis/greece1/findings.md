@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T01:50:35+00:00
+- Generated: 2026-10-29T02:01:53+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`

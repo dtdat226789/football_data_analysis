@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T02:32:54+00:00
+- Generated: 2026-10-29T02:17:38+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Superettan (Sweden)
 - Scope: league `sweden2`

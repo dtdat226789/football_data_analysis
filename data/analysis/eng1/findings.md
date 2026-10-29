@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T01:46:09+00:00
+- Generated: 2026-10-29T01:58:22+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: League One (England)
 - Scope: league `eng1`
@@ -13,45 +13,45 @@
 | goals_analysis | data/analysis/eng1/goals_analysis.json | yes | yes | 12.46 |
 | teams_analysis | data/analysis/eng1/teams_analysis.json | yes | yes | 62.56 |
 | season_trends | data/analysis/eng1/season_trends.json | yes | yes | 10.47 |
-| scoreline_analysis | data/analysis/eng1/scoreline_analysis.json | yes | yes | 520.85 |
+| scoreline_analysis | data/analysis/eng1/scoreline_analysis.json | yes | yes | 521.62 |
 | relationships | data/analysis/eng1/relationships.json | yes | yes | 13.79 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 3455 matches: home wins 43.3%, draws 25.0%, away wins 31.7% (1496H / 864D / 1095A)
+- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 3460 matches: home wins 43.4%, draws 25.0%, away wins 31.6% (1500H / 865D / 1095A)
 - **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 86 home and 68 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 877 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 3455 matches produced 9053 goals (avg 2.620 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 54.5% vs away 45.5% of 9053 goals in total (home/away ratio 1.20)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 1764 of 3455 matches (51.1%)
+- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 880 times
+- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 3460 matches produced 9068 goals (avg 2.621 per match)
+- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 54.6% vs away 45.4% of 9068 goals in total (home/away ratio 1.20)
+- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 1767 of 3460 matches (51.1%)
 - **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 1064 scoring matches, 33.1% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 30.93, median 25.0
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 30.94, median 25.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Lincoln leads with 429 points across 6 seasons (1 title(s), GD 92)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 1 teams present in every one of the 7 seasons (Burton)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Bolton earns 67 more points at home than away (230 home vs 163 away)
 - **F12** · `season_trends` · *[high]* — **Champion with most titles** — Hull won 1 of 7 championship(s) on record
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2020-2021: Hull beat Peterborough by 2 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — stable (+0.045 per match): first half 2.627 vs last half 2.671 across 7 seasons
+- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — stable (+0.047 per match): first half 2.627 vs last half 2.674 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2020-2021 (goals view, avg abs position diff 9.083)
 - **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2023-2024 (luck view, avg abs position diff 2.917)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 406 matches (11.8%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (373 of 1496 home matches, 24.9%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (406 of 864 draw matches, 47.0%)
+- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 407 matches (11.8%)
+- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (374 of 1500 home matches, 24.9%)
+- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (407 of 865 draw matches, 47.1%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (292 of 1095 away matches, 26.7%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 59 match(es) with >= 7 total goals
 - **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_team_goals_scored_last_5 |corr| = 0.0623 (n=3317 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 8.472: home 3.570, draw -1.188, away -4.902
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (40)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 3455 matches observed
+- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 3460 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 3455 |
-| Average goals per match | 2.62 |
-| Home win rate | 43.3% |
+| Matches analysed | 3460 |
+| Average goals per match | 2.621 |
+| Home win rate | 43.4% |
 | Draw rate | 25.0% |
-| Away win rate | 31.7% |
+| Away win rate | 31.6% |
 | Most common scoreline | 1-1 |
 | Dominant team (lifetime points) | Lincoln |
 | Champion with most titles | Hull |
@@ -65,7 +65,7 @@
 | goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.46 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 62.56 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.47 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 520.85 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 521.62 |
 | relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.79 |
 
 ## 5. Notable anomalies
@@ -81,10 +81,10 @@
 - **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2024-2025 has 24 teams, expected 20
 - **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 557 matches, expected 380
 - **12.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 24 teams, expected 20
-- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 138 matches, expected 380
+- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 143 matches, expected 380
 - **14.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 24 teams, expected 20
 - **15.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026-2027 has data but state is 'in_progress'
-- **16.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2020-2021 away outcome share 35.7% vs overall 31.7%
+- **16.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2020-2021 away outcome share 35.7% vs overall 31.6%
 - **17.** `HIGH_SCORING_MATCHES` *(warning)* — 16 match(es) with >= 8 total goals (extreme scorelines)
 - **18.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)
 - **19.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=312, fgte=312 rows)

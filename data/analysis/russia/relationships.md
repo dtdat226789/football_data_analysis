@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T02:27:12+00:00
+- Generated: 2026-10-29T02:12:02+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Premier League (Russia)
 - Scope: league `russia`

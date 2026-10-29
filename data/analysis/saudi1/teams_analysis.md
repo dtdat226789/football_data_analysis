@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:27:25+00:00
+- Generated: 2026-10-29T02:12:15+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`
@@ -19,7 +19,7 @@
 | Al Ettifaq | 7 | 203 | 77 | 53 | 73 | 284 | 273 | 281 | -8 | 40.57 | 5 | 12 | 0 |
 | Al Fateh | 7 | 204 | 67 | 46 | 91 | 247 | 303 | 334 | -31 | 35.29 | 6 | 16 | 0 |
 | Damac | 6 | 192 | 55 | 56 | 81 | 221 | 227 | 285 | -58 | 36.83 | 5 | 16 | 0 |
-| Al Fayha | 6 | 173 | 46 | 56 | 71 | 194 | 176 | 241 | -65 | 32.33 | 8 | 14 | 0 |
+| Al Fayha | 6 | 173 | 46 | 56 | 71 | 194 | 176 | 241 | -65 | 32.33 | 8 | 15 | 0 |
 | Al Raed | 5 | 158 | 44 | 32 | 82 | 164 | 202 | 256 | -54 | 32.8 | 9 | 18 | 0 |
 | Al Khaleej | 5 | 144 | 40 | 34 | 70 | 154 | 171 | 229 | -58 | 30.8 | 10 | 14 | 0 |
 | Abha | 5 | 133 | 38 | 24 | 71 | 138 | 146 | 249 | -103 | 27.6 | 10 | 19 | 0 |
@@ -150,7 +150,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Al Ettifaq | 5 | 12 | 7 | 6 | 7 | 7 | 7 |
 | Al Fateh | 7 | 7 | 6 | 7 | 10 | 12 | 16 |
 | Damac | 9 | 5 | 8 | 10 | 14 | 16 | - |
-| Al Fayha | - | 8 | 11 | 9 | 13 | 10 | 14 |
+| Al Fayha | - | 8 | 11 | 9 | 13 | 10 | 15 |
 | Al Raed | 13 | 9 | 9 | 11 | 18 | - | - |
 | Al Khaleej | - | - | 14 | 12 | 12 | 11 | 10 |
 | Abha | 10 | 10 | 12 | 16 | - | - | 19 |

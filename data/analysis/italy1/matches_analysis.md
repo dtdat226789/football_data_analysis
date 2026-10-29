@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:55:42+00:00
+- Generated: 2026-10-29T02:04:41+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie A (Italy)
 - Scope: league `italy1`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2360 |
-| Home wins | 961 (40.7%) |
-| Draws | 627 (26.6%) |
-| Away wins | 772 (32.7%) |
-| Total goals | 6354 |
-| Average goals per match | 2.692 |
+| Matches | 2363 |
+| Home wins | 962 (40.7%) |
+| Draws | 627 (26.5%) |
+| Away wins | 774 (32.8%) |
+| Total goals | 6372 |
+| Average goals per match | 2.697 |
 | Goalless matches | 156 (6.6%) |
 
 ## 2. Per-season breakdown
@@ -25,19 +25,19 @@
 | 2023-2024 | 380 | 159 (41.8%) | 112 (29.5%) | 109 (28.7%) | 992 | 2.611 | 30 (7.9%) |
 | 2024-2025 | 380 | 151 (39.7%) | 108 (28.4%) | 121 (31.8%) | 973 | 2.561 | 28 (7.4%) |
 | 2025-2026 | 380 | 148 (38.9%) | 99 (26.1%) | 133 (35.0%) | 922 | 2.426 | 36 (9.5%) |
-| 2026-2027 | 80 | 38 (47.5%) | 14 (17.5%) | 28 (35.0%) | 241 | 3.013 | 1 (1.2%) |
+| 2026-2027 | 83 | 39 (47.0%) | 14 (16.9%) | 30 (36.1%) | 259 | 3.12 | 1 (1.2%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 565 (74.6%) | 136 (18.0%) | 56 (7.4%) | 757 |
+| HT home lead | 566 (74.6%) | 136 (17.9%) | 57 (7.5%) | 759 |
 | HT draw | 332 (34.8%) | 357 (37.5%) | 264 (27.7%) | 953 |
-| HT away lead | 63 (9.7%) | 134 (20.6%) | 452 (69.6%) | 649 |
+| HT away lead | 63 (9.7%) | 134 (20.6%) | 453 (69.7%) | 650 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **63** (2.7%)
-- Away comebacks (trailing at HT, won at FT): **56** (2.4%)
+- Away comebacks (trailing at HT, won at FT): **57** (2.4%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -165,12 +165,13 @@
 | 2025-2026 | Udinese | Sassuolo | 1-0 | 1-2 |
 | 2025-2026 | Como | Inter | 2-1 | 3-4 |
 | 2025-2026 | Cremonese | Lazio | 1-0 | 1-2 |
+| 2026-2027 | Torino | Como | 1-0 | 1-3 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 757 | 565 (74.6%) | 136 (18.0%) | 56 (7.4%) |
-| Away lead | 649 | 452 (69.6%) | 134 (20.6%) | 63 (9.7%) |
+| Home lead | 759 | 566 (74.6%) | 136 (17.9%) | 57 (7.5%) |
+| Away lead | 650 | 453 (69.7%) | 134 (20.6%) | 63 (9.7%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
@@ -181,13 +182,13 @@
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2203` of `2360` (93.3%)
+- Matches with a first-goal time recorded: `2206` of `2363` (93.4%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 725 | 30.7% | 328 (45.2%) | 158 (21.8%) | 239 (33.0%) |
-| 16-30 | 528 | 22.4% | 208 (39.4%) | 128 (24.2%) | 192 (36.4%) |
+| 1-15 | 727 | 30.8% | 329 (45.3%) | 158 (21.7%) | 240 (33.0%) |
+| 16-30 | 529 | 22.4% | 208 (39.3%) | 128 (24.2%) | 193 (36.5%) |
 | 31-45 | 366 | 15.5% | 162 (44.3%) | 74 (20.2%) | 130 (35.5%) |
 | 46-60 | 300 | 12.7% | 133 (44.3%) | 65 (21.7%) | 102 (34.0%) |
 | 61-75 | 165 | 7.0% | 74 (44.8%) | 29 (17.6%) | 62 (37.6%) |
@@ -195,7 +196,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 29 | 1.2% | 16 (55.2%) | 2 (6.9%) | 11 (37.9%) |
 
 ## 7. Goalless matches
-- Overall: **156** of `2360` (6.6%)
+- Overall: **156** of `2363` (6.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -205,7 +206,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 30 | 7.9% |
 | 2024-2025 | 380 | 28 | 7.4% |
 | 2025-2026 | 380 | 36 | 9.5% |
-| 2026-2027 | 80 | 1 | 1.2% |
+| 2026-2027 | 83 | 1 | 1.2% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

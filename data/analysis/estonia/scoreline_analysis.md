@@ -1,26 +1,26 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T01:46:50+00:00
+- Generated: 2026-10-29T01:58:54+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1167** across **7** seasons.
+- Matches analysed: **1169** across **7** seasons.
 - Distinct scorelines seen: **52**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 102 | 8.7% |
 | 1-2 | 98 | 8.4% |
-| 1-0 | 94 | 8.1% |
-| 0-1 | 86 | 7.4% |
-| 2-1 | 85 | 7.3% |
+| 1-0 | 94 | 8.0% |
+| 0-1 | 87 | 7.4% |
+| 2-1 | 86 | 7.4% |
 | 2-0 | 70 | 6.0% |
 | 0-2 | 67 | 5.7% |
 | 0-0 | 57 | 4.9% |
 | 3-0 | 57 | 4.9% |
-| 2-2 | 52 | 4.5% |
+| 2-2 | 52 | 4.4% |
 | 3-1 | 51 | 4.4% |
 | 1-3 | 48 | 4.1% |
 | 0-3 | 40 | 3.4% |
@@ -91,10 +91,10 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-2 | 22 | 13.3% |
-| 1-0 | 15 | 9.0% |
-| 2-1 | 12 | 7.2% |
-| 0-1 | 11 | 6.6% |
+| 1-2 | 22 | 13.1% |
+| 1-0 | 15 | 8.9% |
+| 2-1 | 13 | 7.7% |
+| 0-1 | 12 | 7.1% |
 | 2-0 | 10 | 6.0% |
 
 ## 3. Total-goal histogram
@@ -103,12 +103,12 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 57 | 4.9% |
-| 1 | 180 | 15.4% |
-| 2 | 239 | 20.5% |
-| 3 | 280 | 24.0% |
-| 4 | 205 | 17.6% |
+| 1 | 181 | 15.5% |
+| 2 | 239 | 20.4% |
+| 3 | 281 | 24.0% |
+| 4 | 205 | 17.5% |
 | 5 | 107 | 9.2% |
-| 6 | 52 | 4.5% |
+| 6 | 52 | 4.4% |
 | 7 | 22 | 1.9% |
 | 8 | 15 | 1.3% |
 | 9 | 8 | 0.7% |
@@ -168,41 +168,41 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-07-19 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **948** (draws: **219**)
+- Decided matches: **950** (draws: **219**)
 - Average winning margin: **2.09**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 421 | 44.4% |
-| 2 | 254 | 26.8% |
-| 3+ | 273 | 28.8% |
+| 1 | 423 | 44.5% |
+| 2 | 254 | 26.7% |
+| 3+ | 273 | 28.7% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **506** | avg margin: **2.21** | max margin: **10**
+- Matches: **507** | avg margin: **2.21** | max margin: **10**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 206 | 40.7% |
-| 2 | 133 | 26.3% |
-| 3+ | 167 | 33.0% |
+| 1 | 207 | 40.8% |
+| 2 | 133 | 26.2% |
+| 3+ | 167 | 32.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **442** | avg margin: **1.95** | max margin: **9**
+- Matches: **443** | avg margin: **1.95** | max margin: **9**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 215 | 48.6% |
-| 2 | 121 | 27.4% |
-| 3+ | 106 | 24.0% |
+| 1 | 216 | 48.8% |
+| 2 | 121 | 27.3% |
+| 3+ | 106 | 23.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 506 | 1-0 | 94 | 18.6% |
+| home | 507 | 1-0 | 94 | 18.5% |
 | draw | 219 | 1-1 | 102 | 46.6% |
-| away | 442 | 1-2 | 98 | 22.2% |
+| away | 443 | 1-2 | 98 | 22.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

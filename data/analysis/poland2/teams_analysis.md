@@ -1,22 +1,22 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:24:41+00:00
+- Generated: 2026-10-29T02:09:50+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Division 1 (Poland)
 - Scope: league `poland2`
 
-- Teams: **42** | Seasons: **7** | Matches: **1965**
+- Teams: **42** | Seasons: **7** | Matches: **1966**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Arka Gdynia | 6 | 182 | 92 | 41 | 49 | 317 | 300 | 190 | 110 | 52.83 | 1 | 12 | 1 |
 | Legnica | 6 | 183 | 86 | 50 | 47 | 308 | 286 | 205 | 81 | 51.33 | 1 | 10 | 1 |
-| LKS Lodz | 6 | 183 | 81 | 46 | 56 | 289 | 271 | 216 | 55 | 48.17 | 1 | 10 | 1 |
+| LKS Lodz | 6 | 184 | 82 | 46 | 56 | 292 | 272 | 216 | 56 | 48.67 | 1 | 10 | 1 |
 | Chrobry Glogow | 7 | 219 | 76 | 58 | 85 | 286 | 258 | 296 | -38 | 40.86 | 4 | 14 | 0 |
 | Odra Opole | 7 | 217 | 74 | 57 | 86 | 279 | 242 | 281 | -39 | 39.86 | 5 | 17 | 0 |
 | Tychy | 6 | 205 | 73 | 55 | 77 | 274 | 265 | 280 | -15 | 45.67 | 2 | 19 | 0 |
-| Termalica B-B. | 5 | 148 | 71 | 45 | 32 | 258 | 256 | 173 | 83 | 51.6 | 4 | 19 | 0 |
+| Termalica B-B. | 5 | 148 | 71 | 45 | 32 | 258 | 256 | 173 | 83 | 51.6 | 5 | 19 | 0 |
 | Wisla | 4 | 137 | 69 | 37 | 31 | 244 | 259 | 153 | 106 | 61.0 | 1 | 7 | 1 |
 | Leczna | 5 | 171 | 56 | 61 | 54 | 229 | 213 | 210 | 3 | 45.8 | 4 | 17 | 0 |
 | S. Rzeszow | 5 | 149 | 55 | 32 | 62 | 197 | 219 | 246 | -27 | 39.4 | 5 | 13 | 0 |
@@ -32,7 +32,7 @@
 | Wisla Plock | 2 | 68 | 32 | 19 | 17 | 115 | 104 | 84 | 20 | 57.5 | 2 | 9 | 0 |
 | Widzew Lodz | 2 | 68 | 29 | 21 | 18 | 108 | 83 | 74 | 9 | 54.0 | 2 | 8 | 0 |
 | Korona Kielce | 2 | 68 | 26 | 19 | 23 | 97 | 77 | 83 | -6 | 48.5 | 4 | 11 | 0 |
-| Lechia Gdansk | 2 | 46 | 27 | 6 | 13 | 87 | 82 | 53 | 29 | 43.5 | 1 | 5 | 1 |
+| Lechia Gdansk | 2 | 46 | 27 | 6 | 13 | 87 | 82 | 53 | 29 | 43.5 | 1 | 6 | 1 |
 | Pogon Siedlce | 3 | 82 | 20 | 21 | 41 | 81 | 86 | 115 | -29 | 27.0 | 11 | 16 | 0 |
 | Stomil Olsztyn | 2 | 68 | 19 | 13 | 36 | 70 | 63 | 100 | -37 | 35.0 | 15 | 16 | 0 |
 | Grodzisk M. | 2 | 47 | 18 | 15 | 14 | 69 | 73 | 67 | 6 | 34.5 | 1 | 11 | 1 |
@@ -44,7 +44,7 @@
 | GKS Jastrzebie | 2 | 68 | 15 | 15 | 38 | 60 | 64 | 106 | -42 | 30.0 | 14 | 18 | 0 |
 | Motor Lublin | 1 | 34 | 16 | 8 | 10 | 56 | 49 | 42 | 7 | 56.0 | 5 | 5 | 0 |
 | Stal Mielec | 2 | 47 | 13 | 10 | 24 | 49 | 67 | 91 | -24 | 24.5 | 14 | 15 | 0 |
-| Warta Poznan | 2 | 45 | 12 | 6 | 27 | 42 | 41 | 71 | -30 | 21.0 | 7 | 18 | 0 |
+| Warta Poznan | 2 | 46 | 12 | 6 | 28 | 42 | 41 | 72 | -31 | 21.0 | 8 | 18 | 0 |
 | KS Wieczysta Krakow | 1 | 19 | 8 | 6 | 5 | 30 | 40 | 29 | 11 | 30.0 | 16 | 16 | 0 |
 | Polkowice | 1 | 34 | 5 | 14 | 15 | 29 | 32 | 54 | -22 | 29.0 | 17 | 17 | 0 |
 | Kotwica Kolobrzeg | 1 | 34 | 6 | 11 | 17 | 29 | 29 | 55 | -26 | 29.0 | 17 | 17 | 0 |
@@ -60,9 +60,9 @@
 | Odra Opole | 109 | 43 | 28 | 38 | 157 | 108 | 31 | 29 | 48 | 122 | 35 |
 | Puszcza | 76 | 32 | 18 | 26 | 114 | 73 | 20 | 19 | 34 | 79 | 35 |
 | Legnica | 93 | 48 | 25 | 20 | 169 | 90 | 38 | 25 | 27 | 139 | 30 |
-| LKS Lodz | 92 | 46 | 21 | 25 | 159 | 91 | 35 | 25 | 31 | 130 | 29 |
 | Wisla Plock | 34 | 22 | 6 | 6 | 72 | 34 | 10 | 13 | 11 | 43 | 29 |
 | Leczna | 85 | 32 | 32 | 21 | 128 | 86 | 24 | 29 | 33 | 101 | 27 |
+| LKS Lodz | 92 | 46 | 21 | 25 | 159 | 92 | 36 | 25 | 31 | 133 | 26 |
 | Lechia Gdansk | 23 | 18 | 2 | 3 | 56 | 23 | 9 | 4 | 10 | 31 | 25 |
 | Wisla | 68 | 39 | 17 | 12 | 134 | 69 | 30 | 20 | 19 | 110 | 24 |
 | Zaglebie Sosnowiec | 68 | 19 | 17 | 32 | 74 | 68 | 9 | 23 | 36 | 50 | 24 |
@@ -88,7 +88,7 @@
 | Polkowice | 17 | 3 | 8 | 6 | 17 | 17 | 2 | 6 | 9 | 12 | 5 |
 | Radomiak Radom | 17 | 11 | 3 | 3 | 36 | 17 | 9 | 5 | 3 | 32 | 4 |
 | Skierniewice | 7 | 2 | 1 | 4 | 7 | 5 | 1 | 1 | 3 | 4 | 3 |
-| Warta Poznan | 20 | 7 | 1 | 12 | 22 | 25 | 5 | 5 | 15 | 20 | 2 |
+| Warta Poznan | 21 | 7 | 1 | 13 | 22 | 25 | 5 | 5 | 15 | 20 | 2 |
 | Wieczysta Krakow | 19 | 9 | 5 | 5 | 32 | 17 | 9 | 4 | 4 | 31 | 1 |
 | Pruszkow | 51 | 17 | 10 | 24 | 61 | 52 | 16 | 13 | 23 | 61 | 0 |
 | Motor Lublin | 17 | 7 | 7 | 3 | 28 | 17 | 9 | 1 | 7 | 28 | 0 |
@@ -114,7 +114,7 @@
 |---|---|---|
 | 1 | Arka Gdynia | 300 |
 | 2 | Legnica | 286 |
-| 3 | LKS Lodz | 271 |
+| 3 | LKS Lodz | 272 |
 | 4 | Tychy | 265 |
 | 5 | Wisla | 259 |
 
@@ -125,7 +125,7 @@
 | 2 | Wisla | 106 |
 | 3 | Termalica B-B. | 83 |
 | 4 | Legnica | 81 |
-| 5 | LKS Lodz | 55 |
+| 5 | LKS Lodz | 56 |
 
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
@@ -168,12 +168,12 @@ _Cells show final position; '-' when the team was absent from that season._
 | team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
 |---|---|---|---|---|---|---|---|
 | Arka Gdynia | 4 | 3 | 6 | 2 | 1 | - | 12 |
-| Legnica | 6 | 1 | - | 10 | 4 | 6 | 6 |
-| LKS Lodz | 3 | 10 | 1 | - | 10 | 5 | 8 |
+| Legnica | 6 | 1 | - | 10 | 4 | 6 | 7 |
+| LKS Lodz | 3 | 10 | 1 | - | 10 | 5 | 4 |
 | Chrobry Glogow | 10 | 6 | 8 | 13 | 14 | 4 | 14 |
 | Odra Opole | 7 | 5 | 13 | 8 | 15 | 12 | 17 |
 | Tychy | 2 | 12 | 15 | 6 | 5 | 19 | - |
-| Termalica B-B. | 17 | - | 19 | 18 | 11 | - | 4 |
+| Termalica B-B. | 17 | - | 19 | 18 | 11 | - | 5 |
 | Wisla | - | - | 3 | 7 | 3 | 1 | - |
 | Leczna | 5 | - | 11 | 4 | 7 | 17 | - |
 | S. Rzeszow | - | - | 5 | 11 | 13 | 13 | 10 |
@@ -189,7 +189,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Wisla Plock | - | - | - | 9 | 2 | - | - |
 | Widzew Lodz | 8 | 2 | - | - | - | - | - |
 | Korona Kielce | 11 | 4 | - | - | - | - | - |
-| Lechia Gdansk | - | - | - | 1 | - | - | 5 |
+| Lechia Gdansk | - | - | - | 1 | - | - | 6 |
 | Pogon Siedlce | - | - | - | - | 16 | 15 | 11 |
 | Stomil Olsztyn | 15 | 16 | - | - | - | - | - |
 | Grodzisk M. | - | - | - | - | - | 11 | 1 |
@@ -201,7 +201,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | GKS Jastrzebie | 14 | 18 | - | - | - | - | - |
 | Motor Lublin | - | - | - | 5 | - | - | - |
 | Stal Mielec | - | - | - | - | - | 14 | 15 |
-| Warta Poznan | - | - | - | - | 18 | - | 7 |
+| Warta Poznan | - | - | - | - | 18 | - | 8 |
 | KS Wieczysta Krakow | - | - | - | - | - | 16 | - |
 | Polkowice | - | 17 | - | - | - | - | - |
 | Kotwica Kolobrzeg | - | - | - | - | 17 | - | - |

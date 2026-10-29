@@ -1,24 +1,24 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T01:42:08+00:00
+- Generated: 2026-10-29T01:55:13+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1457** across **7** seasons.
+- Matches analysed: **1461** across **7** seasons.
 - Distinct scorelines seen: **38**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-0 | 204 | 14.0% |
-| 1-1 | 156 | 10.7% |
-| 0-0 | 144 | 9.9% |
+| 1-1 | 157 | 10.7% |
+| 0-0 | 145 | 9.9% |
 | 2-1 | 131 | 9.0% |
 | 0-1 | 120 | 8.2% |
-| 2-0 | 116 | 8.0% |
-| 1-2 | 84 | 5.8% |
-| 0-2 | 78 | 5.4% |
+| 2-0 | 118 | 8.1% |
+| 1-2 | 84 | 5.7% |
+| 0-2 | 78 | 5.3% |
 | 3-0 | 55 | 3.8% |
 | 2-2 | 52 | 3.6% |
 | 3-1 | 44 | 3.0% |
@@ -91,24 +91,24 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 12 | 15.2% |
-| 1-0 | 9 | 11.4% |
-| 2-1 | 8 | 10.1% |
-| 2-0 | 6 | 7.6% |
-| 1-2 | 5 | 6.3% |
+| 1-1 | 13 | 15.7% |
+| 1-0 | 9 | 10.8% |
+| 2-1 | 8 | 9.6% |
+| 2-0 | 8 | 9.6% |
+| 1-2 | 5 | 6.0% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 144 | 9.9% |
+| 0 | 145 | 9.9% |
 | 1 | 324 | 22.2% |
-| 2 | 350 | 24.0% |
+| 2 | 353 | 24.2% |
 | 3 | 308 | 21.1% |
-| 4 | 180 | 12.4% |
-| 5 | 94 | 6.5% |
-| 6 | 43 | 3.0% |
+| 4 | 180 | 12.3% |
+| 5 | 94 | 6.4% |
+| 6 | 43 | 2.9% |
 | 7 | 10 | 0.7% |
 | 8 | 2 | 0.1% |
 | 9 | 2 | 0.1% |
@@ -135,24 +135,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-03-01 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1099** (draws: **358**)
+- Decided matches: **1101** (draws: **360**)
 - Average winning margin: **1.77**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 600 | 54.6% |
-| 2 | 293 | 26.7% |
+| 1 | 600 | 54.5% |
+| 2 | 295 | 26.8% |
 | 3+ | 206 | 18.7% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **660** | avg margin: **1.79** | max margin: **7**
+- Matches: **662** | avg margin: **1.79** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 371 | 56.2% |
-| 2 | 163 | 24.7% |
-| 3+ | 126 | 19.1% |
+| 1 | 371 | 56.0% |
+| 2 | 165 | 24.9% |
+| 3+ | 126 | 19.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -167,8 +167,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 660 | 1-0 | 204 | 30.9% |
-| draw | 358 | 1-1 | 156 | 43.6% |
+| home | 662 | 1-0 | 204 | 30.8% |
+| draw | 360 | 1-1 | 157 | 43.6% |
 | away | 439 | 0-1 | 120 | 27.3% |
 
 ---

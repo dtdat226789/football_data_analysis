@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:28:41+00:00
+- Generated: 2026-10-29T02:13:30+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: League One (Scotland)
 - Scope: league `scot1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Falkirk | 90 | Hamilton | 16 pts |
 | 2024-2025 | Arbroath | 64 | Inverness | 6 pts |
 | 2025-2026 | Inverness | 74 | Stenhousemuir | 3 pts |
-| 2026-2027 | Ross County | 31 | Hamilton | 0 pts |
+| 2026-2027 | Ross County | 32 | Hamilton | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 90 | 74 | 53 | 44 | 41 | 14 |
 | 2024-2025 | 64 | 58 | 55 | 51 | 44 | 35 |
 | 2025-2026 | 74 | 71 | 59 | 43 | 42 | 29 |
-| 2026-2027 | 31 | 31 | 19 | 13 | 12 | 6 |
+| 2026-2027 | 32 | 32 | 19 | 13 | 12 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 180 | 571 | 3.172 | 41.1% | 22.8% | 36.1% | 4.4% | 49.9 |
 | 2024-2025 | 180 | 486 | 2.7 | 41.1% | 26.1% | 32.8% | 7.2% | 49.3 |
 | 2025-2026 | 191 | 511 | 2.675 | 41.9% | 27.2% | 30.9% | 5.2% | 37.0 |
-| 2026-2027 | 59 | 167 | 2.831 | 45.8% | 20.3% | 33.9% | 6.8% | 16.5 |
+| 2026-2027 | 60 | 169 | 2.817 | 45.0% | 21.7% | 33.3% | 6.7% | 16.7 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 4.571)

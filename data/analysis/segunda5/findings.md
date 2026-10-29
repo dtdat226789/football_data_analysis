@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:30:42+00:00
+- Generated: 2026-10-29T02:15:29+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`
@@ -24,8 +24,8 @@
 - **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1789 matches produced 4108 goals (avg 2.296 per match)
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 57.0% vs away 43.0% of 4108 goals in total (home/away ratio 1.33)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 795 of 1789 matches (44.4%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 453 scoring matches, 28.9% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.13, median 29.0
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 454 scoring matches, 28.9% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.11, median 29.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Navalcarnero leads with 236 points across 6 seasons (0 title(s), GD 16)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 0 teams present in every one of the 7 seasons
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Atl. Paso earns 61 more points at home than away (94 home vs 33 away)

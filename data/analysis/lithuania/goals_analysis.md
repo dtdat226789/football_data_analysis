@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:22:32+00:00
+- Generated: 2026-10-29T02:08:00+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: TOPLYGA (Lithuania)
 - Scope: league `lithuania`
@@ -8,7 +8,7 @@
 ## 1. Goals per match distribution
 | goals | matches | pct |
 |---|---|---|
-| 0 | 101 | 9.1% |
+| 0 | 102 | 9.2% |
 | 1 | 201 | 18.1% |
 | 2 | 275 | 24.7% |
 | 3 | 236 | 21.2% |
@@ -27,7 +27,7 @@
 | 2023 | 180 | 431 | 1.289 | 1.106 | 2.394 |
 | 2024 | 180 | 423 | 1.189 | 1.161 | 2.35 |
 | 2025 | 180 | 479 | 1.433 | 1.228 | 2.661 |
-| 2026 | 152 | 405 | 1.467 | 1.197 | 2.664 |
+| 2026 | 153 | 405 | 1.458 | 1.19 | 2.647 |
 
 ## 3. Home vs away goal share
 - Home goals: **1527** (53.4%)
@@ -45,7 +45,7 @@
 | 2026 | 223 | 182 | 405 | 55.1% | 44.9% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **517** of `1112` (46.5%)
+- Overall: **517** of `1113` (46.5%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
@@ -55,14 +55,14 @@
 | 2023 | 180 | 69 | 38.3% |
 | 2024 | 180 | 78 | 43.3% |
 | 2025 | 180 | 92 | 51.1% |
-| 2026 | 152 | 72 | 47.4% |
+| 2026 | 153 | 72 | 47.1% |
 
 ## 5. Clean sheets
-- Home clean sheets: **362** (32.6%)
-- Away clean sheets: **334** (30.0%)
-- Total clean sheets recorded: **696**
-- Matches with at least one clean sheet: **595** (53.5%)
-- Both teams kept clean sheets (0-0): **101**
+- Home clean sheets: **363** (32.6%)
+- Away clean sheets: **335** (30.1%)
+- Total clean sheets recorded: **698**
+- Matches with at least one clean sheet: **596** (53.5%)
+- Both teams kept clean sheets (0-0): **102**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
 |---|---|---|---|---|---|
@@ -72,14 +72,14 @@
 | 2023 | 180 | 73 | 59 | 132 | 111 (61.7%) |
 | 2024 | 180 | 57 | 68 | 125 | 102 (56.7%) |
 | 2025 | 180 | 51 | 50 | 101 | 88 (48.9%) |
-| 2026 | 152 | 54 | 43 | 97 | 80 (52.6%) |
+| 2026 | 153 | 55 | 44 | 99 | 81 (52.9%) |
 
 ## 6. Scoring intensity
 - First-half goals: **1233** (43.3%)
 - Second-half goals: **1616** (56.7%)
-- Avg first-half goals per match: **1.112**
-- Avg second-half goals per match: **1.457**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **271** (24.4%)
+- Avg first-half goals per match: **1.111**
+- Avg second-half goals per match: **1.456**
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **271** (24.3%)
 - *3 match(es) excluded (no HT score recorded).*
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
@@ -90,11 +90,11 @@
 | 2023 | 180 | 175 | 253 | 40.9% | 59.1% |
 | 2024 | 180 | 175 | 245 | 41.7% | 58.3% |
 | 2025 | 180 | 210 | 269 | 43.8% | 56.2% |
-| 2026 | 152 | 178 | 224 | 44.3% | 55.7% |
+| 2026 | 153 | 178 | 224 | 44.3% | 55.7% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `1008` of `1112` (90.6%)
-- Goalless matches: `104`
+- Matches with first-goal time recorded: `1008` of `1113` (90.6%)
+- Goalless matches: `105`
 - Min `1` | Max `99` | Mean `33.13` | Median (p50) `28.0`
 
 | bucket | count | % of matches | % of scoring matches |

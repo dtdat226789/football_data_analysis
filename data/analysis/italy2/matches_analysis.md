@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:56:55+00:00
+- Generated: 2026-10-29T02:05:18+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2370 |
-| Home wins | 945 (39.9%) |
-| Draws | 763 (32.2%) |
-| Away wins | 662 (27.9%) |
-| Total goals | 5850 |
+| Matches | 2377 |
+| Home wins | 948 (39.9%) |
+| Draws | 765 (32.2%) |
+| Away wins | 664 (27.9%) |
+| Total goals | 5866 |
 | Average goals per match | 2.468 |
-| Goalless matches | 217 (9.2%) |
+| Goalless matches | 217 (9.1%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,14 +25,14 @@
 | 2023-2024 | 380 | 139 (36.6%) | 122 (32.1%) | 119 (31.3%) | 958 | 2.521 | 37 (9.7%) |
 | 2024-2025 | 380 | 153 (40.3%) | 128 (33.7%) | 99 (26.1%) | 937 | 2.466 | 40 (10.5%) |
 | 2025-2026 | 390 | 175 (44.9%) | 121 (31.0%) | 94 (24.1%) | 993 | 2.546 | 30 (7.7%) |
-| 2026-2027 | 80 | 29 (36.2%) | 22 (27.5%) | 29 (36.2%) | 216 | 2.7 | 3 (3.8%) |
+| 2026-2027 | 87 | 32 (36.8%) | 24 (27.6%) | 31 (35.6%) | 232 | 2.667 | 3 (3.4%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 549 (74.1%) | 145 (19.6%) | 47 (6.3%) | 741 |
-| HT draw | 339 (32.5%) | 458 (43.9%) | 247 (23.7%) | 1044 |
-| HT away lead | 56 (9.6%) | 160 (27.4%) | 367 (63.0%) | 583 |
+| HT home lead | 551 (74.1%) | 146 (19.6%) | 47 (6.3%) | 744 |
+| HT draw | 340 (32.5%) | 459 (43.8%) | 248 (23.7%) | 1047 |
+| HT away lead | 56 (9.6%) | 160 (27.4%) | 368 (63.0%) | 584 |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
@@ -153,33 +153,33 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 741 | 549 (74.1%) | 145 (19.6%) | 47 (6.3%) |
-| Away lead | 583 | 367 (63.0%) | 160 (27.4%) | 56 (9.6%) |
+| Home lead | 744 | 551 (74.1%) | 146 (19.6%) | 47 (6.3%) |
+| Away lead | 584 | 368 (63.0%) | 160 (27.4%) | 56 (9.6%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 339 | 32.5% |
-| Draw | 458 | 43.9% |
-| Away win | 247 | 23.7% |
+| Home win | 340 | 32.5% |
+| Draw | 459 | 43.8% |
+| Away win | 248 | 23.7% |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2151` of `2370` (90.8%)
+- Matches with a first-goal time recorded: `2158` of `2377` (90.8%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 650 | 27.4% | 287 (44.2%) | 172 (26.5%) | 191 (29.4%) |
-| 16-30 | 558 | 23.5% | 234 (41.9%) | 157 (28.1%) | 167 (29.9%) |
-| 31-45 | 374 | 15.8% | 169 (45.2%) | 100 (26.7%) | 105 (28.1%) |
-| 46-60 | 297 | 12.5% | 132 (44.4%) | 73 (24.6%) | 92 (31.0%) |
+| 1-15 | 652 | 27.4% | 287 (44.0%) | 172 (26.4%) | 193 (29.6%) |
+| 16-30 | 560 | 23.6% | 235 (42.0%) | 158 (28.2%) | 167 (29.8%) |
+| 31-45 | 375 | 15.8% | 170 (45.3%) | 100 (26.7%) | 105 (28.0%) |
+| 46-60 | 299 | 12.6% | 133 (44.5%) | 74 (24.7%) | 92 (30.8%) |
 | 61-75 | 140 | 5.9% | 51 (36.4%) | 32 (22.9%) | 57 (40.7%) |
-| 76-90 | 108 | 4.6% | 59 (54.6%) | 12 (11.1%) | 37 (34.3%) |
+| 76-90 | 108 | 4.5% | 59 (54.6%) | 12 (11.1%) | 37 (34.3%) |
 | 91-120 | 24 | 1.0% | 12 (50.0%) | 0 (0.0%) | 12 (50.0%) |
 
 ## 7. Goalless matches
-- Overall: **217** of `2370` (9.2%)
+- Overall: **217** of `2377` (9.1%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -189,7 +189,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 37 | 9.7% |
 | 2024-2025 | 380 | 40 | 10.5% |
 | 2025-2026 | 390 | 30 | 7.7% |
-| 2026-2027 | 80 | 3 | 3.8% |
+| 2026-2027 | 87 | 3 | 3.4% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:53:51+00:00
+- Generated: 2026-10-29T02:03:37+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`

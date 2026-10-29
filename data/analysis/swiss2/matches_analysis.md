@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T02:33:23+00:00
+- Generated: 2026-10-29T02:18:04+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Challenge League (Switzerland)
 - Scope: league `swiss2`

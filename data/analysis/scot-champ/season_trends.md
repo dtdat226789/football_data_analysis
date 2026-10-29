@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:28:04+00:00
+- Generated: 2026-10-29T02:12:54+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Championship (Scotland)
 - Scope: league `scot-champ`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 75 | 69 | 52 | 45 | 44 | 23 |
 | 2024-2025 | 73 | 70 | 55 | 48 | 36 | 29 |
 | 2025-2026 | 77 | 70 | 53 | 41 | 39 | 34 |
-| 2026-2027 | 28 | 23 | 19 | 17 | 12 | 7 |
+| 2026-2027 | 28 | 23 | 21 | 17 | 12 | 7 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 180 | 503 | 2.794 | 36.7% | 26.1% | 37.2% | 9.4% | 49.3 |
 | 2024-2025 | 180 | 452 | 2.511 | 47.8% | 23.9% | 28.3% | 8.3% | 49.7 |
 | 2025-2026 | 190 | 460 | 2.421 | 38.9% | 33.7% | 27.4% | 13.2% | 38.69 |
-| 2026-2027 | 60 | 120 | 2.0 | 45.0% | 23.3% | 31.7% | 8.3% | 16.6 |
+| 2026-2027 | 61 | 121 | 1.984 | 44.3% | 23.0% | 32.8% | 8.2% | 16.9 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 4.600)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.400 | 3.600 |
 | 2024-2025 | 1.400 | 3.000 |
 | 2025-2026 | 3.385 | 2.462 |
-| 2026-2027 | 1.000 | 4.200 |
+| 2026-2027 | 1.000 | 4.400 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

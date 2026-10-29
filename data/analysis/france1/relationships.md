@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T01:47:53+00:00
+- Generated: 2026-10-29T01:59:46+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Ligue 1 (France)
 - Scope: league `france1`

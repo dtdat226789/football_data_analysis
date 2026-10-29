@@ -1,23 +1,23 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:25:03+00:00
+- Generated: 2026-10-29T02:10:06+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`
 
-- Teams: **21** | Seasons: **2** | Matches: **388**
+- Teams: **21** | Seasons: **2** | Matches: **389**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | FC Porto | 2 | 43 | 37 | 4 | 2 | 115 | 87 | 22 | 65 | 57.5 | 1 | 1 | 2 |
+| Benfica | 2 | 43 | 30 | 12 | 1 | 102 | 100 | 33 | 67 | 51.0 | 2 | 3 | 0 |
 | Sporting CP | 2 | 43 | 30 | 10 | 3 | 100 | 110 | 35 | 75 | 50.0 | 2 | 3 | 0 |
-| Benfica | 2 | 42 | 29 | 12 | 1 | 99 | 98 | 32 | 66 | 49.5 | 2 | 3 | 0 |
 | Braga | 2 | 43 | 19 | 13 | 11 | 70 | 73 | 47 | 26 | 35.0 | 4 | 9 | 0 |
 | Famalicao | 2 | 43 | 17 | 15 | 11 | 66 | 56 | 40 | 16 | 33.0 | 5 | 11 | 0 |
 | Gil Vicente | 2 | 43 | 17 | 13 | 13 | 64 | 55 | 45 | 10 | 32.0 | 6 | 7 | 0 |
 | Arouca | 2 | 43 | 17 | 8 | 18 | 59 | 59 | 71 | -12 | 29.5 | 5 | 9 | 0 |
-| Santa Clara | 2 | 42 | 14 | 12 | 16 | 54 | 44 | 45 | -1 | 27.0 | 4 | 12 | 0 |
+| Santa Clara | 2 | 43 | 14 | 12 | 17 | 54 | 45 | 47 | -2 | 27.0 | 4 | 12 | 0 |
 | Moreirense | 2 | 43 | 15 | 9 | 19 | 54 | 48 | 65 | -17 | 27.0 | 7 | 10 | 0 |
 | Vitoria Guimaraes | 2 | 43 | 14 | 8 | 21 | 50 | 49 | 61 | -12 | 25.0 | 8 | 13 | 0 |
 | Alverca | 2 | 43 | 13 | 11 | 19 | 50 | 48 | 65 | -17 | 25.0 | 8 | 11 | 0 |
@@ -42,7 +42,7 @@
 | Arouca | 21 | 10 | 4 | 7 | 34 | 22 | 7 | 4 | 11 | 25 | 9 |
 | Estoril | 22 | 6 | 7 | 9 | 25 | 21 | 4 | 4 | 13 | 16 | 9 |
 | Moreirense | 21 | 9 | 4 | 8 | 31 | 22 | 6 | 5 | 11 | 23 | 8 |
-| Santa Clara | 21 | 9 | 4 | 8 | 31 | 21 | 5 | 8 | 8 | 23 | 8 |
+| Santa Clara | 22 | 9 | 4 | 9 | 31 | 21 | 5 | 8 | 8 | 23 | 8 |
 | Estrela | 22 | 5 | 8 | 9 | 23 | 21 | 3 | 8 | 10 | 17 | 6 |
 | AFS | 17 | 2 | 6 | 9 | 12 | 17 | 1 | 6 | 10 | 9 | 3 |
 | Sporting CP | 22 | 16 | 3 | 3 | 51 | 21 | 14 | 7 | 0 | 49 | 2 |
@@ -51,8 +51,8 @@
 | Famalicao | 21 | 9 | 6 | 6 | 33 | 22 | 8 | 9 | 5 | 33 | 0 |
 | Maritimo | 4 | 1 | 1 | 2 | 4 | 5 | 1 | 1 | 3 | 4 | 0 |
 | FC Porto | 21 | 18 | 3 | 0 | 57 | 22 | 19 | 1 | 2 | 58 | -1 |
-| Benfica | 21 | 14 | 7 | 0 | 49 | 21 | 15 | 5 | 1 | 50 | -1 |
 | Tondela | 17 | 2 | 7 | 8 | 13 | 17 | 4 | 3 | 10 | 15 | -2 |
+| Benfica | 21 | 14 | 7 | 0 | 49 | 22 | 16 | 5 | 1 | 53 | -4 |
 | Rio Ave | 22 | 4 | 7 | 11 | 19 | 21 | 6 | 6 | 9 | 24 | -5 |
 | Casa Pia | 22 | 3 | 9 | 10 | 18 | 23 | 6 | 5 | 12 | 23 | -5 |
 | Academico Viseu | 4 | 2 | 0 | 2 | 6 | 5 | 3 | 2 | 0 | 11 | -5 |
@@ -62,7 +62,7 @@
 | rank | team | PPG |
 |---|---|---|
 | 1 | FC Porto | 2.67 |
-| 2 | Benfica | 2.36 |
+| 2 | Benfica | 2.37 |
 | 3 | Sporting CP | 2.33 |
 | 4 | Academico Viseu | 1.89 |
 | 5 | Braga | 1.63 |
@@ -71,7 +71,7 @@
 | rank | team | goals |
 |---|---|---|
 | 1 | Sporting CP | 110 |
-| 2 | Benfica | 98 |
+| 2 | Benfica | 100 |
 | 3 | FC Porto | 87 |
 | 4 | Braga | 73 |
 | 5 | Arouca | 59 |
@@ -80,7 +80,7 @@
 | rank | team | GD |
 |---|---|---|
 | 1 | Sporting CP | 75 |
-| 2 | Benfica | 66 |
+| 2 | Benfica | 67 |
 | 3 | FC Porto | 65 |
 | 4 | Braga | 26 |
 | 5 | Famalicao | 16 |
@@ -89,7 +89,7 @@
 | rank | team | GA/match |
 |---|---|---|
 | 1 | FC Porto | 0.512 |
-| 2 | Benfica | 0.762 |
+| 2 | Benfica | 0.767 |
 | 3 | Sporting CP | 0.814 |
 | 4 | Famalicao | 0.930 |
 | 5 | Torreense | 1.000 |
@@ -126,8 +126,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | team | 2025-2026 | 2026-2027 |
 |---|---|---|
 | FC Porto | 1 | 1 |
-| Sporting CP | 2 | 3 |
 | Benfica | 3 | 2 |
+| Sporting CP | 2 | 3 |
 | Braga | 4 | 9 |
 | Famalicao | 5 | 11 |
 | Gil Vicente | 6 | 7 |

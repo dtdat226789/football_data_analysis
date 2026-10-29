@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:53:41+00:00
+- Generated: 2026-10-29T02:03:31+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`

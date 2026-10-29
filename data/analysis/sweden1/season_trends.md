@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:32:32+00:00
+- Generated: 2026-10-29T02:17:16+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 240 | 665 | 2.771 | 46.7% | 19.6% | 33.8% | 7.1% | 42.06 |
 | 2024 | 240 | 680 | 2.833 | 45.4% | 21.7% | 32.9% | 4.6% | 41.75 |
 | 2025 | 240 | 683 | 2.846 | 40.0% | 22.1% | 37.9% | 5.8% | 41.69 |
-| 2026 | 200 | 584 | 2.92 | 40.0% | 23.5% | 36.5% | 4.0% | 34.56 |
+| 2026 | 201 | 588 | 2.925 | 39.8% | 23.9% | 36.3% | 4.0% | 34.69 |
 
 ## 6. View divergence
 - Largest divergence: **2025** (goals view, avg abs position diff = 7.000)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 3.750 | 5.500 |
 | 2024 | 3.000 | 5.375 |
 | 2025 | 2.750 | 7.000 |
-| 2026 | 3.250 | 4.125 |
+| 2026 | 3.125 | 4.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

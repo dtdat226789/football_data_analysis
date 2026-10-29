@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:25:34+00:00
+- Generated: 2026-10-29T02:10:31+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
@@ -8,48 +8,48 @@
 ## 1. Sources
 | report | path | exists | loaded | size (KB) |
 |---|---|---|---|---|
-| database_profile | data/analysis/portugal2/database_profile.json | yes | yes | 47.26 |
+| database_profile | data/analysis/portugal2/database_profile.json | yes | yes | 47.25 |
 | matches_analysis | data/analysis/portugal2/matches_analysis.json | yes | yes | 26.76 |
 | goals_analysis | data/analysis/portugal2/goals_analysis.json | yes | yes | 12.50 |
 | teams_analysis | data/analysis/portugal2/teams_analysis.json | yes | yes | 50.32 |
 | season_trends | data/analysis/portugal2/season_trends.json | yes | yes | 10.49 |
-| scoreline_analysis | data/analysis/portugal2/scoreline_analysis.json | yes | yes | 280.52 |
+| scoreline_analysis | data/analysis/portugal2/scoreline_analysis.json | yes | yes | 280.71 |
 | relationships | data/analysis/portugal2/relationships.json | yes | yes | 13.78 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 1911 matches: home wins 40.2%, draws 27.6%, away wins 32.1% (769H / 528D / 614A)
+- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 1912 matches: home wins 40.3%, draws 27.6%, away wins 32.1% (770H / 528D / 614A)
 - **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 62 home and 42 away comebacks (trailing at HT but winning at FT)
-- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 435 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1911 matches produced 4748 goals (avg 2.485 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 53.1% vs away 46.9% of 4748 goals in total (home/away ratio 1.13)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 1001 of 1911 matches (52.4%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 546 scoring matches, 31.3% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 31.73, median 26.0
+- **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 436 times
+- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1912 matches produced 4749 goals (avg 2.484 per match)
+- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 53.1% vs away 46.9% of 4749 goals in total (home/away ratio 1.13)
+- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 1001 of 1912 matches (52.4%)
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 547 scoring matches, 31.3% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 31.72, median 26.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Benfica B leads with 297 points across 7 seasons (0 title(s), GD 37)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 5 teams present in every one of the 7 seasons (Benfica B, FC Porto B, Feirense, Leixoes, Penafiel)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Academico Viseu earns 39 more points at home than away (156 home vs 117 away)
 - **F12** · `season_trends` · *[high]* — **Champion with most titles** — Estoril won 1 of 7 championship(s) on record
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: Lusitania FC beat Sporting CP B by 0 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — down (-0.066 per match): first half 2.514 vs last half 2.448 across 7 seasons
+- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — down (-0.073 per match): first half 2.514 vs last half 2.442 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2023-2024 (goals view, avg abs position diff 6.000)
 - **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.556)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 249 matches (13.0%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (206 of 769 home matches, 26.8%)
+- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (207 of 770 home matches, 26.9%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (249 of 528 draw matches, 47.2%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (172 of 614 away matches, 28.0%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 22 match(es) with >= 7 total goals
 - **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — home_position_before_match |corr| = -0.0476 (n=1840 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 4.791: home 2.222, draw -0.650, away -2.569
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (38)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 1911 matches observed
+- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 1912 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 1911 |
-| Average goals per match | 2.485 |
-| Home win rate | 40.2% |
+| Matches analysed | 1912 |
+| Average goals per match | 2.484 |
+| Home win rate | 40.3% |
 | Draw rate | 27.6% |
 | Away win rate | 32.1% |
 | Most common scoreline | 1-1 |
@@ -60,12 +60,12 @@
 ## 4. Module comparison
 | module | report_name | sections present | size (KB) |
 |---|---|---|---|
-| database_profile | database_profile | observed, calculated, warnings | 47.26 |
+| database_profile | database_profile | observed, calculated, warnings | 47.25 |
 | matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 26.76 |
 | goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.50 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 50.32 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.49 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 280.52 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 280.71 |
 | relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.78 |
 
 ## 5. Notable anomalies
@@ -80,12 +80,12 @@
 - **9.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2024-2025 has 306 matches, expected 380
 - **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2024-2025 has 18 teams, expected 20
 - **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 310 matches, expected 380
-- **12.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 71 matches, expected 380
+- **12.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 72 matches, expected 380
 - **13.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 18 teams, expected 20
 - **14.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026-2027 has data but state is 'in_progress'
 - **15.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2025-2026 goalless share 10.6% vs overall 8.6% (deviation 2.0 pp)
-- **16.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2026-2027 goalless share 7.0% vs overall 8.6% (deviation 1.6 pp)
-- **17.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 draw outcome share 22.5% vs overall 27.6%
+- **16.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2026-2027 goalless share 6.9% vs overall 8.6% (deviation 1.7 pp)
+- **17.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 draw outcome share 22.2% vs overall 27.6%
 - **18.** `HIGH_SCORING_MATCHES` *(warning)* — 4 match(es) with >= 8 total goals (extreme scorelines)
 - **19.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
 - **20.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=397, fgte=397 rows)

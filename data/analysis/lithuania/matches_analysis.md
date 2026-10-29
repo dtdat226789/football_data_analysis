@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T02:22:29+00:00
+- Generated: 2026-10-29T02:07:58+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: TOPLYGA (Lithuania)
 - Scope: league `lithuania`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1112 |
+| Matches | 1113 |
 | Home wins | 446 (40.1%) |
-| Draws | 291 (26.2%) |
+| Draws | 292 (26.2%) |
 | Away wins | 375 (33.7%) |
 | Total goals | 2858 |
-| Average goals per match | 2.570 |
-| Goalless matches | 101 (9.1%) |
+| Average goals per match | 2.568 |
+| Goalless matches | 102 (9.2%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,13 +25,13 @@
 | 2023 | 180 | 74 (41.1%) | 46 (25.6%) | 60 (33.3%) | 431 | 2.394 | 21 (11.7%) |
 | 2024 | 180 | 66 (36.7%) | 50 (27.8%) | 64 (35.6%) | 423 | 2.35 | 23 (12.8%) |
 | 2025 | 180 | 73 (40.6%) | 44 (24.4%) | 63 (35.0%) | 479 | 2.661 | 13 (7.2%) |
-| 2026 | 152 | 62 (40.8%) | 42 (27.6%) | 48 (31.6%) | 405 | 2.664 | 17 (11.2%) |
+| 2026 | 153 | 62 (40.5%) | 43 (28.1%) | 48 (31.4%) | 405 | 2.647 | 18 (11.8%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 279 (82.3%) | 45 (13.3%) | 15 (4.4%) | 339 |
-| HT draw | 140 (29.3%) | 193 (40.4%) | 145 (30.3%) | 478 |
+| HT draw | 140 (29.2%) | 194 (40.5%) | 145 (30.3%) | 479 |
 | HT away lead | 26 (8.9%) | 53 (18.2%) | 213 (72.9%) | 292 |
 - *3 match(es) excluded (no HT score recorded).*
 
@@ -97,13 +97,13 @@
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 140 | 29.3% |
-| Draw | 193 | 40.4% |
+| Home win | 140 | 29.2% |
+| Draw | 194 | 40.5% |
 | Away win | 145 | 30.3% |
 - *3 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1008` of `1112` (90.6%)
+- Matches with a first-goal time recorded: `1008` of `1113` (90.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
@@ -117,7 +117,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 18 | 1.6% | 9 (50.0%) | 1 (5.6%) | 8 (44.4%) |
 
 ## 7. Goalless matches
-- Overall: **101** of `1112` (9.1%)
+- Overall: **102** of `1113` (9.2%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -127,7 +127,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023 | 180 | 21 | 11.7% |
 | 2024 | 180 | 23 | 12.8% |
 | 2025 | 180 | 13 | 7.2% |
-| 2026 | 152 | 17 | 11.2% |
+| 2026 | 153 | 18 | 11.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

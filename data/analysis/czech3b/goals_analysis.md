@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T01:44:19+00:00
+- Generated: 2026-10-29T01:56:51+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`

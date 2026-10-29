@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:34:41+00:00
+- Generated: 2026-10-29T02:19:17+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Super League Women (Belgium)
 - Scope: league `wbelgium1`

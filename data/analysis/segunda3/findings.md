@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:30:03+00:00
+- Generated: 2026-10-29T02:14:50+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Segunda RFEF - Group 3 (Spain)
 - Scope: league `segunda3`
@@ -10,7 +10,7 @@
 |---|---|---|---|---|
 | database_profile | data/analysis/segunda3/database_profile.json | yes | yes | 50.47 |
 | matches_analysis | data/analysis/segunda3/matches_analysis.json | yes | yes | 22.51 |
-| goals_analysis | data/analysis/segunda3/goals_analysis.json | yes | yes | 12.44 |
+| goals_analysis | data/analysis/segunda3/goals_analysis.json | yes | yes | 12.43 |
 | teams_analysis | data/analysis/segunda3/teams_analysis.json | yes | yes | 70.84 |
 | season_trends | data/analysis/segunda3/season_trends.json | yes | yes | 10.50 |
 | scoreline_analysis | data/analysis/segunda3/scoreline_analysis.json | yes | yes | 254.51 |
@@ -24,8 +24,8 @@
 - **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1801 matches produced 4159 goals (avg 2.309 per match)
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 57.2% vs away 42.8% of 4159 goals in total (home/away ratio 1.33)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 867 of 1801 matches (48.1%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 463 scoring matches, 28.7% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.52, median 30.0
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 464 scoring matches, 28.8% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.50, median 30.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Espanyol B leads with 274 points across 6 seasons (0 title(s), GD 6)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 0 teams present in every one of the 7 seasons
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Espanyol B earns 46 more points at home than away (160 home vs 114 away)
@@ -62,7 +62,7 @@
 |---|---|---|---|
 | database_profile | database_profile | observed, calculated, warnings | 50.47 |
 | matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 22.51 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.44 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.43 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 70.84 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.50 |
 | scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 254.51 |

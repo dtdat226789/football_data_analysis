@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T01:45:01+00:00
+- Generated: 2026-10-29T01:57:24+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: 1st Division (Denmark)
 - Scope: league `denmark2`

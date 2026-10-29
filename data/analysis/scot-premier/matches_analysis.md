@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T02:28:17+00:00
+- Generated: 2026-10-29T02:13:07+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`

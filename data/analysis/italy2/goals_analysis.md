@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T01:56:59+00:00
+- Generated: 2026-10-29T02:05:19+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`
@@ -8,11 +8,11 @@
 ## 1. Goals per match distribution
 | goals | matches | pct |
 |---|---|---|
-| 0 | 217 | 9.2% |
+| 0 | 217 | 9.1% |
 | 1 | 439 | 18.5% |
-| 2 | 642 | 27.1% |
-| 3 | 513 | 21.6% |
-| 4 | 333 | 14.1% |
+| 2 | 647 | 27.2% |
+| 3 | 515 | 21.7% |
+| 4 | 333 | 14.0% |
 | 5 | 140 | 5.9% |
 | 6 | 55 | 2.3% |
 | 7 | 22 | 0.9% |
@@ -27,12 +27,12 @@
 | 2023-2024 | 380 | 958 | 1.339 | 1.182 | 2.521 |
 | 2024-2025 | 380 | 937 | 1.353 | 1.113 | 2.466 |
 | 2025-2026 | 390 | 993 | 1.479 | 1.067 | 2.546 |
-| 2026-2027 | 80 | 216 | 1.35 | 1.35 | 2.7 |
+| 2026-2027 | 87 | 232 | 1.345 | 1.322 | 2.667 |
 
 ## 3. Home vs away goal share
-- Home goals: **3219** (55.0%)
-- Away goals: **2631** (45.0%)
-- Home/away ratio: **1.223**
+- Home goals: **3228** (55.0%)
+- Away goals: **2638** (45.0%)
+- Home/away ratio: **1.224**
 
 | season | home goals | away goals | total | home pct | away pct |
 |---|---|---|---|---|---|
@@ -42,10 +42,10 @@
 | 2023-2024 | 509 | 449 | 958 | 53.1% | 46.9% |
 | 2024-2025 | 514 | 423 | 937 | 54.9% | 45.1% |
 | 2025-2026 | 577 | 416 | 993 | 58.1% | 41.9% |
-| 2026-2027 | 108 | 108 | 216 | 50.0% | 50.0% |
+| 2026-2027 | 117 | 115 | 232 | 50.4% | 49.6% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **1250** of `2370` (52.7%)
+- Overall: **1254** of `2377` (52.8%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
@@ -55,13 +55,13 @@
 | 2023-2024 | 380 | 213 | 56.1% |
 | 2024-2025 | 380 | 205 | 53.9% |
 | 2025-2026 | 390 | 208 | 53.3% |
-| 2026-2027 | 80 | 49 | 61.2% |
+| 2026-2027 | 87 | 53 | 60.9% |
 
 ## 5. Clean sheets
-- Home clean sheets: **759** (32.0%)
-- Away clean sheets: **578** (24.4%)
-- Total clean sheets recorded: **1337**
-- Matches with at least one clean sheet: **1120** (47.3%)
+- Home clean sheets: **761** (32.0%)
+- Away clean sheets: **579** (24.4%)
+- Total clean sheets recorded: **1340**
+- Matches with at least one clean sheet: **1123** (47.2%)
 - Both teams kept clean sheets (0-0): **217**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
@@ -72,14 +72,14 @@
 | 2023-2024 | 380 | 110 | 94 | 204 | 167 (43.9%) |
 | 2024-2025 | 380 | 121 | 94 | 215 | 175 (46.1%) |
 | 2025-2026 | 390 | 133 | 79 | 212 | 182 (46.7%) |
-| 2026-2027 | 80 | 16 | 18 | 34 | 31 (38.8%) |
+| 2026-2027 | 87 | 18 | 19 | 37 | 34 (39.1%) |
 
 ## 6. Scoring intensity
-- First-half goals: **2653** (45.4%)
-- Second-half goals: **3191** (54.6%)
+- First-half goals: **2659** (45.4%)
+- Second-half goals: **3201** (54.6%)
 - Avg first-half goals per match: **1.12**
 - Avg second-half goals per match: **1.348**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **519** (21.9%)
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **521** (21.9%)
 - *2 match(es) excluded (no HT score recorded).*
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
@@ -90,21 +90,21 @@
 | 2023-2024 | 380 | 424 | 534 | 44.3% | 55.7% |
 | 2024-2025 | 380 | 438 | 496 | 46.9% | 53.1% |
 | 2025-2026 | 390 | 440 | 553 | 44.3% | 55.7% |
-| 2026-2027 | 80 | 88 | 128 | 40.7% | 59.3% |
+| 2026-2027 | 87 | 94 | 138 | 40.5% | 59.5% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `2151` of `2370` (90.8%)
+- Matches with first-goal time recorded: `2158` of `2377` (90.8%)
 - Goalless matches: `219`
-- Min `1` | Max `97` | Mean `31.49` | Median (p50) `26`
+- Min `1` | Max `97` | Mean `31.48` | Median (p50) `26.5`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 650 | 27.4% | 30.2% |
-| 16-30 | 558 | 23.5% | 25.9% |
-| 31-45 | 374 | 15.8% | 17.4% |
-| 46-60 | 297 | 12.5% | 13.8% |
+| 1-15 | 652 | 27.4% | 30.2% |
+| 16-30 | 560 | 23.6% | 25.9% |
+| 31-45 | 375 | 15.8% | 17.4% |
+| 46-60 | 299 | 12.6% | 13.9% |
 | 61-75 | 140 | 5.9% | 6.5% |
-| 76-90 | 108 | 4.6% | 5.0% |
+| 76-90 | 108 | 4.5% | 5.0% |
 | 91-120 | 24 | 1.0% | 1.1% |
 
 ---

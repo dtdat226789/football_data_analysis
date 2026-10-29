@@ -1,17 +1,17 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:22:34+00:00
+- Generated: 2026-10-29T02:08:01+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: TOPLYGA (Lithuania)
 - Scope: league `lithuania`
 
-- Teams: **14** | Seasons: **7** | Matches: **1112**
+- Teams: **14** | Seasons: **7** | Matches: **1113**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Zalgiris | 7 | 232 | 143 | 49 | 40 | 478 | 452 | 206 | 246 | 68.29 | 1 | 4 | 4 |
-| Kauno Zalgiris | 7 | 231 | 117 | 61 | 53 | 412 | 374 | 221 | 153 | 58.86 | 1 | 4 | 2 |
+| Zalgiris | 7 | 233 | 143 | 50 | 40 | 479 | 452 | 206 | 246 | 68.43 | 1 | 4 | 4 |
+| Kauno Zalgiris | 7 | 232 | 117 | 62 | 53 | 413 | 374 | 221 | 153 | 59.0 | 1 | 4 | 2 |
 | Suduva | 7 | 232 | 98 | 63 | 71 | 357 | 300 | 255 | 45 | 51.0 | 2 | 9 | 0 |
 | FK Panevezys | 7 | 232 | 97 | 61 | 74 | 352 | 315 | 259 | 56 | 50.29 | 1 | 8 | 1 |
 | Hegelmann | 6 | 212 | 92 | 58 | 62 | 334 | 325 | 250 | 75 | 55.67 | 2 | 8 | 0 |
@@ -32,9 +32,9 @@
 | Siauliai FA | 72 | 32 | 26 | 14 | 122 | 72 | 21 | 21 | 30 | 84 | 38 |
 | FK Panevezys | 115 | 55 | 29 | 31 | 194 | 117 | 42 | 32 | 43 | 158 | 36 |
 | Hegelmann | 106 | 49 | 35 | 22 | 182 | 106 | 43 | 23 | 40 | 152 | 30 |
-| Zalgiris | 117 | 77 | 21 | 19 | 252 | 115 | 66 | 28 | 21 | 226 | 26 |
+| Zalgiris | 117 | 77 | 21 | 19 | 252 | 116 | 66 | 29 | 21 | 227 | 25 |
 | Dziugas Telsiai | 107 | 29 | 33 | 45 | 120 | 105 | 25 | 29 | 51 | 104 | 16 |
-| Kauno Zalgiris | 116 | 62 | 26 | 28 | 212 | 115 | 55 | 35 | 25 | 200 | 12 |
+| Kauno Zalgiris | 117 | 62 | 27 | 28 | 213 | 115 | 55 | 35 | 25 | 200 | 13 |
 | Riteriai | 90 | 21 | 27 | 42 | 90 | 91 | 19 | 24 | 48 | 81 | 9 |
 | FA Siauliai | 16 | 4 | 2 | 10 | 14 | 16 | 0 | 8 | 8 | 8 | 6 |
 | Nevezis Kedainiai | 18 | 1 | 3 | 14 | 6 | 18 | 1 | 1 | 16 | 4 | 2 |
@@ -74,8 +74,8 @@
 ### Best defence (goals against per match, standings)
 | rank | team | GA/match |
 |---|---|---|
-| 1 | Zalgiris | 0.888 |
-| 2 | Kauno Zalgiris | 0.957 |
+| 1 | Zalgiris | 0.884 |
+| 2 | Kauno Zalgiris | 0.953 |
 | 3 | Suduva | 1.099 |
 | 4 | FK Panevezys | 1.116 |
 | 5 | Hegelmann | 1.179 |
@@ -96,10 +96,10 @@ Banga, FK Panevezys, Kauno Zalgiris, Suduva, Zalgiris
 | Zalgiris vs FK Panevezys | 28 | 13 | 4 | 11 | 46.4% | 14.3% | 39.3% |
 | Zalgiris vs Suduva | 28 | 13 | 9 | 6 | 46.4% | 32.1% | 21.4% |
 | Suduva vs Kauno Zalgiris | 28 | 10 | 11 | 7 | 35.7% | 39.3% | 25.0% |
+| Zalgiris vs Kauno Zalgiris | 28 | 7 | 6 | 15 | 25.0% | 21.4% | 53.6% |
 | Kauno Zalgiris vs Banga | 28 | 6 | 11 | 11 | 21.4% | 39.3% | 39.3% |
 | Suduva vs Banga | 27 | 14 | 4 | 9 | 51.9% | 14.8% | 33.3% |
 | Zalgiris vs Banga | 27 | 11 | 4 | 12 | 40.7% | 14.8% | 44.4% |
-| Zalgiris vs Kauno Zalgiris | 27 | 7 | 5 | 15 | 25.9% | 18.5% | 55.6% |
 | Suduva vs Hegelmann | 24 | 13 | 4 | 7 | 54.2% | 16.7% | 29.2% |
 | Zalgiris vs Hegelmann | 24 | 12 | 6 | 6 | 50.0% | 25.0% | 25.0% |
 | Banga vs Hegelmann | 24 | 11 | 5 | 8 | 45.8% | 20.8% | 33.3% |

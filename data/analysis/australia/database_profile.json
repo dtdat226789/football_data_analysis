@@ -4,7 +4,7 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:39:36+00:00",
+  "generated_at": "2026-10-29T01:53:03+00:00",
   "config": {
     "league": "australia",
     "out_dir": "data/analysis/australia",
@@ -30,7 +30,7 @@
       "teams": 44,
       "team_aliases": 88,
       "team_seasons": 191,
-      "matches": 2658,
+      "matches": 2659,
       "standings": 573
     },
     "leagues": [
@@ -39,7 +39,7 @@
         "name": "Ligue 1",
         "country": "Algeria",
         "n_registered_seasons": 7,
-        "n_matches": 1696
+        "n_matches": 1697
       },
       {
         "api_key": "australia",
@@ -796,20 +796,20 @@
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 2658,
-        "distinct": 2658,
+        "rows": 2659,
+        "distinct": 2659,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 2658,
-        "distinct": 2658,
+        "rows": 2659,
+        "distinct": 2659,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 2658,
-        "distinct": 2656,
+        "rows": 2659,
+        "distinct": 2657,
         "duplicates": 2
       },
       {
@@ -862,65 +862,65 @@
       }
     ],
     "null_counts": {
-      "total": 2658,
+      "total": 2659,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 2658,
+          "n_not_null": 2659,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 2658,
+          "n_not_null": 2659,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 2658,
+          "n_not_null": 2659,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 2658,
+          "n_not_null": 2659,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 2658,
+          "n_not_null": 2659,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 2658,
+          "n_not_null": 2659,
           "null_pct": 0.0
         },
         "home_ht": {
           "n_null": 8,
-          "n_not_null": 2650,
+          "n_not_null": 2651,
           "null_pct": 0.3
         },
         "away_ht": {
           "n_null": 8,
-          "n_not_null": 2650,
+          "n_not_null": 2651,
           "null_pct": 0.3
         },
         "first_goal_time": {
           "n_null": 255,
-          "n_not_null": 2403,
+          "n_not_null": 2404,
           "null_pct": 9.6
         },
         "first_goal_time_extra": {
           "n_null": 255,
-          "n_not_null": 2403,
+          "n_not_null": 2404,
           "null_pct": 9.6
         }
       }
     },
     "first_goal_consistency": {
-      "total": 2658,
+      "total": 2659,
       "fgt_inconsistent": 5,
       "fgte_inconsistent": 5,
-      "n_with_fgt": 2403
+      "n_with_fgt": 2404
     },
     "value_ranges": {
       "min_home": 0,
@@ -1766,8 +1766,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 2658,
-        "distinct": 2656,
+        "rows": 2659,
+        "distinct": 2657,
         "duplicates": 2
       }
     },
@@ -1776,10 +1776,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
       "details": {
-        "total": 2658,
+        "total": 2659,
         "fgt_inconsistent": 5,
         "fgte_inconsistent": 5,
-        "n_with_fgt": 2403
+        "n_with_fgt": 2404
       }
     },
     {

@@ -1,21 +1,21 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:34:23+00:00
+- Generated: 2026-10-29T02:19:02+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: 1. Lig (Turkey)
 - Scope: league `turkey2`
 
-- Teams: **47** | Seasons: **7** | Matches: **2179**
+- Teams: **47** | Seasons: **7** | Matches: **2180**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Bandirmaspor | 7 | 228 | 95 | 62 | 71 | 347 | 324 | 264 | 60 | 49.57 | 3 | 12 | 0 |
-| Keciorengucu | 7 | 229 | 91 | 60 | 78 | 333 | 343 | 277 | 66 | 47.57 | 5 | 13 | 0 |
+| Keciorengucu | 7 | 229 | 91 | 60 | 78 | 333 | 343 | 277 | 66 | 47.57 | 6 | 13 | 0 |
 | Boluspor | 7 | 228 | 87 | 49 | 92 | 310 | 288 | 288 | 0 | 44.29 | 7 | 20 | 0 |
 | Erzurumspor | 5 | 182 | 81 | 49 | 52 | 292 | 263 | 184 | 79 | 58.4 | 1 | 13 | 1 |
 | Umraniyespor | 6 | 192 | 77 | 45 | 70 | 276 | 258 | 231 | 27 | 46.0 | 1 | 16 | 1 |
-| Manisa FK | 6 | 193 | 70 | 48 | 75 | 258 | 263 | 259 | 4 | 43.0 | 9 | 18 | 0 |
+| Manisa FK | 6 | 194 | 70 | 48 | 76 | 258 | 264 | 261 | 3 | 43.0 | 9 | 18 | 0 |
 | Istanbulspor AS | 5 | 158 | 70 | 35 | 53 | 245 | 252 | 198 | 54 | 49.0 | 4 | 19 | 0 |
 | Sakaryaspor | 4 | 146 | 58 | 33 | 55 | 207 | 202 | 208 | -6 | 51.75 | 3 | 18 | 0 |
 | Bodrumspor | 4 | 123 | 57 | 35 | 31 | 206 | 187 | 108 | 79 | 51.5 | 4 | 9 | 0 |
@@ -51,9 +51,9 @@
 | Kayserispor | 1 | 12 | 8 | 3 | 1 | 27 | 26 | 9 | 17 | 27.0 | 2 | 2 | 0 |
 | Ankaraspor | 1 | 34 | 6 | 8 | 20 | 26 | 33 | 61 | -28 | 26.0 | 17 | 17 | 0 |
 | Batman Petrolspor | 1 | 12 | 7 | 2 | 3 | 23 | 25 | 21 | 4 | 23.0 | 4 | 4 | 0 |
+| Mardin 1969 | 1 | 12 | 6 | 3 | 3 | 21 | 16 | 11 | 5 | 21.0 | 5 | 5 | 0 |
 | Yeni Malatyaspor | 2 | 74 | 4 | 7 | 63 | 19 | 36 | 234 | -198 | 9.5 | 19 | 20 | 0 |
-| Mardin 1969 | 1 | 11 | 5 | 3 | 3 | 18 | 14 | 10 | 4 | 18.0 | 7 | 7 | 0 |
-| Muglaspor | 1 | 12 | 4 | 6 | 2 | 18 | 18 | 14 | 4 | 18.0 | 6 | 6 | 0 |
+| Muglaspor | 1 | 12 | 4 | 6 | 2 | 18 | 18 | 14 | 4 | 18.0 | 7 | 7 | 0 |
 | Antalyaspor | 1 | 12 | 6 | 0 | 6 | 18 | 18 | 19 | -1 | 18.0 | 8 | 8 | 0 |
 | Hatayspor | 1 | 38 | 2 | 8 | 28 | 14 | 33 | 102 | -69 | 14.0 | 19 | 19 | 0 |
 | Eskisehirspor | 1 | 34 | 1 | 8 | 25 | 11 | 23 | 91 | -68 | 11.0 | 18 | 18 | 0 |
@@ -66,7 +66,7 @@
 | Adanaspor AS | 89 | 28 | 23 | 38 | 107 | 89 | 17 | 15 | 57 | 66 | 41 |
 | Erzurumspor | 91 | 47 | 23 | 21 | 164 | 91 | 34 | 26 | 31 | 128 | 36 |
 | Umraniyespor | 97 | 43 | 27 | 27 | 156 | 95 | 34 | 18 | 43 | 120 | 36 |
-| Manisa FK | 97 | 39 | 29 | 29 | 146 | 96 | 31 | 19 | 46 | 112 | 34 |
+| Manisa FK | 97 | 39 | 29 | 29 | 146 | 97 | 31 | 19 | 47 | 112 | 34 |
 | Kocaelispor | 54 | 31 | 9 | 14 | 102 | 54 | 18 | 15 | 21 | 69 | 33 |
 | Genclerbirligi | 72 | 34 | 15 | 23 | 117 | 72 | 22 | 22 | 28 | 88 | 29 |
 | Pendikspor | 62 | 30 | 19 | 13 | 109 | 63 | 20 | 20 | 23 | 80 | 29 |
@@ -97,12 +97,12 @@
 | Batman Petrolspor | 6 | 5 | 0 | 1 | 15 | 6 | 2 | 2 | 2 | 8 | 7 |
 | Eskisehirspor | 17 | 1 | 6 | 10 | 9 | 17 | 0 | 2 | 15 | 2 | 7 |
 | Tuzlaspor | 70 | 24 | 17 | 29 | 89 | 70 | 23 | 14 | 33 | 83 | 6 |
+| Mardin 1969 | 6 | 4 | 1 | 1 | 13 | 6 | 2 | 2 | 2 | 8 | 5 |
 | Giresunspor | 34 | 12 | 6 | 16 | 42 | 34 | 11 | 5 | 18 | 38 | 4 |
 | Sanliurfaspor | 36 | 11 | 8 | 17 | 41 | 36 | 9 | 10 | 17 | 37 | 4 |
 | Vanspor FK | 25 | 9 | 5 | 11 | 32 | 25 | 7 | 8 | 10 | 29 | 3 |
 | Erokspor | 44 | 18 | 16 | 10 | 70 | 45 | 18 | 14 | 13 | 68 | 2 |
 | Goztepe | 34 | 19 | 9 | 6 | 66 | 35 | 19 | 7 | 9 | 64 | 2 |
-| Mardin 1969 | 5 | 3 | 1 | 1 | 10 | 6 | 2 | 2 | 2 | 8 | 2 |
 | Muglaspor | 6 | 2 | 3 | 1 | 9 | 6 | 2 | 3 | 1 | 9 | 0 |
 | Serik Spor | 19 | 6 | 1 | 12 | 19 | 19 | 5 | 5 | 9 | 20 | -1 |
 | Yeni Malatyaspor | 37 | 2 | 3 | 32 | 9 | 37 | 2 | 4 | 31 | 10 | -1 |
@@ -125,8 +125,8 @@
 | 1 | Keciorengucu | 343 |
 | 2 | Bandirmaspor | 324 |
 | 3 | Boluspor | 288 |
-| 4 | Erzurumspor | 263 |
-| 5 | Manisa FK | 263 |
+| 4 | Manisa FK | 264 |
+| 5 | Erzurumspor | 263 |
 
 ### Best goal difference
 | rank | team | GD |
@@ -143,7 +143,7 @@
 | 1 | Goztepe | 0.696 |
 | 2 | Kayserispor | 0.750 |
 | 3 | Bodrumspor | 0.869 |
-| 4 | Mardin 1969 | 0.909 |
+| 4 | Mardin 1969 | 0.917 |
 | 5 | Samsunspor | 0.962 |
 
 ## 4. Team consistency
@@ -152,7 +152,7 @@
 Bandirmaspor, Boluspor, Keciorengucu
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **651** (showing the 15 most frequent)
+- Distinct fixtures: **652** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -178,7 +178,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
 |---|---|---|---|---|---|---|---|
 | Bandirmaspor | 11 | 3 | 10 | 9 | 6 | 8 | 12 |
-| Keciorengucu | 7 | 12 | 8 | 13 | 13 | 7 | 5 |
+| Keciorengucu | 7 | 12 | 8 | 13 | 13 | 7 | 6 |
 | Boluspor | 12 | 8 | 11 | 7 | 7 | 15 | 20 |
 | Erzurumspor | - | 5 | 13 | 10 | 5 | 1 | - |
 | Umraniyespor | 8 | 1 | - | 11 | 11 | 16 | 13 |
@@ -218,9 +218,9 @@ _Cells show final position; '-' when the team was absent from that season._
 | Kayserispor | - | - | - | - | - | - | 2 |
 | Ankaraspor | 17 | - | - | - | - | - | - |
 | Batman Petrolspor | - | - | - | - | - | - | 4 |
+| Mardin 1969 | - | - | - | - | - | - | 5 |
 | Yeni Malatyaspor | - | - | 19 | - | 20 | - | - |
-| Mardin 1969 | - | - | - | - | - | - | 7 |
-| Muglaspor | - | - | - | - | - | - | 6 |
+| Muglaspor | - | - | - | - | - | - | 7 |
 | Antalyaspor | - | - | - | - | - | - | 8 |
 | Hatayspor | - | - | - | - | - | 19 | - |
 | Eskisehirspor | 18 | - | - | - | - | - | - |

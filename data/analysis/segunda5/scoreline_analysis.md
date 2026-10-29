@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:30:37+00:00
+- Generated: 2026-10-29T02:15:25+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`

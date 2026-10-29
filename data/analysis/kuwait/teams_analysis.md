@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:00:58+00:00
+- Generated: 2026-10-29T02:07:28+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premier League (Kuwait)
 - Scope: league `kuwait`

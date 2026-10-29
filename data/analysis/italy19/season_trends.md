@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:56:28+00:00
+- Generated: 2026-10-29T02:05:04+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`

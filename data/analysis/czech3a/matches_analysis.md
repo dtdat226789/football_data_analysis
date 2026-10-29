@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:43:52+00:00
+- Generated: 2026-10-29T01:56:32+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: 3. CFL - Group A (Czech Republic)
 - Scope: league `czech3a`

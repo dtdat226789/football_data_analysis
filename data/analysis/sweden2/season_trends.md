@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:32:51+00:00
+- Generated: 2026-10-29T02:17:34+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Superettan (Sweden)
 - Scope: league `sweden2`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 63 | 57 | 54 | 41 | 33 | 31 |
 | 2024 | 55 | 54 | 47 | 43 | 34 | 25 |
 | 2025 | 65 | 64 | 48 | 43 | 30 | 19 |
-| 2026 | 62 | 51 | 46 | 42 | 27 | 19 |
+| 2026 | 62 | 51 | 47 | 42 | 29 | 19 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 13 | 33 | 14 | 32 | 1 pts |
 | 2024 | 13 | 34 | 14 | 32 | 2 pts |
 | 2025 | 13 | 30 | 14 | 22 | 8 pts |
-| 2026 | 13 | 27 | 14 | 26 | 1 pts |
+| 2026 | 13 | 29 | 14 | 27 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 240 | 673 | 2.804 | 46.2% | 26.7% | 27.1% | 7.1% | 41.0 |
 | 2024 | 240 | 633 | 2.638 | 45.0% | 27.9% | 27.1% | 8.3% | 40.81 |
 | 2025 | 240 | 686 | 2.858 | 42.1% | 27.1% | 30.8% | 7.5% | 40.94 |
-| 2026 | 222 | 651 | 2.932 | 39.6% | 27.0% | 33.3% | 6.8% | 37.88 |
+| 2026 | 224 | 654 | 2.92 | 39.7% | 27.2% | 33.0% | 6.7% | 38.19 |
 
 ## 6. View divergence
 - Largest divergence: **2021** (goals view, avg abs position diff = 5.750)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 2.875 | 5.250 |
 | 2024 | 4.000 | 5.125 |
 | 2025 | 1.750 | 4.875 |
-| 2026 | 2.000 | 5.000 |
+| 2026 | 1.875 | 5.125 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

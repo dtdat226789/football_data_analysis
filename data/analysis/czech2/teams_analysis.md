@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:43:35+00:00
+- Generated: 2026-10-29T01:56:19+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`

@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T01:43:17+00:00
+- Generated: 2026-10-29T01:56:07+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Chance Liga (Czech Republic)
 - Scope: league `czech1`

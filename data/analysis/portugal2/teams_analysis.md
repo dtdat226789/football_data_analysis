@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:25:26+00:00
+- Generated: 2026-10-29T02:10:24+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
 
-- Teams: **40** | Seasons: **7** | Matches: **1911**
+- Teams: **40** | Seasons: **7** | Matches: **1912**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -16,8 +16,8 @@
 | Academico Viseu | 6 | 204 | 70 | 63 | 71 | 273 | 251 | 251 | 0 | 45.5 | 3 | 15 | 0 |
 | Leixoes | 7 | 212 | 68 | 61 | 83 | 265 | 236 | 279 | -43 | 37.86 | 7 | 14 | 0 |
 | FC Porto B | 7 | 212 | 68 | 59 | 85 | 263 | 273 | 296 | -23 | 37.57 | 4 | 16 | 0 |
-| Chaves | 5 | 144 | 63 | 36 | 45 | 225 | 190 | 160 | 30 | 45.0 | 3 | 13 | 0 |
-| Torreense | 5 | 145 | 60 | 32 | 53 | 212 | 180 | 165 | 15 | 42.4 | 2 | 16 | 0 |
+| Chaves | 5 | 144 | 63 | 36 | 45 | 225 | 190 | 160 | 30 | 45.0 | 3 | 14 | 0 |
+| Torreense | 5 | 146 | 61 | 32 | 53 | 215 | 181 | 165 | 16 | 43.0 | 2 | 13 | 0 |
 | Mafra | 5 | 170 | 49 | 51 | 70 | 198 | 187 | 235 | -48 | 39.6 | 6 | 18 | 0 |
 | Vizela | 4 | 110 | 52 | 34 | 24 | 190 | 156 | 113 | 43 | 47.5 | 2 | 10 | 0 |
 | Maritimo | 3 | 102 | 48 | 29 | 25 | 173 | 144 | 106 | 38 | 57.67 | 1 | 12 | 1 |
@@ -31,7 +31,7 @@
 | Casa Pia | 3 | 70 | 32 | 19 | 19 | 115 | 93 | 68 | 25 | 38.33 | 2 | 19 | 0 |
 | Covilha | 3 | 102 | 23 | 32 | 47 | 101 | 97 | 142 | -45 | 33.67 | 11 | 18 | 0 |
 | Estrela | 2 | 68 | 25 | 25 | 18 | 100 | 97 | 90 | 7 | 50.0 | 3 | 14 | 0 |
-| Felgueiras | 3 | 76 | 23 | 28 | 25 | 97 | 84 | 85 | -1 | 32.33 | 9 | 15 | 0 |
+| Felgueiras | 3 | 76 | 23 | 28 | 25 | 97 | 84 | 85 | -1 | 32.33 | 9 | 16 | 0 |
 | Academica | 3 | 76 | 25 | 19 | 32 | 94 | 95 | 102 | -7 | 31.33 | 4 | 18 | 0 |
 | Portimonense | 3 | 76 | 23 | 15 | 38 | 84 | 83 | 113 | -30 | 28.0 | 12 | 16 | 0 |
 | Moreirense | 1 | 34 | 24 | 7 | 3 | 79 | 77 | 38 | 39 | 79.0 | 1 | 1 | 1 |
@@ -49,7 +49,7 @@
 | BSAD | 1 | 34 | 9 | 8 | 17 | 35 | 41 | 59 | -18 | 35.0 | 16 | 16 | 0 |
 | Vilaverdense | 1 | 34 | 8 | 4 | 22 | 28 | 30 | 59 | -29 | 28.0 | 17 | 17 | 0 |
 | Os Belenenses | 2 | 36 | 6 | 9 | 21 | 27 | 28 | 60 | -32 | 13.5 | 18 | 20 | 0 |
-| Amarante | 1 | 7 | 1 | 2 | 4 | 5 | 6 | 10 | -4 | 5.0 | 17 | 17 | 0 |
+| Amarante | 1 | 8 | 1 | 2 | 5 | 5 | 6 | 11 | -5 | 5.0 | 17 | 17 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
@@ -65,9 +65,9 @@
 | Oliveirense | 85 | 23 | 28 | 34 | 97 | 85 | 18 | 20 | 47 | 74 | 23 |
 | Casa Pia | 35 | 21 | 6 | 8 | 69 | 35 | 11 | 13 | 11 | 46 | 23 |
 | Chaves | 72 | 34 | 20 | 18 | 122 | 72 | 29 | 16 | 27 | 103 | 19 |
+| Torreense | 73 | 34 | 15 | 24 | 117 | 73 | 27 | 17 | 29 | 98 | 19 |
 | Leixoes | 106 | 37 | 30 | 39 | 141 | 106 | 31 | 31 | 44 | 124 | 17 |
 | Felgueiras | 38 | 15 | 12 | 11 | 57 | 38 | 8 | 16 | 14 | 40 | 17 |
-| Torreense | 72 | 33 | 15 | 24 | 114 | 73 | 27 | 17 | 29 | 98 | 16 |
 | Vizela | 55 | 29 | 16 | 10 | 103 | 55 | 23 | 18 | 14 | 87 | 16 |
 | Pacos Ferreira | 51 | 19 | 13 | 19 | 70 | 51 | 13 | 15 | 23 | 54 | 16 |
 | Covilha | 51 | 14 | 16 | 21 | 58 | 51 | 9 | 16 | 26 | 43 | 15 |
@@ -83,7 +83,7 @@
 | Portimonense | 37 | 12 | 8 | 17 | 44 | 39 | 11 | 7 | 21 | 40 | 4 |
 | Santa Clara | 17 | 12 | 2 | 3 | 38 | 17 | 9 | 8 | 0 | 35 | 3 |
 | Arouca | 17 | 10 | 4 | 3 | 34 | 17 | 9 | 4 | 4 | 31 | 3 |
-| Amarante | 4 | 1 | 1 | 2 | 4 | 3 | 0 | 1 | 2 | 1 | 3 |
+| Amarante | 4 | 1 | 1 | 2 | 4 | 4 | 0 | 1 | 3 | 1 | 3 |
 | Vilafranquense | 51 | 13 | 21 | 17 | 60 | 51 | 14 | 16 | 21 | 58 | 2 |
 | Academica | 38 | 13 | 9 | 16 | 48 | 38 | 12 | 10 | 16 | 46 | 2 |
 | Estoril | 17 | 10 | 6 | 1 | 36 | 17 | 10 | 4 | 3 | 34 | 2 |
@@ -138,7 +138,7 @@
 Benfica B, FC Porto B, Feirense, Leixoes, Penafiel
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **506** (showing the 15 most frequent)
+- Distinct fixtures: **507** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -168,9 +168,9 @@ _Cells show final position; '-' when the team was absent from that season._
 | Penafiel | 7 | 7 | 13 | 13 | 11 | 15 | 3 |
 | Academico Viseu | 14 | 15 | 4 | 11 | 10 | 3 | - |
 | Leixoes | 10 | 8 | 12 | 14 | 13 | 7 | 11 |
-| FC Porto B | 16 | 10 | 5 | 9 | 14 | 4 | 14 |
-| Chaves | 6 | 3 | - | - | 7 | 9 | 13 |
-| Torreense | - | - | 9 | 7 | 5 | 2 | 16 |
+| FC Porto B | 16 | 10 | 5 | 9 | 14 | 4 | 15 |
+| Chaves | 6 | 3 | - | - | 7 | 9 | 14 |
+| Torreense | - | - | 9 | 7 | 5 | 2 | 13 |
 | Mafra | 13 | 9 | 6 | 10 | 18 | - | - |
 | Vizela | 2 | - | - | - | 3 | 5 | 10 |
 | Maritimo | - | - | - | 3 | 12 | 1 | - |
@@ -184,7 +184,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Casa Pia | 9 | 2 | - | - | - | 19 | - |
 | Covilha | 11 | 16 | 18 | - | - | - | - |
 | Estrela | - | 14 | 3 | - | - | - | - |
-| Felgueiras | - | - | - | - | 9 | 11 | 15 |
+| Felgueiras | - | - | - | - | 9 | 11 | 16 |
 | Academica | 4 | 18 | - | - | - | - | 4 |
 | Portimonense | - | - | - | - | 15 | 16 | 12 |
 | Moreirense | - | - | 1 | - | - | - | - |

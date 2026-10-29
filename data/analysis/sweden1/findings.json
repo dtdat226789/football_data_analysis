@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:32:38+00:00",
+  "generated_at": "2026-10-29T02:17:21+00:00",
   "config": {
     "league": "sweden1",
     "out_dir": "data/analysis/sweden1",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1640 matches: home wins 42.7%, draws 24.1%, away wins 33.2% (700H / 395D / 545A)",
+      "detail": "1641 matches: home wins 42.7%, draws 24.1%, away wins 33.2% (700H / 396D / 545A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,21 +104,21 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1640 matches produced 4586 goals (avg 2.796 per match)",
+      "detail": "1641 matches produced 4590 goals (avg 2.797 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.8% vs away 45.2% of 4586 goals in total (home/away ratio 1.21)",
+      "detail": "home 54.8% vs away 45.2% of 4590 goals in total (home/away ratio 1.21)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "865 of 1640 matches (52.7%)",
+      "detail": "866 of 1641 matches (52.8%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.125 per match): first half 2.741 vs last half 2.866 across 7 seasons",
+      "detail": "up (+0.127 per match): first half 2.741 vs last half 2.868 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -209,7 +209,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (187 of 395 draw matches, 47.3%)",
+      "detail": "1-1 (187 of 396 draw matches, 47.2%)",
       "importance": "low",
       "id": "F19"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1640 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1641 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1640,
-    "avg_goals": 2.796,
+    "n_matches": 1641,
+    "avg_goals": 2.797,
     "home_win_pct": 42.7,
     "draw_pct": 24.1,
     "away_win_pct": 33.2,
     "most_common_scoreline": "1-1",
     "dominant_team": "Malmo FF",
     "champion_most_titles": "Malmo FF",
-    "btts_rate_pct": 52.7
+    "btts_rate_pct": 52.8
   },
   "comparison": [
     {
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 200 matches, expected 380",
+      "message": "Season 2026 has 201 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 200,
+        "n_matches": 201,
         "expected": 380
       }
     },
@@ -646,8 +646,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 144730,
-        "distinct": 144685,
+        "rows": 144817,
+        "distinct": 144772,
         "duplicates": 45
       }
     },
@@ -656,10 +656,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=440, fgte=440 rows)",
       "details": {
-        "total": 144730,
+        "total": 144817,
         "fgt_inconsistent": 440,
         "fgte_inconsistent": 440,
-        "n_with_fgt": 132920
+        "n_with_fgt": 133004
       }
     },
     {

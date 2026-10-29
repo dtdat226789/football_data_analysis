@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:46:41+00:00
+- Generated: 2026-10-29T01:58:46+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1167 |
-| Home wins | 506 (43.4%) |
-| Draws | 219 (18.8%) |
-| Away wins | 442 (37.9%) |
-| Total goals | 3532 |
-| Average goals per match | 3.027 |
+| Matches | 1169 |
+| Home wins | 507 (43.4%) |
+| Draws | 219 (18.7%) |
+| Away wins | 443 (37.9%) |
+| Total goals | 3536 |
+| Average goals per match | 3.025 |
 | Goalless matches | 57 (4.9%) |
 
 ## 2. Per-season breakdown
@@ -25,18 +25,18 @@
 | 2023 | 180 | 67 (37.2%) | 50 (27.8%) | 63 (35.0%) | 458 | 2.544 | 17 (9.4%) |
 | 2024 | 180 | 75 (41.7%) | 40 (22.2%) | 65 (36.1%) | 539 | 2.994 | 10 (5.6%) |
 | 2025 | 180 | 84 (46.7%) | 24 (13.3%) | 72 (40.0%) | 572 | 3.178 | 4 (2.2%) |
-| 2026 | 166 | 81 (48.8%) | 20 (12.0%) | 65 (39.2%) | 517 | 3.114 | 5 (3.0%) |
+| 2026 | 168 | 82 (48.8%) | 20 (11.9%) | 66 (39.3%) | 521 | 3.101 | 5 (3.0%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 328 (82.2%) | 46 (11.5%) | 25 (6.3%) | 399 |
 | HT draw | 138 (32.9%) | 129 (30.8%) | 152 (36.3%) | 419 |
-| HT away lead | 31 (9.5%) | 41 (12.6%) | 254 (77.9%) | 326 |
+| HT away lead | 32 (9.8%) | 41 (12.5%) | 255 (77.7%) | 328 |
 - *23 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **31** (2.7%)
+- Home comebacks (trailing at HT, won at FT): **32** (2.7%)
 - Away comebacks (trailing at HT, won at FT): **25** (2.1%)
 
 ### Home comebacks
@@ -73,6 +73,7 @@
 | 2026 | Kuressaare | Tammeka | 1-2 | 3-2 |
 | 2026 | Kalju | Narva | 0-1 | 2-1 |
 | 2026 | Nomme Utd | Kuressaare | 0-1 | 3-2 |
+| 2026 | Levadia | Tammeka | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -107,7 +108,7 @@
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
 | Home lead | 399 | 328 (82.2%) | 46 (11.5%) | 25 (6.3%) |
-| Away lead | 326 | 254 (77.9%) | 41 (12.6%) | 31 (9.5%) |
+| Away lead | 328 | 255 (77.7%) | 41 (12.5%) | 32 (9.8%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
@@ -118,21 +119,21 @@
 - *23 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1110` of `1167` (95.1%)
+- Matches with a first-goal time recorded: `1112` of `1169` (95.1%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 388 | 33.2% | 190 (49.0%) | 56 (14.4%) | 142 (36.6%) |
-| 16-30 | 295 | 25.3% | 135 (45.8%) | 41 (13.9%) | 119 (40.3%) |
-| 31-45 | 182 | 15.6% | 85 (46.7%) | 28 (15.4%) | 69 (37.9%) |
+| 1-15 | 389 | 33.3% | 191 (49.1%) | 56 (14.4%) | 142 (36.5%) |
+| 16-30 | 295 | 25.2% | 135 (45.8%) | 41 (13.9%) | 119 (40.3%) |
+| 31-45 | 183 | 15.7% | 85 (46.4%) | 28 (15.3%) | 70 (38.3%) |
 | 46-60 | 118 | 10.1% | 45 (38.1%) | 17 (14.4%) | 56 (47.5%) |
 | 61-75 | 72 | 6.2% | 31 (43.1%) | 13 (18.1%) | 28 (38.9%) |
 | 76-90 | 40 | 3.4% | 14 (35.0%) | 6 (15.0%) | 20 (50.0%) |
 | 91-120 | 15 | 1.3% | 6 (40.0%) | 1 (6.7%) | 8 (53.3%) |
 
 ## 7. Goalless matches
-- Overall: **57** of `1167` (4.9%)
+- Overall: **57** of `1169` (4.9%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -142,7 +143,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023 | 180 | 17 | 9.4% |
 | 2024 | 180 | 10 | 5.6% |
 | 2025 | 180 | 4 | 2.2% |
-| 2026 | 166 | 5 | 3.0% |
+| 2026 | 168 | 5 | 3.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

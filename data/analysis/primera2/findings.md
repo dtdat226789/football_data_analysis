@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:26:37+00:00
+- Generated: 2026-10-29T02:11:28+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2022-2023: Eldense beat Amorebieta by 0 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.174 per match): first half 2.269 vs last half 2.443 across 6 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2022-2023 (goals view, avg abs position diff 6.700)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2023-2024 (luck view, avg abs position diff 2.000)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.900)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-0 in 277 matches (13.9%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (277 of 885 home matches, 31.3%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (260 of 595 draw matches, 43.7%)

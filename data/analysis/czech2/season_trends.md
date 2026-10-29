@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:43:37+00:00
+- Generated: 2026-10-29T01:56:21+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`

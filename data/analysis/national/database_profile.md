@@ -1,6 +1,6 @@
 # Football Charts Database Profile
 - Report: `database_profile`
-- Generated: 2026-10-27T02:23:11+00:00
+- Generated: 2026-10-29T02:08:32+00:00
 - Script: `backend/scripts/profile_database.py` v1.0.0
 - Database: `football_charts` (PostgreSQL 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
 - Scope: league `national`
@@ -16,7 +16,7 @@
 | teams | 1359 |
 | team_aliases | 2719 |
 | team_seasons | 6263 |
-| matches | 94334 |
+| matches | 94385 |
 | standings | 18789 |
 
 ### 1.2 Leagues with data
@@ -24,50 +24,50 @@
 - Leagues with match data: `55`
 | api_key | name | country | registered_seasons | matches |
 |---|---|---|---|---|
-| algir1 | Ligue 1 | Algeria | 7 | 1696 |
+| algir1 | Ligue 1 | Algeria | 7 | 1697 |
 | australia | A-League | Australia | 7 | 962 |
 | austria1 | Bundesliga | Austria | 7 | 915 |
 | austria2 | 2. Liga | Austria | 7 | 1503 |
 | azer | Premier League | Azerbaijan | 7 | 1023 |
 | belgium1 | Jupiler Pro League | Belgium | 7 | 1799 |
 | brazil1 | Serie A Betano | Brazil | 7 | 2571 |
-| brazil2 | Serie B | Brazil | 7 | 2620 |
-| bulgaria1 | efbet League | Bulgaria | 7 | 1457 |
+| brazil2 | Serie B | Brazil | 7 | 2623 |
+| bulgaria1 | efbet League | Bulgaria | 7 | 1461 |
 | cha | Championship | England | 7 | 3463 |
 | china | Super League | China | 7 | 1482 |
 | czech1 | Chance Liga | Czech Republic | 7 | 1640 |
 | czech2 | ChNL | Czech Republic | 7 | 1478 |
 | czech3a | 3. CFL - Group A | Czech Republic | 5 | 1087 |
 | czech3b | 3. CFL - Group B | Czech Republic | 7 | 1421 |
-| denmark1 | Superliga | Denmark | 7 | 925 |
+| denmark1 | Superliga | Denmark | 7 | 926 |
 | denmark2 | 1st Division | Denmark | 7 | 848 |
-| develop21 | Professional Development League | England | 1 | 61 |
+| develop21 | Professional Development League | England | 1 | 68 |
 | egypt | Premier League | Egypt | 7 | 1769 |
-| eng1 | League One | England | 7 | 3455 |
-| eng2 | League Two | England | 7 | 3466 |
-| estonia | Meistriliiga | Estonia | 7 | 1167 |
+| eng1 | League One | England | 7 | 3460 |
+| eng2 | League Two | England | 7 | 3468 |
+| estonia | Meistriliiga | Estonia | 7 | 1169 |
 | finland1 | Veikkausliiga | Finland | 7 | 945 |
 | finland2 | Ykkosliiga | Finland | 7 | 933 |
-| france1 | Ligue 1 | France | 7 | 2133 |
-| france2 | Ligue 2 | France | 7 | 2224 |
+| france1 | Ligue 1 | France | 7 | 2134 |
+| france2 | Ligue 2 | France | 7 | 2226 |
 | france3 | Ligue 3 | France | 7 | 1902 |
 | germany-north | Regionalliga North | Germany | 7 | 1699 |
 | germany1 | Bundesliga | Germany | 7 | 1690 |
 | germany2 | 2. Bundesliga | Germany | 7 | 1921 |
 | germany3 | 3. Liga | Germany | 7 | 2383 |
 | greece1 | Super League | Greece | 7 | 1211 |
-| greece2 | Super League 2 | Greece | 7 | 1835 |
+| greece2 | Super League 2 | Greece | 7 | 1836 |
 | holland1 | Eredivisie | Netherlands | 7 | 1941 |
 | holland2 | Eerste Divisie | Netherlands | 7 | 2412 |
 | holland3 | Tweede Divisie | Netherlands | 7 | 1693 |
 | hungary1 | NB I. | Hungary | 7 | 1253 |
 | hungary2 | NB II. | Hungary | 7 | 2013 |
-| india1 | ISL | India | 7 | 725 |
+| india1 | ISL | India | 7 | 726 |
 | ireland1 | Premier Division | Ireland | 7 | 1164 |
 | ireland2 | Division 1 | Ireland | 7 | 1086 |
-| italy1 | Serie A | Italy | 7 | 2360 |
+| italy1 | Serie A | Italy | 7 | 2363 |
 | italy19 | Primavera 1 | Italy | 7 | 2000 |
-| italy2 | Serie B | Italy | 7 | 2370 |
+| italy2 | Serie B | Italy | 7 | 2377 |
 | italy3a | Serie C - Group A | Italy | 7 | 2390 |
 | italy3b | Serie C - Group B | Italy | 7 | 2367 |
 | japan1 | J1 League | Japan | 8 | 2339 |
@@ -75,10 +75,10 @@
 | korea1 | K League 1 | South Korea | 7 | 1320 |
 | korea2 | K League 2 | South Korea | 7 | 1513 |
 | kuwait | Premier League | Kuwait | 7 | 593 |
-| latvia | Virsliga | Latvia | 6 | 1023 |
-| lithuania | TOPLYGA | Lithuania | 7 | 1112 |
+| latvia | Virsliga | Latvia | 6 | 1024 |
+| lithuania | TOPLYGA | Lithuania | 7 | 1113 |
 | morocco | Botola Pro | Morocco | 7 | 1483 |
-| national | National League | England | 6 | 2885 |
+| national | National League | England | 6 | 2894 |
 
 ### 1.3 Registered seasons vs seasons with data
 - Registered league_seasons for `national`: `6`
@@ -92,14 +92,14 @@
 | 2023-2024 | False | complete | 552 | 24 | 2023-08-05 | 2024-04-20 |
 | 2024-2025 | False | complete | 552 | 24 | 2024-08-10 | 2025-05-05 |
 | 2025-2026 | True | complete | 557 | 24 | 2025-08-09 | 2026-05-10 |
-| 2026-2027 | True | in_progress | 166 | 24 | 2026-08-08 | 2026-10-24 |
+| 2026-2027 | True | in_progress | 175 | 24 | 2026-08-08 | 2026-10-27 |
 
 ### 1.4 Duplicate checks
 | check | rows | distinct | duplicates |
 |---|---|---|---|
-| matches.api_id (natural PK) | 94334 | 94334 | 0 |
-| matches (league_season_id, game_index) | 94334 | 94334 | 0 |
-| matches same fixture on same date (league_season, home, away, match_date) | 94334 | 94320 | 14 |
+| matches.api_id (natural PK) | 94385 | 94385 | 0 |
+| matches (league_season_id, game_index) | 94385 | 94385 | 0 |
+| matches same fixture on same date (league_season, home, away, match_date) | 94385 | 94371 | 14 |
 | team_seasons (league_season_id, team_id) | 6263 | 6263 | 0 |
 | team_seasons api_name within a season | 6263 | 6263 | 0 |
 | team_seasons api_slug within a season | 6263 | 6263 | 0 |
@@ -111,20 +111,20 @@
   > **WARNING:** duplicates found, see section 3.
 
 ### 1.5 NULL counts (matches, important fields)
-- Total matches: `94334`
+- Total matches: `94385`
 
 | field | n_null | n_not_null | null_pct |
 |---|---|---|---|
-| match_date | 0 | 94334 | 0.0% |
-| kickoff_time | 0 | 94334 | 0.0% |
-| home_team_id | 0 | 94334 | 0.0% |
-| away_team_id | 0 | 94334 | 0.0% |
-| home_score | 0 | 94334 | 0.0% |
-| away_score | 0 | 94334 | 0.0% |
-| home_ht | 450 | 93884 | 0.5% |
-| away_ht | 450 | 93884 | 0.5% |
-| first_goal_time | 7574 | 86760 | 8.0% |
-| first_goal_time_extra | 7574 | 86760 | 8.0% |
+| match_date | 0 | 94385 | 0.0% |
+| kickoff_time | 0 | 94385 | 0.0% |
+| home_team_id | 0 | 94385 | 0.0% |
+| away_team_id | 0 | 94385 | 0.0% |
+| home_score | 0 | 94385 | 0.0% |
+| away_score | 0 | 94385 | 0.0% |
+| home_ht | 447 | 93938 | 0.5% |
+| away_ht | 447 | 93938 | 0.5% |
+| first_goal_time | 7577 | 86808 | 8.0% |
+| first_goal_time_extra | 7577 | 86808 | 8.0% |
   > Semantics: `home_ht`/`away_ht` NULL together; `first_goal_time`/`first_goal_time_extra` NULL iff goalless.
 
 ### 1.6 Value ranges
@@ -142,20 +142,20 @@
 ### 2.1 Outcome distribution (overall)
 | outcome | count | pct |
 |---|---|---|
-| Home | 1251 | 43.4% |
-| Draw | 713 | 24.7% |
-| Away | 921 | 31.9% |
-| Total | 2885 | 100.0% |
+| Home | 1254 | 43.3% |
+| Draw | 715 | 24.7% |
+| Away | 925 | 32.0% |
+| Total | 2894 | 100.0% |
 
 ### 2.2 Goals
 | metric | value |
 |---|---|
-| Total goals | 8180 |
-| Average goals per match | 2.835 |
-| Home goals | 4493 (avg 1.557) |
-| Away goals | 3687 (avg 1.278) |
+| Total goals | 8214 |
+| Average goals per match | 2.838 |
+| Home goals | 4511 (avg 1.559) |
+| Away goals | 3703 (avg 1.28) |
 | Home goal share | 54.9% |
-| Goalless matches | 163 (5.6%) |
+| Goalless matches | 164 (5.7%) |
 
 ### 2.3 Per-season breakdown
 | season | matches | H% | D% | A% | total goals | avg goals | home goals | away goals | goalless |
@@ -165,16 +165,16 @@
 | 2023-2024 | 552 | 42.2% | 25.5% | 32.2% | 1623 | 2.94 | 899 | 724 | 33 (6.0%) |
 | 2024-2025 | 552 | 42.2% | 28.4% | 29.3% | 1488 | 2.696 | 826 | 662 | 37 (6.7%) |
 | 2025-2026 | 557 | 43.4% | 23.0% | 33.6% | 1626 | 2.919 | 883 | 743 | 28 (5.0%) |
-| 2026-2027 | 166 | 45.8% | 17.5% | 36.7% | 517 | 3.114 | 281 | 236 | 2 (1.2%) |
+| 2026-2027 | 175 | 45.1% | 17.7% | 37.1% | 551 | 3.149 | 299 | 252 | 3 (1.7%) |
 
 ### 2.4 First-goal timing
-- Matches with a recorded first-goal time: `2720` of `2885` (94.3%)
+- Matches with a recorded first-goal time: `2728` of `2894` (94.3%)
 | metric | value |
 |---|---|
-| First goals recorded | 2720 |
+| First goals recorded | 2728 |
 | Min minute | 1 |
 | Max minute | 108 |
-| Mean minute | 30.61 |
+| Mean minute | 30.59 |
 | Median (p50) | 25.0 |
 | p25 | 12.0 |
 | p75 | 46.0 |
@@ -182,11 +182,11 @@
 First-goal minute buckets (count):
 | bucket | count |
 |---|---|
-| 1-15 | 908 |
-| 16-30 | 672 |
-| 31-45 | 453 |
+| 1-15 | 911 |
+| 16-30 | 675 |
+| 31-45 | 454 |
 | 46-60 | 347 |
-| 61-75 | 197 |
+| 61-75 | 198 |
 | 76-90 | 107 |
 | 91-120 | 36 |
 
@@ -222,14 +222,14 @@ Most common full-time scorelines:
 |---|---|
 | 1-1 | 361 |
 | 1-0 | 265 |
-| 2-1 | 247 |
-| 1-2 | 214 |
+| 2-1 | 248 |
+| 1-2 | 216 |
 | 0-1 | 211 |
 | 2-0 | 189 |
-| 0-0 | 163 |
+| 0-0 | 164 |
 | 0-2 | 162 |
 | 2-2 | 150 |
-| 3-1 | 113 |
+| 3-1 | 114 |
 | 3-0 | 106 |
 | 3-2 | 97 |
 
@@ -254,11 +254,11 @@ Extreme scorelines (>= 8 total goals):
 |---|---|---|
 | Sun | 44 | 1.5% |
 | Mon | 173 | 6.0% |
-| Tue | 674 | 23.4% |
+| Tue | 683 | 23.6% |
 | Wed | 96 | 3.3% |
 | Thu | 15 | 0.5% |
 | Fri | 100 | 3.5% |
-| Sat | 1783 | 61.8% |
+| Sat | 1783 | 61.6% |
 
 ## 3. Warnings & anomalies
 | # | code | message |
@@ -273,12 +273,12 @@ Extreme scorelines (>= 8 total goals):
 | 8 | TEAM_COUNT_UNEXPECTED | Season 2024-2025 has 24 teams, expected 20 |
 | 9 | MATCH_COUNT_UNEXPECTED | Season 2025-2026 has 557 matches, expected 380 |
 | 10 | TEAM_COUNT_UNEXPECTED | Season 2025-2026 has 24 teams, expected 20 |
-| 11 | MATCH_COUNT_UNEXPECTED | Season 2026-2027 has 166 matches, expected 380 |
+| 11 | MATCH_COUNT_UNEXPECTED | Season 2026-2027 has 175 matches, expected 380 |
 | 12 | TEAM_COUNT_UNEXPECTED | Season 2026-2027 has 24 teams, expected 20 |
 | 13 | SEASON_STATE_NOT_COMPLETE | Season 2026-2027 has data but state is 'in_progress' |
-| 14 | GOALLESS_SHARE_OUTLIER | Season 2026-2027 goalless share 1.2% vs overall 5.6% (deviation 4.4 pp) |
-| 15 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 draw outcome share 17.5% vs overall 24.7% |
-| 16 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 away outcome share 36.7% vs overall 31.9% |
+| 14 | GOALLESS_SHARE_OUTLIER | Season 2026-2027 goalless share 1.7% vs overall 5.7% (deviation 4.0 pp) |
+| 15 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 draw outcome share 17.7% vs overall 24.7% |
+| 16 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 away outcome share 37.1% vs overall 32.0% |
 | 17 | HIGH_SCORING_MATCHES | 25 match(es) with >= 8 total goals (extreme scorelines) |
 | 18 | DUPLICATE_ROWS | Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows) |
 | 19 | FIRST_GOAL_NULL_INCONSISTENCY | first_goal_time/first_goal_time_extra NULL semantics broken (fgt=390, fgte=390 rows) |
@@ -310,15 +310,15 @@ Extreme scorelines (>= 8 total goals):
 - `8.` `TEAM_COUNT_UNEXPECTED` details: `{"season": "2024-2025", "n_teams": 24, "expected": 20}`
 - `9.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2025-2026", "n_matches": 557, "expected": 380}`
 - `10.` `TEAM_COUNT_UNEXPECTED` details: `{"season": "2025-2026", "n_teams": 24, "expected": 20}`
-- `11.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2026-2027", "n_matches": 166, "expected": 380}`
+- `11.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2026-2027", "n_matches": 175, "expected": 380}`
 - `12.` `TEAM_COUNT_UNEXPECTED` details: `{"season": "2026-2027", "n_teams": 24, "expected": 20}`
 - `13.` `SEASON_STATE_NOT_COMPLETE` details: `{"season": "2026-2027", "season_state": "in_progress"}`
-- `14.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2026-2027", "season_goalless_pct": 1.2, "overall_goalless_pct": 5.6, "deviation_pp": 4.4}`
-- `15.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "draw", "season_share": 17.5, "overall_share": 24.7}`
-- `16.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "away", "season_share": 36.7, "overall_share": 31.9}`
+- `14.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2026-2027", "season_goalless_pct": 1.7, "overall_goalless_pct": 5.7, "deviation_pp": 4.0}`
+- `15.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "draw", "season_share": 17.7, "overall_share": 24.7}`
+- `16.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "away", "season_share": 37.1, "overall_share": 32.0}`
 - `17.` `HIGH_SCORING_MATCHES` details: `{"n_matches": 25, "threshold": 8, "examples": [{"scoreline": "7-5", "total_goals": 12, "count": 1}, {"scoreline": "6-5", "total_goals": 11, "count": 1}, {"scoreline": "7-3", "total_goals": 10, "count": 1}, {"scoreline": "7-2", "total_goals": 9, "count": 1}, {"scoreline": "5-4", "total_goals": 9, "count": 1}, {"scoreline": "3-6", "total_goals": 9, "count": 1}, {"scoreline": "7-1", "total_goals": 8, "count": 4}, {"scoreline": "6-2", "total_goals": 8, "count": 2}]}`
-- `18.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 94334, "distinct": 94320, "duplicates": 14}`
-- `19.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 94334, "fgt_inconsistent": 390, "fgte_inconsistent": 390, "n_with_fgt": 86760}`
+- `18.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 94385, "distinct": 94371, "duplicates": 14}`
+- `19.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 94385, "fgt_inconsistent": 390, "fgte_inconsistent": 390, "n_with_fgt": 86808}`
 - `20.` `STANDINGS_INCOMPLETE` details: `{"season": "2021-2022", "view": "classic", "n_rows": 23, "min_pos": 1, "max_pos": 23, "distinct_teams": 23}`
 - `21.` `STANDINGS_INCOMPLETE` details: `{"season": "2021-2022", "view": "goals", "n_rows": 23, "min_pos": 1, "max_pos": 23, "distinct_teams": 23}`
 - `22.` `STANDINGS_INCOMPLETE` details: `{"season": "2021-2022", "view": "luck", "n_rows": 23, "min_pos": 1, "max_pos": 23, "distinct_teams": 23}`

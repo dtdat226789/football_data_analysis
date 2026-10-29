@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:32:34+00:00
+- Generated: 2026-10-29T02:17:17+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1640** across **7** seasons.
+- Matches analysed: **1641** across **7** seasons.
 - Distinct scorelines seen: **44**.
 
 | scoreline | count | pct |
@@ -18,7 +18,7 @@
 | 1-2 | 131 | 8.0% |
 | 2-1 | 123 | 7.5% |
 | 0-0 | 101 | 6.2% |
-| 2-2 | 89 | 5.4% |
+| 2-2 | 90 | 5.5% |
 | 3-0 | 78 | 4.8% |
 | 0-2 | 72 | 4.4% |
 | 3-1 | 66 | 4.0% |
@@ -91,11 +91,11 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 25 | 12.5% |
-| 0-1 | 21 | 10.5% |
+| 1-1 | 25 | 12.4% |
+| 0-1 | 21 | 10.4% |
 | 2-0 | 20 | 10.0% |
 | 1-2 | 16 | 8.0% |
-| 2-1 | 12 | 6.0% |
+| 2-2 | 13 | 6.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -106,7 +106,7 @@ _10+ groups all matches with 10 or more total goals._
 | 1 | 274 | 16.7% |
 | 2 | 390 | 23.8% |
 | 3 | 380 | 23.2% |
-| 4 | 253 | 15.4% |
+| 4 | 254 | 15.5% |
 | 5 | 136 | 8.3% |
 | 6 | 62 | 3.8% |
 | 7 | 33 | 2.0% |
@@ -165,7 +165,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-15 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1245** (draws: **395**)
+- Decided matches: **1245** (draws: **396**)
 - Average winning margin: **1.82**
 
 | margin | matches | pct |
@@ -198,7 +198,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 700 | 1-0 | 133 | 19.0% |
-| draw | 395 | 1-1 | 187 | 47.3% |
+| draw | 396 | 1-1 | 187 | 47.2% |
 | away | 545 | 0-1 | 141 | 25.9% |
 
 ---

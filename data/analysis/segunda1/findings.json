@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:29:25+00:00",
+  "generated_at": "2026-10-29T02:14:13+00:00",
   "config": {
     "league": "segunda1",
     "out_dir": "data/analysis/segunda1",
@@ -125,14 +125,14 @@
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 486 scoring matches, 30.5% of scoring)",
+      "detail": "minute 1-15 (first goal in 487 scoring matches, 30.5% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 33.01, median 28.0",
+      "detail": "mean 32.98, median 28.0",
       "importance": "low",
       "id": "F8"
     },
@@ -572,8 +572,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (20 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 124730,
-        "distinct": 124710,
+        "rows": 124801,
+        "distinct": 124781,
         "duplicates": 20
       }
     },
@@ -582,10 +582,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=427, fgte=427 rows)",
       "details": {
-        "total": 124730,
+        "total": 124801,
         "fgt_inconsistent": 427,
         "fgte_inconsistent": 427,
-        "n_with_fgt": 114740
+        "n_with_fgt": 114808
       }
     },
     {

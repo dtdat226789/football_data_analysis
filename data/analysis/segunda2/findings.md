@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:29:44+00:00
+- Generated: 2026-10-29T02:14:31+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Segunda RFEF - Group 2 (Spain)
 - Scope: league `segunda2`

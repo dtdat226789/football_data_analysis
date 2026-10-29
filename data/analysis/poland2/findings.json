@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:24:51+00:00",
+  "generated_at": "2026-10-29T02:09:57+00:00",
   "config": {
     "league": "poland2",
     "out_dir": "data/analysis/poland2",
@@ -64,7 +64,7 @@
       "path": "data/analysis/poland2/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 291.41
+      "size_kb": 291.6
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1965 matches: home wins 40.9%, draws 27.3%, away wins 31.8% (804H / 536D / 625A)",
+      "detail": "1966 matches: home wins 40.9%, draws 27.3%, away wins 31.8% (804H / 536D / 626A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,21 +104,21 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1965 matches produced 5207 goals (avg 2.650 per match)",
+      "detail": "1966 matches produced 5208 goals (avg 2.649 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.2% vs away 45.8% of 5207 goals in total (home/away ratio 1.18)",
+      "detail": "home 54.2% vs away 45.8% of 5208 goals in total (home/away ratio 1.18)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1035 of 1965 matches (52.7%)",
+      "detail": "1035 of 1966 matches (52.6%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -132,7 +132,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.69, median 26.0",
+      "detail": "mean 31.72, median 26.0",
       "importance": "low",
       "id": "F8"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.331 per match): first half 2.485 vs last half 2.816 across 7 seasons",
+      "detail": "up (+0.325 per match): first half 2.485 vs last half 2.81 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -216,7 +216,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (175 of 625 away matches, 28.0%)",
+      "detail": "0-1 (176 of 626 away matches, 28.1%)",
       "importance": "low",
       "id": "F20"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1965 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1966 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1965,
-    "avg_goals": 2.65,
+    "n_matches": 1966,
+    "avg_goals": 2.649,
     "home_win_pct": 40.9,
     "draw_pct": 27.3,
     "away_win_pct": 31.8,
     "most_common_scoreline": "1-1",
     "dominant_team": "Arka Gdynia",
     "champion_most_titles": "Radomiak Radom",
-    "btts_rate_pct": 52.7
+    "btts_rate_pct": 52.6
   },
   "comparison": [
     {
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 291.41
+      "size_kb": 291.6
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 107 matches, expected 380",
+      "message": "Season 2026-2027 has 108 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 107,
+        "n_matches": 108,
         "expected": 380
       }
     },
@@ -537,12 +537,12 @@
     {
       "code": "SEASON_AVG_GOALS_OUTLIER",
       "severity": "warning",
-      "message": "Season 2025-2026 avg goals 3.021 vs overall 2.65 (deviation 0.371)",
+      "message": "Season 2025-2026 avg goals 3.021 vs overall 2.649 (deviation 0.372)",
       "details": {
         "season": "2025-2026",
         "season_avg_goals": 3.021,
-        "overall_avg_goals": 2.65,
-        "deviation": 0.371
+        "overall_avg_goals": 2.649,
+        "deviation": 0.372
       }
     },
     {
@@ -559,12 +559,12 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 4.7% vs overall 7.4% (deviation 2.7 pp)",
+      "message": "Season 2026-2027 goalless share 4.6% vs overall 7.4% (deviation 2.8 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 4.7,
+        "season_goalless_pct": 4.6,
         "overall_goalless_pct": 7.4,
-        "deviation_pp": 2.7
+        "deviation_pp": 2.8
       }
     },
     {
@@ -609,8 +609,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 102801,
-        "distinct": 102787,
+        "rows": 102863,
+        "distinct": 102849,
         "duplicates": 14
       }
     },
@@ -619,10 +619,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=397, fgte=397 rows)",
       "details": {
-        "total": 102801,
+        "total": 102863,
         "fgt_inconsistent": 397,
         "fgte_inconsistent": 397,
-        "n_with_fgt": 94646
+        "n_with_fgt": 94705
       }
     },
     {

@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:31:50+00:00
+- Generated: 2026-10-29T02:16:37+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: LaLiga (Spain)
 - Scope: league `spain1`
 
-- Teams: **31** | Seasons: **7** | Matches: **2379**
+- Teams: **31** | Seasons: **7** | Matches: **2380**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -17,9 +17,9 @@
 | Betis | 7 | 238 | 104 | 71 | 63 | 383 | 338 | 288 | 50 | 54.71 | 4 | 7 | 0 |
 | Real Sociedad | 7 | 238 | 101 | 63 | 74 | 366 | 314 | 274 | 40 | 52.29 | 4 | 12 | 0 |
 | Ath Bilbao | 7 | 238 | 93 | 69 | 76 | 348 | 306 | 254 | 52 | 49.71 | 4 | 12 | 0 |
-| Sevilla | 7 | 237 | 91 | 62 | 84 | 335 | 303 | 302 | 1 | 47.86 | 4 | 16 | 0 |
+| Sevilla | 7 | 238 | 92 | 62 | 84 | 338 | 305 | 302 | 3 | 48.29 | 4 | 16 | 0 |
 | Celta Vigo | 7 | 238 | 79 | 67 | 92 | 304 | 309 | 322 | -13 | 43.43 | 6 | 14 | 0 |
-| Osasuna | 7 | 237 | 76 | 66 | 95 | 294 | 258 | 317 | -59 | 42.0 | 7 | 16 | 0 |
+| Osasuna | 7 | 238 | 76 | 66 | 96 | 294 | 258 | 319 | -61 | 42.0 | 7 | 16 | 0 |
 | Valencia | 7 | 238 | 70 | 73 | 95 | 283 | 277 | 322 | -45 | 40.43 | 9 | 19 | 0 |
 | Getafe | 7 | 238 | 65 | 69 | 104 | 264 | 208 | 275 | -67 | 37.71 | 7 | 17 | 0 |
 | Rayo Vallecano | 6 | 200 | 59 | 64 | 77 | 241 | 207 | 260 | -53 | 40.17 | 8 | 17 | 0 |
@@ -50,15 +50,15 @@
 | Valencia | 120 | 47 | 38 | 35 | 179 | 118 | 23 | 35 | 60 | 104 | 75 |
 | Ath Bilbao | 119 | 60 | 30 | 29 | 210 | 119 | 33 | 39 | 47 | 138 | 72 |
 | Alaves | 101 | 38 | 27 | 36 | 141 | 99 | 15 | 26 | 58 | 71 | 70 |
-| Osasuna | 119 | 50 | 31 | 38 | 181 | 118 | 26 | 35 | 57 | 113 | 68 |
+| Osasuna | 119 | 50 | 31 | 38 | 181 | 119 | 26 | 35 | 58 | 113 | 68 |
 | Getafe | 119 | 42 | 37 | 40 | 163 | 119 | 23 | 32 | 64 | 101 | 62 |
 | Real Madrid | 119 | 92 | 18 | 9 | 294 | 119 | 73 | 24 | 22 | 243 | 51 |
 | Rayo Vallecano | 100 | 36 | 38 | 26 | 146 | 100 | 23 | 26 | 51 | 95 | 51 |
 | Espanyol | 81 | 29 | 25 | 27 | 112 | 81 | 14 | 21 | 46 | 63 | 49 |
 | Betis | 119 | 61 | 32 | 26 | 215 | 119 | 43 | 39 | 37 | 168 | 47 |
+| Sevilla | 119 | 55 | 27 | 37 | 192 | 119 | 37 | 35 | 47 | 146 | 46 |
 | Elche | 80 | 24 | 29 | 27 | 101 | 82 | 12 | 19 | 51 | 55 | 46 |
 | Girona | 76 | 38 | 14 | 24 | 128 | 76 | 20 | 24 | 32 | 84 | 44 |
-| Sevilla | 118 | 54 | 27 | 37 | 189 | 119 | 37 | 35 | 47 | 146 | 43 |
 | Villarreal | 118 | 62 | 29 | 27 | 215 | 120 | 47 | 32 | 41 | 173 | 42 |
 | Celta Vigo | 120 | 48 | 29 | 43 | 173 | 118 | 31 | 38 | 49 | 131 | 42 |
 | Real Sociedad | 119 | 57 | 31 | 31 | 202 | 119 | 44 | 32 | 43 | 164 | 38 |
@@ -136,9 +136,9 @@ Ath Bilbao, Atl. Madrid, Barcelona, Betis, Celta Vigo, Getafe, Osasuna, Real Mad
 | Betis vs Osasuna | 13 | 7 | 2 | 4 | 53.8% | 15.4% | 30.8% |
 | Celta Vigo vs Valencia | 13 | 7 | 3 | 3 | 53.8% | 23.1% | 23.1% |
 | Real Madrid vs Barcelona | 13 | 7 | 0 | 6 | 53.8% | 0.0% | 46.2% |
+| Sevilla vs Osasuna | 13 | 7 | 4 | 2 | 53.8% | 30.8% | 15.4% |
 | Barcelona vs Sevilla | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
 | Barcelona vs Valencia | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
-| Celta Vigo vs Ath Bilbao | 13 | 6 | 2 | 5 | 46.2% | 15.4% | 38.5% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._

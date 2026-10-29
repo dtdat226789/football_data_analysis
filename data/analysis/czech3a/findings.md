@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T01:44:07+00:00
+- Generated: 2026-10-29T01:56:43+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: 3. CFL - Group A (Czech Republic)
 - Scope: league `czech3a`

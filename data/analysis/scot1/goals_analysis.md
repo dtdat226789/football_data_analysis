@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:28:37+00:00
+- Generated: 2026-10-29T02:13:26+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: League One (Scotland)
 - Scope: league `scot1`
@@ -10,10 +10,10 @@
 |---|---|---|
 | 0 | 62 | 5.8% |
 | 1 | 163 | 15.4% |
-| 2 | 265 | 25.0% |
-| 3 | 238 | 22.5% |
+| 2 | 266 | 25.1% |
+| 3 | 238 | 22.4% |
 | 4 | 173 | 16.3% |
-| 5 | 97 | 9.2% |
+| 5 | 97 | 9.1% |
 | 6 | 37 | 3.5% |
 | 7 | 18 | 1.7% |
 | 8 | 5 | 0.5% |
@@ -28,11 +28,11 @@
 | 2023-2024 | 180 | 571 | 1.639 | 1.533 | 3.172 |
 | 2024-2025 | 180 | 486 | 1.361 | 1.339 | 2.7 |
 | 2025-2026 | 191 | 511 | 1.429 | 1.246 | 2.675 |
-| 2026-2027 | 59 | 167 | 1.576 | 1.254 | 2.831 |
+| 2026-2027 | 60 | 169 | 1.567 | 1.25 | 2.817 |
 
 ## 3. Home vs away goal share
-- Home goals: **1583** (52.9%)
-- Away goals: **1407** (47.1%)
+- Home goals: **1584** (52.9%)
+- Away goals: **1408** (47.1%)
 - Home/away ratio: **1.125**
 
 | season | home goals | away goals | total | home pct | away pct |
@@ -43,10 +43,10 @@
 | 2023-2024 | 295 | 276 | 571 | 51.7% | 48.3% |
 | 2024-2025 | 245 | 241 | 486 | 50.4% | 49.6% |
 | 2025-2026 | 273 | 238 | 511 | 53.4% | 46.6% |
-| 2026-2027 | 93 | 74 | 167 | 55.7% | 44.3% |
+| 2026-2027 | 94 | 75 | 169 | 55.6% | 44.4% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **561** of `1060` (52.9%)
+- Overall: **562** of `1061` (53.0%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
@@ -56,13 +56,13 @@
 | 2023-2024 | 180 | 106 | 58.9% |
 | 2024-2025 | 180 | 95 | 52.8% |
 | 2025-2026 | 191 | 103 | 53.9% |
-| 2026-2027 | 59 | 26 | 44.1% |
+| 2026-2027 | 60 | 27 | 45.0% |
 
 ## 5. Clean sheets
-- Home clean sheets: **306** (28.9%)
-- Away clean sheets: **255** (24.1%)
+- Home clean sheets: **306** (28.8%)
+- Away clean sheets: **255** (24.0%)
 - Total clean sheets recorded: **561**
-- Matches with at least one clean sheet: **499** (47.1%)
+- Matches with at least one clean sheet: **499** (47.0%)
 - Both teams kept clean sheets (0-0): **62**
 
 | season | matches | home CS | away CS | total CS | matches w/ CS |
@@ -73,13 +73,13 @@
 | 2023-2024 | 180 | 45 | 37 | 82 | 74 (41.1%) |
 | 2024-2025 | 180 | 53 | 45 | 98 | 85 (47.2%) |
 | 2025-2026 | 191 | 51 | 47 | 98 | 88 (46.1%) |
-| 2026-2027 | 59 | 19 | 18 | 37 | 33 (55.9%) |
+| 2026-2027 | 60 | 19 | 18 | 37 | 33 (55.0%) |
 
 ## 6. Scoring intensity
-- First-half goals: **1283** (42.9%)
-- Second-half goals: **1706** (57.1%)
+- First-half goals: **1285** (43.0%)
+- Second-half goals: **1706** (57.0%)
 - Avg first-half goals per match: **1.212**
-- Avg second-half goals per match: **1.611**
+- Avg second-half goals per match: **1.609**
 - Second-half-only scoring (HT 0-0, FT goals >= 1): **250** (23.6%)
 - *1 match(es) excluded (no HT score recorded).*
 
@@ -91,21 +91,21 @@
 | 2023-2024 | 180 | 268 | 303 | 46.9% | 53.1% |
 | 2024-2025 | 180 | 213 | 273 | 43.8% | 56.2% |
 | 2025-2026 | 191 | 225 | 286 | 44.0% | 56.0% |
-| 2026-2027 | 59 | 67 | 99 | 40.4% | 59.6% |
+| 2026-2027 | 60 | 69 | 99 | 41.1% | 58.9% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `997` of `1060` (94.1%)
+- Matches with first-goal time recorded: `998` of `1061` (94.1%)
 - Goalless matches: `63`
-- Min `1` | Max `94` | Mean `30.75` | Median (p50) `25`
+- Min `1` | Max `94` | Mean `30.75` | Median (p50) `25.0`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 344 | 32.5% | 34.5% |
-| 16-30 | 233 | 22.0% | 23.4% |
-| 31-45 | 156 | 14.7% | 15.6% |
+| 1-15 | 344 | 32.4% | 34.5% |
+| 16-30 | 233 | 22.0% | 23.3% |
+| 31-45 | 157 | 14.8% | 15.7% |
 | 46-60 | 134 | 12.6% | 13.4% |
 | 61-75 | 80 | 7.5% | 8.0% |
-| 76-90 | 44 | 4.2% | 4.4% |
+| 76-90 | 44 | 4.1% | 4.4% |
 | 91-120 | 6 | 0.6% | 0.6% |
 
 ---

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:34:06+00:00
+- Generated: 2026-10-29T02:18:45+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super Lig (Turkey)
 - Scope: league `turkey1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Galatasaray | 102 | Fenerbahce | 3 pts |
 | 2024-2025 | Galatasaray | 95 | Fenerbahce | 11 pts |
 | 2025-2026 | Galatasaray | 77 | Fenerbahce | 3 pts |
-| 2026-2027 | Amedspor | 20 | Galatasaray | 1 pts |
+| 2026-2027 | Galatasaray | 22 | Amedspor | 2 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 3 pts | yes |
 | 2024-2025 | 11 pts |  |
 | 2025-2026 | 3 pts | yes |
-| 2026-2027 | 1 pts | yes |
+| 2026-2027 | 2 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 15 = last safe, 18 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 102 | 99 | 61 | 56 | 41 | 40 |
 | 2024-2025 | 95 | 84 | 62 | 53 | 44 | 26 |
 | 2025-2026 | 77 | 74 | 60 | 55 | 33 | 30 |
-| 2026-2027 | 20 | 19 | 16 | 15 | 8 | 3 |
+| 2026-2027 | 22 | 20 | 18 | 16 | 8 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 1062 | 2.795 | 45.5% | 26.3% | 28.2% | 7.4% | 52.0 |
 | 2024-2025 | 342 | 1004 | 2.936 | 48.5% | 23.4% | 28.1% | 7.3% | 49.79 |
 | 2025-2026 | 306 | 812 | 2.654 | 42.2% | 29.1% | 28.8% | 9.2% | 46.06 |
-| 2026-2027 | 78 | 223 | 2.859 | 47.4% | 17.9% | 34.6% | 5.1% | 12.22 |
+| 2026-2027 | 81 | 235 | 2.901 | 48.1% | 17.3% | 34.6% | 4.9% | 12.72 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 6.300)

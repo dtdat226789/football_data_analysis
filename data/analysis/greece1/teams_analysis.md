@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:50:21+00:00
+- Generated: 2026-10-29T02:01:45+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`

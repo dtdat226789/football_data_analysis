@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:48:50+00:00
+- Generated: 2026-10-29T02:00:36+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 19.944 | 21.444 |
 | 2024-2025 | 8.167 | 9.444 |
 | 2025-2026 | 3.053 | 6.421 |
-| 2026-2027 | 3.053 | 5.895 |
+| 2026-2027 | 3.158 | 5.895 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

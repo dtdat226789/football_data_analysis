@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:28:55+00:00
+- Generated: 2026-10-29T02:13:44+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: League Two (Scotland)
 - Scope: league `scot2`

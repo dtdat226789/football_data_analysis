@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:44:21+00:00
+- Generated: 2026-10-29T01:56:52+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`

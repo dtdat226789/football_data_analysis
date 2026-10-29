@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T01:48:05+00:00
+- Generated: 2026-10-29T01:59:57+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Ligue 2 (France)
 - Scope: league `france2`
@@ -9,9 +9,9 @@
 | goals | matches | pct |
 |---|---|---|
 | 0 | 216 | 9.7% |
-| 1 | 486 | 21.9% |
-| 2 | 531 | 23.9% |
-| 3 | 458 | 20.6% |
+| 1 | 486 | 21.8% |
+| 2 | 532 | 23.9% |
+| 3 | 459 | 20.6% |
 | 4 | 295 | 13.3% |
 | 5 | 138 | 6.2% |
 | 6 | 71 | 3.2% |
@@ -28,11 +28,11 @@
 | 2023-2024 | 380 | 933 | 1.326 | 1.129 | 2.455 |
 | 2024-2025 | 306 | 789 | 1.507 | 1.072 | 2.578 |
 | 2025-2026 | 310 | 784 | 1.313 | 1.216 | 2.529 |
-| 2026-2027 | 88 | 236 | 1.364 | 1.318 | 2.682 |
+| 2026-2027 | 90 | 241 | 1.367 | 1.311 | 2.678 |
 
 ## 3. Home vs away goal share
-- Home goals: **2983** (54.9%)
-- Away goals: **2453** (45.1%)
+- Home goals: **2986** (54.9%)
+- Away goals: **2455** (45.1%)
 - Home/away ratio: **1.216**
 
 | season | home goals | away goals | total | home pct | away pct |
@@ -43,10 +43,10 @@
 | 2023-2024 | 504 | 429 | 933 | 54.0% | 46.0% |
 | 2024-2025 | 461 | 328 | 789 | 58.4% | 41.6% |
 | 2025-2026 | 407 | 377 | 784 | 51.9% | 48.1% |
-| 2026-2027 | 120 | 116 | 236 | 50.8% | 49.2% |
+| 2026-2027 | 123 | 118 | 241 | 51.0% | 49.0% |
 
 ## 4. BTTS (Both Teams To Score)
-- Overall: **1080** of `2224` (48.6%)
+- Overall: **1082** of `2226` (48.6%)
 
 | season | matches | BTTS | pct |
 |---|---|---|---|
@@ -56,10 +56,10 @@
 | 2023-2024 | 380 | 185 | 48.7% |
 | 2024-2025 | 306 | 147 | 48.0% |
 | 2025-2026 | 310 | 160 | 51.6% |
-| 2026-2027 | 88 | 51 | 58.0% |
+| 2026-2027 | 90 | 53 | 58.9% |
 
 ## 5. Clean sheets
-- Home clean sheets: **773** (34.8%)
+- Home clean sheets: **773** (34.7%)
 - Away clean sheets: **587** (26.4%)
 - Total clean sheets recorded: **1360**
 - Matches with at least one clean sheet: **1144** (51.4%)
@@ -73,14 +73,14 @@
 | 2023-2024 | 380 | 133 | 107 | 240 | 195 (51.3%) |
 | 2024-2025 | 306 | 104 | 74 | 178 | 159 (52.0%) |
 | 2025-2026 | 310 | 99 | 84 | 183 | 150 (48.4%) |
-| 2026-2027 | 88 | 23 | 22 | 45 | 37 (42.0%) |
+| 2026-2027 | 90 | 23 | 22 | 45 | 37 (41.1%) |
 
 ## 6. Scoring intensity
-- First-half goals: **2390** (44.0%)
-- Second-half goals: **3038** (56.0%)
+- First-half goals: **2391** (44.0%)
+- Second-half goals: **3042** (56.0%)
 - Avg first-half goals per match: **1.077**
-- Avg second-half goals per match: **1.369**
-- Second-half-only scoring (HT 0-0, FT goals >= 1): **562** (25.3%)
+- Avg second-half goals per match: **1.37**
+- Second-half-only scoring (HT 0-0, FT goals >= 1): **563** (25.3%)
 - *5 match(es) excluded (no HT score recorded).*
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
@@ -91,19 +91,19 @@
 | 2023-2024 | 380 | 417 | 515 | 44.7% | 55.3% |
 | 2024-2025 | 306 | 342 | 447 | 43.3% | 56.7% |
 | 2025-2026 | 310 | 365 | 419 | 46.6% | 53.4% |
-| 2026-2027 | 88 | 100 | 136 | 42.4% | 57.6% |
+| 2026-2027 | 90 | 101 | 140 | 41.9% | 58.1% |
 
 ## 7. First-goal timing
-- Matches with first-goal time recorded: `2004` of `2224` (90.1%)
+- Matches with first-goal time recorded: `2006` of `2226` (90.1%)
 - Goalless matches: `220`
-- Min `1` | Max `98` | Mean `32.54` | Median (p50) `27.0`
+- Min `1` | Max `98` | Mean `32.55` | Median (p50) `27.0`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 644 | 29.0% | 32.1% |
-| 16-30 | 456 | 20.5% | 22.8% |
-| 31-45 | 308 | 13.8% | 15.4% |
-| 46-60 | 306 | 13.8% | 15.3% |
+| 1-15 | 644 | 28.9% | 32.1% |
+| 16-30 | 456 | 20.5% | 22.7% |
+| 31-45 | 309 | 13.9% | 15.4% |
+| 46-60 | 307 | 13.8% | 15.3% |
 | 61-75 | 150 | 6.7% | 7.5% |
 | 76-90 | 114 | 5.1% | 5.7% |
 | 91-120 | 26 | 1.2% | 1.3% |

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:56:02+00:00",
+  "generated_at": "2026-10-29T02:04:52+00:00",
   "config": {
     "league": "italy1",
     "out_dir": "data/analysis/italy1",
@@ -29,14 +29,14 @@
       "path": "data/analysis/italy1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 39.91
+      "size_kb": 40.23
     },
     {
       "report_name": "matches_analysis",
       "path": "data/analysis/italy1/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 28.96
+      "size_kb": 29.13
     },
     {
       "report_name": "goals_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/italy1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 352.91
+      "size_kb": 353.67
     },
     {
       "report_name": "relationships",
@@ -83,63 +83,63 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "2360 matches: home wins 40.7%, draws 26.6%, away wins 32.7% (961H / 627D / 772A)",
+      "detail": "2363 matches: home wins 40.7%, draws 26.5%, away wins 32.8% (962H / 627D / 774A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "63 home and 56 away comebacks (trailing at HT but winning at FT)",
+      "detail": "63 home and 57 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 565 times",
+      "detail": "home lead at HT -> home win occurred 566 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "2360 matches produced 6354 goals (avg 2.692 per match)",
+      "detail": "2363 matches produced 6372 goals (avg 2.697 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 53.4% vs away 46.6% of 6354 goals in total (home/away ratio 1.15)",
+      "detail": "home 53.4% vs away 46.6% of 6372 goals in total (home/away ratio 1.15)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1248 of 2360 matches (52.9%)",
+      "detail": "1251 of 2363 matches (52.9%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 725 scoring matches, 32.9% of scoring)",
+      "detail": "minute 1-15 (first goal in 727 scoring matches, 33.0% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.07, median 26.0",
+      "detail": "mean 31.04, median 26.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Inter leads with 531 points across 7 seasons (4 title(s), GD 313)",
+      "detail": "Inter leads with 531 points across 7 seasons (3 title(s), GD 313)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,28 +153,28 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "AS Roma earns 85 more points at home than away (248 home vs 163 away)",
+      "detail": "AS Roma earns 88 more points at home than away (251 home vs 163 away)",
       "importance": "medium",
       "id": "F11"
     },
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "Inter won 4 of 7 championship(s) on record",
+      "detail": "Inter won 3 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
     {
       "source": "season_trends",
       "finding": "Tightest title race",
-      "detail": "2026-2027: Inter beat Lazio by 0 pts",
+      "detail": "2024-2025: Napoli beat Inter by 1 pt",
       "importance": "medium",
       "id": "F13"
     },
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.163 per match): first half 2.83 vs last half 2.667 across 7 seasons",
+      "detail": "down (-0.128 per match): first half 2.83 vs last half 2.702 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2024-2025 (luck view, avg abs position diff 2.300)",
+      "detail": "2026-2027 (luck view, avg abs position diff 2.100)",
       "importance": "low",
       "id": "F16"
     },
@@ -202,7 +202,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (228 of 961 home matches, 23.7%)",
+      "detail": "1-0 (228 of 962 home matches, 23.7%)",
       "importance": "low",
       "id": "F18"
     },
@@ -216,14 +216,14 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "1-2 (186 of 772 away matches, 24.1%)",
+      "detail": "1-2 (186 of 774 away matches, 24.0%)",
       "importance": "low",
       "id": "F20"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Extreme scorelines",
-      "detail": "48 match(es) with >= 7 total goals",
+      "detail": "49 match(es) with >= 7 total goals",
       "importance": "low",
       "id": "F21"
     },
@@ -243,7 +243,7 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (12)",
+      "finding": "Data-quality warnings (13)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE",
       "importance": "high",
       "id": "F24"
@@ -251,17 +251,17 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 2360 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2363 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 2360,
-    "avg_goals": 2.692,
+    "n_matches": 2363,
+    "avg_goals": 2.697,
     "home_win_pct": 40.7,
-    "draw_pct": 26.6,
-    "away_win_pct": 32.7,
+    "draw_pct": 26.5,
+    "away_win_pct": 32.8,
     "most_common_scoreline": "1-1",
     "dominant_team": "Inter",
     "champion_most_titles": "Inter",
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 39.91
+      "size_kb": 40.23
     },
     {
       "module": "matches_analysis",
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 28.96
+      "size_kb": 29.13
     },
     {
       "module": "goals_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 352.91
+      "size_kb": 353.67
     },
     {
       "module": "relationships",
@@ -366,10 +366,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 80 matches, expected 380",
+      "message": "Season 2026-2027 has 83 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 80,
+        "n_matches": 83,
         "expected": 380
       }
     },
@@ -385,12 +385,12 @@
     {
       "code": "SEASON_AVG_GOALS_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020-2021 avg goals 3.061 vs overall 2.692 (deviation 0.369)",
+      "message": "Season 2020-2021 avg goals 3.061 vs overall 2.697 (deviation 0.364)",
       "details": {
         "season": "2020-2021",
         "season_avg_goals": 3.061,
-        "overall_avg_goals": 2.692,
-        "deviation": 0.369
+        "overall_avg_goals": 2.697,
+        "deviation": 0.364
       }
     },
     {
@@ -407,12 +407,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2023-2024 away outcome share 28.7% vs overall 32.7%",
+      "message": "Season 2023-2024 away outcome share 28.7% vs overall 32.8%",
       "details": {
         "season": "2023-2024",
         "outcome": "away",
         "season_share": 28.7,
-        "overall_share": 32.7
+        "overall_share": 32.8
       }
     },
     {
@@ -424,6 +424,17 @@
         "season_goalless_pct": 9.5,
         "overall_goalless_pct": 6.6,
         "deviation_pp": 2.9
+      }
+    },
+    {
+      "code": "SEASON_AVG_GOALS_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2026-2027 avg goals 3.12 vs overall 2.697 (deviation 0.423)",
+      "details": {
+        "season": "2026-2027",
+        "season_avg_goals": 3.12,
+        "overall_avg_goals": 2.697,
+        "deviation": 0.423
       }
     },
     {
@@ -440,31 +451,31 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 47.5% vs overall 40.7%",
+      "message": "Season 2026-2027 home outcome share 47.0% vs overall 40.7%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 47.5,
+        "season_share": 47.0,
         "overall_share": 40.7
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 17.5% vs overall 26.6%",
+      "message": "Season 2026-2027 draw outcome share 16.9% vs overall 26.5%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 17.5,
-        "overall_share": 26.6
+        "season_share": 16.9,
+        "overall_share": 26.5
       }
     },
     {
       "code": "HIGH_SCORING_MATCHES",
       "severity": "warning",
-      "message": "10 match(es) with >= 8 total goals (extreme scorelines)",
+      "message": "11 match(es) with >= 8 total goals (extreme scorelines)",
       "details": {
-        "n_matches": 10,
+        "n_matches": 11,
         "threshold": 8,
         "examples": [
           {
@@ -490,7 +501,7 @@
           {
             "scoreline": "2-6",
             "total_goals": 8,
-            "count": 1
+            "count": 2
           }
         ]
       }
@@ -501,8 +512,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 70331,
-        "distinct": 70321,
+        "rows": 70364,
+        "distinct": 70354,
         "duplicates": 10
       }
     },
@@ -511,10 +522,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=349, fgte=349 rows)",
       "details": {
-        "total": 70331,
+        "total": 70364,
         "fgt_inconsistent": 349,
         "fgte_inconsistent": 349,
-        "n_with_fgt": 64842
+        "n_with_fgt": 64874
       }
     }
   ],

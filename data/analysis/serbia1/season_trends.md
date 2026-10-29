@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:30:54+00:00
+- Generated: 2026-10-29T02:15:41+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`

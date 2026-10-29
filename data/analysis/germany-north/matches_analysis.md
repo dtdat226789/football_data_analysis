@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:48:44+00:00
+- Generated: 2026-10-29T02:00:31+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`

@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T01:39:24+00:00
+- Generated: 2026-10-29T01:52:54+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1696** across **7** seasons.
+- Matches analysed: **1697** across **7** seasons.
 - Distinct scorelines seen: **44**.
 
 | scoreline | count | pct |
@@ -16,7 +16,7 @@
 | 1-1 | 203 | 12.0% |
 | 2-1 | 183 | 10.8% |
 | 2-0 | 154 | 9.1% |
-| 0-1 | 131 | 7.7% |
+| 0-1 | 132 | 7.8% |
 | 1-2 | 71 | 4.2% |
 | 2-2 | 61 | 3.6% |
 | 3-1 | 56 | 3.3% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 10 | 19.6% |
-| 1-1 | 7 | 13.7% |
-| 0-0 | 6 | 11.8% |
-| 2-0 | 5 | 9.8% |
-| 0-1 | 4 | 7.8% |
+| 1-0 | 10 | 19.2% |
+| 1-1 | 7 | 13.5% |
+| 0-0 | 6 | 11.5% |
+| 0-1 | 5 | 9.6% |
+| 2-0 | 5 | 9.6% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,9 +103,9 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 207 | 12.2% |
-| 1 | 426 | 25.1% |
+| 1 | 427 | 25.2% |
 | 2 | 404 | 23.8% |
-| 3 | 330 | 19.5% |
+| 3 | 330 | 19.4% |
 | 4 | 181 | 10.7% |
 | 5 | 90 | 5.3% |
 | 6 | 32 | 1.9% |
@@ -147,12 +147,12 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-04-05 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1218** (draws: **478**)
+- Decided matches: **1219** (draws: **478**)
 - Average winning margin: **1.62**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 743 | 61.0% |
+| 1 | 744 | 61.0% |
 | 2 | 301 | 24.7% |
 | 3+ | 174 | 14.3% |
 
@@ -168,11 +168,11 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **359** | avg margin: **1.58** | max margin: **8**
+- Matches: **360** | avg margin: **1.58** | max margin: **8**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 227 | 63.2% |
-| 2 | 85 | 23.7% |
+| 1 | 228 | 63.3% |
+| 2 | 85 | 23.6% |
 | 3+ | 47 | 13.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
@@ -181,7 +181,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|---|---|
 | home | 859 | 1-0 | 295 | 34.3% |
 | draw | 478 | 0-0 | 207 | 43.3% |
-| away | 359 | 0-1 | 131 | 36.5% |
+| away | 360 | 0-1 | 132 | 36.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

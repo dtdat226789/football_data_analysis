@@ -1,17 +1,17 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:46:24+00:00
+- Generated: 2026-10-29T01:58:32+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: League Two (England)
 - Scope: league `eng2`
 
-- Teams: **46** | Seasons: **7** | Matches: **3466**
+- Teams: **46** | Seasons: **7** | Matches: **3468**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Salford | 7 | 291 | 125 | 71 | 95 | 446 | 400 | 339 | 61 | 63.71 | 1 | 20 | 1 |
-| Walsall | 7 | 287 | 98 | 94 | 95 | 388 | 354 | 352 | 2 | 55.43 | 4 | 19 | 0 |
+| Salford | 7 | 292 | 126 | 71 | 95 | 449 | 404 | 341 | 63 | 64.14 | 1 | 20 | 1 |
+| Walsall | 7 | 288 | 98 | 94 | 96 | 388 | 356 | 356 | 0 | 55.43 | 4 | 19 | 0 |
 | Tranmere | 7 | 289 | 98 | 77 | 114 | 371 | 335 | 368 | -33 | 53.0 | 7 | 21 | 0 |
 | Newport | 7 | 289 | 97 | 70 | 122 | 361 | 355 | 401 | -46 | 51.57 | 5 | 22 | 0 |
 | Swindon | 6 | 243 | 93 | 66 | 84 | 345 | 369 | 330 | 39 | 57.5 | 6 | 19 | 0 |
@@ -47,14 +47,14 @@
 | Bromley | 2 | 92 | 41 | 30 | 21 | 153 | 135 | 105 | 30 | 76.5 | 2 | 11 | 0 |
 | Fleetwood | 3 | 105 | 33 | 36 | 36 | 135 | 132 | 135 | -3 | 45.0 | 14 | 18 | 0 |
 | Rochdale | 3 | 105 | 25 | 31 | 49 | 106 | 112 | 151 | -39 | 35.33 | 17 | 24 | 0 |
-| Barnet | 2 | 57 | 27 | 17 | 13 | 98 | 94 | 69 | 25 | 49.0 | 2 | 8 | 0 |
+| Barnet | 2 | 58 | 28 | 17 | 13 | 101 | 97 | 70 | 27 | 50.5 | 2 | 8 | 0 |
 | Hartlepool | 2 | 92 | 23 | 28 | 41 | 97 | 96 | 142 | -46 | 48.5 | 17 | 23 | 0 |
 | Wrexham | 1 | 46 | 26 | 10 | 10 | 88 | 89 | 52 | 37 | 88.0 | 2 | 2 | 0 |
 | Bolton | 1 | 46 | 23 | 10 | 13 | 79 | 59 | 50 | 9 | 79.0 | 3 | 3 | 0 |
 | Scunthorpe | 2 | 92 | 17 | 23 | 52 | 74 | 70 | 154 | -84 | 37.0 | 22 | 24 | 0 |
 | Shrewsbury | 2 | 59 | 18 | 13 | 28 | 67 | 58 | 89 | -31 | 33.5 | 10 | 19 | 0 |
 | Southend | 1 | 46 | 10 | 15 | 21 | 45 | 29 | 58 | -29 | 45.0 | 23 | 23 | 0 |
-| York City | 1 | 12 | 5 | 5 | 2 | 20 | 21 | 13 | 8 | 20.0 | 5 | 5 | 0 |
+| York City | 1 | 13 | 5 | 5 | 3 | 20 | 22 | 16 | 6 | 20.0 | 5 | 5 | 0 |
 | Rotherham | 1 | 13 | 2 | 6 | 5 | 12 | 17 | 23 | -6 | 12.0 | 22 | 22 | 0 |
 
 ## 2. Home vs away split
@@ -62,7 +62,7 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Tranmere | 144 | 63 | 35 | 46 | 224 | 145 | 35 | 42 | 68 | 147 | 77 |
 | Barrow | 138 | 50 | 39 | 49 | 189 | 138 | 33 | 32 | 73 | 131 | 58 |
-| Walsall | 143 | 61 | 39 | 43 | 222 | 144 | 37 | 55 | 52 | 166 | 56 |
+| Walsall | 144 | 61 | 39 | 44 | 222 | 144 | 37 | 55 | 52 | 166 | 56 |
 | Colchester | 143 | 50 | 49 | 44 | 199 | 145 | 34 | 44 | 67 | 146 | 53 |
 | Gillingham | 99 | 40 | 29 | 30 | 149 | 98 | 23 | 29 | 46 | 98 | 51 |
 | Crawley | 121 | 44 | 34 | 43 | 166 | 120 | 30 | 28 | 62 | 118 | 48 |
@@ -79,8 +79,8 @@
 | Exeter | 53 | 29 | 16 | 8 | 103 | 52 | 17 | 19 | 16 | 70 | 33 |
 | Doncaster | 69 | 37 | 10 | 22 | 121 | 69 | 24 | 17 | 28 | 89 | 32 |
 | Accrington | 75 | 27 | 24 | 24 | 105 | 76 | 19 | 16 | 41 | 73 | 32 |
-| Salford | 145 | 65 | 43 | 37 | 238 | 146 | 60 | 28 | 58 | 208 | 30 |
 | MK Dons | 69 | 35 | 17 | 17 | 122 | 69 | 26 | 16 | 27 | 94 | 28 |
+| Salford | 145 | 65 | 43 | 37 | 238 | 147 | 61 | 28 | 58 | 211 | 27 |
 | Leyton Orient | 69 | 33 | 18 | 18 | 117 | 69 | 24 | 21 | 24 | 93 | 24 |
 | Grimsby | 122 | 46 | 32 | 44 | 170 | 123 | 37 | 36 | 50 | 147 | 23 |
 | Cambridge Utd | 46 | 27 | 11 | 8 | 92 | 46 | 19 | 13 | 14 | 70 | 22 |
@@ -95,7 +95,7 @@
 | Chesterfield | 54 | 24 | 21 | 9 | 93 | 53 | 21 | 13 | 19 | 76 | 17 |
 | Bromley | 46 | 23 | 16 | 7 | 85 | 46 | 18 | 14 | 14 | 68 | 17 |
 | Fleetwood | 52 | 17 | 24 | 11 | 75 | 53 | 16 | 12 | 25 | 60 | 15 |
-| York City | 7 | 5 | 2 | 0 | 17 | 5 | 0 | 3 | 2 | 3 | 14 |
+| York City | 7 | 5 | 2 | 0 | 17 | 6 | 0 | 3 | 3 | 3 | 14 |
 | Stockport County | 46 | 26 | 14 | 6 | 92 | 46 | 23 | 10 | 13 | 79 | 13 |
 | Northampton | 52 | 27 | 13 | 12 | 94 | 51 | 22 | 16 | 13 | 82 | 12 |
 | Scunthorpe | 46 | 10 | 13 | 23 | 43 | 46 | 7 | 10 | 29 | 31 | 12 |
@@ -103,9 +103,9 @@
 | Forest Green | 69 | 29 | 15 | 25 | 102 | 69 | 25 | 22 | 22 | 97 | 5 |
 | Rotherham | 7 | 1 | 5 | 1 | 8 | 6 | 1 | 1 | 4 | 4 | 4 |
 | Oldham | 75 | 24 | 15 | 36 | 87 | 75 | 21 | 22 | 32 | 85 | 2 |
+| Barnet | 30 | 14 | 8 | 8 | 50 | 28 | 14 | 9 | 5 | 51 | -1 |
 | Bolton | 23 | 11 | 5 | 7 | 38 | 23 | 12 | 5 | 6 | 41 | -3 |
 | Southend | 23 | 5 | 6 | 12 | 21 | 23 | 5 | 9 | 9 | 24 | -3 |
-| Barnet | 29 | 13 | 8 | 8 | 47 | 28 | 14 | 9 | 5 | 51 | -4 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
@@ -114,16 +114,16 @@
 | 1 | Wrexham | 1.91 |
 | 2 | Stockport County | 1.86 |
 | 3 | Cambridge Utd | 1.76 |
-| 4 | Barnet | 1.72 |
+| 4 | Barnet | 1.74 |
 | 5 | Bolton | 1.72 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Salford | 400 |
+| 1 | Salford | 404 |
 | 2 | Swindon | 369 |
-| 3 | Newport | 355 |
-| 4 | Walsall | 354 |
+| 3 | Walsall | 356 |
+| 4 | Newport | 355 |
 | 5 | Tranmere | 335 |
 
 ### Best goal difference
@@ -131,7 +131,7 @@
 |---|---|---|
 | 1 | Mansfield | 77 |
 | 2 | Stockport County | 76 |
-| 3 | Salford | 61 |
+| 3 | Salford | 63 |
 | 4 | Cambridge Utd | 57 |
 | 5 | Notts Co | 48 |
 
@@ -150,17 +150,17 @@
 Colchester, Newport, Salford, Tranmere, Walsall
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **800** (showing the 15 most frequent)
+- Distinct fixtures: **801** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
 | Newport vs Tranmere | 13 | 7 | 2 | 4 | 53.8% | 15.4% | 30.8% |
+| Salford vs Walsall | 13 | 7 | 1 | 5 | 53.8% | 7.7% | 38.5% |
 | Tranmere vs Walsall | 13 | 7 | 2 | 4 | 53.8% | 15.4% | 30.8% |
 | Newport vs Colchester | 13 | 6 | 3 | 4 | 46.2% | 23.1% | 30.8% |
 | Newport vs Salford | 13 | 5 | 3 | 5 | 38.5% | 23.1% | 38.5% |
 | Harrogate vs Colchester | 12 | 7 | 1 | 4 | 58.3% | 8.3% | 33.3% |
 | Newport vs Barrow | 12 | 7 | 2 | 3 | 58.3% | 16.7% | 25.0% |
-| Salford vs Walsall | 12 | 7 | 1 | 4 | 58.3% | 8.3% | 33.3% |
 | Newport vs Harrogate | 12 | 6 | 1 | 5 | 50.0% | 8.3% | 41.7% |
 | Harrogate vs Barrow | 12 | 5 | 2 | 5 | 41.7% | 16.7% | 41.7% |
 | Tranmere vs Colchester | 12 | 5 | 5 | 2 | 41.7% | 41.7% | 16.7% |

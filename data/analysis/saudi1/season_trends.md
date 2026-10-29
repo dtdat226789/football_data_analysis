@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:27:27+00:00
+- Generated: 2026-10-29T02:12:16+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 96 | 82 | 59 | 48 | 33 | 24 |
 | 2024-2025 | 83 | 75 | 68 | 60 | 34 | 21 |
 | 2025-2026 | 86 | 85 | 77 | 55 | 30 | 17 |
-| 2026-2027 | 30 | 28 | 25 | 21 | - | 3 |
+| 2026-2027 | 30 | 28 | 25 | 21 | 8 | 3 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 15 | 33 | 16 | 32 | 1 pts |
 | 2024-2025 | 15 | 34 | 16 | 33 | 1 pts |
 | 2025-2026 | 15 | 30 | 16 | 29 | 1 pts |
-| 2026-2027 | 15 | - | 16 | 7 | - |
+| 2026-2027 | 15 | 8 | 16 | 7 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.333 | 5.111 |
 | 2024-2025 | 3.889 | 4.556 |
 | 2025-2026 | 4.000 | 4.105 |
-| 2026-2027 | 2.444 | 4.278 |
+| 2026-2027 | 2.389 | 4.278 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

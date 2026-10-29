@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:41:26+00:00
+- Generated: 2026-10-29T01:54:36+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`

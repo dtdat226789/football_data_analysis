@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:26:12+00:00
+- Generated: 2026-10-29T02:11:02+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`

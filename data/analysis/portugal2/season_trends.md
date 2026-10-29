@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:25:28+00:00
+- Generated: 2026-10-29T02:10:26+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 73 | 71 | 64 | 49 | 34 | 26 |
 | 2024-2025 | 64 | 63 | 55 | 52 | 34 | 27 |
 | 2025-2026 | 66 | 60 | 51 | 50 | 41 | 34 |
-| 2026-2027 | 18 | 18 | 15 | 14 | 7 | 2 |
+| 2026-2027 | 18 | 18 | 15 | 14 | 8 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 15 | 34 | 16 | 31 | 3 pts |
 | 2024-2025 | 15 | 34 | 16 | 33 | 1 pts |
 | 2025-2026 | 15 | 41 | 16 | 40 | 1 pts |
-| 2026-2027 | 15 | 7 | 16 | 6 | 1 pts |
+| 2026-2027 | 15 | 8 | 16 | 7 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 749 | 2.448 | 39.5% | 27.5% | 33.0% | 7.8% | 46.33 |
 | 2024-2025 | 306 | 769 | 2.513 | 39.2% | 29.4% | 31.4% | 8.2% | 46.0 |
 | 2025-2026 | 310 | 751 | 2.423 | 42.3% | 24.5% | 33.2% | 10.6% | 42.7 |
-| 2026-2027 | 71 | 171 | 2.408 | 42.3% | 22.5% | 35.2% | 7.0% | 10.94 |
+| 2026-2027 | 72 | 172 | 2.389 | 43.1% | 22.2% | 34.7% | 6.9% | 11.11 |
 
 ## 6. View divergence
 - Largest divergence: **2023-2024** (goals view, avg abs position diff = 6.000)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.667 | 6.000 |
 | 2024-2025 | 1.778 | 5.444 |
 | 2025-2026 | 5.600 | 5.200 |
-| 2026-2027 | 1.556 | 4.667 |
+| 2026-2027 | 1.556 | 4.111 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

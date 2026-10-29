@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:28:59+00:00
+- Generated: 2026-10-29T02:13:47+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: League Two (Scotland)
 - Scope: league `scot2`

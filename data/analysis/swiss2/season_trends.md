@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:33:28+00:00
+- Generated: 2026-10-29T02:18:09+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Challenge League (Switzerland)
 - Scope: league `swiss2`

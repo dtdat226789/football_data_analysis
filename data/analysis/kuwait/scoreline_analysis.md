@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:01:05+00:00
+- Generated: 2026-10-29T02:07:32+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier League (Kuwait)
 - Scope: league `kuwait`

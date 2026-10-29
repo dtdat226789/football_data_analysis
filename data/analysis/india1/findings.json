@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:54:32+00:00",
+  "generated_at": "2026-10-29T02:03:59+00:00",
   "config": {
     "league": "india1",
     "out_dir": "data/analysis/india1",
@@ -29,7 +29,7 @@
       "path": "data/analysis/india1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 52.31
+      "size_kb": 52.01
     },
     {
       "report_name": "matches_analysis",
@@ -50,7 +50,7 @@
       "path": "data/analysis/india1/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 25.21
+      "size_kb": 25.22
     },
     {
       "report_name": "season_trends",
@@ -64,7 +64,7 @@
       "path": "data/analysis/india1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 114.81
+      "size_kb": 115.01
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "725 matches: home wins 40.7%, draws 26.6%, away wins 32.7% (295H / 193D / 237A)",
+      "detail": "726 matches: home wins 40.8%, draws 26.6%, away wins 32.6% (296H / 193D / 237A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,42 +104,42 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "725 matches produced 2041 goals (avg 2.815 per match)",
+      "detail": "726 matches produced 2042 goals (avg 2.813 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 52.1% vs away 47.9% of 2041 goals in total (home/away ratio 1.09)",
+      "detail": "home 52.1% vs away 47.9% of 2042 goals in total (home/away ratio 1.09)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "405 of 725 matches (55.9%)",
+      "detail": "405 of 726 matches (55.8%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 244 scoring matches, 36.4% of scoring)",
+      "detail": "minute 1-15 (first goal in 244 scoring matches, 36.3% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 30.88, median 25.0",
+      "detail": "mean 30.96, median 25.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Mohun Bagan leads with 244 points across 7 seasons (2 title(s), GD 97)",
+      "detail": "Mohun Bagan leads with 247 points across 7 seasons (2 title(s), GD 98)",
       "importance": "high",
       "id": "F9"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.217 per match): first half 2.921 vs last half 2.704 across 7 seasons",
+      "detail": "down (-0.252 per match): first half 2.921 vs last half 2.669 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -202,7 +202,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (69 of 295 home matches, 23.4%)",
+      "detail": "1-0 (70 of 296 home matches, 23.6%)",
       "importance": "low",
       "id": "F18"
     },
@@ -243,7 +243,7 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (53)",
+      "finding": "Data-quality warnings (52)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_AVG_GOALS_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 725 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 726 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 725,
-    "avg_goals": 2.815,
-    "home_win_pct": 40.7,
+    "n_matches": 726,
+    "avg_goals": 2.813,
+    "home_win_pct": 40.8,
     "draw_pct": 26.6,
-    "away_win_pct": 32.7,
+    "away_win_pct": 32.6,
     "most_common_scoreline": "1-1",
     "dominant_team": "Mohun Bagan",
     "champion_most_titles": "Mumbai City",
-    "btts_rate_pct": 55.9
+    "btts_rate_pct": 55.8
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 52.31
+      "size_kb": 52.01
     },
     {
       "module": "matches_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 25.21
+      "size_kb": 25.22
     },
     {
       "module": "season_trends",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 114.81
+      "size_kb": 115.01
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 16 matches, expected 380",
+      "message": "Season 2026-2027 has 17 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 16,
+        "n_matches": 17,
         "expected": 380
       }
     },
@@ -526,12 +526,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020-2021 home outcome share 29.1% vs overall 40.7%",
+      "message": "Season 2020-2021 home outcome share 29.1% vs overall 40.8%",
       "details": {
         "season": "2020-2021",
         "outcome": "home",
         "season_share": 29.1,
-        "overall_share": 40.7
+        "overall_share": 40.8
       }
     },
     {
@@ -570,12 +570,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2022-2023 home outcome share 47.3% vs overall 40.7%",
+      "message": "Season 2022-2023 home outcome share 47.3% vs overall 40.8%",
       "details": {
         "season": "2022-2023",
         "outcome": "home",
         "season_share": 47.3,
-        "overall_share": 40.7
+        "overall_share": 40.8
       }
     },
     {
@@ -592,34 +592,34 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2022-2023 away outcome share 38.2% vs overall 32.7%",
+      "message": "Season 2022-2023 away outcome share 38.2% vs overall 32.6%",
       "details": {
         "season": "2022-2023",
         "outcome": "away",
         "season_share": 38.2,
-        "overall_share": 32.7
+        "overall_share": 32.6
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2023-2024 home outcome share 45.5% vs overall 40.7%",
+      "message": "Season 2023-2024 home outcome share 45.5% vs overall 40.8%",
       "details": {
         "season": "2023-2024",
         "outcome": "home",
         "season_share": 45.5,
-        "overall_share": 40.7
+        "overall_share": 40.8
       }
     },
     {
       "code": "SEASON_AVG_GOALS_OUTLIER",
       "severity": "warning",
-      "message": "Season 2025-2026 avg goals 2.429 vs overall 2.815 (deviation 0.386)",
+      "message": "Season 2025-2026 avg goals 2.429 vs overall 2.813 (deviation 0.384)",
       "details": {
         "season": "2025-2026",
         "season_avg_goals": 2.429,
-        "overall_avg_goals": 2.815,
-        "deviation": 0.386
+        "overall_avg_goals": 2.813,
+        "deviation": 0.384
       }
     },
     {
@@ -647,23 +647,12 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 12.5% vs overall 7.3% (deviation 5.2 pp)",
+      "message": "Season 2026-2027 goalless share 11.8% vs overall 7.3% (deviation 4.5 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 12.5,
+        "season_goalless_pct": 11.8,
         "overall_goalless_pct": 7.3,
-        "deviation_pp": 5.2
-      }
-    },
-    {
-      "code": "OUTCOME_SHARE_OUTLIER",
-      "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 31.2% vs overall 26.6%",
-      "details": {
-        "season": "2026-2027",
-        "outcome": "draw",
-        "season_share": 31.2,
-        "overall_share": 26.6
+        "deviation_pp": 4.5
       }
     },
     {
@@ -713,8 +702,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 65721,
-        "distinct": 65711,
+        "rows": 65751,
+        "distinct": 65741,
         "duplicates": 10
       }
     },
@@ -723,10 +712,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=345, fgte=345 rows)",
       "details": {
-        "total": 65721,
+        "total": 65751,
         "fgt_inconsistent": 345,
         "fgte_inconsistent": 345,
-        "n_with_fgt": 60555
+        "n_with_fgt": 60584
       }
     },
     {

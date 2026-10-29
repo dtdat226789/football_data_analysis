@@ -1,6 +1,6 @@
 # Football Charts Raw Data — POC Validation Report
 
-- Generated: 2026-10-27T01:39:03+00:00
+- Generated: 2026-10-29T01:52:39+00:00
 - Scope: league `wsweden`; seasons 2020, 2021, 2022, 2023, 2024, 2025, 2026; table views classic, luck, goals
 - Overall: **0 errors**, **16 warnings**
 
@@ -74,7 +74,7 @@
 - `2024`: {"n_matches": 182}
 - `2025`: {"n_matches": 182}
 - `2026`: {"n_matches": 161}
-**field_sets:** `[["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "kickoff_utc", "score", "time"]]`
+**field_sets:** `[["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "score", "time"], ["awayTeam", "date", "first_goal_time", "first_goal_time_extra", "game_index", "goalless", "homeTeam", "ht_result", "id", "kickoff_utc", "score", "stats", "time"]]`
 
 ### team_references
 **Status:** PASS

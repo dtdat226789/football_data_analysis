@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:27:33+00:00",
+  "generated_at": "2026-10-29T02:12:22+00:00",
   "config": {
     "league": "saudi1",
     "out_dir": "data/analysis/saudi1",
@@ -57,7 +57,7 @@
       "path": "data/analysis/saudi1/season_trends.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 10.54
+      "size_kb": 10.53
     },
     {
       "report_name": "scoreline_analysis",
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 2.444)",
+      "detail": "2026-2027 (luck view, avg abs position diff 2.389)",
       "importance": "low",
       "id": "F16"
     },
@@ -330,7 +330,7 @@
         "league_trends",
         "view_divergence"
       ],
-      "size_kb": 10.54
+      "size_kb": 10.53
     },
     {
       "module": "scoreline_analysis",
@@ -652,8 +652,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (18 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 116392,
-        "distinct": 116374,
+        "rows": 116457,
+        "distinct": 116439,
         "duplicates": 18
       }
     },
@@ -662,10 +662,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=418, fgte=418 rows)",
       "details": {
-        "total": 116392,
+        "total": 116457,
         "fgt_inconsistent": 418,
         "fgte_inconsistent": 418,
-        "n_with_fgt": 107108
+        "n_with_fgt": 107170
       }
     },
     {

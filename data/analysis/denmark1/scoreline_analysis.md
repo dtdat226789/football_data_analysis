@@ -1,24 +1,24 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T01:44:47+00:00
+- Generated: 2026-10-29T01:57:12+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Superliga (Denmark)
 - Scope: league `denmark1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **925** across **7** seasons.
+- Matches analysed: **926** across **7** seasons.
 - Distinct scorelines seen: **32**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 118 | 12.8% |
+| 1-1 | 119 | 12.9% |
 | 1-0 | 84 | 9.1% |
 | 2-1 | 83 | 9.0% |
 | 1-2 | 69 | 7.5% |
 | 0-2 | 63 | 6.8% |
 | 2-2 | 58 | 6.3% |
-| 2-0 | 56 | 6.1% |
-| 0-0 | 56 | 6.1% |
+| 2-0 | 56 | 6.0% |
+| 0-0 | 56 | 6.0% |
 | 0-1 | 45 | 4.9% |
 | 3-1 | 37 | 4.0% |
 | 3-2 | 32 | 3.5% |
@@ -91,22 +91,22 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 11 | 15.3% |
-| 1-0 | 7 | 9.7% |
-| 2-1 | 7 | 9.7% |
-| 2-2 | 6 | 8.3% |
-| 2-0 | 4 | 5.6% |
+| 1-1 | 12 | 16.4% |
+| 1-0 | 7 | 9.6% |
+| 2-1 | 7 | 9.6% |
+| 2-2 | 6 | 8.2% |
+| 2-0 | 4 | 5.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 56 | 6.1% |
+| 0 | 56 | 6.0% |
 | 1 | 129 | 13.9% |
-| 2 | 237 | 25.6% |
+| 2 | 238 | 25.7% |
 | 3 | 198 | 21.4% |
-| 4 | 143 | 15.5% |
+| 4 | 143 | 15.4% |
 | 5 | 97 | 10.5% |
 | 6 | 55 | 5.9% |
 | 7 | 8 | 0.9% |
@@ -131,7 +131,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-11 | 5-2 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **672** (draws: **253**)
+- Decided matches: **672** (draws: **254**)
 - Average winning margin: **1.81**
 
 | margin | matches | pct |
@@ -164,7 +164,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 383 | 1-0 | 84 | 21.9% |
-| draw | 253 | 1-1 | 118 | 46.6% |
+| draw | 254 | 1-1 | 119 | 46.9% |
 | away | 289 | 1-2 | 69 | 23.9% |
 
 ---

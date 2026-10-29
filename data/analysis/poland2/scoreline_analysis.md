@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:24:46+00:00
+- Generated: 2026-10-29T02:09:53+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Division 1 (Poland)
 - Scope: league `poland2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1965** across **7** seasons.
+- Matches analysed: **1966** across **7** seasons.
 - Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
@@ -14,7 +14,7 @@
 | 1-1 | 247 | 12.6% |
 | 2-1 | 185 | 9.4% |
 | 1-0 | 177 | 9.0% |
-| 0-1 | 175 | 8.9% |
+| 0-1 | 176 | 9.0% |
 | 0-0 | 146 | 7.4% |
 | 1-2 | 144 | 7.3% |
 | 2-0 | 138 | 7.0% |
@@ -91,9 +91,9 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 13 | 12.1% |
-| 0-1 | 12 | 11.2% |
-| 2-1 | 11 | 10.3% |
+| 0-1 | 13 | 12.0% |
+| 1-1 | 13 | 12.0% |
+| 2-1 | 11 | 10.2% |
 | 2-0 | 10 | 9.3% |
 | 1-0 | 10 | 9.3% |
 
@@ -103,7 +103,7 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 146 | 7.4% |
-| 1 | 352 | 17.9% |
+| 1 | 353 | 18.0% |
 | 2 | 482 | 24.5% |
 | 3 | 450 | 22.9% |
 | 4 | 279 | 14.2% |
@@ -154,12 +154,12 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-18 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1429** (draws: **536**)
+- Decided matches: **1430** (draws: **536**)
 - Average winning margin: **1.73**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 787 | 55.1% |
+| 1 | 788 | 55.1% |
 | 2 | 377 | 26.4% |
 | 3+ | 265 | 18.5% |
 
@@ -175,12 +175,12 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **625** | avg margin: **1.63** | max margin: **7**
+- Matches: **626** | avg margin: **1.63** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 374 | 59.8% |
+| 1 | 375 | 59.9% |
 | 2 | 155 | 24.8% |
-| 3+ | 96 | 15.4% |
+| 3+ | 96 | 15.3% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
@@ -188,7 +188,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|---|---|
 | home | 804 | 2-1 | 185 | 23.0% |
 | draw | 536 | 1-1 | 247 | 46.1% |
-| away | 625 | 0-1 | 175 | 28.0% |
+| away | 626 | 0-1 | 176 | 28.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:31:33+00:00
+- Generated: 2026-10-29T02:16:20+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
@@ -14,7 +14,7 @@
 | 2023-2024 | Yeovil | 95 | Chelmsford | 11 pts |
 | 2024-2025 | Truro | 89 | Torquay | 0 pts |
 | 2025-2026 | Worthing | 84 | Hornchurch | 0 pts |
-| 2026-2027 | Maidstone | 29 | Ebbsfleet | 1 pts |
+| 2026-2027 | Ebbsfleet | 31 | Truro | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 95 | 84 | 83 | 73 | 46 | 27 |
 | 2024-2025 | 89 | 89 | 87 | 83 | 45 | 32 |
 | 2025-2026 | 84 | 84 | 82 | 78 | 48 | 40 |
-| 2026-2027 | 29 | 28 | 25 | 24 | 10 | 4 |
+| 2026-2027 | 31 | 30 | 27 | 26 | 10 | 4 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 21 | 46 | 22 | 46 | 0 pts |
 | 2024-2025 | 21 | 45 | 22 | 38 | 7 pts |
 | 2025-2026 | 21 | 48 | 22 | 43 | 5 pts |
-| 2026-2027 | 21 | 10 | 22 | 8 | 2 pts |
+| 2026-2027 | 21 | 10 | 22 | 9 | 1 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 550 | 1566 | 2.847 | 42.4% | 24.9% | 32.7% | 5.8% | 63.04 |
 | 2024-2025 | 549 | 1498 | 2.729 | 42.8% | 25.5% | 31.7% | 6.4% | 62.79 |
 | 2025-2026 | 605 | 1709 | 2.825 | 47.8% | 22.3% | 29.9% | 6.4% | 23.21 |
-| 2026-2027 | 159 | 466 | 2.931 | 36.5% | 26.4% | 37.1% | 4.4% | 18.12 |
+| 2026-2027 | 170 | 501 | 2.947 | 36.5% | 26.5% | 37.1% | 4.1% | 19.38 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 21.083)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.083 | 7.667 |
 | 2024-2025 | 3.333 | 8.250 |
 | 2025-2026 | 17.000 | 21.083 |
-| 2026-2027 | 2.583 | 8.833 |
+| 2026-2027 | 3.167 | 8.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

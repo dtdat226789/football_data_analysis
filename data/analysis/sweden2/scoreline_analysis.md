@@ -1,19 +1,19 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:32:52+00:00
+- Generated: 2026-10-29T02:17:36+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Superettan (Sweden)
 - Scope: league `sweden2`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1662** across **7** seasons.
+- Matches analysed: **1664** across **7** seasons.
 - Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 192 | 11.6% |
+| 1-1 | 193 | 11.6% |
 | 2-1 | 156 | 9.4% |
-| 1-0 | 147 | 8.8% |
+| 1-0 | 148 | 8.9% |
 | 0-1 | 126 | 7.6% |
 | 0-0 | 120 | 7.2% |
 | 2-0 | 119 | 7.2% |
@@ -91,11 +91,11 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 27 | 12.2% |
-| 0-1 | 18 | 8.1% |
-| 1-0 | 17 | 7.7% |
-| 2-1 | 17 | 7.7% |
-| 2-2 | 15 | 6.8% |
+| 1-1 | 28 | 12.5% |
+| 0-1 | 18 | 8.0% |
+| 1-0 | 18 | 8.0% |
+| 2-1 | 17 | 7.6% |
+| 2-2 | 15 | 6.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,8 +103,8 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 120 | 7.2% |
-| 1 | 273 | 16.4% |
-| 2 | 386 | 23.2% |
+| 1 | 274 | 16.5% |
+| 2 | 387 | 23.3% |
 | 3 | 362 | 21.8% |
 | 4 | 266 | 16.0% |
 | 5 | 164 | 9.9% |
@@ -152,23 +152,23 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-10-23 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1216** (draws: **446**)
+- Decided matches: **1217** (draws: **447**)
 - Average winning margin: **1.74**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 647 | 53.2% |
+| 1 | 648 | 53.2% |
 | 2 | 331 | 27.2% |
 | 3+ | 238 | 19.6% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **725** | avg margin: **1.82** | max margin: **7**
+- Matches: **726** | avg margin: **1.82** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 365 | 50.3% |
-| 2 | 197 | 27.2% |
+| 1 | 366 | 50.4% |
+| 2 | 197 | 27.1% |
 | 3+ | 163 | 22.5% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
@@ -184,8 +184,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 725 | 2-1 | 156 | 21.5% |
-| draw | 446 | 1-1 | 192 | 43.0% |
+| home | 726 | 2-1 | 156 | 21.5% |
+| draw | 447 | 1-1 | 193 | 43.2% |
 | away | 491 | 0-1 | 126 | 25.7% |
 
 ---

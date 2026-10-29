@@ -1,19 +1,19 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:22:38+00:00
+- Generated: 2026-10-29T02:08:04+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: TOPLYGA (Lithuania)
 - Scope: league `lithuania`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1112** across **7** seasons.
+- Matches analysed: **1113** across **7** seasons.
 - Distinct scorelines seen: **37**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 126 | 11.3% |
 | 0-1 | 113 | 10.2% |
-| 0-0 | 101 | 9.1% |
+| 0-0 | 102 | 9.2% |
 | 2-1 | 97 | 8.7% |
 | 1-0 | 88 | 7.9% |
 | 2-0 | 86 | 7.7% |
@@ -91,18 +91,18 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
+| 0-0 | 18 | 11.8% |
 | 1-1 | 18 | 11.8% |
-| 0-0 | 17 | 11.2% |
-| 1-2 | 12 | 7.9% |
-| 1-0 | 12 | 7.9% |
-| 2-1 | 10 | 6.6% |
+| 1-2 | 12 | 7.8% |
+| 1-0 | 12 | 7.8% |
+| 2-1 | 10 | 6.5% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 101 | 9.1% |
+| 0 | 102 | 9.2% |
 | 1 | 201 | 18.1% |
 | 2 | 275 | 24.7% |
 | 3 | 236 | 21.2% |
@@ -133,7 +133,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-09 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **821** (draws: **291**)
+- Decided matches: **821** (draws: **292**)
 - Average winning margin: **1.87**
 
 | margin | matches | pct |
@@ -166,7 +166,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 446 | 2-1 | 97 | 21.7% |
-| draw | 291 | 1-1 | 126 | 43.3% |
+| draw | 292 | 1-1 | 126 | 43.2% |
 | away | 375 | 0-1 | 113 | 30.1% |
 
 ---

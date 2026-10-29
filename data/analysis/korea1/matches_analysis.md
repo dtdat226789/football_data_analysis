@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:59:48+00:00
+- Generated: 2026-10-29T02:06:49+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:29:25+00:00
+- Generated: 2026-10-29T02:14:13+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Segunda RFEF - Group 1 (Spain)
 - Scope: league `segunda1`
@@ -24,8 +24,8 @@
 - **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1782 matches produced 4186 goals (avg 2.349 per match)
 - **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 55.7% vs away 44.3% of 4186 goals in total (home/away ratio 1.26)
 - **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 834 of 1782 matches (46.8%)
-- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 486 scoring matches, 30.5% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 33.01, median 28.0
+- **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 487 scoring matches, 30.5% of scoring)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 32.98, median 28.0
 - **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — Coruxo FC leads with 266 points across 7 seasons (0 title(s), GD 12)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 2 teams present in every one of the 7 seasons (Coruxo FC, Marino de Luanco)
 - **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Compostela earns 55 more points at home than away (140 home vs 85 away)

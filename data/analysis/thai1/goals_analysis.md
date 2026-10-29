@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:33:42+00:00
+- Generated: 2026-10-29T02:18:23+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`

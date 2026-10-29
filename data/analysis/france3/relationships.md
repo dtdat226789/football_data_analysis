@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T01:48:33+00:00
+- Generated: 2026-10-29T02:00:22+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Ligue 3 (France)
 - Scope: league `france3`

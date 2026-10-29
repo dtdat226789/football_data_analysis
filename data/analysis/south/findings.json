@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:31:39+00:00",
+  "generated_at": "2026-10-29T02:16:26+00:00",
   "config": {
     "league": "south",
     "out_dir": "data/analysis/south",
@@ -36,7 +36,7 @@
       "path": "data/analysis/south/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 39.6
+      "size_kb": 39.77
     },
     {
       "report_name": "goals_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/south/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 467.18
+      "size_kb": 468.73
     },
     {
       "report_name": "relationships",
@@ -83,63 +83,63 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "3000 matches: home wins 43.3%, draws 23.8%, away wins 32.9% (1299H / 714D / 987A)",
+      "detail": "3011 matches: home wins 43.3%, draws 23.8%, away wins 32.9% (1303H / 717D / 991A)",
       "importance": "medium",
       "id": "F1"
     },
     {
       "source": "matches_analysis",
       "finding": "Comeback wins",
-      "detail": "93 home and 81 away comebacks (trailing at HT but winning at FT)",
+      "detail": "94 home and 81 away comebacks (trailing at HT but winning at FT)",
       "importance": "medium",
       "id": "F2"
     },
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 772 times",
+      "detail": "home lead at HT -> home win occurred 773 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "3000 matches produced 8520 goals (avg 2.840 per match)",
+      "detail": "3011 matches produced 8555 goals (avg 2.841 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.3% vs away 45.7% of 8520 goals in total (home/away ratio 1.19)",
+      "detail": "home 54.3% vs away 45.7% of 8555 goals in total (home/away ratio 1.19)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1675 of 3000 matches (55.8%)",
+      "detail": "1682 of 3011 matches (55.9%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 937 scoring matches, 33.3% of scoring)",
+      "detail": "minute 1-15 (first goal in 941 scoring matches, 33.3% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 30.74, median 25.0",
+      "detail": "mean 30.73, median 25.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Maidstone leads with 373 points across 6 seasons (2 title(s), GD 132)",
+      "detail": "Maidstone leads with 373 points across 6 seasons (1 title(s), GD 130)",
       "importance": "high",
       "id": "F9"
     },
@@ -160,7 +160,7 @@
     {
       "source": "season_trends",
       "finding": "Champion with most titles",
-      "detail": "Maidstone won 2 of 7 championship(s) on record",
+      "detail": "Ebbsfleet won 2 of 7 championship(s) on record",
       "importance": "high",
       "id": "F12"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.081 per match): first half 2.91 vs last half 2.828 across 7 seasons",
+      "detail": "down (-0.076 per match): first half 2.91 vs last half 2.834 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,35 +188,35 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 2.583)",
+      "detail": "2020-2021 (luck view, avg abs position diff 3.048)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 346 matches (11.5%)",
+      "detail": "1-1 in 347 matches (11.5%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (295 of 1299 home matches, 22.7%)",
+      "detail": "1-0 (296 of 1303 home matches, 22.7%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (346 of 714 draw matches, 48.5%)",
+      "detail": "1-1 (347 of 717 draw matches, 48.4%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "1-2 (253 of 987 away matches, 25.6%)",
+      "detail": "1-2 (253 of 991 away matches, 25.5%)",
       "importance": "low",
       "id": "F20"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 3000 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 3011 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 3000,
-    "avg_goals": 2.84,
+    "n_matches": 3011,
+    "avg_goals": 2.841,
     "home_win_pct": 43.3,
     "draw_pct": 23.8,
     "away_win_pct": 32.9,
     "most_common_scoreline": "1-1",
     "dominant_team": "Maidstone",
-    "champion_most_titles": "Maidstone",
-    "btts_rate_pct": 55.8
+    "champion_most_titles": "Ebbsfleet",
+    "btts_rate_pct": 55.9
   },
   "comparison": [
     {
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 39.6
+      "size_kb": 39.77
     },
     {
       "module": "goals_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 467.18
+      "size_kb": 468.73
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 159 matches, expected 380",
+      "message": "Season 2026-2027 has 170 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 159,
+        "n_matches": 170,
         "expected": 380
       }
     },
@@ -548,12 +548,12 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 4.4% vs overall 6.1% (deviation 1.7 pp)",
+      "message": "Season 2026-2027 goalless share 4.1% vs overall 6.0% (deviation 1.9 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 4.4,
-        "overall_goalless_pct": 6.1,
-        "deviation_pp": 1.7
+        "season_goalless_pct": 4.1,
+        "overall_goalless_pct": 6.0,
+        "deviation_pp": 1.9
       }
     },
     {
@@ -635,8 +635,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 137772,
-        "distinct": 137727,
+        "rows": 137856,
+        "distinct": 137811,
         "duplicates": 45
       }
     },
@@ -645,10 +645,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=439, fgte=439 rows)",
       "details": {
-        "total": 137772,
+        "total": 137856,
         "fgt_inconsistent": 439,
         "fgte_inconsistent": 439,
-        "n_with_fgt": 126544
+        "n_with_fgt": 126625
       }
     },
     {

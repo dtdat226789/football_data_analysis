@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:51:01+00:00
+- Generated: 2026-10-29T02:02:07+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League 2 (Greece)
 - Scope: league `greece2`
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 13 | 29 | 14 | 29 | 0 pts |
 | 2024-2025 | 13 | 19 | 14 | 17 | 2 pts |
 | 2025-2026 | 13 | 35 | 14 | 31 | 4 pts |
-| 2026-2027 | 13 | 8 | 14 | 6 | 2 pts |
+| 2026-2027 | 13 | 8 | 14 | 8 | 0 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 264 | 584 | 2.212 | 49.2% | 23.9% | 26.9% | 9.8% | 29.16 |
 | 2024-2025 | 180 | 412 | 2.289 | 42.8% | 27.8% | 29.4% | 11.1% | 24.5 |
 | 2025-2026 | 265 | 607 | 2.291 | 44.2% | 23.0% | 32.8% | 7.9% | 36.7 |
-| 2026-2027 | 63 | 133 | 2.111 | 50.8% | 31.7% | 17.5% | 11.1% | 10.56 |
+| 2026-2027 | 64 | 138 | 2.156 | 50.0% | 31.2% | 18.8% | 10.9% | 10.75 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 13.000)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 5.840 | 9.360 |
 | 2024-2025 | 2.600 | 4.500 |
 | 2025-2026 | 3.700 | 7.500 |
-| 2026-2027 | 3.125 | 4.250 |
+| 2026-2027 | 3.500 | 4.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

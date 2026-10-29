@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:41:06+00:00
+- Generated: 2026-10-29T01:54:14+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Jupiler Pro League (Belgium)
 - Scope: league `belgium1`

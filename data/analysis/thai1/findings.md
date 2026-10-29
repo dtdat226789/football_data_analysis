@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-27T02:33:52+00:00
+- Generated: 2026-10-29T02:18:32+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`

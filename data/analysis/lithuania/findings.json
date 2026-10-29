@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T02:22:43+00:00",
+  "generated_at": "2026-10-29T02:08:09+00:00",
   "config": {
     "league": "lithuania",
     "out_dir": "data/analysis/lithuania",
@@ -36,7 +36,7 @@
       "path": "data/analysis/lithuania/matches_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 15.36
+      "size_kb": 15.37
     },
     {
       "report_name": "goals_analysis",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1112 matches: home wins 40.1%, draws 26.2%, away wins 33.7% (446H / 291D / 375A)",
+      "detail": "1113 matches: home wins 40.1%, draws 26.2%, away wins 33.7% (446H / 292D / 375A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,7 +104,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1112 matches produced 2858 goals (avg 2.570 per match)",
+      "detail": "1113 matches produced 2858 goals (avg 2.568 per match)",
       "importance": "medium",
       "id": "F4"
     },
@@ -118,7 +118,7 @@
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "517 of 1112 matches (46.5%)",
+      "detail": "517 of 1113 matches (46.5%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -139,7 +139,7 @@
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Zalgiris leads with 478 points across 7 seasons (4 title(s), GD 246)",
+      "detail": "Zalgiris leads with 479 points across 7 seasons (4 title(s), GD 246)",
       "importance": "high",
       "id": "F9"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "down (-0.094 per match): first half 2.652 vs last half 2.558 across 7 seasons",
+      "detail": "down (-0.099 per match): first half 2.652 vs last half 2.553 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -209,7 +209,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (126 of 291 draw matches, 43.3%)",
+      "detail": "1-1 (126 of 292 draw matches, 43.2%)",
       "importance": "low",
       "id": "F19"
     },
@@ -251,14 +251,14 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1112 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1113 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1112,
-    "avg_goals": 2.57,
+    "n_matches": 1113,
+    "avg_goals": 2.568,
     "home_win_pct": 40.1,
     "draw_pct": 26.2,
     "away_win_pct": 33.7,
@@ -290,7 +290,7 @@
         "first_goal_timing",
         "goalless"
       ],
-      "size_kb": 15.36
+      "size_kb": 15.37
     },
     {
       "module": "goals_analysis",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 152 matches, expected 380",
+      "message": "Season 2026 has 153 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 152,
+        "n_matches": 153,
         "expected": 380
       }
     },
@@ -515,67 +515,67 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020 goalless share 3.3% vs overall 9.1% (deviation 5.8 pp)",
+      "message": "Season 2020 goalless share 3.3% vs overall 9.2% (deviation 5.9 pp)",
       "details": {
         "season": "2020",
         "season_goalless_pct": 3.3,
-        "overall_goalless_pct": 9.1,
-        "deviation_pp": 5.8
+        "overall_goalless_pct": 9.2,
+        "deviation_pp": 5.9
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2021 goalless share 5.6% vs overall 9.1% (deviation 3.5 pp)",
+      "message": "Season 2021 goalless share 5.6% vs overall 9.2% (deviation 3.6 pp)",
       "details": {
         "season": "2021",
         "season_goalless_pct": 5.6,
-        "overall_goalless_pct": 9.1,
-        "deviation_pp": 3.5
+        "overall_goalless_pct": 9.2,
+        "deviation_pp": 3.6
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2023 goalless share 11.7% vs overall 9.1% (deviation 2.6 pp)",
+      "message": "Season 2023 goalless share 11.7% vs overall 9.2% (deviation 2.5 pp)",
       "details": {
         "season": "2023",
         "season_goalless_pct": 11.7,
-        "overall_goalless_pct": 9.1,
-        "deviation_pp": 2.6
+        "overall_goalless_pct": 9.2,
+        "deviation_pp": 2.5
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024 goalless share 12.8% vs overall 9.1% (deviation 3.7 pp)",
+      "message": "Season 2024 goalless share 12.8% vs overall 9.2% (deviation 3.6 pp)",
       "details": {
         "season": "2024",
         "season_goalless_pct": 12.8,
-        "overall_goalless_pct": 9.1,
-        "deviation_pp": 3.7
+        "overall_goalless_pct": 9.2,
+        "deviation_pp": 3.6
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2025 goalless share 7.2% vs overall 9.1% (deviation 1.9 pp)",
+      "message": "Season 2025 goalless share 7.2% vs overall 9.2% (deviation 2.0 pp)",
       "details": {
         "season": "2025",
         "season_goalless_pct": 7.2,
-        "overall_goalless_pct": 9.1,
-        "deviation_pp": 1.9
+        "overall_goalless_pct": 9.2,
+        "deviation_pp": 2.0
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026 goalless share 11.2% vs overall 9.1% (deviation 2.1 pp)",
+      "message": "Season 2026 goalless share 11.8% vs overall 9.2% (deviation 2.6 pp)",
       "details": {
         "season": "2026",
-        "season_goalless_pct": 11.2,
-        "overall_goalless_pct": 9.1,
-        "deviation_pp": 2.1
+        "season_goalless_pct": 11.8,
+        "overall_goalless_pct": 9.2,
+        "deviation_pp": 2.6
       }
     },
     {
@@ -610,8 +610,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 89966,
-        "distinct": 89952,
+        "rows": 90008,
+        "distinct": 89994,
         "duplicates": 14
       }
     },
@@ -620,10 +620,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=388, fgte=388 rows)",
       "details": {
-        "total": 89966,
+        "total": 90008,
         "fgt_inconsistent": 388,
         "fgte_inconsistent": 388,
-        "n_with_fgt": 82751
+        "n_with_fgt": 82791
       }
     },
     {

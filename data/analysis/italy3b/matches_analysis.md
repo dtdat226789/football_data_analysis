@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T01:58:10+00:00
+- Generated: 2026-10-29T02:05:55+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie C - Group B (Italy)
 - Scope: league `italy3b`

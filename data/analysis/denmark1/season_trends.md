@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:44:45+00:00
+- Generated: 2026-10-29T01:57:10+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Superliga (Denmark)
 - Scope: league `denmark1`
@@ -14,7 +14,7 @@
 | 2023-2024 | Midtjylland | 48 | Brondby | 1 pts |
 | 2024-2025 | Midtjylland | 45 | FC Copenhagen | 4 pts |
 | 2025-2026 | Aarhus | 67 | Midtjylland | 7 pts |
-| 2026-2027 | Midtjylland | 28 | FC Copenhagen | 3 pts |
+| 2026-2027 | Midtjylland | 28 | FC Copenhagen | 2 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 1 pts | yes |
 | 2024-2025 | 4 pts |  |
 | 2025-2026 | 7 pts |  |
-| 2026-2027 | 3 pts | yes |
+| 2026-2027 | 2 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 9 = last safe, 12 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 48 | 47 | 37 | 27 | 23 | 11 |
 | 2024-2025 | 45 | 41 | 35 | 33 | 21 | 13 |
 | 2025-2026 | 67 | 60 | 50 | 44 | 36 | 24 |
-| 2026-2027 | 28 | 25 | 20 | 16 | 13 | 8 |
+| 2026-2027 | 28 | 26 | 20 | 16 | 13 | 8 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 132 | 356 | 2.697 | 40.2% | 25.0% | 34.8% | 6.1% | 30.25 |
 | 2024-2025 | 132 | 406 | 3.076 | 44.7% | 31.1% | 24.2% | 4.5% | 29.58 |
 | 2025-2026 | 193 | 599 | 3.104 | 41.5% | 23.3% | 35.2% | 5.7% | 44.25 |
-| 2026-2027 | 72 | 223 | 3.097 | 44.4% | 30.6% | 25.0% | 4.2% | 16.17 |
+| 2026-2027 | 73 | 225 | 3.082 | 43.8% | 31.5% | 24.7% | 4.1% | 16.33 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 5.167)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.833 | 3.167 |
 | 2024-2025 | 2.333 | 4.500 |
 | 2025-2026 | 2.833 | 4.000 |
-| 2026-2027 | 2.167 | 4.000 |
+| 2026-2027 | 2.000 | 4.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

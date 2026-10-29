@@ -1,17 +1,17 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:39:18+00:00
+- Generated: 2026-10-29T01:52:51+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`
 
-- Teams: **31** | Seasons: **7** | Matches: **1696**
+- Teams: **31** | Seasons: **7** | Matches: **1697**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CR Belouizdad | 7 | 199 | 109 | 62 | 28 | 389 | 311 | 145 | 166 | 55.57 | 1 | 3 | 4 |
-| MC Alger | 7 | 195 | 96 | 62 | 37 | 350 | 255 | 145 | 110 | 50.0 | 1 | 10 | 3 |
+| MC Alger | 7 | 196 | 97 | 62 | 37 | 353 | 256 | 145 | 111 | 50.43 | 1 | 8 | 3 |
 | Kabylie | 7 | 198 | 84 | 65 | 49 | 317 | 244 | 167 | 77 | 45.29 | 2 | 14 | 0 |
 | Saoura | 7 | 198 | 88 | 51 | 59 | 315 | 261 | 184 | 77 | 45.0 | 2 | 15 | 0 |
 | Constantine | 7 | 200 | 81 | 62 | 57 | 305 | 252 | 193 | 59 | 43.57 | 2 | 10 | 0 |
@@ -21,7 +21,7 @@
 | Paradou | 6 | 192 | 69 | 45 | 78 | 252 | 243 | 237 | 6 | 42.0 | 5 | 14 | 0 |
 | ASO Chlef | 7 | 200 | 63 | 62 | 75 | 251 | 214 | 227 | -13 | 35.86 | 7 | 17 | 0 |
 | Magra | 5 | 162 | 54 | 44 | 64 | 206 | 157 | 183 | -26 | 41.2 | 9 | 15 | 0 |
-| Biskra | 6 | 168 | 46 | 56 | 66 | 194 | 138 | 184 | -46 | 32.33 | 10 | 16 | 0 |
+| Biskra | 6 | 169 | 46 | 56 | 67 | 194 | 138 | 185 | -47 | 32.33 | 10 | 16 | 0 |
 | Khenchela | 5 | 126 | 47 | 29 | 50 | 170 | 130 | 149 | -19 | 34.0 | 7 | 13 | 0 |
 | El Bayadh | 4 | 120 | 34 | 35 | 51 | 137 | 103 | 121 | -18 | 34.25 | 4 | 16 | 0 |
 | Olympique Akbou | 3 | 66 | 24 | 20 | 22 | 92 | 67 | 60 | 7 | 30.67 | 6 | 11 | 0 |
@@ -38,8 +38,8 @@
 | Bel Abbes | 1 | 38 | 9 | 11 | 18 | 38 | 32 | 58 | -26 | 38.0 | 18 | 18 | 0 |
 | Bordj Bou Arreridj | 1 | 38 | 4 | 10 | 24 | 22 | 29 | 67 | -38 | 22.0 | 19 | 19 | 0 |
 | Skikda | 1 | 38 | 5 | 3 | 30 | 18 | 17 | 73 | -56 | 18.0 | 20 | 20 | 0 |
-| Temouchent | 1 | 8 | 2 | 3 | 3 | 9 | 6 | 9 | -3 | 9.0 | 7 | 7 | 0 |
-| El Biar | 1 | 7 | 2 | 2 | 3 | 8 | 12 | 11 | 1 | 8.0 | 8 | 8 | 0 |
+| Temouchent | 1 | 8 | 2 | 3 | 3 | 9 | 6 | 9 | -3 | 9.0 | 8 | 8 | 0 |
+| El Biar | 1 | 7 | 2 | 2 | 3 | 8 | 12 | 11 | 1 | 8.0 | 9 | 9 | 0 |
 | US Souf | 1 | 30 | 2 | 1 | 27 | 7 | 22 | 86 | -64 | 7.0 | 16 | 16 | 0 |
 
 ## 2. Home vs away split
@@ -49,8 +49,8 @@
 | Oran | 99 | 57 | 31 | 11 | 202 | 99 | 18 | 30 | 51 | 84 | 118 |
 | USM Alger | 99 | 59 | 27 | 13 | 204 | 99 | 22 | 31 | 46 | 97 | 107 |
 | ES Setif | 100 | 57 | 30 | 13 | 201 | 97 | 26 | 21 | 50 | 99 | 102 |
-| MC Alger | 98 | 65 | 28 | 5 | 223 | 97 | 31 | 34 | 32 | 127 | 96 |
-| Biskra | 84 | 39 | 28 | 17 | 145 | 84 | 7 | 28 | 49 | 49 | 96 |
+| Biskra | 85 | 39 | 28 | 18 | 145 | 84 | 7 | 28 | 49 | 49 | 96 |
+| MC Alger | 98 | 65 | 28 | 5 | 223 | 98 | 32 | 34 | 32 | 130 | 93 |
 | Constantine | 99 | 56 | 29 | 14 | 197 | 101 | 25 | 33 | 43 | 108 | 89 |
 | Magra | 81 | 41 | 24 | 16 | 147 | 81 | 13 | 20 | 48 | 59 | 88 |
 | ASO Chlef | 101 | 45 | 34 | 22 | 169 | 99 | 18 | 28 | 53 | 82 | 87 |
@@ -82,7 +82,7 @@
 | rank | team | PPG |
 |---|---|---|
 | 1 | CR Belouizdad | 1.96 |
-| 2 | MC Alger | 1.79 |
+| 2 | MC Alger | 1.80 |
 | 3 | Kabylie | 1.60 |
 | 4 | Saoura | 1.59 |
 | 5 | Constantine | 1.52 |
@@ -92,7 +92,7 @@
 |---|---|---|
 | 1 | CR Belouizdad | 311 |
 | 2 | Saoura | 261 |
-| 3 | MC Alger | 255 |
+| 3 | MC Alger | 256 |
 | 4 | Constantine | 252 |
 | 5 | ES Setif | 248 |
 
@@ -100,7 +100,7 @@
 | rank | team | GD |
 |---|---|---|
 | 1 | CR Belouizdad | 166 |
-| 2 | MC Alger | 110 |
+| 2 | MC Alger | 111 |
 | 3 | Kabylie | 77 |
 | 4 | Saoura | 77 |
 | 5 | USM Alger | 63 |
@@ -109,7 +109,7 @@
 | rank | team | GA/match |
 |---|---|---|
 | 1 | CR Belouizdad | 0.729 |
-| 2 | MC Alger | 0.744 |
+| 2 | MC Alger | 0.740 |
 | 3 | Kabylie | 0.843 |
 | 4 | Olympique Akbou | 0.909 |
 | 5 | USM Alger | 0.924 |
@@ -146,10 +146,10 @@ _Cells show final position; '-' when the team was absent from that season._
 | team | 2020-2021 | 2021-2022 | 2022-2023 | 2023-2024 | 2024-2025 | 2025-2026 | 2026-2027 |
 |---|---|---|---|---|---|---|---|
 | CR Belouizdad | 1 | 1 | 1 | 2 | 3 | 3 | 1 |
-| MC Alger | 7 | 8 | 3 | 1 | 1 | 1 | 10 |
+| MC Alger | 7 | 8 | 3 | 1 | 1 | 1 | 6 |
 | Kabylie | 5 | 2 | 14 | 7 | 2 | 5 | 3 |
 | Saoura | 2 | 3 | 5 | 9 | 4 | 2 | 15 |
-| Constantine | 8 | 5 | 2 | 3 | 10 | 8 | 9 |
+| Constantine | 8 | 5 | 2 | 3 | 10 | 8 | 10 |
 | USM Alger | 4 | 4 | 11 | 4 | 7 | 10 | 5 |
 | ES Setif | 3 | 6 | 6 | 5 | 6 | 11 | 12 |
 | Oran | 6 | 11 | 10 | 13 | 8 | 4 | 2 |
@@ -159,7 +159,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Biskra | 15 | 10 | 12 | 14 | 16 | - | 16 |
 | Khenchela | - | - | 8 | 10 | 9 | 7 | 13 |
 | El Bayadh | - | - | 4 | 11 | 12 | 16 | - |
-| Olympique Akbou | - | - | - | - | 11 | 6 | 6 |
+| Olympique Akbou | - | - | - | - | 11 | 6 | 7 |
 | Medea | 10 | 15 | - | - | - | - | - |
 | Ben Aknoun | - | - | - | 15 | - | 9 | 11 |
 | Arba | - | 14 | 15 | - | - | - | - |
@@ -173,8 +173,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | Bel Abbes | 18 | - | - | - | - | - | - |
 | Bordj Bou Arreridj | 19 | - | - | - | - | - | - |
 | Skikda | 20 | - | - | - | - | - | - |
-| Temouchent | - | - | - | - | - | - | 7 |
-| El Biar | - | - | - | - | - | - | 8 |
+| Temouchent | - | - | - | - | - | - | 8 |
+| El Biar | - | - | - | - | - | - | 9 |
 | US Souf | - | - | - | 16 | - | - | - |
 
 ---

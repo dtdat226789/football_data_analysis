@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:47:09+00:00
+- Generated: 2026-10-29T01:59:08+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`

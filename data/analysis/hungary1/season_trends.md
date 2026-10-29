@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:53:15+00:00
+- Generated: 2026-10-29T02:03:19+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: NB I. (Hungary)
 - Scope: league `hungary1`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 7.833 | 7.333 |
 | 2024-2025 | 1.333 | 2.833 |
 | 2025-2026 | 2.000 | 5.000 |
-| 2026-2027 | 1.667 | 4.667 |
+| 2026-2027 | 1.833 | 4.667 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

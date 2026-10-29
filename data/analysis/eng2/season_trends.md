@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:46:27+00:00
+- Generated: 2026-10-29T01:58:34+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: League Two (England)
 - Scope: league `eng2`
@@ -14,7 +14,7 @@
 | 2023-2024 | Stockport County | 92 | Wrexham | 4 pts |
 | 2024-2025 | Doncaster | 84 | Port Vale | 4 pts |
 | 2025-2026 | Notts Co | 87 | Bromley | 0 pts |
-| 2026-2027 | Salford | 25 | Barnet | 3 pts |
+| 2026-2027 | Salford | 28 | Barnet | 3 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 92 | 88 | 78 | 71 | 49 | 42 |
 | 2024-2025 | 84 | 80 | 77 | 72 | 50 | 36 |
 | 2025-2026 | 87 | 87 | 84 | 80 | 41 | 36 |
-| 2026-2027 | 25 | 22 | 21 | 19 | 12 | 6 |
+| 2026-2027 | 28 | 25 | 21 | 19 | 12 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 552 | 1645 | 2.98 | 44.9% | 23.7% | 31.3% | 4.9% | 63.54 |
 | 2024-2025 | 552 | 1377 | 2.495 | 42.0% | 28.6% | 29.3% | 8.7% | 62.42 |
 | 2025-2026 | 557 | 1434 | 2.575 | 41.8% | 25.0% | 33.2% | 6.6% | 63.75 |
-| 2026-2027 | 149 | 385 | 2.584 | 47.0% | 34.9% | 18.1% | 8.1% | 16.46 |
+| 2026-2027 | 151 | 395 | 2.616 | 47.0% | 34.4% | 18.5% | 7.9% | 16.71 |
 
 ## 6. View divergence
 - Largest divergence: **2022-2023** (goals view, avg abs position diff = 9.250)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.167 | 8.250 |
 | 2024-2025 | 5.333 | 7.917 |
 | 2025-2026 | 2.500 | 7.333 |
-| 2026-2027 | 3.500 | 6.083 |
+| 2026-2027 | 3.417 | 5.417 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

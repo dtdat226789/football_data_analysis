@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:48:15+00:00",
+  "generated_at": "2026-10-29T02:00:06+00:00",
   "config": {
     "league": "france2",
     "out_dir": "data/analysis/france2",
@@ -29,7 +29,7 @@
       "path": "data/analysis/france2/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 44.9
+      "size_kb": 44.6
     },
     {
       "report_name": "matches_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/france2/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 320.83
+      "size_kb": 321.03
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "2224 matches: home wins 42.0%, draws 28.7%, away wins 29.3% (933H / 639D / 652A)",
+      "detail": "2226 matches: home wins 42.0%, draws 28.8%, away wins 29.3% (934H / 640D / 652A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,21 +104,21 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "2224 matches produced 5436 goals (avg 2.444 per match)",
+      "detail": "2226 matches produced 5441 goals (avg 2.444 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.9% vs away 45.1% of 5436 goals in total (home/away ratio 1.22)",
+      "detail": "home 54.9% vs away 45.1% of 5441 goals in total (home/away ratio 1.22)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1080 of 2224 matches (48.6%)",
+      "detail": "1082 of 2226 matches (48.6%)",
       "importance": "medium",
       "id": "F6"
     },
@@ -132,7 +132,7 @@
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 32.54, median 27.0",
+      "detail": "mean 32.55, median 27.0",
       "importance": "low",
       "id": "F8"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.233 per match): first half 2.363 vs last half 2.596 across 7 seasons",
+      "detail": "up (+0.232 per match): first half 2.363 vs last half 2.595 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -202,14 +202,14 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (282 of 933 home matches, 30.2%)",
+      "detail": "1-0 (282 of 934 home matches, 30.2%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (276 of 639 draw matches, 43.2%)",
+      "detail": "1-1 (277 of 640 draw matches, 43.3%)",
       "importance": "low",
       "id": "F19"
     },
@@ -243,7 +243,7 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (28)",
+      "finding": "Data-quality warnings (27)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
@@ -251,16 +251,16 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 2224 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2226 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 2224,
+    "n_matches": 2226,
     "avg_goals": 2.444,
     "home_win_pct": 42.0,
-    "draw_pct": 28.7,
+    "draw_pct": 28.8,
     "away_win_pct": 29.3,
     "most_common_scoreline": "1-0",
     "dominant_team": "Paris FC",
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 44.9
+      "size_kb": 44.6
     },
     {
       "module": "matches_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 320.83
+      "size_kb": 321.03
     },
     {
       "module": "relationships",
@@ -406,10 +406,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 88 matches, expected 380",
+      "message": "Season 2026-2027 has 90 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 88,
+        "n_matches": 90,
         "expected": 380
       }
     },
@@ -435,12 +435,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020-2021 draw outcome share 33.4% vs overall 28.7%",
+      "message": "Season 2020-2021 draw outcome share 33.4% vs overall 28.8%",
       "details": {
         "season": "2020-2021",
         "outcome": "draw",
         "season_share": 33.4,
-        "overall_share": 28.7
+        "overall_share": 28.8
       }
     },
     {
@@ -490,12 +490,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2024-2025 draw outcome share 23.5% vs overall 28.7%",
+      "message": "Season 2024-2025 draw outcome share 23.5% vs overall 28.8%",
       "details": {
         "season": "2024-2025",
         "outcome": "draw",
         "season_share": 23.5,
-        "overall_share": 28.7
+        "overall_share": 28.8
       }
     },
     {
@@ -512,23 +512,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 35.2% vs overall 42.0%",
+      "message": "Season 2026-2027 home outcome share 35.6% vs overall 42.0%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 35.2,
+        "season_share": 35.6,
         "overall_share": 42.0
-      }
-    },
-    {
-      "code": "OUTCOME_SHARE_OUTLIER",
-      "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 34.1% vs overall 29.3%",
-      "details": {
-        "season": "2026-2027",
-        "outcome": "away",
-        "season_share": 34.1,
-        "overall_share": 29.3
       }
     },
     {
@@ -583,8 +572,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 43043,
-        "distinct": 43038,
+        "rows": 43071,
+        "distinct": 43066,
         "duplicates": 5
       }
     },
@@ -593,10 +582,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=317, fgte=317 rows)",
       "details": {
-        "total": 43043,
+        "total": 43071,
         "fgt_inconsistent": 317,
         "fgte_inconsistent": 317,
-        "n_with_fgt": 39377
+        "n_with_fgt": 39404
       }
     },
     {

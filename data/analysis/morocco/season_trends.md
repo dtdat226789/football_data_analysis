@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:22:58+00:00
+- Generated: 2026-10-29T02:08:21+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`

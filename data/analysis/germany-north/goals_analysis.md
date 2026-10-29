@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T01:48:46+00:00
+- Generated: 2026-10-29T02:00:32+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`

@@ -1,18 +1,18 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T01:54:26+00:00
+- Generated: 2026-10-29T02:03:55+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **725** across **7** seasons.
+- Matches analysed: **726** across **7** seasons.
 - Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 90 | 12.4% |
-| 1-0 | 69 | 9.5% |
+| 1-0 | 70 | 9.6% |
 | 2-1 | 64 | 8.8% |
 | 0-0 | 53 | 7.3% |
 | 0-1 | 51 | 7.0% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 3 | 18.8% |
-| 2-1 | 2 | 12.5% |
-| 0-0 | 2 | 12.5% |
-| 3-2 | 1 | 6.2% |
-| 0-2 | 1 | 6.2% |
+| 1-1 | 3 | 17.6% |
+| 2-1 | 2 | 11.8% |
+| 1-0 | 2 | 11.8% |
+| 0-0 | 2 | 11.8% |
+| 3-2 | 1 | 5.9% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,12 +103,12 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 53 | 7.3% |
-| 1 | 120 | 16.6% |
+| 1 | 121 | 16.7% |
 | 2 | 166 | 22.9% |
-| 3 | 160 | 22.1% |
-| 4 | 107 | 14.8% |
-| 5 | 62 | 8.6% |
-| 6 | 41 | 5.7% |
+| 3 | 160 | 22.0% |
+| 4 | 107 | 14.7% |
+| 5 | 62 | 8.5% |
+| 6 | 41 | 5.6% |
 | 7 | 10 | 1.4% |
 | 8 | 3 | 0.4% |
 | 9 | 0 | 0.0% |
@@ -137,24 +137,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-03-23 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **532** (draws: **193**)
-- Average winning margin: **1.77**
+- Decided matches: **533** (draws: **193**)
+- Average winning margin: **1.76**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 276 | 51.9% |
-| 2 | 153 | 28.8% |
-| 3+ | 103 | 19.4% |
+| 1 | 277 | 52.0% |
+| 2 | 153 | 28.7% |
+| 3+ | 103 | 19.3% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **295** | avg margin: **1.74** | max margin: **7**
+- Matches: **296** | avg margin: **1.73** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 157 | 53.2% |
-| 2 | 82 | 27.8% |
-| 3+ | 56 | 19.0% |
+| 1 | 158 | 53.4% |
+| 2 | 82 | 27.7% |
+| 3+ | 56 | 18.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -169,7 +169,7 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 295 | 1-0 | 69 | 23.4% |
+| home | 296 | 1-0 | 70 | 23.6% |
 | draw | 193 | 1-1 | 90 | 46.6% |
 | away | 237 | 0-1 | 51 | 21.5% |
 

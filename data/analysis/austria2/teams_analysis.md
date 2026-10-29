@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T01:40:27+00:00
+- Generated: 2026-10-29T01:53:39+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: 2. Liga (Austria)
 - Scope: league `austria2`

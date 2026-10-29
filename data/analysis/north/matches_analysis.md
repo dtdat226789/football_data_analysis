@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-27T02:23:35+00:00
+- Generated: 2026-10-29T02:08:52+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League North (England)
 - Scope: league `north`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2994 |
-| Home wins | 1302 (43.5%) |
-| Draws | 739 (24.7%) |
-| Away wins | 953 (31.8%) |
-| Total goals | 8084 |
-| Average goals per match | 2.700 |
+| Matches | 3004 |
+| Home wins | 1308 (43.5%) |
+| Draws | 740 (24.6%) |
+| Away wins | 956 (31.8%) |
+| Total goals | 8109 |
+| Average goals per match | 2.699 |
 | Goalless matches | 211 (7.0%) |
 
 ## 2. Per-season breakdown
@@ -25,14 +25,14 @@
 | 2023-2024 | 552 | 244 (44.2%) | 121 (21.9%) | 187 (33.9%) | 1474 | 2.67 | 40 (7.2%) |
 | 2024-2025 | 552 | 241 (43.7%) | 127 (23.0%) | 184 (33.3%) | 1420 | 2.572 | 42 (7.6%) |
 | 2025-2026 | 560 | 239 (42.7%) | 126 (22.5%) | 195 (34.8%) | 1707 | 3.048 | 23 (4.1%) |
-| 2026-2027 | 151 | 73 (48.3%) | 33 (21.9%) | 45 (29.8%) | 415 | 2.748 | 6 (4.0%) |
+| 2026-2027 | 161 | 79 (49.1%) | 34 (21.1%) | 48 (29.8%) | 440 | 2.733 | 6 (3.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 826 (80.8%) | 134 (13.1%) | 62 (6.1%) | 1022 |
-| HT draw | 398 (33.4%) | 434 (36.4%) | 359 (30.1%) | 1191 |
-| HT away lead | 78 (10.0%) | 169 (21.8%) | 530 (68.2%) | 777 |
+| HT home lead | 830 (80.8%) | 135 (13.1%) | 62 (6.0%) | 1027 |
+| HT draw | 400 (33.5%) | 434 (36.4%) | 359 (30.1%) | 1193 |
+| HT away lead | 78 (10.0%) | 169 (21.7%) | 533 (68.3%) | 780 |
 - *4 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
@@ -116,8 +116,8 @@
 | 2025-2026 | Scarborough | Merthyr Town | 0-1 | 2-1 |
 | 2025-2026 | Macclesfield | Chester | 0-1 | 2-1 |
 | 2026-2027 | South Shields | Chorley | 0-1 | 2-1 |
-| 2026-2027 | Harborough | Darlington | 1-2 | 4-2 |
 | 2026-2027 | Macclesfield | Brackley Town | 0-1 | 2-1 |
+| 2026-2027 | Harborough | Darlington | 1-2 | 4-2 |
 | 2026-2027 | Hebburn Town | King’s Lynn | 1-2 | 4-2 |
 | 2026-2027 | Macclesfield | South Shields | 2-3 | 4-3 |
 
@@ -190,33 +190,33 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 1022 | 826 (80.8%) | 134 (13.1%) | 62 (6.1%) |
-| Away lead | 777 | 530 (68.2%) | 169 (21.8%) | 78 (10.0%) |
+| Home lead | 1027 | 830 (80.8%) | 135 (13.1%) | 62 (6.0%) |
+| Away lead | 780 | 533 (68.3%) | 169 (21.7%) | 78 (10.0%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 398 | 33.4% |
+| Home win | 400 | 33.5% |
 | Draw | 434 | 36.4% |
 | Away win | 359 | 30.1% |
 - *4 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2780` of `2994` (92.9%)
+- Matches with a first-goal time recorded: `2790` of `3004` (92.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 937 | 31.3% | 462 (49.3%) | 169 (18.0%) | 306 (32.7%) |
-| 16-30 | 658 | 22.0% | 320 (48.6%) | 132 (20.1%) | 206 (31.3%) |
-| 31-45 | 472 | 15.8% | 214 (45.3%) | 94 (19.9%) | 164 (34.7%) |
-| 46-60 | 374 | 12.5% | 167 (44.7%) | 78 (20.9%) | 129 (34.5%) |
+| 1-15 | 939 | 31.3% | 463 (49.3%) | 169 (18.0%) | 307 (32.7%) |
+| 16-30 | 661 | 22.0% | 322 (48.7%) | 132 (20.0%) | 207 (31.3%) |
+| 31-45 | 475 | 15.8% | 215 (45.3%) | 95 (20.0%) | 165 (34.7%) |
+| 46-60 | 375 | 12.5% | 168 (44.8%) | 78 (20.8%) | 129 (34.4%) |
 | 61-75 | 178 | 5.9% | 63 (35.4%) | 37 (20.8%) | 78 (43.8%) |
-| 76-90 | 129 | 4.3% | 58 (45.0%) | 17 (13.2%) | 54 (41.9%) |
+| 76-90 | 130 | 4.3% | 59 (45.4%) | 17 (13.1%) | 54 (41.5%) |
 | 91-120 | 32 | 1.1% | 18 (56.2%) | 0 (0.0%) | 14 (43.8%) |
 
 ## 7. Goalless matches
-- Overall: **211** of `2994` (7.0%)
+- Overall: **211** of `3004` (7.0%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -226,7 +226,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 552 | 40 | 7.2% |
 | 2024-2025 | 552 | 42 | 7.6% |
 | 2025-2026 | 560 | 23 | 4.1% |
-| 2026-2027 | 151 | 6 | 4.0% |
+| 2026-2027 | 161 | 6 | 3.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

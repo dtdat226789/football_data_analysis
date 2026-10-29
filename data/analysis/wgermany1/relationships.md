@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T02:35:26+00:00
+- Generated: 2026-10-29T02:19:58+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Bundesliga Women (Germany)
 - Scope: league `wgermany1`

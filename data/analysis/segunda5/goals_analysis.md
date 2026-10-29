@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:30:31+00:00
+- Generated: 2026-10-29T02:15:19+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`
@@ -95,14 +95,14 @@
 ## 7. First-goal timing
 - Matches with first-goal time recorded: `1569` of `1789` (87.7%)
 - Goalless matches: `220`
-- Min `1` | Max `98` | Mean `34.13` | Median (p50) `29`
+- Min `1` | Max `98` | Mean `34.11` | Median (p50) `29`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 453 | 25.3% | 28.9% |
+| 1-15 | 454 | 25.4% | 28.9% |
 | 16-30 | 369 | 20.6% | 23.5% |
-| 31-45 | 258 | 14.4% | 16.4% |
-| 46-60 | 219 | 12.2% | 14.0% |
+| 31-45 | 256 | 14.3% | 16.3% |
+| 46-60 | 220 | 12.3% | 14.0% |
 | 61-75 | 145 | 8.1% | 9.2% |
 | 76-90 | 103 | 5.8% | 6.6% |
 | 91-120 | 22 | 1.2% | 1.4% |

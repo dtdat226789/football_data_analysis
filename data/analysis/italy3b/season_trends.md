@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:58:20+00:00
+- Generated: 2026-10-29T02:06:01+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie C - Group B (Italy)
 - Scope: league `italy3b`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.700 | 6.900 |
 | 2024-2025 | 2.900 | 7.800 |
 | 2025-2026 | 2.500 | 6.600 |
-| 2026-2027 | 1.600 | 7.400 |
+| 2026-2027 | 1.500 | 7.400 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

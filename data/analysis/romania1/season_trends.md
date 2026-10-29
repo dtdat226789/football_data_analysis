@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:26:50+00:00
+- Generated: 2026-10-29T02:11:40+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Superliga (Romania)
 - Scope: league `romania1`
@@ -14,7 +14,7 @@
 | 2023-2024 | FCSB | 64 | FC Rapid Bucuresti | 9 pts |
 | 2024-2025 | FCSB | 56 | CFR Cluj | 2 pts |
 | 2025-2026 | Univ. Craiova | 82 | U. Cluj | 9 pts |
-| 2026-2027 | Dinamo Bucuresti | 30 | FC Rapid Bucuresti | 3 pts |
+| 2026-2027 | Dinamo Bucuresti | 30 | Univ. Craiova | 1 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 7 seasons
@@ -28,7 +28,7 @@
 | 2023-2024 | 9 pts |  |
 | 2024-2025 | 2 pts | yes |
 | 2025-2026 | 9 pts |  |
-| 2026-2027 | 3 pts | yes |
+| 2026-2027 | 1 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 13 = last safe, 16 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 64 | 55 | 49 | 43 | 31 | 21 |
 | 2024-2025 | 56 | 54 | 52 | 46 | 31 | 20 |
 | 2025-2026 | 82 | 73 | 68 | 64 | 45 | 34 |
-| 2026-2027 | 30 | 27 | 23 | 21 | 12 | 5 |
+| 2026-2027 | 30 | 29 | 23 | 21 | 12 | 5 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 615 | 2.562 | 40.0% | 33.3% | 26.7% | 12.5% | 40.0 |
 | 2024-2025 | 240 | 553 | 2.304 | 41.7% | 32.5% | 25.8% | 10.8% | 40.12 |
 | 2025-2026 | 350 | 887 | 2.534 | 44.3% | 27.4% | 28.3% | 7.1% | 49.74 |
-| 2026-2027 | 103 | 280 | 2.718 | 53.4% | 24.3% | 22.3% | 6.8% | 17.75 |
+| 2026-2027 | 104 | 285 | 2.74 | 52.9% | 24.0% | 23.1% | 6.7% | 17.94 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 7.684)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.500 | 4.375 |
 | 2024-2025 | 3.625 | 5.000 |
 | 2025-2026 | 4.316 | 7.684 |
-| 2026-2027 | 1.375 | 4.625 |
+| 2026-2027 | 1.375 | 4.500 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

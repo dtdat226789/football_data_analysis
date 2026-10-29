@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T01:41:48+00:00
+- Generated: 2026-10-29T01:54:55+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`
@@ -14,11 +14,11 @@
 | 2023 | Vitoria | 72 | Criciuma | 9 pts |
 | 2024 | Santos | 68 | Sport Recife | 3 pts |
 | 2025 | Coritiba | 62 | Criciuma | 1 pts |
-| 2026 | Novorizontino | 64 | Vila Nova FC | 2 pts |
+| 2026 | Novorizontino | 64 | Juventude | 0 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **3** of 7 seasons
-- Tightest race: **2025** - Coritiba beat Criciuma by **1** pts
+- Tightest race: **2026** - Novorizontino beat Juventude by **0** pts
 
 | season | margin | tight |
 |---|---|---|
@@ -28,7 +28,7 @@
 | 2023 | 9 pts |  |
 | 2024 | 3 pts | yes |
 | 2025 | 1 pts | yes |
-| 2026 | 2 pts | yes |
+| 2026 | 0 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 17 = last safe, 20 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 72 | 63 | 62 | 61 | 34 | - |
 | 2024 | 68 | 65 | 60 | 57 | 34 | - |
 | 2025 | 62 | 61 | 58 | 52 | 34 | - |
-| 2026 | 64 | 62 | 61 | 55 | 37 | 15 |
+| 2026 | 64 | 64 | 61 | 55 | 37 | 15 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 380 | 796 | 2.095 | 46.1% | 29.2% | 24.7% | 11.6% | 48.95 |
 | 2024 | 373 | 815 | 2.185 | 52.3% | 25.2% | 22.5% | 9.9% | 46.8 |
 | 2025 | 380 | 843 | 2.218 | 45.8% | 30.5% | 23.7% | 8.7% | 44.15 |
-| 2026 | 347 | 810 | 2.334 | 44.4% | 27.1% | 28.5% | 8.4% | 47.35 |
+| 2026 | 350 | 817 | 2.334 | 44.6% | 26.9% | 28.6% | 8.3% | 47.8 |
 
 ## 6. View divergence
 - Largest divergence: **2025** (luck view, avg abs position diff = 23.100)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 12.050 | 10.200 |
 | 2024 | 19.700 | 16.450 |
 | 2025 | 23.100 | 18.550 |
-| 2026 | 1.300 | 7.100 |
+| 2026 | 1.600 | 7.300 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

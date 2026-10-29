@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:39:51+00:00",
+  "generated_at": "2026-10-29T01:53:14+00:00",
   "config": {
     "league": "australia",
     "out_dir": "data/analysis/australia",
@@ -613,8 +613,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (2 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 2658,
-        "distinct": 2656,
+        "rows": 2659,
+        "distinct": 2657,
         "duplicates": 2
       }
     },
@@ -623,10 +623,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=5, fgte=5 rows)",
       "details": {
-        "total": 2658,
+        "total": 2659,
         "fgt_inconsistent": 5,
         "fgte_inconsistent": 5,
-        "n_with_fgt": 2403
+        "n_with_fgt": 2404
       }
     },
     {

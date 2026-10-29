@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:01:33+00:00
+- Generated: 2026-10-29T02:07:47+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`
@@ -13,7 +13,7 @@
 | 2023 | RFS | 89 | Riga FC | 1 pts |
 | 2024 | RFS | 90 | Riga FC | 3 pts |
 | 2025 | Riga FC | 88 | RFS | 1 pts |
-| 2026 | RFS | 86 | Riga FC | 7 pts |
+| 2026 | RFS | 86 | Riga FC | 4 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **4** of 6 seasons
@@ -26,7 +26,7 @@
 | 2023 | 1 pts | yes |
 | 2024 | 3 pts | yes |
 | 2025 | 1 pts | yes |
-| 2026 | 7 pts |  |
+| 2026 | 4 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 7 = last safe, 10 = bottom._
@@ -38,7 +38,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 89 | 88 | 53 | 40 | 39 | 14 |
 | 2024 | 90 | 87 | 60 | 39 | 36 | 25 |
 | 2025 | 88 | 87 | 48 | 38 | 36 | 31 |
-| 2026 | 86 | 79 | 48 | 38 | 32 | 18 |
+| 2026 | 86 | 82 | 48 | 38 | 32 | 18 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -58,7 +58,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 182 | 533 | 2.929 | 43.4% | 23.6% | 33.0% | 6.6% | 45.73 |
 | 2024 | 182 | 561 | 3.082 | 42.3% | 18.1% | 39.6% | 6.6% | 46.64 |
 | 2025 | 182 | 535 | 2.94 | 45.6% | 23.6% | 30.8% | 6.0% | 45.73 |
-| 2026 | 169 | 486 | 2.876 | 42.6% | 22.5% | 34.9% | 5.3% | 46.9 |
+| 2026 | 170 | 493 | 2.9 | 42.4% | 22.4% | 35.3% | 5.3% | 47.2 |
 
 ## 6. View divergence
 - Largest divergence: **2023** (goals view, avg abs position diff = 4.545)

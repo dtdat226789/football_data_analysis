@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T01:59:31+00:00
+- Generated: 2026-10-29T02:06:41+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: J2 League (Japan)
 - Scope: league `japan2`

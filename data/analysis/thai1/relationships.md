@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T02:33:50+00:00
+- Generated: 2026-10-29T02:18:30+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Thai League 1 (Thailand)
 - Scope: league `thai1`

@@ -1,6 +1,6 @@
 # Football Charts Database Profile
 - Report: `database_profile`
-- Generated: 2026-10-27T01:58:40+00:00
+- Generated: 2026-10-29T02:06:13+00:00
 - Script: `backend/scripts/profile_database.py` v1.0.0
 - Database: `football_charts` (PostgreSQL 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
 - Scope: league `japan1`
@@ -16,7 +16,7 @@
 | teams | 1209 |
 | team_aliases | 2418 |
 | team_seasons | 5501 |
-| matches | 81797 |
+| matches | 81837 |
 | standings | 16503 |
 
 ### 1.2 Leagues with data
@@ -24,50 +24,50 @@
 - Leagues with match data: `47`
 | api_key | name | country | registered_seasons | matches |
 |---|---|---|---|---|
-| algir1 | Ligue 1 | Algeria | 7 | 1696 |
+| algir1 | Ligue 1 | Algeria | 7 | 1697 |
 | australia | A-League | Australia | 7 | 962 |
 | austria1 | Bundesliga | Austria | 7 | 915 |
 | austria2 | 2. Liga | Austria | 7 | 1503 |
 | azer | Premier League | Azerbaijan | 7 | 1023 |
 | belgium1 | Jupiler Pro League | Belgium | 7 | 1799 |
 | brazil1 | Serie A Betano | Brazil | 7 | 2571 |
-| brazil2 | Serie B | Brazil | 7 | 2620 |
-| bulgaria1 | efbet League | Bulgaria | 7 | 1457 |
+| brazil2 | Serie B | Brazil | 7 | 2623 |
+| bulgaria1 | efbet League | Bulgaria | 7 | 1461 |
 | cha | Championship | England | 7 | 3463 |
 | china | Super League | China | 7 | 1482 |
 | czech1 | Chance Liga | Czech Republic | 7 | 1640 |
 | czech2 | ChNL | Czech Republic | 7 | 1478 |
 | czech3a | 3. CFL - Group A | Czech Republic | 5 | 1087 |
 | czech3b | 3. CFL - Group B | Czech Republic | 7 | 1421 |
-| denmark1 | Superliga | Denmark | 7 | 925 |
+| denmark1 | Superliga | Denmark | 7 | 926 |
 | denmark2 | 1st Division | Denmark | 7 | 848 |
-| develop21 | Professional Development League | England | 1 | 61 |
+| develop21 | Professional Development League | England | 1 | 68 |
 | egypt | Premier League | Egypt | 7 | 1769 |
-| eng1 | League One | England | 7 | 3455 |
-| eng2 | League Two | England | 7 | 3466 |
-| estonia | Meistriliiga | Estonia | 7 | 1167 |
+| eng1 | League One | England | 7 | 3460 |
+| eng2 | League Two | England | 7 | 3468 |
+| estonia | Meistriliiga | Estonia | 7 | 1169 |
 | finland1 | Veikkausliiga | Finland | 7 | 945 |
 | finland2 | Ykkosliiga | Finland | 7 | 933 |
-| france1 | Ligue 1 | France | 7 | 2133 |
-| france2 | Ligue 2 | France | 7 | 2224 |
+| france1 | Ligue 1 | France | 7 | 2134 |
+| france2 | Ligue 2 | France | 7 | 2226 |
 | france3 | Ligue 3 | France | 7 | 1902 |
 | germany-north | Regionalliga North | Germany | 7 | 1699 |
 | germany1 | Bundesliga | Germany | 7 | 1690 |
 | germany2 | 2. Bundesliga | Germany | 7 | 1921 |
 | germany3 | 3. Liga | Germany | 7 | 2383 |
 | greece1 | Super League | Greece | 7 | 1211 |
-| greece2 | Super League 2 | Greece | 7 | 1835 |
+| greece2 | Super League 2 | Greece | 7 | 1836 |
 | holland1 | Eredivisie | Netherlands | 7 | 1941 |
 | holland2 | Eerste Divisie | Netherlands | 7 | 2412 |
 | holland3 | Tweede Divisie | Netherlands | 7 | 1693 |
 | hungary1 | NB I. | Hungary | 7 | 1253 |
 | hungary2 | NB II. | Hungary | 7 | 2013 |
-| india1 | ISL | India | 7 | 725 |
+| india1 | ISL | India | 7 | 726 |
 | ireland1 | Premier Division | Ireland | 7 | 1164 |
 | ireland2 | Division 1 | Ireland | 7 | 1086 |
-| italy1 | Serie A | Italy | 7 | 2360 |
+| italy1 | Serie A | Italy | 7 | 2363 |
 | italy19 | Primavera 1 | Italy | 7 | 2000 |
-| italy2 | Serie B | Italy | 7 | 2370 |
+| italy2 | Serie B | Italy | 7 | 2377 |
 | italy3a | Serie C - Group A | Italy | 7 | 2390 |
 | italy3b | Serie C - Group B | Italy | 7 | 2367 |
 | japan1 | J1 League | Japan | 8 | 2339 |
@@ -91,9 +91,9 @@
 ### 1.4 Duplicate checks
 | check | rows | distinct | duplicates |
 |---|---|---|---|
-| matches.api_id (natural PK) | 81797 | 81797 | 0 |
-| matches (league_season_id, game_index) | 81797 | 81797 | 0 |
-| matches same fixture on same date (league_season, home, away, match_date) | 81797 | 81787 | 10 |
+| matches.api_id (natural PK) | 81837 | 81837 | 0 |
+| matches (league_season_id, game_index) | 81837 | 81837 | 0 |
+| matches same fixture on same date (league_season, home, away, match_date) | 81837 | 81827 | 10 |
 | team_seasons (league_season_id, team_id) | 5501 | 5501 | 0 |
 | team_seasons api_name within a season | 5501 | 5501 | 0 |
 | team_seasons api_slug within a season | 5501 | 5501 | 0 |
@@ -105,20 +105,20 @@
   > **WARNING:** duplicates found, see section 3.
 
 ### 1.5 NULL counts (matches, important fields)
-- Total matches: `81797`
+- Total matches: `81837`
 
 | field | n_null | n_not_null | null_pct |
 |---|---|---|---|
-| match_date | 0 | 81797 | 0.0% |
-| kickoff_time | 0 | 81797 | 0.0% |
-| home_team_id | 0 | 81797 | 0.0% |
-| away_team_id | 0 | 81797 | 0.0% |
-| home_score | 0 | 81797 | 0.0% |
-| away_score | 0 | 81797 | 0.0% |
-| home_ht | 419 | 81378 | 0.5% |
-| away_ht | 419 | 81378 | 0.5% |
-| first_goal_time | 6502 | 75295 | 7.9% |
-| first_goal_time_extra | 6502 | 75295 | 7.9% |
+| match_date | 0 | 81837 | 0.0% |
+| kickoff_time | 0 | 81837 | 0.0% |
+| home_team_id | 0 | 81837 | 0.0% |
+| away_team_id | 0 | 81837 | 0.0% |
+| home_score | 0 | 81837 | 0.0% |
+| away_score | 0 | 81837 | 0.0% |
+| home_ht | 416 | 81421 | 0.5% |
+| away_ht | 416 | 81421 | 0.5% |
+| first_goal_time | 6503 | 75334 | 7.9% |
+| first_goal_time_extra | 6503 | 75334 | 7.9% |
   > Semantics: `home_ht`/`away_ht` NULL together; `first_goal_time`/`first_goal_time_extra` NULL iff goalless.
 
 ### 1.6 Value ranges
@@ -319,8 +319,8 @@ Extreme scorelines (>= 8 total goals):
 - `18.` `SEASON_AVG_GOALS_OUTLIER` details: `{"season": "2026-2027", "season_avg_goals": 2.975, "overall_avg_goals": 2.598, "deviation": 0.377}`
 - `19.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2026-2027", "season_goalless_pct": 5.8, "overall_goalless_pct": 8.0, "deviation_pp": 2.2}`
 - `20.` `HIGH_SCORING_MATCHES` details: `{"n_matches": 21, "threshold": 8, "examples": [{"scoreline": "4-5", "total_goals": 9, "count": 4}, {"scoreline": "3-6", "total_goals": 9, "count": 1}, {"scoreline": "8-0", "total_goals": 8, "count": 1}, {"scoreline": "6-2", "total_goals": 8, "count": 3}, {"scoreline": "5-3", "total_goals": 8, "count": 7}, {"scoreline": "4-4", "total_goals": 8, "count": 3}, {"scoreline": "3-5", "total_goals": 8, "count": 2}]}`
-- `21.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 81797, "distinct": 81787, "duplicates": 10}`
-- `22.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 81797, "fgt_inconsistent": 366, "fgte_inconsistent": 366, "n_with_fgt": 75295}`
+- `21.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 81837, "distinct": 81827, "duplicates": 10}`
+- `22.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 81837, "fgt_inconsistent": 366, "fgte_inconsistent": 366, "n_with_fgt": 75334}`
 - `23.` `STANDINGS_INCOMPLETE` details: `{"season": "2020", "view": "classic", "n_rows": 18, "min_pos": 1, "max_pos": 19, "distinct_teams": 18}`
 - `24.` `STANDINGS_INCOMPLETE` details: `{"season": "2020", "view": "goals", "n_rows": 18, "min_pos": 12, "max_pos": 34, "distinct_teams": 18}`
 - `25.` `STANDINGS_INCOMPLETE` details: `{"season": "2020", "view": "luck", "n_rows": 18, "min_pos": 1, "max_pos": 36, "distinct_teams": 18}`

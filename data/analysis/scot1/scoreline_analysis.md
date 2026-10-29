@@ -1,24 +1,24 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-27T02:28:42+00:00
+- Generated: 2026-10-29T02:13:31+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: League One (Scotland)
 - Scope: league `scot1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1060** across **7** seasons.
+- Matches analysed: **1061** across **7** seasons.
 - Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 134 | 12.6% |
-| 1-0 | 96 | 9.1% |
+| 1-1 | 135 | 12.7% |
+| 1-0 | 96 | 9.0% |
 | 2-1 | 95 | 9.0% |
 | 0-2 | 68 | 6.4% |
 | 0-1 | 67 | 6.3% |
 | 2-0 | 63 | 5.9% |
 | 0-0 | 62 | 5.8% |
-| 2-2 | 61 | 5.8% |
+| 2-2 | 61 | 5.7% |
 | 1-2 | 54 | 5.1% |
 | 3-0 | 48 | 4.5% |
 | 1-3 | 42 | 4.0% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 2-1 | 7 | 11.9% |
-| 0-1 | 6 | 10.2% |
-| 1-1 | 6 | 10.2% |
-| 3-0 | 5 | 8.5% |
-| 0-0 | 4 | 6.8% |
+| 2-1 | 7 | 11.7% |
+| 1-1 | 7 | 11.7% |
+| 0-1 | 6 | 10.0% |
+| 3-0 | 5 | 8.3% |
+| 0-0 | 4 | 6.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -104,10 +104,10 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|
 | 0 | 62 | 5.8% |
 | 1 | 163 | 15.4% |
-| 2 | 265 | 25.0% |
-| 3 | 238 | 22.5% |
+| 2 | 266 | 25.1% |
+| 3 | 238 | 22.4% |
 | 4 | 173 | 16.3% |
-| 5 | 97 | 9.2% |
+| 5 | 97 | 9.1% |
 | 6 | 37 | 3.5% |
 | 7 | 18 | 1.7% |
 | 8 | 5 | 0.5% |
@@ -146,7 +146,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-03 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **795** (draws: **265**)
+- Decided matches: **795** (draws: **266**)
 - Average winning margin: **1.93**
 
 | margin | matches | pct |
@@ -179,7 +179,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 445 | 1-0 | 96 | 21.6% |
-| draw | 265 | 1-1 | 134 | 50.6% |
+| draw | 266 | 1-1 | 135 | 50.8% |
 | away | 350 | 0-2 | 68 | 19.4% |
 
 ---

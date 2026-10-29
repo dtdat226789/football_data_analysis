@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T02:30:58+00:00
+- Generated: 2026-10-29T02:15:44+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`

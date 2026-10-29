@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T01:56:20+00:00
+- Generated: 2026-10-29T02:05:00+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -76,12 +76,12 @@
 | 2026-2027 | 80 | 10 | 15 | 25 | 23 (28.8%) |
 
 ## 6. Scoring intensity
-- First-half goals: **2744** (46.0%)
-- Second-half goals: **3223** (54.0%)
-- Avg first-half goals per match: **1.378**
-- Avg second-half goals per match: **1.619**
+- First-half goals: **2751** (46.0%)
+- Second-half goals: **3227** (54.0%)
+- Avg first-half goals per match: **1.38**
+- Avg second-half goals per match: **1.618**
 - Second-half-only scoring (HT 0-0, FT goals >= 1): **418** (20.9%)
-- *9 match(es) excluded (no HT score recorded).*
+- *6 match(es) excluded (no HT score recorded).*
 
 | season | matches | 1st half | 2nd half | 1st half pct | 2nd half pct |
 |---|---|---|---|---|---|
@@ -91,18 +91,18 @@
 | 2023-2024 | 306 | 430 | 526 | 45.0% | 55.0% |
 | 2024-2025 | 380 | 536 | 628 | 46.0% | 54.0% |
 | 2025-2026 | 382 | 463 | 580 | 44.4% | 55.6% |
-| 2026-2027 | 80 | 129 | 124 | 51.0% | 49.0% |
+| 2026-2027 | 80 | 136 | 128 | 51.5% | 48.5% |
 
 ## 7. First-goal timing
 - Matches with first-goal time recorded: `1892` of `2000` (94.6%)
 - Goalless matches: `108`
-- Min `1` | Max `95` | Mean `28.57` | Median (p50) `22.0`
+- Min `1` | Max `95` | Mean `28.49` | Median (p50) `22.0`
 
 | bucket | count | % of matches | % of scoring matches |
 |---|---|---|---|
-| 1-15 | 706 | 35.3% | 37.3% |
-| 16-30 | 467 | 23.4% | 24.7% |
-| 31-45 | 284 | 14.2% | 15.0% |
+| 1-15 | 708 | 35.4% | 37.4% |
+| 16-30 | 469 | 23.4% | 24.8% |
+| 31-45 | 280 | 14.0% | 14.8% |
 | 46-60 | 221 | 11.1% | 11.7% |
 | 61-75 | 118 | 5.9% | 6.2% |
 | 76-90 | 82 | 4.1% | 4.3% |

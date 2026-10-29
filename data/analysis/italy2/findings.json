@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-27T01:57:20+00:00",
+  "generated_at": "2026-10-29T02:05:29+00:00",
   "config": {
     "league": "italy2",
     "out_dir": "data/analysis/italy2",
@@ -29,7 +29,7 @@
       "path": "data/analysis/italy2/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 39.83
+      "size_kb": 39.84
     },
     {
       "report_name": "matches_analysis",
@@ -43,14 +43,14 @@
       "path": "data/analysis/italy2/goals_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 12.25
+      "size_kb": 12.26
     },
     {
       "report_name": "teams_analysis",
       "path": "data/analysis/italy2/teams_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 56.94
+      "size_kb": 56.93
     },
     {
       "report_name": "season_trends",
@@ -64,7 +64,7 @@
       "path": "data/analysis/italy2/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 325.45
+      "size_kb": 326.42
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "2370 matches: home wins 39.9%, draws 32.2%, away wins 27.9% (945H / 763D / 662A)",
+      "detail": "2377 matches: home wins 39.9%, draws 32.2%, away wins 27.9% (948H / 765D / 664A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,42 +97,42 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 549 times",
+      "detail": "home lead at HT -> home win occurred 551 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "2370 matches produced 5850 goals (avg 2.468 per match)",
+      "detail": "2377 matches produced 5866 goals (avg 2.468 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 55.0% vs away 45.0% of 5850 goals in total (home/away ratio 1.22)",
+      "detail": "home 55.0% vs away 45.0% of 5866 goals in total (home/away ratio 1.22)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1250 of 2370 matches (52.7%)",
+      "detail": "1254 of 2377 matches (52.8%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 650 scoring matches, 30.2% of scoring)",
+      "detail": "minute 1-15 (first goal in 652 scoring matches, 30.2% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 31.49, median 26.0",
+      "detail": "mean 31.48, median 26.5",
       "importance": "low",
       "id": "F8"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.162 per match): first half 2.409 vs last half 2.571 across 7 seasons",
+      "detail": "up (+0.151 per match): first half 2.409 vs last half 2.56 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,35 +188,35 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.900)",
+      "detail": "2023-2024 (luck view, avg abs position diff 2.100)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 368 matches (15.5%)",
+      "detail": "1-1 in 370 matches (15.6%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (251 of 945 home matches, 26.6%)",
+      "detail": "1-0 (251 of 948 home matches, 26.5%)",
       "importance": "low",
       "id": "F18"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (368 of 763 draw matches, 48.2%)",
+      "detail": "1-1 (370 of 765 draw matches, 48.4%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (188 of 662 away matches, 28.4%)",
+      "detail": "0-1 (188 of 664 away matches, 28.3%)",
       "importance": "low",
       "id": "F20"
     },
@@ -251,13 +251,13 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 2370 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2377 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 2370,
+    "n_matches": 2377,
     "avg_goals": 2.468,
     "home_win_pct": 39.9,
     "draw_pct": 32.2,
@@ -265,7 +265,7 @@
     "most_common_scoreline": "1-1",
     "dominant_team": "Frosinone",
     "champion_most_titles": "Empoli",
-    "btts_rate_pct": 52.7
+    "btts_rate_pct": 52.8
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 39.83
+      "size_kb": 39.84
     },
     {
       "module": "matches_analysis",
@@ -304,7 +304,7 @@
         "scoring_intensity",
         "first_goal_timing"
       ],
-      "size_kb": 12.25
+      "size_kb": 12.26
     },
     {
       "module": "teams_analysis",
@@ -317,7 +317,7 @@
         "head_to_head",
         "position_table"
       ],
-      "size_kb": 56.94
+      "size_kb": 56.93
     },
     {
       "module": "season_trends",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 325.45
+      "size_kb": 326.42
     },
     {
       "module": "relationships",
@@ -376,10 +376,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 80 matches, expected 380",
+      "message": "Season 2026-2027 has 87 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 80,
+        "n_matches": 87,
         "expected": 380
       }
     },
@@ -395,23 +395,23 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2021-2022 goalless share 7.1% vs overall 9.2% (deviation 2.1 pp)",
+      "message": "Season 2021-2022 goalless share 7.1% vs overall 9.1% (deviation 2.0 pp)",
       "details": {
         "season": "2021-2022",
         "season_goalless_pct": 7.1,
-        "overall_goalless_pct": 9.2,
-        "deviation_pp": 2.1
+        "overall_goalless_pct": 9.1,
+        "deviation_pp": 2.0
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2022-2023 goalless share 11.1% vs overall 9.2% (deviation 1.9 pp)",
+      "message": "Season 2022-2023 goalless share 11.1% vs overall 9.1% (deviation 2.0 pp)",
       "details": {
         "season": "2022-2023",
         "season_goalless_pct": 11.1,
-        "overall_goalless_pct": 9.2,
-        "deviation_pp": 1.9
+        "overall_goalless_pct": 9.1,
+        "deviation_pp": 2.0
       }
     },
     {
@@ -428,33 +428,33 @@
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 3.8% vs overall 9.2% (deviation 5.4 pp)",
+      "message": "Season 2026-2027 goalless share 3.4% vs overall 9.1% (deviation 5.7 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 3.8,
-        "overall_goalless_pct": 9.2,
-        "deviation_pp": 5.4
+        "season_goalless_pct": 3.4,
+        "overall_goalless_pct": 9.1,
+        "deviation_pp": 5.7
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 27.5% vs overall 32.2%",
+      "message": "Season 2026-2027 draw outcome share 27.6% vs overall 32.2%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 27.5,
+        "season_share": 27.6,
         "overall_share": 32.2
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 away outcome share 36.2% vs overall 27.9%",
+      "message": "Season 2026-2027 away outcome share 35.6% vs overall 27.9%",
       "details": {
         "season": "2026-2027",
         "outcome": "away",
-        "season_share": 36.2,
+        "season_share": 35.6,
         "overall_share": 27.9
       }
     },
@@ -500,8 +500,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 74701,
-        "distinct": 74691,
+        "rows": 74741,
+        "distinct": 74731,
         "duplicates": 10
       }
     },
@@ -510,10 +510,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=362, fgte=362 rows)",
       "details": {
-        "total": 74701,
+        "total": 74741,
         "fgt_inconsistent": 362,
         "fgte_inconsistent": 362,
-        "n_with_fgt": 68885
+        "n_with_fgt": 68924
       }
     }
   ],

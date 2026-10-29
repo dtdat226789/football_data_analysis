@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-27T02:25:05+00:00
+- Generated: 2026-10-29T02:10:08+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`
@@ -9,16 +9,16 @@
 | season | champion | pts | runner-up | margin |
 |---|---|---|---|---|
 | 2025-2026 | FC Porto | 88 | Sporting CP | 6 pts |
-| 2026-2027 | FC Porto | 27 | Benfica | 8 pts |
+| 2026-2027 | FC Porto | 27 | Benfica | 5 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **0** of 2 seasons
-- Tightest race: **2025-2026** - FC Porto beat Sporting CP by **6** pts
+- Tightest race: **2026-2027** - FC Porto beat Benfica by **5** pts
 
 | season | margin | tight |
 |---|---|---|
 | 2025-2026 | 6 pts |  |
-| 2026-2027 | 8 pts |  |
+| 2026-2027 | 5 pts |  |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 15 = last safe, 18 = bottom._
@@ -26,7 +26,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | pos 1 | pos 2 | pos 4 | pos 6 | pos 15 | pos 18 |
 |---|---|---|---|---|---|---|
 | 2025-2026 | 88 | 82 | 59 | 50 | 34 | 21 |
-| 2026-2027 | 27 | 19 | 18 | 17 | 7 | 2 |
+| 2026-2027 | 27 | 22 | 18 | 17 | 7 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -38,7 +38,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
 |---|---|---|---|---|---|---|---|---|
 | 2025-2026 | 308 | 823 | 2.672 | 41.2% | 27.3% | 31.5% | 6.8% | 44.21 |
-| 2026-2027 | 80 | 219 | 2.737 | 37.5% | 22.5% | 40.0% | 5.0% | 12.33 |
+| 2026-2027 | 81 | 222 | 2.741 | 37.0% | 22.2% | 40.7% | 4.9% | 12.5 |
 
 ## 6. View divergence
 - Largest divergence: **2026-2027** (goals view, avg abs position diff = 5.889)
@@ -48,7 +48,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | season | classic vs luck | classic vs goals |
 |---|---|---|
 | 2025-2026 | 3.368 | 4.737 |
-| 2026-2027 | 3.778 | 5.889 |
+| 2026-2027 | 3.667 | 5.889 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

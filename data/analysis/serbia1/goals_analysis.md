@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-27T02:30:50+00:00
+- Generated: 2026-10-29T02:15:37+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`

@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-27T01:47:13+00:00
+- Generated: 2026-10-29T01:59:11+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`

@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-27T02:28:02+00:00
+- Generated: 2026-10-29T02:12:52+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Championship (Scotland)
 - Scope: league `scot-champ`
 
-- Teams: **22** | Seasons: **7** | Matches: **1105**
+- Teams: **22** | Seasons: **7** | Matches: **1106**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -14,7 +14,7 @@
 | Partick Thistle | 6 | 195 | 85 | 62 | 48 | 317 | 289 | 219 | 70 | 52.83 | 1 | 4 | 1 |
 | Ayr | 7 | 219 | 72 | 68 | 79 | 284 | 289 | 292 | -3 | 40.57 | 2 | 8 | 0 |
 | Morton | 7 | 219 | 64 | 72 | 83 | 264 | 242 | 289 | -47 | 37.71 | 5 | 10 | 0 |
-| Dunfermline | 6 | 186 | 56 | 60 | 70 | 228 | 209 | 228 | -19 | 38.0 | 3 | 9 | 0 |
+| Dunfermline | 6 | 187 | 57 | 60 | 70 | 231 | 210 | 228 | -18 | 38.5 | 3 | 9 | 0 |
 | Arbroath | 6 | 185 | 52 | 60 | 73 | 216 | 196 | 258 | -62 | 36.0 | 2 | 10 | 0 |
 | Inverness | 5 | 147 | 54 | 49 | 44 | 211 | 198 | 163 | 35 | 42.2 | 3 | 9 | 0 |
 | Queen's Park | 5 | 157 | 49 | 40 | 68 | 187 | 192 | 231 | -39 | 37.4 | 3 | 9 | 0 |
@@ -31,13 +31,13 @@
 | Ross County | 1 | 36 | 8 | 10 | 18 | 34 | 36 | 57 | -21 | 34.0 | 10 | 10 | 0 |
 | Alloa | 2 | 31 | 8 | 7 | 16 | 31 | 35 | 64 | -29 | 15.5 | 10 | 11 | 0 |
 | Cove Rangers | 1 | 36 | 7 | 10 | 19 | 31 | 38 | 75 | -37 | 31.0 | 10 | 10 | 0 |
-| Stenhousemuir | 2 | 15 | 9 | 3 | 3 | 30 | 20 | 13 | 7 | 15.0 | 2 | 12 | 0 |
+| Stenhousemuir | 2 | 16 | 9 | 3 | 4 | 30 | 20 | 14 | 6 | 15.0 | 2 | 12 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Partick Thistle | 98 | 54 | 29 | 15 | 191 | 97 | 31 | 33 | 33 | 126 | 65 |
-| Dunfermline | 93 | 36 | 31 | 26 | 139 | 93 | 20 | 29 | 44 | 89 | 50 |
+| Dunfermline | 93 | 36 | 31 | 26 | 139 | 94 | 21 | 29 | 44 | 92 | 47 |
 | Raith | 109 | 49 | 32 | 28 | 179 | 110 | 39 | 28 | 43 | 145 | 34 |
 | Morton | 110 | 39 | 31 | 40 | 148 | 109 | 25 | 41 | 43 | 116 | 32 |
 | Arbroath | 92 | 29 | 36 | 27 | 123 | 93 | 23 | 24 | 46 | 93 | 30 |
@@ -53,7 +53,7 @@
 | Cove Rangers | 18 | 5 | 4 | 9 | 19 | 18 | 2 | 6 | 10 | 12 | 7 |
 | Hamilton | 54 | 14 | 14 | 26 | 56 | 54 | 13 | 14 | 27 | 53 | 3 |
 | Alloa | 16 | 4 | 5 | 7 | 17 | 15 | 4 | 2 | 9 | 14 | 3 |
-| Stenhousemuir | 7 | 5 | 1 | 1 | 16 | 8 | 4 | 2 | 2 | 14 | 2 |
+| Stenhousemuir | 8 | 5 | 1 | 2 | 16 | 8 | 4 | 2 | 2 | 14 | 2 |
 | St Johnstone | 18 | 11 | 6 | 1 | 39 | 18 | 11 | 5 | 2 | 38 | 1 |
 | Queen of South | 32 | 8 | 9 | 15 | 33 | 33 | 9 | 6 | 18 | 33 | 0 |
 | Inverness | 73 | 26 | 26 | 21 | 104 | 74 | 28 | 23 | 23 | 107 | -3 |
@@ -67,7 +67,7 @@
 | 2 | Hearts | 2.11 |
 | 3 | Dundee Utd | 2.08 |
 | 4 | Falkirk | 2.03 |
-| 5 | Stenhousemuir | 2.00 |
+| 5 | Stenhousemuir | 1.88 |
 
 ### Most goals scored
 | rank | team | goals |
@@ -76,7 +76,7 @@
 | 2 | Partick Thistle | 289 |
 | 3 | Ayr | 289 |
 | 4 | Morton | 242 |
-| 5 | Dunfermline | 209 |
+| 5 | Dunfermline | 210 |
 
 ### Best goal difference
 | rank | team | GD |
@@ -93,8 +93,8 @@
 | 1 | Dundee Utd | 0.639 |
 | 2 | St Johnstone | 0.694 |
 | 3 | Kilmarnock | 0.750 |
-| 4 | Stenhousemuir | 0.786 |
-| 5 | Livingston | 0.792 |
+| 4 | Livingston | 0.792 |
+| 5 | Stenhousemuir | 0.800 |
 
 ## 4. Team consistency
 - Teams present in all **7** seasons: **3**
@@ -102,7 +102,7 @@
 Ayr, Morton, Raith
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **154** (showing the 15 most frequent)
+- Distinct fixtures: **155** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -131,9 +131,9 @@ _Cells show final position; '-' when the team was absent from that season._
 | Partick Thistle | - | 4 | 4 | 3 | 4 | 2 | 1 |
 | Ayr | 8 | 8 | 2 | 7 | 3 | 7 | 7 |
 | Morton | 9 | 7 | 5 | 5 | 6 | 8 | 10 |
-| Dunfermline | 4 | 9 | - | 6 | 8 | 3 | 5 |
+| Dunfermline | 4 | 9 | - | 6 | 8 | 3 | 4 |
 | Arbroath | 7 | 2 | 8 | 10 | - | 4 | 8 |
-| Inverness | 5 | 3 | 6 | 9 | - | - | 4 |
+| Inverness | 5 | 3 | 6 | 9 | - | - | 5 |
 | Queen's Park | - | - | 3 | 8 | 9 | 6 | 9 |
 | Airdrieonians | - | - | - | 4 | 10 | 9 | - |
 | Hamilton | - | 6 | 9 | - | 7 | - | - |
