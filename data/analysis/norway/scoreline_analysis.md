@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:09:18+00:00
+- Generated: 2026-10-30T04:03:35+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Eliteserien (Norway)
 - Scope: league `norway`

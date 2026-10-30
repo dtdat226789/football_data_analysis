@@ -101,8 +101,10 @@ data/validation/by-league/
 # =========================
 # The per-(league, season) dumps produced by collect_all_leagues.py are
 # byte-for-byte regenerable from the Football Charts API unseen/rebuildable;
-# only the premier historical fixture set (six complete seasons used by the
-# database build and the test suite) and the catalog files are committed.
+# only the premier fixture set (the six complete historical seasons plus the
+# in-progress 2026-2027 snapshot used by the database build and the test suite)
+# and the catalog files are committed. CI runs without an API key, so any
+# season the tests expect must be present here.
 data/raw/*/
 !data/raw/premier/
 data/raw/premier/*/
@@ -117,6 +119,7 @@ data/raw/match_detail_*.json
 !data/raw/premier/2023-2024/
 !data/raw/premier/2024-2025/
 !data/raw/premier/2025-2026/
+!data/raw/premier/2026-2027/
 !data/raw/leagues.json
 !data/raw/league_teams.json
 

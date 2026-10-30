@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T01:55:06+00:00
+- Generated: 2026-10-30T03:46:18+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: efbet League (Bulgaria)
 - Scope: league `bulgaria1`

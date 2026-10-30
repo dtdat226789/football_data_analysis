@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:02:49+00:00
+- Generated: 2026-10-30T03:54:55+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Eerste Divisie (Netherlands)
 - Scope: league `holland2`

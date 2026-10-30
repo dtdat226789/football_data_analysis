@@ -4,7 +4,7 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:06:31+00:00",
+  "generated_at": "2026-10-30T04:00:10+00:00",
   "config": {
     "league": "japan2",
     "out_dir": "data/analysis/japan2",
@@ -30,7 +30,7 @@
       "teams": 1229,
       "team_aliases": 2458,
       "team_seasons": 5629,
-      "matches": 84445,
+      "matches": 84465,
       "standings": 16887
     },
     "leagues": [
@@ -137,14 +137,14 @@
         "name": "3. CFL - Group A",
         "country": "Czech Republic",
         "n_registered_seasons": 5,
-        "n_matches": 1087
+        "n_matches": 1089
       },
       {
         "api_key": "czech3b",
         "name": "3. CFL - Group B",
         "country": "Czech Republic",
         "n_registered_seasons": 7,
-        "n_matches": 1421
+        "n_matches": 1423
       },
       {
         "api_key": "denmark1",
@@ -172,7 +172,7 @@
         "name": "Premier League",
         "country": "Egypt",
         "n_registered_seasons": 7,
-        "n_matches": 1769
+        "n_matches": 1771
       },
       {
         "api_key": "eng1",
@@ -193,14 +193,14 @@
         "name": "Meistriliiga",
         "country": "Estonia",
         "n_registered_seasons": 7,
-        "n_matches": 1169
+        "n_matches": 1171
       },
       {
         "api_key": "finland1",
         "name": "Veikkausliiga",
         "country": "Finland",
         "n_registered_seasons": 7,
-        "n_matches": 945
+        "n_matches": 946
       },
       {
         "api_key": "finland2",
@@ -235,7 +235,7 @@
         "name": "Regionalliga North",
         "country": "Germany",
         "n_registered_seasons": 7,
-        "n_matches": 1699
+        "n_matches": 1700
       },
       {
         "api_key": "germany1",
@@ -312,7 +312,7 @@
         "name": "ISL",
         "country": "India",
         "n_registered_seasons": 7,
-        "n_matches": 726
+        "n_matches": 727
       },
       {
         "api_key": "ireland1",
@@ -333,7 +333,7 @@
         "name": "Serie A",
         "country": "Italy",
         "n_registered_seasons": 7,
-        "n_matches": 2363
+        "n_matches": 2368
       },
       {
         "api_key": "italy19",
@@ -347,7 +347,7 @@
         "name": "Serie B",
         "country": "Italy",
         "n_registered_seasons": 7,
-        "n_matches": 2377
+        "n_matches": 2380
       },
       {
         "api_key": "italy3a",
@@ -361,7 +361,7 @@
         "name": "Serie C - Group B",
         "country": "Italy",
         "n_registered_seasons": 7,
-        "n_matches": 2367
+        "n_matches": 2368
       },
       {
         "api_key": "japan1",
@@ -785,20 +785,20 @@
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 84445,
-        "distinct": 84445,
+        "rows": 84465,
+        "distinct": 84465,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 84445,
-        "distinct": 84445,
+        "rows": 84465,
+        "distinct": 84465,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 84445,
-        "distinct": 84435,
+        "rows": 84465,
+        "distinct": 84455,
         "duplicates": 10
       },
       {
@@ -851,65 +851,65 @@
       }
     ],
     "null_counts": {
-      "total": 84445,
+      "total": 84465,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 84445,
+          "n_not_null": 84465,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 84445,
+          "n_not_null": 84465,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 84445,
+          "n_not_null": 84465,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 84445,
+          "n_not_null": 84465,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 84445,
+          "n_not_null": 84465,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 84445,
+          "n_not_null": 84465,
           "null_pct": 0.0
         },
         "home_ht": {
           "n_null": 416,
-          "n_not_null": 84029,
+          "n_not_null": 84049,
           "null_pct": 0.5
         },
         "away_ht": {
           "n_null": 416,
-          "n_not_null": 84029,
+          "n_not_null": 84049,
           "null_pct": 0.5
         },
         "first_goal_time": {
-          "n_null": 6745,
-          "n_not_null": 77700,
+          "n_null": 6748,
+          "n_not_null": 77717,
           "null_pct": 8.0
         },
         "first_goal_time_extra": {
-          "n_null": 6745,
-          "n_not_null": 77700,
+          "n_null": 6748,
+          "n_not_null": 77717,
           "null_pct": 8.0
         }
       }
     },
     "first_goal_consistency": {
-      "total": 84445,
+      "total": 84465,
       "fgt_inconsistent": 366,
       "fgte_inconsistent": 366,
-      "n_with_fgt": 77700
+      "n_with_fgt": 77717
     },
     "value_ranges": {
       "min_home": 0,
@@ -1638,8 +1638,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 84445,
-        "distinct": 84435,
+        "rows": 84465,
+        "distinct": 84455,
         "duplicates": 10
       }
     },
@@ -1648,10 +1648,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=366, fgte=366 rows)",
       "details": {
-        "total": 84445,
+        "total": 84465,
         "fgt_inconsistent": 366,
         "fgte_inconsistent": 366,
-        "n_with_fgt": 77700
+        "n_with_fgt": 77717
       }
     },
     {

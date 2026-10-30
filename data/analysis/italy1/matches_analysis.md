@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:04:41+00:00
+- Generated: 2026-10-30T03:58:05+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie A (Italy)
 - Scope: league `italy1`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2363 |
-| Home wins | 962 (40.7%) |
-| Draws | 627 (26.5%) |
-| Away wins | 774 (32.8%) |
-| Total goals | 6372 |
+| Matches | 2368 |
+| Home wins | 963 (40.7%) |
+| Draws | 628 (26.5%) |
+| Away wins | 777 (32.8%) |
+| Total goals | 6387 |
 | Average goals per match | 2.697 |
-| Goalless matches | 156 (6.6%) |
+| Goalless matches | 157 (6.6%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,19 +25,19 @@
 | 2023-2024 | 380 | 159 (41.8%) | 112 (29.5%) | 109 (28.7%) | 992 | 2.611 | 30 (7.9%) |
 | 2024-2025 | 380 | 151 (39.7%) | 108 (28.4%) | 121 (31.8%) | 973 | 2.561 | 28 (7.4%) |
 | 2025-2026 | 380 | 148 (38.9%) | 99 (26.1%) | 133 (35.0%) | 922 | 2.426 | 36 (9.5%) |
-| 2026-2027 | 83 | 39 (47.0%) | 14 (16.9%) | 30 (36.1%) | 259 | 3.12 | 1 (1.2%) |
+| 2026-2027 | 88 | 40 (45.5%) | 15 (17.0%) | 33 (37.5%) | 274 | 3.114 | 2 (2.3%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 566 (74.6%) | 136 (17.9%) | 57 (7.5%) | 759 |
-| HT draw | 332 (34.8%) | 357 (37.5%) | 264 (27.7%) | 953 |
+| HT home lead | 567 (74.5%) | 136 (17.9%) | 58 (7.6%) | 761 |
+| HT draw | 332 (34.7%) | 358 (37.4%) | 266 (27.8%) | 956 |
 | HT away lead | 63 (9.7%) | 134 (20.6%) | 453 (69.7%) | 650 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **63** (2.7%)
-- Away comebacks (trailing at HT, won at FT): **57** (2.4%)
+- Away comebacks (trailing at HT, won at FT): **58** (2.4%)
 
 ### Home comebacks
 | season | home | away | HT | FT |
@@ -166,37 +166,38 @@
 | 2025-2026 | Como | Inter | 2-1 | 3-4 |
 | 2025-2026 | Cremonese | Lazio | 1-0 | 1-2 |
 | 2026-2027 | Torino | Como | 1-0 | 1-3 |
+| 2026-2027 | AC Milan | Bologna | 2-1 | 2-4 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 759 | 566 (74.6%) | 136 (17.9%) | 57 (7.5%) |
+| Home lead | 761 | 567 (74.5%) | 136 (17.9%) | 58 (7.6%) |
 | Away lead | 650 | 453 (69.7%) | 134 (20.6%) | 63 (9.7%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 332 | 34.8% |
-| Draw | 357 | 37.5% |
-| Away win | 264 | 27.7% |
+| Home win | 332 | 34.7% |
+| Draw | 358 | 37.4% |
+| Away win | 266 | 27.8% |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2206` of `2363` (93.4%)
+- Matches with a first-goal time recorded: `2210` of `2368` (93.3%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 727 | 30.8% | 329 (45.3%) | 158 (21.7%) | 240 (33.0%) |
-| 16-30 | 529 | 22.4% | 208 (39.3%) | 128 (24.2%) | 193 (36.5%) |
+| 1-15 | 730 | 30.8% | 330 (45.2%) | 158 (21.6%) | 242 (33.2%) |
+| 16-30 | 529 | 22.3% | 208 (39.3%) | 128 (24.2%) | 193 (36.5%) |
 | 31-45 | 366 | 15.5% | 162 (44.3%) | 74 (20.2%) | 130 (35.5%) |
 | 46-60 | 300 | 12.7% | 133 (44.3%) | 65 (21.7%) | 102 (34.0%) |
 | 61-75 | 165 | 7.0% | 74 (44.8%) | 29 (17.6%) | 62 (37.6%) |
-| 76-90 | 90 | 3.8% | 39 (43.3%) | 15 (16.7%) | 36 (40.0%) |
+| 76-90 | 91 | 3.8% | 39 (42.9%) | 15 (16.5%) | 37 (40.7%) |
 | 91-120 | 29 | 1.2% | 16 (55.2%) | 2 (6.9%) | 11 (37.9%) |
 
 ## 7. Goalless matches
-- Overall: **156** of `2363` (6.6%)
+- Overall: **157** of `2368` (6.6%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -206,7 +207,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 30 | 7.9% |
 | 2024-2025 | 380 | 28 | 7.4% |
 | 2025-2026 | 380 | 36 | 9.5% |
-| 2026-2027 | 83 | 1 | 1.2% |
+| 2026-2027 | 88 | 2 | 2.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

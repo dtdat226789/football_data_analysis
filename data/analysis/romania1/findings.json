@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:11:46+00:00",
+  "generated_at": "2026-10-30T04:07:39+00:00",
   "config": {
     "league": "romania1",
     "out_dir": "data/analysis/romania1",
@@ -188,7 +188,7 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 1.375)",
+      "detail": "2026-2027 (luck view, avg abs position diff 1.500)",
       "importance": "low",
       "id": "F16"
     },
@@ -659,8 +659,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 113176,
-        "distinct": 113162,
+        "rows": 113202,
+        "distinct": 113188,
         "duplicates": 14
       }
     },
@@ -669,10 +669,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=414, fgte=414 rows)",
       "details": {
-        "total": 113176,
+        "total": 113202,
         "fgt_inconsistent": 414,
         "fgte_inconsistent": 414,
-        "n_with_fgt": 104105
+        "n_with_fgt": 104128
       }
     },
     {

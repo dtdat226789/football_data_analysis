@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T01:59:58+00:00
+- Generated: 2026-10-30T03:51:35+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ligue 2 (France)
 - Scope: league `france2`

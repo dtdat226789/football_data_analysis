@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:03:06+00:00",
+  "generated_at": "2026-10-30T03:55:27+00:00",
   "config": {
     "league": "holland3",
     "out_dir": "data/analysis/holland3",
@@ -635,8 +635,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 61759,
-        "distinct": 61749,
+        "rows": 61769,
+        "distinct": 61759,
         "duplicates": 10
       }
     },
@@ -645,10 +645,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=339, fgte=339 rows)",
       "details": {
-        "total": 61759,
+        "total": 61769,
         "fgt_inconsistent": 339,
         "fgte_inconsistent": 339,
-        "n_with_fgt": 56886
+        "n_with_fgt": 56894
       }
     },
     {

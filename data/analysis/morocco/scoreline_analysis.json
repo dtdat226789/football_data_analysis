@@ -4,7 +4,7 @@
     "name": "backend/scripts/analyze_scorelines.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:08:22+00:00",
+  "generated_at": "2026-10-30T04:02:28+00:00",
   "config": {
     "league": "morocco",
     "out_dir": "data/analysis/morocco",
@@ -24,13 +24,13 @@
     "url": "https://www.football-charts.com/leagues/morocco/botola-pro"
   },
   "scoreline_frequency": {
-    "n_matches": 1483,
+    "n_matches": 1485,
     "n_distinct_scorelines": 35,
     "top": [
       {
         "scoreline": "1-1",
-        "count": 217,
-        "pct": 14.6
+        "count": 218,
+        "pct": 14.7
       },
       {
         "scoreline": "0-0",
@@ -53,19 +53,19 @@
         "pct": 9.0
       },
       {
+        "scoreline": "2-0",
+        "count": 102,
+        "pct": 6.9
+      },
+      {
         "scoreline": "1-2",
         "count": 102,
         "pct": 6.9
       },
       {
-        "scoreline": "2-0",
-        "count": 101,
-        "pct": 6.8
-      },
-      {
         "scoreline": "0-2",
         "count": 69,
-        "pct": 4.7
+        "pct": 4.6
       },
       {
         "scoreline": "2-2",
@@ -316,33 +316,33 @@
         {
           "scoreline": "0-1",
           "count": 6,
-          "pct": 17.1
+          "pct": 16.2
         },
         {
           "scoreline": "0-0",
           "count": 5,
-          "pct": 14.3
+          "pct": 13.5
+        },
+        {
+          "scoreline": "1-1",
+          "count": 5,
+          "pct": 13.5
         },
         {
           "scoreline": "2-1",
           "count": 4,
-          "pct": 11.4
-        },
-        {
-          "scoreline": "1-1",
-          "count": 4,
-          "pct": 11.4
+          "pct": 10.8
         },
         {
           "scoreline": "1-0",
           "count": 3,
-          "pct": 8.6
+          "pct": 8.1
         }
       ]
     }
   ],
   "total_goal_histogram": {
-    "n_matches": 1483,
+    "n_matches": 1485,
     "cap": 10,
     "buckets": [
       {
@@ -360,8 +360,8 @@
       {
         "goals": 2,
         "label": "2",
-        "count": 387,
-        "pct": 26.1
+        "count": 389,
+        "pct": 26.2
       },
       {
         "goals": 3,
@@ -548,21 +548,21 @@
     ]
   },
   "margin_distribution": {
-    "n_decided": 1008,
-    "n_draws": 475,
+    "n_decided": 1009,
+    "n_draws": 476,
     "avg_margin": 1.53,
     "distribution": [
       {
         "margin": 1,
         "label": "1",
         "count": 630,
-        "pct": 62.5
+        "pct": 62.4
       },
       {
         "margin": 2,
         "label": "2",
-        "count": 255,
-        "pct": 25.3
+        "count": 256,
+        "pct": 25.4
       },
       {
         "margin": 3,
@@ -574,7 +574,7 @@
   },
   "margin_by_outcome": {
     "home": {
-      "n_matches": 592,
+      "n_matches": 593,
       "matches": [
         {
           "season": "2020-2021",
@@ -5311,6 +5311,14 @@
           "scoreline": "4-1",
           "margin": 3,
           "match_date": "2026-10-17"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-10-28"
         }
       ],
       "distribution": [
@@ -5318,19 +5326,19 @@
           "margin": 1,
           "label": "1",
           "count": 369,
-          "pct": 62.3
+          "pct": 62.2
         },
         {
           "margin": 2,
           "label": "2",
-          "count": 151,
-          "pct": 25.5
+          "count": 152,
+          "pct": 25.6
         },
         {
           "margin": 3,
           "label": "3+",
           "count": 72,
-          "pct": 12.2
+          "pct": 12.1
         }
       ],
       "avg_margin": 1.52,
@@ -8598,17 +8606,17 @@
         {
           "season": "2026-2027",
           "home_score": 0,
-          "away_score": 1,
-          "scoreline": "0-1",
-          "margin": 1,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
           "match_date": "2026-10-03"
         },
         {
           "season": "2026-2027",
           "home_score": 0,
-          "away_score": 2,
-          "scoreline": "0-2",
-          "margin": 2,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
           "match_date": "2026-10-03"
         },
         {
@@ -8694,16 +8702,16 @@
   },
   "common_scorelines": {
     "home": {
-      "n_matches": 592,
+      "n_matches": 593,
       "scoreline": "1-0",
       "count": 178,
-      "pct": 30.1
+      "pct": 30.0
     },
     "draw": {
-      "n_matches": 475,
+      "n_matches": 476,
       "scoreline": "1-1",
-      "count": 217,
-      "pct": 45.7
+      "count": 218,
+      "pct": 45.8
     },
     "away": {
       "n_matches": 416,

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:16:58+00:00
+- Generated: 2026-10-30T04:13:39+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: LaLiga2 (Spain)
 - Scope: league `spain2`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.455 | 6.818 |
 | 2024-2025 | 2.636 | 6.636 |
 | 2025-2026 | 2.696 | 5.130 |
-| 2026-2027 | 1.727 | 8.727 |
+| 2026-2027 | 1.818 | 8.727 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

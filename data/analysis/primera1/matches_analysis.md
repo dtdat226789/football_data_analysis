@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:10:57+00:00
+- Generated: 2026-10-30T04:06:27+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Primera RFEF - Group 1 (Spain)
 - Scope: league `primera1`

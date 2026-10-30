@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:04:25+00:00
+- Generated: 2026-10-30T03:57:44+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Division 1 (Ireland)
 - Scope: league `ireland2`

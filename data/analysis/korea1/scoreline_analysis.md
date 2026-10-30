@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:06:56+00:00
+- Generated: 2026-10-30T04:00:41+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`

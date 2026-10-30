@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:59:42+00:00
+- Generated: 2026-10-30T03:51:18+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ligue 1 (France)
 - Scope: league `france1`

@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:19:31+00:00
+- Generated: 2026-10-30T04:15:39+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premiere Ligue Women (France)
 - Scope: league `wfrance1`

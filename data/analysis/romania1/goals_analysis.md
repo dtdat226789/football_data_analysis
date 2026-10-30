@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:11:36+00:00
+- Generated: 2026-10-30T04:07:26+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Superliga (Romania)
 - Scope: league `romania1`

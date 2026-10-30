@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:08:26+00:00
+- Generated: 2026-10-30T04:02:33+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`
@@ -10,48 +10,48 @@
 |---|---|---|---|---|
 | database_profile | data/analysis/morocco/database_profile.json | yes | yes | 48.74 |
 | matches_analysis | data/analysis/morocco/matches_analysis.json | yes | yes | 18.28 |
-| goals_analysis | data/analysis/morocco/goals_analysis.json | yes | yes | 12.40 |
+| goals_analysis | data/analysis/morocco/goals_analysis.json | yes | yes | 12.41 |
 | teams_analysis | data/analysis/morocco/teams_analysis.json | yes | yes | 36.18 |
 | season_trends | data/analysis/morocco/season_trends.json | yes | yes | 10.48 |
-| scoreline_analysis | data/analysis/morocco/scoreline_analysis.json | yes | yes | 206.90 |
+| scoreline_analysis | data/analysis/morocco/scoreline_analysis.json | yes | yes | 207.10 |
 | relationships | data/analysis/morocco/relationships.json | yes | yes | 13.77 |
 - Coverage: **7** of **7** module reports found (all reports present)
 
 ## 2. Key findings
-- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 1483 matches: home wins 39.9%, draws 32.0%, away wins 28.1% (592H / 475D / 416A)
+- **F1** · `matches_analysis` · *[medium]* — **Outcome split across all seasons** — 1485 matches: home wins 39.9%, draws 32.1%, away wins 28.0% (593H / 476D / 416A)
 - **F2** · `matches_analysis` · *[medium]* — **Comeback wins** — 32 home and 22 away comebacks (trailing at HT but winning at FT)
 - **F3** · `matches_analysis` · *[low]* — **Most common HT/FT flow** — home lead at HT -> home win occurred 318 times
-- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1483 matches produced 3287 goals (avg 2.216 per match)
-- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 54.0% vs away 46.0% of 3287 goals in total (home/away ratio 1.17)
-- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 709 of 1483 matches (47.8%)
+- **F4** · `goals_analysis` · *[medium]* — **Average goals per match** — 1485 matches produced 3291 goals (avg 2.216 per match)
+- **F5** · `goals_analysis` · *[medium]* — **Home goal share** — home 54.0% vs away 46.0% of 3291 goals in total (home/away ratio 1.17)
+- **F6** · `goals_analysis` · *[medium]* — **Both teams to score** — 710 of 1485 matches (47.8%)
 - **F7** · `goals_analysis` · *[low]* — **Most common first-goal bucket** — minute 1-15 (first goal in 357 scoring matches, 27.7% of scoring)
-- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.93, median 31.0
-- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — FAR Rabat leads with 353 points across 7 seasons (1 title(s), GD 141)
+- **F8** · `goals_analysis` · *[low]* — **Average first goal minute** — mean 34.99, median 31.0
+- **F9** · `teams_analysis` · *[high]* — **Dominant team by lifetime points** — FAR Rabat leads with 356 points across 7 seasons (1 title(s), GD 143)
 - **F10** · `teams_analysis` · *[medium]* — **Team consistency** — 7 teams present in every one of the 7 seasons (Berkane, FAR Rabat, FUS Rabat, Hassania Agadir, IR Tanger...)
-- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Raja Casablanca earns 55 more points at home than away (200 home vs 145 away)
+- **F11** · `teams_analysis` · *[medium]* — **Biggest home advantage** — Raja Casablanca earns 56 more points at home than away (201 home vs 145 away)
 - **F12** · `season_trends` · *[high]* — **Champion with most titles** — Wydad won 2 of 7 championship(s) on record
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026-2027: COD Meknes beat Kawkab Marrakech by 0 pts
-- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.151 per match): first half 2.182 vs last half 2.333 across 7 seasons
+- **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.142 per match): first half 2.182 vs last half 2.324 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025-2026 (goals view, avg abs position diff 6.706)
 - **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.625)
-- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 217 matches (14.6%)
-- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (178 of 592 home matches, 30.1%)
-- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (217 of 475 draw matches, 45.7%)
+- **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 218 matches (14.7%)
+- **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (178 of 593 home matches, 30.0%)
+- **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (218 of 476 draw matches, 45.8%)
 - **F20** · `scoreline_analysis` · *[low]* — **Most common away-win scoreline** — 0-1 (134 of 416 away matches, 32.2%)
 - **F21** · `scoreline_analysis` · *[low]* — **Extreme scorelines** — 16 match(es) with >= 7 total goals
 - **F22** · `relationships` · *[medium]* — **Strongest correlation with total goals** — away_team_away_conceded_avg |corr| = 0.0743 (n=1448 leakage-safe rows)
 - **F23** · `relationships` · *[medium]* — **Most outcome-separating feature** — points_difference spreads group means over 6.904: home 2.822, draw -0.664, away -4.082
 - **F24** · `database_profile` · *[high]* — **Data-quality warnings (43)** — Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED
-- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 1483 matches observed
+- **F25** · `database_profile` · *[medium]* — **Data coverage** — 7 of 7 registered seasons populated (100.0%); 1485 matches observed
 
 ## 3. Cross-module headline stats
 | stat | value |
 |---|---|
-| Matches analysed | 1483 |
+| Matches analysed | 1485 |
 | Average goals per match | 2.216 |
 | Home win rate | 39.9% |
-| Draw rate | 32.0% |
-| Away win rate | 28.1% |
+| Draw rate | 32.1% |
+| Away win rate | 28.0% |
 | Most common scoreline | 1-1 |
 | Dominant team (lifetime points) | FAR Rabat |
 | Champion with most titles | Wydad |
@@ -62,10 +62,10 @@
 |---|---|---|---|
 | database_profile | database_profile | observed, calculated, warnings | 48.74 |
 | matches_analysis | matches_analysis | overall, per_season, ht_ft_matrix, comebacks, ht_lead_conversion, first_goal_timing, goalless | 18.28 |
-| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.40 |
+| goals_analysis | goals_analysis | goals_distribution, goals_per_season, goal_share, btts, clean_sheets, scoring_intensity, first_goal_timing | 12.41 |
 | teams_analysis | teams_analysis | teams, home_away, top_performers, consistent_teams, head_to_head, position_table | 36.18 |
 | season_trends | season_trends | champions, title_race, points_thresholds, relegation_battle, league_trends, view_divergence | 10.48 |
-| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 206.90 |
+| scoreline_analysis | scoreline_analysis | scoreline_frequency, scoreline_per_season, total_goal_histogram, extreme_scorelines, margin_distribution, margin_by_outcome, common_scorelines | 207.10 |
 | relationships | relationships | n_matches, feature_count, correlation_matrix, form_vs_outcome, position_vs_outcome, rest_advantage, home_quality, feature_by_result | 13.77 |
 
 ## 5. Notable anomalies
@@ -81,13 +81,13 @@
 - **10.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2024-2025 has 16 teams, expected 20
 - **11.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 248 matches, expected 380
 - **12.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2025-2026 has 17 teams, expected 20
-- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 35 matches, expected 380
+- **13.** `MATCH_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 37 matches, expected 380
 - **14.** `TEAM_COUNT_UNEXPECTED` *(warning)* — Season 2026-2027 has 16 teams, expected 20
 - **15.** `SEASON_STATE_NOT_COMPLETE` *(warning)* — Season 2026-2027 has data but state is 'in_progress'
 - **16.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2021-2022 goalless share 16.7% vs overall 13.1% (deviation 3.6 pp)
 - **17.** `GOALLESS_SHARE_OUTLIER` *(warning)* — Season 2024-2025 goalless share 9.2% vs overall 13.1% (deviation 3.9 pp)
-- **18.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 home outcome share 22.9% vs overall 39.9%
-- **19.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 away outcome share 45.7% vs overall 28.1%
+- **18.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 home outcome share 24.3% vs overall 39.9%
+- **19.** `OUTCOME_SHARE_OUTLIER` *(warning)* — Season 2026-2027 away outcome share 43.2% vs overall 28.0%
 - **20.** `HIGH_SCORING_MATCHES` *(warning)* — 3 match(es) with >= 8 total goals (extreme scorelines)
 - **21.** `DUPLICATE_ROWS` *(warning)* — Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)
 - **22.** `FIRST_GOAL_NULL_INCONSISTENCY` *(warning)* — first_goal_time/first_goal_time_extra NULL semantics broken (fgt=388, fgte=388 rows)

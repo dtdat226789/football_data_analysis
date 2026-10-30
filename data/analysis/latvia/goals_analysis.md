@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:07:43+00:00
+- Generated: 2026-10-30T04:01:40+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`

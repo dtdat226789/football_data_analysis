@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:16:40+00:00
+- Generated: 2026-10-30T04:13:27+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: LaLiga (Spain)
 - Scope: league `spain1`

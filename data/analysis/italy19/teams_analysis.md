@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:05:02+00:00
+- Generated: 2026-10-30T03:58:31+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`

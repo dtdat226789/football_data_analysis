@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:14:25+00:00
+- Generated: 2026-10-30T04:11:51+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Segunda RFEF - Group 2 (Spain)
 - Scope: league `segunda2`

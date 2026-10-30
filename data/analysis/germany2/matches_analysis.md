@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:01:07+00:00
+- Generated: 2026-10-30T03:52:52+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: 2. Bundesliga (Germany)
 - Scope: league `germany2`

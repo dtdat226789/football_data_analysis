@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:07:00+00:00
+- Generated: 2026-10-30T04:00:45+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`

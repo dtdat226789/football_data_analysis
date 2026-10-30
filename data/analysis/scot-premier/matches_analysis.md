@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:13:07+00:00
+- Generated: 2026-10-30T04:09:47+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`
@@ -8,13 +8,13 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1284 |
-| Home wins | 574 (44.7%) |
-| Draws | 307 (23.9%) |
-| Away wins | 403 (31.4%) |
-| Total goals | 3471 |
-| Average goals per match | 2.703 |
-| Goalless matches | 83 (6.5%) |
+| Matches | 1290 |
+| Home wins | 575 (44.6%) |
+| Draws | 311 (24.1%) |
+| Away wins | 404 (31.3%) |
+| Total goals | 3490 |
+| Average goals per match | 2.705 |
+| Goalless matches | 83 (6.4%) |
 
 ## 2. Per-season breakdown
 | season | matches | home wins | draws | away wins | total goals | avg goals | goalless |
@@ -25,14 +25,14 @@
 | 2023-2024 | 198 | 84 (42.4%) | 54 (27.3%) | 60 (30.3%) | 526 | 2.657 | 14 (7.1%) |
 | 2024-2025 | 198 | 94 (47.5%) | 41 (20.7%) | 63 (31.8%) | 584 | 2.949 | 10 (5.1%) |
 | 2025-2026 | 234 | 105 (44.9%) | 64 (27.4%) | 65 (27.8%) | 643 | 2.748 | 17 (7.3%) |
-| 2026-2027 | 60 | 26 (43.3%) | 11 (18.3%) | 23 (38.3%) | 169 | 2.817 | 2 (3.3%) |
+| 2026-2027 | 66 | 27 (40.9%) | 15 (22.7%) | 24 (36.4%) | 188 | 2.848 | 2 (3.0%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 375 (78.1%) | 63 (13.1%) | 42 (8.8%) | 480 |
-| HT draw | 166 (35.8%) | 179 (38.6%) | 119 (25.6%) | 464 |
-| HT away lead | 33 (9.7%) | 65 (19.1%) | 242 (71.2%) | 340 |
+| HT home lead | 376 (78.2%) | 63 (13.1%) | 42 (8.7%) | 481 |
+| HT draw | 166 (35.5%) | 181 (38.8%) | 120 (25.7%) | 467 |
+| HT away lead | 33 (9.6%) | 67 (19.6%) | 242 (70.8%) | 342 |
 
 ## 4. Comeback matches
 - Home comebacks (trailing at HT, won at FT): **33** (2.6%)
@@ -124,32 +124,32 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 480 | 375 (78.1%) | 63 (13.1%) | 42 (8.8%) |
-| Away lead | 340 | 242 (71.2%) | 65 (19.1%) | 33 (9.7%) |
+| Home lead | 481 | 376 (78.2%) | 63 (13.1%) | 42 (8.7%) |
+| Away lead | 342 | 242 (70.8%) | 67 (19.6%) | 33 (9.6%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 166 | 35.8% |
-| Draw | 179 | 38.6% |
-| Away win | 119 | 25.6% |
+| Home win | 166 | 35.5% |
+| Draw | 181 | 38.8% |
+| Away win | 120 | 25.7% |
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1201` of `1284` (93.5%)
+- Matches with a first-goal time recorded: `1207` of `1290` (93.6%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 400 | 31.2% | 196 (49.0%) | 65 (16.2%) | 139 (34.8%) |
-| 16-30 | 323 | 25.2% | 154 (47.7%) | 59 (18.3%) | 110 (34.1%) |
-| 31-45 | 196 | 15.3% | 95 (48.5%) | 50 (25.5%) | 51 (26.0%) |
+| 1-15 | 400 | 31.0% | 196 (49.0%) | 65 (16.2%) | 139 (34.8%) |
+| 16-30 | 326 | 25.3% | 154 (47.2%) | 62 (19.0%) | 110 (33.7%) |
+| 31-45 | 197 | 15.3% | 96 (48.7%) | 50 (25.4%) | 51 (25.9%) |
 | 46-60 | 138 | 10.7% | 62 (44.9%) | 29 (21.0%) | 47 (34.1%) |
-| 61-75 | 79 | 6.2% | 42 (53.2%) | 12 (15.2%) | 25 (31.6%) |
-| 76-90 | 50 | 3.9% | 19 (38.0%) | 9 (18.0%) | 22 (44.0%) |
+| 61-75 | 80 | 6.2% | 42 (52.5%) | 12 (15.0%) | 26 (32.5%) |
+| 76-90 | 51 | 4.0% | 19 (37.3%) | 10 (19.6%) | 22 (43.1%) |
 | 91-120 | 15 | 1.2% | 6 (40.0%) | 0 (0.0%) | 9 (60.0%) |
 
 ## 7. Goalless matches
-- Overall: **83** of `1284` (6.5%)
+- Overall: **83** of `1290` (6.4%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -159,7 +159,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 198 | 14 | 7.1% |
 | 2024-2025 | 198 | 10 | 5.1% |
 | 2025-2026 | 234 | 17 | 7.3% |
-| 2026-2027 | 60 | 2 | 3.3% |
+| 2026-2027 | 66 | 2 | 3.0% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

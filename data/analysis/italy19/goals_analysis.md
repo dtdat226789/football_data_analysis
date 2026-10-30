@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:05:00+00:00
+- Generated: 2026-10-30T03:58:29+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`

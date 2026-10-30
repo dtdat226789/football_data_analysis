@@ -1,29 +1,29 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:13:10+00:00
+- Generated: 2026-10-30T04:09:53+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`
 
-- Teams: **18** | Seasons: **7** | Matches: **1284**
+- Teams: **18** | Seasons: **7** | Matches: **1290**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Celtic | 7 | 213 | 161 | 28 | 24 | 511 | 522 | 163 | 359 | 73.0 | 1 | 2 | 6 |
-| Rangers | 7 | 213 | 147 | 39 | 27 | 480 | 459 | 179 | 280 | 68.57 | 1 | 3 | 1 |
-| Hearts | 6 | 180 | 90 | 36 | 54 | 306 | 282 | 209 | 73 | 51.0 | 2 | 7 | 0 |
-| Hibernian | 7 | 213 | 78 | 60 | 75 | 294 | 290 | 272 | 18 | 42.0 | 3 | 12 | 0 |
-| Aberdeen | 7 | 213 | 75 | 49 | 89 | 274 | 254 | 291 | -37 | 39.14 | 3 | 9 | 0 |
-| Motherwell | 7 | 213 | 66 | 59 | 88 | 257 | 267 | 310 | -43 | 36.71 | 4 | 10 | 0 |
-| St. Mirren | 7 | 215 | 67 | 54 | 94 | 255 | 224 | 308 | -84 | 36.43 | 5 | 11 | 0 |
-| Dundee Utd | 6 | 180 | 55 | 56 | 69 | 221 | 200 | 252 | -52 | 36.83 | 4 | 10 | 0 |
-| Kilmarnock | 6 | 180 | 50 | 43 | 87 | 193 | 203 | 288 | -85 | 32.17 | 4 | 11 | 0 |
-| St Johnstone | 6 | 175 | 44 | 43 | 88 | 175 | 157 | 257 | -100 | 29.17 | 6 | 12 | 0 |
+| Celtic | 7 | 214 | 161 | 29 | 24 | 512 | 524 | 165 | 359 | 73.14 | 1 | 2 | 6 |
+| Rangers | 7 | 214 | 147 | 40 | 27 | 481 | 461 | 181 | 280 | 68.71 | 1 | 3 | 1 |
+| Hearts | 6 | 181 | 90 | 37 | 54 | 307 | 284 | 211 | 73 | 51.17 | 2 | 7 | 0 |
+| Hibernian | 7 | 214 | 78 | 61 | 75 | 295 | 291 | 273 | 18 | 42.14 | 3 | 11 | 0 |
+| Aberdeen | 7 | 214 | 75 | 49 | 90 | 274 | 254 | 292 | -38 | 39.14 | 3 | 9 | 0 |
+| Motherwell | 7 | 214 | 66 | 60 | 88 | 258 | 269 | 312 | -43 | 36.86 | 4 | 10 | 0 |
+| St. Mirren | 7 | 216 | 67 | 55 | 94 | 256 | 225 | 309 | -84 | 36.57 | 5 | 11 | 0 |
+| Dundee Utd | 6 | 181 | 55 | 57 | 69 | 222 | 202 | 254 | -52 | 37.0 | 4 | 10 | 0 |
+| Kilmarnock | 6 | 181 | 50 | 43 | 88 | 193 | 204 | 291 | -87 | 32.17 | 4 | 12 | 0 |
+| St Johnstone | 6 | 176 | 44 | 44 | 88 | 176 | 159 | 259 | -100 | 29.33 | 6 | 12 | 0 |
 | Livingston | 5 | 170 | 39 | 46 | 85 | 163 | 170 | 270 | -100 | 32.6 | 5 | 12 | 0 |
 | Ross County | 5 | 165 | 41 | 38 | 86 | 161 | 164 | 275 | -111 | 32.2 | 5 | 12 | 0 |
-| Dundee FC | 5 | 147 | 39 | 39 | 69 | 156 | 179 | 255 | -76 | 31.2 | 5 | 12 | 0 |
-| Falkirk | 2 | 48 | 17 | 10 | 21 | 61 | 62 | 74 | -12 | 30.5 | 6 | 7 | 0 |
+| Dundee FC | 5 | 148 | 40 | 39 | 69 | 159 | 182 | 256 | -74 | 31.8 | 4 | 12 | 0 |
+| Falkirk | 2 | 49 | 18 | 10 | 21 | 64 | 63 | 74 | -11 | 32.0 | 6 | 6 | 0 |
 | Hamilton | 1 | 33 | 6 | 9 | 18 | 27 | 31 | 60 | -29 | 27.0 | 12 | 12 | 0 |
 | Dunfermline | 1 | 4 | 1 | 2 | 1 | 5 | 3 | 3 | 0 | 5.0 | 14 | 14 | 0 |
 | Partick Thistle | 1 | 4 | 1 | 2 | 1 | 5 | 4 | 4 | 0 | 5.0 | 13 | 13 | 0 |
@@ -32,43 +32,43 @@
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Aberdeen | 107 | 50 | 26 | 31 | 176 | 106 | 25 | 23 | 58 | 98 | 78 |
-| Kilmarnock | 89 | 37 | 22 | 30 | 133 | 91 | 13 | 21 | 57 | 60 | 73 |
-| Hearts | 89 | 57 | 16 | 16 | 187 | 91 | 33 | 20 | 38 | 119 | 68 |
-| St. Mirren | 108 | 39 | 31 | 38 | 148 | 107 | 28 | 23 | 56 | 107 | 41 |
-| Rangers | 106 | 82 | 13 | 11 | 259 | 107 | 65 | 26 | 16 | 221 | 38 |
-| Dundee FC | 74 | 25 | 21 | 28 | 96 | 73 | 14 | 18 | 41 | 60 | 36 |
-| Celtic | 107 | 87 | 12 | 8 | 273 | 106 | 74 | 16 | 16 | 238 | 35 |
-| Dundee Utd | 90 | 35 | 22 | 33 | 127 | 90 | 20 | 34 | 36 | 94 | 33 |
+| Aberdeen | 108 | 50 | 26 | 32 | 176 | 106 | 25 | 23 | 58 | 98 | 78 |
+| Kilmarnock | 89 | 37 | 22 | 30 | 133 | 92 | 13 | 21 | 58 | 60 | 73 |
+| Hearts | 90 | 57 | 17 | 16 | 188 | 91 | 33 | 20 | 38 | 119 | 69 |
+| St. Mirren | 109 | 39 | 32 | 38 | 149 | 107 | 28 | 23 | 56 | 107 | 42 |
+| Dundee FC | 75 | 26 | 21 | 28 | 99 | 73 | 14 | 18 | 41 | 60 | 39 |
+| Rangers | 106 | 82 | 13 | 11 | 259 | 108 | 65 | 27 | 16 | 222 | 37 |
+| Celtic | 108 | 87 | 13 | 8 | 274 | 106 | 74 | 16 | 16 | 238 | 36 |
+| Dundee Utd | 90 | 35 | 22 | 33 | 127 | 91 | 20 | 35 | 36 | 95 | 32 |
 | Ross County | 83 | 24 | 23 | 36 | 95 | 82 | 17 | 15 | 50 | 66 | 29 |
-| Hibernian | 108 | 43 | 30 | 35 | 159 | 105 | 35 | 30 | 40 | 135 | 24 |
-| Motherwell | 106 | 37 | 28 | 41 | 139 | 107 | 29 | 31 | 47 | 118 | 21 |
+| Hibernian | 108 | 43 | 30 | 35 | 159 | 106 | 35 | 31 | 40 | 136 | 23 |
 | Livingston | 84 | 22 | 26 | 36 | 92 | 86 | 17 | 20 | 49 | 71 | 21 |
-| St Johnstone | 87 | 23 | 23 | 41 | 92 | 88 | 21 | 20 | 47 | 83 | 9 |
-| Falkirk | 25 | 9 | 5 | 11 | 32 | 23 | 8 | 5 | 10 | 29 | 3 |
+| Motherwell | 106 | 37 | 28 | 41 | 139 | 108 | 29 | 32 | 47 | 119 | 20 |
+| St Johnstone | 88 | 23 | 24 | 41 | 93 | 88 | 21 | 20 | 47 | 83 | 10 |
 | Dunfermline | 2 | 1 | 1 | 0 | 4 | 2 | 0 | 1 | 1 | 1 | 3 |
 | Partick Thistle | 2 | 1 | 1 | 0 | 4 | 2 | 0 | 1 | 1 | 1 | 3 |
 | Arbroath | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 1 |
+| Falkirk | 25 | 9 | 5 | 11 | 32 | 24 | 9 | 5 | 10 | 32 | 0 |
 | Hamilton | 16 | 2 | 6 | 8 | 12 | 17 | 4 | 3 | 10 | 15 | -3 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
 | rank | team | PPG |
 |---|---|---|
-| 1 | Celtic | 2.40 |
+| 1 | Celtic | 2.39 |
 | 2 | Rangers | 2.25 |
 | 3 | Hearts | 1.70 |
 | 4 | Hibernian | 1.38 |
-| 5 | Aberdeen | 1.29 |
+| 5 | Falkirk | 1.31 |
 
 ### Most goals scored
 | rank | team | goals |
 |---|---|---|
-| 1 | Celtic | 522 |
-| 2 | Rangers | 459 |
-| 3 | Hibernian | 290 |
-| 4 | Hearts | 282 |
-| 5 | Motherwell | 267 |
+| 1 | Celtic | 524 |
+| 2 | Rangers | 461 |
+| 3 | Hibernian | 291 |
+| 4 | Hearts | 284 |
+| 5 | Motherwell | 269 |
 
 ### Best goal difference
 | rank | team | GD |
@@ -84,8 +84,8 @@
 |---|---|---|
 | 1 | Arbroath | 0.500 |
 | 2 | Dunfermline | 0.750 |
-| 3 | Celtic | 0.765 |
-| 4 | Rangers | 0.840 |
+| 3 | Celtic | 0.771 |
+| 4 | Rangers | 0.846 |
 | 5 | Partick Thistle | 1.000 |
 
 ## 4. Team consistency
@@ -111,8 +111,8 @@ Aberdeen, Celtic, Hibernian, Motherwell, Rangers, St. Mirren
 | Celtic vs St. Mirren | 19 | 9 | 1 | 9 | 47.4% | 5.3% | 47.4% |
 | Rangers vs Aberdeen | 19 | 9 | 4 | 6 | 47.4% | 21.1% | 31.6% |
 | Aberdeen vs Motherwell | 19 | 8 | 4 | 7 | 42.1% | 21.1% | 36.8% |
+| Hibernian vs St. Mirren | 19 | 5 | 6 | 8 | 26.3% | 31.6% | 42.1% |
 | St. Mirren vs Motherwell | 19 | 5 | 9 | 5 | 26.3% | 47.4% | 26.3% |
-| Hibernian vs St. Mirren | 18 | 5 | 5 | 8 | 27.8% | 27.8% | 44.4% |
 
 ## 6. Position per season (classic view)
 _Cells show final position; '-' when the team was absent from that season._
@@ -122,17 +122,17 @@ _Cells show final position; '-' when the team was absent from that season._
 | Celtic | 2 | 1 | 1 | 1 | 1 | 1 | 1 |
 | Rangers | 1 | 2 | 2 | 2 | 2 | 3 | 2 |
 | Hearts | - | 3 | 4 | 3 | 7 | 2 | 3 |
-| Hibernian | 3 | 7 | 5 | 7 | 3 | 5 | 12 |
+| Hibernian | 3 | 7 | 5 | 7 | 3 | 5 | 11 |
 | Aberdeen | 4 | 9 | 3 | 9 | 5 | 9 | 9 |
 | Motherwell | 9 | 6 | 8 | 8 | 8 | 4 | 10 |
-| St. Mirren | 7 | 10 | 6 | 5 | 6 | 11 | 6 |
-| Dundee Utd | 8 | 4 | 10 | - | 4 | 7 | 4 |
-| Kilmarnock | 11 | - | 11 | 4 | 9 | 10 | 11 |
+| St. Mirren | 7 | 10 | 6 | 5 | 6 | 11 | 7 |
+| Dundee Utd | 8 | 4 | 10 | - | 4 | 7 | 5 |
+| Kilmarnock | 11 | - | 11 | 4 | 9 | 10 | 12 |
 | St Johnstone | 6 | 11 | 9 | 10 | 12 | - | 8 |
 | Livingston | 5 | 8 | 7 | 12 | - | 12 | - |
 | Ross County | 10 | 5 | 12 | 11 | 10 | - | - |
-| Dundee FC | - | 12 | - | 6 | 11 | 8 | 5 |
-| Falkirk | - | - | - | - | - | 6 | 7 |
+| Dundee FC | - | 12 | - | 6 | 11 | 8 | 4 |
+| Falkirk | - | - | - | - | - | 6 | 6 |
 | Hamilton | 12 | - | - | - | - | - | - |
 | Dunfermline | - | - | - | - | - | 14 | - |
 | Partick Thistle | - | - | - | - | - | 13 | - |

@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T02:15:27+00:00
+- Generated: 2026-10-30T04:12:40+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`

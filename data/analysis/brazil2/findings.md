@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T01:55:00+00:00
+- Generated: 2026-10-30T03:46:11+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2026: Novorizontino beat Juventude by 0 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.126 per match): first half 2.119 vs last half 2.246 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025 (luck view, avg abs position diff 23.100)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026 (luck view, avg abs position diff 1.600)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026 (luck view, avg abs position diff 1.500)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-0 in 404 matches (15.4%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (404 of 1229 home matches, 32.9%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (359 of 758 draw matches, 47.4%)

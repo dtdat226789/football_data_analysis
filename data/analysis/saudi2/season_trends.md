@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:12:36+00:00
+- Generated: 2026-10-30T04:08:57+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Division 1 (Saudi Arabia)
 - Scope: league `saudi2`
@@ -38,7 +38,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 67 | 59 | 58 | 47 | 34 | 21 |
 | 2024-2025 | 79 | 64 | 57 | 55 | 29 | 19 |
 | 2025-2026 | 77 | 75 | 71 | 59 | 32 | 14 |
-| 2026-2027 | - | 15 | 15 | 13 | 7 | 6 |
+| 2026-2027 | - | 18 | 15 | 15 | 7 | 6 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -60,7 +60,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 816 | 2.667 | 43.1% | 27.1% | 29.7% | 7.5% | 41.28 |
 | 2024-2025 | 306 | 794 | 2.595 | 40.5% | 26.8% | 32.7% | 7.5% | 43.94 |
 | 2025-2026 | 309 | 917 | 2.968 | 41.4% | 23.3% | 35.3% | 5.2% | 47.17 |
-| 2026-2027 | 71 | 164 | 2.31 | 32.4% | 39.4% | 28.2% | 15.5% | 10.33 |
+| 2026-2027 | 74 | 169 | 2.284 | 33.8% | 37.8% | 28.4% | 14.9% | 10.83 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (luck view, avg abs position diff = 44.100)
@@ -75,7 +75,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 17.722 | 19.333 |
 | 2024-2025 | 9.778 | 8.778 |
 | 2025-2026 | 3.333 | 5.444 |
-| 2026-2027 | 2.667 | 5.389 |
+| 2026-2027 | 2.556 | 5.833 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:15:59+00:00
+- Generated: 2026-10-30T04:13:01+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Prva liga (Slovenia)
 - Scope: league `slovenia1`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 79 | 67 | 50 | 43 | 43 | 31 |
 | 2024-2025 | 74 | 67 | 61 | 43 | 35 | 28 |
 | 2025-2026 | 74 | 67 | 55 | 45 | 36 | 12 |
-| 2026-2027 | 25 | 25 | 20 | 16 | 14 | 8 |
+| 2026-2027 | 25 | 25 | 20 | 17 | 15 | 8 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 7 | 43 | 8 | 36 | 7 pts |
 | 2024-2025 | 7 | 35 | 8 | 35 | 0 pts |
 | 2025-2026 | 7 | 36 | 8 | 31 | 5 pts |
-| 2026-2027 | 7 | 14 | 8 | 13 | 1 pts |
+| 2026-2027 | 7 | 15 | 8 | 13 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 180 | 505 | 2.806 | 38.9% | 25.6% | 35.6% | 5.6% | 49.4 |
 | 2024-2025 | 180 | 498 | 2.767 | 43.3% | 26.1% | 30.6% | 7.2% | 49.3 |
 | 2025-2026 | 164 | 501 | 3.055 | 49.4% | 18.3% | 32.3% | 4.9% | 42.0 |
-| 2026-2027 | 64 | 167 | 2.609 | 34.4% | 34.4% | 31.2% | 12.5% | 17.0 |
+| 2026-2027 | 66 | 169 | 2.561 | 33.3% | 36.4% | 30.3% | 13.6% | 17.4 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 4.400)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.200 | 2.800 |
 | 2024-2025 | 2.400 | 4.400 |
 | 2025-2026 | 2.727 | 1.636 |
-| 2026-2027 | 2.000 | 4.400 |
+| 2026-2027 | 1.800 | 4.200 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

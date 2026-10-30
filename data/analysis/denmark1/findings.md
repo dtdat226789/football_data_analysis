@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T01:57:16+00:00
+- Generated: 2026-10-30T03:48:38+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Superliga (Denmark)
 - Scope: league `denmark1`

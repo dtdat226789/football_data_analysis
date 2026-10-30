@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:17:03+00:00
+- Generated: 2026-10-30T04:13:44+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: LaLiga2 (Spain)
 - Scope: league `spain2`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2020-2021: Espanyol beat Mallorca by 0 pts
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.452 per match): first half 2.167 vs last half 2.618 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2022-2023 (goals view, avg abs position diff 8.909)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.727)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.818)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-0 in 396 matches (13.5%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (396 of 1314 home matches, 30.1%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (391 of 847 draw matches, 46.2%)

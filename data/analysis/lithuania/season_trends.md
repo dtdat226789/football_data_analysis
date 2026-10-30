@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:08:03+00:00
+- Generated: 2026-10-30T04:02:05+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: TOPLYGA (Lithuania)
 - Scope: league `lithuania`

@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:01:32+00:00
+- Generated: 2026-10-30T03:53:19+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: 3. Liga (Germany)
 - Scope: league `germany3`

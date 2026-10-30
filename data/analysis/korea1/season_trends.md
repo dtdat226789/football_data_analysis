@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:06:55+00:00
+- Generated: 2026-10-30T04:00:39+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: K League 1 (South Korea)
 - Scope: league `korea1`

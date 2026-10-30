@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:03:33+00:00
+- Generated: 2026-10-30T03:56:13+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: NB II. (Hungary)
 - Scope: league `hungary2`

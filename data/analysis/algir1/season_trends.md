@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:52:53+00:00
+- Generated: 2026-10-30T03:43:55+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ligue 1 (Algeria)
 - Scope: league `algir1`

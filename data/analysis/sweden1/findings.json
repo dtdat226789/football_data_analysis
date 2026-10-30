@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:17:21+00:00",
+  "generated_at": "2026-10-30T04:13:57+00:00",
   "config": {
     "league": "sweden1",
     "out_dir": "data/analysis/sweden1",
@@ -29,7 +29,7 @@
       "path": "data/analysis/sweden1/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 50.21
+      "size_kb": 50.5
     },
     {
       "report_name": "matches_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/sweden1/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 251.51
+      "size_kb": 251.89
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "1641 matches: home wins 42.7%, draws 24.1%, away wins 33.2% (700H / 396D / 545A)",
+      "detail": "1645 matches: home wins 42.6%, draws 24.2%, away wins 33.3% (700H / 398D / 547A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -104,42 +104,42 @@
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "1641 matches produced 4590 goals (avg 2.797 per match)",
+      "detail": "1645 matches produced 4598 goals (avg 2.795 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 54.8% vs away 45.2% of 4590 goals in total (home/away ratio 1.21)",
+      "detail": "home 54.7% vs away 45.3% of 4598 goals in total (home/away ratio 1.21)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "866 of 1641 matches (52.8%)",
+      "detail": "867 of 1645 matches (52.7%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 519 scoring matches, 33.7% of scoring)",
+      "detail": "minute 1-15 (first goal in 520 scoring matches, 33.7% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 30.79, median 25.0",
+      "detail": "mean 30.77, median 25.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Malmo FF leads with 380 points across 7 seasons (4 title(s), GD 166)",
+      "detail": "Malmo FF leads with 383 points across 7 seasons (4 title(s), GD 169)",
       "importance": "high",
       "id": "F9"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.127 per match): first half 2.741 vs last half 2.868 across 7 seasons",
+      "detail": "up (+0.121 per match): first half 2.741 vs last half 2.862 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -195,7 +195,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 187 matches (11.4%)",
+      "detail": "1-1 in 188 matches (11.4%)",
       "importance": "medium",
       "id": "F17"
     },
@@ -209,14 +209,14 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common draw scoreline",
-      "detail": "1-1 (187 of 396 draw matches, 47.2%)",
+      "detail": "1-1 (188 of 398 draw matches, 47.2%)",
       "importance": "low",
       "id": "F19"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (141 of 545 away matches, 25.9%)",
+      "detail": "0-1 (141 of 547 away matches, 25.8%)",
       "importance": "low",
       "id": "F20"
     },
@@ -243,7 +243,7 @@
     },
     {
       "source": "database_profile",
-      "finding": "Data-quality warnings (46)",
+      "finding": "Data-quality warnings (47)",
       "detail": "Anomaly codes: DUPLICATE_ROWS, FIRST_GOAL_NULL_INCONSISTENCY, GOALLESS_SHARE_OUTLIER, HIGH_SCORING_MATCHES, MATCH_COUNT_UNEXPECTED, OUTCOME_SHARE_OUTLIER, SEASON_STATE_NOT_COMPLETE, STANDINGS_INCOMPLETE, TEAM_COUNT_UNEXPECTED",
       "importance": "high",
       "id": "F24"
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 1641 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 1645 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 1641,
-    "avg_goals": 2.797,
-    "home_win_pct": 42.7,
-    "draw_pct": 24.1,
-    "away_win_pct": 33.2,
+    "n_matches": 1645,
+    "avg_goals": 2.795,
+    "home_win_pct": 42.6,
+    "draw_pct": 24.2,
+    "away_win_pct": 33.3,
     "most_common_scoreline": "1-1",
     "dominant_team": "Malmo FF",
     "champion_most_titles": "Malmo FF",
-    "btts_rate_pct": 52.8
+    "btts_rate_pct": 52.7
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 50.21
+      "size_kb": 50.5
     },
     {
       "module": "matches_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 251.51
+      "size_kb": 251.89
     },
     {
       "module": "relationships",
@@ -486,10 +486,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026 has 201 matches, expected 380",
+      "message": "Season 2026 has 205 matches, expected 380",
       "details": {
         "season": "2026",
-        "n_matches": 201,
+        "n_matches": 205,
         "expected": 380
       }
     },
@@ -515,23 +515,23 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020 home outcome share 37.1% vs overall 42.7%",
+      "message": "Season 2020 home outcome share 37.1% vs overall 42.6%",
       "details": {
         "season": "2020",
         "outcome": "home",
         "season_share": 37.1,
-        "overall_share": 42.7
+        "overall_share": 42.6
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2020 draw outcome share 32.1% vs overall 24.1%",
+      "message": "Season 2020 draw outcome share 32.1% vs overall 24.2%",
       "details": {
         "season": "2020",
         "outcome": "draw",
         "season_share": 32.1,
-        "overall_share": 24.1
+        "overall_share": 24.2
       }
     },
     {
@@ -548,12 +548,23 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2023 draw outcome share 19.6% vs overall 24.1%",
+      "message": "Season 2023 home outcome share 46.7% vs overall 42.6%",
+      "details": {
+        "season": "2023",
+        "outcome": "home",
+        "season_share": 46.7,
+        "overall_share": 42.6
+      }
+    },
+    {
+      "code": "OUTCOME_SHARE_OUTLIER",
+      "severity": "warning",
+      "message": "Season 2023 draw outcome share 19.6% vs overall 24.2%",
       "details": {
         "season": "2023",
         "outcome": "draw",
         "season_share": 19.6,
-        "overall_share": 24.1
+        "overall_share": 24.2
       }
     },
     {
@@ -570,23 +581,23 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2025 away outcome share 37.9% vs overall 33.2%",
+      "message": "Season 2025 away outcome share 37.9% vs overall 33.3%",
       "details": {
         "season": "2025",
         "outcome": "away",
         "season_share": 37.9,
-        "overall_share": 33.2
+        "overall_share": 33.3
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026 goalless share 4.0% vs overall 6.2% (deviation 2.2 pp)",
+      "message": "Season 2026 goalless share 4.4% vs overall 6.2% (deviation 1.8 pp)",
       "details": {
         "season": "2026",
-        "season_goalless_pct": 4.0,
+        "season_goalless_pct": 4.4,
         "overall_goalless_pct": 6.2,
-        "deviation_pp": 2.2
+        "deviation_pp": 1.8
       }
     },
     {
@@ -646,8 +657,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 144817,
-        "distinct": 144772,
+        "rows": 144861,
+        "distinct": 144816,
         "duplicates": 45
       }
     },
@@ -656,10 +667,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=440, fgte=440 rows)",
       "details": {
-        "total": 144817,
+        "total": 144861,
         "fgt_inconsistent": 440,
         "fgte_inconsistent": 440,
-        "n_with_fgt": 133004
+        "n_with_fgt": 133043
       }
     },
     {

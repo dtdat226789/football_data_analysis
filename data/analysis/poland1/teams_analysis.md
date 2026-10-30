@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:09:32+00:00
+- Generated: 2026-10-30T04:03:58+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ekstraklasa (Poland)
 - Scope: league `poland1`

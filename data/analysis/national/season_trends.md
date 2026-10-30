@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:08:39+00:00
+- Generated: 2026-10-30T04:02:50+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -58,7 +58,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 552 | 1623 | 2.94 | 42.2% | 25.5% | 32.2% | 6.0% | 63.12 |
 | 2024-2025 | 552 | 1488 | 2.696 | 42.2% | 28.4% | 29.3% | 6.7% | 62.46 |
 | 2025-2026 | 557 | 1626 | 2.919 | 43.4% | 23.0% | 33.6% | 5.0% | 63.92 |
-| 2026-2027 | 175 | 551 | 3.149 | 45.1% | 17.7% | 37.1% | 1.7% | 20.58 |
+| 2026-2027 | 178 | 558 | 3.135 | 46.1% | 17.4% | 36.5% | 1.7% | 20.96 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 8.500)
@@ -72,7 +72,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.583 | 6.917 |
 | 2024-2025 | 5.500 | 8.500 |
 | 2025-2026 | 2.833 | 7.083 |
-| 2026-2027 | 2.083 | 6.833 |
+| 2026-2027 | 2.250 | 6.583 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

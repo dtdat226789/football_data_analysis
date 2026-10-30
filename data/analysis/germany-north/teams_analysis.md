@@ -1,25 +1,25 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:00:34+00:00
+- Generated: 2026-10-30T03:52:17+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
 
-- Teams: **34** | Seasons: **7** | Matches: **1699**
+- Teams: **34** | Seasons: **7** | Matches: **1700**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Drochtersen/Assel | 7 | 183 | 93 | 41 | 49 | 320 | 326 | 217 | 109 | 45.71 | 2 | 8 | 0 |
 | Phonix Lubeck | 7 | 182 | 82 | 45 | 55 | 291 | 342 | 250 | 92 | 41.57 | 3 | 15 | 0 |
-| Hamburger SV II | 7 | 184 | 81 | 42 | 61 | 285 | 327 | 289 | 38 | 40.71 | 2 | 16 | 0 |
+| Hamburger SV II | 7 | 185 | 82 | 42 | 61 | 288 | 331 | 290 | 41 | 41.14 | 2 | 12 | 0 |
 | SC Weiche-08 | 7 | 183 | 80 | 41 | 62 | 281 | 322 | 279 | 43 | 40.14 | 1 | 19 | 1 |
 | Hannover II | 6 | 146 | 82 | 20 | 44 | 266 | 312 | 203 | 109 | 44.33 | 1 | 11 | 1 |
 | VfB Oldenburg | 6 | 143 | 76 | 32 | 35 | 260 | 302 | 185 | 117 | 43.33 | 1 | 10 | 1 |
 | Jeddeloh | 7 | 180 | 65 | 50 | 65 | 245 | 291 | 320 | -29 | 35.0 | 4 | 14 | 0 |
-| Werder Bremen II | 6 | 146 | 63 | 32 | 51 | 221 | 288 | 236 | 52 | 36.83 | 2 | 14 | 0 |
+| Werder Bremen II | 6 | 147 | 63 | 32 | 52 | 221 | 289 | 240 | 49 | 36.83 | 2 | 14 | 0 |
 | St. Pauli II | 7 | 182 | 58 | 43 | 81 | 217 | 274 | 317 | -43 | 31.0 | 6 | 17 | 0 |
-| Norderstedt | 7 | 180 | 57 | 45 | 78 | 216 | 280 | 328 | -48 | 30.86 | 4 | 15 | 0 |
+| Norderstedt | 7 | 180 | 57 | 45 | 78 | 216 | 280 | 328 | -48 | 30.86 | 4 | 16 | 0 |
 | Lubeck | 5 | 126 | 59 | 33 | 34 | 210 | 227 | 166 | 61 | 42.0 | 1 | 19 | 1 |
 | Meppen | 3 | 103 | 63 | 19 | 21 | 208 | 246 | 118 | 128 | 69.33 | 1 | 7 | 1 |
 | TSV Havelse | 4 | 113 | 58 | 24 | 31 | 198 | 200 | 141 | 59 | 49.5 | 1 | 11 | 2 |
@@ -34,7 +34,7 @@
 | Hannoverscher SC | 4 | 78 | 20 | 15 | 43 | 75 | 104 | 186 | -82 | 18.75 | 10 | 20 | 0 |
 | Schoningen | 2 | 48 | 17 | 7 | 24 | 58 | 78 | 108 | -30 | 29.0 | 6 | 14 | 0 |
 | Todesfelde | 2 | 49 | 10 | 10 | 29 | 40 | 47 | 102 | -55 | 20.0 | 16 | 17 | 0 |
-| Eimsbutteler | 2 | 48 | 9 | 10 | 29 | 37 | 57 | 110 | -53 | 18.5 | 12 | 16 | 0 |
+| Eimsbutteler | 2 | 48 | 9 | 10 | 29 | 37 | 57 | 110 | -53 | 18.5 | 13 | 16 | 0 |
 | Altona | 3 | 61 | 9 | 8 | 44 | 35 | 66 | 156 | -90 | 11.67 | 18 | 23 | 0 |
 | Luneburger Hansa | 2 | 27 | 6 | 10 | 11 | 28 | 25 | 39 | -14 | 14.0 | 14 | 18 | 0 |
 | Oberneuland | 2 | 28 | 7 | 3 | 18 | 24 | 20 | 50 | -30 | 12.0 | 15 | 20 | 0 |
@@ -53,7 +53,7 @@
 | Meppen | 52 | 37 | 8 | 7 | 119 | 51 | 26 | 11 | 14 | 89 | 30 |
 | Bremer | 78 | 30 | 19 | 29 | 109 | 74 | 22 | 17 | 35 | 83 | 26 |
 | TSV Havelse | 57 | 33 | 12 | 12 | 111 | 56 | 25 | 12 | 19 | 87 | 24 |
-| Werder Bremen II | 74 | 35 | 17 | 22 | 122 | 72 | 28 | 15 | 29 | 99 | 23 |
+| Werder Bremen II | 75 | 35 | 17 | 23 | 122 | 72 | 28 | 15 | 29 | 99 | 23 |
 | Delmenhorst | 36 | 14 | 9 | 13 | 51 | 39 | 5 | 13 | 21 | 28 | 23 |
 | Jeddeloh | 88 | 36 | 25 | 27 | 133 | 92 | 29 | 25 | 38 | 112 | 21 |
 | St. Pauli II | 92 | 30 | 27 | 35 | 117 | 90 | 28 | 16 | 46 | 100 | 17 |
@@ -63,11 +63,11 @@
 | Teutonia Ottensen | 67 | 30 | 12 | 25 | 102 | 67 | 24 | 17 | 26 | 89 | 13 |
 | Altona | 32 | 6 | 6 | 20 | 24 | 29 | 3 | 2 | 24 | 11 | 13 |
 | VfB Oldenburg | 72 | 41 | 13 | 18 | 136 | 71 | 35 | 19 | 17 | 124 | 12 |
-| Hamburger SV II | 90 | 42 | 22 | 26 | 148 | 94 | 39 | 20 | 35 | 137 | 11 |
 | Hildesheim | 31 | 12 | 9 | 10 | 45 | 32 | 9 | 7 | 16 | 34 | 11 |
 | Heider SV | 14 | 3 | 3 | 8 | 12 | 14 | 0 | 1 | 13 | 1 | 11 |
 | Norderstedt | 89 | 30 | 23 | 36 | 113 | 91 | 27 | 22 | 42 | 103 | 10 |
 | Lubeck | 63 | 31 | 17 | 15 | 110 | 63 | 28 | 16 | 19 | 100 | 10 |
+| Hamburger SV II | 90 | 42 | 22 | 26 | 148 | 95 | 40 | 20 | 35 | 140 | 8 |
 | BSV Rehden | 32 | 10 | 12 | 10 | 42 | 31 | 9 | 7 | 15 | 34 | 8 |
 | VfB Lubeck | 9 | 3 | 4 | 2 | 13 | 5 | 1 | 2 | 2 | 5 | 8 |
 | Eimsbutteler | 24 | 5 | 7 | 12 | 22 | 24 | 4 | 3 | 17 | 15 | 7 |
@@ -97,7 +97,7 @@
 | rank | team | goals |
 |---|---|---|
 | 1 | Phonix Lubeck | 342 |
-| 2 | Hamburger SV II | 327 |
+| 2 | Hamburger SV II | 331 |
 | 3 | Drochtersen/Assel | 326 |
 | 4 | SC Weiche-08 | 322 |
 | 5 | Hannover II | 312 |
@@ -153,14 +153,14 @@ _Cells show final position; '-' when the team was absent from that season._
 |---|---|---|---|---|---|---|---|
 | Drochtersen/Assel | 8 | 6 | 6 | 4 | 2 | 3 | 3 |
 | Phonix Lubeck | 9 | 15 | 10 | 3 | 5 | 5 | 5 |
-| Hamburger SV II | 12 | 7 | 2 | 7 | 8 | 10 | 16 |
+| Hamburger SV II | 12 | 7 | 2 | 7 | 8 | 10 | 11 |
 | SC Weiche-08 | 7 | 14 | 19 | 15 | 19 | 9 | 1 |
 | Hannover II | 11 | 10 | 3 | 1 | - | 6 | 2 |
 | VfB Oldenburg | 10 | 1 | - | 5 | 10 | 2 | 4 |
-| Jeddeloh | 13 | 11 | 7 | 14 | 13 | 4 | 13 |
-| Werder Bremen II | 2 | 2 | 14 | - | 3 | 12 | 11 |
-| St. Pauli II | 6 | 13 | 8 | 12 | 11 | 17 | 14 |
-| Norderstedt | 4 | 12 | 9 | 13 | 12 | 15 | 15 |
+| Jeddeloh | 13 | 11 | 7 | 14 | 13 | 4 | 14 |
+| Werder Bremen II | 2 | 2 | 14 | - | 3 | 12 | 12 |
+| St. Pauli II | 6 | 13 | 8 | 12 | 11 | 17 | 15 |
+| Norderstedt | 4 | 12 | 9 | 13 | 12 | 15 | 16 |
 | Lubeck | - | 4 | 1 | - | 6 | 11 | 19 |
 | Meppen | - | - | - | 2 | 7 | 1 | - |
 | TSV Havelse | 1 | - | 5 | 11 | 1 | - | - |
@@ -175,7 +175,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Hannoverscher SC | 20 | 19 | - | - | - | 13 | 10 |
 | Schoningen | - | - | - | - | - | 14 | 6 |
 | Todesfelde | - | - | - | - | 16 | - | 17 |
-| Eimsbutteler | - | - | - | 16 | - | - | 12 |
+| Eimsbutteler | - | - | - | 16 | - | - | 13 |
 | Altona | 23 | 22 | - | - | - | 18 | - |
 | Luneburger Hansa | 14 | 18 | - | - | - | - | - |
 | Oberneuland | 15 | 20 | - | - | - | - | - |

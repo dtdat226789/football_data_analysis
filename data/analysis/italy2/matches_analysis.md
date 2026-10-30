@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:05:18+00:00
+- Generated: 2026-10-30T03:58:48+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`
@@ -8,12 +8,12 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2377 |
-| Home wins | 948 (39.9%) |
-| Draws | 765 (32.2%) |
-| Away wins | 664 (27.9%) |
-| Total goals | 5866 |
-| Average goals per match | 2.468 |
+| Matches | 2380 |
+| Home wins | 949 (39.9%) |
+| Draws | 766 (32.2%) |
+| Away wins | 665 (27.9%) |
+| Total goals | 5876 |
+| Average goals per match | 2.469 |
 | Goalless matches | 217 (9.1%) |
 
 ## 2. Per-season breakdown
@@ -25,13 +25,13 @@
 | 2023-2024 | 380 | 139 (36.6%) | 122 (32.1%) | 119 (31.3%) | 958 | 2.521 | 37 (9.7%) |
 | 2024-2025 | 380 | 153 (40.3%) | 128 (33.7%) | 99 (26.1%) | 937 | 2.466 | 40 (10.5%) |
 | 2025-2026 | 390 | 175 (44.9%) | 121 (31.0%) | 94 (24.1%) | 993 | 2.546 | 30 (7.7%) |
-| 2026-2027 | 87 | 32 (36.8%) | 24 (27.6%) | 31 (35.6%) | 232 | 2.667 | 3 (3.4%) |
+| 2026-2027 | 90 | 33 (36.7%) | 25 (27.8%) | 32 (35.6%) | 242 | 2.689 | 3 (3.3%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 551 (74.1%) | 146 (19.6%) | 47 (6.3%) | 744 |
-| HT draw | 340 (32.5%) | 459 (43.8%) | 248 (23.7%) | 1047 |
+| HT home lead | 551 (74.0%) | 147 (19.7%) | 47 (6.3%) | 745 |
+| HT draw | 341 (32.5%) | 459 (43.8%) | 249 (23.7%) | 1049 |
 | HT away lead | 56 (9.6%) | 160 (27.4%) | 368 (63.0%) | 584 |
 - *2 match(es) excluded (no HT score recorded).*
 
@@ -144,8 +144,8 @@
 | 2025-2026 | Empoli | Juve Stabia | 1-0 | 1-2 |
 | 2025-2026 | Pescara | Sampdoria | 1-0 | 1-2 |
 | 2025-2026 | Modena | Frosinone | 1-0 | 1-2 |
-| 2026-2027 | Benevento | Modena | 1-0 | 1-2 |
 | 2026-2027 | Avellino | Arezzo | 1-0 | 1-2 |
+| 2026-2027 | Benevento | Modena | 1-0 | 1-2 |
 | 2026-2027 | Verona | Ascoli | 1-0 | 1-2 |
 | 2026-2027 | Sampdoria | Juve Stabia | 1-0 | 1-2 |
 | 2026-2027 | Padova | Entella | 1-0 | 1-2 |
@@ -153,33 +153,33 @@
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 744 | 551 (74.1%) | 146 (19.6%) | 47 (6.3%) |
+| Home lead | 745 | 551 (74.0%) | 147 (19.7%) | 47 (6.3%) |
 | Away lead | 584 | 368 (63.0%) | 160 (27.4%) | 56 (9.6%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 340 | 32.5% |
+| Home win | 341 | 32.5% |
 | Draw | 459 | 43.8% |
-| Away win | 248 | 23.7% |
+| Away win | 249 | 23.7% |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2158` of `2377` (90.8%)
+- Matches with a first-goal time recorded: `2161` of `2380` (90.8%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
 | 1-15 | 652 | 27.4% | 287 (44.0%) | 172 (26.4%) | 193 (29.6%) |
-| 16-30 | 560 | 23.6% | 235 (42.0%) | 158 (28.2%) | 167 (29.8%) |
+| 16-30 | 561 | 23.6% | 235 (41.9%) | 159 (28.3%) | 167 (29.8%) |
 | 31-45 | 375 | 15.8% | 170 (45.3%) | 100 (26.7%) | 105 (28.0%) |
 | 46-60 | 299 | 12.6% | 133 (44.5%) | 74 (24.7%) | 92 (30.8%) |
 | 61-75 | 140 | 5.9% | 51 (36.4%) | 32 (22.9%) | 57 (40.7%) |
-| 76-90 | 108 | 4.5% | 59 (54.6%) | 12 (11.1%) | 37 (34.3%) |
+| 76-90 | 110 | 4.6% | 60 (54.5%) | 12 (10.9%) | 38 (34.5%) |
 | 91-120 | 24 | 1.0% | 12 (50.0%) | 0 (0.0%) | 12 (50.0%) |
 
 ## 7. Goalless matches
-- Overall: **217** of `2377` (9.1%)
+- Overall: **217** of `2380` (9.1%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -189,7 +189,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 37 | 9.7% |
 | 2024-2025 | 380 | 40 | 10.5% |
 | 2025-2026 | 390 | 30 | 7.7% |
-| 2026-2027 | 87 | 3 | 3.4% |
+| 2026-2027 | 90 | 3 | 3.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

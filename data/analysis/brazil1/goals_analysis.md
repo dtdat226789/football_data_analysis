@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T01:54:32+00:00
+- Generated: 2026-10-30T03:45:42+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`

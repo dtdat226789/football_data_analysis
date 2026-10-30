@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T01:54:49+00:00
+- Generated: 2026-10-30T03:45:59+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`

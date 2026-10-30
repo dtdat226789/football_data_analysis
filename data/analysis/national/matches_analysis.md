@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:08:33+00:00
+- Generated: 2026-10-30T04:02:43+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League (England)
 - Scope: league `national`
@@ -8,11 +8,11 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2894 |
-| Home wins | 1254 (43.3%) |
+| Matches | 2897 |
+| Home wins | 1257 (43.4%) |
 | Draws | 715 (24.7%) |
-| Away wins | 925 (32.0%) |
-| Total goals | 8214 |
+| Away wins | 925 (31.9%) |
+| Total goals | 8221 |
 | Average goals per match | 2.838 |
 | Goalless matches | 164 (5.7%) |
 
@@ -24,12 +24,12 @@
 | 2023-2024 | 552 | 233 (42.2%) | 141 (25.5%) | 178 (32.2%) | 1623 | 2.94 | 33 (6.0%) |
 | 2024-2025 | 552 | 233 (42.2%) | 157 (28.4%) | 162 (29.3%) | 1488 | 2.696 | 37 (6.7%) |
 | 2025-2026 | 557 | 242 (43.4%) | 128 (23.0%) | 187 (33.6%) | 1626 | 2.919 | 28 (5.0%) |
-| 2026-2027 | 175 | 79 (45.1%) | 31 (17.7%) | 65 (37.1%) | 551 | 3.149 | 3 (1.7%) |
+| 2026-2027 | 178 | 82 (46.1%) | 31 (17.4%) | 65 (36.5%) | 558 | 3.135 | 3 (1.7%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
-| HT home lead | 749 (75.7%) | 166 (16.8%) | 74 (7.5%) | 989 |
+| HT home lead | 752 (75.8%) | 166 (16.7%) | 74 (7.5%) | 992 |
 | HT draw | 403 (36.0%) | 391 (34.9%) | 327 (29.2%) | 1121 |
 | HT away lead | 100 (12.8%) | 158 (20.2%) | 524 (67.0%) | 782 |
 - *2 match(es) excluded (no HT score recorded).*
@@ -212,18 +212,18 @@
 | 2026-2027 | Carlisle | Worthing | 1-0 | 2-3 |
 | 2026-2027 | Worthing | Forest Green | 1-0 | 1-2 |
 | 2026-2027 | Southend | Kidderminster | 1-0 | 1-3 |
-| 2026-2027 | Worthing | Boreham Wood | 1-0 | 2-3 |
 | 2026-2027 | Boston Utd | Hornchurch | 2-1 | 2-3 |
+| 2026-2027 | Worthing | Boreham Wood | 1-0 | 2-3 |
 | 2026-2027 | Solihull Moors | Aldershot | 1-0 | 1-2 |
-| 2026-2027 | Yeovil | Altrincham | 1-0 | 1-2 |
 | 2026-2027 | Solihull Moors | Carlisle | 1-0 | 1-2 |
+| 2026-2027 | Yeovil | Altrincham | 1-0 | 1-2 |
 | 2026-2027 | Kidderminster | Worthing | 1-0 | 1-2 |
 | 2026-2027 | FC Halifax | Barrow | 1-0 | 2-3 |
 
 ## 5. HT lead conversion
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
-| Home lead | 989 | 749 (75.7%) | 166 (16.8%) | 74 (7.5%) |
+| Home lead | 992 | 752 (75.8%) | 166 (16.7%) | 74 (7.5%) |
 | Away lead | 782 | 524 (67.0%) | 158 (20.2%) | 100 (12.8%) |
 
 ### Matches level at half-time
@@ -235,13 +235,13 @@
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2728` of `2894` (94.3%)
+- Matches with a first-goal time recorded: `2731` of `2897` (94.3%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 911 | 31.5% | 438 (48.1%) | 166 (18.2%) | 307 (33.7%) |
-| 16-30 | 675 | 23.3% | 319 (47.3%) | 139 (20.6%) | 217 (32.1%) |
+| 1-15 | 913 | 31.5% | 440 (48.2%) | 166 (18.2%) | 307 (33.6%) |
+| 16-30 | 676 | 23.3% | 320 (47.3%) | 139 (20.6%) | 217 (32.1%) |
 | 31-45 | 454 | 15.7% | 206 (45.4%) | 97 (21.4%) | 151 (33.3%) |
 | 46-60 | 347 | 12.0% | 142 (40.9%) | 87 (25.1%) | 118 (34.0%) |
 | 61-75 | 198 | 6.8% | 80 (40.4%) | 42 (21.2%) | 76 (38.4%) |
@@ -249,7 +249,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 36 | 1.2% | 19 (52.8%) | 3 (8.3%) | 14 (38.9%) |
 
 ## 7. Goalless matches
-- Overall: **164** of `2894` (5.7%)
+- Overall: **164** of `2897` (5.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -258,7 +258,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 552 | 33 | 6.0% |
 | 2024-2025 | 552 | 37 | 6.7% |
 | 2025-2026 | 557 | 28 | 5.0% |
-| 2026-2027 | 175 | 3 | 1.7% |
+| 2026-2027 | 178 | 3 | 1.7% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:13:12+00:00
+- Generated: 2026-10-30T04:09:56+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premiership (Scotland)
 - Scope: league `scot-premier`
@@ -14,7 +14,7 @@
 | 2023-2024 | Celtic | 78 | Rangers | 3 pts |
 | 2024-2025 | Celtic | 81 | Rangers | 15 pts |
 | 2025-2026 | Celtic | 82 | Hearts | 2 pts |
-| 2026-2027 | Celtic | 27 | Rangers | 4 pts |
+| 2026-2027 | Celtic | 28 | Rangers | 4 pts |
 
 ## 2. Title-race tightness
 - Tight races (margin <= 3 pts): **2** of 7 seasons
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 78 | 75 | 51 | 41 | 35 | 18 |
 | 2024-2025 | 81 | 66 | 50 | 41 | 35 | 29 |
 | 2025-2026 | 82 | 80 | 61 | 49 | 40 | 21 |
-| 2026-2027 | 27 | 23 | 15 | 13 | 11 | 7 |
+| 2026-2027 | 28 | 24 | 17 | 15 | 11 | 8 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 9 | 35 | 10 | 31 | 4 pts |
 | 2024-2025 | 9 | 35 | 10 | 35 | 0 pts |
 | 2025-2026 | 9 | 40 | 10 | 40 | 0 pts |
-| 2026-2027 | 9 | 11 | 10 | 8 | 3 pts |
+| 2026-2027 | 9 | 11 | 10 | 9 | 2 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 198 | 526 | 2.657 | 42.4% | 27.3% | 30.3% | 7.1% | 45.0 |
 | 2024-2025 | 198 | 584 | 2.949 | 47.5% | 20.7% | 31.8% | 5.1% | 46.08 |
 | 2025-2026 | 234 | 643 | 2.748 | 44.9% | 27.4% | 27.8% | 7.3% | 42.53 |
-| 2026-2027 | 60 | 169 | 2.817 | 43.3% | 18.3% | 38.3% | 3.3% | 14.08 |
+| 2026-2027 | 66 | 188 | 2.848 | 40.9% | 22.7% | 36.4% | 3.0% | 15.25 |
 
 ## 6. View divergence
 - Largest divergence: **2020-2021** (goals view, avg abs position diff = 4.167)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.500 | 3.500 |
 | 2024-2025 | 3.500 | 3.167 |
 | 2025-2026 | 2.800 | 2.933 |
-| 2026-2027 | 1.167 | 3.500 |
+| 2026-2027 | 1.833 | 3.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

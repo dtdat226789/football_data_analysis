@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T01:57:53+00:00
+- Generated: 2026-10-30T03:49:17+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Premier League (Egypt)
 - Scope: league `egypt`
@@ -8,11 +8,11 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 1769 |
-| Home wins | 634 (35.8%) |
-| Draws | 596 (33.7%) |
-| Away wins | 539 (30.5%) |
-| Total goals | 3955 |
+| Matches | 1771 |
+| Home wins | 635 (35.9%) |
+| Draws | 597 (33.7%) |
+| Away wins | 539 (30.4%) |
+| Total goals | 3960 |
 | Average goals per match | 2.236 |
 | Goalless matches | 239 (13.5%) |
 
@@ -25,14 +25,14 @@
 | 2023-2024 | 306 | 115 (37.6%) | 92 (30.1%) | 99 (32.4%) | 730 | 2.386 | 33 (10.8%) |
 | 2024-2025 | 153 | 57 (37.3%) | 47 (30.7%) | 49 (32.0%) | 315 | 2.059 | 24 (15.7%) |
 | 2025-2026 | 322 | 109 (33.9%) | 122 (37.9%) | 91 (28.3%) | 651 | 2.022 | 51 (15.8%) |
-| 2026-2027 | 70 | 27 (38.6%) | 16 (22.9%) | 27 (38.6%) | 164 | 2.343 | 5 (7.1%) |
+| 2026-2027 | 72 | 28 (38.9%) | 17 (23.6%) | 27 (37.5%) | 169 | 2.347 | 5 (6.9%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 341 (73.2%) | 106 (22.7%) | 19 (4.1%) | 466 |
-| HT draw | 256 (29.2%) | 406 (46.3%) | 214 (24.4%) | 876 |
-| HT away lead | 36 (8.5%) | 84 (19.8%) | 305 (71.8%) | 425 |
+| HT draw | 257 (29.3%) | 406 (46.3%) | 214 (24.4%) | 877 |
+| HT away lead | 36 (8.5%) | 85 (20.0%) | 305 (71.6%) | 426 |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
@@ -106,32 +106,32 @@
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
 | Home lead | 466 | 341 (73.2%) | 106 (22.7%) | 19 (4.1%) |
-| Away lead | 425 | 305 (71.8%) | 84 (19.8%) | 36 (8.5%) |
+| Away lead | 426 | 305 (71.6%) | 85 (20.0%) | 36 (8.5%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 256 | 29.2% |
+| Home win | 257 | 29.3% |
 | Draw | 406 | 46.3% |
 | Away win | 214 | 24.4% |
 - *2 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `1528` of `1769` (86.4%)
+- Matches with a first-goal time recorded: `1530` of `1771` (86.4%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
 | 1-15 | 413 | 23.3% | 170 (41.2%) | 100 (24.2%) | 143 (34.6%) |
 | 16-30 | 345 | 19.5% | 136 (39.4%) | 91 (26.4%) | 118 (34.2%) |
-| 31-45 | 276 | 15.6% | 111 (40.2%) | 74 (26.8%) | 91 (33.0%) |
-| 46-60 | 224 | 12.7% | 89 (39.7%) | 47 (21.0%) | 88 (39.3%) |
-| 61-75 | 146 | 8.3% | 64 (43.8%) | 29 (19.9%) | 53 (36.3%) |
+| 31-45 | 277 | 15.6% | 111 (40.1%) | 75 (27.1%) | 91 (32.9%) |
+| 46-60 | 225 | 12.7% | 90 (40.0%) | 47 (20.9%) | 88 (39.1%) |
+| 61-75 | 146 | 8.2% | 64 (43.8%) | 29 (19.9%) | 53 (36.3%) |
 | 76-90 | 91 | 5.1% | 48 (52.7%) | 11 (12.1%) | 32 (35.2%) |
 | 91-120 | 33 | 1.9% | 15 (45.5%) | 5 (15.2%) | 13 (39.4%) |
 
 ## 7. Goalless matches
-- Overall: **239** of `1769` (13.5%)
+- Overall: **239** of `1771` (13.5%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -141,7 +141,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 306 | 33 | 10.8% |
 | 2024-2025 | 153 | 24 | 15.7% |
 | 2025-2026 | 322 | 51 | 15.8% |
-| 2026-2027 | 70 | 5 | 7.1% |
+| 2026-2027 | 72 | 5 | 6.9% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

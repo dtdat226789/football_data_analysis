@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:10:31+00:00
+- Generated: 2026-10-30T04:05:43+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Liga Portugal 2 (Portugal)
 - Scope: league `portugal2`

@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:00:36+00:00
+- Generated: 2026-10-30T03:52:18+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Regionalliga North (Germany)
 - Scope: league `germany-north`
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 1014 | 3.314 | 41.8% | 24.5% | 33.7% | 5.9% | 42.0 |
 | 2024-2025 | 306 | 984 | 3.216 | 41.5% | 22.9% | 35.6% | 4.2% | 44.5 |
 | 2025-2026 | 317 | 1152 | 3.634 | 42.6% | 21.8% | 35.6% | 2.5% | 46.42 |
-| 2026-2027 | 130 | 506 | 3.892 | 43.1% | 20.8% | 36.2% | 2.3% | 19.11 |
+| 2026-2027 | 131 | 511 | 3.901 | 42.7% | 20.6% | 36.6% | 2.3% | 19.26 |
 
 ## 6. View divergence
 - Largest divergence: **2023-2024** (goals view, avg abs position diff = 21.444)

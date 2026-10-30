@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:18:50+00:00",
+  "generated_at": "2026-10-30T04:15:02+00:00",
   "config": {
     "league": "turkey1",
     "out_dir": "data/analysis/turkey1",
@@ -595,8 +595,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 152353,
-        "distinct": 152308,
+        "rows": 152397,
+        "distinct": 152352,
         "duplicates": 45
       }
     },
@@ -605,10 +605,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=474, fgte=474 rows)",
       "details": {
-        "total": 152353,
+        "total": 152397,
         "fgt_inconsistent": 474,
         "fgte_inconsistent": 474,
-        "n_with_fgt": 140016
+        "n_with_fgt": 140055
       }
     },
     {

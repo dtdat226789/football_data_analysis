@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:15:19+00:00
+- Generated: 2026-10-30T04:12:35+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`

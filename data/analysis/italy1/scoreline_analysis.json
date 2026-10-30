@@ -4,7 +4,7 @@
     "name": "backend/scripts/analyze_scorelines.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:04:48+00:00",
+  "generated_at": "2026-10-30T03:58:12+00:00",
   "config": {
     "league": "italy1",
     "out_dir": "data/analysis/italy1",
@@ -24,13 +24,13 @@
     "url": "https://www.football-charts.com/leagues/italy/serie-a"
   },
   "scoreline_frequency": {
-    "n_matches": 2363,
+    "n_matches": 2368,
     "n_distinct_scorelines": 41,
     "top": [
       {
         "scoreline": "1-1",
         "count": 297,
-        "pct": 12.6
+        "pct": 12.5
       },
       {
         "scoreline": "1-0",
@@ -54,12 +54,12 @@
       },
       {
         "scoreline": "2-0",
-        "count": 167,
+        "count": 168,
         "pct": 7.1
       },
       {
         "scoreline": "0-0",
-        "count": 156,
+        "count": 157,
         "pct": 6.6
       },
       {
@@ -69,7 +69,7 @@
       },
       {
         "scoreline": "0-2",
-        "count": 141,
+        "count": 142,
         "pct": 6.0
       },
       {
@@ -85,12 +85,12 @@
       {
         "scoreline": "3-2",
         "count": 65,
-        "pct": 2.8
+        "pct": 2.7
       },
       {
         "scoreline": "0-3",
         "count": 65,
-        "pct": 2.8
+        "pct": 2.7
       },
       {
         "scoreline": "1-3",
@@ -118,14 +118,14 @@
         "pct": 1.0
       },
       {
-        "scoreline": "0-4",
+        "scoreline": "1-4",
         "count": 23,
         "pct": 1.0
       },
       {
-        "scoreline": "1-4",
-        "count": 22,
-        "pct": 0.9
+        "scoreline": "0-4",
+        "count": 23,
+        "pct": 1.0
       }
     ]
   },
@@ -316,39 +316,39 @@
         {
           "scoreline": "2-1",
           "count": 10,
-          "pct": 12.0
+          "pct": 11.4
         },
         {
           "scoreline": "1-1",
           "count": 8,
-          "pct": 9.6
+          "pct": 9.1
         },
         {
           "scoreline": "0-2",
+          "count": 8,
+          "pct": 9.1
+        },
+        {
+          "scoreline": "2-0",
           "count": 7,
-          "pct": 8.4
+          "pct": 8.0
         },
         {
           "scoreline": "1-2",
           "count": 6,
-          "pct": 7.2
-        },
-        {
-          "scoreline": "2-0",
-          "count": 6,
-          "pct": 7.2
+          "pct": 6.8
         }
       ]
     }
   ],
   "total_goal_histogram": {
-    "n_matches": 2363,
+    "n_matches": 2368,
     "cap": 10,
     "buckets": [
       {
         "goals": 0,
         "label": "0",
-        "count": 156,
+        "count": 157,
         "pct": 6.6
       },
       {
@@ -360,31 +360,31 @@
       {
         "goals": 2,
         "label": "2",
-        "count": 605,
+        "count": 607,
         "pct": 25.6
       },
       {
         "goals": 3,
         "label": "3",
         "count": 531,
-        "pct": 22.5
+        "pct": 22.4
       },
       {
         "goals": 4,
         "label": "4",
         "count": 349,
-        "pct": 14.8
+        "pct": 14.7
       },
       {
         "goals": 5,
         "label": "5",
-        "count": 186,
+        "count": 187,
         "pct": 7.9
       },
       {
         "goals": 6,
         "label": "6",
-        "count": 80,
+        "count": 81,
         "pct": 3.4
       },
       {
@@ -812,33 +812,33 @@
     ]
   },
   "margin_distribution": {
-    "n_decided": 1736,
-    "n_draws": 627,
+    "n_decided": 1740,
+    "n_draws": 628,
     "avg_margin": 1.76,
     "distribution": [
       {
         "margin": 1,
         "label": "1",
         "count": 922,
-        "pct": 53.1
+        "pct": 53.0
       },
       {
         "margin": 2,
         "label": "2",
-        "count": 477,
-        "pct": 27.5
+        "count": 480,
+        "pct": 27.6
       },
       {
         "margin": 3,
         "label": "3+",
-        "count": 337,
+        "count": 338,
         "pct": 19.4
       }
     ]
   },
   "margin_by_outcome": {
     "home": {
-      "n_matches": 962,
+      "n_matches": 963,
       "matches": [
         {
           "season": "2020-2021",
@@ -8535,6 +8535,14 @@
           "scoreline": "4-2",
           "margin": 2,
           "match_date": "2026-10-27"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 0,
+          "scoreline": "2-0",
+          "margin": 2,
+          "match_date": "2026-10-28"
         }
       ],
       "distribution": [
@@ -8542,13 +8550,13 @@
           "margin": 1,
           "label": "1",
           "count": 495,
-          "pct": 51.5
+          "pct": 51.4
         },
         {
           "margin": 2,
           "label": "2",
-          "count": 263,
-          "pct": 27.3
+          "count": 264,
+          "pct": 27.4
         },
         {
           "margin": 3,
@@ -8561,7 +8569,7 @@
       "max_margin": 7
     },
     "away": {
-      "n_matches": 774,
+      "n_matches": 777,
       "matches": [
         {
           "season": "2020-2021",
@@ -14534,17 +14542,17 @@
         {
           "season": "2026-2027",
           "home_score": 0,
-          "away_score": 2,
-          "scoreline": "0-2",
-          "margin": 2,
+          "away_score": 1,
+          "scoreline": "0-1",
+          "margin": 1,
           "match_date": "2026-08-23"
         },
         {
           "season": "2026-2027",
           "home_score": 0,
-          "away_score": 1,
-          "scoreline": "0-1",
-          "margin": 1,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
           "match_date": "2026-08-23"
         },
         {
@@ -14754,6 +14762,30 @@
           "scoreline": "1-3",
           "margin": 2,
           "match_date": "2026-10-27"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 2,
+          "away_score": 4,
+          "scoreline": "2-4",
+          "margin": 2,
+          "match_date": "2026-10-28"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 0,
+          "away_score": 2,
+          "scoreline": "0-2",
+          "margin": 2,
+          "match_date": "2026-10-28"
+        },
+        {
+          "season": "2026-2027",
+          "home_score": 1,
+          "away_score": 4,
+          "scoreline": "1-4",
+          "margin": 3,
+          "match_date": "2026-10-28"
         }
       ],
       "distribution": [
@@ -14761,18 +14793,18 @@
           "margin": 1,
           "label": "1",
           "count": 427,
-          "pct": 55.2
+          "pct": 55.0
         },
         {
           "margin": 2,
           "label": "2",
-          "count": 214,
-          "pct": 27.6
+          "count": 216,
+          "pct": 27.8
         },
         {
           "margin": 3,
           "label": "3+",
-          "count": 133,
+          "count": 134,
           "pct": 17.2
         }
       ],
@@ -14782,22 +14814,22 @@
   },
   "common_scorelines": {
     "home": {
-      "n_matches": 962,
+      "n_matches": 963,
       "scoreline": "1-0",
       "count": 228,
       "pct": 23.7
     },
     "draw": {
-      "n_matches": 627,
+      "n_matches": 628,
       "scoreline": "1-1",
       "count": 297,
-      "pct": 47.4
+      "pct": 47.3
     },
     "away": {
-      "n_matches": 774,
+      "n_matches": 777,
       "scoreline": "1-2",
       "count": 186,
-      "pct": 24.0
+      "pct": 23.9
     }
   }
 }

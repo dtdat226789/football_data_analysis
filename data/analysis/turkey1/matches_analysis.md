@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:18:40+00:00
+- Generated: 2026-10-30T04:14:53+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Super Lig (Turkey)
 - Scope: league `turkey1`

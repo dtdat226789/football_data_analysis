@@ -1,20 +1,20 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:16:01+00:00
+- Generated: 2026-10-30T04:13:02+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Prva liga (Slovenia)
 - Scope: league `slovenia1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1128** across **7** seasons.
+- Matches analysed: **1130** across **7** seasons.
 - Distinct scorelines seen: **39**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 143 | 12.7% |
+| 1-1 | 144 | 12.7% |
 | 1-0 | 102 | 9.0% |
-| 2-1 | 100 | 8.9% |
-| 0-0 | 94 | 8.3% |
+| 2-1 | 100 | 8.8% |
+| 0-0 | 95 | 8.4% |
 | 0-1 | 86 | 7.6% |
 | 2-0 | 78 | 6.9% |
 | 1-2 | 72 | 6.4% |
@@ -91,22 +91,22 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 0-0 | 8 | 12.5% |
-| 1-1 | 8 | 12.5% |
-| 1-0 | 6 | 9.4% |
-| 0-2 | 4 | 6.2% |
-| 2-2 | 4 | 6.2% |
+| 0-0 | 9 | 13.6% |
+| 1-1 | 9 | 13.6% |
+| 1-0 | 6 | 9.1% |
+| 0-2 | 4 | 6.1% |
+| 2-2 | 4 | 6.1% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 94 | 8.3% |
-| 1 | 188 | 16.7% |
-| 2 | 286 | 25.4% |
-| 3 | 242 | 21.5% |
-| 4 | 163 | 14.5% |
+| 0 | 95 | 8.4% |
+| 1 | 188 | 16.6% |
+| 2 | 287 | 25.4% |
+| 3 | 242 | 21.4% |
+| 4 | 163 | 14.4% |
 | 5 | 90 | 8.0% |
 | 6 | 45 | 4.0% |
 | 7 | 14 | 1.2% |
@@ -141,7 +141,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-09-13 | 1-6 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **828** (draws: **300**)
+- Decided matches: **828** (draws: **302**)
 - Average winning margin: **1.8**
 
 | margin | matches | pct |
@@ -174,7 +174,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 470 | 1-0 | 102 | 21.7% |
-| draw | 300 | 1-1 | 143 | 47.7% |
+| draw | 302 | 1-1 | 144 | 47.7% |
 | away | 358 | 0-1 | 86 | 24.0% |
 
 ---

@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:11:18+00:00
+- Generated: 2026-10-30T04:06:56+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`

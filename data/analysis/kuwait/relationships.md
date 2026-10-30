@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T02:07:34+00:00
+- Generated: 2026-10-30T04:01:27+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Premier League (Kuwait)
 - Scope: league `kuwait`

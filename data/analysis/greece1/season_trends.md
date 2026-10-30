@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:01:47+00:00
+- Generated: 2026-10-30T03:53:36+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super League (Greece)
 - Scope: league `greece1`

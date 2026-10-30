@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:01:53+00:00",
+  "generated_at": "2026-10-30T03:53:42+00:00",
   "config": {
     "league": "greece1",
     "out_dir": "data/analysis/greece1",
@@ -627,8 +627,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 53877,
-        "distinct": 53867,
+        "rows": 53887,
+        "distinct": 53877,
         "duplicates": 10
       }
     },
@@ -637,10 +637,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=330, fgte=330 rows)",
       "details": {
-        "total": 53877,
+        "total": 53887,
         "fgt_inconsistent": 330,
         "fgte_inconsistent": 330,
-        "n_with_fgt": 49481
+        "n_with_fgt": 49489
       }
     },
     {

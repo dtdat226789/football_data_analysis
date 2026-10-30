@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:00:24+00:00
+- Generated: 2026-10-30T03:52:06+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Ligue 3 (France)
 - Scope: league `france3`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2021-2022: Laval beat Annecy by 1 pt
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — stable (+0.018 per match): first half 2.414 vs last half 2.432 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025-2026 (goals view, avg abs position diff 17.800)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.579)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.474)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 280 matches (14.7%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (212 of 772 home matches, 27.5%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (280 of 583 draw matches, 48.0%)

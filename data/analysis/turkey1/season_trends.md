@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:18:45+00:00
+- Generated: 2026-10-30T04:14:57+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Super Lig (Turkey)
 - Scope: league `turkey1`

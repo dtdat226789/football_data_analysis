@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T01:54:15+00:00
+- Generated: 2026-10-30T03:45:28+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Jupiler Pro League (Belgium)
 - Scope: league `belgium1`

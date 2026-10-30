@@ -1,6 +1,6 @@
 # Football Charts Database Profile
 - Report: `database_profile`
-- Generated: 2026-10-29T01:57:52+00:00
+- Generated: 2026-10-30T03:49:16+00:00
 - Script: `backend/scripts/profile_database.py` v1.0.0
 - Database: `football_charts` (PostgreSQL 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
 - Scope: league `egypt`
@@ -16,7 +16,7 @@
 | teams | 474 |
 | team_aliases | 948 |
 | team_seasons | 2022 |
-| matches | 28736 |
+| matches | 28742 |
 | standings | 6066 |
 
 ### 1.2 Leagues with data
@@ -37,12 +37,12 @@
 | china | Super League | China | 7 | 1482 |
 | czech1 | Chance Liga | Czech Republic | 7 | 1640 |
 | czech2 | ChNL | Czech Republic | 7 | 1478 |
-| czech3a | 3. CFL - Group A | Czech Republic | 5 | 1087 |
-| czech3b | 3. CFL - Group B | Czech Republic | 7 | 1421 |
+| czech3a | 3. CFL - Group A | Czech Republic | 5 | 1089 |
+| czech3b | 3. CFL - Group B | Czech Republic | 7 | 1423 |
 | denmark1 | Superliga | Denmark | 7 | 926 |
 | denmark2 | 1st Division | Denmark | 7 | 848 |
 | develop21 | Professional Development League | England | 1 | 68 |
-| egypt | Premier League | Egypt | 7 | 1769 |
+| egypt | Premier League | Egypt | 7 | 1771 |
 
 ### 1.3 Registered seasons vs seasons with data
 - Registered league_seasons for `egypt`: `7`
@@ -57,14 +57,14 @@
 | 2023-2024 | False | complete | 306 | 18 | 2023-09-18 | 2024-08-18 |
 | 2024-2025 | False | complete | 153 | 18 | 2024-10-30 | 2025-03-05 |
 | 2025-2026 | True | complete | 322 | 21 | 2025-08-08 | 2026-05-29 |
-| 2026-2027 | True | in_progress | 70 | 20 | 2026-08-21 | 2026-10-21 |
+| 2026-2027 | True | in_progress | 72 | 20 | 2026-08-21 | 2026-10-28 |
 
 ### 1.4 Duplicate checks
 | check | rows | distinct | duplicates |
 |---|---|---|---|
-| matches.api_id (natural PK) | 28736 | 28736 | 0 |
-| matches (league_season_id, game_index) | 28736 | 28736 | 0 |
-| matches same fixture on same date (league_season, home, away, match_date) | 28736 | 28731 | 5 |
+| matches.api_id (natural PK) | 28742 | 28742 | 0 |
+| matches (league_season_id, game_index) | 28742 | 28742 | 0 |
+| matches same fixture on same date (league_season, home, away, match_date) | 28742 | 28737 | 5 |
 | team_seasons (league_season_id, team_id) | 2022 | 2022 | 0 |
 | team_seasons api_name within a season | 2022 | 2022 | 0 |
 | team_seasons api_slug within a season | 2022 | 2022 | 0 |
@@ -76,20 +76,20 @@
   > **WARNING:** duplicates found, see section 3.
 
 ### 1.5 NULL counts (matches, important fields)
-- Total matches: `28736`
+- Total matches: `28742`
 
 | field | n_null | n_not_null | null_pct |
 |---|---|---|---|
-| match_date | 0 | 28736 | 0.0% |
-| kickoff_time | 0 | 28736 | 0.0% |
-| home_team_id | 0 | 28736 | 0.0% |
-| away_team_id | 0 | 28736 | 0.0% |
-| home_score | 0 | 28736 | 0.0% |
-| away_score | 0 | 28736 | 0.0% |
-| home_ht | 342 | 28394 | 1.2% |
-| away_ht | 342 | 28394 | 1.2% |
-| first_goal_time | 2592 | 26144 | 9.0% |
-| first_goal_time_extra | 2592 | 26144 | 9.0% |
+| match_date | 0 | 28742 | 0.0% |
+| kickoff_time | 0 | 28742 | 0.0% |
+| home_team_id | 0 | 28742 | 0.0% |
+| away_team_id | 0 | 28742 | 0.0% |
+| home_score | 0 | 28742 | 0.0% |
+| away_score | 0 | 28742 | 0.0% |
+| home_ht | 342 | 28400 | 1.2% |
+| away_ht | 342 | 28400 | 1.2% |
+| first_goal_time | 2593 | 26149 | 9.0% |
+| first_goal_time_extra | 2593 | 26149 | 9.0% |
   > Semantics: `home_ht`/`away_ht` NULL together; `first_goal_time`/`first_goal_time_extra` NULL iff goalless.
 
 ### 1.6 Value ranges
@@ -107,18 +107,18 @@
 ### 2.1 Outcome distribution (overall)
 | outcome | count | pct |
 |---|---|---|
-| Home | 634 | 35.8% |
-| Draw | 596 | 33.7% |
-| Away | 539 | 30.5% |
-| Total | 1769 | 100.0% |
+| Home | 635 | 35.9% |
+| Draw | 597 | 33.7% |
+| Away | 539 | 30.4% |
+| Total | 1771 | 100.0% |
 
 ### 2.2 Goals
 | metric | value |
 |---|---|
-| Total goals | 3955 |
+| Total goals | 3960 |
 | Average goals per match | 2.236 |
-| Home goals | 2062 (avg 1.166) |
-| Away goals | 1893 (avg 1.07) |
+| Home goals | 2065 (avg 1.166) |
+| Away goals | 1895 (avg 1.07) |
 | Home goal share | 52.1% |
 | Goalless matches | 239 (13.5%) |
 
@@ -131,16 +131,16 @@
 | 2023-2024 | 306 | 37.6% | 30.1% | 32.4% | 730 | 2.386 | 389 | 341 | 33 (10.8%) |
 | 2024-2025 | 153 | 37.3% | 30.7% | 32.0% | 315 | 2.059 | 166 | 149 | 24 (15.7%) |
 | 2025-2026 | 322 | 33.9% | 37.9% | 28.3% | 651 | 2.022 | 336 | 315 | 51 (15.8%) |
-| 2026-2027 | 70 | 38.6% | 22.9% | 38.6% | 164 | 2.343 | 79 | 85 | 5 (7.1%) |
+| 2026-2027 | 72 | 38.9% | 23.6% | 37.5% | 169 | 2.347 | 82 | 87 | 5 (6.9%) |
 
 ### 2.4 First-goal timing
-- Matches with a recorded first-goal time: `1528` of `1769` (86.4%)
+- Matches with a recorded first-goal time: `1530` of `1771` (86.4%)
 | metric | value |
 |---|---|
-| First goals recorded | 1528 |
+| First goals recorded | 1530 |
 | Min minute | 1 |
 | Max minute | 101 |
-| Mean minute | 35.17 |
+| Mean minute | 35.18 |
 | Median (p50) | 31.0 |
 | p25 | 14.0 |
 | p75 | 51.0 |
@@ -150,8 +150,8 @@ First-goal minute buckets (count):
 |---|---|
 | 1-15 | 413 |
 | 16-30 | 345 |
-| 31-45 | 276 |
-| 46-60 | 224 |
+| 31-45 | 277 |
+| 46-60 | 225 |
 | 61-75 | 146 |
 | 76-90 | 91 |
 | 91-120 | 33 |
@@ -189,11 +189,11 @@ First-goal minute buckets (count):
 Most common full-time scorelines:
 | scoreline | count |
 |---|---|
-| 1-1 | 257 |
+| 1-1 | 258 |
 | 0-0 | 239 |
 | 1-0 | 213 |
 | 0-1 | 168 |
-| 2-1 | 132 |
+| 2-1 | 133 |
 | 1-2 | 131 |
 | 0-2 | 102 |
 | 2-0 | 92 |
@@ -214,7 +214,7 @@ Extreme scorelines (>= 8 total goals):
 | Sun | 235 | 13.3% |
 | Mon | 255 | 14.4% |
 | Tue | 269 | 15.2% |
-| Wed | 259 | 14.6% |
+| Wed | 261 | 14.7% |
 | Thu | 248 | 14.0% |
 | Fri | 269 | 15.2% |
 | Sat | 234 | 13.2% |
@@ -234,18 +234,18 @@ Extreme scorelines (>= 8 total goals):
 | 10 | TEAM_COUNT_UNEXPECTED | Season 2024-2025 has 18 teams, expected 20 |
 | 11 | MATCH_COUNT_UNEXPECTED | Season 2025-2026 has 322 matches, expected 380 |
 | 12 | TEAM_COUNT_UNEXPECTED | Season 2025-2026 has 21 teams, expected 20 |
-| 13 | MATCH_COUNT_UNEXPECTED | Season 2026-2027 has 70 matches, expected 380 |
+| 13 | MATCH_COUNT_UNEXPECTED | Season 2026-2027 has 72 matches, expected 380 |
 | 14 | SEASON_STATE_NOT_COMPLETE | Season 2026-2027 has data but state is 'in_progress' |
 | 15 | GOALLESS_SHARE_OUTLIER | Season 2020-2021 goalless share 10.5% vs overall 13.5% (deviation 3.0 pp) |
-| 16 | OUTCOME_SHARE_OUTLIER | Season 2020-2021 home outcome share 31.0% vs overall 35.8% |
+| 16 | OUTCOME_SHARE_OUTLIER | Season 2020-2021 home outcome share 31.0% vs overall 35.9% |
 | 17 | GOALLESS_SHARE_OUTLIER | Season 2022-2023 goalless share 17.0% vs overall 13.5% (deviation 3.5 pp) |
 | 18 | GOALLESS_SHARE_OUTLIER | Season 2023-2024 goalless share 10.8% vs overall 13.5% (deviation 2.7 pp) |
 | 19 | GOALLESS_SHARE_OUTLIER | Season 2024-2025 goalless share 15.7% vs overall 13.5% (deviation 2.2 pp) |
 | 20 | GOALLESS_SHARE_OUTLIER | Season 2025-2026 goalless share 15.8% vs overall 13.5% (deviation 2.3 pp) |
 | 21 | OUTCOME_SHARE_OUTLIER | Season 2025-2026 draw outcome share 37.9% vs overall 33.7% |
-| 22 | GOALLESS_SHARE_OUTLIER | Season 2026-2027 goalless share 7.1% vs overall 13.5% (deviation 6.4 pp) |
-| 23 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 draw outcome share 22.9% vs overall 33.7% |
-| 24 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 away outcome share 38.6% vs overall 30.5% |
+| 22 | GOALLESS_SHARE_OUTLIER | Season 2026-2027 goalless share 6.9% vs overall 13.5% (deviation 6.6 pp) |
+| 23 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 draw outcome share 23.6% vs overall 33.7% |
+| 24 | OUTCOME_SHARE_OUTLIER | Season 2026-2027 away outcome share 37.5% vs overall 30.4% |
 | 25 | HIGH_SCORING_MATCHES | 5 match(es) with >= 8 total goals (extreme scorelines) |
 | 26 | DUPLICATE_ROWS | Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows) |
 | 27 | FIRST_GOAL_NULL_INCONSISTENCY | first_goal_time/first_goal_time_extra NULL semantics broken (fgt=312, fgte=312 rows) |
@@ -279,21 +279,21 @@ Extreme scorelines (>= 8 total goals):
 - `10.` `TEAM_COUNT_UNEXPECTED` details: `{"season": "2024-2025", "n_teams": 18, "expected": 20}`
 - `11.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2025-2026", "n_matches": 322, "expected": 380}`
 - `12.` `TEAM_COUNT_UNEXPECTED` details: `{"season": "2025-2026", "n_teams": 21, "expected": 20}`
-- `13.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2026-2027", "n_matches": 70, "expected": 380}`
+- `13.` `MATCH_COUNT_UNEXPECTED` details: `{"season": "2026-2027", "n_matches": 72, "expected": 380}`
 - `14.` `SEASON_STATE_NOT_COMPLETE` details: `{"season": "2026-2027", "season_state": "in_progress"}`
 - `15.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2020-2021", "season_goalless_pct": 10.5, "overall_goalless_pct": 13.5, "deviation_pp": 3.0}`
-- `16.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2020-2021", "outcome": "home", "season_share": 31.0, "overall_share": 35.8}`
+- `16.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2020-2021", "outcome": "home", "season_share": 31.0, "overall_share": 35.9}`
 - `17.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2022-2023", "season_goalless_pct": 17.0, "overall_goalless_pct": 13.5, "deviation_pp": 3.5}`
 - `18.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2023-2024", "season_goalless_pct": 10.8, "overall_goalless_pct": 13.5, "deviation_pp": 2.7}`
 - `19.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2024-2025", "season_goalless_pct": 15.7, "overall_goalless_pct": 13.5, "deviation_pp": 2.2}`
 - `20.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2025-2026", "season_goalless_pct": 15.8, "overall_goalless_pct": 13.5, "deviation_pp": 2.3}`
 - `21.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2025-2026", "outcome": "draw", "season_share": 37.9, "overall_share": 33.7}`
-- `22.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2026-2027", "season_goalless_pct": 7.1, "overall_goalless_pct": 13.5, "deviation_pp": 6.4}`
-- `23.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "draw", "season_share": 22.9, "overall_share": 33.7}`
-- `24.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "away", "season_share": 38.6, "overall_share": 30.5}`
+- `22.` `GOALLESS_SHARE_OUTLIER` details: `{"season": "2026-2027", "season_goalless_pct": 6.9, "overall_goalless_pct": 13.5, "deviation_pp": 6.6}`
+- `23.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "draw", "season_share": 23.6, "overall_share": 33.7}`
+- `24.` `OUTCOME_SHARE_OUTLIER` details: `{"season": "2026-2027", "outcome": "away", "season_share": 37.5, "overall_share": 30.4}`
 - `25.` `HIGH_SCORING_MATCHES` details: `{"n_matches": 5, "threshold": 8, "examples": [{"scoreline": "4-4", "total_goals": 8, "count": 2}, {"scoreline": "3-5", "total_goals": 8, "count": 3}]}`
-- `26.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 28736, "distinct": 28731, "duplicates": 5}`
-- `27.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 28736, "fgt_inconsistent": 312, "fgte_inconsistent": 312, "n_with_fgt": 26144}`
+- `26.` `DUPLICATE_ROWS` details: `{"check": "matches same fixture on same date (league_season, home, away, match_date)", "rows": 28742, "distinct": 28737, "duplicates": 5}`
+- `27.` `FIRST_GOAL_NULL_INCONSISTENCY` details: `{"total": 28742, "fgt_inconsistent": 312, "fgte_inconsistent": 312, "n_with_fgt": 26149}`
 - `28.` `STANDINGS_INCOMPLETE` details: `{"season": "2020-2021", "view": "classic", "n_rows": 53, "min_pos": 1, "max_pos": 53, "distinct_teams": 53}`
 - `29.` `STANDINGS_INCOMPLETE` details: `{"season": "2020-2021", "view": "goals", "n_rows": 53, "min_pos": 1, "max_pos": 53, "distinct_teams": 53}`
 - `30.` `STANDINGS_INCOMPLETE` details: `{"season": "2020-2021", "view": "luck", "n_rows": 53, "min_pos": 1, "max_pos": 53, "distinct_teams": 53}`

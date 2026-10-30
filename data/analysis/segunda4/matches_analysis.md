@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:14:58+00:00
+- Generated: 2026-10-30T04:12:21+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Segunda RFEF - Group 4 (Spain)
 - Scope: league `segunda4`

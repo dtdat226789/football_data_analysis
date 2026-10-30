@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T02:02:28+00:00
+- Generated: 2026-10-30T03:54:22+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Eredivisie (Netherlands)
 - Scope: league `holland1`

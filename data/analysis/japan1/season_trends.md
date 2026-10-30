@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:06:19+00:00
+- Generated: 2026-10-30T03:59:57+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: J1 League (Japan)
 - Scope: league `japan1`

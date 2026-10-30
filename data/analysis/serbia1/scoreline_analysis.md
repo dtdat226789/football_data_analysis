@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:15:42+00:00
+- Generated: 2026-10-30T04:12:50+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1726** across **7** seasons.
+- Matches analysed: **1728** across **7** seasons.
 - Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
@@ -17,7 +17,7 @@
 | 2-1 | 142 | 8.2% |
 | 2-0 | 136 | 7.9% |
 | 0-1 | 128 | 7.4% |
-| 1-2 | 122 | 7.1% |
+| 1-2 | 123 | 7.1% |
 | 3-0 | 86 | 5.0% |
 | 0-2 | 81 | 4.7% |
 | 2-2 | 66 | 3.8% |
@@ -27,7 +27,7 @@
 | 0-3 | 37 | 2.1% |
 | 4-0 | 33 | 1.9% |
 | 4-1 | 31 | 1.8% |
-| 2-3 | 27 | 1.6% |
+| 2-3 | 28 | 1.6% |
 | 0-4 | 27 | 1.6% |
 | 1-4 | 22 | 1.3% |
 | 5-0 | 18 | 1.0% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-0 | 12 | 13.5% |
-| 1-1 | 9 | 10.1% |
-| 2-0 | 8 | 9.0% |
-| 2-1 | 7 | 7.9% |
-| 0-1 | 7 | 7.9% |
+| 1-0 | 12 | 13.2% |
+| 1-1 | 9 | 9.9% |
+| 2-0 | 8 | 8.8% |
+| 2-1 | 7 | 7.7% |
+| 0-1 | 7 | 7.7% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -105,9 +105,9 @@ _10+ groups all matches with 10 or more total goals._
 | 0 | 143 | 8.3% |
 | 1 | 316 | 18.3% |
 | 2 | 395 | 22.9% |
-| 3 | 387 | 22.4% |
+| 3 | 388 | 22.5% |
 | 4 | 249 | 14.4% |
-| 5 | 148 | 8.6% |
+| 5 | 149 | 8.6% |
 | 6 | 57 | 3.3% |
 | 7 | 19 | 1.1% |
 | 8 | 10 | 0.6% |
@@ -152,12 +152,12 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-05-10 | 6-1 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1324** (draws: **402**)
+- Decided matches: **1326** (draws: **402**)
 - Average winning margin: **1.87**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 659 | 49.8% |
+| 1 | 661 | 49.8% |
 | 2 | 359 | 27.1% |
 | 3+ | 306 | 23.1% |
 
@@ -173,12 +173,12 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **543** | avg margin: **1.79** | max margin: **6**
+- Matches: **545** | avg margin: **1.79** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 282 | 51.9% |
-| 2 | 153 | 28.2% |
-| 3+ | 108 | 19.9% |
+| 1 | 284 | 52.1% |
+| 2 | 153 | 28.1% |
+| 3+ | 108 | 19.8% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
@@ -186,7 +186,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|---|---|
 | home | 781 | 1-0 | 188 | 24.1% |
 | draw | 402 | 1-1 | 178 | 44.3% |
-| away | 543 | 0-1 | 128 | 23.6% |
+| away | 545 | 0-1 | 128 | 23.5% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

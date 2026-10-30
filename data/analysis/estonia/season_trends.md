@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:58:52+00:00
+- Generated: 2026-10-30T03:50:23+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Meistriliiga (Estonia)
 - Scope: league `estonia`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 79 | 77 | 53 | 48 | 43 | 23 |
 | 2024 | 87 | 72 | 70 | 42 | 35 | 15 |
 | 2025 | 82 | 79 | 70 | 49 | 36 | 17 |
-| 2026 | 87 | 60 | 54 | 47 | 37 | 20 |
+| 2026 | 87 | 60 | 57 | 47 | 37 | 20 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -52,7 +52,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 7 | 43 | 8 | 38 | 5 pts |
 | 2024 | 7 | 35 | 8 | 34 | 1 pts |
 | 2025 | 7 | 36 | 8 | 30 | 6 pts |
-| 2026 | 7 | 37 | 8 | 36 | 1 pts |
+| 2026 | 7 | 37 | 8 | 37 | 0 pts |
 
 ## 5. League-level trends
 | season | matches | total goals | avg goals | home win | draw | away win | goalless | avg pts/team |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 180 | 458 | 2.544 | 37.2% | 27.8% | 35.0% | 9.4% | 49.0 |
 | 2024 | 180 | 539 | 2.994 | 41.7% | 22.2% | 36.1% | 5.6% | 50.0 |
 | 2025 | 180 | 572 | 3.178 | 46.7% | 13.3% | 40.0% | 2.2% | 51.6 |
-| 2026 | 168 | 521 | 3.101 | 48.8% | 11.9% | 39.3% | 3.0% | 48.4 |
+| 2026 | 170 | 525 | 3.088 | 48.2% | 12.4% | 39.4% | 2.9% | 48.9 |
 
 ## 6. View divergence
 - Largest divergence: **2022** (goals view, avg abs position diff = 4.200)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 3.200 | 3.400 |
 | 2024 | 1.000 | 2.400 |
 | 2025 | 1.400 | 3.600 |
-| 2026 | 3.000 | 3.200 |
+| 2026 | 3.000 | 3.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

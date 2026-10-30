@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:05:55+00:00
+- Generated: 2026-10-30T03:59:30+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Serie C - Group B (Italy)
 - Scope: league `italy3b`
@@ -8,11 +8,11 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 2367 |
-| Home wins | 957 (40.4%) |
+| Matches | 2368 |
+| Home wins | 958 (40.5%) |
 | Draws | 723 (30.5%) |
 | Away wins | 687 (29.0%) |
-| Total goals | 5600 |
+| Total goals | 5603 |
 | Average goals per match | 2.366 |
 | Goalless matches | 254 (10.7%) |
 
@@ -25,13 +25,13 @@
 | 2023-2024 | 380 | 172 (45.3%) | 106 (27.9%) | 102 (26.8%) | 915 | 2.408 | 36 (9.5%) |
 | 2024-2025 | 380 | 147 (38.7%) | 114 (30.0%) | 119 (31.3%) | 897 | 2.361 | 42 (11.1%) |
 | 2025-2026 | 357 | 134 (37.5%) | 113 (31.7%) | 110 (30.8%) | 802 | 2.246 | 35 (9.8%) |
-| 2026-2027 | 110 | 50 (45.5%) | 31 (28.2%) | 29 (26.4%) | 278 | 2.527 | 9 (8.2%) |
+| 2026-2027 | 111 | 51 (45.9%) | 31 (27.9%) | 29 (26.1%) | 281 | 2.532 | 9 (8.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 571 (76.0%) | 134 (17.8%) | 46 (6.1%) | 751 |
-| HT draw | 338 (31.5%) | 472 (43.9%) | 264 (24.6%) | 1074 |
+| HT draw | 339 (31.5%) | 472 (43.9%) | 264 (24.6%) | 1075 |
 | HT away lead | 47 (8.7%) | 117 (21.7%) | 375 (69.6%) | 539 |
 - *3 match(es) excluded (no HT score recorded).*
 
@@ -149,13 +149,13 @@
 ### Matches level at half-time
 | FT result | count | pct |
 |---|---|---|
-| Home win | 338 | 31.5% |
+| Home win | 339 | 31.5% |
 | Draw | 472 | 43.9% |
 | Away win | 264 | 24.6% |
 - *3 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2110` of `2367` (89.1%)
+- Matches with a first-goal time recorded: `2111` of `2368` (89.1%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
@@ -163,13 +163,13 @@ Outcome distribution by first-goal timing bucket:
 | 1-15 | 636 | 26.9% | 290 (45.6%) | 149 (23.4%) | 197 (31.0%) |
 | 16-30 | 512 | 21.6% | 237 (46.3%) | 109 (21.3%) | 166 (32.4%) |
 | 31-45 | 349 | 14.7% | 147 (42.1%) | 94 (26.9%) | 108 (30.9%) |
-| 46-60 | 289 | 12.2% | 123 (42.6%) | 70 (24.2%) | 96 (33.2%) |
+| 46-60 | 290 | 12.2% | 124 (42.8%) | 70 (24.1%) | 96 (33.1%) |
 | 61-75 | 184 | 7.8% | 86 (46.7%) | 32 (17.4%) | 66 (35.9%) |
 | 76-90 | 102 | 4.3% | 53 (52.0%) | 13 (12.7%) | 36 (35.3%) |
 | 91-120 | 38 | 1.6% | 20 (52.6%) | 2 (5.3%) | 16 (42.1%) |
 
 ## 7. Goalless matches
-- Overall: **254** of `2367` (10.7%)
+- Overall: **254** of `2368` (10.7%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -179,7 +179,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 380 | 36 | 9.5% |
 | 2024-2025 | 380 | 42 | 11.1% |
 | 2025-2026 | 357 | 35 | 9.8% |
-| 2026-2027 | 110 | 9 | 8.2% |
+| 2026-2027 | 111 | 9 | 8.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

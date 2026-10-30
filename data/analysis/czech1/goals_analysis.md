@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T01:56:00+00:00
+- Generated: 2026-10-30T03:47:16+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Chance Liga (Czech Republic)
 - Scope: league `czech1`

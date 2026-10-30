@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:12:42+00:00",
+  "generated_at": "2026-10-30T04:09:06+00:00",
   "config": {
     "league": "saudi2",
     "out_dir": "data/analysis/saudi2",
@@ -29,7 +29,7 @@
       "path": "data/analysis/saudi2/database_profile.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 50.83
+      "size_kb": 50.84
     },
     {
       "report_name": "matches_analysis",
@@ -64,7 +64,7 @@
       "path": "data/analysis/saudi2/scoreline_analysis.json",
       "exists": true,
       "loaded": true,
-      "size_kb": 297.93
+      "size_kb": 298.51
     },
     {
       "report_name": "relationships",
@@ -83,7 +83,7 @@
     {
       "source": "matches_analysis",
       "finding": "Outcome split across all seasons",
-      "detail": "2058 matches: home wins 39.8%, draws 28.4%, away wins 31.8% (820H / 584D / 654A)",
+      "detail": "2061 matches: home wins 39.9%, draws 28.3%, away wins 31.8% (822H / 584D / 655A)",
       "importance": "medium",
       "id": "F1"
     },
@@ -97,49 +97,49 @@
     {
       "source": "matches_analysis",
       "finding": "Most common HT/FT flow",
-      "detail": "home lead at HT -> home win occurred 436 times",
+      "detail": "home lead at HT -> home win occurred 437 times",
       "importance": "low",
       "id": "F3"
     },
     {
       "source": "goals_analysis",
       "finding": "Average goals per match",
-      "detail": "2058 matches produced 5117 goals (avg 2.486 per match)",
+      "detail": "2061 matches produced 5122 goals (avg 2.485 per match)",
       "importance": "medium",
       "id": "F4"
     },
     {
       "source": "goals_analysis",
       "finding": "Home goal share",
-      "detail": "home 53.4% vs away 46.6% of 5117 goals in total (home/away ratio 1.15)",
+      "detail": "home 53.4% vs away 46.6% of 5122 goals in total (home/away ratio 1.15)",
       "importance": "medium",
       "id": "F5"
     },
     {
       "source": "goals_analysis",
       "finding": "Both teams to score",
-      "detail": "1083 of 2058 matches (52.6%)",
+      "detail": "1083 of 2061 matches (52.5%)",
       "importance": "medium",
       "id": "F6"
     },
     {
       "source": "goals_analysis",
       "finding": "Most common first-goal bucket",
-      "detail": "minute 1-15 (first goal in 531 scoring matches, 28.6% of scoring)",
+      "detail": "minute 1-15 (first goal in 531 scoring matches, 28.5% of scoring)",
       "importance": "low",
       "id": "F7"
     },
     {
       "source": "goals_analysis",
       "finding": "Average first goal minute",
-      "detail": "mean 34.34, median 29.0",
+      "detail": "mean 34.35, median 29.0",
       "importance": "low",
       "id": "F8"
     },
     {
       "source": "teams_analysis",
       "finding": "Dominant team by lifetime points",
-      "detail": "Al Jabalain leads with 358 points across 7 seasons (0 title(s), GD 65)",
+      "detail": "Al Jabalain leads with 361 points across 7 seasons (0 title(s), GD 66)",
       "importance": "high",
       "id": "F9"
     },
@@ -153,7 +153,7 @@
     {
       "source": "teams_analysis",
       "finding": "Biggest home advantage",
-      "detail": "Al Jabalain earns 48 more points at home than away (203 home vs 155 away)",
+      "detail": "Al Jabalain earns 51 more points at home than away (206 home vs 155 away)",
       "importance": "medium",
       "id": "F11"
     },
@@ -174,7 +174,7 @@
     {
       "source": "season_trends",
       "finding": "Average-goals trend",
-      "detail": "up (+0.346 per match): first half 2.278 vs last half 2.624 across 7 seasons",
+      "detail": "up (+0.337 per match): first half 2.278 vs last half 2.616 across 7 seasons",
       "importance": "medium",
       "id": "F14"
     },
@@ -188,21 +188,21 @@
     {
       "source": "season_trends",
       "finding": "Smallest view divergence",
-      "detail": "2026-2027 (luck view, avg abs position diff 2.667)",
+      "detail": "2026-2027 (luck view, avg abs position diff 2.556)",
       "importance": "low",
       "id": "F16"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common scoreline",
-      "detail": "1-1 in 271 matches (13.2%)",
+      "detail": "1-1 in 271 matches (13.1%)",
       "importance": "medium",
       "id": "F17"
     },
     {
       "source": "scoreline_analysis",
       "finding": "Most common home-win scoreline",
-      "detail": "1-0 (221 of 820 home matches, 27.0%)",
+      "detail": "1-0 (222 of 822 home matches, 27.0%)",
       "importance": "low",
       "id": "F18"
     },
@@ -216,7 +216,7 @@
     {
       "source": "scoreline_analysis",
       "finding": "Most common away-win scoreline",
-      "detail": "0-1 (192 of 654 away matches, 29.4%)",
+      "detail": "0-1 (192 of 655 away matches, 29.3%)",
       "importance": "low",
       "id": "F20"
     },
@@ -251,21 +251,21 @@
     {
       "source": "database_profile",
       "finding": "Data coverage",
-      "detail": "7 of 7 registered seasons populated (100.0%); 2058 matches observed",
+      "detail": "7 of 7 registered seasons populated (100.0%); 2061 matches observed",
       "importance": "medium",
       "id": "F25"
     }
   ],
   "headline_stats": {
-    "n_matches": 2058,
-    "avg_goals": 2.486,
-    "home_win_pct": 39.8,
-    "draw_pct": 28.4,
+    "n_matches": 2061,
+    "avg_goals": 2.485,
+    "home_win_pct": 39.9,
+    "draw_pct": 28.3,
     "away_win_pct": 31.8,
     "most_common_scoreline": "1-1",
     "dominant_team": "Al Jabalain",
     "champion_most_titles": "Al Hazem",
-    "btts_rate_pct": 52.6
+    "btts_rate_pct": 52.5
   },
   "comparison": [
     {
@@ -276,7 +276,7 @@
         "calculated",
         "warnings"
       ],
-      "size_kb": 50.83
+      "size_kb": 50.84
     },
     {
       "module": "matches_analysis",
@@ -344,7 +344,7 @@
         "margin_by_outcome",
         "common_scorelines"
       ],
-      "size_kb": 297.93
+      "size_kb": 298.51
     },
     {
       "module": "relationships",
@@ -446,10 +446,10 @@
     {
       "code": "MATCH_COUNT_UNEXPECTED",
       "severity": "warning",
-      "message": "Season 2026-2027 has 71 matches, expected 380",
+      "message": "Season 2026-2027 has 74 matches, expected 380",
       "details": {
         "season": "2026-2027",
-        "n_matches": 71,
+        "n_matches": 74,
         "expected": 380
       }
     },
@@ -497,12 +497,12 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2021-2022 draw outcome share 33.7% vs overall 28.4%",
+      "message": "Season 2021-2022 draw outcome share 33.7% vs overall 28.3%",
       "details": {
         "season": "2021-2022",
         "outcome": "draw",
         "season_share": 33.7,
-        "overall_share": 28.4
+        "overall_share": 28.3
       }
     },
     {
@@ -530,12 +530,12 @@
     {
       "code": "SEASON_AVG_GOALS_OUTLIER",
       "severity": "warning",
-      "message": "Season 2025-2026 avg goals 2.968 vs overall 2.486 (deviation 0.482)",
+      "message": "Season 2025-2026 avg goals 2.968 vs overall 2.485 (deviation 0.483)",
       "details": {
         "season": "2025-2026",
         "season_avg_goals": 2.968,
-        "overall_avg_goals": 2.486,
-        "deviation": 0.482
+        "overall_avg_goals": 2.485,
+        "deviation": 0.483
       }
     },
     {
@@ -552,45 +552,45 @@
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2025-2026 draw outcome share 23.3% vs overall 28.4%",
+      "message": "Season 2025-2026 draw outcome share 23.3% vs overall 28.3%",
       "details": {
         "season": "2025-2026",
         "outcome": "draw",
         "season_share": 23.3,
-        "overall_share": 28.4
+        "overall_share": 28.3
       }
     },
     {
       "code": "GOALLESS_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 goalless share 15.5% vs overall 9.3% (deviation 6.2 pp)",
+      "message": "Season 2026-2027 goalless share 14.9% vs overall 9.3% (deviation 5.6 pp)",
       "details": {
         "season": "2026-2027",
-        "season_goalless_pct": 15.5,
+        "season_goalless_pct": 14.9,
         "overall_goalless_pct": 9.3,
-        "deviation_pp": 6.2
+        "deviation_pp": 5.6
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 home outcome share 32.4% vs overall 39.8%",
+      "message": "Season 2026-2027 home outcome share 33.8% vs overall 39.9%",
       "details": {
         "season": "2026-2027",
         "outcome": "home",
-        "season_share": 32.4,
-        "overall_share": 39.8
+        "season_share": 33.8,
+        "overall_share": 39.9
       }
     },
     {
       "code": "OUTCOME_SHARE_OUTLIER",
       "severity": "warning",
-      "message": "Season 2026-2027 draw outcome share 39.4% vs overall 28.4%",
+      "message": "Season 2026-2027 draw outcome share 37.8% vs overall 28.3%",
       "details": {
         "season": "2026-2027",
         "outcome": "draw",
-        "season_share": 39.4,
-        "overall_share": 28.4
+        "season_share": 37.8,
+        "overall_share": 28.3
       }
     },
     {
@@ -645,8 +645,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (18 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 118515,
-        "distinct": 118497,
+        "rows": 118544,
+        "distinct": 118526,
         "duplicates": 18
       }
     },
@@ -655,10 +655,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=425, fgte=425 rows)",
       "details": {
-        "total": 118515,
+        "total": 118544,
         "fgt_inconsistent": 425,
         "fgte_inconsistent": 425,
-        "n_with_fgt": 109029
+        "n_with_fgt": 109055
       }
     },
     {

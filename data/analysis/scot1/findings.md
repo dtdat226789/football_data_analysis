@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:13:35+00:00
+- Generated: 2026-10-30T04:10:38+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: League One (Scotland)
 - Scope: league `scot1`

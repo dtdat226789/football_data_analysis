@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:54:55+00:00
+- Generated: 2026-10-30T03:46:05+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie B (Brazil)
 - Scope: league `brazil2`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023 | 12.050 | 10.200 |
 | 2024 | 19.700 | 16.450 |
 | 2025 | 23.100 | 18.550 |
-| 2026 | 1.600 | 7.300 |
+| 2026 | 1.500 | 7.300 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

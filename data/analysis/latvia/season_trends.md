@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:07:47+00:00
+- Generated: 2026-10-30T04:01:45+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`

@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:20:19+00:00
+- Generated: 2026-10-30T04:16:12+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Allsvenskan Women (Sweden)
 - Scope: league `wsweden`

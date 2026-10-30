@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:07:19+00:00",
+  "generated_at": "2026-10-30T04:01:07+00:00",
   "config": {
     "league": "korea2",
     "out_dir": "data/analysis/korea2",
@@ -647,8 +647,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 87278,
-        "distinct": 87264,
+        "rows": 87298,
+        "distinct": 87284,
         "duplicates": 14
       }
     },
@@ -657,10 +657,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=367, fgte=367 rows)",
       "details": {
-        "total": 87278,
+        "total": 87298,
         "fgt_inconsistent": 367,
         "fgte_inconsistent": 367,
-        "n_with_fgt": 80282
+        "n_with_fgt": 80299
       }
     },
     {

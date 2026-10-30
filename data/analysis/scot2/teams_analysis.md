@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:13:45+00:00
+- Generated: 2026-10-30T04:10:55+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: League Two (Scotland)
 - Scope: league `scot2`

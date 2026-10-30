@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:06:01+00:00
+- Generated: 2026-10-30T03:59:36+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Serie C - Group B (Italy)
 - Scope: league `italy3b`
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 380 | 915 | 2.408 | 45.3% | 27.9% | 26.8% | 9.5% | 51.7 |
 | 2024-2025 | 380 | 897 | 2.361 | 38.7% | 30.0% | 31.3% | 11.1% | 51.3 |
 | 2025-2026 | 357 | 802 | 2.246 | 37.5% | 31.7% | 30.8% | 9.8% | 47.9 |
-| 2026-2027 | 110 | 278 | 2.527 | 45.5% | 28.2% | 26.4% | 8.2% | 14.95 |
+| 2026-2027 | 111 | 281 | 2.532 | 45.9% | 27.9% | 26.1% | 8.1% | 15.1 |
 
 ## 6. View divergence
 - Largest divergence: **2024-2025** (goals view, avg abs position diff = 7.800)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.700 | 6.900 |
 | 2024-2025 | 2.900 | 7.800 |
 | 2025-2026 | 2.500 | 6.600 |
-| 2026-2027 | 1.500 | 7.400 |
+| 2026-2027 | 1.900 | 7.300 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

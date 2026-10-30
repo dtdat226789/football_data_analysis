@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:11:46+00:00
+- Generated: 2026-10-30T04:07:39+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Superliga (Romania)
 - Scope: league `romania1`
@@ -33,7 +33,7 @@
 - **F13** · `season_trends` · *[medium]* — **Tightest title race** — 2020-2021: FCSB beat CFR Cluj by 1 pt
 - **F14** · `season_trends` · *[medium]* — **Average-goals trend** — up (+0.259 per match): first half 2.267 vs last half 2.526 across 7 seasons
 - **F15** · `season_trends` · *[low]* — **Largest view divergence** — 2025-2026 (goals view, avg abs position diff 7.684)
-- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.375)
+- **F16** · `season_trends` · *[low]* — **Smallest view divergence** — 2026-2027 (luck view, avg abs position diff 1.500)
 - **F17** · `scoreline_analysis` · *[medium]* — **Most common scoreline** — 1-1 in 234 matches (14.1%)
 - **F18** · `scoreline_analysis` · *[low]* — **Most common home-win scoreline** — 1-0 (203 of 699 home matches, 29.0%)
 - **F19** · `scoreline_analysis` · *[low]* — **Most common draw scoreline** — 1-1 (234 of 484 draw matches, 48.3%)

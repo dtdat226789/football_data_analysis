@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T01:55:52+00:00
+- Generated: 2026-10-30T03:47:08+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Super League (China)
 - Scope: league `china`

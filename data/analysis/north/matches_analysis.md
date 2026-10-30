@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:08:52+00:00
+- Generated: 2026-10-30T04:03:06+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League North (England)
 - Scope: league `north`

@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T01:53:53+00:00
+- Generated: 2026-10-30T03:45:03+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Premier League (Azerbaijan)
 - Scope: league `azer`

@@ -1,20 +1,20 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:16:22+00:00
+- Generated: 2026-10-30T04:13:14+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
 
 ## 1. Scoreline frequency
-- Matches analysed: **3011** across **7** seasons.
+- Matches analysed: **3012** across **7** seasons.
 - Distinct scorelines seen: **50**.
 
 | scoreline | count | pct |
 |---|---|---|
 | 1-1 | 347 | 11.5% |
 | 1-0 | 296 | 9.8% |
+| 2-1 | 253 | 8.4% |
 | 1-2 | 253 | 8.4% |
-| 2-1 | 252 | 8.4% |
 | 0-1 | 234 | 7.8% |
 | 2-0 | 193 | 6.4% |
 | 0-0 | 182 | 6.0% |
@@ -91,7 +91,7 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 24 | 14.1% |
+| 1-1 | 24 | 14.0% |
 | 1-2 | 15 | 8.8% |
 | 2-0 | 14 | 8.2% |
 | 0-1 | 14 | 8.2% |
@@ -104,11 +104,11 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|
 | 0 | 182 | 6.0% |
 | 1 | 530 | 17.6% |
-| 2 | 667 | 22.2% |
-| 3 | 686 | 22.8% |
+| 2 | 667 | 22.1% |
+| 3 | 687 | 22.8% |
 | 4 | 441 | 14.6% |
 | 5 | 286 | 9.5% |
-| 6 | 131 | 4.4% |
+| 6 | 131 | 4.3% |
 | 7 | 63 | 2.1% |
 | 8 | 15 | 0.5% |
 | 9 | 8 | 0.3% |
@@ -209,22 +209,22 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-24 | 3-4 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **2294** (draws: **717**)
+- Decided matches: **2295** (draws: **717**)
 - Average winning margin: **1.77**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 1238 | 54.0% |
-| 2 | 600 | 26.2% |
+| 1 | 1239 | 54.0% |
+| 2 | 600 | 26.1% |
 | 3+ | 456 | 19.9% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **1303** | avg margin: **1.84** | max margin: **8**
+- Matches: **1304** | avg margin: **1.84** | max margin: **8**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 660 | 50.7% |
+| 1 | 661 | 50.7% |
 | 2 | 356 | 27.3% |
 | 3+ | 287 | 22.0% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
@@ -241,7 +241,7 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 1303 | 1-0 | 296 | 22.7% |
+| home | 1304 | 1-0 | 296 | 22.7% |
 | draw | 717 | 1-1 | 347 | 48.4% |
 | away | 991 | 1-2 | 253 | 25.5% |
 

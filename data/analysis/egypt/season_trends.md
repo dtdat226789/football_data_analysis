@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:57:59+00:00
+- Generated: 2026-10-30T03:49:22+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (Egypt)
 - Scope: league `egypt`
@@ -14,10 +14,10 @@
 | 2023-2024 | Al Ahly | 85 | Pyramids | 6 pts |
 | 2024-2025 | Pyramids | 42 | Al Ahly | 3 pts |
 | 2025-2026 | Zamalek | 56 | Pyramids | 2 pts |
-| 2026-2027 | Pyramids | 21 | Al Ahly | 4 pts |
+| 2026-2027 | Pyramids | 21 | Zamalek | 2 pts |
 
 ## 2. Title-race tightness
-- Tight races (margin <= 3 pts): **2** of 7 seasons
+- Tight races (margin <= 3 pts): **3** of 7 seasons
 - Tightest race: **2025-2026** - Zamalek beat Pyramids by **2** pts
 
 | season | margin | tight |
@@ -28,7 +28,7 @@
 | 2023-2024 | 6 pts |  |
 | 2024-2025 | 3 pts | yes |
 | 2025-2026 | 2 pts | yes |
-| 2026-2027 | 4 pts |  |
+| 2026-2027 | 2 pts | yes |
 
 ## 3. Points thresholds
 _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL line, 6 = Europa, 17 = last safe, 20 = bottom._
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 85 | 79 | 55 | 54 | 26 | - |
 | 2024-2025 | 42 | 39 | 30 | 24 | 12 | - |
 | 2025-2026 | 56 | 54 | 53 | 48 | 32 | 25 |
-| 2026-2027 | 21 | 17 | 15 | 13 | 4 | 2 |
+| 2026-2027 | 21 | 19 | 15 | 13 | 4 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 306 | 730 | 2.386 | 37.6% | 30.1% | 32.4% | 10.8% | 45.89 |
 | 2024-2025 | 153 | 315 | 2.059 | 37.3% | 30.7% | 32.0% | 15.7% | 22.89 |
 | 2025-2026 | 322 | 651 | 2.022 | 33.9% | 37.9% | 28.3% | 15.8% | 40.19 |
-| 2026-2027 | 70 | 164 | 2.343 | 38.6% | 22.9% | 38.6% | 7.1% | 9.7 |
+| 2026-2027 | 72 | 169 | 2.347 | 38.9% | 23.6% | 37.5% | 6.9% | 9.95 |
 
 ## 6. View divergence
 - Largest divergence: **2020-2021** (luck view, avg abs position diff = 16.906)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 1.778 | 5.000 |
 | 2024-2025 | 2.222 | 3.778 |
 | 2025-2026 | 3.429 | 4.762 |
-| 2026-2027 | 2.200 | 4.900 |
+| 2026-2027 | 2.200 | 5.000 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

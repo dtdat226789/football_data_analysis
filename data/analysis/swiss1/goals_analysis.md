@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:17:48+00:00
+- Generated: 2026-10-30T04:14:16+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: Super League (Switzerland)
 - Scope: league `swiss1`

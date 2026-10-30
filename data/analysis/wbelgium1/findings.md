@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:19:25+00:00
+- Generated: 2026-10-30T04:15:33+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Super League Women (Belgium)
 - Scope: league `wbelgium1`

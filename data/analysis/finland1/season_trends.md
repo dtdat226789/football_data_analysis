@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:59:08+00:00
+- Generated: 2026-10-30T03:50:40+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Veikkausliiga (Finland)
 - Scope: league `finland1`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 44 | 43 | 36 | 34 | 22 | 15 |
 | 2024 | 44 | 43 | 36 | 32 | 21 | 13 |
 | 2025 | 46 | 45 | 44 | 28 | 21 | 14 |
-| 2026 | 55 | 52 | 43 | 39 | 25 | 14 |
+| 2026 | 55 | 52 | 44 | 40 | 25 | 14 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023 | 132 | 329 | 2.492 | 40.9% | 25.8% | 33.3% | 8.3% | 30.17 |
 | 2024 | 132 | 395 | 2.992 | 47.0% | 25.0% | 28.0% | 5.3% | 30.25 |
 | 2025 | 132 | 433 | 3.28 | 42.4% | 22.0% | 35.6% | 6.1% | 30.58 |
-| 2026 | 153 | 393 | 2.569 | 44.4% | 26.1% | 29.4% | 7.2% | 34.92 |
+| 2026 | 154 | 393 | 2.552 | 44.2% | 26.6% | 29.2% | 7.8% | 35.08 |
 
 ## 6. View divergence
 - Largest divergence: **2026** (goals view, avg abs position diff = 4.667)

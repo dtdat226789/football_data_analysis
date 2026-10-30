@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:13:31+00:00
+- Generated: 2026-10-30T04:10:32+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: League One (Scotland)
 - Scope: league `scot1`

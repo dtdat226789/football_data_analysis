@@ -1,6 +1,6 @@
 # Goal Analysis
 - Report: `goals_analysis`
-- Generated: 2026-10-29T02:06:16+00:00
+- Generated: 2026-10-30T03:59:53+00:00
 - Script: `backend/scripts/analyze_goals.py` v1.0.0
 - League: J1 League (Japan)
 - Scope: league `japan1`

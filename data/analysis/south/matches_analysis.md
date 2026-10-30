@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:16:15+00:00
+- Generated: 2026-10-30T04:13:10+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
@@ -8,11 +8,11 @@
 ## 1. Overall summary
 | metric | value |
 |---|---|
-| Matches | 3011 |
-| Home wins | 1303 (43.3%) |
+| Matches | 3012 |
+| Home wins | 1304 (43.3%) |
 | Draws | 717 (23.8%) |
 | Away wins | 991 (32.9%) |
-| Total goals | 8555 |
+| Total goals | 8558 |
 | Average goals per match | 2.841 |
 | Goalless matches | 182 (6.0%) |
 
@@ -25,18 +25,18 @@
 | 2023-2024 | 550 | 233 (42.4%) | 137 (24.9%) | 180 (32.7%) | 1566 | 2.847 | 32 (5.8%) |
 | 2024-2025 | 549 | 235 (42.8%) | 140 (25.5%) | 174 (31.7%) | 1498 | 2.729 | 35 (6.4%) |
 | 2025-2026 | 605 | 289 (47.8%) | 135 (22.3%) | 181 (29.9%) | 1709 | 2.825 | 39 (6.4%) |
-| 2026-2027 | 170 | 62 (36.5%) | 45 (26.5%) | 63 (37.1%) | 501 | 2.947 | 7 (4.1%) |
+| 2026-2027 | 171 | 63 (36.8%) | 45 (26.3%) | 63 (36.8%) | 504 | 2.947 | 7 (4.1%) |
 
 ## 3. HT/FT outcome matrix
 | HT result \ FT result | Home | Draw | Away | total |
 |---|---|---|---|---|
 | HT home lead | 773 (76.9%) | 151 (15.0%) | 81 (8.1%) | 1005 |
 | HT draw | 436 (36.3%) | 406 (33.8%) | 358 (29.8%) | 1200 |
-| HT away lead | 94 (11.7%) | 160 (19.9%) | 551 (68.4%) | 805 |
+| HT away lead | 95 (11.8%) | 160 (19.9%) | 551 (68.4%) | 806 |
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 4. Comeback matches
-- Home comebacks (trailing at HT, won at FT): **94** (3.1%)
+- Home comebacks (trailing at HT, won at FT): **95** (3.2%)
 - Away comebacks (trailing at HT, won at FT): **81** (2.7%)
 
 ### Home comebacks
@@ -136,6 +136,7 @@
 | 2025-2026 | Worthing | Eastbourne Boro | 0-1 | 2-1 |
 | 2025-2026 | Enfield Town | Slough | 0-1 | 5-2 |
 | 2026-2027 | Truro | Slough | 0-1 | 3-1 |
+| 2026-2027 | Farnborough | Weston-super-Mare | 0-1 | 2-1 |
 
 ### Away comebacks
 | season | home | away | HT | FT |
@@ -226,7 +227,7 @@
 | HT state | matches | converted to win | held as draw | collapsed to loss |
 |---|---|---|---|---|
 | Home lead | 1005 | 773 (76.9%) | 151 (15.0%) | 81 (8.1%) |
-| Away lead | 805 | 551 (68.4%) | 160 (19.9%) | 94 (11.7%) |
+| Away lead | 806 | 551 (68.4%) | 160 (19.9%) | 95 (11.8%) |
 
 ### Matches level at half-time
 | FT result | count | pct |
@@ -237,12 +238,12 @@
 - *1 match(es) excluded (no HT score recorded).*
 
 ## 6. First-goal timing
-- Matches with a first-goal time recorded: `2828` of `3011` (93.9%)
+- Matches with a first-goal time recorded: `2829` of `3012` (93.9%)
 
 Outcome distribution by first-goal timing bucket:
 | bucket | matches | % of matches | home | draw | away |
 |---|---|---|---|---|---|
-| 1-15 | 941 | 31.3% | 444 (47.2%) | 164 (17.4%) | 333 (35.4%) |
+| 1-15 | 942 | 31.3% | 445 (47.2%) | 164 (17.4%) | 333 (35.4%) |
 | 16-30 | 709 | 23.5% | 323 (45.6%) | 145 (20.5%) | 241 (34.0%) |
 | 31-45 | 476 | 15.8% | 218 (45.8%) | 104 (21.8%) | 154 (32.4%) |
 | 46-60 | 336 | 11.2% | 149 (44.3%) | 64 (19.0%) | 123 (36.6%) |
@@ -251,7 +252,7 @@ Outcome distribution by first-goal timing bucket:
 | 91-120 | 28 | 0.9% | 17 (60.7%) | 0 (0.0%) | 11 (39.3%) |
 
 ## 7. Goalless matches
-- Overall: **182** of `3011` (6.0%)
+- Overall: **182** of `3012` (6.0%)
 
 | season | matches | goalless | pct |
 |---|---|---|---|
@@ -261,7 +262,7 @@ Outcome distribution by first-goal timing bucket:
 | 2023-2024 | 550 | 32 | 5.8% |
 | 2024-2025 | 549 | 35 | 6.4% |
 | 2025-2026 | 605 | 39 | 6.4% |
-| 2026-2027 | 170 | 7 | 4.1% |
+| 2026-2027 | 171 | 7 | 4.1% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_matches.py` to regenerate.*

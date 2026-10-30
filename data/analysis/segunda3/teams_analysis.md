@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:14:42+00:00
+- Generated: 2026-10-30T04:12:10+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Segunda RFEF - Group 3 (Spain)
 - Scope: league `segunda3`

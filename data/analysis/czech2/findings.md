@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T01:56:27+00:00
+- Generated: 2026-10-30T03:47:45+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: ChNL (Czech Republic)
 - Scope: league `czech2`

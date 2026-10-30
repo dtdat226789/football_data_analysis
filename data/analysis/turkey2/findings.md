@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:19:09+00:00
+- Generated: 2026-10-30T04:15:19+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: 1. Lig (Turkey)
 - Scope: league `turkey2`

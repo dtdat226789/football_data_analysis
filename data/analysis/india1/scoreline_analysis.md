@@ -1,17 +1,17 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:03:55+00:00
+- Generated: 2026-10-30T03:56:51+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **726** across **7** seasons.
+- Matches analysed: **727** across **7** seasons.
 - Distinct scorelines seen: **40**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 90 | 12.4% |
+| 1-1 | 91 | 12.5% |
 | 1-0 | 70 | 9.6% |
 | 2-1 | 64 | 8.8% |
 | 0-0 | 53 | 7.3% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 3 | 17.6% |
-| 2-1 | 2 | 11.8% |
-| 1-0 | 2 | 11.8% |
-| 0-0 | 2 | 11.8% |
-| 3-2 | 1 | 5.9% |
+| 1-1 | 4 | 22.2% |
+| 2-1 | 2 | 11.1% |
+| 1-0 | 2 | 11.1% |
+| 0-0 | 2 | 11.1% |
+| 3-2 | 1 | 5.6% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -103,8 +103,8 @@ _10+ groups all matches with 10 or more total goals._
 | total goals | matches | pct |
 |---|---|---|
 | 0 | 53 | 7.3% |
-| 1 | 121 | 16.7% |
-| 2 | 166 | 22.9% |
+| 1 | 121 | 16.6% |
+| 2 | 167 | 23.0% |
 | 3 | 160 | 22.0% |
 | 4 | 107 | 14.7% |
 | 5 | 62 | 8.5% |
@@ -137,7 +137,7 @@ _10+ groups all matches with 10 or more total goals._
 | 2025-2026 | 2026-03-23 | 7-0 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **533** (draws: **193**)
+- Decided matches: **533** (draws: **194**)
 - Average winning margin: **1.76**
 
 | margin | matches | pct |
@@ -170,7 +170,7 @@ _10+ groups all matches with 10 or more total goals._
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 296 | 1-0 | 70 | 23.6% |
-| draw | 193 | 1-1 | 90 | 46.6% |
+| draw | 194 | 1-1 | 91 | 46.9% |
 | away | 237 | 0-1 | 51 | 21.5% |
 
 ---

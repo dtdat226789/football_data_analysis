@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:55:29+00:00
+- Generated: 2026-10-30T03:46:43+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Championship (England)
 - Scope: league `cha`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 4.833 | 5.917 |
 | 2024-2025 | 5.167 | 8.667 |
 | 2025-2026 | 4.083 | 4.583 |
-| 2026-2027 | 3.750 | 7.333 |
+| 2026-2027 | 3.833 | 7.333 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

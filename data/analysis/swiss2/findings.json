@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:18:15+00:00",
+  "generated_at": "2026-10-30T04:14:36+00:00",
   "config": {
     "league": "swiss2",
     "out_dir": "data/analysis/swiss2",
@@ -581,8 +581,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 148854,
-        "distinct": 148809,
+        "rows": 148898,
+        "distinct": 148853,
         "duplicates": 45
       }
     },
@@ -591,10 +591,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=443, fgte=443 rows)",
       "details": {
-        "total": 148854,
+        "total": 148898,
         "fgt_inconsistent": 443,
         "fgte_inconsistent": 443,
-        "n_with_fgt": 136796
+        "n_with_fgt": 136835
       }
     },
     {

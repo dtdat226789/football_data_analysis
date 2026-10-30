@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:17:40+00:00",
+  "generated_at": "2026-10-30T04:14:10+00:00",
   "config": {
     "league": "sweden2",
     "out_dir": "data/analysis/sweden2",
@@ -544,8 +544,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 146481,
-        "distinct": 146436,
+        "rows": 146525,
+        "distinct": 146480,
         "duplicates": 45
       }
     },
@@ -554,10 +554,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=441, fgte=441 rows)",
       "details": {
-        "total": 146481,
+        "total": 146525,
         "fgt_inconsistent": 441,
         "fgte_inconsistent": 441,
-        "n_with_fgt": 134547
+        "n_with_fgt": 134586
       }
     },
     {

@@ -1,18 +1,18 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:05:58+00:00
+- Generated: 2026-10-30T03:59:33+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Serie C - Group B (Italy)
 - Scope: league `italy3b`
 
-- Teams: **58** | Seasons: **7** | Matches: **2367**
+- Teams: **58** | Seasons: **7** | Matches: **2368**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Gubbio | 7 | 238 | 84 | 74 | 80 | 326 | 267 | 256 | 11 | 46.57 | 5 | 19 | 0 |
 | Cesena | 4 | 152 | 86 | 41 | 25 | 299 | 250 | 116 | 134 | 74.75 | 1 | 7 | 1 |
-| Vis Pesaro | 7 | 237 | 66 | 75 | 96 | 273 | 231 | 309 | -78 | 39.0 | 6 | 20 | 0 |
+| Vis Pesaro | 7 | 238 | 66 | 75 | 97 | 273 | 232 | 311 | -79 | 39.0 | 6 | 20 | 0 |
 | Entella | 4 | 152 | 76 | 44 | 32 | 272 | 216 | 130 | 86 | 68.0 | 1 | 12 | 1 |
 | Perugia | 5 | 162 | 64 | 51 | 47 | 243 | 207 | 168 | 39 | 48.6 | 2 | 15 | 0 |
 | Torres | 5 | 161 | 60 | 58 | 43 | 238 | 189 | 167 | 22 | 47.6 | 2 | 17 | 0 |
@@ -51,7 +51,7 @@
 | Guidonia | 2 | 48 | 13 | 18 | 17 | 57 | 45 | 48 | -3 | 28.5 | 8 | 13 | 0 |
 | Matelica | 1 | 38 | 16 | 8 | 14 | 56 | 59 | 62 | -3 | 56.0 | 8 | 8 | 0 |
 | Grosseto | 2 | 49 | 11 | 19 | 19 | 52 | 53 | 60 | -7 | 26.0 | 3 | 20 | 0 |
-| Forli | 2 | 48 | 12 | 16 | 20 | 52 | 57 | 69 | -12 | 26.0 | 14 | 14 | 0 |
+| Forli | 2 | 48 | 12 | 16 | 20 | 52 | 57 | 69 | -12 | 26.0 | 14 | 15 | 0 |
 | Virtus Verona | 1 | 38 | 11 | 16 | 11 | 49 | 43 | 44 | -1 | 49.0 | 10 | 10 | 0 |
 | Mantova | 1 | 38 | 12 | 13 | 13 | 49 | 47 | 49 | -2 | 49.0 | 11 | 11 | 0 |
 | Teramo | 1 | 38 | 10 | 12 | 16 | 42 | 36 | 57 | -21 | 42.0 | 15 | 15 | 0 |
@@ -65,15 +65,15 @@
 | Fano | 1 | 38 | 5 | 18 | 15 | 33 | 32 | 47 | -15 | 33.0 | 18 | 18 | 0 |
 | Spezia | 1 | 11 | 9 | 2 | 0 | 29 | 19 | 5 | 14 | 29.0 | 1 | 1 | 1 |
 | Vado | 1 | 11 | 4 | 3 | 4 | 15 | 12 | 11 | 1 | 15.0 | 11 | 11 | 0 |
-| Latina | 1 | 11 | 3 | 5 | 3 | 14 | 11 | 11 | 0 | 14.0 | 13 | 13 | 0 |
-| Atalanta U23 | 1 | 10 | 4 | 0 | 6 | 12 | 11 | 15 | -4 | 12.0 | 15 | 15 | 0 |
+| Atalanta U23 | 1 | 11 | 5 | 0 | 6 | 15 | 13 | 16 | -3 | 15.0 | 12 | 12 | 0 |
+| Latina | 1 | 11 | 3 | 5 | 3 | 14 | 11 | 11 | 0 | 14.0 | 14 | 14 | 0 |
 | Ostiamare | 1 | 11 | 2 | 3 | 6 | 9 | 10 | 14 | -4 | 9.0 | 17 | 17 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Carrarese | 57 | 38 | 11 | 8 | 125 | 57 | 11 | 22 | 24 | 55 | 70 |
-| Vis Pesaro | 120 | 43 | 34 | 43 | 163 | 117 | 23 | 41 | 53 | 110 | 53 |
+| Vis Pesaro | 120 | 43 | 34 | 43 | 163 | 118 | 23 | 41 | 54 | 110 | 53 |
 | Perugia | 82 | 41 | 24 | 17 | 147 | 80 | 23 | 27 | 30 | 96 | 51 |
 | Fermana | 76 | 23 | 29 | 24 | 98 | 76 | 8 | 30 | 38 | 54 | 44 |
 | Lucchese | 76 | 30 | 27 | 19 | 117 | 76 | 15 | 29 | 32 | 74 | 43 |
@@ -115,11 +115,11 @@
 | Spal | 38 | 11 | 13 | 14 | 46 | 38 | 10 | 11 | 17 | 41 | 5 |
 | AC Milan U23 | 19 | 4 | 7 | 8 | 19 | 19 | 3 | 6 | 10 | 15 | 4 |
 | Pescara | 63 | 27 | 23 | 13 | 104 | 62 | 30 | 11 | 21 | 101 | 3 |
+| Atalanta U23 | 5 | 3 | 0 | 2 | 9 | 6 | 2 | 0 | 4 | 6 | 3 |
 | Ascoli | 37 | 17 | 10 | 10 | 61 | 38 | 16 | 11 | 11 | 59 | 2 |
 | Fiorenzuola | 19 | 6 | 3 | 10 | 21 | 19 | 5 | 5 | 9 | 20 | 1 |
 | Teramo | 19 | 5 | 6 | 8 | 21 | 19 | 5 | 6 | 8 | 21 | 0 |
 | Alessandria | 19 | 4 | 7 | 8 | 19 | 19 | 5 | 4 | 10 | 19 | 0 |
-| Atalanta U23 | 4 | 2 | 0 | 2 | 6 | 6 | 2 | 0 | 4 | 6 | 0 |
 | Legnago Salus | 38 | 8 | 9 | 21 | 33 | 38 | 6 | 16 | 16 | 34 | -1 |
 | Vado | 5 | 2 | 1 | 2 | 7 | 6 | 2 | 2 | 2 | 8 | -1 |
 | Mantova | 19 | 6 | 5 | 8 | 23 | 19 | 6 | 8 | 5 | 26 | -3 |
@@ -146,7 +146,7 @@
 |---|---|---|
 | 1 | Gubbio | 267 |
 | 2 | Cesena | 250 |
-| 3 | Vis Pesaro | 231 |
+| 3 | Vis Pesaro | 232 |
 | 4 | Pontedera | 222 |
 | 5 | Entella | 216 |
 
@@ -174,7 +174,7 @@
 Gubbio, Vis Pesaro
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **814** (showing the 15 most frequent)
+- Distinct fixtures: **815** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -220,7 +220,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Carpi | 15 | - | - | - | 14 | 12 | - |
 | Ravenna | 19 | - | - | - | - | 3 | 2 |
 | Ascoli | - | - | - | - | 16 | 2 | - |
-| Campobasso | - | - | - | - | 15 | 4 | 12 |
+| Campobasso | - | - | - | - | 15 | 4 | 13 |
 | Pianese | - | - | - | - | 9 | 7 | 18 |
 | Olbia | - | 9 | 14 | 20 | - | - | - |
 | Juventus U23 | - | - | - | 7 | - | 6 | - |
@@ -240,7 +240,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Guidonia | - | - | - | - | - | 13 | 8 |
 | Matelica | 8 | - | - | - | - | - | - |
 | Grosseto | - | 20 | - | - | - | - | 3 |
-| Forli | - | - | - | - | - | 14 | 14 |
+| Forli | - | - | - | - | - | 14 | 15 |
 | Virtus Verona | 10 | - | - | - | - | - | - |
 | Mantova | 11 | - | - | - | - | - | - |
 | Teramo | - | 15 | - | - | - | - | - |
@@ -254,8 +254,8 @@ _Cells show final position; '-' when the team was absent from that season._
 | Fano | 18 | - | - | - | - | - | - |
 | Spezia | - | - | - | - | - | - | 1 |
 | Vado | - | - | - | - | - | - | 11 |
-| Latina | - | - | - | - | - | - | 13 |
-| Atalanta U23 | - | - | - | - | - | - | 15 |
+| Atalanta U23 | - | - | - | - | - | - | 12 |
+| Latina | - | - | - | - | - | - | 14 |
 | Ostiamare | - | - | - | - | - | - | 17 |
 
 ---

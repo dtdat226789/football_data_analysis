@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:00:18+00:00
+- Generated: 2026-10-30T03:51:59+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ligue 3 (France)
 - Scope: league `france3`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.889 | 5.889 |
 | 2024-2025 | 2.353 | 4.824 |
 | 2025-2026 | 13.040 | 17.800 |
-| 2026-2027 | 1.579 | 6.421 |
+| 2026-2027 | 1.474 | 6.421 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

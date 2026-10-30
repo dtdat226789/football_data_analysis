@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T02:05:27+00:00
+- Generated: 2026-10-30T03:58:57+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Serie B (Italy)
 - Scope: league `italy2`

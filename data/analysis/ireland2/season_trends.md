@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:04:28+00:00
+- Generated: 2026-10-30T03:57:49+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Division 1 (Ireland)
 - Scope: league `ireland2`

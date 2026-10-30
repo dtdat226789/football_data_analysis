@@ -4,7 +4,7 @@
     "name": "backend/scripts/profile_database.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:03:30+00:00",
+  "generated_at": "2026-10-30T03:56:08+00:00",
   "config": {
     "league": "hungary2",
     "out_dir": "data/analysis/hungary2",
@@ -30,7 +30,7 @@
       "teams": 972,
       "team_aliases": 1944,
       "team_seasons": 4433,
-      "matches": 65025,
+      "matches": 65035,
       "standings": 13299
     },
     "leagues": [
@@ -137,14 +137,14 @@
         "name": "3. CFL - Group A",
         "country": "Czech Republic",
         "n_registered_seasons": 5,
-        "n_matches": 1087
+        "n_matches": 1089
       },
       {
         "api_key": "czech3b",
         "name": "3. CFL - Group B",
         "country": "Czech Republic",
         "n_registered_seasons": 7,
-        "n_matches": 1421
+        "n_matches": 1423
       },
       {
         "api_key": "denmark1",
@@ -172,7 +172,7 @@
         "name": "Premier League",
         "country": "Egypt",
         "n_registered_seasons": 7,
-        "n_matches": 1769
+        "n_matches": 1771
       },
       {
         "api_key": "eng1",
@@ -193,14 +193,14 @@
         "name": "Meistriliiga",
         "country": "Estonia",
         "n_registered_seasons": 7,
-        "n_matches": 1169
+        "n_matches": 1171
       },
       {
         "api_key": "finland1",
         "name": "Veikkausliiga",
         "country": "Finland",
         "n_registered_seasons": 7,
-        "n_matches": 945
+        "n_matches": 946
       },
       {
         "api_key": "finland2",
@@ -235,7 +235,7 @@
         "name": "Regionalliga North",
         "country": "Germany",
         "n_registered_seasons": 7,
-        "n_matches": 1699
+        "n_matches": 1700
       },
       {
         "api_key": "germany1",
@@ -794,20 +794,20 @@
     "duplicates": [
       {
         "check": "matches.api_id (natural PK)",
-        "rows": 65025,
-        "distinct": 65025,
+        "rows": 65035,
+        "distinct": 65035,
         "duplicates": 0
       },
       {
         "check": "matches (league_season_id, game_index)",
-        "rows": 65025,
-        "distinct": 65025,
+        "rows": 65035,
+        "distinct": 65035,
         "duplicates": 0
       },
       {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 65025,
-        "distinct": 65015,
+        "rows": 65035,
+        "distinct": 65025,
         "duplicates": 10
       },
       {
@@ -860,65 +860,65 @@
       }
     ],
     "null_counts": {
-      "total": 65025,
+      "total": 65035,
       "fields": {
         "match_date": {
           "n_null": 0,
-          "n_not_null": 65025,
+          "n_not_null": 65035,
           "null_pct": 0.0
         },
         "kickoff_time": {
           "n_null": 0,
-          "n_not_null": 65025,
+          "n_not_null": 65035,
           "null_pct": 0.0
         },
         "home_team_id": {
           "n_null": 0,
-          "n_not_null": 65025,
+          "n_not_null": 65035,
           "null_pct": 0.0
         },
         "away_team_id": {
           "n_null": 0,
-          "n_not_null": 65025,
+          "n_not_null": 65035,
           "null_pct": 0.0
         },
         "home_score": {
           "n_null": 0,
-          "n_not_null": 65025,
+          "n_not_null": 65035,
           "null_pct": 0.0
         },
         "away_score": {
           "n_null": 0,
-          "n_not_null": 65025,
+          "n_not_null": 65035,
           "null_pct": 0.0
         },
         "home_ht": {
           "n_null": 399,
-          "n_not_null": 64626,
+          "n_not_null": 64636,
           "null_pct": 0.6
         },
         "away_ht": {
           "n_null": 399,
-          "n_not_null": 64626,
+          "n_not_null": 64636,
           "null_pct": 0.6
         },
         "first_goal_time": {
-          "n_null": 5113,
-          "n_not_null": 59912,
+          "n_null": 5115,
+          "n_not_null": 59920,
           "null_pct": 7.9
         },
         "first_goal_time_extra": {
-          "n_null": 5113,
-          "n_not_null": 59912,
+          "n_null": 5115,
+          "n_not_null": 59920,
           "null_pct": 7.9
         }
       }
     },
     "first_goal_consistency": {
-      "total": 65025,
+      "total": 65035,
       "fgt_inconsistent": 344,
       "fgte_inconsistent": 344,
-      "n_with_fgt": 59912
+      "n_with_fgt": 59920
     },
     "value_ranges": {
       "min_home": 0,
@@ -1768,8 +1768,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (10 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 65025,
-        "distinct": 65015,
+        "rows": 65035,
+        "distinct": 65025,
         "duplicates": 10
       }
     },
@@ -1778,10 +1778,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=344, fgte=344 rows)",
       "details": {
-        "total": 65025,
+        "total": 65035,
         "fgt_inconsistent": 344,
         "fgte_inconsistent": 344,
-        "n_with_fgt": 59912
+        "n_with_fgt": 59920
       }
     },
     {

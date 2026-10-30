@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:03:53+00:00
+- Generated: 2026-10-30T03:56:48+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: ISL (India)
 - Scope: league `india1`
@@ -41,7 +41,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 48 | 47 | 39 | 27 | 26 | 22 |
 | 2024-2025 | 56 | 48 | 38 | 36 | 33 | 28 |
 | 2025-2026 | 26 | 26 | 23 | 22 | 20 | 13 |
-| 2026-2027 | 7 | 7 | 6 | 4 | 3 | 1 |
+| 2026-2027 | 7 | 7 | 6 | 4 | 3 | 2 |
 
 ## 4. Relegation battle
 | season | safe pos | safe pts | drop pos | drop pts | gap |
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 132 | 363 | 2.75 | 45.5% | 24.2% | 30.3% | 6.8% | 30.33 |
 | 2024-2025 | 156 | 448 | 2.872 | 42.3% | 24.4% | 33.3% | 7.1% | 33.08 |
 | 2025-2026 | 91 | 221 | 2.429 | 38.5% | 31.9% | 29.7% | 11.0% | 17.43 |
-| 2026-2027 | 17 | 46 | 2.706 | 41.2% | 29.4% | 29.4% | 11.8% | 3.54 |
+| 2026-2027 | 18 | 48 | 2.667 | 38.9% | 33.3% | 27.8% | 11.1% | 3.69 |
 
 ## 6. View divergence
 - Largest divergence: **2025-2026** (goals view, avg abs position diff = 4.714)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 0.833 | 2.667 |
 | 2024-2025 | 1.692 | 3.538 |
 | 2025-2026 | 2.714 | 4.714 |
-| 2026-2027 | 1.538 | 3.692 |
+| 2026-2027 | 1.692 | 3.231 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:18:43+00:00
+- Generated: 2026-10-30T04:14:56+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Super Lig (Turkey)
 - Scope: league `turkey1`

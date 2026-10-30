@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:05:04+00:00
+- Generated: 2026-10-30T03:58:33+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Primavera 1 (Italy)
 - Scope: league `italy19`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.111 | 6.667 |
 | 2024-2025 | 3.200 | 6.400 |
 | 2025-2026 | 2.600 | 5.500 |
-| 2026-2027 | 2.600 | 6.200 |
+| 2026-2027 | 2.300 | 6.200 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

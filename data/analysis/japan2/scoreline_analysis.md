@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:06:39+00:00
+- Generated: 2026-10-30T04:00:19+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: J2 League (Japan)
 - Scope: league `japan2`

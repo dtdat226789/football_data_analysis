@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:12:11+00:00
+- Generated: 2026-10-30T04:08:22+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Saudi Professional League (Saudi Arabia)
 - Scope: league `saudi1`

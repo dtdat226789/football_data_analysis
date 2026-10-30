@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T01:53:59+00:00
+- Generated: 2026-10-30T03:45:08+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Premier League (Azerbaijan)
 - Scope: league `azer`

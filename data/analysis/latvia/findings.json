@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:07:52+00:00",
+  "generated_at": "2026-10-30T04:01:51+00:00",
   "config": {
     "league": "latvia",
     "out_dir": "data/analysis/latvia",
@@ -582,8 +582,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (14 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 88895,
-        "distinct": 88881,
+        "rows": 88916,
+        "distinct": 88902,
         "duplicates": 14
       }
     },
@@ -592,10 +592,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=385, fgte=385 rows)",
       "details": {
-        "total": 88895,
+        "total": 88916,
         "fgt_inconsistent": 385,
         "fgte_inconsistent": 385,
-        "n_with_fgt": 81783
+        "n_with_fgt": 81801
       }
     },
     {

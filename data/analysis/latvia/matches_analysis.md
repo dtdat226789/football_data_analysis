@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:07:42+00:00
+- Generated: 2026-10-30T04:01:38+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Virsliga (Latvia)
 - Scope: league `latvia`

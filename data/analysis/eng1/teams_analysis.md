@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T01:58:15+00:00
+- Generated: 2026-10-30T03:49:40+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: League One (England)
 - Scope: league `eng1`

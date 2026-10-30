@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:15:41+00:00
+- Generated: 2026-10-30T04:12:49+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Mozzart Bet Super Liga (Serbia)
 - Scope: league `serbia1`
@@ -63,7 +63,7 @@ _Position-specific points per season. Key: 1 = champion, 2 = runner-up, 4 = CL l
 | 2023-2024 | 240 | 650 | 2.708 | 47.5% | 19.6% | 32.9% | 4.6% | 42.06 |
 | 2024-2025 | 240 | 677 | 2.821 | 40.8% | 23.3% | 35.8% | 8.3% | 41.5 |
 | 2025-2026 | 297 | 790 | 2.66 | 41.8% | 29.0% | 29.3% | 12.1% | 50.31 |
-| 2026-2027 | 89 | 229 | 2.573 | 49.4% | 24.7% | 25.8% | 7.9% | 17.5 |
+| 2026-2027 | 91 | 237 | 2.604 | 48.4% | 24.2% | 27.5% | 7.7% | 17.93 |
 
 ## 6. View divergence
 - Largest divergence: **2021-2022** (goals view, avg abs position diff = 4.875)
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 2.250 | 3.125 |
 | 2024-2025 | 4.000 | 4.000 |
 | 2025-2026 | 2.375 | 4.375 |
-| 2026-2027 | 1.286 | 3.857 |
+| 2026-2027 | 1.571 | 3.857 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

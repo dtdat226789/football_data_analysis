@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:10:08+00:00
+- Generated: 2026-10-30T04:05:02+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Liga Portugal (Portugal)
 - Scope: league `portugal1`

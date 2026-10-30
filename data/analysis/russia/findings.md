@@ -1,6 +1,6 @@
 # Consolidated Findings
 - Report: `findings`
-- Generated: 2026-10-29T02:12:04+00:00
+- Generated: 2026-10-30T04:08:08+00:00
 - Script: `backend/scripts/compile_findings.py` v1.0.0
 - League: Premier League (Russia)
 - Scope: league `russia`

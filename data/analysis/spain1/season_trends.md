@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:16:39+00:00
+- Generated: 2026-10-30T04:13:26+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: LaLiga (Spain)
 - Scope: league `spain1`

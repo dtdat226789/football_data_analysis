@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T01:56:52+00:00
+- Generated: 2026-10-30T03:48:12+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`
 
-- Teams: **30** | Seasons: **7** | Matches: **1421**
+- Teams: **30** | Seasons: **7** | Matches: **1423**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -21,7 +21,7 @@
 | Banik Most-Sous | 5 | 136 | 57 | 30 | 49 | 201 | 195 | 168 | 27 | 40.2 | 3 | 18 | 0 |
 | Chlumec nad Cidlinou | 5 | 130 | 47 | 33 | 50 | 174 | 205 | 216 | -11 | 34.8 | 1 | 16 | 1 |
 | Usti nad Labem | 3 | 92 | 50 | 17 | 25 | 167 | 185 | 122 | 63 | 55.67 | 1 | 14 | 1 |
-| Liberec B | 6 | 144 | 45 | 29 | 70 | 164 | 250 | 260 | -10 | 27.33 | 6 | 15 | 0 |
+| Liberec B | 6 | 145 | 45 | 30 | 70 | 165 | 250 | 260 | -10 | 27.5 | 6 | 15 | 0 |
 | Zivanice | 5 | 130 | 46 | 26 | 58 | 164 | 182 | 209 | -27 | 32.8 | 3 | 14 | 0 |
 | FK Ceska Lipa | 3 | 94 | 49 | 15 | 30 | 162 | 161 | 131 | 30 | 54.0 | 1 | 12 | 1 |
 | Kolin | 4 | 124 | 38 | 38 | 48 | 152 | 179 | 214 | -35 | 38.0 | 4 | 17 | 0 |
@@ -30,16 +30,16 @@
 | Benatky n. Jiz. | 3 | 76 | 25 | 25 | 26 | 100 | 112 | 113 | -1 | 33.33 | 5 | 13 | 0 |
 | Zizkov | 1 | 30 | 22 | 6 | 2 | 72 | 66 | 19 | 47 | 72.0 | 1 | 1 | 1 |
 | SK Kladno | 1 | 32 | 20 | 6 | 6 | 66 | 64 | 34 | 30 | 66.0 | 2 | 2 | 0 |
-| Varnsdorf | 2 | 43 | 15 | 10 | 18 | 55 | 64 | 82 | -18 | 27.5 | 6 | 11 | 0 |
+| Varnsdorf | 2 | 44 | 15 | 10 | 19 | 55 | 65 | 85 | -20 | 27.5 | 6 | 11 | 0 |
 | Zbuzany | 2 | 38 | 15 | 8 | 15 | 53 | 53 | 59 | -6 | 26.5 | 4 | 13 | 0 |
 | Neratovice | 2 | 44 | 13 | 13 | 18 | 52 | 61 | 85 | -24 | 26.0 | 8 | 12 | 0 |
 | Dukla Prague B | 2 | 38 | 14 | 6 | 18 | 48 | 63 | 73 | -10 | 24.0 | 10 | 14 | 0 |
 | Bohemians 1905 B | 2 | 38 | 12 | 5 | 21 | 41 | 49 | 50 | -1 | 20.5 | 12 | 16 | 0 |
 | Velke Hamry | 2 | 44 | 9 | 12 | 23 | 39 | 57 | 89 | -32 | 19.5 | 14 | 16 | 0 |
 | Benesov | 1 | 30 | 7 | 5 | 18 | 26 | 33 | 54 | -21 | 26.0 | 15 | 15 | 0 |
-| Caslav | 1 | 11 | 4 | 2 | 5 | 14 | 13 | 23 | -10 | 14.0 | 9 | 9 | 0 |
-| Chrudim | 1 | 12 | 3 | 4 | 5 | 13 | 18 | 28 | -10 | 13.0 | 12 | 12 | 0 |
-| Horni Redice | 1 | 10 | 3 | 0 | 7 | 9 | 10 | 23 | -13 | 9.0 | 14 | 14 | 0 |
+| Caslav | 1 | 12 | 4 | 3 | 5 | 15 | 13 | 23 | -10 | 15.0 | 9 | 9 | 0 |
+| Chrudim | 1 | 12 | 3 | 4 | 5 | 13 | 18 | 28 | -10 | 13.0 | 13 | 13 | 0 |
+| Horni Redice | 1 | 11 | 4 | 0 | 7 | 12 | 13 | 24 | -11 | 12.0 | 14 | 14 | 0 |
 
 ## 2. Home vs away split
 | team | home P | H-W | H-D | H-L | H-pts | away P | A-W | A-D | A-L | A-pts | adv |
@@ -53,14 +53,14 @@
 | Banik Most-Sous | 68 | 34 | 18 | 16 | 120 | 68 | 23 | 12 | 33 | 81 | 39 |
 | Chlumec nad Cidlinou | 65 | 29 | 17 | 19 | 104 | 65 | 18 | 16 | 31 | 70 | 34 |
 | Hradec Kralove B | 88 | 41 | 16 | 31 | 139 | 86 | 30 | 16 | 40 | 106 | 33 |
+| Liberec B | 72 | 27 | 18 | 27 | 99 | 73 | 18 | 12 | 43 | 66 | 33 |
 | Brozany | 88 | 41 | 21 | 26 | 144 | 86 | 30 | 22 | 34 | 112 | 32 |
-| Liberec B | 71 | 27 | 17 | 27 | 98 | 73 | 18 | 12 | 43 | 66 | 32 |
 | Prepere | 49 | 24 | 8 | 17 | 80 | 49 | 13 | 10 | 26 | 49 | 31 |
 | FK Ceska Lipa | 47 | 30 | 6 | 11 | 96 | 47 | 19 | 9 | 19 | 66 | 30 |
 | Usti nad Orlici | 51 | 18 | 12 | 21 | 66 | 51 | 7 | 17 | 27 | 38 | 28 |
 | Usti nad Labem | 46 | 27 | 11 | 8 | 92 | 46 | 23 | 6 | 17 | 75 | 17 |
 | Zbuzany | 19 | 10 | 4 | 5 | 34 | 19 | 5 | 4 | 10 | 19 | 15 |
-| Varnsdorf | 22 | 10 | 4 | 8 | 34 | 21 | 5 | 6 | 10 | 21 | 13 |
+| Varnsdorf | 23 | 10 | 4 | 9 | 34 | 21 | 5 | 6 | 10 | 21 | 13 |
 | Bohemians 1905 B | 18 | 8 | 3 | 7 | 27 | 20 | 4 | 2 | 14 | 14 | 13 |
 | Velke Hamry | 23 | 6 | 8 | 9 | 26 | 21 | 3 | 4 | 14 | 13 | 13 |
 | Mlada Boleslav B | 87 | 34 | 21 | 32 | 123 | 87 | 31 | 18 | 38 | 111 | 12 |
@@ -68,12 +68,12 @@
 | Benesov | 15 | 5 | 3 | 7 | 18 | 15 | 2 | 2 | 11 | 8 | 10 |
 | Velvary | 65 | 31 | 16 | 18 | 109 | 65 | 30 | 11 | 24 | 101 | 8 |
 | Zizkov | 15 | 13 | 1 | 1 | 40 | 15 | 9 | 5 | 1 | 32 | 8 |
-| Horni Redice | 5 | 2 | 0 | 3 | 6 | 5 | 1 | 0 | 4 | 3 | 3 |
 | Dukla Prague B | 19 | 7 | 4 | 8 | 25 | 19 | 7 | 2 | 10 | 23 | 2 |
 | Chrudim | 5 | 2 | 1 | 2 | 7 | 7 | 1 | 3 | 3 | 6 | 1 |
+| Horni Redice | 5 | 2 | 0 | 3 | 6 | 6 | 2 | 0 | 4 | 6 | 0 |
 | Benatky n. Jiz. | 37 | 11 | 16 | 10 | 49 | 39 | 14 | 9 | 16 | 51 | -2 |
 | Neratovice | 22 | 7 | 4 | 11 | 25 | 22 | 6 | 9 | 7 | 27 | -2 |
-| Caslav | 5 | 2 | 0 | 3 | 6 | 6 | 2 | 2 | 2 | 8 | -2 |
+| Caslav | 5 | 2 | 0 | 3 | 6 | 7 | 2 | 3 | 2 | 9 | -3 |
 
 ## 3. Top performers
 ### Best points per game (PPG)
@@ -118,7 +118,7 @@
 Brozany, Hradec Kralove B, Jablonec B, Mlada Boleslav B, Pardubice B, Teplice B, Zapy
 
 ## 5. Head-to-head dominance
-- Distinct fixtures: **314** (showing the 15 most frequent)
+- Distinct fixtures: **316** (showing the 15 most frequent)
 
 | fixture | meetings | home wins | draws | away wins | home pct | draw pct | away pct |
 |---|---|---|---|---|---|---|---|
@@ -154,7 +154,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Banik Most-Sous | - | - | 17 | 17 | 18 | 3 | 7 |
 | Chlumec nad Cidlinou | 1 | 8 | 5 | 7 | 16 | - | - |
 | Usti nad Labem | - | - | 14 | 3 | 1 | - | - |
-| Liberec B | 7 | 15 | - | 6 | 9 | 10 | 13 |
+| Liberec B | 7 | 15 | - | 6 | 9 | 10 | 12 |
 | Zivanice | 8 | 3 | 11 | 9 | 14 | - | - |
 | FK Ceska Lipa | - | - | - | 12 | 8 | 1 | - |
 | Kolin | - | - | 4 | 5 | 12 | 17 | - |
@@ -171,7 +171,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Velke Hamry | - | - | - | - | - | 14 | 16 |
 | Benesov | - | - | 15 | - | - | - | - |
 | Caslav | - | - | - | - | - | - | 9 |
-| Chrudim | - | - | - | - | - | - | 12 |
+| Chrudim | - | - | - | - | - | - | 13 |
 | Horni Redice | - | - | - | - | - | - | 14 |
 
 ---

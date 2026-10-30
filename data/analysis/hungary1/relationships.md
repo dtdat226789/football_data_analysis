@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T02:03:22+00:00
+- Generated: 2026-10-30T03:55:54+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: NB I. (Hungary)
 - Scope: league `hungary1`

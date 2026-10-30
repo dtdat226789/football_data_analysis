@@ -1,6 +1,6 @@
 # Match Analysis
 - Report: `matches_analysis`
-- Generated: 2026-10-29T02:15:17+00:00
+- Generated: 2026-10-30T04:12:33+00:00
 - Script: `backend/scripts/analyze_matches.py` v1.0.0
 - League: Segunda RFEF - Group 5 (Spain)
 - Scope: league `segunda5`

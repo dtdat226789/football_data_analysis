@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T01:55:33+00:00
+- Generated: 2026-10-30T03:46:47+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Championship (England)
 - Scope: league `cha`

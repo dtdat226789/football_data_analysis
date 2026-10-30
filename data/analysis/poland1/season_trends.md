@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:09:34+00:00
+- Generated: 2026-10-30T04:04:01+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ekstraklasa (Poland)
 - Scope: league `poland1`

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:19:25+00:00",
+  "generated_at": "2026-10-30T04:15:33+00:00",
   "config": {
     "league": "wbelgium1",
     "out_dir": "data/analysis/wbelgium1",
@@ -679,8 +679,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (45 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 155133,
-        "distinct": 155088,
+        "rows": 155177,
+        "distinct": 155132,
         "duplicates": 45
       }
     },
@@ -689,10 +689,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=506, fgte=506 rows)",
       "details": {
-        "total": 155133,
+        "total": 155177,
         "fgt_inconsistent": 506,
         "fgte_inconsistent": 506,
-        "n_with_fgt": 142578
+        "n_with_fgt": 142617
       }
     },
     {

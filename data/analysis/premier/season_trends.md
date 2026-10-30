@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:10:44+00:00
+- Generated: 2026-10-30T04:06:05+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Premier League (England)
 - Scope: league `premier`

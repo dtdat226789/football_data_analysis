@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T01:57:44+00:00
+- Generated: 2026-10-30T03:49:07+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Professional Development League (England)
 - Scope: league `develop21`

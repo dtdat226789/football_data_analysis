@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:05:40+00:00
+- Generated: 2026-10-30T03:59:12+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Serie C - Group A (Italy)
 - Scope: league `italy3a`

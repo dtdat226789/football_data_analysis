@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:08:58+00:00
+- Generated: 2026-10-30T04:03:13+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: National League North (England)
 - Scope: league `north`
@@ -78,7 +78,7 @@ _Avg absolute position difference between classic view and alternative view per 
 | 2023-2024 | 3.250 | 9.250 |
 | 2024-2025 | 2.917 | 8.833 |
 | 2025-2026 | 3.333 | 7.417 |
-| 2026-2027 | 3.167 | 8.667 |
+| 2026-2027 | 3.083 | 8.667 |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_seasons.py` to regenerate.*

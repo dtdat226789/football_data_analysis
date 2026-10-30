@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T02:03:19+00:00
+- Generated: 2026-10-30T03:55:47+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: NB I. (Hungary)
 - Scope: league `hungary1`

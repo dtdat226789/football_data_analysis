@@ -1,29 +1,29 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:17:17+00:00
+- Generated: 2026-10-30T04:13:54+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Allsvenskan (Sweden)
 - Scope: league `sweden1`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1641** across **7** seasons.
+- Matches analysed: **1645** across **7** seasons.
 - Distinct scorelines seen: **44**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 187 | 11.4% |
+| 1-1 | 188 | 11.4% |
 | 0-1 | 141 | 8.6% |
 | 1-0 | 133 | 8.1% |
 | 2-0 | 131 | 8.0% |
 | 1-2 | 131 | 8.0% |
 | 2-1 | 123 | 7.5% |
-| 0-0 | 101 | 6.2% |
+| 0-0 | 102 | 6.2% |
 | 2-2 | 90 | 5.5% |
-| 3-0 | 78 | 4.8% |
+| 3-0 | 78 | 4.7% |
 | 0-2 | 72 | 4.4% |
 | 3-1 | 66 | 4.0% |
 | 1-3 | 52 | 3.2% |
-| 0-3 | 48 | 2.9% |
+| 0-3 | 50 | 3.0% |
 | 3-2 | 43 | 2.6% |
 | 2-3 | 35 | 2.1% |
 | 4-0 | 31 | 1.9% |
@@ -91,22 +91,22 @@
 ### 2026
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 25 | 12.4% |
-| 0-1 | 21 | 10.4% |
-| 2-0 | 20 | 10.0% |
-| 1-2 | 16 | 8.0% |
-| 2-2 | 13 | 6.5% |
+| 1-1 | 26 | 12.7% |
+| 0-1 | 21 | 10.2% |
+| 2-0 | 20 | 9.8% |
+| 1-2 | 16 | 7.8% |
+| 2-2 | 13 | 6.3% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 101 | 6.2% |
+| 0 | 102 | 6.2% |
 | 1 | 274 | 16.7% |
-| 2 | 390 | 23.8% |
-| 3 | 380 | 23.2% |
-| 4 | 254 | 15.5% |
+| 2 | 391 | 23.8% |
+| 3 | 382 | 23.2% |
+| 4 | 254 | 15.4% |
 | 5 | 136 | 8.3% |
 | 6 | 62 | 3.8% |
 | 7 | 33 | 2.0% |
@@ -165,14 +165,14 @@ _10+ groups all matches with 10 or more total goals._
 | 2026 | 2026-08-15 | 4-3 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1245** (draws: **396**)
+- Decided matches: **1247** (draws: **398**)
 - Average winning margin: **1.82**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 629 | 50.5% |
-| 2 | 348 | 28.0% |
-| 3+ | 268 | 21.5% |
+| 1 | 629 | 50.4% |
+| 2 | 348 | 27.9% |
+| 3+ | 270 | 21.7% |
 
 ## 6. Margin by outcome
 
@@ -186,20 +186,20 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **545** | avg margin: **1.67** | max margin: **6**
+- Matches: **547** | avg margin: **1.68** | max margin: **6**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 315 | 57.8% |
-| 2 | 134 | 24.6% |
-| 3+ | 96 | 17.6% |
+| 1 | 315 | 57.6% |
+| 2 | 134 | 24.5% |
+| 3+ | 98 | 17.9% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 700 | 1-0 | 133 | 19.0% |
-| draw | 396 | 1-1 | 187 | 47.2% |
-| away | 545 | 0-1 | 141 | 25.9% |
+| draw | 398 | 1-1 | 188 | 47.2% |
+| away | 547 | 0-1 | 141 | 25.8% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

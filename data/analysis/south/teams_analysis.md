@@ -1,11 +1,11 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:16:18+00:00
+- Generated: 2026-10-30T04:13:12+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: National League South (England)
 - Scope: league `south`
 
-- Teams: **92** | Seasons: **7** | Matches: **3011**
+- Teams: **92** | Seasons: **7** | Matches: **3012**
 
 ## 1. Team standings (lifetime)
 | team | seasons | played | W | D | L | pts | GF | GA | GD | avg pts/season | best pos | worst pos | titles |
@@ -23,10 +23,10 @@
 | Bath | 6 | 235 | 81 | 54 | 100 | 297 | 288 | 321 | -33 | 49.5 | 6 | 22 | 0 |
 | Slough | 7 | 250 | 76 | 64 | 110 | 292 | 360 | 441 | -81 | 41.71 | 11 | 24 | 0 |
 | St. Albans | 5 | 193 | 75 | 47 | 71 | 272 | 273 | 250 | 23 | 54.4 | 5 | 21 | 0 |
-| Farnborough | 5 | 197 | 75 | 43 | 79 | 268 | 286 | 302 | -16 | 53.6 | 8 | 20 | 0 |
+| Farnborough | 5 | 198 | 76 | 43 | 79 | 271 | 288 | 303 | -15 | 54.2 | 8 | 19 | 0 |
 | Torquay | 4 | 154 | 74 | 34 | 46 | 256 | 261 | 204 | 57 | 64.0 | 2 | 12 | 0 |
 | Dartford | 4 | 151 | 68 | 33 | 50 | 237 | 239 | 184 | 55 | 59.25 | 2 | 21 | 0 |
-| Weston-super-Mare | 4 | 154 | 67 | 32 | 55 | 233 | 216 | 198 | 18 | 58.25 | 6 | 16 | 0 |
+| Weston-super-Mare | 4 | 155 | 67 | 32 | 56 | 233 | 217 | 200 | 17 | 58.25 | 6 | 16 | 0 |
 | Braintree | 5 | 162 | 63 | 40 | 59 | 229 | 209 | 220 | -11 | 45.8 | 5 | 19 | 0 |
 | Welling | 5 | 192 | 49 | 54 | 89 | 201 | 224 | 342 | -118 | 40.2 | 16 | 22 | 0 |
 | Havant & W | 4 | 146 | 50 | 33 | 63 | 183 | 215 | 238 | -23 | 45.75 | 8 | 23 | 0 |
@@ -111,7 +111,7 @@
 | Dorking | 83 | 55 | 15 | 13 | 180 | 83 | 35 | 25 | 23 | 130 | 50 |
 | Weston-super | 23 | 15 | 3 | 5 | 48 | 0 | 0 | 0 | 0 | 0 | 48 |
 | Hampton & Richmond | 126 | 51 | 28 | 47 | 181 | 129 | 37 | 27 | 65 | 138 | 43 |
-| Farnborough | 98 | 45 | 19 | 34 | 154 | 99 | 30 | 24 | 45 | 114 | 40 |
+| Farnborough | 99 | 46 | 19 | 34 | 157 | 99 | 30 | 24 | 45 | 114 | 43 |
 | Maidstone | 103 | 62 | 20 | 21 | 206 | 102 | 46 | 29 | 27 | 167 | 39 |
 | Eastbourne Boro | 123 | 53 | 29 | 41 | 188 | 120 | 43 | 23 | 54 | 152 | 36 |
 | Chippenham | 119 | 46 | 30 | 43 | 168 | 119 | 33 | 33 | 53 | 132 | 36 |
@@ -129,7 +129,7 @@
 | Dag & Red | 30 | 16 | 6 | 8 | 54 | 31 | 8 | 10 | 13 | 34 | 20 |
 | Hornchurch | 48 | 24 | 13 | 11 | 85 | 46 | 18 | 13 | 15 | 67 | 18 |
 | Enfield Town | 46 | 14 | 11 | 21 | 53 | 46 | 8 | 11 | 27 | 35 | 18 |
-| Weston-super-Mare | 77 | 35 | 19 | 23 | 124 | 77 | 32 | 13 | 32 | 109 | 15 |
+| Weston-super-Mare | 77 | 35 | 19 | 23 | 124 | 78 | 32 | 13 | 33 | 109 | 15 |
 | Chelmsford | 126 | 52 | 37 | 37 | 193 | 126 | 48 | 35 | 43 | 179 | 14 |
 | Aveley | 46 | 16 | 11 | 19 | 59 | 46 | 13 | 7 | 26 | 46 | 13 |
 | Yeovil | 23 | 17 | 3 | 3 | 54 | 22 | 12 | 5 | 5 | 41 | 13 |
@@ -270,7 +270,7 @@ _Cells show final position; '-' when the team was absent from that season._
 | Maidstone | 11 | 1 | - | 4 | 7 | 8 | 3 |
 | Chelmsford | 13 | 19 | 5 | 2 | 12 | 10 | 12 |
 | Eastbourne Boro | 3 | 6 | 8 | 19 | 3 | 25 | - |
-| Hemel Hempstead | 10 | 15 | 15 | 20 | 11 | 5 | 19 |
+| Hemel Hempstead | 10 | 15 | 15 | 20 | 11 | 5 | 20 |
 | Worthing | - | - | 4 | 3 | 4 | 1 | - |
 | Tonbridge | 14 | 16 | 9 | 15 | 16 | 14 | 4 |
 | Hampton & Richmond | 6 | 11 | 17 | 9 | 18 | 18 | 22 |
@@ -280,11 +280,11 @@ _Cells show final position; '-' when the team was absent from that season._
 | Bath | 18 | 18 | 11 | 6 | 17 | 22 | - |
 | Slough | 20 | 13 | 18 | 11 | 15 | 16 | 24 |
 | St. Albans | 5 | 9 | 6 | 10 | 21 | - | - |
-| Farnborough | - | - | 12 | 8 | 10 | 19 | 20 |
+| Farnborough | - | - | 12 | 8 | 10 | 19 | 18 |
 | Torquay | - | - | - | 12 | 2 | 3 | 10 |
 | Dartford | 2 | 4 | 2 | 21 | - | - | - |
 | Weston-super-Mare | - | - | - | 14 | 8 | 6 | 16 |
-| Braintree | 19 | 17 | 7 | 5 | - | - | 18 |
+| Braintree | 19 | 17 | 7 | 5 | - | - | 19 |
 | Welling | 21 | 20 | 16 | 17 | 22 | - | - |
 | Havant & W | 9 | 8 | 10 | 23 | - | - | - |
 | Oxford City | 4 | 5 | 3 | - | - | - | - |

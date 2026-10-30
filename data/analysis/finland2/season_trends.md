@@ -1,6 +1,6 @@
 # Season Trends Analysis
 - Report: `season_trends`
-- Generated: 2026-10-29T01:59:25+00:00
+- Generated: 2026-10-30T03:50:58+00:00
 - Script: `backend/scripts/analyze_seasons.py` v1.0.0
 - League: Ykkosliiga (Finland)
 - Scope: league `finland2`

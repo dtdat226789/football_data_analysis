@@ -1,24 +1,24 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:08:22+00:00
+- Generated: 2026-10-30T04:02:28+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Botola Pro (Morocco)
 - Scope: league `morocco`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1483** across **7** seasons.
+- Matches analysed: **1485** across **7** seasons.
 - Distinct scorelines seen: **35**.
 
 | scoreline | count | pct |
 |---|---|---|
-| 1-1 | 217 | 14.6% |
+| 1-1 | 218 | 14.7% |
 | 0-0 | 194 | 13.1% |
 | 1-0 | 178 | 12.0% |
 | 2-1 | 150 | 10.1% |
 | 0-1 | 134 | 9.0% |
+| 2-0 | 102 | 6.9% |
 | 1-2 | 102 | 6.9% |
-| 2-0 | 101 | 6.8% |
-| 0-2 | 69 | 4.7% |
+| 0-2 | 69 | 4.6% |
 | 2-2 | 57 | 3.8% |
 | 3-0 | 47 | 3.2% |
 | 3-1 | 43 | 2.9% |
@@ -91,11 +91,11 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 0-1 | 6 | 17.1% |
-| 0-0 | 5 | 14.3% |
-| 2-1 | 4 | 11.4% |
-| 1-1 | 4 | 11.4% |
-| 1-0 | 3 | 8.6% |
+| 0-1 | 6 | 16.2% |
+| 0-0 | 5 | 13.5% |
+| 1-1 | 5 | 13.5% |
+| 2-1 | 4 | 10.8% |
+| 1-0 | 3 | 8.1% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
@@ -104,7 +104,7 @@ _10+ groups all matches with 10 or more total goals._
 |---|---|---|
 | 0 | 194 | 13.1% |
 | 1 | 312 | 21.0% |
-| 2 | 387 | 26.1% |
+| 2 | 389 | 26.2% |
 | 3 | 329 | 22.2% |
 | 4 | 146 | 9.8% |
 | 5 | 81 | 5.5% |
@@ -137,24 +137,24 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-10 | 2-5 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1008** (draws: **475**)
+- Decided matches: **1009** (draws: **476**)
 - Average winning margin: **1.53**
 
 | margin | matches | pct |
 |---|---|---|
-| 1 | 630 | 62.5% |
-| 2 | 255 | 25.3% |
+| 1 | 630 | 62.4% |
+| 2 | 256 | 25.4% |
 | 3+ | 123 | 12.2% |
 
 ## 6. Margin by outcome
 
 ### Home wins
-- Matches: **592** | avg margin: **1.52** | max margin: **5**
+- Matches: **593** | avg margin: **1.52** | max margin: **5**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 369 | 62.3% |
-| 2 | 151 | 25.5% |
-| 3+ | 72 | 12.2% |
+| 1 | 369 | 62.2% |
+| 2 | 152 | 25.6% |
+| 3+ | 72 | 12.1% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
@@ -169,8 +169,8 @@ _10+ groups all matches with 10 or more total goals._
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
-| home | 592 | 1-0 | 178 | 30.1% |
-| draw | 475 | 1-1 | 217 | 45.7% |
+| home | 593 | 1-0 | 178 | 30.0% |
+| draw | 476 | 1-1 | 218 | 45.8% |
 | away | 416 | 0-1 | 134 | 32.2% |
 
 ---

@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T01:58:40+00:00",
+  "generated_at": "2026-10-30T03:50:11+00:00",
   "config": {
     "league": "eng2",
     "out_dir": "data/analysis/eng2",
@@ -657,8 +657,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (5 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 35664,
-        "distinct": 35659,
+        "rows": 35670,
+        "distinct": 35665,
         "duplicates": 5
       }
     },
@@ -667,10 +667,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=312, fgte=312 rows)",
       "details": {
-        "total": 35664,
+        "total": 35670,
         "fgt_inconsistent": 312,
         "fgte_inconsistent": 312,
-        "n_with_fgt": 32542
+        "n_with_fgt": 32547
       }
     },
     {

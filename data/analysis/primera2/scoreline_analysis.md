@@ -1,6 +1,6 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T02:11:23+00:00
+- Generated: 2026-10-30T04:07:04+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: Primera RFEF - Group 2 (Spain)
 - Scope: league `primera2`

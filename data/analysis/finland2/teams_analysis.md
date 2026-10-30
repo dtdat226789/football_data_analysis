@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T01:59:23+00:00
+- Generated: 2026-10-30T03:50:56+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ykkosliiga (Finland)
 - Scope: league `finland2`

@@ -1,12 +1,12 @@
 # Scoreline Analysis
 - Report: `scoreline_analysis`
-- Generated: 2026-10-29T01:56:57+00:00
+- Generated: 2026-10-30T03:48:15+00:00
 - Script: `backend/scripts/analyze_scorelines.py` v1.0.0
 - League: 3. CFL - Group B (Czech Republic)
 - Scope: league `czech3b`
 
 ## 1. Scoreline frequency
-- Matches analysed: **1421** across **7** seasons.
+- Matches analysed: **1423** across **7** seasons.
 - Distinct scorelines seen: **48**.
 
 | scoreline | count | pct |
@@ -17,15 +17,15 @@
 | 2-0 | 110 | 7.7% |
 | 0-1 | 90 | 6.3% |
 | 1-2 | 87 | 6.1% |
-| 0-0 | 74 | 5.2% |
+| 0-0 | 75 | 5.3% |
 | 2-2 | 74 | 5.2% |
 | 3-0 | 71 | 5.0% |
 | 3-1 | 65 | 4.6% |
 | 0-2 | 61 | 4.3% |
+| 1-3 | 46 | 3.2% |
 | 2-3 | 46 | 3.2% |
 | 3-2 | 45 | 3.2% |
-| 1-3 | 45 | 3.2% |
-| 4-0 | 32 | 2.3% |
+| 4-0 | 32 | 2.2% |
 | 4-1 | 31 | 2.2% |
 | 0-3 | 31 | 2.2% |
 | 3-3 | 27 | 1.9% |
@@ -91,24 +91,24 @@
 ### 2026-2027
 | scoreline | count | pct |
 |---|---|---|
-| 1-2 | 8 | 8.5% |
-| 1-1 | 8 | 8.5% |
-| 2-1 | 7 | 7.4% |
-| 0-0 | 7 | 7.4% |
-| 1-0 | 6 | 6.4% |
+| 1-2 | 8 | 8.3% |
+| 0-0 | 8 | 8.3% |
+| 1-1 | 8 | 8.3% |
+| 2-1 | 7 | 7.3% |
+| 1-0 | 6 | 6.2% |
 
 ## 3. Total-goal histogram
 _10+ groups all matches with 10 or more total goals._
 
 | total goals | matches | pct |
 |---|---|---|
-| 0 | 74 | 5.2% |
+| 0 | 75 | 5.3% |
 | 1 | 202 | 14.2% |
 | 2 | 306 | 21.5% |
 | 3 | 300 | 21.1% |
-| 4 | 240 | 16.9% |
+| 4 | 241 | 16.9% |
 | 5 | 161 | 11.3% |
-| 6 | 86 | 6.1% |
+| 6 | 86 | 6.0% |
 | 7 | 35 | 2.5% |
 | 8 | 9 | 0.6% |
 | 9 | 5 | 0.4% |
@@ -173,13 +173,13 @@ _10+ groups all matches with 10 or more total goals._
 | 2026-2027 | 2026-10-24 | 6-1 | 7 |
 
 ## 5. Margin-of-victory distribution (decided matches)
-- Decided matches: **1108** (draws: **313**)
+- Decided matches: **1109** (draws: **314**)
 - Average winning margin: **2.0**
 
 | margin | matches | pct |
 |---|---|---|
 | 1 | 502 | 45.3% |
-| 2 | 318 | 28.7% |
+| 2 | 319 | 28.8% |
 | 3+ | 288 | 26.0% |
 
 ## 6. Margin by outcome
@@ -194,20 +194,20 @@ _10+ groups all matches with 10 or more total goals._
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ### Away wins
-- Matches: **442** | avg margin: **1.84** | max margin: **7**
+- Matches: **443** | avg margin: **1.84** | max margin: **7**
 | margin | matches | pct |
 |---|---|---|
-| 1 | 228 | 51.6% |
-| 2 | 119 | 26.9% |
-| 3+ | 95 | 21.5% |
+| 1 | 228 | 51.5% |
+| 2 | 120 | 27.1% |
+| 3+ | 95 | 21.4% |
 - *Full match-by-match list available in `scoreline_analysis.json`.*
 
 ## 7. Most common exact score by outcome type
 | outcome | matches | most common score | count | pct |
 |---|---|---|---|---|
 | home | 666 | 1-0 | 112 | 16.8% |
-| draw | 313 | 1-1 | 135 | 43.1% |
-| away | 442 | 0-1 | 90 | 20.4% |
+| draw | 314 | 1-1 | 135 | 43.0% |
+| away | 443 | 0-1 | 90 | 20.3% |
 
 ---
 *All statistics are computed from PostgreSQL tables (read-only). Run with `python backend/scripts/analyze_scorelines.py` to regenerate.*

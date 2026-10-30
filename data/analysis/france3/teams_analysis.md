@@ -1,6 +1,6 @@
 # Team Analysis
 - Report: `teams_analysis`
-- Generated: 2026-10-29T02:00:15+00:00
+- Generated: 2026-10-30T03:51:57+00:00
 - Script: `backend/scripts/analyze_teams.py` v1.0.0
 - League: Ligue 3 (France)
 - Scope: league `france3`

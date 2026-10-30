@@ -1,6 +1,6 @@
 # Relationships Analysis
 - Report: `relationships`
-- Generated: 2026-10-29T01:54:40+00:00
+- Generated: 2026-10-30T03:45:49+00:00
 - Script: `backend/scripts/analyze_relationships.py` v1.0.0
 - League: Serie A Betano (Brazil)
 - Scope: league `brazil1`

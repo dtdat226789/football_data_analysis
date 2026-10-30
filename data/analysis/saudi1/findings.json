@@ -4,7 +4,7 @@
     "name": "backend/scripts/compile_findings.py",
     "version": "1.0.0"
   },
-  "generated_at": "2026-10-29T02:12:22+00:00",
+  "generated_at": "2026-10-30T04:08:38+00:00",
   "config": {
     "league": "saudi1",
     "out_dir": "data/analysis/saudi1",
@@ -652,8 +652,8 @@
       "message": "Duplicate rows detected in matches same fixture on same date (league_season, home, away, match_date) (18 extra rows)",
       "details": {
         "check": "matches same fixture on same date (league_season, home, away, match_date)",
-        "rows": 116457,
-        "distinct": 116439,
+        "rows": 116483,
+        "distinct": 116465,
         "duplicates": 18
       }
     },
@@ -662,10 +662,10 @@
       "severity": "warning",
       "message": "first_goal_time/first_goal_time_extra NULL semantics broken (fgt=418, fgte=418 rows)",
       "details": {
-        "total": 116457,
+        "total": 116483,
         "fgt_inconsistent": 418,
         "fgte_inconsistent": 418,
-        "n_with_fgt": 107170
+        "n_with_fgt": 107193
       }
     },
     {
