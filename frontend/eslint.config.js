@@ -57,12 +57,10 @@ export default [
       // them on would bury the rules that are.
       "react-hooks/immutability": "off",
       "react-hooks/purity": "off",
-      // A warning, not an error, and the debt is deliberate for now. Six places
-      // copy a URL param into local state — `?tab=`, `?season=`, `?league=` — and
-      // two set a loading or debounce flag at the top of an effect. Removing them
-      // means deriving state during render instead, which is a real refactor of
-      // the page/param plumbing rather than a lint fix, so it stays visible here
-      // instead of being switched off.
+      // A warning rather than the preset's error: the query-string selections,
+      // the request loading flag and the debounce all derive during render now,
+      // so this stays visible as a guard rail against copying state back into an
+      // effect.
       "react-hooks/set-state-in-effect": "warn",
       // Off: this module exports a component alongside the constants it uses
       // (UPCOMING_OFFSET_PARAM, DEFAULT_PAGE_SIZE, and similar). The rule only

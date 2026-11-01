@@ -11,13 +11,12 @@ export function useDebounced(value, delay = 250) {
   const [settled, setSettled] = useState(value);
 
   useEffect(() => {
-    if (delay <= 0) {
-      setSettled(value);
-      return undefined;
-    }
+    if (delay <= 0) return undefined;
     const timer = setTimeout(() => setSettled(value), delay);
     return () => clearTimeout(timer);
   }, [value, delay]);
 
-  return settled;
+  // With no delay there is nothing to wait for, so read the live value instead
+  // of copying it into state from the effect.
+  return delay <= 0 ? value : settled;
 }

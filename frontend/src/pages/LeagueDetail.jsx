@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
@@ -277,10 +277,11 @@ export default function LeagueDetail() {
   const view = searchParams.get("view") || "classic";
   const urlSeason = searchParams.get("season");
 
-  const [season, setSeason] = useState(urlSeason || null);
-  useEffect(() => {
-    if (urlSeason) setSeason(urlSeason);
-  }, [urlSeason]);
+  // `?season=` is the source of truth; the latest season is the fallback until
+  // the reader picks one. Clearing the select removes the param, so remember
+  // which latest season was showing: while it stays the same the blank choice
+  // holds, and a new league (new latest season) falls back to its latest again.
+  const [clearedLatest, setClearedLatest] = useState(null);
 
   const detail = useApi(() => api.league(slug), [slug]);
 
@@ -294,9 +295,8 @@ export default function LeagueDetail() {
     return pool.length ? pool[pool.length - 1].season : null;
   }, [seasons]);
 
-  useEffect(() => {
-    if (latestSeason) setSeason((cur) => cur || latestSeason);
-  }, [latestSeason]);
+  const staysCleared = clearedLatest !== null && clearedLatest === latestSeason;
+  const season = urlSeason || (staysCleared ? null : latestSeason) || null;
 
   if (detail.loading)
     return (
@@ -315,7 +315,7 @@ export default function LeagueDetail() {
   const setTab = (key) => patch({ tab: key });
   const setView = (v) => patch({ view: v });
   const changeSeason = (value) => {
-    setSeason(value);
+    setClearedLatest(value === "" ? latestSeason : null);
     patch({ season: value });
   };
 

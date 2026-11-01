@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
@@ -101,49 +101,35 @@ export default function TeamDetail() {
     return [...seen.values()].sort((a, b) => (a.league_name || "").localeCompare(b.league_name || ""));
   }, [memberships]);
 
-  const [league, setLeague] = useState("");
-  const [season, setSeason] = useState("");
   const [searchParams, patch] = useParamsPatch();
   const leagueParam = searchParams.get("league");
   const seasonParam = searchParams.get("season");
 
-  // One pass decides the league so a ?league= deep link is never clobbered.
-  // Two effects used to race here: one honoured leagueParam, the other fell
-  // back to leagues[0] on the same commit because "" is not a real league, so
-  // the last write won and the URL was silently dropped.
-  useEffect(() => {
-    if (leagues.length === 0) return;
-    const wanted =
-      leagueParam && leagues.some((l) => l.league === leagueParam) ? leagueParam : leagues[0].league;
-    if (league !== wanted) setLeague(wanted);
-  }, [leagues, league, leagueParam]);
+  // Both selects derive from the URL, which every handler patches, so a deep
+  // link and a click cannot disagree and no effect has to copy either back into
+  // state. An unknown league falls back to the first one; a season that is not
+  // one of that league's memberships falls back to its latest.
+  const league =
+    leagueParam && leagues.some((l) => l.league === leagueParam)
+      ? leagueParam
+      : leagues[0]?.league || "";
 
-  useEffect(() => {
-    const seasonRows = memberships.filter((m) => m.league === league);
-    if (seasonRows.length === 0) return;
-    const latest = seasonRows.reduce((best, m) =>
-      seasonYear(m) >= seasonYear(best) ? m : best,
-    );
-    setSeason((cur) => {
-      if (cur) return cur;
-      if (seasonParam && seasonRows.some((m) => m.season === seasonParam)) return seasonParam;
-      return latest.season;
-    });
-  }, [memberships, league, seasonParam]);
+  const seasonRows = memberships.filter((m) => m.league === league);
+  const latestSeason = seasonRows.reduce(
+    (best, m) => (!best || seasonYear(m) >= seasonYear(best) ? m : best),
+    null,
+  )?.season;
+  const season =
+    seasonParam && seasonRows.some((m) => m.season === seasonParam)
+      ? seasonParam
+      : latestSeason || "";
 
   // The selected league is held as a slug; the headings below show its real name.
   const leagueNames = useMemo(() => leagueNameMap(leagues), [leagues]);
   const leagueName = leagueLabel(league, leagueNames) || league;
 
-  const onLeagueChange = (value) => {
-    setLeague(value);
-    setSeason("");
-    patch({ league: value, season: "" });
-  };
-  const onSeasonChange = (value) => {
-    setSeason(value);
-    patch({ season: value });
-  };
+  const onLeagueChange = (value) => patch({ league: value, season: "" });
+  const onSeasonChange = (value) => patch({ season: value });
 
   const seasonMatches = memberships.filter((m) => m.league === league && m.season === season);
   const apiName = seasonMatches[0]?.api_name || detail.data?.team?.canonical_name || slug;

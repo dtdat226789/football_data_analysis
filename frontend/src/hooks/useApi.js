@@ -53,60 +53,66 @@ export function clearApiCache() {
  * resolve instantly on remounts or when returning to previously seen params.
  */
 export function useApi(loader, deps = [], { ttl = DEFAULT_TTL } = {}) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   // Bumped by `reload`. It joins the dep list and the cache key, so a retry is a
   // genuinely new request rather than the cached failure coming straight back.
   const [attempt, setAttempt] = useState(0);
   const seq = useRef(0);
   const reload = useCallback(() => setAttempt((n) => n + 1), []);
 
-  // The attempt counter has to sit inside the effect's dep list, so the key and
-  // the list are built from the same array.
+  // The attempt counter has to sit inside the request key, so the key and the
+  // deps it serializes come from the same array.
   const tracked = [...deps, attempt];
+  const key = typeof loader === "function" ? keyFor(loader.toString(), tracked) : null;
+
+  // One result per request key. Comparing it with the current key during render
+  // is how the hook knows a request is still pending: a key that has not settled
+  // yet reads as loading before the effect even fires. Its data is kept so a
+  // refetch does not unmount the caller's filters, matching what the old
+  // `setLoading(true)`-in-an-effect implementation did.
+  const [result, setResult] = useState({ key: null, data: null, loading: true, error: null });
 
   useEffect(() => {
-    if (typeof loader !== "function") return;
+    if (key === null) return;
     const id = ++seq.current;
-    setLoading(true);
-    setError(null);
-    cachedLoad(keyFor(loader.toString(), tracked), loader, ttl).then(
+    cachedLoad(key, loader, ttl).then(
       (d) => {
-        if (seq.current === id) {
-          // A loader may resolve null to mean "a prerequisite is not ready yet"
-          // rather than "there is no data" — a route param that has not arrived,
-          // or a filter that has not been chosen. That keeps the skeleton up
-          // instead of flashing an empty state, and the deps that decide it are
-          // the caller's to change.
-          if (d === null) {
-            setLoading(true);
-            setData(null);
-            setError(null);
-            return;
-          }
-          setData(d);
-          setLoading(false);
+        if (seq.current !== id) return;
+        // A loader may resolve null to mean "a prerequisite is not ready yet"
+        // rather than "there is no data" — a route param that has not arrived,
+        // or a filter that has not been chosen. That keeps the skeleton up
+        // instead of flashing an empty state, and the deps that decide it are
+        // the caller's to change.
+        if (d === null) {
+          setResult({ key, data: null, loading: true, error: null });
+          return;
         }
+        setResult({ key, data: d, loading: false, error: null });
       },
       (e) => {
         if (seq.current === id) {
-          setError(e.message);
-          setLoading(false);
+          setResult({ key, data: null, loading: false, error: e.message });
         }
       },
     );
     return () => {
       seq.current += 1;
     };
-    // `tracked` is `deps` plus the reload counter, and the effect must re-run on
-    // exactly that list. The lint rule cannot check it: the array is built in the
-    // hook body rather than written here, so it reads as a non-literal dep list.
-    // `loader` and `ttl` are deliberately absent — `loader` is a fresh closure on
-    // every render, so listing it would fetch forever; `ttl` is a constant for
-    // every call site.
+    // `key` is the loader source plus its serialized deps, so it changes exactly
+    // when the request should. `loader` and `ttl` are deliberately absent —
+    // `loader` is a fresh closure on every render, so listing it would fetch
+    // forever; `ttl` is a constant for every call site.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, tracked);
+  }, [key]);
 
-  return { data, loading, error, reload };
+  if (typeof loader !== "function") {
+    return { data: null, loading: true, error: null, reload };
+  }
+
+  const settled = result.key === key;
+  return {
+    data: result.data,
+    error: settled ? result.error : null,
+    loading: !settled || result.loading,
+    reload,
+  };
 }
