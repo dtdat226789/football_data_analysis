@@ -132,8 +132,8 @@ describe("LeagueDetail", () => {
     expect(await screen.findByRole("heading", { name: /Upcoming/ })).toBeInTheDocument();
     expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
 
-    // The merged feed, not the raw per-league payload: the matches page reads the
-    // markets the backend selected, and this tab has to read the same ones.
+    // The merged feed, not the raw per-league payload: this tab has to show the
+    // same rows as the matches page.
     expect(api.fixtures).toHaveBeenCalledWith(expect.objectContaining({ league: "premier" }));
     expect(api.leagueFixtures).not.toHaveBeenCalled();
 
@@ -141,20 +141,19 @@ describe("LeagueDetail", () => {
     expect(screen.getAllByRole("link", { name: "view" }).length).toBeGreaterThanOrEqual(1);
   });
 
-  it("gives a fixture the same chips on the league tab as on the matches page", async () => {
+  it("gives a fixture the same goal outlook on the league tab as on the matches page", async () => {
     renderDetail();
 
     fireEvent.click(await screen.findByRole("button", { name: "Matches" }));
 
-    // The old tab fed `model_predictions.dc_v2.calibrated` into the legacy fixed
-    // chip set, so this one fixture wore a different row of predictions here than
-    // it did on /matches. Both pages now build chips from `selected` markets.
+    // The old tab fed `model_predictions.dc_v2.calibrated` into its own chips, so
+    // this fixture looked different here than it did on /matches.
     const chips = await waitFor(() => {
       const found = [...document.querySelectorAll(".pred-chip")].map((el) => el.textContent.trim());
-      expect(found).toContain("O1.5 80%");
+      expect(found).toContain("2+ goals 82%");
       return found;
     });
-    expect(chips).not.toContain("BTTS 55%");
+    expect(chips).toContain("3+ goals 61%");
 
     // And the fixture links through to its own page, which the old tab never did.
     expect(within(screen.getByRole("heading", { name: /Upcoming/ }).closest("section")).getAllByRole("link", { name: "detail" }).length)

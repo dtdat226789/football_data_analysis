@@ -39,15 +39,15 @@ describe("Dashboard", () => {
     expect(screen.getByText("2,330 matches")).toBeInTheDocument();
   });
 
-  it("shows upcoming top picks with prediction chips and recent results", async () => {
+  it("shows upcoming fixtures with their goal outlook and recent results", async () => {
     renderPage(<Dashboard />);
 
-    expect(await screen.findByRole("heading", { name: /Upcoming · top picks/ })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Upcoming fixtures/ })).toBeInTheDocument();
     expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("Chelsea").length).toBeGreaterThanOrEqual(1);
-    // Chips follow the markets the backend selected for each fixture.
+    // Each row shows the chance of two or more goals and three or more goals.
     const chips = [...document.querySelectorAll(".pred-chip")].map((el) => el.textContent.trim());
-    expect(chips).toEqual(["O1.5 80%", "Away +0.5 42%", "U2.5 41%", "1 62%", "BTTS yes 68%"]);
+    expect(chips).toEqual(["2+ goals 82%", "3+ goals 61%", "2+ goals 80%", "3+ goals 57%"]);
 
     expect(screen.getByRole("heading", { name: /Recent results/ })).toBeInTheDocument();
     expect(screen.getByText("2–1")).toBeInTheDocument();

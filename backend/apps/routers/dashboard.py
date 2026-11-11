@@ -117,7 +117,7 @@ def dashboard() -> dict:
         leagues_by_region = _leagues_by_region(cur, counts)
 
     upcoming = fixture_rows()
-    upcoming.sort(key=lambda r: r["predictions"]["confidence"], reverse=True)
+    upcoming.sort(key=lambda r: (r["match_date"] or "", r["time"] or ""))
     recent = recent_matches(limit=RECENT_MATCHES_LIMIT)["matches"]
 
     return {

@@ -112,7 +112,7 @@ export function ModelPanel({ model }) {
               {t(RESULT_KEY[model.predicted_match_result] ?? "") || model.predicted_match_result}{" "}
               <span className="pred-chips">
                 <span className={`pred-chip ${strength(model.confidence)}`}>
-                  {t("pred.conf")} <b>{pct(model.confidence)}</b>
+                  {t("pred.confModel")} <b>{pct(model.confidence)}</b>
                 </span>
               </span>
             </td>

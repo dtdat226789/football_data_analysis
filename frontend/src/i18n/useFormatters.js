@@ -8,7 +8,6 @@ import {
   formatInstantHeading,
   formatKickoffDay,
   formatKickoffTime,
-  formatLine,
   formatNumber,
   formatPercent,
   formatPlainDay,
@@ -55,7 +54,6 @@ export function useFormatters() {
 
   const num = useCallback((value) => formatNumber(value, locale), [locale]);
   const dec = useCallback((value, digits) => formatDecimal(value, digits, locale), [locale]);
-  const line = useCallback((value) => formatLine(value, locale), [locale]);
   const pct = useCallback((value, digits = 1) => formatPercent(value, digits, locale), [locale]);
   const pct0 = useCallback((value) => formatPercent(value, 0, locale), [locale]);
 
@@ -79,7 +77,6 @@ export function useFormatters() {
       dec,
       pct,
       pct0,
-      line,
       kickoffTime,
       kickoffDay,
       instantTime,
@@ -103,7 +100,6 @@ export function useFormatters() {
       dec,
       pct,
       pct0,
-      line,
       kickoffTime,
       kickoffDay,
       instantTime,

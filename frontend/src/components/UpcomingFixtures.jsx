@@ -5,7 +5,7 @@ import { intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchPar
 import { pageLabel } from "../lib/pagination.js";
 import { ErrorBox, ListSkeleton } from "./State.jsx";
 import { TeamLink } from "./TeamLink.jsx";
-import PredictionChips from "./PredictionChips.jsx";
+import MatchOutlook from "./MatchOutlook.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 /** How many fixtures a page holds when the host page does not say otherwise. */
@@ -21,7 +21,7 @@ export const UPCOMING_OFFSET_PARAM = "uoffset";
  * end of the range is a word; the rest are numerals.
  */
 const CONFIDENCE_STEPS = [
-  { value: "", key: "market.filter.all" },
+  { value: "", key: "fixture.confidenceAll" },
   { value: "0.45", label: "45%+" },
   { value: "0.6", label: "60%+" },
   { value: "0.75", label: "75%+" },
@@ -115,9 +115,9 @@ export default function UpcomingFixtures({
     () =>
       api.fixtures({
         league: league || undefined,
-        // Date order whenever anything is filtered, so paging is stable and the
-        // day grouping means something. Matches the server's own rule.
-        sort: windowFrom || windowTo || minConfidence ? "date" : "confidence",
+        // Always date order: the list is grouped by day and paged, so a
+        // confidence order would reshuffle the page boundaries.
+        sort: "date",
         limit: pageSize,
         offset,
         from_date: windowFrom || undefined,
@@ -179,7 +179,7 @@ export default function UpcomingFixtures({
           too-strict choice into a dead end with no way back. */}
       {data && (data.total > 0 || filtered) && (
         <>
-          <div className="market-filters" role="group" aria-label={t("fixture.confidenceAria")}>
+          <div className="confidence-filters" role="group" aria-label={t("fixture.confidenceAria")}>
             {CONFIDENCE_STEPS.map((step) => (
               <button
                 key={step.value}
@@ -264,7 +264,7 @@ export default function UpcomingFixtures({
                   {partial && (
                     <button
                       type="button"
-                      className="market-open fixture-day-more"
+                      className="link-button fixture-day-more"
                       onClick={() => setDay(dayBucket)}
                     >
                       {t("fixture.seeThisDay")}
@@ -284,7 +284,7 @@ export default function UpcomingFixtures({
                         <TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} />
                       </span>
                     </div>
-                    <PredictionChips
+                    <MatchOutlook
                       predictions={m.predictions}
                       compact
                       confidence={m.predictions?.confidence}

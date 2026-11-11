@@ -10,7 +10,6 @@ import {
   formatInstantTime,
   formatKickoffDay,
   formatKickoffTime,
-  formatLine,
   formatNumber,
   formatPercent,
   formatPlainDay,
@@ -174,14 +173,5 @@ describe("locale-aware number formatting", () => {
     expect(formatPercent(0.667, 1, "en-GB")).toBe("66.7%");
     expect(formatPercent(0.667, 1, "vi-VN")).toBe("66,7%");
     expect(formatPercent(0.27, 0, "en-GB")).toBe("27%");
-  });
-
-  it("formatLine trims trailing zeros and keeps the decimal mark", () => {
-    expect(formatLine(1.5, "en-GB")).toBe("1.5");
-    expect(formatLine(1.5, "vi-VN")).toBe("1,5");
-    expect(formatLine(2, "en-GB")).toBe("2");
-    expect(formatLine(0.25, "en-GB")).toBe("0.25");
-    expect(formatLine(-0.5, "vi-VN")).toBe("-0,5");
-    expect(formatLine("nope", "en-GB")).toBe("nope");
   });
 });

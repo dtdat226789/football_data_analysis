@@ -1,0 +1,211 @@
+name: Daily data refresh
+
+# Collects live data, rebuilds the Neon database and analysis reports, then
+# ships a new backend image and redeploys it to Render.
+#
+# Required repository secrets:
+#   NEON_DATABASE_URL         Neon connection string (the app's DATABASE_URL)
+#   FOOTBALL_CHARTS_API_KEY   Upstream Football Charts API key
+#   DOCKERHUB_USERNAME        Docker Hub account that owns the image
+#   DOCKERHUB_TOKEN           Docker Hub access token (read/write)
+#   RENDER_DEPLOY_HOOK        Render deploy hook URL for the backend service
+#
+# The Render service must be configured to deploy
+# `<DOCKERHUB_USERNAME>/football_data_analysis:latest`.
+
+on:
+  schedule:
+    # 18:00 UTC = 01:00 Asia/Bangkok (UTC+7)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Refresh even if a successful run is already stamped for today
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.12"
+  IMAGE_NAME: football_data_analysis
+  PG_IMAGE: postgres:18
+
+jobs:
+  refresh:
+    name: Refresh data, rebuild image, redeploy
+    runs-on: ubuntu-latest
+    # The full sweep took ~39 min on 2026-11-11; leave room for slow API days.
+    timeout-minutes: 150
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # pg_isready is used by refresh_data.sh's preflight.
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends postgresql-client
+
+      - name: Write .env for the pipeline
+        env:
+          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+          FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
+        run: |
+          if [ -z "$DATABASE_URL" ] || [ -z "$FOOTBALL_CHARTS_API_KEY" ]; then
+            echo "::error::Missing NEON_DATABASE_URL or FOOTBALL_CHARTS_API_KEY secret"
+            exit 1
+          fi
+          umask 077
+          {
+            printf 'DATABASE_URL=%s\n' "$DATABASE_URL"
+            printf 'FOOTBALL_CHARTS_API_KEY=%s\n' "$FOOTBALL_CHARTS_API_KEY"
+          } > .env
+
+      - name: Backup Neon before the destructive rebuild
+        env:
+          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+        run: |
+          # The refresh drops and reloads every table, so keep a recoverable
+          # copy in case the database stage fails halfway through.
+          DIRECT_DATABASE_URL="${DATABASE_URL/-pooler./.}"
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e PGCONN="$DIRECT_DATABASE_URL" \
+            -v "$RUNNER_TEMP":/backup \
+            "$PG_IMAGE" \
+            sh -c 'pg_dump --format=custom --schema=public --no-owner --no-privileges --file=/backup/neon-before.dump "$PGCONN"'
+          ls -lh "$RUNNER_TEMP/neon-before.dump"
+
+      - name: Refresh data
+        id: refresh
+        continue-on-error: true
+        # Shorter than the job timeout so a hung run fails this step and still
+        # lets the inspect/restore steps below execute.
+        timeout-minutes: 130
+        env:
+          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+          FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
+          PYTHON: python3
+        run: |
+          args=()
+          if [ "${{ inputs.force }}" = "true" ]; then
+            args+=(--force)
+          fi
+          bash scripts/refresh_data.sh "${args[@]}"
+
+      - name: Inspect the database stage result
+        id: verify
+        if: ${{ !cancelled() }}
+        run: |
+          log="logs/refresh_latest.log"
+          line=""
+          if [ -f "$log" ]; then
+            line="$(grep -F '| build database + analysis (all leagues) |' "$log" | tail -1 || true)"
+          fi
+
+          # The stage prints "stage: ..." when it starts and only writes the
+          # summary row when it finishes. Keying the gate on the start marker
+          # means a timeout/crash mid-rebuild still triggers the restore.
+          if [ -f "$log" ] \
+             && grep -qF 'stage: build database + analysis (all leagues)' "$log"; then
+            echo "db_attempted=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "db_attempted=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          if printf '%s' "$line" | grep -q '| ok |'; then
+            echo "db_ok=true" >> "$GITHUB_OUTPUT"
+            echo "Database + analysis stage succeeded."
+          else
+            echo "db_ok=false" >> "$GITHUB_OUTPUT"
+            echo "::error::Database + analysis stage did not succeed; refusing to deploy."
+          fi
+
+          if [ "${{ steps.refresh.outcome }}" = "failure" ] \
+             && printf '%s' "$line" | grep -q '| ok |'; then
+            echo "::warning::Refresh exited non-zero but the database rebuild succeeded; deploying the fresh data anyway."
+          fi
+
+      - name: Restore Neon after a failed rebuild
+        if: ${{ !cancelled() && steps.verify.outputs.db_attempted == 'true' && steps.verify.outputs.db_ok != 'true' }}
+        env:
+          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+        run: |
+          # 00_reset.sql clears whatever the partial rebuild left behind; the
+          # schema entry is filtered out of the TOC so it cannot collide with
+          # the existing public schema.
+          DIRECT_DATABASE_URL="${DATABASE_URL/-pooler./.}"
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e PGCONN="$DIRECT_DATABASE_URL" \
+            -v "$RUNNER_TEMP":/backup \
+            -v "$GITHUB_WORKSPACE/sql":/sql:ro \
+            "$PG_IMAGE" \
+            sh -c '
+              psql "$PGCONN" -v ON_ERROR_STOP=1 -f /sql/00_reset.sql &&
+              pg_restore -l /backup/neon-before.dump \
+                | grep -v -E "^[0-9]+; [0-9]+ [0-9]+ SCHEMA - public " \
+                | grep -v -E " COMMENT - SCHEMA public " \
+                > /tmp/restore.list &&
+              pg_restore --dbname="$PGCONN" --no-owner --no-privileges \
+                --use-list=/tmp/restore.list /backup/neon-before.dump
+            '
+
+      - name: Fail when the database was not rebuilt
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok != 'true' }}
+        run: |
+          echo "::error::Aborting: the database was not rebuilt successfully."
+          exit 1
+
+      - name: Compute image tag
+        id: tag
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Ensure build-context directories exist
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        run: mkdir -p data/raw/fixtures data/analysis
+
+      - name: Log in to Docker Hub
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push backend image
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.date }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+
+      - name: Trigger Render deploy
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$RENDER_DEPLOY_HOOK" ]; then
+            echo "::error::Missing RENDER_DEPLOY_HOOK secret"
+            exit 1
+          fi
+          curl -fsS -X POST "$RENDER_DEPLOY_HOOK"

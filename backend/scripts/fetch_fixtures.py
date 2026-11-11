@@ -130,7 +130,6 @@ def summarize_predictions(payload: dict) -> list[dict]:
                 "status": match.get("status"),
                 "home": calibrated.get("home"),
                 "away": calibrated.get("away"),
-                "btts_yes": calibrated.get("btts_yes"),
                 "over_1_5": calibrated.get("over_1.5"),
                 "over_2_5": calibrated.get("over_2.5"),
                 "expected_home_goals": raw.get("expected_home_goals"),
@@ -225,7 +224,7 @@ def main(argv: list[str] | None = None) -> int:
                     f"  {row['match_date']} {row['time'] or ''}  "
                     f"{row['home_team']} vs {row['away_team']}  "
                     f"[{row['status']}]  P(home)={row['home']}  P(away)={row['away']}  "
-                    f"BTTS={row['btts_yes']}  O2.5={row['over_2_5']}"
+                    f"O2.5={row['over_2_5']}"
                 )
 
     manifest_path = OUTPUT_DIR / "manifest.json"

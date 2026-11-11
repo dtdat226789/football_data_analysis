@@ -397,41 +397,6 @@ th.num {
   text-decoration: underline;
 }
 
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 50;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 40px 16px;
-}
-
-.modal {
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  max-width: 620px;
-  width: 100%;
-  max-height: 85vh;
-  overflow: auto;
-  padding: 20px;
-}
-
-.modal h3 {
-  margin: 0 0 12px;
-}
-
-.modal .close {
-  float: right;
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 20px;
-  cursor: pointer;
-}
-
 .event-list {
   list-style: none;
   margin: 0;
@@ -695,15 +660,6 @@ section > h3 {
   font-variant-numeric: tabular-nums;
 }
 
-.pred-chip.chip-lean {
-  border-color: var(--brand, var(--accent));
-  color: var(--brand, var(--accent));
-}
-
-.pred-chip.chip-lean b {
-  color: var(--brand, var(--accent));
-}
-
 .pred-chip.chip-strong {
   border-color: var(--green);
   color: var(--green);
@@ -725,12 +681,6 @@ section > h3 {
   border-color: var(--border);
 }
 
-/* A derived market carrying an assumption the model does not publish. Dashed so
-   it is distinguishable from a measured number at a glance, not just on hover. */
-.pred-chip.chip-assumed {
-  border-style: dashed;
-}
-
 .pred-meta {
   display: inline-flex;
   gap: 8px;
@@ -740,8 +690,8 @@ section > h3 {
   white-space: nowrap;
 }
 
-/* ── derived market table ─────────────────────────────────────────────── */
-.market-filters {
+/* ── confidence filter chips ──────────────────────────────────────────── */
+.confidence-filters {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -751,33 +701,6 @@ section > h3 {
 .preset.on {
   border-color: var(--accent);
   color: var(--accent);
-}
-
-.market-group {
-  margin-top: 16px;
-}
-
-.market-group h4 {
-  margin: 0 0 6px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.market-group table.data tr.featured td {
-  font-weight: 600;
-}
-
-.market-flag {
-  margin-left: 6px;
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--accent);
-}
-
-.market-push {
-  font-weight: 400;
-  font-size: 12px;
 }
 
 /* ── upcoming fixtures, grouped by day ─────────────────────────────────── */
@@ -812,21 +735,7 @@ section > h3 {
   font-size: 12px;
 }
 
-/* The chip/row control that opens a market's explanation. Rendered as a button
-   so it is keyboard reachable, but drawn as plain text until hovered so the
-   chip row does not read as a toolbar. */
-.pred-chip-btn {
-  font: inherit;
-  cursor: pointer;
-}
-
-.pred-chip-btn:hover,
-.pred-chip-btn:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.market-open {
+.link-button {
   font: inherit;
   font-weight: 500;
   color: inherit;
@@ -840,112 +749,10 @@ section > h3 {
   text-underline-offset: 3px;
 }
 
-.market-open:hover,
-.market-open:focus-visible {
+.link-button:hover,
+.link-button:focus-visible {
   color: var(--accent);
   text-decoration-color: currentColor;
-}
-
-/* ── market explanation modal ─────────────────────────────────────────── */
-.market-frame {
-  width: min(720px, 92vw);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--bg, #0b1118);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
-}
-
-.market-frame .lightbox-head {
-  position: sticky;
-  top: 0;
-  padding: 14px 18px;
-  background: var(--bg, #0b1118);
-  border-bottom: 1px solid var(--border);
-}
-
-.market-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 0 18px 18px;
-  overflow-y: auto;
-}
-
-.market-detail-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  font-size: 12px;
-  margin-bottom: 6px;
-}
-
-.market-detail-title {
-  margin: 12px 0 6px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-/* Three fixed settlement slots so the bars stay aligned as markets change. */
-.settle {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.settle-row {
-  display: grid;
-  grid-template-columns: 56px 1fr 52px;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-}
-
-.settle-label {
-  color: var(--muted);
-}
-
-.settle-value {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-.settle-win {
-  background: var(--green);
-}
-
-.settle-push {
-  background: var(--amber);
-}
-
-.settle-lose {
-  background: var(--red);
-}
-
-.cell-bar {
-  display: inline-block;
-  width: 64px;
-  height: 6px;
-  margin-right: 8px;
-  vertical-align: middle;
-  border-radius: 999px;
-  background: var(--border);
-  overflow: hidden;
-}
-
-.settle-cell {
-  background: var(--accent);
-}
-
-.cell-table td.num {
-  white-space: nowrap;
-}
-
-.cell-more {
-  font-size: 12px;
-  margin: 6px 0 0;
 }
 
 /* ── skeletons ────────────────────────────────────────────────────────── */
@@ -991,7 +798,7 @@ section > h3 {
   gap: 6px;
 }
 /* Only the Matches filter bar needs the nudge. UpcomingFixtures nests these in
-   .market-filters, which already has an 8px gap, so the margin there pushed the
+   .confidence-filters, which already has an 8px gap, so the margin there pushed the
    chips one extra step out of line with the controls above them. */
 .filters > .date-presets {
   margin-left: 8px;

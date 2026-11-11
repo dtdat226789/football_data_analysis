@@ -209,4 +209,3 @@ alongside the pre-match feature row and a head-to-head list.
 - better classifiers / feature engineering (H2H, opponent strength, home/away
   calendars) — each must go through the same strictly-prior pipeline
 - calibration curves and threshold choice on the dev season
-- odds / bookmaker drift experiments

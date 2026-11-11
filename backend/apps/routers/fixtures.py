@@ -21,16 +21,12 @@ still serves predictions, form and kickoff metadata from the file dump alone,
 and `detail_collected` reports whether the richer /matches/{slug}/ payload from
 backend/scripts/fetch_fixture_details.py is on disk.
 
-Predictions carry two things beyond what the feed publishes. `markets` is the
-full derived menu — Asian handicaps, correct score, HT/FT, team totals — and
-`selected` is the confident subset, both built in apps/markets.py from the
-dc_v2 goal parameters and tagged by whether they are model output or a stated
-assumption. The list feed carries only `selected`, under `predictions`.
+Predictions are presented as plain model statistics: expected goals, goal-total
+probabilities and the model's own confidence.
 """
 from __future__ import annotations
 
 import json
-import re
 from datetime import date
 from pathlib import Path
 from typing import Literal
@@ -39,7 +35,6 @@ from fastapi import APIRouter, HTTPException
 
 from .. import common
 from ..deps import fetched_cursor, norm_pagination, require_league, resolve_team_id
-from ..markets import market_detail, markets_from_prediction
 from .matches import build_pre_match, check_date_window, head_to_head
 from .teams import _form_result
 
@@ -52,10 +47,6 @@ MAX_LIMIT = 200
 
 FORM_LIMIT = 5
 H2H_LIMIT = 10
-
-# Goal lines the dc_v2 model reports, e.g. `over_2.5` and `ht_over_1.5`. The
-# prefix marks the scope; the remainder is the line the market is quoted at.
-_GOAL_LINE = re.compile(r"^(ht_)?over_(\d+(?:\.\d+)?)$")
 
 
 def details_dir() -> Path:
@@ -110,32 +101,26 @@ def _in_window(row: dict, start: date | None, end: date | None) -> bool:
     return True
 
 
-def _prediction_summary(match: dict, selected: list | None = None) -> dict:
+def _prediction_summary(match: dict) -> dict:
     """Compact dc_v2 prediction summary for a fixture.
 
-    `selected` is the short list of markets the model is most confident about,
-    which is what the list feed renders as chips. It is derived rather than read
-    (see apps/markets.py) and stays small so the merged feed does not carry a
-    full market table on every row. Callers that already hold the derived
-    markets pass `selected` in rather than deriving them twice.
+    Carries the plain model statistics a reader can interpret directly: the
+    home/away split, goal-total probabilities, expected goals and the model's
+    confidence.
     """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     calibrated = preds.get("calibrated") or {}
     raw = preds.get("raw") or {}
-    if selected is None:
-        selected = markets_from_prediction(preds)["selected"]
     home = calibrated.get("home")
     away = calibrated.get("away")
     return {
         "home": home,
         "away": away,
-        "btts_yes": calibrated.get("btts_yes"),
         "over_1_5": calibrated.get("over_1.5"),
         "over_2_5": calibrated.get("over_2.5"),
         "over_3_5": calibrated.get("over_3.5"),
         "expected_home_goals": raw.get("expected_home_goals"),
         "expected_away_goals": raw.get("expected_away_goals"),
-        "selected": selected,
         "confidence": round(max(
             [p for p in (home, away) if isinstance(p, (int, float))],
             default=0.0,
@@ -278,67 +263,31 @@ def _probability_triple(calibrated: dict) -> dict:
     return {"home": home, "draw": draw, "away": away}
 
 
-def _goal_lines(raw: dict, calibrated: dict) -> list[dict]:
-    """Every over/under line the model priced, full time and half time.
-
-    Both blocks are walked so the table can show the model's uncalibrated and
-    calibrated read of the same line side by side.
-    """
-    lines: list[dict] = []
-    for source, block in (("raw", raw), ("calibrated", calibrated)):
-        for key, value in block.items():
-            match = _GOAL_LINE.match(key or "")
-            if not match or not isinstance(value, (int, float)):
-                continue
-            entry = next((row for row in lines if row["line"] == key), None)
-            if entry is None:
-                lines.append({
-                    "line": key,
-                    "scope": "half_time" if match.group(1) else "full_time",
-                    "threshold": match.group(2),
-                    "raw": None,
-                    "calibrated": None,
-                })
-                entry = lines[-1]
-            entry[source] = value
-    lines.sort(key=lambda row: (row["scope"] != "full_time", float(row["threshold"])))
-    return lines
-
-
 def predictability(match: dict) -> dict | None:
-    """The full dc_v2 block for a fixture, not just the chip summary.
+    """The full dc_v2 block for a fixture, not just the compact summary.
 
     `summary` is the same object the list feed renders, so a detail view and a
     row in /fixtures never disagree about the headline numbers.
-
-    `markets` is the whole derived menu and `selected` the confident subset. Both
-    come from apps/markets.py and are omitted rather than faked when the block
-    carries no usable lambdas.
     """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     if not preds:
         return None
     raw = preds.get("raw") or {}
     calibrated = preds.get("calibrated") or {}
-    derived = markets_from_prediction(preds)
     return {
         "model": preds.get("model"),
         # xi is a constant placeholder across every collected block and is not
-        # the correction that generated the published probabilities — the real
-        # one is solved for from the published O/U lines instead. Kept for
-        # reference; apps/markets.py explains why it is not used.
+        # the correction that generated the published probabilities. Kept for
+        # reference only.
         "xi": preds.get("xi"),
         "sigma": preds.get("sigma"),
-        "summary": _prediction_summary(match, selected=derived["selected"]),
+        "summary": _prediction_summary(match),
         "probabilities": _probability_triple(calibrated),
         "expected_goals": {
             "home": raw.get("expected_home_goals"),
             "away": raw.get("expected_away_goals"),
             "half_time_total": raw.get("expected_ht_goals"),
         },
-        "lines": _goal_lines(raw, calibrated),
-        "markets": derived["markets"],
-        "selected": derived["selected"],
         "ratings": preds.get("ratings") or {},
         "effective_matches": preds.get("effective_matches") or {},
         "gates": preds.get("gates") or {},
@@ -639,7 +588,7 @@ def _context(cur, league: str, home_name: str, away_name: str, match_date) -> di
 @router.get("/fixtures")
 def list_fixtures(
     league: str | None = None,
-    sort: Literal["date", "confidence"] = "confidence",
+    sort: Literal["date", "confidence"] = "date",
     limit: int = DEFAULT_LIMIT,
     offset: int = 0,
     from_date: date | None = None,
@@ -681,8 +630,9 @@ def list_fixtures(
 
     # Date first whenever a date is in play: a paged list sorted by confidence
     # reshuffles between pages, so walking it can show a fixture twice and skip
-    # another. Confidence stays the default for the plain view, which is a
-    # short "best picks" read rather than a list to walk.
+    # another. Dates are the default for the plain view; confidence ordering is
+    # available explicitly for readers who want the model's strongest calls
+    # first.
     effective_sort = sort
     if sort == "date" or start or end or min_confidence is not None:
         effective_sort = "date"
@@ -741,28 +691,8 @@ def league_fixtures(league: str) -> dict:
     return payload
 
 
-def _market_explanation(match: dict, market_key: str) -> dict | None:
-    """The mechanism behind one derived market, or None when it has none.
-
-    A market row is a single number; this is what produces it — how it settles
-    across win/push/lose and which scorelines in the 81-cell grid pay it.
-    Served per market rather than for all ~159 of them because the full
-    explanation of every row would dwarf the fixture it belongs to.
-
-    A key the fixture does not have is a 404, not a null: that means the caller
-    asked for something that was never there. A null is reserved for a market
-    that does exist but whose number the grid cannot rebuild.
-    """
-    preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
-    rows = {row.get("key"): row for row in markets_from_prediction(preds)["markets"]}
-    row = rows.get(market_key)
-    if row is None:
-        raise HTTPException(status_code=404, detail=f"market '{market_key}' not found")
-    return market_detail(preds.get("raw") or {}, row)
-
-
 @router.get("/fixtures/{league}/{match_id:path}")
-def fixture_detail(league: str, match_id: str, market: str | None = None) -> dict:
+def fixture_detail(league: str, match_id: str) -> dict:
     """Everything known about one upcoming fixture, before it is played.
 
     Layered so the page degrades instead of erroring: the fixture row, the
@@ -771,9 +701,6 @@ def fixture_detail(league: str, match_id: str, market: str | None = None) -> dic
     from the analytics database. The database sections are only meaningful once
     the fixture is inside a collected season, which `season`/`matchday` report
     so a caller can tell derived data from assumed data.
-
-    Passing `market=<key>` returns only the explanation for that one derived
-    market, so a reader can drill into a chip without refetching the page.
     """
     require_league(league)
     fixture = find_fixture(league, match_id)
@@ -783,19 +710,6 @@ def fixture_detail(league: str, match_id: str, market: str | None = None) -> dic
         )
 
     slug = fixture.get("slug") or ""
-
-    if market is not None:
-        # Before the collected payload is loaded: an explanation is a pure
-        # function of the prediction block, so nothing else on the page is
-        # needed and the file read would be wasted.
-        return {
-            "league": league,
-            "league_name": common.league_name(league),
-            "match_id": slug_tail(slug) or match_id,
-            "slug": slug,
-            "market_key": market,
-            "market": _market_explanation(fixture, market),
-        }
 
     detail = _load_detail(league, slug)
     # A collected payload is the richer copy of the same fixture: prefer it for

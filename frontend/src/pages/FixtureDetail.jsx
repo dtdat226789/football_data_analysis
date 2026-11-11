@@ -1,35 +1,21 @@
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { FormPills } from "../components/FormPills.jsx";
-import MarketDetailModal from "../components/MarketDetailModal.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
-import MarketTable from "../components/MarketTable.jsx";
-import PredictionChips from "../components/PredictionChips.jsx";
+import MatchOutlook from "../components/MatchOutlook.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
-const RESULT_KEY = { home: "result.home", draw: "result.draw", away: "result.away" };
-const SCOPE_KEY = { full_time: "market.scope.full_time", half_time: "market.scope.half_time" };
-
-/** Strip the `over_`/`ht_over_` prefix the API keeps, leaving the quoted line. */
-function lineLabel(line, t) {
-  const s = String(line || "");
-  const over = s.replace(/^ht_/, "").replace(/^over_/, "");
-  return over === s ? s : `${t("fixture.over")} ${over}`;
-}
-
 /**
- * The model's full read on an unplayed fixture: the 1/X/2 split with bars, the
- * expected goals behind it, and the gates/ratings/sample-size metadata that says
- * how much to trust the number.
+ * The model's full read on an unplayed fixture: goal totals, expected goals,
+ * and the gates/ratings/sample-size metadata that says how much to trust the
+ * number.
  */
-function PredictabilityPanel({ prediction, onSelectMarket }) {
-  const { t, pct, dec } = useFormatters();
+function PredictabilityPanel({ prediction }) {
+  const { t, dec } = useFormatters();
   if (!prediction) return null;
-  const probs = prediction.probabilities || {};
   const goals = prediction.expected_goals || {};
   const ratings = prediction.ratings || {};
   const effective = prediction.effective_matches || {};
@@ -44,35 +30,10 @@ function PredictabilityPanel({ prediction, onSelectMarket }) {
         {status.stale && <span className="badge amber">{t("predictability.stale")}</span>}
       </h3>
 
-      <div style={{ marginBottom: 12 }}>
-        {["home", "draw", "away"].map((key) => (
-          <div key={key} style={{ marginBottom: 8 }}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                fontSize: 13,
-                marginBottom: 3,
-              }}
-            >
-              <span>{t(RESULT_KEY[key])}</span>
-              <span style={{ fontVariantNumeric: "tabular-nums" }}>{pct(probs[key])}</span>
-            </div>
-            <div className="bar-track" style={{ height: 8 }}>
-              <div
-                className="bar-fill"
-                style={{ width: `${(probs[key] || 0) * 100}%`, background: "var(--accent)" }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <PredictionChips
-        predictions={{ ...prediction.summary, selected: prediction.selected }}
+      <MatchOutlook
+        predictions={prediction.summary}
         confidence={prediction.summary?.confidence}
         dataThrough={prediction.data_through}
-        onSelect={onSelectMarket}
       />
 
       <table className="data" style={{ marginTop: 12 }}>
@@ -139,37 +100,6 @@ function PredictabilityPanel({ prediction, onSelectMarket }) {
             <th>{t("predictability.computed")}</th>
             <td className="muted">{prediction.computed_at || "—"}</td>
           </tr>
-        </tbody>
-      </table>
-    </section>
-  );
-}
-
-/** Every over/under line the model priced, uncalibrated beside calibrated. */
-function GoalLinesPanel({ lines }) {
-  const { t, pct } = useFormatters();
-  if (!lines || !lines.length) return null;
-  return (
-    <section className="card">
-      <h3 style={{ marginTop: 0 }}>{t("predictability.goalLines")}</h3>
-      <table className="data">
-        <thead>
-          <tr>
-            <th>{t("market.col.scope")}</th>
-            <th>{t("predictability.col.line")}</th>
-            <th className="num">{t("predictability.col.raw")}</th>
-            <th className="num">{t("predictability.col.calibrated")}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {lines.map((row) => (
-            <tr key={row.line}>
-              <td className="muted">{t(SCOPE_KEY[row.scope] ?? "") || row.scope}</td>
-              <td>{lineLabel(row.line, t)}</td>
-              <td className="num">{pct(row.raw)}</td>
-              <td className="num">{pct(row.calibrated)}</td>
-            </tr>
-          ))}
         </tbody>
       </table>
     </section>
@@ -254,9 +184,6 @@ export default function FixtureDetail() {
     () => (league && matchId ? api.fixtureDetail(league, matchId) : null),
     [league, matchId],
   );
-  // One market at a time: the chips and the table hand over the row they were
-  // clicked on, and the modal fetches the explanation for that row alone.
-  const [market, setMarket] = useState(null);
 
   if (loading)
     return (
@@ -296,23 +223,11 @@ export default function FixtureDetail() {
       </div>
 
       <div className="two-col">
-        <PredictabilityPanel prediction={data.predictability} onSelectMarket={setMarket} />
+        <PredictabilityPanel prediction={data.predictability} />
         <div className="stack" style={{ display: "grid", gap: 16, alignContent: "start" }}>
           <TeamCard side="home" team={home} standings={data.standings?.home} />
           <TeamCard side="away" team={away} standings={data.standings?.away} />
         </div>
-      </div>
-
-      <div style={{ marginTop: 16 }}>
-        <GoalLinesPanel lines={data.predictability?.lines} />
-      </div>
-
-      <div style={{ marginTop: 16 }}>
-        <MarketTable
-          markets={data.predictability?.markets}
-          selected={data.predictability?.selected}
-          onSelect={setMarket}
-        />
       </div>
 
       {/* Reused verbatim: the endpoint returns these two sections in exactly the
@@ -376,15 +291,6 @@ export default function FixtureDetail() {
           </tbody>
         </table>
       </section>
-
-      {market && (
-        <MarketDetailModal
-          league={league}
-          matchId={data.match_id || matchId}
-          market={market}
-          onClose={() => setMarket(null)}
-        />
-      )}
     </div>
   );
 }

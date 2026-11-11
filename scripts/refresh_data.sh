@@ -155,7 +155,18 @@ fi
 
 if [ "$DRY_RUN" -eq 0 ]; then
     if command -v pg_isready >/dev/null 2>&1; then
-        if pg_isready -q; then say "postgres: ready"
+        # Prefer the configured DSN so the check follows DATABASE_URL when it
+        # points at a remote server (Neon in CI). The Python steps load it from
+        # .env, but the shell only sees it when the caller exports it.
+        if [ -n "${DATABASE_URL:-}" ]; then
+            if pg_isready -q -d "$DATABASE_URL"; then
+                say "postgres: ready (DATABASE_URL)"
+            else
+                say "FATAL: PostgreSQL at DATABASE_URL is not accepting connections."
+                pg_isready -d "$DATABASE_URL" || true
+                fail=1
+            fi
+        elif pg_isready -q; then say "postgres: ready"
         else say "FATAL: PostgreSQL is not accepting connections."; pg_isready || true; fail=1; fi
     else
         say "WARN: pg_isready not found; skipping the database preflight."

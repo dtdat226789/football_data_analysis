@@ -233,22 +233,6 @@ export function formatDecimal(value, digits, locale = "en") {
   }
 }
 
-/**
- * A betting line, e.g. `1.5`, `0.25`: locale decimal mark, trailing zeros
- * trimmed so `1` does not render as `1.00`.
- */
-export function formatLine(value, locale = "en") {
-  if (typeof value !== "number" || !Number.isFinite(value)) return value == null ? "—" : String(value);
-  try {
-    return new Intl.NumberFormat(locale, {
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    }).format(value);
-  } catch {
-    return String(value);
-  }
-}
-
 /** Percentage from a 0..1 ratio. Vietnamese uses `,` as the decimal mark. */
 export function formatPercent(value, digits = 1, locale = "en") {
   if (typeof value !== "number" || !Number.isFinite(value)) return "—";

@@ -1,0 +1,17 @@
+{
+  "name": "football-web",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-09",
+  "assets": {
+    "directory": "./frontend/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api", "/api/*", "/health"]
+  },
+  "vars": {
+    "BACKEND_URL": "https://football-data-analysis-latest.onrender.com"
+  },
+  "triggers": {
+    "crons": ["*/10 * * * *"]
+  }
+}

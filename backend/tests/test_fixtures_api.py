@@ -40,7 +40,7 @@ SAMPLE = {
             "status": "scheduled", "country": "Spain",
             "model_predictions": {
                 "dc_v2": {
-                    "calibrated": {"home": 0.52, "away": 0.17, "btts_yes": 0.47,
+                    "calibrated": {"home": 0.52, "away": 0.17,
                                    "over_1.5": 0.70, "over_2.5": 0.44, "over_3.5": 0.24},
                     "raw": {"expected_home_goals": 1.57, "expected_away_goals": 0.84},
                     "computed_at": "2026-09-22T00:00:00+00:00",
@@ -89,10 +89,11 @@ def fixtures_client(tmp_path, monkeypatch):
 
 
 def test_merged_sorted_by_confidence(fixtures_client):
-    r = fixtures_client.get("/api/v1/fixtures", params={"limit": 10})
+    r = fixtures_client.get("/api/v1/fixtures", params={"sort": "confidence", "limit": 10})
     assert r.status_code == 200
     body = r.json()
     assert body["count"] == 3
+    assert body["sort"] == "confidence"
     confidences = [m["predictions"]["confidence"] for m in body["matches"]]
     assert confidences == sorted(confidences, reverse=True)
     first = body["matches"][0]
@@ -516,8 +517,8 @@ def test_filters_narrow_total_before_paging(tmp_path, monkeypatch):
     assert body["from_date"] == day2
 
 
-def test_the_plain_list_still_leads_with_the_models_best_picks(tmp_path, monkeypatch):
-    """The unfiltered default is a short "best picks" read, not a list to walk."""
+def test_the_plain_list_defaults_to_date_order(tmp_path, monkeypatch):
+    """Without an explicit sort the feed walks fixtures by kickoff, not confidence."""
     def confident(home, prob):
         return {
             "slug": f"spain/x/{home}",
@@ -531,8 +532,7 @@ def test_the_plain_list_still_leads_with_the_models_best_picks(tmp_path, monkeyp
     ])
     with client:
         body = client.get("/api/v1/fixtures").json()
-    assert body["sort"] == "confidence"
-    assert [m["home_team"] for m in body["matches"]] == ["Strong", "Weak"]
+    assert body["sort"] == "date"
 
 
 def test_dashboard_upcoming_excludes_played(tmp_path, monkeypatch):

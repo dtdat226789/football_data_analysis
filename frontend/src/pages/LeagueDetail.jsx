@@ -34,7 +34,7 @@ const FINDING_TITLE_KEY = {
   "Most common HT/FT flow": "analysis.finding.htFtFlow",
   "Average goals per match": "analysis.finding.avgGoals",
   "Home goal share": "analysis.finding.homeGoalShare",
-  "Both teams to score": "analysis.finding.btts",
+  "Both teams to score": "analysis.finding.bothScored",
   "Most common first-goal bucket": "analysis.finding.firstGoalBucket",
   "Average first goal minute": "analysis.finding.firstGoalMinute",
   "Dominant team by lifetime points": "analysis.finding.dominantTeam",
@@ -214,12 +214,10 @@ function MatchesTab({ league, season }) {
   const recent = useApi(() => api.matches(league, { season, limit: 20 }), [league, season]);
   return (
     <div className="two-col">
-      {/* The same component the matches page uses, deliberately: it fed
-          `model_predictions.dc_v2.calibrated` into the legacy fixed chip set while
-          the matches page used the markets the backend selected, so one fixture
-          wore two different sets of predictions depending on the route. It also
-          brings the day grouping, the confidence floor, paging and the link
-          through to the fixture's own page. */}
+      {/* The same component the matches page uses, deliberately: one fixture
+          should not wear two different sets of predictions depending on the
+          route. It also brings the day grouping, the confidence floor, paging
+          and the link through to the fixture's own page. */}
       <UpcomingFixtures league={league} />
 
       <section className="card">

@@ -6,7 +6,7 @@ import { ErrorBox, Skeleton, TableSkeleton } from "../components/State.jsx";
 import { FormPills } from "../components/FormPills.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BarList, Donut, StatCard } from "../components/Charts.jsx";
-import PredictionChips from "../components/PredictionChips.jsx";
+import MatchOutlook from "../components/MatchOutlook.jsx";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 import { useParamsPatch } from "../lib/searchParams.js";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -276,7 +276,7 @@ export default function TeamDetail() {
                   </span>
                   <span><TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} /></span>
                 </div>
-                <PredictionChips predictions={m.model_predictions?.dc_v2?.calibrated} compact />
+                <MatchOutlook predictions={m.model_predictions?.dc_v2?.calibrated} compact />
               </div>
             ))}
           </div>

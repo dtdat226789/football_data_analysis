@@ -3,7 +3,7 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
-import PredictionChips from "../components/PredictionChips.jsx";
+import MatchOutlook from "../components/MatchOutlook.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const REGION_KEYS = {
@@ -118,7 +118,7 @@ export default function Dashboard() {
 
       <div className="two-col">
         <section className="card">
-          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.upcomingTopPicks")}</h3>
+          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.upcoming")}</h3>
           <Link className="link" to="/matches" style={{ fontSize: 13 }}>
             {t("page.dashboard.viewAll")}
           </Link>
@@ -139,7 +139,7 @@ export default function Dashboard() {
                   <div className="muted" style={{ fontSize: 12 }}>
                     {m.league_name || m.league} · {m.country}
                   </div>
-                  <PredictionChips
+                  <MatchOutlook
                     predictions={m.predictions}
                     compact
                     confidence={m.predictions?.confidence}

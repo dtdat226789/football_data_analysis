@@ -71,11 +71,10 @@ describe("Matches", () => {
     const upcoming = await screen.findByRole("heading", { name: /Upcoming/ });
     expect(upcoming.closest("section").querySelector(".badge")).toHaveTextContent("2");
     expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
-    // Chips come from the markets the backend selected, so the Arsenal row leads
-    // with its decisive goal line rather than a fixed 1/X/2 read.
-    expect(chipTexts()).toContain("O1.5 80%");
+    // Each row shows the chance of two or more goals, then three or more.
+    expect(chipTexts()).toContain("2+ goals 82%");
     // prediction meta line surfaces model confidence + data through
-    expect(screen.getByText(/conf 58%/)).toBeInTheDocument();
+    expect(screen.getByText(/Model confidence 58%/)).toBeInTheDocument();
     expect(screen.getAllByText(/as of 2026-01-29/).length).toBeGreaterThanOrEqual(1);
 
     const recent = screen.getByRole("heading", { name: /Recent/ });
@@ -115,21 +114,14 @@ describe("Matches", () => {
     expect(screen.getByText("all 2")).toBeInTheDocument();
   });
 
-  it("builds each fixture's chip row from the markets the backend selected", async () => {
+  it("builds each fixture's chip row from its goal-total probabilities", async () => {
     renderPage(<Matches />);
     await screen.findByRole("heading", { name: /Upcoming/ });
 
     const chips = chipTexts();
-    // Arsenal: four derived markets, including one half-time line marked assumed.
-    expect(chips).toEqual(["O1.5 80%", "Away +0.5 42%", "U2.5 41%", "1 62%", "BTTS yes 68%"]);
-    // The old fixed set is gone: no "BTTS 55%", and no 1/X/2 it was built from.
-    expect(chips).not.toContain("BTTS 55%");
-    expect(chips.some((c) => c.startsWith("X "))).toBe(false);
-    // The half-time chip is flagged as assumed rather than presented as measured.
-    const assumed = [...document.querySelectorAll(".pred-chip.chip-assumed")];
-    expect(assumed).toHaveLength(1);
-    expect(assumed[0].textContent).toBe("1 62%");
-    expect(assumed[0].getAttribute("title")).toContain("assumed");
+    // Arsenal and Madrid each get a 2+ and 3+ goals chip, nothing else.
+    expect(chips).toEqual(["2+ goals 82%", "3+ goals 61%", "2+ goals 80%", "3+ goals 57%"]);
+    expect(document.querySelector(".pred-chip.chip-assumed")).toBeNull();
   });
 
   it("links every upcoming fixture to its detail page using the slug tail", async () => {
@@ -153,7 +145,7 @@ describe("Matches", () => {
     await waitFor(() =>
       expect(api.fixtures).toHaveBeenLastCalledWith({
         league: "spain1",
-        sort: "confidence",
+        sort: "date",
         limit: 50,
         offset: 0,
         from_date: undefined,
@@ -224,7 +216,7 @@ describe("Matches", () => {
     fireEvent.click(day);
     await waitFor(() =>
       expect(api.fixtures).toHaveBeenLastCalledWith(
-        expect.objectContaining({ sort: "confidence" }),
+        expect.objectContaining({ sort: "date" }),
       ),
     );
   });
@@ -361,7 +353,6 @@ describe("Matches", () => {
           status: "scheduled",
           predictions: {
             home: 0.5, away: 0.25, confidence: 0.5, data_through: "2026-01-29",
-            selected: [],
           },
         };
       });
