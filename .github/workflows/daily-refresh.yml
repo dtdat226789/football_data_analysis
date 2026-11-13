@@ -70,11 +70,27 @@ jobs:
             echo "::error::Missing NEON_DATABASE_URL or FOOTBALL_CHARTS_API_KEY secret"
             exit 1
           fi
+          # Strip stray CR/LF and surrounding spaces pasted into the secret UI.
+          clean() { printf '%s' "$1" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'; }
           umask 077
           {
-            printf 'DATABASE_URL=%s\n' "$DATABASE_URL"
-            printf 'FOOTBALL_CHARTS_API_KEY=%s\n' "$FOOTBALL_CHARTS_API_KEY"
+            printf 'DATABASE_URL=%s\n' "$(clean "$DATABASE_URL")"
+            printf 'FOOTBALL_CHARTS_API_KEY=%s\n' "$(clean "$FOOTBALL_CHARTS_API_KEY")"
           } > .env
+
+      - name: Preflight upstream API key
+        env:
+          FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
+        run: |
+          # Fail in seconds instead of after a ~50 min sweep if the key is wrong.
+          code="$(curl -sS -o "$RUNNER_TEMP/leagues.json" -w '%{http_code}' \
+            -H "Authorization: Bearer ${FOOTBALL_CHARTS_API_KEY//[$'\r\n']/}" \
+            https://footballcharts-backend.onrender.com/api/v1/leagues/ || true)"
+          echo "Upstream /leagues/ responded HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::Upstream API key rejected (HTTP $code). Re-set the FOOTBALL_CHARTS_API_KEY secret to the raw key (no quotes, no whitespace)."
+            exit 1
+          fi
 
       - name: Backup Neon before the destructive rebuild
         env:
@@ -140,6 +156,20 @@ jobs:
              && printf '%s' "$line" | grep -q '| ok |'; then
             echo "::warning::Refresh exited non-zero but the database rebuild succeeded; deploying the fresh data anyway."
           fi
+
+          # Surface the first real errors so the run page shows the cause.
+          if [ -f "$log" ]; then
+            grep -m 5 -E 'ERROR|Traceback|HTTP 4[0-9][0-9]' "$log" || true
+          fi
+
+      - name: Upload refresh log
+        if: ${{ !cancelled() && steps.refresh.outcome == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-log
+          path: logs/refresh_latest.log
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Restore Neon after a failed rebuild
         if: ${{ !cancelled() && steps.verify.outputs.db_attempted == 'true' && steps.verify.outputs.db_ok != 'true' }}
