@@ -129,7 +129,7 @@ describe("Matches", () => {
     await screen.findByRole("heading", { name: /Upcoming/ });
 
     const upcoming = screen.getByRole("heading", { name: /Upcoming/ }).closest("section");
-    const links = within(upcoming).getAllByRole("link", { name: "detail" });
+    const links = await within(upcoming).findAllByRole("link", { name: "detail" });
     expect(links.map((l) => l.getAttribute("href"))).toEqual([
       "/fixture/premier/2026-02-01-arsenal-vs-chelsea",
       "/fixture/spain1/2026-02-02-barcelona-vs-madrid",
