@@ -1,7 +1,9 @@
 name: Daily data refresh
 
-# Collects live data, rebuilds the Neon database and analysis reports, then
-# ships a new backend image and redeploys it to Render.
+# Collects live data, rebuilds the database and analysis reports against a
+# throwaway local Postgres service (fast, no network round trips), publishes the
+# result to Neon in a single dump/restore, then ships a new backend image and
+# redeploys it to Render.
 #
 # Required repository secrets:
 #   NEON_DATABASE_URL         Neon connection string (the app's DATABASE_URL)
@@ -35,13 +37,30 @@ env:
   PYTHON_VERSION: "3.12"
   IMAGE_NAME: football_data_analysis
   PG_IMAGE: postgres:18
+  # Ephemeral build database. The pipeline never talks to Neon until the
+  # publish step, so a slow/failed rebuild cannot corrupt production.
+  LOCAL_DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/football
 
 jobs:
   refresh:
     name: Refresh data, rebuild image, redeploy
     runs-on: ubuntu-latest
-    # The full sweep took ~39 min on 2026-11-11; leave room for slow API days.
+    # The local rebuild took ~39 min in a full sweep; leave room for slow API days.
     timeout-minutes: 150
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: football
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d football"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -63,10 +82,10 @@ jobs:
 
       - name: Write .env for the pipeline
         env:
-          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+          NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
           FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
         run: |
-          if [ -z "$DATABASE_URL" ] || [ -z "$FOOTBALL_CHARTS_API_KEY" ]; then
+          if [ -z "$NEON_DATABASE_URL" ] || [ -z "$FOOTBALL_CHARTS_API_KEY" ]; then
             echo "::error::Missing NEON_DATABASE_URL or FOOTBALL_CHARTS_API_KEY secret"
             exit 1
           fi
@@ -74,7 +93,8 @@ jobs:
           clean() { printf '%s' "$1" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'; }
           umask 077
           {
-            printf 'DATABASE_URL=%s\n' "$(clean "$DATABASE_URL")"
+            # The ETL/analysis stages build the throwaway local database.
+            printf 'DATABASE_URL=%s\n' "$(clean "$LOCAL_DATABASE_URL")"
             printf 'FOOTBALL_CHARTS_API_KEY=%s\n' "$(clean "$FOOTBALL_CHARTS_API_KEY")"
           } > .env
 
@@ -92,12 +112,13 @@ jobs:
             exit 1
           fi
 
-      - name: Backup Neon before the destructive rebuild
+      - name: Backup Neon before publishing
         env:
           DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
         run: |
-          # The refresh drops and reloads every table, so keep a recoverable
-          # copy in case the database stage fails halfway through.
+          DATABASE_URL="$(printf '%s' "$DATABASE_URL" | tr -d '\r\n')"
+          # The publish step drops and reloads every table, so keep a
+          # recoverable copy in case it fails halfway through.
           DIRECT_DATABASE_URL="${DATABASE_URL/-pooler./.}"
           docker run --rm \
             --user "$(id -u):$(id -g)" \
@@ -107,15 +128,24 @@ jobs:
             sh -c 'pg_dump --format=custom --schema=public --no-owner --no-privileges --file=/backup/neon-before.dump "$PGCONN"'
           ls -lh "$RUNNER_TEMP/neon-before.dump"
 
+      - name: Upload Neon pre-publish backup
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: neon-before-dump
+          path: ${{ runner.temp }}/neon-before.dump
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Refresh data
         id: refresh
         continue-on-error: true
         # Shorter than the job timeout so a hung run fails this step and still
-        # lets the inspect/restore steps below execute.
-        timeout-minutes: 130
+        # lets the inspect/publish/restore steps below execute.
+        timeout-minutes: 120
         env:
-          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
-          FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
+          DATABASE_URL: ${{ env.LOCAL_DATABASE_URL }}
           PYTHON: python3
         run: |
           args=()
@@ -134,27 +164,17 @@ jobs:
             line="$(grep -F '| build database + analysis (all leagues) |' "$log" | tail -1 || true)"
           fi
 
-          # The stage prints "stage: ..." when it starts and only writes the
-          # summary row when it finishes. Keying the gate on the start marker
-          # means a timeout/crash mid-rebuild still triggers the restore.
-          if [ -f "$log" ] \
-             && grep -qF 'stage: build database + analysis (all leagues)' "$log"; then
-            echo "db_attempted=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "db_attempted=false" >> "$GITHUB_OUTPUT"
-          fi
-
           if printf '%s' "$line" | grep -q '| ok |'; then
             echo "db_ok=true" >> "$GITHUB_OUTPUT"
             echo "Database + analysis stage succeeded."
           else
             echo "db_ok=false" >> "$GITHUB_OUTPUT"
-            echo "::error::Database + analysis stage did not succeed; refusing to deploy."
+            echo "::error::Database + analysis stage did not succeed; refusing to publish or deploy."
           fi
 
           if [ "${{ steps.refresh.outcome }}" = "failure" ] \
              && printf '%s' "$line" | grep -q '| ok |'; then
-            echo "::warning::Refresh exited non-zero but the database rebuild succeeded; deploying the fresh data anyway."
+            echo "::warning::Refresh exited non-zero but the database rebuild succeeded; publishing the fresh data anyway."
           fi
 
           # Surface the first real errors so the run page shows the cause.
@@ -163,7 +183,8 @@ jobs:
           fi
 
       - name: Upload refresh log
-        if: ${{ !cancelled() && steps.refresh.outcome == 'failure' }}
+        if: ${{ !cancelled() }}
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: refresh-log
@@ -171,17 +192,53 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Restore Neon after a failed rebuild
-        if: ${{ !cancelled() && steps.verify.outputs.db_attempted == 'true' && steps.verify.outputs.db_ok != 'true' }}
+      - name: Publish rebuilt database to Neon
+        id: publish
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        continue-on-error: true
+        env:
+          NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+        run: |
+          NEON_DATABASE_URL="$(printf '%s' "$NEON_DATABASE_URL" | tr -d '\r\n')"
+          # Dump the fast local build once, then replace Neon's public schema
+          # with it. --network host reaches the local Postgres service.
+          docker run --rm --network host \
+            --user "$(id -u):$(id -g)" \
+            -e PGCONN="$LOCAL_DATABASE_URL" \
+            -v "$RUNNER_TEMP":/backup \
+            "$PG_IMAGE" \
+            sh -c 'pg_dump --format=custom --schema=public --no-owner --no-privileges --file=/backup/local-after.dump "$PGCONN"'
+          ls -lh "$RUNNER_TEMP/local-after.dump"
+
+          # 00_reset.sql clears the old tables; the schema entry is filtered out
+          # of the TOC so it cannot collide with the existing public schema.
+          DIRECT_DATABASE_URL="${NEON_DATABASE_URL/-pooler./.}"
+          docker run --rm --network host \
+            -e PGCONN="$DIRECT_DATABASE_URL" \
+            -v "$RUNNER_TEMP":/backup \
+            -v "$GITHUB_WORKSPACE/sql":/sql:ro \
+            "$PG_IMAGE" \
+            sh -c '
+              psql "$PGCONN" -v ON_ERROR_STOP=1 -f /sql/00_reset.sql &&
+              pg_restore -l /backup/local-after.dump \
+                | grep -v -E "^[0-9]+; [0-9]+ [0-9]+ SCHEMA - public " \
+                | grep -v -E " COMMENT - SCHEMA public " \
+                > /tmp/restore.list &&
+              pg_restore --dbname="$PGCONN" --no-owner --no-privileges --exit-on-error \
+                --use-list=/tmp/restore.list /backup/local-after.dump
+            '
+
+      - name: Restore Neon after a failed publish
+        if: ${{ !cancelled() && steps.publish.outcome == 'failure' }}
         env:
           DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
         run: |
-          # 00_reset.sql clears whatever the partial rebuild left behind; the
+          DATABASE_URL="$(printf '%s' "$DATABASE_URL" | tr -d '\r\n')"
+          # 00_reset.sql clears whatever the partial publish left behind; the
           # schema entry is filtered out of the TOC so it cannot collide with
           # the existing public schema.
           DIRECT_DATABASE_URL="${DATABASE_URL/-pooler./.}"
-          docker run --rm \
-            --user "$(id -u):$(id -g)" \
+          docker run --rm --network host \
             -e PGCONN="$DIRECT_DATABASE_URL" \
             -v "$RUNNER_TEMP":/backup \
             -v "$GITHUB_WORKSPACE/sql":/sql:ro \
@@ -192,34 +249,34 @@ jobs:
                 | grep -v -E "^[0-9]+; [0-9]+ [0-9]+ SCHEMA - public " \
                 | grep -v -E " COMMENT - SCHEMA public " \
                 > /tmp/restore.list &&
-              pg_restore --dbname="$PGCONN" --no-owner --no-privileges \
+              pg_restore --dbname="$PGCONN" --no-owner --no-privileges --exit-on-error \
                 --use-list=/tmp/restore.list /backup/neon-before.dump
             '
 
-      - name: Fail when the database was not rebuilt
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok != 'true' }}
+      - name: Fail when the rebuild or Neon publish failed
+        if: ${{ !cancelled() && (steps.verify.outputs.db_ok != 'true' || steps.publish.outcome == 'failure') }}
         run: |
-          echo "::error::Aborting: the database was not rebuilt successfully."
+          echo "::error::Aborting: the database was not rebuilt and published to Neon successfully."
           exit 1
 
       - name: Compute image tag
         id: tag
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
         run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
       - name: Ensure build-context directories exist
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
         run: mkdir -p data/raw/fixtures data/analysis
 
       - name: Log in to Docker Hub
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push backend image
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -230,7 +287,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
 
       - name: Trigger Render deploy
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
         env:
           RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: |

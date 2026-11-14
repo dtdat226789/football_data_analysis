@@ -1,6 +1,6 @@
 # Football Charts Raw Data — POC Validation Report
 
-- Generated: 2026-11-11T02:57:08+00:00
+- Generated: 2026-11-14T03:50:18+00:00
 - Scope: league `wsweden`; seasons 2020, 2021, 2022, 2023, 2024, 2025, 2026; table views classic, luck, goals
 - Overall: **0 errors**, **16 warnings**
 
