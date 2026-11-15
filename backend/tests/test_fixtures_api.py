@@ -196,6 +196,61 @@ def _match(slug, match_date, home="A", away="B"):
     }
 
 
+def test_raw_probabilities_are_used_when_calibration_is_absent(tmp_path, monkeypatch):
+    # Most stored fixture dumps publish only dc_v2.raw. Dropping those numbers
+    # left the Matches list with no prediction chips and a 0% confidence.
+    match = _match("raw-only", SOON)
+    match["model_predictions"] = {
+        "dc_v2": {
+            "raw": {
+                "home": 0.42,
+                "away": 0.31,
+                "over_1.5": 0.73,
+                "over_2.5": 0.47,
+                "over_3.5": 0.24,
+                "expected_home_goals": 1.4,
+                "expected_away_goals": 1.1,
+            }
+        }
+    }
+    client = _client(tmp_path, monkeypatch, "primera1", [match])
+    with client:
+        preds = client.get("/api/v1/fixtures").json()["matches"][0]["predictions"]
+
+    assert preds["home"] == 0.42
+    assert preds["away"] == 0.31
+    assert preds["over_1_5"] == 0.73
+    assert preds["over_2_5"] == 0.47
+    assert preds["over_3_5"] == 0.24
+    assert preds["confidence"] == 0.42
+
+
+def test_confidence_is_null_when_no_probabilities_exist(tmp_path, monkeypatch):
+    match = _match("no-probabilities", SOON)
+    match["model_predictions"] = {}
+    client = _client(tmp_path, monkeypatch, "primera1", [match])
+    with client:
+        preds = client.get("/api/v1/fixtures").json()["matches"][0]["predictions"]
+
+    assert preds["home"] is None
+    assert preds["away"] is None
+    assert preds["confidence"] is None
+
+
+def test_confidence_filter_sees_raw_fallback(tmp_path, monkeypatch):
+    match = _match("raw-only-filter", SOON)
+    match["model_predictions"] = {
+        "dc_v2": {"raw": {"home": 0.42, "away": 0.31}},
+    }
+    client = _client(tmp_path, monkeypatch, "primera1", [match])
+    with client:
+        kept = client.get("/api/v1/fixtures", params={"min_confidence": 0.4}).json()
+        dropped = client.get("/api/v1/fixtures", params={"min_confidence": 0.5}).json()
+
+    assert kept["count"] == 1
+    assert dropped["count"] == 0
+
+
 def test_played_fixtures_are_not_listed_as_upcoming(tmp_path, monkeypatch):
     past = (TODAY - timedelta(days=1)).isoformat()
     client = _client(tmp_path, monkeypatch, "primera1", [

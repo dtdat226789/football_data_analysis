@@ -101,30 +101,39 @@ def _in_window(row: dict, start: date | None, end: date | None) -> bool:
     return True
 
 
+def _first_number(*sources: dict, key: str) -> float | None:
+    """First numeric value for `key` across sources, in priority order."""
+    for source in sources:
+        value = source.get(key)
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            return value
+    return None
+
+
 def _prediction_summary(match: dict) -> dict:
     """Compact dc_v2 prediction summary for a fixture.
 
     Carries the plain model statistics a reader can interpret directly: the
     home/away split, goal-total probabilities, expected goals and the model's
-    confidence.
+    confidence. Calibrated probabilities win when present, but most fixture
+    dumps publish only the raw block, so falling back to it keeps the list from
+    rendering an empty prediction where the model did produce numbers.
     """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     calibrated = preds.get("calibrated") or {}
     raw = preds.get("raw") or {}
-    home = calibrated.get("home")
-    away = calibrated.get("away")
+    home = _first_number(calibrated, raw, key="home")
+    away = _first_number(calibrated, raw, key="away")
+    sides = [p for p in (home, away) if isinstance(p, (int, float))]
     return {
         "home": home,
         "away": away,
-        "over_1_5": calibrated.get("over_1.5"),
-        "over_2_5": calibrated.get("over_2.5"),
-        "over_3_5": calibrated.get("over_3.5"),
+        "over_1_5": _first_number(calibrated, raw, key="over_1.5"),
+        "over_2_5": _first_number(calibrated, raw, key="over_2.5"),
+        "over_3_5": _first_number(calibrated, raw, key="over_3.5"),
         "expected_home_goals": raw.get("expected_home_goals"),
         "expected_away_goals": raw.get("expected_away_goals"),
-        "confidence": round(max(
-            [p for p in (home, away) if isinstance(p, (int, float))],
-            default=0.0,
-        ), 4),
+        "confidence": round(max(sides), 4) if sides else None,
         "computed_at": preds.get("computed_at"),
         "data_through": preds.get("data_through"),
     }
