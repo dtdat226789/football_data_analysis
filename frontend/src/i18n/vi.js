@@ -226,7 +226,6 @@ export const vi = {
   "page.match.firstGoal": "Bàn thắng đầu",
   "page.match.apiId": "ID API",
   "page.match.teams": "Đội bóng",
-  "page.match.raw": "Dữ liệu thô",
   "page.match.home": "(chủ nhà)",
   "page.match.away": "(khách)",
 
@@ -327,9 +326,6 @@ export const vi = {
   "result.home": "Chủ nhà thắng",
   "result.draw": "Hòa",
   "result.away": "Khách thắng",
-
-  "tree.yes": "có",
-  "tree.no": "không",
 
   "pagination.zero": "0 kết quả",
   "pagination.past": "không có dòng nào ở trang này",

@@ -227,7 +227,6 @@ export const en = {
   "page.match.firstGoal": "First goal",
   "page.match.apiId": "API id",
   "page.match.teams": "Teams",
-  "page.match.raw": "Raw record",
   "page.match.home": "(home)",
   "page.match.away": "(away)",
 
@@ -329,9 +328,6 @@ export const en = {
   "result.home": "Home win",
   "result.draw": "Draw",
   "result.away": "Away win",
-
-  "tree.yes": "yes",
-  "tree.no": "no",
 
   "pagination.zero": "0 results",
   "pagination.past": "no rows on this page",

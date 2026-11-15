@@ -3,7 +3,6 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
-import DataTree from "../components/DataTree.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
@@ -114,11 +113,6 @@ export default function MatchDetail() {
       </div>
 
       <MatchInsights insights={insights} homeName={home} awayName={away} />
-
-      <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>{t("page.match.raw")}</h3>
-        <DataTree value={data} />
-      </section>
     </div>
   );
 }

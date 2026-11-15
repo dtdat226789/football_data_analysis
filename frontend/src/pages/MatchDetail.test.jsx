@@ -49,7 +49,6 @@ describe("MatchDetail", () => {
     expect(screen.getAllByText("2024-2025").length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("20'")).toBeInTheDocument();
     expect(screen.getAllByText("1001").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByRole("heading", { name: "Raw record" })).toBeInTheDocument();
     expect(api.match).toHaveBeenCalledWith("1001");
   });
 
@@ -112,7 +111,6 @@ describe("MatchDetail insights", () => {
     renderMatch();
 
     expect(await screen.findByRole("heading", { name: /Arsenal/ })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Raw record" })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: /Pre-match context/ })).not.toBeInTheDocument();
   });
 
