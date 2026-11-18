@@ -111,6 +111,7 @@ transaction back before closing.
 | `GET /api/v1/teams`, `/api/v1/teams/{slug}` (+ `/matches`, `/form`, `/standings`, `/stats`) | Team listings, detail and form/stats |
 | `GET /api/v1/fixtures`, `/api/v1/fixtures/{league}`, `/api/v1/fixtures/{league}/{match_id}` | Upcoming fixtures with model predictions |
 | `GET /api/v1/dashboard` | Aggregate landing-page payload |
+| `GET /api/v1/teams/{slug}/kpi`, `GET /api/v1/club-analysis` | Sample-style team KPI and club dashboards (goals-based proxies; no xG/shot data is collected) |
 | `GET /api/v1/analysis/...`, legacy `/leagues/{league}/analysis...` | Analysis report bundle, per-module JSON and PNG charts |
 
 The legacy analysis paths are kept as backward-compatible aliases for the

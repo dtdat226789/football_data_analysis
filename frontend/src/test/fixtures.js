@@ -532,3 +532,61 @@ export const fixtureDetailNoHistory = {
   kickoff: { time: "16:00", match_datetime: null, label: null, league_phase_status: null, portal_link: null },
   predictability: null,
 };
+
+const kpiTile = (key, value, rank = 1) => ({ key, value, rank, rank_total: 20, lower_is_better: false });
+
+export const teamKpi = {
+  team: "arsenal",
+  team_name: "Arsenal",
+  logo_url: null,
+  league: "premier",
+  league_name: "Premier League",
+  season: "2024-2025",
+  n: 5,
+  attribution: "Data by football-charts.com",
+  last_matches: [
+    { date: "2025-01-18", opponent: "Chelsea", venue: "home", score: "2–1", result: "W", points: 3, goals_for: 2, goals_against: 1, clean_sheet: false },
+    { date: "2025-01-11", opponent: "Liverpool", venue: "away", score: "1–1", result: "D", points: 1, goals_for: 1, goals_against: 1, clean_sheet: false },
+  ],
+  groups: [
+    { key: "creativity", tiles: [kpiTile("goalsPerGame", 2.1), kpiTile("last5GoalsPerGame", 1.5, null)] },
+    { key: "territory", tiles: [kpiTile("homeGoalShare", 58.2), kpiTile("awayGoalsPerGame", 1.4)] },
+    { key: "control", tiles: [kpiTile("pointsPerGame", 2.1), kpiTile("cleanSheetPct", 42.1)] },
+    { key: "attack", tiles: [kpiTile("totalGoals", 70), kpiTile("homeGoalsPerGame", 2.3)] },
+    { key: "defence", tiles: [kpiTile("goalsAgainstPerGame", 0.8), kpiTile("awayGoalsAgainstPerGame", 1.0)] },
+  ],
+  table: [
+    { team: "Liverpool", label: "LIV", position: 1, points: 84, expected_points: 79.21, is_selected: false },
+    { team: "Arsenal", label: "ARS", position: 2, points: 74, expected_points: 76.4, is_selected: true },
+  ],
+};
+
+export const clubAnalysis = {
+  league: "premier",
+  league_name: "Premier League",
+  season: "2024-2025",
+  attribution: "Data by football-charts.com",
+  team: { slug: "arsenal", name: "Arsenal" },
+  seasons: [
+    { season: "2023-2024" },
+    { season: "2024-2025" },
+  ],
+  teams: [
+    { id: 1, name: "Arsenal", slug: "arsenal" },
+    { id: 2, name: "Liverpool", slug: "liverpool" },
+  ],
+  kpis: [
+    { key: "totalGoals", value: 70 },
+    { key: "goalsPerGame", value: 1.84 },
+    { key: "goalsAgainstPerGame", value: 0.76 },
+    { key: "expectedPoints", value: 76.4 },
+  ],
+  timeline: [
+    { season: "2023-2024", value: 2.32 },
+    { season: "2024-2025", value: 1.84 },
+  ],
+  ranking: [
+    { team: "Arsenal", label: "ARS", slug: "arsenal", played: 38, goals: 70, goals_per_game: 1.84, is_selected: true },
+    { team: "Liverpool", label: "LIV", slug: "liverpool", played: 38, goals: 86, goals_per_game: 2.26, is_selected: false },
+  ],
+};

@@ -7,6 +7,8 @@ import Teams from "./pages/Teams.jsx";
 import TeamDetail from "./pages/TeamDetail.jsx";
 import MatchDetail from "./pages/MatchDetail.jsx";
 import FixtureDetail from "./pages/FixtureDetail.jsx";
+import TeamKpi from "./pages/TeamKpi.jsx";
+import ClubAnalysis from "./pages/ClubAnalysis.jsx";
 import SettingsControls from "./i18n/SettingsControls.jsx";
 import { useI18n } from "./i18n/I18nProvider.jsx";
 
@@ -28,6 +30,7 @@ export default function App() {
           <NavLink to="/leagues">{t("app.nav.leagues")}</NavLink>
           <NavLink to="/teams">{t("app.nav.teams")}</NavLink>
           <NavLink to="/matches">{t("app.nav.matches")}</NavLink>
+          <NavLink to="/club-analysis">{t("app.nav.clubAnalysis")}</NavLink>
         </nav>
         <SettingsControls />
       </header>
@@ -39,11 +42,13 @@ export default function App() {
           <Route path="/leagues/:slug" element={<LeagueDetail />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/teams/:slug" element={<TeamDetail />} />
+          <Route path="/teams/:slug/kpi" element={<TeamKpi />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/match/:id" element={<MatchDetail />} />
           {/* Splat route: the trailing fixture id is the `date-home-vs-away`
               segment of the upstream slug. */}
           <Route path="/fixture/:league/*" element={<FixtureDetail />} />
+          <Route path="/club-analysis" element={<ClubAnalysis />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

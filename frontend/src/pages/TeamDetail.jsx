@@ -197,6 +197,9 @@ export default function TeamDetail() {
         <p>
           <span className="muted">{t("page.teams.canonical")}:</span> {team?.canonical_name}
         </p>
+        <Link className="link" to={`/teams/${slug}/kpi?league=${league}&season=${season || ""}`}>
+          {t("page.team.kpiLink")} →
+        </Link>
       </div>
 
       <div className="filters">

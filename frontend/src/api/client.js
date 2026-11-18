@@ -38,6 +38,7 @@ export const api = {
   health: () => request("/health"),
   listLeagues: () => request("/leagues"),
   league: (league) => request(`/leagues/${league}`),
+  leagueSeasons: (league) => request(`/leagues/${league}/seasons`),
   standings: (league, { season, view } = /** @type {{ season?: string, view?: string }} */ ({})) =>
     request(`/leagues/${league}/standings`, { season, view }),
   matches: (league, params = {}) => request(`/leagues/${league}/matches`, params),
@@ -57,6 +58,8 @@ export const api = {
   teamForm: (slug, params = {}) => request(`/teams/${slug}/form`, params),
   teamStandings: (slug, params = {}) => request(`/teams/${slug}/standings`, params),
   teamStats: (slug, params = {}) => request(`/teams/${slug}/stats`, params),
+  teamKpi: (slug, params = {}) => request(`/teams/${slug}/kpi`, params),
+  clubAnalysis: (params = {}) => request("/club-analysis", params),
   analysis: (league) => request(`/analysis/${league}`),
   chartUrl: (league, chart) => `/api/v1/analysis/${league}/charts/${chart}`,
 };

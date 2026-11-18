@@ -99,6 +99,30 @@ describe("teamStats", () => {
     expect(url.searchParams.get("view")).toBe("classic");
   });
 });
+describe("dashboard client methods", () => {
+  it("requests the team KPI sub-resource with filters", async () => {
+    mockFetch(new Response(JSON.stringify({ team: "spurs" }), { status: 200 }));
+
+    await api.teamKpi("spurs", { league: "premier", season: "2024-2025", n: 10 });
+
+    const url = new URL(mockedFetch().mock.calls[0][0]);
+    expect(url.pathname).toBe("/api/v1/teams/spurs/kpi");
+    expect(url.searchParams.get("season")).toBe("2024-2025");
+    expect(url.searchParams.get("n")).toBe("10");
+  });
+
+  it("requests club analysis with filters and season list", async () => {
+    mockFetch(new Response(JSON.stringify({}), { status: 200 }));
+
+    await api.clubAnalysis({ league: "premier", season: "", team: "arsenal" });
+    expect(new URL(mockedFetch().mock.calls[0][0]).pathname).toBe("/api/v1/club-analysis");
+
+    mockFetch(new Response(JSON.stringify({}), { status: 200 }));
+    await api.leagueSeasons("premier");
+    expect(new URL(mockedFetch().mock.calls[0][0]).pathname).toBe("/api/v1/leagues/premier/seasons");
+  });
+});
+
 describe("api.matchInsights", () => {
   beforeEach(() => {
     globalThis.fetch = vi.fn();

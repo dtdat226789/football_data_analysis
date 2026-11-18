@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Empty, Skeleton, TableSkeleton } from "../components/State.jsx";
@@ -169,7 +169,10 @@ function AnalysisTab({ league, leagueName }) {
   }
   return (
     <div>
-      <div className="kpi-row">
+      <Link className="link" to={`/club-analysis?league=${league}`}>
+        {t("dash.clubFromLeague")} →
+      </Link>
+      <div className="kpi-row" style={{ marginTop: 12 }}>
         {kpis.map((k) => (
           <div key={k.label} className="kpi">
             <div className="label">{k.label}</div>

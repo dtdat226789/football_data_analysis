@@ -1,6 +1,6 @@
 {
   "report_name": "poc_validation_report",
-  "generated_at": "2026-11-16T04:44:40+00:00",
+  "generated_at": "2026-11-18T07:48:43+00:00",
   "scope": {
     "league": "wsweden",
     "seasons": [
@@ -20,7 +20,7 @@
   },
   "overall": {
     "errors": 0,
-    "warnings": 16,
+    "warnings": 15,
     "pass": 0,
     "categories": [
       "cross_endpoint",
@@ -167,7 +167,7 @@
           "n_matches": 182
         },
         "2026": {
-          "n_matches": 175
+          "n_matches": 182
         }
       },
       "field_sets": [
@@ -316,11 +316,11 @@
           "game_index_max": 182
         },
         "2026": {
-          "n_matches": 175,
+          "n_matches": 182,
           "id_min": 210593,
-          "id_max": 237185,
+          "id_max": 237445,
           "game_index_min": 1,
-          "game_index_max": 175
+          "game_index_max": 182
         }
       }
     },
@@ -448,7 +448,7 @@
         "2023": 182,
         "2024": 182,
         "2025": 182,
-        "2026": 175
+        "2026": 182
       },
       "roster_churn": {
         "2021": {
@@ -523,12 +523,12 @@
           "n": 6
         },
         {
-          "code": "RESULTS_COUNT_UNEXPECTED",
+          "code": "TEAMS_COUNT",
           "severity": "WARNING",
-          "n": 3
+          "n": 2
         },
         {
-          "code": "TEAMS_COUNT",
+          "code": "RESULTS_COUNT_UNEXPECTED",
           "severity": "WARNING",
           "n": 2
         },
@@ -627,20 +627,6 @@
       "details": {
         "expected": 182,
         "actual": 132
-      },
-      "examples": []
-    },
-    {
-      "category": "results",
-      "code": "RESULTS_COUNT_UNEXPECTED",
-      "severity": "WARNING",
-      "league": "wsweden",
-      "season": "2026",
-      "file": "data/raw/wsweden/2026/results.json",
-      "message": "Match count is 175, expected 182 for a complete 14-team round-robin season",
-      "details": {
-        "expected": 182,
-        "actual": 175
       },
       "examples": []
     },
@@ -793,7 +779,7 @@
           "2023": 182,
           "2024": 182,
           "2025": 182,
-          "2026": 175
+          "2026": 182
         }
       },
       "examples": []

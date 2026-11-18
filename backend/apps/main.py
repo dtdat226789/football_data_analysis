@@ -16,7 +16,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 
 from . import common
-from .routers import analysis, catalog, dashboard, fixtures, matches, standings, teams
+from .routers import analysis, catalog, dashboard, fixtures, kpi, matches, standings, teams
 
 API_VERSION = "1.0.0"
 
@@ -39,6 +39,7 @@ def create_app() -> FastAPI:
     app.include_router(analysis.router, prefix="/api/v1/analysis")
     app.include_router(fixtures.router, prefix="/api/v1")
     app.include_router(dashboard.router, prefix="/api/v1")
+    app.include_router(kpi.router, prefix="/api/v1")
 
     # Backward-compatible aliases (pre-refactor unprefixed paths).
     app.include_router(analysis.legacy, prefix="")

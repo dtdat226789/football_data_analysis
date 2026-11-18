@@ -17,6 +17,8 @@ import {
   teamForm,
   teamStanding,
   teamsResponse,
+  teamKpi,
+  clubAnalysis,
   upcomingFixtures,
 } from "./test/fixtures.js";
 
@@ -31,6 +33,7 @@ vi.mock("./api/client.js", async () => {
 
 const seed = () => {
   api.listLeagues.mockResolvedValue(leagues);
+  api.leagueSeasons.mockResolvedValue(leagueDetail);
   api.league.mockResolvedValue(leagueDetail);
   api.standings.mockResolvedValue(standingsClassic);
   api.matches.mockResolvedValue(matchList);
@@ -44,6 +47,8 @@ const seed = () => {
   api.teamForm.mockResolvedValue(teamForm);
   api.teamStandings.mockResolvedValue(teamStanding);
   api.teamMatches.mockResolvedValue({ total: 1, matches: [matchList.matches[0]] });
+  api.teamKpi.mockResolvedValue(teamKpi);
+  api.clubAnalysis.mockResolvedValue(clubAnalysis);
   api.teamStats.mockResolvedValue({
     seasons: [],
     totals: { played: 0, won: 0, drawn: 0, lost: 0, goals_for: 0, goals_against: 0, points: 0, ppg: 0, goal_difference: 0 },
@@ -65,6 +70,8 @@ describe("App routing", () => {
     ["/leagues/premier", /Premier League/],
     ["/teams", /Teams/],
     ["/teams/arsenal", /Arsenal/],
+    ["/teams/arsenal/kpi", /Arsenal/],
+    ["/club-analysis", /Club Analysis/],
     ["/matches", /Matches/],
     ["/match/1001", /Arsenal/],
   ])("renders the %s page", async (route, heading) => {
