@@ -1,0 +1,795 @@
+.table-shell {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-shell:focus-visible,
+.dash-table-wrap:focus-visible {
+  outline-offset: -2px;
+}
+
+.table-shell > table {
+  width: 100%;
+}
+
+/* Wide tables keep their most useful columns on small screens instead of
+   pushing everything into a long horizontal scroll. The full table is still
+   one scroll away on a tablet; a phone sees position, name and points first. */
+@media (max-width: 760px) {
+  .table-priority .col-tertiary {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-priority .col-secondary,
+  .table-priority .col-tertiary {
+    display: none;
+  }
+}
+
+.banner {
+  padding: 10px 24px;
+  font-size: 14px;
+}
+
+.banner.error {
+  background: var(--red-wash);
+  color: var(--red);
+  border-bottom: 1px solid var(--red-line);
+}
+
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table.data th,
+table.data td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+table.data th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+table.data tr:hover td {
+  background: var(--surface-row);
+}
+
+table.data td.num,
+table.data th.num,
+th.num {
+  text-align: right;
+}
+
+.pill {
+  display: inline-block;
+  min-width: 26px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 2px 6px;
+  font-size: 13px;
+}
+
+.pill.W {
+  background: var(--green-wash);
+  color: var(--green);
+}
+
+.pill.D {
+  background: var(--neutral-wash);
+  color: var(--muted);
+}
+
+.pill.L {
+  background: var(--red-wash);
+  color: var(--red);
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+/* Tabs, pagination and day/confidence presets are the same control wearing
+   different paddings. One base rule keeps their focus and hover behaviour in
+   sync; the variants below only adjust the shape. */
+.tabs button,
+.pagination button,
+.preset {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tabs button:hover,
+.preset:hover {
+  border-color: var(--accent-line);
+}
+
+.tabs button.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.tab-spacer {
+  flex: 1;
+}
+
+.loader {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.error-box {
+  padding: 16px;
+  color: var(--red);
+  background: var(--red-wash);
+  border: 1px solid var(--red-line);
+  border-radius: 12px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+/* Every native text/select control in the light theme shares one shell. */
+.filters input,
+.filters select,
+.filter-field select,
+.filter-field input,
+.filter-inline select,
+.settings-control select {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
+.filters input[type="search"] {
+  min-width: 260px;
+}
+
+/* A filter bar is split into labelled groups so a reader can tell which
+   controls change every list and which only change one. */
+.filter-group + .filter-group {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-faint);
+}
+
+.filter-group-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.filter-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-field,
+.date-range {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.filter-field select {
+  min-width: 190px;
+}
+
+.date-range-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.date-range-inputs input {
+  min-width: 150px;
+}
+
+.filter-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.filter-alert {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* Match-insight panels used to carry a style attribute on almost every line.
+   These are the same declarations, named once so both the finished-match and
+   fixture views stay in step. */
+.insight-summary {
+  margin: 0 0 12px;
+}
+
+.insight-group {
+  margin-bottom: 14px;
+}
+
+.insight-group-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.insight-cell-label {
+  font-size: 12px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.prob-list {
+  margin-bottom: 12px;
+}
+
+.prob-row {
+  margin-bottom: 8px;
+}
+
+.prob-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.prob-track {
+  height: 8px;
+}
+
+.prob-fill {
+  background: var(--accent);
+}
+
+.insight-warning {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.insights-grid {
+  margin-top: 16px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.chart-card {
+  cursor: zoom-in;
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.chart-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.chart-card h3 {
+  font-size: 14px;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.chart-card .caption {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+
+.badge.amber {
+  background: var(--amber-wash);
+  color: var(--amber);
+}
+
+.badge.green {
+  background: var(--green-wash);
+  color: var(--green);
+}
+
+.formline {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.event-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--card-raised);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.event .teams {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.event .score {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.event-time,
+.event-detail-link {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.card-meta {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  animation: fade-in 0.15s ease;
+}
+
+.lightbox-frame {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lightbox-frame img {
+  max-width: 96vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  background: var(--chart-canvas);
+}
+
+.lightbox-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lightbox-close {
+  background: var(--surface-raised);
+  border: none;
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: var(--surface-raised-hover);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.chart-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(84px, 30%) 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 40px;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  min-width: 2px;
+}
+
+.bar-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 28px;
+  text-align: right;
+}
+
+.donut-wrap .chart-title {
+  text-align: center;
+}
+
+.donut-inline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+}
+
+.donut-center {
+  fill: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.donut-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.donut-legend .swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+.stat-card .value {
+  font-size: 22px;
+}
+
+.team-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.team-stats .panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.card.mini,
+.card.league-card {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card.mini:hover,
+.card.league-card:hover {
+  border-color: var(--accent);
+}
+
+.mini-name,
+.league-card-name {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+section > h3 {
+  margin: 24px 0 4px;
+}
+
+.pred-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.pred-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--card);
+  white-space: nowrap;
+}
+
+.pred-chip b {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.pred-chip.chip-strong {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.pred-chip.chip-strong b {
+  color: var(--green);
+}
+
+.pred-chip.chip-mid {
+  border-color: var(--amber);
+}
+
+.pred-chip.chip-mid b {
+  color: var(--amber);
+}
+
+.pred-chip.chip-weak {
+  border-color: var(--border);
+}
+
+.pred-meta {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.confidence-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.preset.on {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.fixture-day {
+  margin-top: 14px;
+}
+
+.fixture-day:first-child {
+  margin-top: 0;
+}
+
+.fixture-day-head {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: 0 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.fixture-day-head .muted {
+  font-weight: 400;
+}
+
+.fixture-day-more {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.link-button {
+  font: inherit;
+  font-weight: 500;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.skeleton-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--border);
+}
+
+.skeleton-block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--shimmer), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.date-presets {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.filters > .date-presets {
+  margin-left: 8px;
+}
+
+.preset {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .card {
+    overflow-x: auto;
+  }
+
+  .filters input[type="search"] {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .filter-row,
+  .date-range-inputs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-field,
+  .filter-field select,
+  .filter-field input,
+  .date-range,
+  .date-range-inputs input {
+    width: 100%;
+  }
+
+  .filter-field select,
+  .filter-inline select {
+    min-width: 0;
+  }
+
+  .filter-inline {
+    justify-content: space-between;
+  }
+
+  .date-presets {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+}

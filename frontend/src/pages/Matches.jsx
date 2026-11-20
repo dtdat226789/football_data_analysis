@@ -3,6 +3,7 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import MatchTable from "../components/MatchTable.jsx";
 import UpcomingFixtures, { UPCOMING_OFFSET_PARAM } from "../components/UpcomingFixtures.jsx";
+import { Badge, Card, CardHeader, PageHeader } from "../components/ui/index.js";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 import { pageLabel } from "../lib/pagination.js";
 import { intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
@@ -56,9 +57,9 @@ export default function Matches() {
   const changeDate = (field) => (e) => rewind({ [field]: e.target.value });
   const resetDates = () => rewind({ from: "", to: "" });
   const preset = (days) => rewind({ from: isoDaysAgo(days, now), to: "" });
-  // The page size is the one control in the filter bar that governs both columns,
-  // so changing it rewinds both of them: an offset is counted in units of a page
-  // size, and page 3 of 50 is not page 3 of 100.
+  // The page size governs both columns, so changing it rewinds both of them:
+  // an offset is counted in units of a page size, and page 3 of 50 is not page 3
+  // of 100.
   const changeSize = (e) =>
     patch({
       size: e.target.value,
@@ -95,114 +96,134 @@ export default function Matches() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>{t("page.matches.title")}</h2>
-        <p>{t("page.matches.summary", { league: leagueLabel(league, leagueNames) || t("page.matches.allLeagues") })}</p>
-      </div>
+      <PageHeader
+        title={t("page.matches.title")}
+        subtitle={t("page.matches.summary", {
+          league: leagueLabel(league, leagueNames) || t("page.matches.allLeagues"),
+        })}
+      />
 
-      <div className="filters">
-        <select aria-label={t("page.matches.league")} value={league} onChange={(e) => setLeague(e.target.value)}>
-          <option value="">{t("page.matches.allLeagues")}</option>
-          {(leaguesApi.data || []).map((l) => (
-            <option key={l.slug} value={l.slug}>
-              {l.name}
-            </option>
-          ))}
-        </select>
-        {/* The league list is the one filter that can fail silently: without it
-            the select collapses to "All leagues" and the heading above falls back
-            to the raw slug. Both states are said out loud instead. */}
-        {leaguesApi.loading && (
-          <span className="muted" style={{ fontSize: 12 }}>
-            {t("page.matches.loadingLeagues")}
-          </span>
-        )}
-        {leaguesApi.error && (
-          <span className="muted" style={{ fontSize: 12 }}>
-            {t("page.matches.leaguesUnavailable")} —{" "}
-            <button className="preset" onClick={leaguesApi.reload} title={leaguesApi.error}>
-              {t("common.retry")}
-            </button>
-          </span>
-        )}
-        <label className="muted" style={{ fontSize: 13 }}>
-          {t("page.matches.from")}
-        </label>
-        {/* The two inputs bound each other, so the picker cannot produce a window
-            the API would reject. */}
-        <input
-          type="date"
-          aria-label={t("page.matches.fromDate")}
-          value={fromDate}
-          max={toDate || undefined}
-          onChange={changeDate("from")}
-        />
-        <label className="muted" style={{ fontSize: 13 }}>
-          {t("page.matches.to")}
-        </label>
-        <input
-          type="date"
-          aria-label={t("page.matches.toDate")}
-          value={toDate}
-          min={fromDate || undefined}
-          onChange={changeDate("to")}
-        />
-        {(fromDate || toDate) && (
-          <button className="preset" onClick={resetDates}>
-            {t("page.matches.resetDates")}
-          </button>
-        )}
+      <Card className="match-filters">
+        <CardHeader title={t("page.matches.filtersTitle")} />
+
+        {/* Everything in this group changes both lists, which is why changing
+            one of it also rewinds both offsets and clears the day chip. */}
+        <div className="filter-group" role="group" aria-label={t("page.matches.sharedFilters")}>
+          <span className="filter-group-label">{t("page.matches.sharedFilters")}</span>
+          <div className="filter-row">
+            <label className="filter-field">
+              {t("page.matches.league")}
+              <select aria-label={t("page.matches.league")} value={league} onChange={(e) => setLeague(e.target.value)}>
+                <option value="">{t("page.matches.allLeagues")}</option>
+                {(leaguesApi.data || []).map((l) => (
+                  <option key={l.slug} value={l.slug}>
+                    {l.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {/* The league list is the one filter that can fail silently: without it
+                the select collapses to "All leagues" and the heading above falls back
+                to the raw slug. Both states are said out loud instead. */}
+            {leaguesApi.loading && <span className="card-meta">{t("page.matches.loadingLeagues")}</span>}
+            {leaguesApi.error && (
+              <span className="card-meta">
+                {t("page.matches.leaguesUnavailable")} —{" "}
+                <button className="preset" onClick={leaguesApi.reload} title={leaguesApi.error}>
+                  {t("common.retry")}
+                </button>
+              </span>
+            )}
+            <div className="date-range">
+              <span className="filter-group-label">{t("page.matches.dateWindow")}</span>
+              <div className="date-range-inputs">
+                {/* The two inputs bound each other, so the picker cannot produce a
+                    window the API would reject. */}
+                <input
+                  type="date"
+                  aria-label={t("page.matches.fromDate")}
+                  value={fromDate}
+                  max={toDate || undefined}
+                  onChange={changeDate("from")}
+                />
+                <input
+                  type="date"
+                  aria-label={t("page.matches.toDate")}
+                  value={toDate}
+                  min={fromDate || undefined}
+                  onChange={changeDate("to")}
+                />
+                {(fromDate || toDate) && (
+                  <button className="preset" onClick={resetDates}>
+                    {t("page.matches.resetDates")}
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* These controls frame the shared window, but only alter how the lists
+            are presented — the confidence/day filters live inside the upcoming
+            card, where they belong to that list alone. */}
+        <div className="filter-group" role="group" aria-label={t("page.matches.listOptions")}>
+          <span className="filter-group-label">{t("page.matches.listOptions")}</span>
+          <div className="filter-row">
+            <div className="date-presets" role="group" aria-label={t("page.matches.presets")}>
+              {PRESETS.map((p) => {
+                const presetFrom = isoDaysAgo(p.days, now);
+                return (
+                  <button
+                    key={p.days}
+                    className={"preset" + (fromDate === presetFrom ? " on" : "")}
+                    onClick={() => preset(p.days)}
+                    aria-pressed={fromDate === presetFrom}
+                    title={t("page.matches.presetTitle", { date: presetFrom })}
+                  >
+                    {p.label}
+                  </button>
+                );
+              })}
+              <button
+                className="preset"
+                onClick={resetDates}
+                aria-pressed={!dateWindow}
+                title={t("page.matches.clearDates")}
+              >
+                {t("page.matches.allDates")}
+              </button>
+            </div>
+            <label className="filter-inline">
+              {t("page.matches.show")}{" "}
+              <select aria-label={t("page.matches.pageSize")} value={size} onChange={changeSize}>
+                {SIZES.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {dateWindow && <span className="card-meta">{t("page.matches.windowApplies")}</span>}
+          </div>
+        </div>
+
         {invertedWindow && (
-          <span className="error-box" style={{ fontSize: 12 }} role="alert">
+          <span className="error-box filter-alert" role="alert">
             {t("page.matches.inverted")}
           </span>
         )}
-        <span className="tab-spacer" />
-        <label className="muted" style={{ fontSize: 13, display: "inline-flex", alignItems: "center", gap: 6 }}>
-          {t("page.matches.show")}{" "}
-          <select aria-label={t("page.matches.pageSize")} value={size} onChange={changeSize}>
-            {SIZES.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
-            ))}
-          </select>
-        </label>
-        <div className="date-presets" role="group" aria-label={t("page.matches.presets")}>
-          {PRESETS.map((p) => {
-            const presetFrom = isoDaysAgo(p.days, now);
-            return (
-              <button
-                key={p.days}
-                className={"preset" + (fromDate === presetFrom ? " on" : "")}
-                onClick={() => preset(p.days)}
-                aria-pressed={fromDate === presetFrom}
-                title={t("page.matches.presetTitle", { date: presetFrom })}
-              >
-                {p.label}
-              </button>
-            );
-          })}
-          <button className="preset" onClick={resetDates} aria-pressed={!dateWindow} title={t("page.matches.clearDates")}>
-            {t("page.matches.allDates")}
-          </button>
-        </div>
-        {dateWindow && (
-          <span className="muted" style={{ fontSize: 12 }}>
-            {t("page.matches.windowApplies")}
-          </span>
-        )}
-      </div>
+      </Card>
 
       <div className="two-col">
         {/* One "Show" control governs both columns, so the size reaches the
             upcoming list too — it used to page at a hardcoded 50 regardless. */}
         <UpcomingFixtures league={league} fromDate={windowFrom} toDate={windowTo} pageSize={size} />
 
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>
-            {t("page.matches.recent")} <span className="badge">{recentData?.total ?? 0}</span>
-          </h3>
+        <Card>
+          <CardHeader
+            title={t("page.matches.recent")}
+            actions={<Badge>{recentData?.total ?? 0}</Badge>}
+          />
           <MatchTable
             state={recent}
             showLeague
@@ -228,7 +249,7 @@ export default function Matches() {
               </button>
             </div>
           )}
-        </section>
+        </Card>
       </div>
     </div>
   );

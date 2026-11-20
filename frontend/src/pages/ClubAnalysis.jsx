@@ -3,6 +3,7 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { Empty, ErrorBox, Skeleton } from "../components/State.jsx";
 import { FilterSelects, KpiTile, LineTrend, RankTable } from "../components/DashboardWidgets.jsx";
+import { TableShell } from "../components/ui/index.js";
 import { useParamsPatch } from "../lib/searchParams.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
@@ -94,9 +95,9 @@ export default function ClubAnalysis() {
               {data.ranking.length === 0 ? (
                 <p className="dash-empty">{t("dash.noData")}</p>
               ) : (
-                <div className="dash-table-wrap">
+                <TableShell className="dash-table-wrap" label={t("dash.rankingTitle")}>
                   <RankTable rows={data.ranking} columns={RANKING_COLUMNS} />
-                </div>
+                </TableShell>
               )}
             </section>
           </div>

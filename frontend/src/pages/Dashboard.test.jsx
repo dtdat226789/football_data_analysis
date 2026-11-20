@@ -80,6 +80,48 @@ describe("Dashboard", () => {
     expect(screen.getAllByText("Barcelona").length).toBeGreaterThanOrEqual(1);
   });
 
+  it("shows a compact KPI strip ahead of the detail cards", async () => {
+    renderPage(<Dashboard />);
+
+    expect(await screen.findByText("leagues in catalog")).toBeInTheDocument();
+    const strip = document.querySelector(".dashboard-kpis");
+    expect(strip).toBeInTheDocument();
+    expect([...strip.querySelectorAll(".kpi")].map((kpi) => kpi.textContent)).toEqual([
+      "leagues in catalog4",
+      "with fixtures0",
+      "recent results2",
+      "upcoming fixtures2",
+    ]);
+  });
+
+  it("ranks the top leagues and clubs in paired cards", async () => {
+    renderPage(<Dashboard />);
+
+    expect(await screen.findByRole("heading", { name: /Top leagues/ })).toBeInTheDocument();
+    const highlights = document.querySelector(".dashboard-highlights");
+    expect(highlights.querySelectorAll(".rank-list")).toHaveLength(2);
+    expect(highlights.querySelectorAll(".rank-row")).toHaveLength(5);
+  });
+
+  it("caps each region's list and links to the full catalogue for the rest", async () => {
+    const many = Array.from({ length: 8 }, (_, i) => ({
+      slug: `league-${i}`,
+      name: `League ${i}`,
+      country: "England",
+      matches: 10,
+    }));
+    api.dashboard.mockResolvedValue({ ...dashboard, leagues_by_region: { europe: many } });
+    renderPage(<Dashboard />);
+
+    await screen.findByRole("heading", { name: /Europe/ });
+    expect(screen.getByText("League 4")).toBeInTheDocument();
+    expect(screen.queryByText("League 5")).not.toBeInTheDocument();
+
+    const more = screen.getByRole("link", { name: /See all leagues/ });
+    expect(more).toHaveAttribute("href", "/leagues");
+    expect(more).toHaveTextContent("+3 more");
+  });
+
   it("groups leagues by region", async () => {
     renderPage(<Dashboard />);
 

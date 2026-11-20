@@ -38,7 +38,7 @@ export default function SettingsControls() {
         >
           {TIME_ZONES.map((z) => (
             <option key={z.id} value={z.id}>
-              {z.label}
+              {t(z.labelKey)}
             </option>
           ))}
         </select>

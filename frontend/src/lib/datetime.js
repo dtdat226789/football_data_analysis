@@ -19,11 +19,11 @@ export const DEFAULT_TIME_ZONE = "Asia/Ho_Chi_Minh";
  * "show me my local kickoff" control, not a timezone database.
  */
 export const TIME_ZONES = [
-  { id: "Asia/Ho_Chi_Minh", label: "Hanoi (ICT, UTC+7)" },
-  { id: "Asia/Singapore", label: "Singapore (UTC+8)" },
-  { id: "Asia/Tokyo", label: "Tokyo (UTC+9)" },
-  { id: "Europe/London", label: "London (UTC+0/+1)" },
-  { id: "UTC", label: "UTC" },
+  { id: "Asia/Ho_Chi_Minh", labelKey: "settings.zone.hanoi" },
+  { id: "Asia/Singapore", labelKey: "settings.zone.singapore" },
+  { id: "Asia/Tokyo", labelKey: "settings.zone.tokyo" },
+  { id: "Europe/London", labelKey: "settings.zone.london" },
+  { id: "UTC", labelKey: "settings.zone.utc" },
 ];
 
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;

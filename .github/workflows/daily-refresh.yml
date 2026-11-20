@@ -63,10 +63,10 @@ jobs:
           --health-retries 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
@@ -131,7 +131,7 @@ jobs:
       - name: Upload Neon pre-publish backup
         if: ${{ !cancelled() }}
         continue-on-error: true
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: neon-before-dump
           path: ${{ runner.temp }}/neon-before.dump
@@ -185,7 +185,7 @@ jobs:
       - name: Upload refresh log
         if: ${{ !cancelled() }}
         continue-on-error: true
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: refresh-log
           path: logs/refresh_latest.log
@@ -270,14 +270,14 @@ jobs:
 
       - name: Log in to Docker Hub
         if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
-        uses: docker/login-action@v3
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push backend image
         if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
         with:
           context: .
           platforms: linux/amd64

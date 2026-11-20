@@ -12,7 +12,6 @@ import {
 } from "../test/fixtures.js";
 import { renderPage } from "../test/render.jsx";
 import { I18nProvider } from "../i18n/I18nProvider.jsx";
-import { ROUTER_FUTURE } from "../routerFuture.js";
 import LeagueDetail from "./LeagueDetail.jsx";
 
 vi.mock("../api/client.js", async () => {
@@ -105,7 +104,7 @@ describe("LeagueDetail", () => {
     });
     render(
       <I18nProvider language="vi">
-        <MemoryRouter initialEntries={["/leagues/premier"]} future={ROUTER_FUTURE}>
+        <MemoryRouter initialEntries={["/leagues/premier"]}>
           <Routes>
             <Route path="/leagues/:slug" element={<LeagueDetail />} />
           </Routes>

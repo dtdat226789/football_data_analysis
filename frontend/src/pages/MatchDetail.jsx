@@ -4,6 +4,7 @@ import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
+import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 export default function MatchDetail() {
@@ -17,8 +18,12 @@ export default function MatchDetail() {
   if (loading)
     return (
       <div>
-        <Skeleton height={46} width="55%" style={{ maxWidth: 640 }} />
-        <Skeleton width="35%" height={14} />
+        <div className="page-head">
+          <div className="page-heading">
+            <Skeleton className="detail-heading-skeleton" height={46} width="55%" />
+            <Skeleton width="35%" height={14} />
+          </div>
+        </div>
         <div className="two-col">
           <Skeleton height={140} />
           <Skeleton height={140} />
@@ -34,85 +39,97 @@ export default function MatchDetail() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>
-          <TeamLink name={home} /> {played ? `${data.home_score} – ${data.away_score}` : t("common.vs")} <TeamLink name={away} />
-        </h2>
-        <p>
-          {played
+      <BackLink to="/matches">{t("page.match.back")}</BackLink>
+      <PageHeader
+        title={
+          <>
+            <TeamLink name={home} />{" "}
+            {played ? `${data.home_score} – ${data.away_score}` : t("common.vs")} <TeamLink name={away} />
+          </>
+        }
+        subtitle={
+          played
             ? plainDay(data.match_date)
-            : `${kickoffDay(data.match_date, data.kickoff_time)} ${kickoffTime(data.match_date, data.kickoff_time)}`}
-          {played ? ` · ${t("page.match.fullTime")}` : ""}
-        </p>
-      </div>
+            : `${kickoffDay(data.match_date, data.kickoff_time)} ${kickoffTime(data.match_date, data.kickoff_time)}`
+        }
+        actions={
+          <Badge tone={played ? "green" : undefined}>
+            {played ? t("page.match.fullTime") : t("fixture.upcoming")}
+          </Badge>
+        }
+      />
 
-      <div className="two-col">
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>{t("page.match.facts")}</h3>
-          <table className="data">
-            <tbody>
-              <tr>
-                <th>{t("common.league")}</th>
-                <td>
-                  <Link className="link" to={`/leagues/${data.league}`}>
-                    {data.league_name || data.league}
-                  </Link>
-                </td>
-              </tr>
-              <tr>
-                <th>{t("page.match.season")}</th>
-                <td>{data.season}</td>
-              </tr>
-              <tr>
-                <th>{t("page.match.matchday")}</th>
-                <td>{data.game_index}</td>
-              </tr>
-              <tr>
-                <th>{t("page.match.halfTime")}</th>
-                <td>
-                  {typeof data.home_ht === "number" && typeof data.away_ht === "number"
-                    ? `${data.home_ht} – ${data.away_ht}`
-                    : "—"}
-                </td>
-              </tr>
-              <tr>
-                <th>{t("page.match.firstGoal")}</th>
-                <td>
-                  {data.first_goal_time != null
-                    ? `${data.first_goal_time}${data.first_goal_time_extra ? `' +${data.first_goal_time_extra}` : "'"}`
-                    : "—"}
-                </td>
-              </tr>
-              <tr>
-                <th>{t("page.match.apiId")}</th>
-                <td>{data.api_id}</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+      <div className="detail-stack">
+        <div className="two-col">
+          <Card>
+            <CardHeader title={t("page.match.facts")} />
+            <TableShell>
+              <table className="data">
+                <tbody>
+                  <tr>
+                    <th scope="row">{t("common.league")}</th>
+                    <td>
+                      <Link className="link" to={`/leagues/${data.league}`}>
+                        {data.league_name || data.league}
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">{t("page.match.season")}</th>
+                    <td>{data.season}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">{t("page.match.matchday")}</th>
+                    <td>{data.game_index}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">{t("page.match.halfTime")}</th>
+                    <td>
+                      {typeof data.home_ht === "number" && typeof data.away_ht === "number"
+                        ? `${data.home_ht} – ${data.away_ht}`
+                        : "—"}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">{t("page.match.firstGoal")}</th>
+                    <td>
+                      {data.first_goal_time != null
+                        ? `${data.first_goal_time}${data.first_goal_time_extra ? `' +${data.first_goal_time_extra}` : "'"}`
+                        : "—"}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">{t("page.match.apiId")}</th>
+                    <td>{data.api_id}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </TableShell>
+          </Card>
 
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>{t("page.match.teams")}</h3>
-          <div className="event-list" style={{ marginTop: 10 }}>
-            <div className="event">
-              <div className="teams">
-                <span>
-                  <TeamLink name={home} /> <span className="muted">{t("page.match.home")}</span>
-                </span>
+          <Card>
+            <CardHeader title={t("page.match.teams")} />
+            <div className="event-list">
+              <div className="event">
+                <div className="teams">
+                  <span>
+                    <TeamLink name={home} /> <span className="muted">{t("page.match.home")}</span>
+                  </span>
+                </div>
+              </div>
+              <div className="event">
+                <div className="teams">
+                  <span>
+                    <TeamLink name={away} /> <span className="muted">{t("page.match.away")}</span>
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="event">
-              <div className="teams">
-                <span>
-                  <TeamLink name={away} /> <span className="muted">{t("page.match.away")}</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+          </Card>
+        </div>
 
-      <MatchInsights insights={insights} homeName={home} awayName={away} />
+        <MatchInsights insights={insights} homeName={home} awayName={away} />
+      </div>
     </div>
   );
 }

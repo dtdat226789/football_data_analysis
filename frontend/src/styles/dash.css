@@ -1,0 +1,369 @@
+.dash-scope {
+  margin: -24px;
+  min-height: calc(100vh - 60px);
+  padding: 28px 24px 36px;
+  background: var(--dash-bg);
+  color: var(--dash-ink);
+}
+
+.dash-back {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--dash-muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.dash-back:hover {
+  color: var(--dash-ink);
+  text-decoration: underline;
+}
+
+.dash-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.dash-head h2 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  letter-spacing: 0.2px;
+}
+
+.dash-head p {
+  margin: 0;
+  color: var(--dash-muted);
+  font-size: 14px;
+}
+
+.dash-logo {
+  height: 28px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.dash-badge {
+  flex: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--dash-panel);
+  color: var(--dash-accent-soft);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.dash-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.dash-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--dash-muted);
+}
+
+.dash-field select {
+  min-width: 170px;
+  padding: 8px 10px;
+  border: 1px solid var(--dash-line);
+  border-radius: 8px;
+  background: var(--dash-panel-soft);
+  color: var(--dash-on-panel);
+  font: inherit;
+  font-size: 14px;
+}
+
+/* The dashboard themes swap the accent; the shared focus ring follows it. */
+.dash-scope :focus-visible {
+  outline-color: var(--dash-accent);
+  box-shadow: 0 0 0 4px var(--dash-accent-wash);
+}
+
+.dash-panels {
+  display: grid;
+  gap: 16px;
+}
+
+.dash-panels-split {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 16px;
+}
+
+.dash-panel {
+  padding: 18px;
+  border: 1px solid var(--line-faint);
+  border-radius: 12px;
+  background: var(--dash-panel);
+  color: var(--dash-on-panel);
+}
+
+.dash-panel h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+.dash-empty {
+  color: var(--dash-ink-muted);
+  font-size: 13px;
+}
+
+.dash-group {
+  margin-bottom: 16px;
+}
+
+.dash-tile-grid,
+.dash-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.dash-kpi-grid {
+  margin-bottom: 16px;
+}
+
+.dash-tile {
+  padding: 12px 14px;
+  border-left: 3px solid var(--dash-accent);
+  border-radius: 8px;
+  background: var(--dash-panel-soft);
+  color: var(--dash-on-panel);
+}
+
+.dash-tile-label {
+  color: var(--dash-ink-muted);
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.dash-tile-value {
+  margin-top: 4px;
+  font-size: 23px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-tile-unit {
+  color: var(--dash-ink-muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.dash-tile-rank {
+  margin-top: 4px;
+  color: var(--dash-accent-soft);
+  font-size: 11px;
+}
+
+.dash-match-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dash-match-list li {
+  display: grid;
+  grid-template-columns: 86px 1fr auto 28px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--dash-line-soft);
+  font-size: 13px;
+}
+
+.dash-match-list li:last-child {
+  border-bottom: 0;
+}
+
+.dash-match-date,
+.dash-match-opponent {
+  color: var(--dash-ink-muted);
+}
+
+.dash-match-score {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-result {
+  padding: 2px 0;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dash-result.result-W {
+  background: var(--green-wash);
+  color: var(--green);
+}
+
+.dash-result.result-D {
+  background: var(--neutral-wash);
+  color: var(--muted);
+}
+
+.dash-result.result-L {
+  background: var(--red-wash);
+  color: var(--dash-danger);
+}
+
+.dash-bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-bar-row {
+  display: grid;
+  grid-template-columns: minmax(72px, 30%) 1fr 28px;
+  align-items: center;
+  gap: 8px;
+}
+
+.dash-bar-label {
+  overflow: hidden;
+  color: var(--dash-ink-muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-raised);
+  overflow: hidden;
+}
+
+.dash-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--dash-accent);
+}
+
+.dash-bar-value {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scroll behaviour for this wrapper comes from the shared TableShell. */
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.dash-table th,
+.dash-table td {
+  padding: 7px 9px;
+  border-bottom: 1px solid var(--dash-line-soft);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dash-table th {
+  color: var(--dash-ink-muted);
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.dash-table td.num,
+.dash-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-table tr.is-selected td {
+  background: var(--dash-accent-soft);
+  color: var(--dash-on-accent);
+  font-weight: 700;
+}
+
+.dash-trend {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dash-trend-line {
+  fill: none;
+  stroke: var(--dash-accent);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.dash-trend-area {
+  fill: var(--dash-accent);
+  opacity: 0.14;
+}
+
+.dash-trend-dot {
+  fill: var(--dash-accent);
+  stroke: var(--dash-panel);
+  stroke-width: 2;
+}
+
+.dash-trend-label,
+.dash-trend-extent {
+  fill: var(--dash-ink-muted);
+  font-size: 11px;
+}
+
+.dash-note,
+.dash-attribution {
+  color: var(--dash-muted);
+  font-size: 11px;
+}
+
+.dash-note {
+  margin: 12px 0 0;
+}
+
+.dash-attribution {
+  margin: 16px 0 0;
+}
+
+@media (max-width: 760px) {
+  .dash-scope {
+    margin: -16px;
+    padding: 20px 16px 28px;
+  }
+
+  .dash-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dash-field {
+    flex: 1 1 140px;
+  }
+
+  .dash-field select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .dash-match-list li {
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .dash-match-date {
+    grid-column: 1 / -1;
+  }
+}

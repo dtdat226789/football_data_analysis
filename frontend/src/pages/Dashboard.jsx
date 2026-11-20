@@ -4,6 +4,7 @@ import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
+import { Badge, Card, CardHeader, PageHeader } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const REGION_KEYS = {
@@ -12,6 +13,9 @@ const REGION_KEYS = {
   america: "region.america",
   other: "region.other",
 };
+
+/** Regions stay compact: the catalogue itself is one click away. */
+const REGION_LIMIT = 5;
 
 export function regionBuckets(byRegion) {
   const buckets = byRegion ?? {};
@@ -23,42 +27,49 @@ export function regionBuckets(byRegion) {
   }));
 }
 
-function LeagueCard({ item, t, num }) {
+function KpiStrip({ meta, recent, upcoming, t, num }) {
+  const items = [
+    { label: t("page.dashboard.kpi.leagues"), value: num(meta?.n_leagues ?? 0) },
+    { label: t("page.dashboard.kpi.withFixtures"), value: num(meta?.with_fixtures ?? 0) },
+    { label: t("page.dashboard.kpi.recent"), value: num(recent.length) },
+    { label: t("page.dashboard.kpi.upcoming"), value: num(meta?.n_upcoming ?? upcoming.length) },
+  ];
   return (
-    <Link to={`/leagues/${item.slug}`} className="card league-card" style={{ textDecoration: "none" }}>
-      <div className="league-card-name">{item.name}</div>
-      <div className="muted" style={{ fontSize: 13 }}>
-        {item.country}
-      </div>
-      <div className="muted" style={{ fontSize: 12, marginTop: 6 }}>
-        {item.matches > 0 ? t("common.matches_other", { n: num(item.matches) }) : t("common.noData")}
-      </div>
-    </Link>
+    <div className="dashboard-kpis">
+      {items.map((item) => (
+        <div className="kpi" key={item.label}>
+          <div className="label">{item.label}</div>
+          <div className="value">{item.value}</div>
+        </div>
+      ))}
+    </div>
   );
 }
 
 function RegionSection({ region, leagues, t }) {
+  const label = t(REGION_KEYS[region] ?? "") || region;
+  const more = leagues.length - REGION_LIMIT;
   return (
-    <section>
-      <h3>
-        {t(REGION_KEYS[region] ?? "") || region}
-        <span className="badge">{leagues.length}</span>
-      </h3>
-      <div className="mini-grid">
-        {leagues.slice(0, 8).map((item) => (
-          <Link key={item.slug} to={`/leagues/${item.slug}`} className="card mini" style={{ textDecoration: "none" }}>
-            <div className="mini-name">{item.name}</div>
-            <div className="muted" style={{ fontSize: 12 }}>
-              {item.country} · {item.matches > 0 ? `${item.matches} m` : t("common.noData")}
-            </div>
-          </Link>
+    <section className="region-group" aria-label={label}>
+      <h4 className="region-head">
+        {label} <Badge>{leagues.length}</Badge>
+      </h4>
+      <ul className="region-list">
+        {leagues.slice(0, REGION_LIMIT).map((item) => (
+          <li className="region-row" key={item.slug}>
+            <Link className="region-link" to={`/leagues/${item.slug}`}>
+              {item.name}
+            </Link>
+            <span className="region-count">{item.country || t("common.noData")}</span>
+          </li>
         ))}
-        {leagues.length > 8 && (
-          <div className="muted" style={{ alignSelf: "center" }}>
-            {t("common.more", { n: leagues.length - 8 })}
-          </div>
-        )}
-      </div>
+        {leagues.length === 0 && <li className="muted region-count">{t("common.noData")}</li>}
+      </ul>
+      {more > 0 && (
+        <Link className="link region-more" to="/leagues">
+          {t("page.dashboard.seeAllLeagues")} · {t("common.more", { n: more })}
+        </Link>
+      )}
     </section>
   );
 }
@@ -70,12 +81,13 @@ export default function Dashboard() {
   if (loading)
     return (
       <div>
-        <div className="page-head">
-          <Skeleton height={34} width="30%" />
-          <Skeleton height={14} width="55%" />
+        <PageHeader title={t("page.dashboard.title")} />
+        <div className="dashboard-kpis">
+          {[0, 1, 2, 3].map((key) => (
+            <Skeleton key={key} height={64} />
+          ))}
         </div>
-        <Skeleton height={120} />
-        <div className="two-col" style={{ marginTop: 16 }}>
+        <div className="two-col">
           <ListSkeleton items={4} />
           <ListSkeleton items={4} />
         </div>
@@ -94,49 +106,94 @@ export default function Dashboard() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>{t("page.dashboard.title")}</h2>
-        <p>
-          {t("page.dashboard.summary", {
-            leagues: num(data.meta?.n_leagues),
-            recent: num(recent.length),
-            upcoming: num(upcoming.length),
-          })}
-        </p>
+      <PageHeader
+        title={t("page.dashboard.title")}
+        subtitle={t("page.dashboard.summary", {
+          leagues: num(data.meta?.n_leagues),
+          recent: num(recent.length),
+          upcoming: num(upcoming.length),
+        })}
+      />
+
+      <KpiStrip meta={data.meta} recent={recent} upcoming={upcoming} t={t} num={num} />
+
+      <div className="dashboard-highlights">
+        <Card>
+          <CardHeader
+            title={t("page.dashboard.topLeagues")}
+            actions={<Badge>{t("page.dashboard.byMatches")}</Badge>}
+          />
+          <ol className="rank-list">
+            {topLeagues.map((item, i) => (
+              <li key={item.slug}>
+                <Link className="rank-row" to={`/leagues/${item.slug}`}>
+                  <span className="rank">{num(i + 1)}</span>
+                  <span className="rank-main">
+                    <span className="rank-name">{item.name}</span>
+                    <span className="rank-meta">{item.country}</span>
+                  </span>
+                  <span className="rank-value">
+                    {item.matches > 0
+                      ? t("common.matches_other", { n: num(item.matches) })
+                      : t("common.noData")}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </Card>
+
+        <Card>
+          <CardHeader title={t("page.dashboard.topClubs")} />
+          <ol className="rank-list">
+            {topClubs.map((c, i) => (
+              <li key={`${c.league}-${c.team}-${i}`}>
+                <div className="rank-row">
+                  <span className="rank">{num(i + 1)}</span>
+                  <span className="rank-main">
+                    <span className="rank-name">
+                      <TeamLink name={c.team} />
+                    </span>
+                    <span className="rank-meta">
+                      {c.league_name || c.league} · {c.season}
+                    </span>
+                  </span>
+                  <span className="rank-value">
+                    {num(c.points)} {t("common.pts")}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ol>
+          {topClubs.length === 0 && <p className="muted">{t("page.dashboard.noLeaders")}</p>}
+        </Card>
       </div>
 
-      <section>
-        <h3>
-          {t("page.dashboard.topLeagues")} <span className="badge">{t("page.dashboard.byMatches")}</span>
-        </h3>
-        <div className="mini-grid">
-          {topLeagues.map((item) => (
-            <LeagueCard key={item.slug} item={item} t={t} num={num} />
-          ))}
-        </div>
-      </section>
-
       <div className="two-col">
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.upcoming")}</h3>
-          <Link className="link" to="/matches" style={{ fontSize: 13 }}>
-            {t("page.dashboard.viewAll")}
-          </Link>
+        <Card>
+          <CardHeader
+            title={t("page.dashboard.upcoming")}
+            actions={
+              <Link className="link" to="/matches">
+                {t("page.dashboard.viewAll")}
+              </Link>
+            }
+          />
           {upcoming.length === 0 ? (
             <p className="muted">{t("page.dashboard.noFixtures")}</p>
           ) : (
-            <div className="event-list" style={{ marginTop: 10 }}>
+            <div className="event-list">
               {upcoming.map((m, i) => (
-                <div key={i} className="event">
+                <div key={`${m.slug || m.api_id || ""}-${i}`} className="event">
                   <div className="teams">
-                    <span className="muted" style={{ fontSize: 12 }}>
+                    <span className="event-time">
                       {kickoffDay(m.match_date, m.time)} {kickoffTime(m.match_date, m.time)}
                     </span>
                     <span>
                       <TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} />
                     </span>
                   </div>
-                  <div className="muted" style={{ fontSize: 12 }}>
+                  <div className="event-time">
                     {m.league_name || m.league} · {m.country}
                   </div>
                   <MatchOutlook
@@ -149,27 +206,31 @@ export default function Dashboard() {
               ))}
             </div>
           )}
-        </section>
+        </Card>
 
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.recentResults")}</h3>
-          <Link className="link" to="/matches" style={{ fontSize: 13 }}>
-            {t("page.dashboard.viewAll")}
-          </Link>
+        <Card>
+          <CardHeader
+            title={t("page.dashboard.recentResults")}
+            actions={
+              <Link className="link" to="/matches">
+                {t("page.dashboard.viewAll")}
+              </Link>
+            }
+          />
           {recent.length === 0 ? (
             <p className="muted">{t("page.dashboard.noResults")}</p>
           ) : (
-            <div className="event-list" style={{ marginTop: 10 }}>
+            <div className="event-list">
               {recent.map((m) => (
                 <div key={m.api_id} className="event">
                   <div className="teams">
-                    <span className="muted" style={{ fontSize: 12 }}>
+                    <span className="event-time">
                       {plainDay(m.match_date)} · {m.league_name || m.league}
                     </span>
                     <span>
                       <TeamLink name={m.home_team} /> <strong>{m.home_score}–{m.away_score}</strong>{" "}
                       <TeamLink name={m.away_team} />{" "}
-                      <Link className="link" to={`/match/${m.api_id}`} style={{ fontSize: 12 }}>
+                      <Link className="link" to={`/match/${m.api_id}`}>
                         {t("common.view")}
                       </Link>
                     </span>
@@ -178,39 +239,17 @@ export default function Dashboard() {
               ))}
             </div>
           )}
-        </section>
-
-        <section className="card">
-          <h3 style={{ marginTop: 0 }}>{t("page.dashboard.topClubs")}</h3>
-          {topClubs.length === 0 ? (
-            <p className="muted">{t("page.dashboard.noLeaders")}</p>
-          ) : (
-            <div className="event-list" style={{ marginTop: 10 }}>
-              {topClubs.map((c, i) => (
-                <div key={i} className="event">
-                  <div className="teams">
-                    <span>
-                      <TeamLink name={c.team} /> <span className="muted">· {c.league_name}</span>
-                    </span>
-                  </div>
-                  <div className="score">
-                    {num(c.points)} {t("common.pts")} · #{num(c.position)} · {c.season}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
+        </Card>
       </div>
 
-      <section>
-        <h3>{t("page.dashboard.byRegion")}</h3>
-        <div className="grid regions">
+      <Card>
+        <CardHeader title={t("page.dashboard.byRegion")} />
+        <div className="region-grid">
           {regionBuckets(byRegion).map(({ region, leagues }) => (
             <RegionSection key={region} region={region} leagues={leagues} t={t} />
           ))}
         </div>
-      </section>
+      </Card>
     </div>
   );
 }

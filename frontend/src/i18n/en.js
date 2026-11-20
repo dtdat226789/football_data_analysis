@@ -18,6 +18,12 @@ export const en = {
   "app.nav.teams": "Teams",
   "app.nav.matches": "Matches",
   "app.nav.clubAnalysis": "Club Analysis",
+  "app.nav.label": "Primary navigation",
+  "app.nav.group.main": "Main sections",
+  "app.nav.group.browse": "Browse catalog",
+  "app.nav.open": "Open navigation",
+  "app.nav.close": "Close navigation",
+  "app.skipToContent": "Skip to content",
 
   "common.loading": "Loading…",
   "common.error": "Something went wrong.",
@@ -58,6 +64,11 @@ export const en = {
   "settings.language": "Language",
   "settings.timezone": "Time zone",
   "settings.localTime": "Local time",
+  "settings.zone.hanoi": "Hanoi (ICT, UTC+7)",
+  "settings.zone.singapore": "Singapore (UTC+8)",
+  "settings.zone.tokyo": "Tokyo (UTC+9)",
+  "settings.zone.london": "London (UTC+0/+1)",
+  "settings.zone.utc": "UTC",
 
   "page.dashboard.title": "Dashboard",
   "page.dashboard.summary":
@@ -73,6 +84,11 @@ export const en = {
   "page.dashboard.noResults": "No results collected.",
   "page.dashboard.noLeaders": "No leaders.",
   "page.dashboard.viewAll": "View all matches →",
+  "page.dashboard.kpi.leagues": "leagues in catalog",
+  "page.dashboard.kpi.withFixtures": "with fixtures",
+  "page.dashboard.kpi.recent": "recent results",
+  "page.dashboard.kpi.upcoming": "upcoming fixtures",
+  "page.dashboard.seeAllLeagues": "See all leagues",
 
   "page.leagues.title": "Leagues",
   "page.leagues.count": "{n} leagues in the catalog",
@@ -90,6 +106,10 @@ export const en = {
 
   "page.matches.title": "Matches",
   "page.matches.summary": "{league} · upcoming fixtures by day + recent results",
+  "page.matches.filtersTitle": "Filters",
+  "page.matches.sharedFilters": "Applies to both lists",
+  "page.matches.listOptions": "Display options",
+  "page.matches.dateWindow": "Date window",
   "page.matches.league": "League",
   "page.matches.allLeagues": "All leagues",
   "page.matches.loadingLeagues": "Loading leagues…",
@@ -112,6 +132,8 @@ export const en = {
   "page.matches.noFinished": "No finished matches match the filters.",
 
   "page.league.noData": "No league data.",
+  "page.league.views.label": "Standing views",
+  "page.league.tabs.label": "League sections",
   "page.league.views.classic": "Classic",
   "page.league.views.luck": "Luck",
   "page.league.views.goals": "Goals",
@@ -135,6 +157,7 @@ export const en = {
   "page.league.charts": "Charts",
   "page.league.chartsHint": "Select a chart to view it full screen.",
   "chart.viewFull": "View {name} full screen",
+  "chart.donut": "Distribution chart",
 
   "analysis.finding.outcomeSplit": "Outcome split across all seasons",
   "analysis.finding.comebackWins": "Comeback wins",
@@ -180,6 +203,8 @@ export const en = {
   "page.league.noFinishedSeason": "No finished matches recorded for {season}.",
   "page.league.standings.pos": "Pos",
   "page.league.standings.team": "Team",
+  "page.league.standings.tableLabel": "Standings table for {season}",
+  "page.league.seasons.tableLabel": "Seasons table",
   "page.league.seasons.start": "Start",
   "page.league.seasons.end": "End",
   "page.league.seasons.state": "State",
@@ -219,6 +244,8 @@ export const en = {
   "page.team.venue.home": "Home",
   "page.team.venue.away": "Away",
   "page.team.kpiLink": "Team KPI dashboard",
+  "page.team.back": "Back to teams",
+  "page.team.scopeTitle": "Season scope",
 
   "dash.kpiBadge": "Team KPI",
   "dash.clubBadge": "Club analysis",
@@ -269,6 +296,7 @@ export const en = {
   "kpi.unit.points": "pts",
 
   "page.match.noData": "No match data.",
+  "page.match.back": "Back to matches",
   "page.match.fullTime": "full time",
   "page.match.facts": "Facts",
   "page.match.season": "Season",
@@ -281,6 +309,7 @@ export const en = {
   "page.match.away": "(away)",
 
   "page.fixture.noData": "No fixture data.",
+  "page.fixture.back": "Back to league matches",
   "page.fixture.record": "Fixture record",
   "page.fixture.matchday": "Matchday",
   "page.fixture.kickoff": "Kickoff",
@@ -300,6 +329,7 @@ export const en = {
   "table.gd": "GD",
   "table.pts": "Pts",
   "table.rank": "#",
+  "table.scrollable": "Scrollable table",
 
   "fixture.upcoming": "Upcoming",
   "fixture.showingRange": "showing {start}–{end} of {total}",
@@ -352,6 +382,9 @@ export const en = {
 
   "predictability.title": "Prediction",
   "predictability.stale": "stale",
+  "predictability.attackShort": "att",
+  "predictability.defenceShort": "def",
+  "predictability.sigma": "sigma",
   "predictability.expectedGoals": "Expected goals",
   "predictability.htTotal": "HT total",
   "predictability.ratings": "Ratings",

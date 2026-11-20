@@ -8,7 +8,17 @@ import { join, relative, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const SRC = resolve(process.cwd(), "src");
-const CSS_FILES = ["index.css"];
+
+function cssFiles(dir = SRC, out = []) {
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) cssFiles(full, out);
+    else if (entry.endsWith(".css")) out.push(full);
+  }
+  return out;
+}
+
+const CSS_FILES = cssFiles().map((file) => relative(SRC, file));
 
 function walk(dir, out = []) {
   for (const entry of readdirSync(dir)) {

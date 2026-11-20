@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import { TableShell } from "./ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const RESULT_KEY = { HOME_WIN: "result.home", DRAW: "result.draw", AWAY_WIN: "result.away" };
@@ -25,10 +26,10 @@ export function PreMatchPanel({ preMatch }) {
 
   return (
     <section className="card">
-      <h3 style={{ marginTop: 0 }}>
+      <h3>
         {t("insights.preMatch")} <span className="badge">{t("insights.matchday", { n: preMatch.game_index })}</span>
       </h3>
-      <p className="muted" style={{ margin: "0 0 12px" }}>
+      <p className="muted insight-summary">
         {t("insights.preMatchSummary", {
           home: preMatch.home_team,
           away: preMatch.away_team,
@@ -36,17 +37,17 @@ export function PreMatchPanel({ preMatch }) {
         })}
       </p>
       {keys.map((key) => (
-        <div key={key} style={{ marginBottom: 14 }}>
-          <h4 style={{ margin: "0 0 6px", fontSize: 13, color: "var(--muted)" }}>
+        <div key={key} className="insight-group">
+          <h4 className="insight-group-title">
             {(preMatch.group_labels || {})[key] || key}
           </h4>
           <div className="mini-grid">
             {Object.entries(groups[key]).map(([column, cell]) => (
               <div key={column}>
-                <div className="muted" style={{ fontSize: 12 }}>
+                <div className="muted insight-cell-label">
                   {cell.label}
                 </div>
-                <div style={{ fontVariantNumeric: "tabular-nums" }}>{dec(cell.value, 2)}</div>
+                <div className="tabular">{dec(cell.value, 2)}</div>
               </div>
             ))}
           </div>
@@ -68,11 +69,12 @@ export function ModelPanel({ model }) {
   const outcomeHit =
     typeof model.actual_match_result === "string" &&
     model.predicted_match_result === model.actual_match_result;
+  const label = t("insights.modelView");
 
   return (
     <section className="card">
-      <h3 style={{ marginTop: 0 }}>
-        {t("insights.modelView")}{" "}
+      <h3>
+        {label}{" "}
         {model.in_sample ? (
           <span className="badge amber">{t("insights.inSample")}</span>
         ) : (
@@ -80,67 +82,62 @@ export function ModelPanel({ model }) {
         )}
       </h3>
 
-      <div style={{ marginBottom: 12 }}>
+      <div className="prob-list">
         {Object.entries(probs).map(([key, value]) => (
-          <div key={key} style={{ marginBottom: 8 }}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                fontSize: 13,
-                marginBottom: 3,
-              }}
-            >
+          <div key={key} className="prob-row">
+            <div className="prob-line">
               <span>{t(RESULT_KEY[key] ?? "") || key}</span>
-              <span style={{ fontVariantNumeric: "tabular-nums" }}>{pct(value)}</span>
+              <span className="tabular">{pct(value)}</span>
             </div>
-            <div className="bar-track" style={{ height: 8 }}>
+            <div className="bar-track prob-track" style={{ height: 8 }}>
               <div
-                className="bar-fill"
-                style={{ width: `${(value || 0) * 100}%`, background: "var(--accent)" }}
+                className="bar-fill prob-fill"
+                style={{ width: `${(value || 0) * 100}%` }}
               />
             </div>
           </div>
         ))}
       </div>
 
-      <table className="data">
-        <tbody>
-          <tr>
-            <th>{t("insights.predicted")}</th>
-            <td>
-              {t(RESULT_KEY[model.predicted_match_result] ?? "") || model.predicted_match_result}{" "}
-              <span className="pred-chips">
-                <span className={`pred-chip ${strength(model.confidence)}`}>
-                  {t("pred.confModel")} <b>{pct(model.confidence)}</b>
+      <TableShell label={label}>
+        <table className="data">
+          <tbody>
+            <tr>
+              <th scope="row">{t("insights.predicted")}</th>
+              <td>
+                {t(RESULT_KEY[model.predicted_match_result] ?? "") || model.predicted_match_result}{" "}
+                <span className="pred-chips">
+                  <span className={`pred-chip ${strength(model.confidence)}`}>
+                    {t("pred.confModel")} <b>{pct(model.confidence)}</b>
+                  </span>
                 </span>
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <th>{t("insights.actual")}</th>
-            <td>
-              {t(RESULT_KEY[model.actual_match_result] ?? "") || model.actual_match_result || "—"}{" "}
-              {model.actual_match_result && (
-                <span className={`badge ${outcomeHit ? "green" : "amber"}`}>
-                  {outcomeHit ? t("insights.correct") : t("insights.wrong")}
-                </span>
-              )}
-            </td>
-          </tr>
-          <tr>
-            <th>{t("insights.model")}</th>
-            <td>{meta.model_id || "—"}</td>
-          </tr>
-          <tr>
-            <th>{t("insights.featureVersion")}</th>
-            <td>{meta.feature_version || "—"}</td>
-          </tr>
-        </tbody>
-      </table>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("insights.actual")}</th>
+              <td>
+                {t(RESULT_KEY[model.actual_match_result] ?? "") || model.actual_match_result || "—"}{" "}
+                {model.actual_match_result && (
+                  <span className={`badge ${outcomeHit ? "green" : "amber"}`}>
+                    {outcomeHit ? t("insights.correct") : t("insights.wrong")}
+                  </span>
+                )}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("insights.model")}</th>
+              <td>{meta.model_id || "—"}</td>
+            </tr>
+            <tr>
+              <th scope="row">{t("insights.featureVersion")}</th>
+              <td>{meta.feature_version || "—"}</td>
+            </tr>
+          </tbody>
+        </table>
+      </TableShell>
 
       {model.in_sample && meta.in_sample_warning && (
-        <p className="muted" style={{ marginBottom: 0, fontSize: 12 }}>
+        <p className="muted insight-warning">
           {meta.in_sample_warning}
         </p>
       )}
@@ -153,18 +150,19 @@ export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
   const { t, plainDay } = useFormatters();
   if (!headToHead) return null;
   const { matches = [], summary, truncated } = headToHead || {};
+  const label = t("insights.headToHead");
 
   return (
     <section className="card">
-      <h3 style={{ marginTop: 0 }}>
-        {t("insights.headToHead")}{" "}
+      <h3>
+        {label}{" "}
         <span className="badge">
           {t("insights.previous", { n: summary ? summary.played : matches.length })}
         </span>
       </h3>
 
       {summary ? (
-        <p className="muted" style={{ marginTop: 0 }}>
+        <p className="muted insight-summary">
           {t("insights.h2hSummary", {
             home: homeName,
             away: awayName,
@@ -176,46 +174,48 @@ export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
           })}
         </p>
       ) : (
-        <p className="muted" style={{ marginTop: 0 }}>
+        <p className="muted insight-summary">
           {t("insights.noH2h")}
         </p>
       )}
 
       {truncated && (
-        <p className="muted" style={{ fontSize: 12 }}>
+        <p className="muted insight-cell-label">
           {t("insights.truncated", { shown: matches.length, total: summary.played })}
         </p>
       )}
 
       {matches.length > 0 && (
-        <table className="data">
-          <thead>
-            <tr>
-              <th>{t("common.date")}</th>
-              <th>{t("common.season")}</th>
-              <th>{t("insights.fixture")}</th>
-              <th>{t("common.score")}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {matches.map((m) => (
-              <tr key={m.api_id}>
-                <td>{plainDay(m.match_date)}</td>
-                <td>{m.season}</td>
-                <td>
-                  <Link className="link" to={`/match/${m.api_id}`}>
-                    {m.home_team} {t("common.vs")} {m.away_team}
-                  </Link>
-                </td>
-                <td>
-                  {typeof m.home_score === "number" && typeof m.away_score === "number"
-                    ? `${m.home_score} – ${m.away_score}`
-                    : "—"}
-                </td>
+        <TableShell label={label}>
+          <table className="data">
+            <thead>
+              <tr>
+                <th scope="col">{t("common.date")}</th>
+                <th scope="col">{t("common.season")}</th>
+                <th scope="col">{t("insights.fixture")}</th>
+                <th scope="col">{t("common.score")}</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {matches.map((m) => (
+                <tr key={m.api_id}>
+                  <td>{plainDay(m.match_date)}</td>
+                  <td>{m.season}</td>
+                  <td>
+                    <Link className="link" to={`/match/${m.api_id}`}>
+                      {m.home_team} {t("common.vs")} {m.away_team}
+                    </Link>
+                  </td>
+                  <td>
+                    {typeof m.home_score === "number" && typeof m.away_score === "number"
+                      ? `${m.home_score} – ${m.away_score}`
+                      : "—"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </TableShell>
       )}
     </section>
   );
@@ -227,9 +227,9 @@ export default function MatchInsights({ insights, homeName, awayName }) {
   if (!preMatch && !model && !(h2h && h2h.matches && h2h.matches.length)) return null;
 
   return (
-    <div className="two-col" style={{ marginTop: 16 }}>
+    <div className="two-col insights-grid">
       <PreMatchPanel preMatch={preMatch} />
-      <div className="stack" style={{ display: "grid", gap: 16, alignContent: "start" }}>
+      <div className="detail-side">
         <ModelPanel model={model} />
         <HeadToHeadPanel headToHead={h2h} homeName={homeName} awayName={awayName} />
       </div>

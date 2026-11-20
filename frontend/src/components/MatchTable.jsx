@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { ErrorBox, TableSkeleton } from "./State.jsx";
+import { TableShell } from "./ui/index.js";
 import { TeamLink } from "./TeamLink.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
@@ -29,20 +30,22 @@ export default function MatchTable({ state, showLeague = false, emptyMessage, sk
   const columns = showLeague ? 6 : 5;
   const rows = state?.data?.matches || [];
 
+  if (state?.error) return <ErrorBox error={state.error} />;
+  if (!state?.data && !state?.loading) return null;
+
   return (
-    <>
+    <TableShell>
       {state?.loading && <TableSkeleton rows={skeletonRows} cols={columns} />}
-      {state?.error && <ErrorBox error={state.error} />}
       {state?.data && (
         <table className="data">
           <thead>
             <tr>
-              <th>{t("common.date")}</th>
-              <th>{t("common.home")}</th>
-              <th className="num">{t("common.score")}</th>
-              <th>{t("common.away")}</th>
-              {showLeague && <th>{t("common.league")}</th>}
-              <th>{t("common.detail")}</th>
+              <th scope="col">{t("common.date")}</th>
+              <th scope="col">{t("common.home")}</th>
+              <th scope="col" className="num">{t("common.score")}</th>
+              <th scope="col">{t("common.away")}</th>
+              {showLeague && <th scope="col">{t("common.league")}</th>}
+              <th scope="col">{t("common.detail")}</th>
             </tr>
           </thead>
           <tbody>
@@ -80,6 +83,6 @@ export default function MatchTable({ state, showLeague = false, emptyMessage, sk
           </tbody>
         </table>
       )}
-    </>
+    </TableShell>
   );
 }

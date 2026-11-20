@@ -1,9 +1,11 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
 import { pageLabel } from "../lib/pagination.js";
 import { ErrorBox, ListSkeleton } from "./State.jsx";
+import { Badge, Card, CardHeader } from "./ui/index.js";
 import { TeamLink } from "./TeamLink.jsx";
 import MatchOutlook from "./MatchOutlook.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -128,8 +130,10 @@ export default function UpcomingFixtures({
   );
 
   const data = upcoming.data;
-  const rows = data?.matches || [];
-  const groups = groupByDay(rows);
+  // Page sizes reach 100 rows; regrouping them on every unrelated render (a
+  // settings change, a filter click) is pure work with no new result.
+  const rows = useMemo(() => data?.matches || [], [data]);
+  const groups = useMemo(() => groupByDay(rows), [rows]);
   const filtered = Boolean(dayInWindow || minConfidence || sharedFrom || sharedTo);
 
   /** "Today" / "Tomorrow" for a stored day key, where they help. */
@@ -155,14 +159,15 @@ export default function UpcomingFixtures({
   };
 
   return (
-    <section className="card">
-      <h3 style={{ marginTop: 0, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-        {t("fixture.upcoming")}
-        <span className="badge">{data?.total ?? 0}</span>
+    <Card>
+      <CardHeader
+        title={t("fixture.upcoming")}
+        actions={<Badge>{data?.total ?? 0}</Badge>}
+      >
         {/* The badge is the filtered total, which is not what is on screen once a
             limit is in play — so say which slice this is. */}
         {data && data.total > 0 && (
-          <span className="muted" style={{ fontSize: 13, fontWeight: 400 }}>
+          <span className="card-meta">
             {data.returned < data.total
               ? t("fixture.showingRange", {
                   start: data.offset + 1,
@@ -172,7 +177,7 @@ export default function UpcomingFixtures({
               : t("fixture.allTotal", { total: data.total })}
           </span>
         )}
-      </h3>
+      </CardHeader>
 
       {/* The filters stay on screen whenever a filter is active, even once it has
           narrowed the list to nothing. Hiding them at zero results is what turns a
@@ -223,8 +228,8 @@ export default function UpcomingFixtures({
                     n: data.day_counts?.[d] ?? 0,
                   })}
                 >
-                  {relativeFor(d) || labelFor(d)}
-                  <span className="muted"> {data.day_counts?.[d] ?? 0}</span>
+                  {relativeFor(d) || labelFor(d)}{" "}
+                  <span className="muted">{data.day_counts?.[d] ?? 0}</span>
                 </button>
               ))}
             </div>
@@ -277,7 +282,7 @@ export default function UpcomingFixtures({
                     className="event"
                   >
                     <div className="teams">
-                      <span className="muted" style={{ fontSize: 12 }}>
+                      <span className="event-time">
                         {fixtureTimeLine(m)} · {m.league_name || m.league}
                       </span>
                       <span>
@@ -292,8 +297,7 @@ export default function UpcomingFixtures({
                     />
                     {m.slug ? (
                       <Link
-                        className="link"
-                        style={{ fontSize: 12 }}
+                        className="link event-detail-link"
                         to={`/fixture/${m.league}/${fixturePathId(m.slug)}`}
                       >
                         {t("fixture.detail")}
@@ -321,6 +325,6 @@ export default function UpcomingFixtures({
           </button>
         </div>
       )}
-    </section>
+    </Card>
   );
 }

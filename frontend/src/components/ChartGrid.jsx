@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import { api } from "../api/client.js";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -16,35 +16,39 @@ export function chartCaption(name, t) {
 export default function ChartGrid({ league, charts }) {
   const { t } = useFormatters();
   const [lightbox, setLightbox] = useState(null);
+  const closeLightbox = useCallback(() => setLightbox(null), []);
 
   return (
     <>
       <div className="chart-grid">
-        {charts.map((c) => (
-          <div
-            key={c}
-            className="card chart-card"
-            role="button"
-            tabIndex={0}
-            aria-label={t("chart.viewFull", { name: chartCaption(c, t) })}
-            onClick={() => setLightbox(c)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setLightbox(c);
-              }
-            }}
-          >
-            <img src={api.chartUrl(league, c)} alt={c} loading="lazy" />
-            <div className="caption">{chartCaption(c, t)}</div>
-          </div>
-        ))}
+        {charts.map((c) => {
+          const caption = chartCaption(c, t);
+          return (
+            <button
+              key={c}
+              type="button"
+              className="card chart-card"
+              aria-label={t("chart.viewFull", { name: caption })}
+              onClick={() => setLightbox(c)}
+            >
+              {/* The button's accessible name and the caption below already
+                  describe the chart, so the image itself stays decorative. */}
+              <img
+                src={api.chartUrl(league, c)}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="caption">{caption}</span>
+            </button>
+          );
+        })}
       </div>
       {lightbox && (
         <ChartLightbox
           src={api.chartUrl(league, lightbox)}
           title={chartCaption(lightbox, t)}
-          onClose={() => setLightbox(null)}
+          onClose={closeLightbox}
         />
       )}
     </>

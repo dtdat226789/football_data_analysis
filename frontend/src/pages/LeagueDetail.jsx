@@ -7,6 +7,7 @@ import MatchTable from "../components/MatchTable.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import ChartGrid from "../components/ChartGrid.jsx";
 import UpcomingFixtures from "../components/UpcomingFixtures.jsx";
+import { PageHeader, TableShell, Tabs } from "../components/ui/index.js";
 import { useParamsPatch } from "../lib/searchParams.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
@@ -70,32 +71,37 @@ function StandingsTab({ league, season, view, setView }) {
     () => api.standings(league, { season, view }),
     [league, season, view],
   );
+  const caption = t("page.league.standings.tableLabel", { season: season || "—" });
   return (
     <div>
-      <div className="tabs">
-        {VIEWS.map((v) => (
-          <button key={v.key} className={view === v.key ? "active" : ""} onClick={() => setView(v.key)}>
-            {t(v.keyId)}
-          </button>
-        ))}
-      </div>
-      {loading && <TableSkeleton rows={8} cols={10} />}
+      <Tabs
+        items={VIEWS.map((v) => ({ key: v.key, label: t(v.keyId) }))}
+        active={view}
+        onChange={setView}
+        label={t("page.league.views.label")}
+      />
+      {loading && (
+        <TableShell label={caption}>
+          <TableSkeleton rows={8} cols={10} />
+        </TableShell>
+      )}
       {error && <ErrorBox error={error} />}
       {!loading && !error && data && (
-        <div className="card">
+        <TableShell className="card table-priority" label={caption}>
           <table className="data">
+            <caption className="sr-only">{caption}</caption>
             <thead>
               <tr>
-                <th>{t("table.pos")}</th>
-                <th>{t("table.team")}</th>
-                <th className="num">{t("table.p")}</th>
-                <th className="num">{t("table.w")}</th>
-                <th className="num">{t("table.d")}</th>
-                <th className="num">{t("table.l")}</th>
-                <th className="num">{t("table.gf")}</th>
-                <th className="num">{t("table.ga")}</th>
-                <th className="num">{t("table.gd")}</th>
-                <th className="num">{t("table.pts")}</th>
+                <th scope="col">{t("table.pos")}</th>
+                <th scope="col">{t("table.team")}</th>
+                <th scope="col" className="num col-secondary">{t("table.p")}</th>
+                <th scope="col" className="num col-secondary">{t("table.w")}</th>
+                <th scope="col" className="num col-secondary">{t("table.d")}</th>
+                <th scope="col" className="num col-secondary">{t("table.l")}</th>
+                <th scope="col" className="num col-tertiary">{t("table.gf")}</th>
+                <th scope="col" className="num col-tertiary">{t("table.ga")}</th>
+                <th scope="col" className="num col-tertiary">{t("table.gd")}</th>
+                <th scope="col" className="num">{t("table.pts")}</th>
               </tr>
             </thead>
             <tbody>
@@ -105,13 +111,13 @@ function StandingsTab({ league, season, view, setView }) {
                   <td>
                     <TeamLink name={r.team} />
                   </td>
-                  <td className="num">{r.played}</td>
-                  <td className="num">{r.won}</td>
-                  <td className="num">{r.drawn}</td>
-                  <td className="num">{r.lost}</td>
-                  <td className="num">{r.goals_for}</td>
-                  <td className="num">{r.goals_against}</td>
-                  <td className="num">{r.goal_difference}</td>
+                  <td className="num col-secondary">{r.played}</td>
+                  <td className="num col-secondary">{r.won}</td>
+                  <td className="num col-secondary">{r.drawn}</td>
+                  <td className="num col-secondary">{r.lost}</td>
+                  <td className="num col-tertiary">{r.goals_for}</td>
+                  <td className="num col-tertiary">{r.goals_against}</td>
+                  <td className="num col-tertiary">{r.goal_difference}</td>
                   <td className="num">
                     <strong>{r.points}</strong>
                   </td>
@@ -119,7 +125,7 @@ function StandingsTab({ league, season, view, setView }) {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableShell>
       )}
     </div>
   );
@@ -172,7 +178,7 @@ function AnalysisTab({ league, leagueName }) {
       <Link className="link" to={`/club-analysis?league=${league}`}>
         {t("dash.clubFromLeague")} →
       </Link>
-      <div className="kpi-row" style={{ marginTop: 12 }}>
+      <div className="kpi-row kpi-row--spaced">
         {kpis.map((k) => (
           <div key={k.label} className="kpi">
             <div className="label">{k.label}</div>
@@ -180,18 +186,18 @@ function AnalysisTab({ league, leagueName }) {
           </div>
         ))}
       </div>
-      <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>{t("page.league.keyFindings")}</h3>
+      <section className="card card--spaced">
+        <h3>{t("page.league.keyFindings")}</h3>
         {findings.length === 0 ? (
           <p className="muted">{t("page.league.noFindings")}</p>
         ) : (
-          <ol style={{ paddingLeft: 20, lineHeight: 1.6 }}>
+          <ol className="findings-list">
             {findings.map((f, i) => (
               <li key={i}>
                 <strong>
                   <span className="badge green">F{f.id}</span> {findingTitle(f.finding, t)}
                 </strong>
-                <div className="muted" style={{ fontSize: 13 }}>
+                <div className="muted finding-detail">
                   {f.detail}
                 </div>
               </li>
@@ -200,9 +206,9 @@ function AnalysisTab({ league, leagueName }) {
         )}
       </section>
       {charts.length > 0 && (
-        <section style={{ marginTop: 16 }}>
+        <section className="charts-section">
           <h3>{t("page.league.charts")}</h3>
-          <p className="muted" style={{ fontSize: 13 }}>
+          <p className="muted section-hint">
             {t("page.league.chartsHint")}
           </p>
           <ChartGrid league={league} charts={charts} />
@@ -224,7 +230,7 @@ function MatchesTab({ league, season }) {
       <UpcomingFixtures league={league} />
 
       <section className="card">
-        <h3 style={{ marginTop: 0 }}>{t("page.league.recentSeason", { season: season || "—" })}</h3>
+        <h3>{t("page.league.recentSeason", { season: season || "—" })}</h3>
         <MatchTable
           state={recent}
           emptyMessage={t("page.league.noFinishedSeason", { season: season || "—" })}
@@ -237,18 +243,20 @@ function MatchesTab({ league, season }) {
 function SeasonsTab({ detail }) {
   const { t } = useFormatters();
   const seasons = detail.seasons || [];
+  const caption = t("page.league.seasons.tableLabel");
   return (
-    <div className="card">
+    <TableShell className="card table-priority" label={caption}>
       <table className="data">
+        <caption className="sr-only">{caption}</caption>
         <thead>
           <tr>
-            <th>{t("common.seasonsCol")}</th>
-            <th>{t("page.league.seasons.start")}</th>
-            <th>{t("page.league.seasons.end")}</th>
-            <th className="num">{t("page.league.seasons.matches")}</th>
-            <th className="num">{t("page.league.seasons.teams")}</th>
-            <th className="num">{t("page.league.seasons.standings")}</th>
-            <th>{t("page.league.seasons.state")}</th>
+            <th scope="col">{t("common.seasonsCol")}</th>
+            <th scope="col">{t("page.league.seasons.start")}</th>
+            <th scope="col">{t("page.league.seasons.end")}</th>
+            <th scope="col" className="num">{t("page.league.seasons.matches")}</th>
+            <th scope="col" className="num col-tertiary">{t("page.league.seasons.teams")}</th>
+            <th scope="col" className="num col-tertiary">{t("page.league.seasons.standings")}</th>
+            <th scope="col">{t("page.league.seasons.state")}</th>
           </tr>
         </thead>
         <tbody>
@@ -258,14 +266,14 @@ function SeasonsTab({ detail }) {
               <td>{s.start_year}</td>
               <td>{s.end_year}</td>
               <td className="num">{s.matches}</td>
-              <td className="num">{s.teams}</td>
-              <td className="num">{s.standings_rows}</td>
+              <td className="num col-tertiary">{s.teams}</td>
+              <td className="num col-tertiary">{s.standings_rows}</td>
               <td>{s.season_state}</td>
             </tr>
           ))}
         </tbody>
       </table>
-    </div>
+    </TableShell>
   );
 }
 
@@ -306,7 +314,9 @@ export default function LeagueDetail() {
           <Skeleton height={34} width="45%" />
           <Skeleton height={14} width="30%" />
         </div>
-        <TableSkeleton rows={6} cols={10} />
+        <TableShell>
+          <TableSkeleton rows={6} cols={10} />
+        </TableShell>
       </div>
     );
   if (detail.error) return <ErrorBox error={detail.error} />;
@@ -322,35 +332,36 @@ export default function LeagueDetail() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>{meta.name}</h2>
-        <p>
-          {t("page.league.summary", {
-            country: meta.country,
-            region: meta.region,
-            format: meta.format,
-            teams: meta.teams,
-            seasons: seasons.length,
-          })}
-        </p>
-      </div>
+      <PageHeader
+        title={meta.name}
+        subtitle={t("page.league.summary", {
+          country: meta.country,
+          region: meta.region,
+          format: meta.format,
+          teams: meta.teams,
+          seasons: seasons.length,
+        })}
+      />
 
-      <div className="tabs">
-        {TABS.map((tabItem) => (
-          <button key={tabItem.key} className={tab === tabItem.key ? "active" : ""} onClick={() => setTab(tabItem.key)}>
-            {t(tabItem.keyId)}
-          </button>
-        ))}
-        <span className="tab-spacer" />
-        <select aria-label={t("common.season")} value={season || ""} onChange={(e) => changeSeason(e.target.value)}>
-          <option value="">{t("page.league.seasonPrompt")}</option>
-          {seasons.map((item) => (
-            <option key={item.season} value={item.season}>
-              {item.season} {item.matches === 0 ? t("page.league.noDataSeason") : ""}
-            </option>
-          ))}
-        </select>
-      </div>
+      <Tabs
+        items={TABS.map((tabItem) => ({ key: tabItem.key, label: t(tabItem.keyId) }))}
+        active={tab}
+        onChange={setTab}
+        label={t("page.league.tabs.label")}
+        trailing={
+          <>
+            <span className="tab-spacer" />
+            <select aria-label={t("common.season")} value={season || ""} onChange={(e) => changeSeason(e.target.value)}>
+              <option value="">{t("page.league.seasonPrompt")}</option>
+              {seasons.map((item) => (
+                <option key={item.season} value={item.season}>
+                  {item.season} {item.matches === 0 ? t("page.league.noDataSeason") : ""}
+                </option>
+              ))}
+            </select>
+          </>
+        }
+      />
 
       {tab === "standings" && <StandingsTab league={slug} season={season} view={view} setView={setView} />}
       {tab === "analysis" && <AnalysisTab league={slug} leagueName={meta.name} />}

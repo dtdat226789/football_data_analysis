@@ -6,11 +6,27 @@
     "directory": "./frontend/dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api", "/api/*", "/health"]
+    "run_worker_first": true
   },
+  // Set the matching backend secret out of band:
+  //   npx wrangler@4.165.0 secret put BACKEND_SHARED_SECRET --name football-web
+  // Keep it equal to the Render service's WORKER_SHARED_SECRET.
   "vars": {
     "BACKEND_URL": "https://football-data-analysis-latest.onrender.com"
   },
+  // Edge rate limit for /api/* and /health, enforced in worker/index.js.
+  // 120 requests/minute per client IP in each Cloudflare location; the Render
+  // service keeps API_RATE_LIMIT_PER_MINUTE as a slower second line of defence.
+  "ratelimits": [
+    {
+      "name": "API_RATE_LIMITER",
+      "namespace_id": "20261120",
+      "simple": {
+        "limit": 120,
+        "period": 60
+      }
+    }
+  ],
   "triggers": {
     "crons": ["*/10 * * * *"]
   }

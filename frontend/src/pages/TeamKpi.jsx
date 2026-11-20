@@ -3,6 +3,7 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { Empty, ErrorBox, Skeleton } from "../components/State.jsx";
 import { FilterSelects, KpiTile, MiniCompare, RankTable } from "../components/DashboardWidgets.jsx";
+import { TableShell } from "../components/ui/index.js";
 import { intParam, useParamsPatch } from "../lib/searchParams.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
@@ -68,7 +69,7 @@ export default function TeamKpi() {
         <div>
           <h2>
             {data?.team_name || slug}
-            {data?.logo_url && <img src={data.logo_url} alt="" className="dash-logo" />}
+            {data?.logo_url && <img src={data.logo_url} alt="" className="dash-logo" decoding="async" />}
           </h2>
           <p>{t("dash.kpiSummary", { league: data?.league_name || league, season: data?.season || season })}</p>
         </div>
@@ -127,9 +128,9 @@ export default function TeamKpi() {
             {data.table.length === 0 ? (
               <p className="dash-empty">{t("dash.noData")}</p>
             ) : (
-              <div className="dash-table-wrap">
+              <TableShell className="dash-table-wrap" label={t("dash.rankingTitle")}>
                 <RankTable rows={data.table} columns={TABLE_COLUMNS} />
-              </div>
+              </TableShell>
             )}
             <p className="dash-note">{t("dash.proxyNote")}</p>
           </section>

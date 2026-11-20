@@ -18,6 +18,12 @@ export const vi = {
   "app.nav.teams": "Đội",
   "app.nav.matches": "Trận đấu",
   "app.nav.clubAnalysis": "Phân tích CLB",
+  "app.nav.label": "Điều hướng chính",
+  "app.nav.group.main": "Mục chính",
+  "app.nav.group.browse": "Danh mục",
+  "app.nav.open": "Mở điều hướng",
+  "app.nav.close": "Đóng điều hướng",
+  "app.skipToContent": "Chuyển đến nội dung",
 
   "common.loading": "Đang tải…",
   "common.error": "Đã xảy ra lỗi.",
@@ -58,6 +64,11 @@ export const vi = {
   "settings.language": "Ngôn ngữ",
   "settings.timezone": "Múi giờ",
   "settings.localTime": "Giờ địa phương",
+  "settings.zone.hanoi": "Hà Nội (ICT, UTC+7)",
+  "settings.zone.singapore": "Singapore (UTC+8)",
+  "settings.zone.tokyo": "Tokyo (UTC+9)",
+  "settings.zone.london": "London (UTC+0/+1)",
+  "settings.zone.utc": "UTC",
 
   "page.dashboard.title": "Tổng quan",
   "page.dashboard.summary":
@@ -73,6 +84,11 @@ export const vi = {
   "page.dashboard.noResults": "Chưa có kết quả nào.",
   "page.dashboard.noLeaders": "Chưa có đội dẫn đầu.",
   "page.dashboard.viewAll": "Xem tất cả trận đấu →",
+  "page.dashboard.kpi.leagues": "giải trong danh mục",
+  "page.dashboard.kpi.withFixtures": "có lịch thi đấu",
+  "page.dashboard.kpi.recent": "kết quả gần đây",
+  "page.dashboard.kpi.upcoming": "trận sắp tới",
+  "page.dashboard.seeAllLeagues": "Xem tất cả giải",
 
   "page.leagues.title": "Giải đấu",
   "page.leagues.count": "{n} giải đấu trong danh mục",
@@ -90,6 +106,10 @@ export const vi = {
 
   "page.matches.title": "Trận đấu",
   "page.matches.summary": "{league} · lịch sắp tới theo ngày + kết quả gần đây",
+  "page.matches.filtersTitle": "Bộ lọc",
+  "page.matches.sharedFilters": "Áp dụng cho cả hai danh sách",
+  "page.matches.listOptions": "Tuỳ chọn hiển thị",
+  "page.matches.dateWindow": "Khoảng ngày",
   "page.matches.league": "Giải đấu",
   "page.matches.allLeagues": "Tất cả giải",
   "page.matches.loadingLeagues": "Đang tải danh sách giải…",
@@ -112,6 +132,8 @@ export const vi = {
   "page.matches.noFinished": "Không có trận nào đã diễn ra khớp bộ lọc.",
 
   "page.league.noData": "Không có dữ liệu giải đấu.",
+  "page.league.views.label": "Cách xếp hạng",
+  "page.league.tabs.label": "Mục giải đấu",
   "page.league.views.classic": "Truyền thống",
   "page.league.views.luck": "May mắn",
   "page.league.views.goals": "Bàn thắng",
@@ -134,6 +156,7 @@ export const vi = {
   "page.league.charts": "Biểu đồ",
   "page.league.chartsHint": "Chọn một biểu đồ để xem toàn màn hình.",
   "chart.viewFull": "Xem {name} toàn màn hình",
+  "chart.donut": "Biểu đồ phân bố",
 
   "analysis.finding.outcomeSplit": "Phân bố kết quả qua các mùa giải",
   "analysis.finding.comebackWins": "Các trận lội ngược dòng",
@@ -179,6 +202,8 @@ export const vi = {
   "page.league.noFinishedSeason": "Chưa ghi nhận trận nào đã diễn ra ở {season}.",
   "page.league.standings.pos": "Hạng",
   "page.league.standings.team": "Đội",
+  "page.league.standings.tableLabel": "Bảng xếp hạng mùa {season}",
+  "page.league.seasons.tableLabel": "Bảng các mùa giải",
   "page.league.seasons.start": "Bắt đầu",
   "page.league.seasons.end": "Kết thúc",
   "page.league.seasons.state": "Trạng thái",
@@ -218,6 +243,8 @@ export const vi = {
   "page.team.venue.home": "Sân nhà",
   "page.team.venue.away": "Sân khách",
   "page.team.kpiLink": "Bảng KPI của đội",
+  "page.team.back": "Quay lại danh sách đội",
+  "page.team.scopeTitle": "Phạm vi mùa giải",
 
   "dash.kpiBadge": "KPI đội bóng",
   "dash.clubBadge": "Phân tích CLB",
@@ -268,6 +295,7 @@ export const vi = {
   "kpi.unit.points": "điểm",
 
   "page.match.noData": "Không có dữ liệu trận đấu.",
+  "page.match.back": "Quay lại danh sách trận đấu",
   "page.match.fullTime": "hết giờ",
   "page.match.facts": "Thông tin",
   "page.match.season": "Mùa giải",
@@ -280,6 +308,7 @@ export const vi = {
   "page.match.away": "(khách)",
 
   "page.fixture.noData": "Không có dữ liệu trận đấu.",
+  "page.fixture.back": "Quay lại trận đấu của giải",
   "page.fixture.record": "Thông tin trận đấu",
   "page.fixture.matchday": "Vòng",
   "page.fixture.kickoff": "Khai cuộc",
@@ -299,6 +328,7 @@ export const vi = {
   "table.gd": "HS",
   "table.pts": "Điểm",
   "table.rank": "#",
+  "table.scrollable": "Bảng có thể cuộn",
 
   "fixture.upcoming": "Sắp tới",
   "fixture.showingRange": "hiển thị {start}–{end} / {total}",
@@ -350,6 +380,9 @@ export const vi = {
 
   "predictability.title": "Dự đoán",
   "predictability.stale": "cũ",
+  "predictability.attackShort": "tấn công",
+  "predictability.defenceShort": "phòng thủ",
+  "predictability.sigma": "sigma",
   "predictability.expectedGoals": "Bàn thắng kỳ vọng",
   "predictability.htTotal": "Tổng HT",
   "predictability.ratings": "Xếp hạng",

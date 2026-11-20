@@ -53,6 +53,12 @@ describe("TeamDetail", () => {
     expect(heading.closest(".page-head")).toHaveTextContent("canonical: Arsenal");
   });
 
+  it("offers a way back to the team list", async () => {
+    renderTeamDetail();
+
+    expect(await screen.findByRole("link", { name: "Back to teams" })).toHaveAttribute("href", "/teams");
+  });
+
   it("renders the standings, form, recent matches, upcoming fixtures and seasons", async () => {
     renderTeamDetail();
 

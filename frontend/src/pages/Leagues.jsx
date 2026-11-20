@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton } from "../components/State.jsx";
+import { Badge, PageHeader } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 /** Region headings are translated; the bucket keys themselves are not. */
@@ -42,10 +43,10 @@ export default function Leagues() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>{t("page.leagues.title")}</h2>
-        <p>{data ? t("page.leagues.count", { n: data.length }) : "…"}</p>
-      </div>
+      <PageHeader
+        title={t("page.leagues.title")}
+        subtitle={data ? t("page.leagues.count", { n: data.length }) : "…"}
+      />
 
       <div className="filters">
         <input
@@ -54,7 +55,6 @@ export default function Leagues() {
           placeholder={t("page.leagues.search")}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          style={{ minWidth: 260 }}
         />
       </div>
 
@@ -67,22 +67,22 @@ export default function Leagues() {
         !error &&
         Object.entries(byRegion).map(([region, leagues]) =>
           leagues.length === 0 ? null : (
-            <section key={region} style={{ marginTop: 24 }}>
+            <section key={region} className="league-region">
               <h3>
                 {t(REGION_KEYS[region] ?? "") || region}
-                <span className="badge">{leagues.length}</span>
+                <Badge>{leagues.length}</Badge>
               </h3>
               <div className="mini-grid">
                 {leagues.map((item) => (
-                  <Link key={item.slug} to={`/leagues/${item.slug}`} className="card mini" style={{ textDecoration: "none" }}>
+                  <Link key={item.slug} to={`/leagues/${item.slug}`} className="card mini">
                     <div className="mini-name">{item.name}</div>
-                    <div className="muted" style={{ fontSize: 12 }}>
+                    <div className="muted league-card-meta">
                       {item.country} · {t("common.teams", { n: num(item.teams) })}
                     </div>
                     {item.has_data && (
-                      <div className="badge green" style={{ marginTop: 8 }}>
+                      <Badge tone="green" className="league-card-badge">
                         {t("page.leagues.analysis")}
-                      </div>
+                      </Badge>
                     )}
                   </Link>
                 ))}

@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
 import { MemoryRouter, Routes } from "react-router-dom";
-import { ROUTER_FUTURE } from "../routerFuture.js";
 import { I18nProvider } from "../i18n/I18nProvider.jsx";
 
 /**
@@ -13,7 +12,7 @@ import { I18nProvider } from "../i18n/I18nProvider.jsx";
 export function renderPage(ui, { route = "/" } = {}) {
   return render(
     <I18nProvider>
-      <MemoryRouter initialEntries={[route]} future={ROUTER_FUTURE}>
+      <MemoryRouter initialEntries={[route]}>
         {ui}
       </MemoryRouter>
     </I18nProvider>,
@@ -23,9 +22,8 @@ export function renderPage(ui, { route = "/" } = {}) {
 /**
  * For a component that reads its own route params, so the test has to supply the
  * real `<Routes>` rather than render the page bare. Kept beside `renderPage` so
- * every router in the suite carries the same future flags and provider — a test
- * that builds its own `MemoryRouter` without them resolves paths under different
- * rules than the app does, and prints a warning on every run.
+ * every router in the suite carries the same provider and route resolution as
+ * the app.
  *
  * @param {React.ReactNode} routes The `<Route>` elements to mount.
  * @param {object} [options]
@@ -34,7 +32,7 @@ export function renderPage(ui, { route = "/" } = {}) {
 export function renderRoutes(routes, { route = "/" } = {}) {
   return render(
     <I18nProvider>
-      <MemoryRouter initialEntries={[route]} future={ROUTER_FUTURE}>
+      <MemoryRouter initialEntries={[route]}>
         <Routes>{routes}</Routes>
       </MemoryRouter>
     </I18nProvider>,

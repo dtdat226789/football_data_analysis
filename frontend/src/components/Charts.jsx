@@ -1,6 +1,3 @@
-
-import { useCallback } from "react";
-
 import { useFormatters } from "../i18n/useFormatters.js";
 
 /**
@@ -19,7 +16,7 @@ export function BarList({
   title,
 }) {
   const { num } = useFormatters();
-  const pretty = useCallback((v) => num(v), [num]);
+  const pretty = (v) => num(v);
   const max = Math.max(...data.map((d) => d.value), 1);
   return (
     <div>
@@ -60,7 +57,7 @@ export function Donut({
   center,
   title,
 }) {
-  const { num } = useFormatters();
+  const { t, num } = useFormatters();
   const total = segments.reduce((acc, s) => acc + (s.value || 0), 0) || 1;
   const radius = (size - thickness) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -69,7 +66,14 @@ export function Donut({
     <div className="donut-wrap">
       {title && <div className="chart-title">{title}</div>}
       <div className="donut-inline">
-        <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="donut" role="img">
+        <svg
+          width={size}
+          height={size}
+          viewBox={`0 0 ${size} ${size}`}
+          className="donut"
+          role="img"
+          aria-label={title || t("chart.donut")}
+        >
           <circle
             cx={size / 2}
             cy={size / 2}

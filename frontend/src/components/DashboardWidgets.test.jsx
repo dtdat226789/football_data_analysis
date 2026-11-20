@@ -27,7 +27,7 @@ describe("dashboard widgets", () => {
     const fills = /** @type {HTMLElement[]} */ ([...document.querySelectorAll(".dash-bar-fill")]);
     expect(fills.length).toBe(2);
     expect(fills[0].style.width).toBe("100%");
-    expect(fills[1].style.width).toBe("33.33333333333333%");
+    expect(parseFloat(fills[1].style.width)).toBeCloseTo(100 / 3, 3);
   });
 
   it("highlights the selected rank row", () => {

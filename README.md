@@ -61,6 +61,10 @@ Read from the environment, or from `.env` via `python-dotenv`.
 | `FOOTBALL_CHARTS_API_KEY` | yes | Upstream API key. Free tier returns current + previous season only. |
 | `DATABASE_URL` | yes | PostgreSQL DSN. |
 | `FETCH_DELAY_SECONDS` | no | Delay between upstream requests in `fetch_fixtures.py`. |
+| `WORKER_SHARED_SECRET` | production | Shared secret the Cloudflare Worker sends as `X-Worker-Secret`; direct API requests are rejected when set. |
+| `BACKEND_SHARED_SECRET` | production | Worker-side equivalent of `WORKER_SHARED_SECRET`; set with `wrangler secret put BACKEND_SHARED_SECRET`. |
+| `API_RATE_LIMIT_PER_MINUTE` | no | In-process fallback rate limit. Use Cloudflare rate limiting as the primary control. |
+| `DISABLE_DOCS` | production | Set to `1` to disable `/docs`, `/redoc` and `/openapi.json`. |
 
 The frontend reads `API_PORT` from `frontend/.env` (default `5173`), which is the
 port the Vite dev server proxies `/api` and `/health` to.
@@ -167,6 +171,34 @@ npm run build      # production build
 npm run check      # lint + typecheck + test
 ```
 
+### Production security settings
+
+Generate one value and install it in both places:
+
+```bash
+openssl rand -hex 32
+```
+
+1. Render service → Environment → add `WORKER_SHARED_SECRET` with that value,
+   plus `DISABLE_DOCS=1` and `API_RATE_LIMIT_PER_MINUTE=120`.
+2. Cloudflare Worker (same value):
+
+   ```bash
+   npx wrangler@4.165.0 secret put BACKEND_SHARED_SECRET --name football-web
+   ```
+
+   The Worker strips any client-supplied secret before injecting this one as
+   `X-Worker-Secret`, so a direct request cannot pass itself off as the Worker.
+   `deploy-web.yml` fails fast when the Worker secret is not configured.
+3. The `/api/*` (and `/health`) rate-limit rule lives in version control: the
+   `ratelimits` binding in `wrangler.jsonc` plus the check in `worker/index.js`
+   allow 120 requests/minute per client IP in each Cloudflare location and
+   return `429` with `Retry-After: 60`. Static assets are not limited; the
+   Render-side `API_RATE_LIMIT_PER_MINUTE` limiter is the second line of defence.
+
+The Worker also adds CSP, HSTS, clickjacking and MIME-sniffing headers to both
+API and static responses.
+
 ## Daily refresh
 
 ```bash
@@ -201,6 +233,22 @@ unreachable.
   skip).
 - **frontend** — `npm ci`, then `npm run lint`, `npm run typecheck`,
   `npm test`, `npm run build`.
+
+## Release checklist
+
+```bash
+cd frontend && npm ci && npm run check && npm run build && cd ..
+ruff check . && python3 -m pytest -q
+npx wrangler@4.165.0 deploy --dry-run
+```
+
+The Wrangler dry run needs no credentials and validates the Worker bundle,
+including the rate-limit binding. Before pushing, check the built app
+(`npm run preview` in `frontend/`, with the API on `API_PORT`) at desktop and
+mobile widths: dashboard, matches, league, team, match and fixture pages,
+keyboard focus/skip links and reduced-motion behaviour. A push to `main`
+triggers `deploy-web.yml` for the SPA + Worker; `daily-refresh.yml` owns data
+rebuilds, the backend image and the Render deploy hook.
 
 ## Lint
 

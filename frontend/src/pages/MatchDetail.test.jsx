@@ -52,6 +52,12 @@ describe("MatchDetail", () => {
     expect(api.match).toHaveBeenCalledWith("1001");
   });
 
+  it("offers a way back to the match list", async () => {
+    renderMatch();
+
+    expect(await screen.findByRole("link", { name: "Back to matches" })).toHaveAttribute("href", "/matches");
+  });
+
   it("shows an error box for unknown matches", async () => {
     api.match.mockRejectedValue(new Error("match 999999 not found"));
     renderMatch("/match/999999");

@@ -3,6 +3,7 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { useDebounced } from "../hooks/useDebounced.js";
 import { ErrorBox, TableSkeleton } from "../components/State.jsx";
+import { PageHeader, TableShell } from "../components/ui/index.js";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { pageLabel } from "../lib/pagination.js";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -37,16 +38,16 @@ export default function Teams() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>{t("page.teams.title")}</h2>
-        <p>
-          {data
+      <PageHeader
+        title={t("page.teams.title")}
+        subtitle={
+          data
             ? searching
               ? t("page.teams.matching", { n: total, q })
               : t("page.teams.count", { n: total })
-            : "…"}
-        </p>
-      </div>
+            : "…"
+        }
+      />
 
       <div className="filters">
         <input
@@ -55,33 +56,40 @@ export default function Teams() {
           aria-label={t("common.searchAria")}
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
-          style={{ minWidth: 260 }}
         />
       </div>
 
-      {loading && <div className="card"><TableSkeleton rows={10} cols={3} /></div>}
+      {loading && (
+        <div className="card">
+          <TableShell>
+            <TableSkeleton rows={10} cols={3} />
+          </TableShell>
+        </div>
+      )}
       {error && <ErrorBox error={error} />}
       {!loading && !error && (
         <>
           <div className="card">
-            <table className="data">
-              <thead>
-                <tr>
-                  <th>{t("table.rank")}</th>
-                  <th>{t("table.team")}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {teams.map((t, i) => (
-                  <tr key={t.id}>
-                    <td className="muted">{offset + i + 1}</td>
-                    <td>
-                      <TeamLink name={t.canonical_name} />
-                    </td>
+            <TableShell>
+              <table className="data">
+                <thead>
+                  <tr>
+                    <th scope="col">{t("table.rank")}</th>
+                    <th scope="col">{t("table.team")}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {teams.map((team, i) => (
+                    <tr key={team.id}>
+                      <td className="muted">{offset + i + 1}</td>
+                      <td>
+                        <TeamLink name={team.canonical_name} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </TableShell>
             {teams.length === 0 && (
               <p className="muted">
                 {searching ? t("page.teams.noMatch", { q }) : t("page.teams.empty")}

@@ -1,0 +1,382 @@
+.content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 24px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.topbar-brand {
+  order: 1;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.brand-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--green);
+  align-self: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+.brand-sub {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.topbar-nav {
+  order: 2;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  margin: 0 8px;
+  background: var(--border);
+}
+
+.nav a {
+  position: relative;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.nav a:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.nav a.active,
+.nav a[aria-current="page"] {
+  color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.nav a.active::after,
+.nav a[aria-current="page"]::after {
+  background: var(--accent);
+}
+
+.nav-toggle {
+  order: 4;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.nav-toggle-icon {
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-icon::before {
+  top: -6px;
+}
+
+.nav-toggle-icon::after {
+  top: 6px;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon {
+  background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.topbar-settings {
+  order: 3;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.settings-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.settings-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+/* Select styling lives with the other form controls in components.css. */
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.page-head h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.page-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.page-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.card-head h3 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+/* Cards that put a heading directly in the body should not inherit the
+   section-level top margin; this replaces a margin-top: 0 on each one. */
+.card > h3:first-child {
+  margin-top: 0;
+}
+
+.card-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.kpi {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.kpi .label {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi .value {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* The shared button shell is defined in components.css with the tabs and
+   presets; pagination only adds the disabled treatment. */
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    gap: 10px 12px;
+    padding: 10px 16px;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .topbar-settings {
+    order: 2;
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .nav-toggle {
+    order: 3;
+    display: inline-flex;
+  }
+
+  .topbar-nav {
+    order: 4;
+    flex-basis: 100%;
+    display: none;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .topbar-nav.is-open {
+    display: block;
+  }
+
+  .nav,
+  .nav-group {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+
+  .nav-divider {
+    width: auto;
+    height: 1px;
+    margin: 6px 0;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  .settings-controls {
+    gap: 8px;
+  }
+
+  .settings-control {
+    font-size: 12px;
+  }
+
+  .settings-control select {
+    padding: 6px 8px;
+  }
+
+  .page-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}

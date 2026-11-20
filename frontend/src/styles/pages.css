@@ -1,0 +1,301 @@
+/* Page-specific layout introduced by the dashboard and matches redesigns.
+   Shared primitives live in components.css; this file only arranges them. */
+
+.dashboard-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dashboard-kpis .kpi {
+  padding: 12px 14px;
+}
+
+.dashboard-kpis .kpi .value {
+  font-size: 22px;
+}
+
+.dashboard-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.rank-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rank-row {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-raised);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.rank-row:hover {
+  border-color: var(--accent);
+}
+
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-main {
+  min-width: 0;
+}
+
+.rank-name,
+.rank-meta {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rank-name {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.rank-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rank-value {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.region-group {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card-raised);
+}
+
+.region-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.region-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.region-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 6px;
+}
+
+.region-row:hover {
+  background: var(--surface-hover);
+}
+
+.region-link {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.region-link:hover {
+  color: var(--accent);
+}
+
+.region-count {
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.region-more {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.match-filters .card-head {
+  margin-bottom: 14px;
+}
+
+/* Detail pages share one rhythm: a way back, a heading, and cards of metadata.
+   Keeping the spacing here avoids a style attribute on every section. */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent);
+}
+
+.detail-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.detail-note {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.detail-subtle {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.detail-block {
+  display: block;
+}
+
+.detail-heading-skeleton {
+  max-width: 640px;
+}
+
+.detail-inline-note {
+  margin-left: 8px;
+  color: var(--muted);
+}
+
+.detail-inline-item {
+  margin-right: 12px;
+}
+
+.detail-team-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-team-side {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.detail-form {
+  margin-bottom: 10px;
+}
+
+.detail-events {
+  margin-top: 12px;
+}
+
+.team-crest {
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.detail-filters .filters {
+  margin-bottom: 0;
+}
+
+/* Layout that used to live in style attributes on the catalog and analysis
+   pages. Naming it once keeps the spacing consistent across both themes. */
+.league-region {
+  margin-top: 24px;
+}
+
+.league-card-meta {
+  font-size: 12px;
+}
+
+.league-card-badge {
+  margin-top: 8px;
+}
+
+.kpi-row--spaced {
+  margin-top: 12px;
+}
+
+.card--spaced {
+  margin-top: 16px;
+}
+
+.findings-list {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.finding-detail,
+.section-hint {
+  font-size: 13px;
+}
+
+.charts-section {
+  margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+  .dashboard-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-highlights,
+  .region-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -85,6 +85,28 @@ describe("Matches", () => {
     expect(screen.getAllByText("2 – 1").length).toBeGreaterThanOrEqual(1);
   });
 
+  it("separates shared filters from the display controls", async () => {
+    renderPage(<Matches />);
+    await screen.findByRole("heading", { name: "Matches" });
+
+    expect(screen.getByRole("heading", { name: "Filters" })).toBeInTheDocument();
+    const shared = screen.getByRole("group", { name: "Applies to both lists" });
+    const options = screen.getByRole("group", { name: "Display options" });
+
+    expect(within(shared).getByLabelText("League")).toBeInTheDocument();
+    expect(within(shared).getByLabelText("From date")).toBeInTheDocument();
+    expect(within(options).getByLabelText("Page size")).toBeInTheDocument();
+    expect(within(options).getByRole("group", { name: "Date window presets" })).toBeInTheDocument();
+    expect(within(shared).queryByLabelText("Page size")).not.toBeInTheDocument();
+  });
+
+  it("makes the recent results table keyboard-scrollable", async () => {
+    renderPage(<Matches />);
+    const table = await screen.findByRole("table");
+
+    expect(table.closest(".table-shell")).toHaveAttribute("tabindex", "0");
+  });
+
   it("groups upcoming fixtures under a heading per day", async () => {
     renderPage(<Matches />);
     await screen.findByRole("heading", { name: /Upcoming/ });

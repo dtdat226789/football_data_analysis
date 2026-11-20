@@ -6,7 +6,9 @@ import { FormPills } from "../components/FormPills.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
+import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
+import { safeHttpsUrl } from "../lib/safeUrl.js";
 
 /**
  * The model's full read on an unplayed fixture: goal totals, expected goals,
@@ -23,12 +25,16 @@ function PredictabilityPanel({ prediction }) {
   const gates = prediction.gates || {};
 
   return (
-    <section className="card">
-      <h3 style={{ marginTop: 0 }}>
-        {t("predictability.title")}{" "}
-        <span className="badge">{prediction.model || "—"}</span>
-        {status.stale && <span className="badge amber">{t("predictability.stale")}</span>}
-      </h3>
+    <Card>
+      <CardHeader
+        title={t("predictability.title")}
+        actions={
+          <>
+            <Badge>{prediction.model || "—"}</Badge>
+            {status.stale && <Badge tone="amber">{t("predictability.stale")}</Badge>}
+          </>
+        }
+      />
 
       <MatchOutlook
         predictions={prediction.summary}
@@ -36,73 +42,75 @@ function PredictabilityPanel({ prediction }) {
         dataThrough={prediction.data_through}
       />
 
-      <table className="data" style={{ marginTop: 12 }}>
-        <tbody>
-          <tr>
-            <th>{t("predictability.expectedGoals")}</th>
-            <td>
-              {dec(goals.home, 2)} – {dec(goals.away, 2)}
-              <span className="muted" style={{ marginLeft: 8 }}>
-                {t("predictability.htTotal")} {dec(goals.half_time_total, 2)}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.ratings")}</th>
-            <td>
-              {["home", "away"].map((side) => (
-                <span key={side} style={{ marginRight: 12 }}>
-                  {side} att {dec(ratings[side]?.attack, 2)} / def {dec(ratings[side]?.defence, 2)}
+      <TableShell>
+        <table className="data">
+          <tbody>
+            <tr>
+              <th scope="row">{t("predictability.expectedGoals")}</th>
+              <td>
+                {dec(goals.home, 2)} – {dec(goals.away, 2)}
+                <span className="detail-inline-note">
+                  {t("predictability.htTotal")} {dec(goals.half_time_total, 2)}
                 </span>
-              ))}
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.sampleSize")}</th>
-            <td>
-              {["home", "away"].map((side) => (
-                <span key={side} style={{ marginRight: 12 }}>
-                  {side} {dec(effective[side], 1)}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.ratings")}</th>
+              <td>
+                {["home", "away"].map((side) => (
+                  <span key={side} className="detail-inline-item">
+                    {side} {t("predictability.attackShort")} {dec(ratings[side]?.attack, 2)} / {t("predictability.defenceShort")} {dec(ratings[side]?.defence, 2)}
+                  </span>
+                ))}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.sampleSize")}</th>
+              <td>
+                {["home", "away"].map((side) => (
+                  <span key={side} className="detail-inline-item">
+                    {side} {dec(effective[side], 1)}
+                  </span>
+                ))}
+                <span className="muted">{t("predictability.effectiveMatches")}</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.drawInflation")}</th>
+              <td>
+                {dec(prediction.xi, 4)}
+                <span className="detail-inline-note">
+                  {t("predictability.sigma")} {dec(prediction.sigma, 1)}
                 </span>
-              ))}
-              <span className="muted">{t("predictability.effectiveMatches")}</span>
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.drawInflation")}</th>
-            <td>
-              {dec(prediction.xi, 4)}
-              <span className="muted" style={{ marginLeft: 8 }}>
-                sigma {dec(prediction.sigma, 1)}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.gates")}</th>
-            <td>
-              {Object.entries(gates).length
-                ? Object.entries(gates)
-                    .map(([name, passed]) => `${name}: ${passed ? t("predictability.pass") : t("predictability.fail")}`)
-                    .join(" · ")
-                : "—"}
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.dataThrough")}</th>
-            <td>
-              {prediction.data_through || "—"}
-              <span className="muted" style={{ marginLeft: 8 }}>
-                {status.matches_behind ? t("predictability.matchesBehind", { n: status.matches_behind }) : ""}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.computed")}</th>
-            <td className="muted">{prediction.computed_at || "—"}</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.gates")}</th>
+              <td>
+                {Object.entries(gates).length
+                  ? Object.entries(gates)
+                      .map(([name, passed]) => `${name}: ${passed ? t("predictability.pass") : t("predictability.fail")}`)
+                      .join(" · ")
+                  : "—"}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.dataThrough")}</th>
+              <td>
+                {prediction.data_through || "—"}
+                <span className="detail-inline-note">
+                  {status.matches_behind ? t("predictability.matchesBehind", { n: status.matches_behind }) : ""}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.computed")}</th>
+              <td className="muted">{prediction.computed_at || "—"}</td>
+            </tr>
+          </tbody>
+        </table>
+      </TableShell>
+    </Card>
   );
 }
 
@@ -112,68 +120,72 @@ function TeamCard({ side, team, standings }) {
   if (!team) return null;
   const venue = team.venue;
   return (
-    <section className="card">
-      <h3 style={{ marginTop: 0, display: "flex", alignItems: "center", gap: 8 }}>
-        {team.logo ? (
-          <img src={team.logo} alt="" width={22} height={22} style={{ objectFit: "contain" }} />
-        ) : null}
-        <TeamLink name={team.name} />
-        <span className="muted" style={{ fontSize: 13, fontWeight: 400 }}>
-          {t(side === "home" ? "page.team.venue.home" : "page.team.venue.away")}
-        </span>
-      </h3>
+    <Card>
+      <CardHeader
+        title={
+          <span className="detail-team-heading">
+            {team.logo ? (
+              <img className="team-crest" src={team.logo} alt="" width={22} height={22} decoding="async" />
+            ) : null}
+            <TeamLink name={team.name} />
+            <span className="detail-team-side">
+              {t(side === "home" ? "page.team.venue.home" : "page.team.venue.away")}
+            </span>
+          </span>
+        }
+      />
 
-      <div style={{ marginBottom: 10 }}>
-        <span className="muted" style={{ fontSize: 12, display: "block" }}>
+      <div className="detail-form">
+        <span className="detail-subtle detail-block">
           {t("predictability.form", { n: team.form?.length || 0 })}
         </span>
         <FormPills results={team.form} />
       </div>
 
-      <table className="data">
-        <tbody>
-          <tr>
-            <th>{t("predictability.venueSplit")}</th>
-            <td>
-              {venue ? (
-                <>
-                  {venue.wins}W {venue.draws}D {venue.losses}L · {t("predictability.winRate")}{" "}
-                  {pct(venue.win_rate)} · {dec(venue.goals_avg, 1)} {t("predictability.scored")},{" "}
-                  {dec(venue.conceded_avg, 1)} {t("predictability.conceded")}
-                </>
-              ) : (
-                "—"
-              )}
-            </td>
-          </tr>
-          <tr>
-            <th>{t("predictability.rest")}</th>
-            <td>{team.rest_days != null ? t("predictability.restDays", { n: team.rest_days }) : "—"}</td>
-          </tr>
-          <tr>
-            <th>{t("predictability.played")}</th>
-            <td>{team.games_before ?? "—"}</td>
-          </tr>
-          <tr>
-            <th>{t("predictability.table")}</th>
-            <td>
-              {standings ? (
-                <>
-                  {t("predictability.tableLine", {
+      <TableShell>
+        <table className="data">
+          <tbody>
+            <tr>
+              <th scope="row">{t("predictability.venueSplit")}</th>
+              <td>
+                {venue ? (
+                  <>
+                    {venue.wins}W {venue.draws}D {venue.losses}L · {t("predictability.winRate")}{" "}
+                    {pct(venue.win_rate)} · {dec(venue.goals_avg, 1)} {t("predictability.scored")},{" "}
+                    {dec(venue.conceded_avg, 1)} {t("predictability.conceded")}
+                  </>
+                ) : (
+                  "—"
+                )}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.rest")}</th>
+              <td>{team.rest_days != null ? t("predictability.restDays", { n: team.rest_days }) : "—"}</td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.played")}</th>
+              <td>{team.games_before ?? "—"}</td>
+            </tr>
+            <tr>
+              <th scope="row">{t("predictability.table")}</th>
+              <td>
+                {standings ? (
+                  t("predictability.tableLine", {
                     position: standings.position,
                     points: standings.points,
                     gd: `${standings.goal_difference > 0 ? "+" : ""}${standings.goal_difference}`,
                     played: standings.played,
-                  })}
-                </>
-              ) : (
-                "—"
-              )}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+                  })
+                ) : (
+                  "—"
+                )}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </TableShell>
+    </Card>
   );
 }
 
@@ -188,8 +200,12 @@ export default function FixtureDetail() {
   if (loading)
     return (
       <div>
-        <Skeleton height={46} width="55%" style={{ maxWidth: 640 }} />
-        <Skeleton width="35%" height={14} />
+        <div className="page-head">
+          <div className="page-heading">
+            <Skeleton className="detail-heading-skeleton" height={46} width="55%" />
+            <Skeleton width="35%" height={14} />
+          </div>
+        </div>
         <div className="two-col">
           <Skeleton height={200} />
           <Skeleton height={200} />
@@ -201,96 +217,114 @@ export default function FixtureDetail() {
 
   const home = data.teams?.home;
   const away = data.teams?.away;
+  const portalLink = safeHttpsUrl(data.kickoff?.portal_link);
 
   return (
     <div>
-      <div className="page-head">
-        <h2>
-          {home?.logo ? (
-            <img src={home.logo} alt="" width={24} height={24} style={{ objectFit: "contain" }} />
-          ) : null}{" "}
-          <TeamLink name={home?.name} /> {t("common.vs")} <TeamLink name={away?.name} />{" "}
-          {away?.logo ? (
-            <img src={away.logo} alt="" width={24} height={24} style={{ objectFit: "contain" }} />
-          ) : null}
-        </h2>
-        <p>
-          {kickoffDay(data.match_date, data.kickoff?.time)} {kickoffTime(data.match_date, data.kickoff?.time)}
-          {data.matchday ? ` · ${t("page.fixture.matchdayLine", { n: data.matchday })}` : ""}
-          {data.season ? ` · ${data.season}` : ""}
-          {data.status ? ` · ${data.status}` : ""}
-        </p>
-      </div>
-
-      <div className="two-col">
-        <PredictabilityPanel prediction={data.predictability} />
-        <div className="stack" style={{ display: "grid", gap: 16, alignContent: "start" }}>
-          <TeamCard side="home" team={home} standings={data.standings?.home} />
-          <TeamCard side="away" team={away} standings={data.standings?.away} />
-        </div>
-      </div>
-
-      {/* Reused verbatim: the endpoint returns these two sections in exactly the
-          shape /matches/{api_id}/insights uses. */}
-      <MatchInsights
-        insights={{ pre_match: data.pre_match, model: null, head_to_head: data.head_to_head }}
-        homeName={home?.name}
-        awayName={away?.name}
+      <BackLink to={`/leagues/${data.league || league}?tab=matches&season=${data.season || ""}`}>
+        {t("page.fixture.back")}
+      </BackLink>
+      <PageHeader
+        title={
+          <>
+            {home?.logo ? (
+              <img className="team-crest" src={home.logo} alt="" width={24} height={24} decoding="async" />
+            ) : null}{" "}
+            <TeamLink name={home?.name} /> {t("common.vs")} <TeamLink name={away?.name} />{" "}
+            {away?.logo ? (
+              <img className="team-crest" src={away.logo} alt="" width={24} height={24} decoding="async" />
+            ) : null}
+          </>
+        }
+        subtitle={
+          <>
+            {kickoffDay(data.match_date, data.kickoff?.time)} {kickoffTime(data.match_date, data.kickoff?.time)}
+            {data.matchday ? ` · ${t("page.fixture.matchdayLine", { n: data.matchday })}` : ""}
+            {data.season ? ` · ${data.season}` : ""}
+            {data.status ? ` · ${data.status}` : ""}
+          </>
+        }
       />
 
-      <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>{t("page.fixture.record")}</h3>
-        <table className="data">
-          <tbody>
-            <tr>
-              <th>{t("common.league")}</th>
-              <td>
-                <Link className="link" to={`/leagues/${data.league}`}>
-                  {data.league_name || data.real_league_name || data.league}
-                </Link>
-                {data.country ? <span className="muted"> · {data.country}</span> : null}
-              </td>
-            </tr>
-            <tr>
-              <th>{t("page.fixture.matchday")}</th>
-              <td>{data.matchday ?? "—"}</td>
-            </tr>
-            <tr>
-              <th>{t("common.season")}</th>
-              <td>
-                {data.season || "—"}
-                {data.season_state ? <span className="muted"> · {data.season_state}</span> : null}
-              </td>
-            </tr>
-            <tr>
-              <th>{t("page.fixture.kickoff")}</th>
-              <td>
-                {data.kickoff?.match_datetime
-                  ? `${instantHeading(data.kickoff.match_datetime)} · ${instantTime(data.kickoff.match_datetime)}`
-                  : data.kickoff?.time || "—"}
-              </td>
-            </tr>
-            <tr>
-              <th>{t("page.fixture.label")}</th>
-              <td>{data.kickoff?.label || "—"}</td>
-            </tr>
-            <tr>
-              <th>{t("page.fixture.phase")}</th>
-              <td>{data.kickoff?.league_phase_status || "—"}</td>
-            </tr>
-            {data.kickoff?.portal_link ? (
-              <tr>
-                <th>{t("page.fixture.source")}</th>
-                <td>
-                  <a className="link" href={data.kickoff.portal_link} target="_blank" rel="noreferrer">
-                    football-charts.com
-                  </a>
-                </td>
-              </tr>
-            ) : null}
-          </tbody>
-        </table>
-      </section>
+      <div className="detail-stack">
+        <div className="two-col">
+          <PredictabilityPanel prediction={data.predictability} />
+          <div className="detail-side">
+            <TeamCard side="home" team={home} standings={data.standings?.home} />
+            <TeamCard side="away" team={away} standings={data.standings?.away} />
+          </div>
+        </div>
+
+        {/* Reused verbatim: the endpoint returns these two sections in exactly the
+            shape /matches/{api_id}/insights uses. */}
+        <MatchInsights
+          insights={{ pre_match: data.pre_match, model: null, head_to_head: data.head_to_head }}
+          homeName={home?.name}
+          awayName={away?.name}
+        />
+
+        <Card>
+          <CardHeader title={t("page.fixture.record")} />
+          <TableShell>
+            <table className="data">
+              <tbody>
+                <tr>
+                  <th scope="row">{t("common.league")}</th>
+                  <td>
+                    <Link className="link" to={`/leagues/${data.league}`}>
+                      {data.league_name || data.real_league_name || data.league}
+                    </Link>
+                    {data.country ? <span className="muted"> · {data.country}</span> : null}
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">{t("page.fixture.matchday")}</th>
+                  <td>{data.matchday ?? "—"}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{t("common.season")}</th>
+                  <td>
+                    {data.season || "—"}
+                    {data.season_state ? <span className="muted"> · {data.season_state}</span> : null}
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">{t("page.fixture.kickoff")}</th>
+                  <td>
+                    {data.kickoff?.match_datetime
+                      ? `${instantHeading(data.kickoff.match_datetime)} · ${instantTime(data.kickoff.match_datetime)}`
+                      : data.kickoff?.time || "—"}
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">{t("page.fixture.label")}</th>
+                  <td>{data.kickoff?.label || "—"}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{t("page.fixture.phase")}</th>
+                  <td>{data.kickoff?.league_phase_status || "—"}</td>
+                </tr>
+                {portalLink ? (
+                  <tr>
+                    <th scope="row">{t("page.fixture.source")}</th>
+                    <td>
+                      <a
+                        className="link"
+                        href={portalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        referrerPolicy="no-referrer"
+                      >
+                        football-charts.com
+                      </a>
+                    </td>
+                  </tr>
+                ) : null}
+              </tbody>
+            </table>
+          </TableShell>
+        </Card>
+      </div>
     </div>
   );
 }

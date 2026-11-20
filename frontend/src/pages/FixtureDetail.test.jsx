@@ -46,6 +46,13 @@ describe("FixtureDetail", () => {
     expect(api.fixtureDetail).toHaveBeenCalledWith(LEAGUE, TAIL);
   });
 
+  it("links back to the league's matches tab for its season", async () => {
+    renderFixture();
+
+    const back = await screen.findByRole("link", { name: "Back to league matches" });
+    expect(back).toHaveAttribute("href", "/leagues/premier?tab=matches&season=2025-2026");
+  });
+
   it("shows the headline, matchday, season and status", async () => {
     renderFixture();
 
@@ -133,6 +140,19 @@ describe("FixtureDetail", () => {
       "href",
       "/leagues/premier",
     );
+  });
+
+  it("does not render an unsafe portal link", async () => {
+    seed({
+      ...fixtureDetail,
+      kickoff: { ...fixtureDetail.kickoff, portal_link: "javascript:alert(1)" },
+    });
+
+    renderFixture();
+
+    await screen.findByRole("heading", { name: "Arsenal vs Chelsea" });
+    const card = screen.getByRole("heading", { name: "Fixture record" }).closest("section");
+    expect(within(card).queryByRole("link", { name: "football-charts.com" })).not.toBeInTheDocument();
   });
 
   it("renders without history or a collected detail payload", async () => {

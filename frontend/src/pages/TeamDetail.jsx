@@ -7,6 +7,7 @@ import { FormPills } from "../components/FormPills.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BarList, Donut, StatCard } from "../components/Charts.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
+import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 import { useParamsPatch } from "../lib/searchParams.js";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -58,22 +59,22 @@ function TeamStatsBlock({ data, scopeLabel }) {
           }
         />
       </div>
-      <p className="muted" style={{ fontSize: 12, margin: "0 0 8px" }}>
+      <p className="detail-note">
         {t("page.team.statsSummary", { scope: scopeLabel })}
       </p>
       <div className="team-stats">
-        <div className="card panel">
+        <Card as="div" className="panel">
           <BarList title={t("page.team.chart.points")} data={pointsData} color={POINTS_COLOR} format={(v) => `${v} ${t("common.pts")}`} />
-        </div>
-        <div className="card panel">
+        </Card>
+        <Card as="div" className="panel">
           <BarList title={t("page.team.chart.position")} data={posData} color={POSITION_COLOR} format={(v) => `#${v}`} />
-        </div>
-        <div className="card panel">
+        </Card>
+        <Card as="div" className="panel">
           <Donut title={t("page.team.chart.wdl", { n: totals.played })} segments={wdl} center={num(totals.played)} />
-        </div>
-        <div className="card panel">
+        </Card>
+        <Card as="div" className="panel">
           <BarList title={t("page.team.chart.winByVenue")} data={winPctData} color={WIN_COLOR} format={(v) => `${v}%`} />
-        </div>
+        </Card>
       </div>
     </>
   );
@@ -174,8 +175,10 @@ export default function TeamDetail() {
     return (
       <div>
         <div className="page-head">
-          <Skeleton height={36} width="40%" />
-          <Skeleton height={14} width="25%" />
+          <div className="page-heading">
+            <Skeleton height={36} width="40%" />
+            <Skeleton height={14} width="25%" />
+          </div>
         </div>
         <TableSkeleton rows={4} cols={4} />
         <TableSkeleton rows={4} cols={4} />
@@ -187,175 +190,196 @@ export default function TeamDetail() {
 
   return (
     <div>
-      <div className="page-head">
-        <h2>
-          {apiName}
-          {seasonMatches[0]?.logo_url && (
-            <img src={seasonMatches[0].logo_url} alt="" style={{ height: 28, marginLeft: 10, verticalAlign: "middle" }} />
-          )}
-        </h2>
-        <p>
-          <span className="muted">{t("page.teams.canonical")}:</span> {team?.canonical_name}
-        </p>
-        <Link className="link" to={`/teams/${slug}/kpi?league=${league}&season=${season || ""}`}>
-          {t("page.team.kpiLink")} →
-        </Link>
-      </div>
+      <BackLink to="/teams">{t("page.team.back")}</BackLink>
+      <PageHeader
+        title={
+          <>
+            {apiName}
+            {seasonMatches[0]?.logo_url && (
+              <img className="team-crest" src={seasonMatches[0].logo_url} alt="" width={28} height={28} decoding="async" />
+            )}
+          </>
+        }
+        subtitle={
+          <>
+            <span className="muted">{t("page.teams.canonical")}:</span> {team?.canonical_name}
+          </>
+        }
+        actions={
+          <Link className="link" to={`/teams/${slug}/kpi?league=${league}&season=${season || ""}`}>
+            {t("page.team.kpiLink")} →
+          </Link>
+        }
+      />
 
-      <div className="filters">
-        <select aria-label={t("page.matches.league")} value={league} onChange={(e) => onLeagueChange(e.target.value)}>
-          {leagues.map((l) => (
-            <option key={l.league} value={l.league}>
-              {l.league_name}
-            </option>
-          ))}
-        </select>
-        <select
-          aria-label={t("common.season")}
-          value={season}
-          onChange={(e) => onSeasonChange(e.target.value)}
-          disabled={!league}
-        >
-          <option value="">{t("page.league.seasonPrompt")}</option>
-          {memberships
-            .filter((m) => m.league === league)
-            .map((m) => (
-              <option key={m.season} value={m.season}>
-                {m.season}
+      <Card className="detail-filters">
+        <CardHeader title={t("page.team.scopeTitle")} />
+        <div className="filters">
+          <select aria-label={t("page.matches.league")} value={league} onChange={(e) => onLeagueChange(e.target.value)}>
+            {leagues.map((l) => (
+              <option key={l.league} value={l.league}>
+                {l.league_name}
               </option>
             ))}
-        </select>
-      </div>
+          </select>
+          <select
+            aria-label={t("common.season")}
+            value={season}
+            onChange={(e) => onSeasonChange(e.target.value)}
+            disabled={!league}
+          >
+            <option value="">{t("page.league.seasonPrompt")}</option>
+            {memberships
+              .filter((m) => m.league === league)
+              .map((m) => (
+                <option key={m.season} value={m.season}>
+                  {m.season}
+                </option>
+              ))}
+          </select>
+        </div>
+      </Card>
 
-      <div className="two-col">
-        {standing.data && league && season && (
-          <section className="card">
-            <h3 style={{ marginTop: 0 }}>{t("page.team.standings", { season })}</h3>
-            {standing.data.row ? (
-              <table className="data">
-                <tbody>
-                  <tr><th>{t("table.pos")}</th><td>{standing.data.row.position}</td></tr>
-                  <tr><th>{t("page.team.record")}</th><td>{standing.data.row.won}W-{standing.data.row.drawn}D-{standing.data.row.lost}L</td></tr>
-                  <tr><th>{t("page.team.goals")}</th><td>{standing.data.row.goals_for} : {standing.data.row.goals_against} ({standing.data.row.goal_difference >= 0 ? "+" : ""}{standing.data.row.goal_difference})</td></tr>
-                  <tr><th>{t("page.team.points")}</th><td><strong>{standing.data.row.points}</strong></td></tr>
-                </tbody>
-              </table>
-            ) : (
-              <p className="muted">{t("page.team.notInTable")}</p>
-            )}
-          </section>
-        )}
+      <div className="detail-stack">
+        <div className="two-col">
+          {standing.data && league && season && (
+            <Card>
+              <CardHeader title={t("page.team.standings", { season })} />
+              {standing.data.row ? (
+                <TableShell>
+                  <table className="data">
+                    <tbody>
+                      <tr><th scope="row">{t("table.pos")}</th><td>{standing.data.row.position}</td></tr>
+                      <tr><th scope="row">{t("page.team.record")}</th><td>{standing.data.row.won}W-{standing.data.row.drawn}D-{standing.data.row.lost}L</td></tr>
+                      <tr><th scope="row">{t("page.team.goals")}</th><td>{standing.data.row.goals_for} : {standing.data.row.goals_against} ({standing.data.row.goal_difference >= 0 ? "+" : ""}{standing.data.row.goal_difference})</td></tr>
+                      <tr><th scope="row">{t("page.team.points")}</th><td><strong>{standing.data.row.points}</strong></td></tr>
+                    </tbody>
+                  </table>
+                </TableShell>
+              ) : (
+                <p className="muted">{t("page.team.notInTable")}</p>
+              )}
+            </Card>
+          )}
 
-        {form.data && (
-          <section className="card">
-            <h3 style={{ marginTop: 0 }}>{t("page.team.recentForm")}</h3>
-            <FormPills results={form.data.results} />
-            <div className="event-list" style={{ marginTop: 12 }}>
-              {form.data.results.map((r, i) => (
+          {form.data && (
+            <Card>
+              <CardHeader title={t("page.team.recentForm")} />
+              <FormPills results={form.data.results} />
+              <div className="event-list detail-events">
+                {form.data.results.map((r, i) => (
+                  <div key={i} className="event">
+                    <div className="teams">
+                      <span className="detail-subtle">{plainDay(r.date)}</span>
+                      <span><TeamLink name={r.home_team} /> {t("common.vs")} <TeamLink name={r.away_team} /></span>
+                    </div>
+                    <div className="score muted">
+                      {r.home_score} – {r.away_score} <span className={`pill ${r.team_result}`}>{r.team_result}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          )}
+        </div>
+
+        {upcoming.length > 0 && league && (
+          <Card>
+            <CardHeader title={t("page.team.upcoming", { league: leagueName })} />
+            <div className="event-list">
+              {upcoming.map((m, i) => (
                 <div key={i} className="event">
                   <div className="teams">
-                    <span className="muted" style={{ fontSize: 12 }}>{plainDay(r.date)}</span>
-                    <span><TeamLink name={r.home_team} /> {t("common.vs")} <TeamLink name={r.away_team} /></span>
+                    <span className="detail-subtle">
+                      {kickoffDay(m.match_date, m.time)} {kickoffTime(m.match_date, m.time)}
+                    </span>
+                    <span><TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} /></span>
                   </div>
-                  <div className="score muted">
-                    {r.home_score} – {r.away_score} <span className={`pill ${r.team_result}`}>{r.team_result}</span>
-                  </div>
+                  <MatchOutlook predictions={m.model_predictions?.dc_v2?.calibrated} compact />
                 </div>
               ))}
             </div>
-          </section>
+          </Card>
+        )}
+
+        {matches.data && (
+          <Card>
+            <CardHeader title={t("page.team.recentMatches", { n: num(matches.data.total) })} />
+            <TableShell>
+              <table className="data">
+                <thead>
+                  <tr><th scope="col">{t("common.date")}</th><th scope="col">{t("common.home")}</th><th scope="col" className="num">{t("common.score")}</th><th scope="col">{t("common.away")}</th><th scope="col">{t("common.detail")}</th></tr>
+                </thead>
+                <tbody>
+                  {matches.data.matches.map((m) => (
+                    <tr key={m.api_id}>
+                      <td>{plainDay(m.match_date)}</td>
+                      <td><TeamLink name={m.home_team} /></td>
+                      <td className="num"><strong>{m.home_score} – {m.away_score}</strong></td>
+                      <td><TeamLink name={m.away_team} /></td>
+                      <td>
+                        <Link className="link" to={`/match/${m.api_id}`}>
+                          {t("common.view")}
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </TableShell>
+          </Card>
+        )}
+
+        <Card>
+          <CardHeader title={t("page.team.statistics", { league: leagueName })} />
+          {stats.error && <ErrorBox error={stats.error} />}
+          {stats.loading && (
+            <div className="team-stats">
+              {Array.from({ length: 4 }, (_, i) => (
+                <Card as="div" className="panel" key={i}>
+                  <Skeleton width="60%" height={13} />
+                  <Skeleton height={90} />
+                </Card>
+              ))}
+            </div>
+          )}
+          {stats.data && !stats.loading && (
+            stats.data.seasons.length === 0 ? (
+              <p className="muted">{t("page.team.noStats", { league: leagueName })}</p>
+            ) : (
+              <TeamStatsBlock
+                data={stats.data}
+                scopeLabel={stats.data.scope === "all" ? t("page.team.scopeAll") : stats.data.scope}
+              />
+            )
+          )}
+        </Card>
+
+        {memberships.length > 0 && (
+          <Card>
+            <CardHeader
+              title={t("page.team.seasonsCount", { n: num(memberships.length) })}
+              actions={<Badge tone="green">{leagueName}</Badge>}
+            />
+            <TableShell>
+              <table className="data">
+                <thead>
+                  <tr><th scope="col">{t("common.league")}</th><th scope="col">{t("common.seasonsCol")}</th><th scope="col">{t("page.team.apiName")}</th></tr>
+                </thead>
+                <tbody>
+                  {memberships.map((m, i) => (
+                    <tr key={i}>
+                      <td>{m.league_name || m.league}</td>
+                      <td>{m.season}</td>
+                      <td>{m.api_name}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </TableShell>
+          </Card>
         )}
       </div>
-
-      {upcoming.length > 0 && league && (
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>{t("page.team.upcoming", { league: leagueName })}</h3>
-          <div className="event-list">
-            {upcoming.map((m, i) => (
-              <div key={i} className="event">
-                <div className="teams">
-                  <span className="muted" style={{ fontSize: 12 }}>
-                    {kickoffDay(m.match_date, m.time)} {kickoffTime(m.match_date, m.time)}
-                  </span>
-                  <span><TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} /></span>
-                </div>
-                <MatchOutlook predictions={m.model_predictions?.dc_v2?.calibrated} compact />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {matches.data && (
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>{t("page.team.recentMatches", { n: num(matches.data.total) })}</h3>
-          <table className="data">
-            <thead>
-              <tr><th>{t("common.date")}</th><th>{t("common.home")}</th><th className="num">{t("common.score")}</th><th>{t("common.away")}</th><th>{t("common.detail")}</th></tr>
-            </thead>
-            <tbody>
-              {matches.data.matches.map((m) => (
-                <tr key={m.api_id}>
-                  <td>{plainDay(m.match_date)}</td>
-                  <td><TeamLink name={m.home_team} /></td>
-                  <td className="num"><strong>{m.home_score} – {m.away_score}</strong></td>
-                  <td><TeamLink name={m.away_team} /></td>
-                  <td>
-                    <Link className="link" to={`/match/${m.api_id}`}>
-                      {t("common.view")}
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      )}
-
-      <section className="card" style={{ marginTop: 16 }}>
-        <h3 style={{ marginTop: 0 }}>{t("page.team.statistics", { league: leagueName })}</h3>
-        {stats.error && <ErrorBox error={stats.error} />}
-        {stats.loading && (
-          <div className="team-stats">
-            {Array.from({ length: 4 }, (_, i) => (
-              <div key={i} className="card panel">
-                <Skeleton width="60%" height={13} />
-                <Skeleton height={90} />
-              </div>
-            ))}
-          </div>
-        )}
-        {stats.data && !stats.loading && (
-          stats.data.seasons.length === 0 ? (
-            <p className="muted">{t("page.team.noStats", { league: leagueName })}</p>
-          ) : (
-            <TeamStatsBlock
-              data={stats.data}
-              scopeLabel={stats.data.scope === "all" ? t("page.team.scopeAll") : stats.data.scope}
-            />
-          )
-        )}
-      </section>
-
-      {memberships.length > 0 && (
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>{t("page.team.seasonsCount", { n: num(memberships.length) })}</h3>
-          <table className="data">
-            <thead>
-              <tr><th>{t("common.league")}</th><th>{t("common.seasonsCol")}</th><th>{t("page.team.apiName")}</th></tr>
-            </thead>
-            <tbody>
-              {memberships.map((m, i) => (
-                <tr key={i}>
-                  <td>{m.league_name || m.league}</td>
-                  <td>{m.season}</td>
-                  <td>{m.api_name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      )}
     </div>
   );
 }

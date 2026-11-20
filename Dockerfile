@@ -2,7 +2,9 @@ FROM --platform=linux/amd64 python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1
+    PIP_NO_CACHE_DIR=1 \
+    DISABLE_DOCS=1 \
+    API_RATE_LIMIT_PER_MINUTE=120
 
 WORKDIR /app
 
@@ -20,6 +22,13 @@ COPY data/raw/fixtures ./data/raw/fixtures
 COPY data/analysis ./data/analysis
 COPY ml/datasets ./ml/datasets
 
+# Run the API as an unprivileged user. /app is writable so uvicorn and the
+# analysis helpers can still create caches/logs without root.
+RUN groupadd --system app \
+ && useradd --system --gid app --home-dir /app --no-create-home app \
+ && chown -R app:app /app
+
+USER app
 WORKDIR /app/backend
 EXPOSE 8000
 
