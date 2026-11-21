@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 #
-# Daily refresh of the Football Charts dataset (raw -> Postgres -> analysis -> dashboard).
+# Daily refresh of the Football Charts dataset (raw -> Postgres -> analysis -> dashboard -> ML).
 #
 #   1. collect_all_leagues.py --active-only --overwrite   results + tables for live seasons
 #   2. fetch_fixtures.py --overwrite                     upcoming fixtures + model_predictions
 #   3. validate_raw_data.py  (one league per run)        raw-data findings
 #   4. build_all_leagues.py                              Postgres rebuild + analysis, all leagues
 #   5. build_dashboard.py                                all-league HTML dashboard
+#   6. generate_ml_artifacts.sh                          dataset, gated model, predictions
 #
 # Driven by the "FootballDataRefresh" Windows scheduled task (install_task.ps1),
 # which wakes this distro through wsl.exe. Also runnable by hand:
@@ -343,6 +344,10 @@ run_stage "build database + analysis (all leagues)" \
 # ------------------------------------------------------------------- stage 5
 run_stage "build dashboard" \
     "$PYTHON" backend/scripts/build_dashboard.py
+
+# ------------------------------------------------------------------- stage 6
+run_stage "generate ML artifacts" \
+    bash scripts/generate_ml_artifacts.sh
 
 # ------------------------------------------------------------------- summary
 rule

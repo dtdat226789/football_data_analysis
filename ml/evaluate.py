@@ -37,6 +37,22 @@ from ml.train import load_dataset
 from ml.model_store import evaluation_report_path, load_model, load_meta
 
 
+GATE_EPSILON = 1e-9
+
+
+def baseline_gate(report: dict) -> dict:
+    """Final veto: the chosen model must not lose to the constant baseline."""
+    metrics = report["metrics"]
+    baseline = report["baselines"]["majority_class"]
+    acc_ok = metrics["accuracy"] >= baseline["accuracy"] - GATE_EPSILON
+    loss_ok = metrics["log_loss"] <= baseline["log_loss"] + GATE_EPSILON
+    return {
+        "passed": acc_ok and loss_ok,
+        "accuracy": {"model": metrics["accuracy"], "baseline": baseline["accuracy"]},
+        "log_loss": {"model": metrics["log_loss"], "baseline": baseline["log_loss"]},
+    }
+
+
 def run_evaluation(model_id: str) -> dict:
     """Score the holdout season with a stored model and return the report."""
     rows, train_seasons, holdout_seasons = load_dataset()
@@ -67,7 +83,7 @@ def run_evaluation(model_id: str) -> dict:
     }
 
     meta = load_meta(model_id)
-    return {
+    result = {
         "model_id": model_id,
         "feature_version": FEATURE_VERSION,
         "classifier": meta.get("classifier"),
@@ -78,6 +94,8 @@ def run_evaluation(model_id: str) -> dict:
         "metrics": report,
         "baselines": baselines,
     }
+    result["baseline_gate"] = baseline_gate(result)
+    return result
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -86,6 +104,11 @@ def main(argv: list[str] | None = None) -> int:
         "--model-id",
         default=None,
         help="model id to evaluate (default: the dev-best model recorded by train.py)",
+    )
+    parser.add_argument(
+        "--enforce-baseline",
+        action="store_true",
+        help="exit 1 when the model loses to the majority baseline on the holdout",
     )
     args = parser.parse_args(argv)
 
@@ -119,6 +142,14 @@ def main(argv: list[str] | None = None) -> int:
         f"{name} acc={b['accuracy']:.4f} logloss={b['log_loss']:.4f}" for name, b in report["baselines"].items()
     ))
     print(f"report       : {evaluation_report_path()}")
+    gate = report["baseline_gate"]
+    verdict = "PASS" if gate["passed"] else "FAIL"
+    print(f"baseline gate: {verdict} (accuracy {gate['accuracy']['model']:.4f} vs "
+          f"{gate['accuracy']['baseline']:.4f}, log-loss {gate['log_loss']['model']:.4f} vs "
+          f"{gate['log_loss']['baseline']:.4f})")
+    if args.enforce_baseline and not gate["passed"]:
+        print("ERROR: selected model underperforms the majority baseline on the holdout.")
+        return 1
     return 0
 
 

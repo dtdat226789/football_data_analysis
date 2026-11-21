@@ -46,6 +46,9 @@ jobs:
       - name: Build the database from committed sample data
         run: python backend/scripts/build_database.py
 
+      - name: Generate ML artifacts
+        run: bash scripts/generate_ml_artifacts.sh
+
       - name: Test
         run: python -m pytest -q
 

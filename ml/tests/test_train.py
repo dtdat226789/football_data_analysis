@@ -16,9 +16,11 @@ from ml import model_store
 from ml import train
 
 from ml.train import (
+    BASELINE_NAME,
     MODEL_BUILDERS,
     load_dataset,
     model_id,
+    promotion_gate,
     split_rows_for_dev,
     train_candidates,
 )
@@ -147,6 +149,48 @@ def test_train_candidates_reports_dev_metrics_and_model_ids():
     assert 0.0 <= results["logistic"]["dev_log_loss"] <= 1.5
 
 
+def test_promotion_gate_requires_both_metrics_to_beat_baseline():
+    baseline = {"log_loss": 1.0, "accuracy": 0.4}
+    results = {
+        "loss_only": {"dev_log_loss": 0.9, "dev_accuracy": 0.39},
+        "acc_only": {"dev_log_loss": 1.1, "dev_accuracy": 0.45},
+    }
+    name, gate = promotion_gate(results, baseline)
+    assert name is None
+    assert gate["passed"] is False
+    assert gate["candidate_reasons"]["loss_only"] == ["accuracy"]
+    assert gate["candidate_reasons"]["acc_only"] == ["log_loss"]
+
+
+def test_promotion_gate_picks_best_eligible_candidate():
+    baseline = {"log_loss": 1.0, "accuracy": 0.4}
+    results = {
+        "ok_a": {"dev_log_loss": 0.95, "dev_accuracy": 0.45},
+        "ok_b": {"dev_log_loss": 0.90, "dev_accuracy": 0.41},
+    }
+    name, gate = promotion_gate(results, baseline)
+    assert name == "ok_b"
+    assert gate["passed"] is True
+    assert gate["selected"] == "ok_b"
+
+
+def test_forced_baseline_is_selected_and_scorable(tiny_dataset, tmp_path, monkeypatch):
+    ds, mf = tiny_dataset
+    monkeypatch.setattr(train, "DATASET_PATH", ds)
+    monkeypatch.setattr(train, "MANIFEST_PATH", mf)
+    monkeypatch.setattr(model_store, "MODELS_DIR", tmp_path / "models")
+
+    assert train.main(["--force-baseline"]) == 0
+
+    selected = model_store.load_selected()
+    assert selected["model_id"] == model_id(BASELINE_NAME)
+    assert selected["selected_by"] == "forced_baseline"
+    assert selected["gate"]["forced"] is True
+    assert selected["model_id"].endswith(f"-v{FEATURE_VERSION}")
+    pipeline = model_store.load_model(selected["model_id"])
+    assert pipeline.predict_proba([[0.0] * len(FEATURE_COLUMNS)]).shape == (1, 3)
+
+
 def test_model_id_contains_feature_version():
     assert model_id("hist_gb").endswith(f"-v{FEATURE_VERSION}")
 
@@ -167,7 +211,14 @@ def test_train_main_end_to_end(tiny_dataset, tmp_path, monkeypatch):
     assert selected["model_id"] in {
         f"match_result_logistic-v{FEATURE_VERSION}",
         f"match_result_hist_gb-v{FEATURE_VERSION}",
+        f"match_result_{BASELINE_NAME}-v{FEATURE_VERSION}",
     }
+    assert "baseline" in selected["gate"]
+    if selected["model_id"].endswith(f"_{BASELINE_NAME}-v{FEATURE_VERSION}"):
+        assert selected["selected_by"] == "baseline_gate_fallback"
+    else:
+        assert selected["selected_by"] == "dev_log_loss+baseline_gate"
+        assert selected["gate"]["passed"] is True
     artifact = tmp_path / "models" / f"{selected['model_id']}.joblib"
     assert artifact.exists()
     meta = json.loads((tmp_path / "models" / f"{selected['model_id']}.meta.json").read_text())
@@ -180,6 +231,18 @@ def test_train_main_end_to_end(tiny_dataset, tmp_path, monkeypatch):
 # ---------------------------------------------------------------------------
 # model_store
 # ---------------------------------------------------------------------------
+
+def test_holdout_gate_vetoes_a_model_below_the_baseline():
+    from ml.evaluate import baseline_gate
+
+    report = {
+        "metrics": {"accuracy": 0.42, "log_loss": 1.05},
+        "baselines": {"majority_class": {"accuracy": 0.43, "log_loss": 1.08}},
+    }
+    assert baseline_gate(report)["passed"] is False
+    report["metrics"]["accuracy"] = 0.44
+    assert baseline_gate(report)["passed"] is True
+
 
 def test_model_store_round_trip(monkeypatch, tmp_path):
     from sklearn.linear_model import LogisticRegression

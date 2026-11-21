@@ -159,22 +159,39 @@ jobs:
         if: ${{ !cancelled() }}
         run: |
           log="logs/refresh_latest.log"
+          db_ok=false
+          ml_ok=false
           line=""
+          ml_line=""
           if [ -f "$log" ]; then
             line="$(grep -F '| build database + analysis (all leagues) |' "$log" | tail -1 || true)"
+            ml_line="$(grep -F '| generate ML artifacts |' "$log" | tail -1 || true)"
           fi
 
           if printf '%s' "$line" | grep -q '| ok |'; then
-            echo "db_ok=true" >> "$GITHUB_OUTPUT"
+            db_ok=true
             echo "Database + analysis stage succeeded."
           else
-            echo "db_ok=false" >> "$GITHUB_OUTPUT"
             echo "::error::Database + analysis stage did not succeed; refusing to publish or deploy."
           fi
 
-          if [ "${{ steps.refresh.outcome }}" = "failure" ] \
-             && printf '%s' "$line" | grep -q '| ok |'; then
-            echo "::warning::Refresh exited non-zero but the database rebuild succeeded; publishing the fresh data anyway."
+          if printf '%s' "$ml_line" | grep -q '| ok |'; then
+            ml_ok=true
+            echo "ML artifact stage succeeded."
+          else
+            echo "::error::ML artifact stage did not succeed; refusing to publish or deploy without predictions."
+          fi
+
+          ready=false
+          if [ "$db_ok" = "true" ] && [ "$ml_ok" = "true" ]; then
+            ready=true
+          fi
+          echo "db_ok=$db_ok" >> "$GITHUB_OUTPUT"
+          echo "ml_ok=$ml_ok" >> "$GITHUB_OUTPUT"
+          echo "ready=$ready" >> "$GITHUB_OUTPUT"
+
+          if [ "${{ steps.refresh.outcome }}" = "failure" ] && [ "$ready" = "true" ]; then
+            echo "::warning::Refresh exited non-zero but the database rebuild and ML artifacts succeeded; publishing the fresh data anyway."
           fi
 
           # Surface the first real errors so the run page shows the cause.
@@ -194,7 +211,7 @@ jobs:
 
       - name: Publish rebuilt database to Neon
         id: publish
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' }}
+        if: ${{ !cancelled() && steps.verify.outputs.ready == 'true' }}
         continue-on-error: true
         env:
           NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
@@ -254,29 +271,29 @@ jobs:
             '
 
       - name: Fail when the rebuild or Neon publish failed
-        if: ${{ !cancelled() && (steps.verify.outputs.db_ok != 'true' || steps.publish.outcome == 'failure') }}
+        if: ${{ !cancelled() && (steps.verify.outputs.ready != 'true' || steps.publish.outcome == 'failure') }}
         run: |
           echo "::error::Aborting: the database was not rebuilt and published to Neon successfully."
           exit 1
 
       - name: Compute image tag
         id: tag
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.verify.outputs.ready == 'true' && steps.publish.outcome == 'success' }}
         run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
       - name: Ensure build-context directories exist
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.verify.outputs.ready == 'true' && steps.publish.outcome == 'success' }}
         run: mkdir -p data/raw/fixtures data/analysis
 
       - name: Log in to Docker Hub
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.verify.outputs.ready == 'true' && steps.publish.outcome == 'success' }}
         uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push backend image
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.verify.outputs.ready == 'true' && steps.publish.outcome == 'success' }}
         uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
         with:
           context: .
@@ -287,7 +304,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
 
       - name: Trigger Render deploy
-        if: ${{ !cancelled() && steps.verify.outputs.db_ok == 'true' && steps.publish.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.verify.outputs.ready == 'true' && steps.publish.outcome == 'success' }}
         env:
           RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: |

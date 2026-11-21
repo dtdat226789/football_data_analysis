@@ -1,8 +1,8 @@
 name: Deploy web
 
 # Ships frontend/worker changes to Cloudflare without waiting for the daily data
-# refresh. The daily-refresh workflow still owns data rebuilds and the Render
-# backend; this one only publishes the static app and its API proxy worker.
+# refresh. Backend changes deploy independently via deploy-backend.yml; this one
+# only publishes the static app and its API proxy worker.
 #
 # Required repository secrets:
 #   CLOUDFLARE_API_TOKEN   Token with Workers Scripts:Edit and Workers Routes:Edit

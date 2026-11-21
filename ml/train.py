@@ -11,15 +11,21 @@ Pipeline:
   3. Train two candidate pipelines:
         LogisticRegression (class_weight balanced, scaled)
         HistGradientBoostingClassifier   (sklearn built-in; no extra deps)
-  4. Select the better by dev log-loss, retrain it on the full train window
-     and serialize pipeline + metadata to ``ml/models/``. Both fully-trained
-     candidates are kept so evaluate.py can compare them on the holdout.
-  5. Record the dev-best in ``ml/models/selected_model.json``.
+   4. Promotion gate: a candidate is eligible only when it beats the constant
+      majority baseline on BOTH dev log-loss and dev accuracy. Select the best
+      eligible candidate by dev log-loss; if none qualifies, promote the
+      majority baseline itself instead of shipping a weaker model.
+   5. Retrain the promoted choice on the full train window and serialize it,
+      with both fully-trained candidates, to ``ml/models/``.
+   6. Record the choice and the gate decision in ``selected_model.json``.
 
-Exit code is 1 when the dataset is missing, a split is empty, or any step fails.
+The holdout season is never used for selection. Exit code is 1 when the dataset
+is missing, a split is empty, or any step fails.
+
 """
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from datetime import datetime, timezone
@@ -33,6 +39,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.dummy import DummyClassifier
 
 from ml.contract import FEATURE_VERSION
 from ml.model_store import save_model, save_selected
@@ -48,6 +55,8 @@ MANIFEST_PATH = ROOT / "ml" / "datasets" / "split_manifest.json"
 SEED = 42
 DEV_SEASON = "2024-2025"  # last train season, used only for model selection
 IMPUTE_VALUE = 0.0        # rest-day NULLs -> 0, matching the documented NULL policy
+BASELINE_NAME = "majority"
+GATE_EPSILON = 1e-9
 
 MODEL_BUILDERS = {
     "logistic": lambda: Pipeline(
@@ -130,7 +139,52 @@ def train_candidates(
     return results
 
 
+def baseline_pipeline() -> Pipeline:
+    """Constant class-frequency predictor used when no candidate clears the gate."""
+    return Pipeline([("clf", DummyClassifier(strategy="prior"))])
+
+
+def promotion_gate(dev_results: dict[str, dict], baseline: dict) -> tuple[str | None, dict]:
+    """Pick a candidate only if it beats the majority baseline on dev.
+
+    Both log-loss and accuracy must improve: selecting on log-loss alone
+    allowed a model with lower accuracy than "always predict the majority" to be
+    promoted (holdout accuracy 0.421 vs 0.426). Holdout is never consulted here.
+    """
+    reasons: dict[str, list[str]] = {}
+    for name, res in dev_results.items():
+        failed = []
+        if not res["dev_log_loss"] < baseline["log_loss"] - GATE_EPSILON:
+            failed.append("log_loss")
+        if not res["dev_accuracy"] > baseline["accuracy"] + GATE_EPSILON:
+            failed.append("accuracy")
+        reasons[name] = failed
+
+    eligible = [name for name, failed in reasons.items() if not failed]
+    gate = {
+        "passed": bool(eligible),
+        "baseline": {
+            "log_loss": baseline["log_loss"],
+            "accuracy": baseline["accuracy"],
+        },
+        "candidate_reasons": reasons,
+    }
+    if not eligible:
+        return None, gate
+    best = min(eligible, key=lambda n: dev_results[n]["dev_log_loss"])
+    gate["selected"] = best
+    return best, gate
+
+
 def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--force-baseline",
+        action="store_true",
+        help="promote the majority baseline regardless of dev scores (holdout veto path)",
+    )
+    args = parser.parse_args(argv)
+
     rows, train_seasons, holdout_seasons = load_dataset()
     train_rows, holdout_rows = split_rows(rows, train_seasons, holdout_seasons)
     dev_train, dev_val = split_rows_for_dev(rows, train_seasons)
@@ -163,12 +217,40 @@ def main(argv: list[str] | None = None) -> int:
     print(f"{'majority':<10} {base_report['log_loss']:>12.4f} {base_report['accuracy']:>9.4f} "
           f"{base_report['macro_f1']:>9.4f} {base_report['brier']:>8.4f} {base_report['ece']:>7.4f}")
 
-    best_name = min(dev_results, key=lambda n: dev_results[n]["dev_log_loss"])
-    print(f"\nselected by dev log-loss: {best_name} ({dev_results[best_name]['model_id']})")
+    if args.force_baseline:
+        best_name = None
+        gate = {
+            "passed": False,
+            "forced": True,
+            "baseline": {"log_loss": base_report["log_loss"], "accuracy": base_report["accuracy"]},
+            "candidate_reasons": {name: ["forced_baseline"] for name in dev_results},
+        }
+    else:
+        best_name, gate = promotion_gate(dev_results, base_report)
+    promoted_name = best_name or BASELINE_NAME
+    all_results = dict(dev_results)
+    if best_name is None:
+        all_results[BASELINE_NAME] = {
+            "model_id": model_id(BASELINE_NAME),
+            "classifier": "DummyClassifier",
+            "dev_log_loss": base_report["log_loss"],
+            "dev_accuracy": base_report["accuracy"],
+            "dev_macro_f1": base_report["macro_f1"],
+            "dev_brier": base_report["brier"],
+            "dev_ece": base_report["ece"],
+        }
+        if args.force_baseline:
+            print("\nforced baseline promotion (holdout veto).")
+        else:
+            print("\nbaseline gate: no candidate beat the majority baseline on both")
+            print(f"  dev log-loss and accuracy; promoting {BASELINE_NAME} instead.")
+    else:
+        print(f"\nselected by dev log-loss (baseline gate passed): {best_name} "
+              f"({dev_results[best_name]['model_id']})")
 
     X_full, y_full = to_xy(train_rows, FEATURE_COLUMNS)
-    for name, res in dev_results.items():
-        pipeline = MODEL_BUILDERS[name]()
+    for name, res in all_results.items():
+        pipeline = baseline_pipeline() if name == BASELINE_NAME else MODEL_BUILDERS[name]()
         pipeline.fit(X_full, y_full)
         save_model(
             res["model_id"],
@@ -180,25 +262,31 @@ def main(argv: list[str] | None = None) -> int:
                 "columns": list(FEATURE_COLUMNS),
                 "labels": list(LABELS),
                 "imputation": {"strategy": "constant", "fill_value": IMPUTE_VALUE},
-                "selected": name == best_name,
+                "selected": name == promoted_name,
                 "seed": SEED,
                 "train_seasons": list(train_seasons),
                 "holdout_seasons": list(holdout_seasons),
                 "n_train_rows": int(len(X_full)),
                 "n_holdout_rows": int(len(holdout_rows)),
                 "dev_split": {"train_seasons": [s for s in train_seasons if s != DEV_SEASON], "val_season": DEV_SEASON},
-                "dev_metrics": dev_results[name],
+                "dev_metrics": res,
                 "trained_at": datetime.now(timezone.utc).isoformat(),
             },
         )
         print(f"saved {res['model_id']} -> {model_store.MODELS_DIR}")
     save_selected(
         {
-            "model_id": dev_results[best_name]["model_id"],
-            "selected_by": "dev_log_loss",
+            "model_id": all_results[promoted_name]["model_id"],
+            "selected_by": (
+                "dev_log_loss+baseline_gate" if best_name
+                else "forced_baseline" if args.force_baseline
+                else "baseline_gate_fallback"
+            ),
             "dev_season": DEV_SEASON,
-            "dev_log_loss": dev_results[best_name]["dev_log_loss"],
+            "dev_log_loss": all_results[promoted_name]["dev_log_loss"],
+            "dev_accuracy": all_results[promoted_name]["dev_accuracy"],
             "feature_version": FEATURE_VERSION,
+            "gate": gate,
         }
     )
     print(f"selected -> {model_store.MODELS_DIR / 'selected_model.json'}")

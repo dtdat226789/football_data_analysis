@@ -65,6 +65,7 @@ Read from the environment, or from `.env` via `python-dotenv`.
 | `BACKEND_SHARED_SECRET` | production | Worker-side equivalent of `WORKER_SHARED_SECRET`; set with `wrangler secret put BACKEND_SHARED_SECRET`. |
 | `API_RATE_LIMIT_PER_MINUTE` | no | In-process fallback rate limit. Use Cloudflare rate limiting as the primary control. |
 | `DISABLE_DOCS` | production | Set to `1` to disable `/docs`, `/redoc` and `/openapi.json`. |
+| `ALLOW_INSECURE_API` | local only | Explicit opt-out of the fail-closed secret check for local development/tests. Never set in production. |
 
 The frontend reads `API_PORT` from `frontend/.env` (default `5173`), which is the
 port the Vite dev server proxies `/api` and `/health` to.
@@ -150,12 +151,18 @@ python3 ml/evaluate.py                              # holdout-season report
 python3 ml/predict.py --features rows.json          # score hand-built rows
 python3 ml/predict.py --league premier              # upcoming fixtures
 python3 -m ml.backfill_predictions                  # match-detail prediction artifact
+bash scripts/generate_ml_artifacts.sh                # all of the above + baseline gate
 ```
 
 Features are rebuilt from PostgreSQL only, per season, in
 `(match_date, kickoff_time)` order, so a match never observes a later result.
 Train is `2020-2021`…`2024-2025`; holdout is `2025-2026`. Model artifacts under
-`ml/models/` are gitignored; the API serves committed JSON artifacts instead.
+`ml/models/` are gitignored, so `scripts/generate_ml_artifacts.sh` rebuilds the
+dataset, applies the baseline promotion gate and writes `match_predictions.json`
+before every image build (CI, daily refresh and backend deploy). A candidate is
+promoted only when it beats the constant majority baseline on dev log-loss *and*
+accuracy; the holdout can veto a regression, in which case the majority baseline
+is promoted and the prediction artifact is regenerated from it.
 
 ## Frontend
 
@@ -199,6 +206,31 @@ openssl rand -hex 32
 The Worker also adds CSP, HSTS, clickjacking and MIME-sniffing headers to both
 API and static responses.
 
+Protected routes fail closed: if `WORKER_SHARED_SECRET` is missing, the API
+returns `503` instead of serving unauthenticated data. The backend limiter keys
+on `X-Worker-Client-IP`, which the Worker overwrites with Cloudflare's view of
+the client IP; `CF-Connecting-IP` and `X-Forwarded-For` from callers are ignored.
+`/docs`, `/redoc` and `/openapi.json` require the same shared secret when enabled.
+
+### Credential rotation
+
+If a secret may have leaked (including through a committed or world-readable
+`.env`), treat it as compromised. Rotation is an operator action — code cannot
+revoke credentials:
+
+1. **Football Charts API key** — revoke/issue a key in the provider dashboard,
+   update the `FOOTBALL_CHARTS_API_KEY` GitHub Actions secret and the local
+   `.env`, then re-run the preflight in `daily-refresh.yml`.
+2. **Database password** — rotate the password on the Neon role, update the
+   `NEON_DATABASE_URL` GitHub Actions secret (and the `DATABASE_URL` used by the
+   backend), then restart the backend. `daily-refresh.yml` uses a separate
+   local build database, so rotation does not affect its rebuild.
+3. **Worker/backend shared secret** — generate a new value with
+   `openssl rand -hex 32`, set `WORKER_SHARED_SECRET` in Render and
+   `wrangler secret put BACKEND_SHARED_SECRET` together, then redeploy both.
+4. Keep `.env` at mode `600` (`icacls` on Windows if the mount ignores chmod),
+   never commit it, and verify with `git check-ignore -v .env`.
+
 ## Daily refresh
 
 ```bash
@@ -229,10 +261,14 @@ unreachable.
 
 - **backend** — spins up PostgreSQL 16, installs `requirements.txt` + ruff, runs
   `ruff check .`, builds the database from the committed `premier` sample raw
-  data, then runs `pytest` (with `FOOTBALL_CHARTS_API_KEY` empty, so live tests
-  skip).
+  data, generates the gated ML artifacts, then runs `pytest` (with
+  `FOOTBALL_CHARTS_API_KEY` empty, so live tests skip).
 - **frontend** — `npm ci`, then `npm run lint`, `npm run typecheck`,
   `npm test`, `npm run build`.
+
+`deploy-backend.yml` watches backend/Dockerfile/ML changes and ships an image
+with freshly generated prediction artifacts without waiting for the daily data
+rebuild. `deploy-web.yml` watches only frontend/worker assets.
 
 ## Release checklist
 
