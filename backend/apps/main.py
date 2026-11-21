@@ -13,15 +13,26 @@ Run it:
 """
 from __future__ import annotations
 
+import os
+
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 
 from . import common
+from .security import install_security
 from .routers import analysis, catalog, dashboard, fixtures, kpi, matches, standings, teams
+from db_common import DatabaseNotConfigured
 
 API_VERSION = "1.0.0"
 
 
 def create_app() -> FastAPI:
+    disable_docs = os.getenv("DISABLE_DOCS", "").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
     app = FastAPI(
         title="Football Data Analysis API",
         description=(
@@ -30,7 +41,11 @@ def create_app() -> FastAPI:
             "PostgreSQL (registry, standings, matches, teams). Read-only."
         ),
         version=API_VERSION,
+        docs_url=None if disable_docs else "/docs",
+        redoc_url=None if disable_docs else "/redoc",
+        openapi_url=None if disable_docs else "/openapi.json",
     )
+    install_security(app)
 
     app.include_router(catalog.router, prefix="/api/v1")
     app.include_router(standings.router, prefix="/api/v1")
@@ -60,6 +75,11 @@ def create_app() -> FastAPI:
     @app.get("/api/v1/health")
     def health_v1() -> dict:
         return _health()
+
+    @app.exception_handler(DatabaseNotConfigured)
+    async def database_not_configured(_request, _exc):
+        # A missing DATABASE_URL is a deployment problem, not a request crash.
+        return JSONResponse({"detail": "database unavailable"}, status_code=503)
 
     return app
 

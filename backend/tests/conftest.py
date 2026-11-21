@@ -14,6 +14,13 @@ if BACKEND_SCRIPTS not in sys.path:
 # and the tests read the same upstream config from one place.
 from db_common import API_KEY, BASE_URL, VIEWS  # noqa: E402,F401
 
+@pytest.fixture(autouse=True)
+def allow_unsecured_api_in_tests(monkeypatch):
+    # Production fails closed without WORKER_SHARED_SECRET; local tests need an
+    # explicit opt-in. security tests override it where they exercise the gate.
+    monkeypatch.setenv("ALLOW_INSECURE_API", "1")
+
+
 LEAGUES = [
     "premier",
     "spain1",

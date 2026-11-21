@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -99,11 +100,19 @@ def league_report_dir(league: str) -> Path | None:
     return None
 
 
+@lru_cache(maxsize=256)
+def _read_report(path_str: str, mtime_ns: int, size: int) -> dict:
+    del mtime_ns, size  # cache key only
+    return json.loads(Path(path_str).read_text(encoding="utf-8"))
+
+
 def read_report(report_dir: Path, module: str) -> dict | None:
     path = report_dir / f"{module}.json"
-    if not path.exists():
+    try:
+        stat = path.stat()
+    except OSError:
         return None
-    return json.loads(path.read_text(encoding="utf-8"))
+    return _read_report(str(path), stat.st_mtime_ns, stat.st_size)
 
 
 def list_charts(report_dir: Path) -> list[str]:

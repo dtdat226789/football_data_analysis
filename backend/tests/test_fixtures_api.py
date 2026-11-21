@@ -304,6 +304,18 @@ def test_filter_applies_to_both_sort_orders(tmp_path, monkeypatch):
             assert [m["home_team"] for m in body["matches"]] == ["New"], sort
 
 
+def test_confidence_sort_handles_a_fixture_without_a_prediction(tmp_path, monkeypatch):
+    match = _match("with-pred", SOON, home="Sure")
+    without = _match("without-pred", SOON, home="Missing")
+    without.pop("model_predictions")
+    client = _client(tmp_path, monkeypatch, "primera1", [without, match])
+    with client:
+        response = client.get("/api/v1/fixtures", params={"sort": "confidence"})
+    assert response.status_code == 200
+    names = [m["home_team"] for m in response.json()["matches"]]
+    assert names == ["Sure", "Missing"]
+
+
 def test_rows_without_a_parsable_date_are_kept(tmp_path, monkeypatch):
     # Dropping these would silently hide a fixture; keeping them is the safer
     # failure, and the row simply sorts last.

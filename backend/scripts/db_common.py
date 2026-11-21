@@ -190,10 +190,17 @@ def collected_seasons(league: str | None = None) -> list[str]:
     ]
 
 
+class DatabaseNotConfigured(RuntimeError):
+    """DATABASE_URL is absent; the API should answer 503, not terminate."""
+
+
 def get_conn() -> psycopg2.extensions.connection:
     dsn = os.getenv("DATABASE_URL")
     if not dsn:
-        sys.exit("DATABASE_URL not set in project root .env")
+        # This helper is used by both scripts and request handlers. Scripts can
+        # present the exception as a traceback; the API maps it to a 503 rather
+        # than letting SystemExit escape a request.
+        raise DatabaseNotConfigured("DATABASE_URL not set in project root .env")
     return psycopg2.connect(dsn)
 
 

@@ -7,12 +7,13 @@ from __future__ import annotations
 
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 
 from .. import common
 from ..deps import (
     ensure_season,
     fetched_cursor,
+    MAX_LIMIT,
     norm_pagination,
     require_league,
     resolve_latest_season,
@@ -92,7 +93,11 @@ def _team_search_filter(q: str | None) -> tuple[str, list]:
 
 
 @router.get("/teams")
-def list_teams(limit: int = 50, offset: int = 0, q: str | None = None) -> dict:
+def list_teams(
+    limit: int = Query(50, ge=1, le=MAX_LIMIT),
+    offset: int = Query(0, ge=0, le=100_000),
+    q: str | None = Query(None, max_length=100),
+) -> dict:
     """The canonical registry, optionally narrowed by a free-text search.
 
     The registry spans every league, so the search has to run server-side: a

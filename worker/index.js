@@ -17,6 +17,12 @@ const SECURITY_HEADERS = {
   "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
 };
 
+function clientIp(request) {
+  // Cloudflare's own view of the client cannot be forged by the caller. The
+  // header fallback covers local harnesses where `request.cf` is absent.
+  return request.cf?.clientIp || request.headers.get("cf-connecting-ip") || "unknown";
+}
+
 function harden(response) {
   const headers = new Headers(response.headers);
   for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
@@ -112,7 +118,7 @@ export default {
     // The binding is configured in wrangler.jsonc; skip the check if a local
     // harness supplies no binding so the worker stays testable in isolation.
     if (isApi && env.API_RATE_LIMITER) {
-      const key = request.headers.get("cf-connecting-ip") || "unknown";
+      const key = clientIp(request);
       const { success } = await env.API_RATE_LIMITER.limit({ key });
       if (!success) {
         return rateLimited();
@@ -135,6 +141,10 @@ export default {
     if (env.BACKEND_SHARED_SECRET) {
       headers.set("x-worker-secret", env.BACKEND_SHARED_SECRET);
     }
+    // The backend limiter trusts only this header. Overwrite any client copy
+    // with Cloudflare's client IP so the key cannot be rotated at will.
+    headers.delete("x-worker-client-ip");
+    headers.set("x-worker-client-ip", clientIp(request));
 
     const response = await fetchWithRetry(target, {
       method: request.method,

@@ -28,10 +28,11 @@ from __future__ import annotations
 
 import json
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 
 from .. import common
 from ..deps import fetched_cursor, norm_pagination, require_league, resolve_team_id
@@ -58,13 +59,29 @@ def details_dir() -> Path:
     return FIXTURES_DIR / "details"
 
 
-def _load_payload(path: Path) -> dict:
-    """Read one fixtures file, tolerating bad/absent files."""
+@lru_cache(maxsize=256)
+def _read_payload(path_str: str, mtime_ns: int, size: int) -> dict:
+    """Parse a fixtures file once per on-disk version."""
+    del mtime_ns, size  # cache key only; the path is read below
     try:
-        payload = json.loads(path.read_bytes())
+        payload = json.loads(Path(path_str).read_bytes())
     except (OSError, ValueError):
         return {}
     return payload if isinstance(payload, dict) else {}
+
+
+def _load_payload(path: Path) -> dict:
+    """Read one fixtures file, tolerating bad/absent files.
+
+    The parsed payload is cached by path and file version. Callers must treat
+    the returned mapping as read-only; the endpoint that decorates a payload
+    copies it before adding response fields.
+    """
+    try:
+        stat = path.stat()
+    except OSError:
+        return {}
+    return _read_payload(str(path), stat.st_mtime_ns, stat.st_size)
 
 
 def _as_date(value) -> date | None:
@@ -598,11 +615,11 @@ def _context(cur, league: str, home_name: str, away_name: str, match_date) -> di
 def list_fixtures(
     league: str | None = None,
     sort: Literal["date", "confidence"] = "date",
-    limit: int = DEFAULT_LIMIT,
-    offset: int = 0,
+    limit: int = Query(DEFAULT_LIMIT, ge=1, le=MAX_LIMIT),
+    offset: int = Query(0, ge=0, le=100_000),
     from_date: date | None = None,
     to_date: date | None = None,
-    min_confidence: float | None = None,
+    min_confidence: float | None = Query(None, ge=0.0, le=1.0),
 ) -> dict:
     """Merged upcoming fixtures, pruned, sorted by date or model confidence.
 
@@ -647,7 +664,7 @@ def list_fixtures(
         effective_sort = "date"
         rows.sort(key=lambda r: (r["match_date"] or "", r["time"] or ""))
     else:
-        rows.sort(key=lambda r: r["predictions"]["confidence"], reverse=True)
+        rows.sort(key=lambda r: r["predictions"].get("confidence") or 0.0, reverse=True)
 
     page = rows[offset:offset + limit]
     dated = sorted({r["match_date"] for r in rows if r.get("match_date")})
@@ -693,7 +710,8 @@ def league_fixtures(league: str) -> dict:
             "matches": [],
             "attribution": "Data by football-charts.com",
         }
-    payload = _load_payload(path)
+    # `_load_payload` returns the shared cache entry; copy before decorating.
+    payload = dict(_load_payload(path))
     payload.setdefault("count", len(payload.get("matches") or []))
     payload.setdefault("league", league)
     payload["league_name"] = common.league_name(league)

@@ -25,6 +25,10 @@ MAX_LIMIT = 200
 def fetched_cursor() -> Iterator[psycopg2.extras.DictCursor]:
     """Read-only cursor: always rolled back, never committed."""
     conn = get_conn()
+    # Enforce read-only at the session level as well as relying on the API
+    # user having SELECT-only grants. This makes an accidental write fail even
+    # when the deployment still uses the pipeline's write-capable role.
+    conn.set_session(readonly=True, autocommit=False)
     try:
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
         try:
