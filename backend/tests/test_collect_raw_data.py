@@ -66,6 +66,21 @@ def test_collect_file_skips_on_unavailable(tmp_path, stub_get):
     assert not out.exists()
 
 
+def test_collect_file_reports_upstream_failure(tmp_path, stub_get):
+    out = tmp_path / "results.json"
+    stub_get(failures={"/leagues/x/results/": 1})
+    assert collect_file(object(), "/leagues/x/results/", None, out, False, 0.0) is False
+    stub_get(b"{}")
+    assert collect_file(object(), "/leagues/x/results/", None, out, False, 0.0) is True
+
+
+def test_collect_league_counts_failures(tmp_path, stub_get, monkeypatch):
+    stub_get(failures={"/leagues/premier/results/": 1})
+    monkeypatch.setattr("scripts.collect_raw_data.OUTPUT_DIR", tmp_path)
+    failed = collect_league(object(), "premier", ["2020-2021"], ["classic"], False, 0.0)
+    assert failed == 1
+
+
 def test_collect_league_layout(tmp_path, stub_get, monkeypatch):
     stub_get(b"{}")
     monkeypatch.setattr("scripts.collect_raw_data.OUTPUT_DIR", tmp_path)

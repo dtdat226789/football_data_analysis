@@ -144,6 +144,19 @@ def fixture_slugs(path: Path, limit: int | None = None) -> list[str]:
     return slugs[:limit] if limit else slugs
 
 
+def prune_stale_details(details_dir: Path, expected: set[str], prefixes: set[str]) -> list[Path]:
+    """Delete detail files outside the current fixture set. Empty prefixes means all."""
+    removed: list[Path] = []
+    for path in sorted(details_dir.glob("*.json")):
+        if path.name == "manifest.json" or path.name in expected:
+            continue
+        if prefixes and not any(path.name.startswith(prefix) for prefix in prefixes):
+            continue
+        path.unlink()
+        removed.append(path)
+    return removed
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         prog="fetch_fixture_details",
@@ -198,6 +211,8 @@ def main(argv: list[str] | None = None) -> int:
 
     DETAILS_DIR.mkdir(parents=True, exist_ok=True)
     manifest: dict = {"written": [], "skipped": [], "failed": []}
+    expected: set[str] = set()
+    prefixes = {f"{league}__" for league in args.league or []}
 
     with build_client() as client:
         for path in files:
@@ -210,6 +225,7 @@ def main(argv: list[str] | None = None) -> int:
                 if args.delay:
                     time.sleep(args.delay)
                 out_path = DETAILS_DIR / f"{league}__{slug_tail(slug)}.json"
+                expected.add(out_path.name)
                 if out_path.exists() and not args.overwrite:
                     manifest["skipped"].append(out_path.name)
                     continue
@@ -240,6 +256,10 @@ def main(argv: list[str] | None = None) -> int:
                     match.get("away_team"),
                     match.get("match_status") or match.get("status"),
                 )
+
+    if args.limit is None:
+        for path in prune_stale_details(DETAILS_DIR, expected, prefixes):
+            log.info("PRUNE stale %s", path.name)
 
     manifest_path = DETAILS_DIR / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")

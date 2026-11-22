@@ -964,7 +964,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Wrote {REPORT_JSON}")
     print(f"Wrote {REPORT_MD}")
     print(f"errors={o['errors']} warnings={o['warnings']}")
-    return 0
+    return 1 if o["errors"] else 0
 
 
 if __name__ == "__main__":

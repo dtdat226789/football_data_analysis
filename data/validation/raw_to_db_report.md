@@ -1,6 +1,6 @@
 # Football Charts — Raw-to-Database Reconciliation Report
 
-- Generated: 2026-11-18T08:17:06+00:00
+- Generated: 2026-11-21T02:43:28+00:00
 - Scope: league `wsweden`; seasons 2020, 2021, 2022, 2023, 2024, 2025, 2026; table views classic, luck, goals
 - Overall: **0 errors**, **0 warnings** | compared=registry=14, identity=94, matches=1174, standings=282
 

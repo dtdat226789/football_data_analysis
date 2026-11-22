@@ -6,7 +6,8 @@ import UpcomingFixtures, { UPCOMING_OFFSET_PARAM } from "../components/UpcomingF
 import { Badge, Card, CardHeader, PageHeader } from "../components/ui/index.js";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 import { pageLabel } from "../lib/pagination.js";
-import { intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
+import { enumParam, intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
+import { asArray } from "../lib/shape.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const SIZES = [20, 50, 100];
@@ -25,7 +26,14 @@ export default function Matches() {
   const { t } = useFormatters();
   const [searchParams, patch] = useParamsPatch();
 
-  const league = searchParams.get("league") ?? "";
+  const rawLeague = searchParams.get("league") ?? "";
+  const leaguesApi = useApi(() => api.listLeagues(), []);
+  const leagueSlugs = asArray(leaguesApi.data)
+    .map((item) => item?.slug)
+    .filter((value) => typeof value === "string");
+  const league = leagueSlugs.length
+    ? enumParam(searchParams, "league", leagueSlugs, "")
+    : rawLeague;
   // A date that is not a plain ISO day would reach FastAPI as a 422, and the
   // inputs below cannot produce one — so anything else in the URL is dropped.
   const fromDate = isIsoDay(searchParams.get("from")) ? searchParams.get("from") : "";
@@ -38,7 +46,6 @@ export default function Matches() {
   // cannot describe different days.
   const now = Date.now();
 
-  const leaguesApi = useApi(() => api.listLeagues(), []);
   const leagueNames = useMemo(() => leagueNameMap(leaguesApi.data), [leaguesApi.data]);
   // The league and the date window are shared by both lists, so changing one
   // rewinds both pages. It also drops the upcoming list's day chip: the chips are

@@ -86,6 +86,10 @@ export function I18nProvider({ children, language: forcedLanguage, timeZone: for
   );
 
   useEffect(() => {
+    document.documentElement.lang = LOCALE_TAG[language] || LOCALE_TAG[DEFAULT_LANGUAGE];
+  }, [language]);
+
+  useEffect(() => {
     if (!forcedLanguage) writeStored(LANGUAGE_KEY, language);
   }, [language, forcedLanguage]);
 

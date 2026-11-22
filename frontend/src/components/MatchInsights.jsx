@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { TableShell } from "./ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
+import { asArray, asRecord } from "../lib/shape.js";
 
 const RESULT_KEY = { HOME_WIN: "result.home", DRAW: "result.draw", AWAY_WIN: "result.away" };
 
@@ -19,8 +20,9 @@ function strength(v) {
  */
 export function PreMatchPanel({ preMatch }) {
   const { t, dec } = useFormatters();
-  if (!preMatch) return null;
-  const groups = preMatch.groups || {};
+  if (!asRecord(preMatch).groups) return null;
+  const groups = asRecord(preMatch.groups);
+  const labels = asRecord(preMatch.group_labels);
   const keys = Object.keys(groups);
   if (!keys.length) return null;
 
@@ -39,15 +41,15 @@ export function PreMatchPanel({ preMatch }) {
       {keys.map((key) => (
         <div key={key} className="insight-group">
           <h4 className="insight-group-title">
-            {(preMatch.group_labels || {})[key] || key}
+            {labels[key] || key}
           </h4>
           <div className="mini-grid">
-            {Object.entries(groups[key]).map(([column, cell]) => (
+            {Object.entries(asRecord(groups[key])).map(([column, cell]) => (
               <div key={column}>
                 <div className="muted insight-cell-label">
-                  {cell.label}
+                  {asRecord(cell).label}
                 </div>
-                <div className="tabular">{dec(cell.value, 2)}</div>
+                <div className="tabular">{dec(asRecord(cell).value, 2)}</div>
               </div>
             ))}
           </div>
@@ -64,8 +66,8 @@ export function PreMatchPanel({ preMatch }) {
 export function ModelPanel({ model }) {
   const { t, pct } = useFormatters();
   if (!model) return null;
-  const probs = model.probabilities || {};
-  const meta = model.meta || {};
+  const probs = asRecord(model.probabilities);
+  const meta = asRecord(model.meta);
   const outcomeHit =
     typeof model.actual_match_result === "string" &&
     model.predicted_match_result === model.actual_match_result;
@@ -149,7 +151,10 @@ export function ModelPanel({ model }) {
 export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
   const { t, plainDay } = useFormatters();
   if (!headToHead) return null;
-  const { matches = [], summary, truncated } = headToHead || {};
+  const matches = asArray(headToHead.matches);
+  const summary = asRecord(headToHead.summary);
+  if (!Array.isArray(headToHead.matches) && Object.keys(summary).length === 0) return null;
+  const truncated = headToHead.truncated;
   const label = t("insights.headToHead");
 
   return (
@@ -161,7 +166,7 @@ export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
         </span>
       </h3>
 
-      {summary ? (
+      {Object.keys(summary).length ? (
         <p className="muted insight-summary">
           {t("insights.h2hSummary", {
             home: homeName,
@@ -222,9 +227,13 @@ export function HeadToHeadPanel({ headToHead, homeName, awayName }) {
 }
 
 export default function MatchInsights({ insights, homeName, awayName }) {
-  if (!insights) return null;
-  const { pre_match: preMatch, model, head_to_head: h2h } = insights;
-  if (!preMatch && !model && !(h2h && h2h.matches && h2h.matches.length)) return null;
+  const record = asRecord(insights);
+  const { pre_match: preMatch, model, head_to_head: h2h } = record;
+  const hasPreMatch = Object.keys(asRecord(asRecord(preMatch).groups)).length > 0;
+  const h2hRecord = asRecord(h2h);
+  const hasHeadToHead =
+    asArray(h2hRecord.matches).length > 0 || Object.keys(asRecord(h2hRecord.summary)).length > 0;
+  if (!hasPreMatch && !model && !hasHeadToHead) return null;
 
   return (
     <div className="two-col insights-grid">

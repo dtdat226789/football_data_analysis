@@ -2,8 +2,9 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
-import { intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
+import { enumParam, intParam, isIsoDay, pageOffset, useParamsPatch } from "../lib/searchParams.js";
 import { pageLabel } from "../lib/pagination.js";
+import { asArray, asNumber, asRecord } from "../lib/shape.js";
 import { ErrorBox, ListSkeleton } from "./State.jsx";
 import { Badge, Card, CardHeader } from "./ui/index.js";
 import { TeamLink } from "./TeamLink.jsx";
@@ -28,6 +29,7 @@ const CONFIDENCE_STEPS = [
   { value: "0.6", label: "60%+" },
   { value: "0.75", label: "75%+" },
 ];
+const CONFIDENCE_VALUES = CONFIDENCE_STEPS.map((step) => step.value);
 
 /** Route id for a fixture: the trailing `date-home-vs-away` slug segment. */
 export function fixturePathId(slug) {
@@ -86,7 +88,7 @@ export default function UpcomingFixtures({
   const { t, kickoffTime, kickoffDay, dayHeading, offsetFromToday } = useFormatters();
   const [searchParams, patch] = useParamsPatch();
   const day = searchParams.get("day") ?? "";
-  const minConfidence = searchParams.get("conf") ?? "";
+  const minConfidence = enumParam(searchParams, "conf", CONFIDENCE_VALUES, "");
   const offset = intParam(searchParams, offsetParam);
 
   // The day chip is a one-day window. `/fixtures` has no day parameter, so it has
@@ -129,10 +131,14 @@ export default function UpcomingFixtures({
     [league, minConfidence, offset, windowFrom, windowTo, pageSize],
   );
 
-  const data = upcoming.data;
+  const data = asRecord(upcoming.data);
+  const total = asNumber(data.total);
+  const returned = asNumber(data.returned);
+  const dates = useMemo(() => asArray(data.dates), [data.dates]);
+  const dayCounts = asRecord(data.day_counts);
   // Page sizes reach 100 rows; regrouping them on every unrelated render (a
   // settings change, a filter click) is pure work with no new result.
-  const rows = useMemo(() => data?.matches || [], [data]);
+  const rows = useMemo(() => asArray(data.matches), [data.matches]);
   const groups = useMemo(() => groupByDay(rows), [rows]);
   const filtered = Boolean(dayInWindow || minConfidence || sharedFrom || sharedTo);
 
@@ -162,19 +168,19 @@ export default function UpcomingFixtures({
     <Card>
       <CardHeader
         title={t("fixture.upcoming")}
-        actions={<Badge>{data?.total ?? 0}</Badge>}
+        actions={<Badge aria-live="polite">{total}</Badge>}
       >
         {/* The badge is the filtered total, which is not what is on screen once a
             limit is in play — so say which slice this is. */}
-        {data && data.total > 0 && (
+        {upcoming.data && total > 0 && (
           <span className="card-meta">
-            {data.returned < data.total
+            {returned < total
               ? t("fixture.showingRange", {
-                  start: data.offset + 1,
-                  end: data.offset + data.returned,
-                  total: data.total,
+                   start: asNumber(data.offset) + 1,
+                   end: asNumber(data.offset) + returned,
+                  total: total,
                 })
-              : t("fixture.allTotal", { total: data.total })}
+              : t("fixture.allTotal", { total: total })}
           </span>
         )}
       </CardHeader>
@@ -182,7 +188,7 @@ export default function UpcomingFixtures({
       {/* The filters stay on screen whenever a filter is active, even once it has
           narrowed the list to nothing. Hiding them at zero results is what turns a
           too-strict choice into a dead end with no way back. */}
-      {data && (data.total > 0 || filtered) && (
+      {upcoming.data && (total > 0 || filtered) && (
         <>
           <div className="confidence-filters" role="group" aria-label={t("fixture.confidenceAria")}>
             {CONFIDENCE_STEPS.map((step) => (
@@ -207,7 +213,7 @@ export default function UpcomingFixtures({
               day narrows the list to exactly that day, so the surviving chip set
               is a single entry — it has to stay visible or the pick could only be
               undone by reloading. */}
-          {data.dates?.length > 1 || (dayInWindow && data.total > 0) ? (
+          {dates.length > 1 || (dayInWindow && total > 0) ? (
             <div className="date-presets" role="group" aria-label={t("fixture.dayAria")}>
               <button
                 className={"preset" + (dayInWindow ? "" : " on")}
@@ -217,7 +223,7 @@ export default function UpcomingFixtures({
               >
                 {t("fixture.allDays")}
               </button>
-              {data.dates.map((d) => (
+              {dates.map((d) => (
                 <button
                   key={d}
                   className={"preset" + (dayInWindow === d ? " on" : "")}
@@ -225,11 +231,11 @@ export default function UpcomingFixtures({
                   aria-pressed={dayInWindow === d}
                   title={t("fixture.dayTitle", {
                     day: labelFor(d),
-                    n: data.day_counts?.[d] ?? 0,
+                    n: dayCounts[d] ?? 0,
                   })}
                 >
                   {relativeFor(d) || labelFor(d)}{" "}
-                  <span className="muted">{data.day_counts?.[d] ?? 0}</span>
+                  <span className="muted">{dayCounts[d] ?? 0}</span>
                 </button>
               ))}
             </div>
@@ -239,17 +245,17 @@ export default function UpcomingFixtures({
 
       {upcoming.loading && <ListSkeleton items={4} />}
       {upcoming.error && <ErrorBox error={upcoming.error} />}
-      {data && rows.length === 0 && (
+      {upcoming.data && rows.length === 0 && (
         <p className="muted">
           {t("fixture.none")}
           {filtered ? ` ${t("fixture.noneFilteredSuffix")}` : league ? ` ${t("fixture.noneLeagueSuffix")}` : ""}.
         </p>
       )}
 
-      {data && rows.length > 0 && (
+      {upcoming.data && rows.length > 0 && (
         <div className="event-list">
           {groups.map(([dayBucket, dayRows]) => {
-            const total = data.day_counts?.[dayBucket];
+            const total = dayCounts[dayBucket];
             // Only a day split by the page boundary is partial; a day the filter
             // narrowed on purpose is complete and needs no caveat.
             const partial = typeof total === "number" && dayRows.length < total;
@@ -311,12 +317,12 @@ export default function UpcomingFixtures({
         </div>
       )}
 
-      {data && data.total > pageSize && (
+      {upcoming.data && total > pageSize && (
         <div className="pagination">
           <button disabled={offset === 0} onClick={() => patch({ [offsetParam]: pageOffset(offset - pageSize) })}>
             {t("common.prev")}
           </button>
-          <span className="muted">{pageLabel(pageSize, offset, data.total, {
+          <span className="muted">{pageLabel(pageSize, offset, total, {
             empty: t("pagination.zero"),
             past: t("pagination.past"),
           })}</span>

@@ -1,10 +1,10 @@
 """Build the analytics database and run all analysis modules for every league.
 
 Runs backend/scripts/build_database.py and then backend/scripts/run_analysis.py
-for each league in data/raw/league_teams.json (leagues with teams > 0). The
-first league's database build runs the schema reset; every other league passes
---skip-reset so rows already built for other leagues are preserved. Analysis is
-per league and writes reports under data/analysis/<league>/.
+for each league in data/raw/league_teams.json (leagues with teams > 0). Schema
+migrations run by default; --reset-local drops and recreates the schema before
+the first league on a local database only. Analysis is per league and writes
+reports under data/analysis/<league>/.
 
 Each league runs as its own subprocess so a failure never stops the pipeline:
 the league is recorded as failed and the remaining leagues still run. The exit
@@ -15,7 +15,7 @@ Usage:
     python backend/scripts/build_all_leagues.py --league spain1 germany1
     python backend/scripts/build_all_leagues.py --db-only
     python backend/scripts/build_all_leagues.py --analysis-only
-    python backend/scripts/build_all_leagues.py --skip-reset   # DB already built
+    python backend/scripts/build_all_leagues.py --reset-local  # local DB only
 
 Options:
     --league         only process these slugs (repeatable); default: every
@@ -23,7 +23,7 @@ Options:
     --db-only        run the database build stage only (skip analysis).
     --analysis-only  run the analysis stage only (skip database build).
     --include-empty  also process leagues with teams: 0 in the catalog.
-    --skip-reset     do not reset the schema on the first database build.
+    --reset-local    drop and recreate the schema before the first league (local only).
 """
 from __future__ import annotations
 
@@ -72,8 +72,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                         help="run the analysis stage only")
     parser.add_argument("--include-empty", action="store_true",
                         help="also process leagues with teams: 0 in the catalog")
-    parser.add_argument("--skip-reset", action="store_true",
-                        help="do not reset the schema on the first database build")
+    parser.add_argument("--reset-local", action="store_true",
+                        help="drop and recreate the schema before the first league (local only)")
     return parser.parse_args(argv)
 
 
@@ -102,7 +102,7 @@ def main(argv: list[str] | None = None) -> int:
 
     results: list[dict] = []
     python = sys.executable
-    reset_pending = not args.skip_reset
+    reset_pending = args.reset_local
 
     for league in slugs:
         entry: dict = {"league": league, "db": "-", "analysis": "-"}
@@ -114,7 +114,7 @@ def main(argv: list[str] | None = None) -> int:
             continue
 
         if not args.analysis_only:
-            db_extra = [] if reset_pending else ["--skip-reset"]
+            db_extra = ["--reset-local"] if reset_pending else []
             code = run(python, BUILD_SCRIPT, league, db_extra)
             reset_pending = False
             entry["db"] = "ok" if code == 0 else "failed"

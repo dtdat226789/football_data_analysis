@@ -1,5 +1,5 @@
 const RETRY_STATUSES = new Set([502, 503, 504]);
-const RETRY_BUDGET_MS = 6_000;
+const RETRY_BUDGET_MS = 25_000;
 const RETRY_DELAY_MS = 500;
 const MAX_ATTEMPTS = 3;
 const REQUEST_TIMEOUT_MS = 20_000;
@@ -53,12 +53,38 @@ function rateLimited() {
   );
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function fetchWithRetry(target, init) {
   const start = Date.now();
   let response;
 
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
-    response = await fetch(target, init);
+    const remaining = RETRY_BUDGET_MS - (Date.now() - start);
+    if (remaining <= 0) {
+      break;
+    }
+    // Each attempt needs its own signal: AbortSignal.timeout() starts counting
+    // at creation, so reusing one would leave every retry immediately aborted.
+    const timeout = AbortSignal.timeout(Math.min(REQUEST_TIMEOUT_MS, remaining));
+    const attemptInit = {
+      ...init,
+      signal: init.signal ? AbortSignal.any([init.signal, timeout]) : timeout,
+    };
+    try {
+      response = await fetch(target, attemptInit);
+    } catch (error) {
+      if (
+        attempt === MAX_ATTEMPTS - 1 ||
+        Date.now() - start + RETRY_DELAY_MS >= RETRY_BUDGET_MS
+      ) {
+        throw error;
+      }
+      await sleep(RETRY_DELAY_MS);
+      continue;
+    }
     if (!RETRY_STATUSES.has(response.status)) {
       return response;
     }
@@ -68,7 +94,7 @@ async function fetchWithRetry(target, init) {
     ) {
       return response;
     }
-    await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
+    await sleep(RETRY_DELAY_MS);
   }
 
   return response;
@@ -117,11 +143,16 @@ export default {
     // Edge limit for /api/* only: static assets and SPA navigation are free.
     // The binding is configured in wrangler.jsonc; skip the check if a local
     // harness supplies no binding so the worker stays testable in isolation.
-    if (isApi && env.API_RATE_LIMITER) {
-      const key = clientIp(request);
-      const { success } = await env.API_RATE_LIMITER.limit({ key });
-      if (!success) {
-        return rateLimited();
+    if (isApi) {
+      if (!env.API_RATE_LIMITER && env.ALLOW_NO_RATE_LIMITER !== "1") {
+        return harden(new Response("Service Unavailable", { status: 503 }));
+      }
+      if (env.API_RATE_LIMITER) {
+        const key = clientIp(request);
+        const { success } = await env.API_RATE_LIMITER.limit({ key });
+        if (!success) {
+          return rateLimited();
+        }
       }
     }
 
@@ -146,23 +177,29 @@ export default {
     headers.delete("x-worker-client-ip");
     headers.set("x-worker-client-ip", clientIp(request));
 
-    const response = await fetchWithRetry(target, {
-      method: request.method,
-      headers,
+    try {
+      const response = await fetchWithRetry(target, {
+        method: request.method,
+        headers,
+        redirect: "manual",
+      });
+      return rewriteRedirect(harden(response), target);
+    } catch (error) {
+      console.error(`backend fetch failed: ${error?.name || "Error"}: ${error?.message || error}`);
+      return harden(new Response("Bad Gateway", { status: 502 }));
+    }
+  },
+
+  async scheduled(_controller, env) {
+    const response = await fetch(new URL("/health", env.BACKEND_URL), {
+      method: "GET",
       redirect: "manual",
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     });
-
-    return rewriteRedirect(harden(response), target);
-  },
-
-  async scheduled(controller, env, ctx) {
-    ctx.waitUntil(
-      fetch(new URL("/health", env.BACKEND_URL), {
-        method: "GET",
-        redirect: "manual",
-        signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-      }).catch(() => {}),
-    );
+    if (!response.ok) {
+      throw new Error(`health cron: backend returned HTTP ${response.status}`);
+    }
   },
 };
+
+export { clientIp, fetchWithRetry, harden, rewriteRedirect };

@@ -143,6 +143,26 @@ def run_convenience(seasons=SEASONS, views=VIEWS):
     return build_report(LEAGUE, seasons, views)
 
 
+@pytest.mark.parametrize(
+    ("errors", "expected"),
+    [(0, 0), (2, 1)],
+)
+def test_main_exit_code_tracks_validation_errors(tmp_path, monkeypatch, errors, expected):
+    monkeypatch.setattr(v, "VALIDATION_DIR", tmp_path)
+    monkeypatch.setattr(v, "REPORT_JSON", tmp_path / "report.json")
+    monkeypatch.setattr(v, "REPORT_MD", tmp_path / "report.md")
+    monkeypatch.setattr(
+        v,
+        "build_report",
+        lambda *_args: {
+            "overall": {"errors": errors, "warnings": 0, "pass": 0, "categories": []},
+            "checks": {},
+        },
+    )
+    monkeypatch.setattr(v, "render_markdown", lambda _report: "report")
+    assert v.main(["--league", LEAGUE]) == expected
+
+
 def test_valid_dataset_is_clean(dataset):
     report = run_convenience()
     assert report["overall"]["errors"] == 0

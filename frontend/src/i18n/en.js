@@ -28,6 +28,23 @@ export const en = {
   "common.loading": "Loading…",
   "common.error": "Something went wrong.",
   "common.retry": "retry",
+  "common.reload": "Reload this page",
+
+  "api.error.0": "Cannot reach the API server. Is the backend running?",
+  "api.error.400": "The request was not understood. Please check the filters and try again.",
+  "api.error.403": "You do not have access to this data.",
+  "api.error.404": "That page or record could not be found.",
+  "api.error.422": "Some values on this page are no longer valid. Please refresh.",
+  "api.error.429": "Too many requests. Please try again shortly.",
+  "api.error.499": "The request was cancelled.",
+  "api.error.500": "The server had a problem. Please try again.",
+  "api.error.502": "The data service is unavailable. Please try again.",
+  "api.error.503": "The service is temporarily unavailable. Please try again.",
+  "api.error.504": "The data service took too long to respond. Please try again.",
+  "api.error.generic": "The data could not be loaded. Please try again.",
+
+  "page.error.title": "This section could not be displayed",
+  "page.error.hint": "The rest of the page still works. Reload to try again.",
   "common.view": "view",
   "common.close": "Close",
   "common.yes": "yes",
@@ -146,7 +163,7 @@ export const en = {
   "page.league.summary":
     "{country} · {region} · {format} · {teams} teams · {seasons} seasons",
   "page.league.analysis.empty":
-    "No analysis reports for {league}. Run {cmd} first.",
+    "No analysis reports are available for {league} yet.",
   "page.league.kpi.totalMatches": "Total matches",
   "page.league.kpi.avgGoals": "Avg goals / match",
   "page.league.kpi.homeWin": "Home win %",
@@ -408,6 +425,9 @@ export const en = {
   "predictability.table": "Table",
   "predictability.tableLine": "{position} · {points} pts · {gd} · {played} played",
 
+  "result.W": "Win",
+  "result.D": "Draw",
+  "result.L": "Loss",
   "result.home": "Home win",
   "result.draw": "Draw",
   "result.away": "Away win",

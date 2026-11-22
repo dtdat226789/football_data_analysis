@@ -28,6 +28,16 @@ export function intParam(params, key, fallback = 0) {
   return Number.isSafeInteger(value) ? value : fallback;
 }
 
+export function enumParam(params, key, allowed, fallback) {
+  const raw = params.get(key);
+  return raw !== null && allowed.includes(raw) ? raw : fallback;
+}
+
+export function boundedIntParam(params, key, { min = 0, max, fallback }) {
+  const value = intParam(params, key, fallback);
+  return value >= min && value <= max ? value : fallback;
+}
+
 /**
  * The query value for an offset: page one is the absence of an offset, so it is
  * dropped rather than written as `?offset=0`.

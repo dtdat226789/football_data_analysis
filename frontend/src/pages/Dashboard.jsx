@@ -6,6 +6,7 @@ import { TeamLink } from "../components/TeamLink.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
 import { Badge, Card, CardHeader, PageHeader } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
+import { asArray, asRecord } from "../lib/shape.js";
 
 const REGION_KEYS = {
   europe: "region.europe",
@@ -96,26 +97,26 @@ export default function Dashboard() {
   if (error) return <ErrorBox error={error} />;
   if (!data) return <ErrorBox error={t("page.dashboard.noData")} />;
 
-  const {
-    top_leagues: topLeagues = [],
-    top_clubs: topClubs = [],
-    recent_matches: recent = [],
-    upcoming_matches: upcoming = [],
-    leagues_by_region: byRegion,
-  } = data;
+  const payload = asRecord(data);
+  const topLeagues = asArray(payload.top_leagues);
+  const topClubs = asArray(payload.top_clubs);
+  const recent = asArray(payload.recent_matches);
+  const upcoming = asArray(payload.upcoming_matches);
+  const byRegion = asRecord(payload.leagues_by_region);
+  const meta = asRecord(payload.meta);
 
   return (
     <div>
       <PageHeader
         title={t("page.dashboard.title")}
         subtitle={t("page.dashboard.summary", {
-          leagues: num(data.meta?.n_leagues),
+          leagues: num(meta?.n_leagues),
           recent: num(recent.length),
           upcoming: num(upcoming.length),
         })}
       />
 
-      <KpiStrip meta={data.meta} recent={recent} upcoming={upcoming} t={t} num={num} />
+      <KpiStrip meta={meta} recent={recent} upcoming={upcoming} t={t} num={num} />
 
       <div className="dashboard-highlights">
         <Card>

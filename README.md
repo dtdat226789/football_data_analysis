@@ -66,6 +66,7 @@ Read from the environment, or from `.env` via `python-dotenv`.
 | `API_RATE_LIMIT_PER_MINUTE` | no | In-process fallback rate limit. Use Cloudflare rate limiting as the primary control. |
 | `DISABLE_DOCS` | production | Set to `1` to disable `/docs`, `/redoc` and `/openapi.json`. |
 | `ALLOW_INSECURE_API` | local only | Explicit opt-out of the fail-closed secret check for local development/tests. Never set in production. |
+| `ALLOW_NO_RATE_LIMITER` | `wrangler dev` only | Lets the Worker serve without the `ratelimits` binding. Never set in production. |
 
 The frontend reads `API_PORT` from `frontend/.env` (default `5173`), which is the
 port the Vite dev server proxies `/api` and `/health` to.
@@ -73,23 +74,31 @@ port the Vite dev server proxies `/api` and `/health` to.
 ## Build the database
 
 The schema lives in `sql/` as ordered parts, `00_reset.sql` through
-`06_index_tuning.sql`. `build_database.py` chains reset → registry → identity →
-matches+standings → validation → raw-to-DB reconciliation → index tuning. Each
-step is also runnable on its own (`etl_01_registry.py`, `etl_02_identity.py`,
-`etl_03_matches_standings.py`, `validate_db.py`, `validate_raw_to_db.py`,
-`tune_indexes.py`).
+`06_index_tuning.sql`. `build_database.py` now applies migrations by default:
+`migrate.py` records a `0001_baseline` version from the idempotent 01/02/04/06
+files, then applies any later `sql/migrations/*.sql` exactly once. Destructive
+resets are opt-in via `--reset-local`, which refuses any DSN whose host is not
+`localhost`, `127.0.0.1` or `[::1]`. ETL validation and reconciliation steps
+still run after schema setup.
 
 ```bash
 python3 backend/scripts/build_league_config.py     # once: refresh league catalog
 python3 backend/scripts/collect_raw_data.py        # optional: spend quota
-python3 backend/scripts/build_database.py          # raw -> Postgres
+python3 backend/scripts/build_database.py          # migrate + raw -> Postgres
+python3 backend/scripts/build_database.py --reset-local  # local DB only
 python3 backend/scripts/run_analysis.py            # analysis reports
 python3 backend/scripts/build_dashboard.py         # all-league HTML dashboard
 ```
 
-`build_all_leagues.py` chains the last three across every configured league.
-`run_analysis.py` runs each module as its own subprocess, so one module failing
-does not stop the rest, and the exit code is non-zero only if a module failed.
+`build_all_leagues.py` chains the last three across every configured league and
+accepts the same guarded `--reset-local` flag. `run_analysis.py` runs each
+module as its own subprocess, so one module failing does not stop the rest, and
+the exit code is non-zero only if a module failed.
+
+`compare_row_counts.py --snapshot PATH` records row counts for every known
+table; `--before A --after B` fails if any table lost rows. The daily refresh
+takes snapshots around the Neon dump/restore so a partial publish triggers the
+rollback path instead of silently losing data.
 
 ## Run it
 
@@ -237,16 +246,32 @@ revoke credentials:
 bash scripts/refresh_data.sh [--dry-run] [--force]
 ```
 
-Collects live seasons, fetches fixtures, validates raw data, rebuilds the
-database, analysis and dashboard. It runs at most once per calendar day (a stamp
-file records the last fully successful run), fails soft between stages, and never
-touches git. On Windows, `scripts/install_task.ps1` registers it as a scheduled
-task that wakes WSL; `scripts/uninstall_task.ps1` removes it.
+Collects live seasons, fetches fixtures and per-match details, validates raw
+data, rebuilds the database, analysis and dashboard, then generates gated ML
+artifacts. It runs at most once per calendar day (a stamp file records the last
+fully successful run), fails soft between stages, and never touches git. Each
+stage writes `logs/refresh_summary.json`; CI refuses to publish or deploy unless
+all seven stages report `ok`, so a late failure can no longer be masked by a
+successful database line in the log. The validator exits non-zero when it finds
+errors, but the known backlog is tracked in `logs/.validation_baseline.json`:
+only new regressions, new leagues with errors and unreadable reports fail the
+stage. A clean CI checkout has no baseline, so it records counts rather than
+blocking on historical data issues. On Windows, `scripts/install_task.ps1`
+registers it as a scheduled task that wakes WSL; `scripts/uninstall_task.ps1`
+removes it.
+
+Both `deploy-backend.yml` and `daily-refresh.yml` tag the running `latest` image
+as `previous`, poll `/health` after the Render deploy hook, and restore `previous`
+to `latest` plus re-trigger the hook if the new image never becomes healthy.
+`render.yaml` is the service blueprint template; replace the Docker Hub username
+placeholder once, keep `DATABASE_URL` and `WORKER_SHARED_SECRET` in Render's
+secret UI (`sync: false`), and set `healthCheckPath: /health`.
 
 ## Tests
 
 ```bash
-python3 -m pytest -q                 # 738 tests (637 offline, 101 live-API)
+python3 -m pytest -q                 # 679 tests; live-API tests skip without a key
+npm test --prefix worker             # node:test
 cd frontend && npm test              # vitest
 ```
 
@@ -257,12 +282,14 @@ unreachable.
 
 ## CI
 
-`.github/workflows/ci.yml` runs two jobs:
+`.github/workflows/ci.yml` runs three jobs:
 
 - **backend** — spins up PostgreSQL 16, installs `requirements.txt` + ruff, runs
   `ruff check .`, builds the database from the committed `premier` sample raw
   data, generates the gated ML artifacts, then runs `pytest` (with
   `FOOTBALL_CHARTS_API_KEY` empty, so live tests skip).
+- **worker** — `npm test --prefix worker` (Node's built-in test runner, no
+  dependencies).
 - **frontend** — `npm ci`, then `npm run lint`, `npm run typecheck`,
   `npm test`, `npm run build`.
 
@@ -275,6 +302,7 @@ rebuild. `deploy-web.yml` watches only frontend/worker assets.
 ```bash
 cd frontend && npm ci && npm run check && npm run build && cd ..
 ruff check . && python3 -m pytest -q
+npm test --prefix worker
 npx wrangler@4.165.0 deploy --dry-run
 ```
 

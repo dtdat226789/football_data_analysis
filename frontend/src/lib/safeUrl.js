@@ -14,3 +14,17 @@ export function safeHttpsUrl(value) {
     return null;
   }
 }
+
+const CHART_NAME = /^[A-Za-z0-9_-]+\.png$/;
+
+export function isValidChartName(value) {
+  return typeof value === "string" && CHART_NAME.test(value);
+}
+
+export function safeImageUrl(value) {
+  if (typeof value !== "string" || !value.trim()) return null;
+  if (value.startsWith("/") && !value.startsWith("//") && !value.startsWith("/\\")) {
+    return value;
+  }
+  return safeHttpsUrl(value);
+}

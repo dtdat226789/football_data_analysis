@@ -130,23 +130,25 @@ def collect_file(
     out_path: Path,
     overwrite: bool,
     delay: float,
-) -> None:
-    """Save one endpoint response under out_path, or skip when it exists."""
+) -> bool:
+    """Save one endpoint response; False only when the upstream call failed."""
     try:
         rel = out_path.relative_to(ROOT_DIR)
     except ValueError:
         rel = out_path
     if out_path.exists() and not overwrite:
         log.info("SKIP  %s (already exists)", rel)
-        return
+        return True
     if delay:
         time.sleep(delay)
     content = get_raw(client, url, params)
     if content is None:
-        return
+        log.error("FAILED %s (upstream unavailable)", rel)
+        return False
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(content)
     log.info("OK    %s (%d bytes)", rel, len(content))
+    return True
 
 
 def collect_league(
@@ -156,37 +158,38 @@ def collect_league(
     views: list[str],
     overwrite: bool,
     delay: float,
-) -> None:
-    """Collect league information once, then teams/results/table per season."""
-    collect_file(client, "/leagues/", None, OUTPUT_DIR / league / "leagues.json", overwrite, delay)
+) -> int:
+    """Collect league data; return the number of failed endpoint calls."""
+    failed = 0
+    if not collect_file(client, "/leagues/", None, OUTPUT_DIR / league / "leagues.json", overwrite, delay):
+        failed += 1
 
     for season in seasons:
         season_dir = OUTPUT_DIR / league / season
-        collect_file(
-            client,
-            f"/leagues/{league}/teams/",
-            {"season": season},
-            season_dir / "teams.json",
-            overwrite,
-            delay,
-        )
-        collect_file(
-            client,
-            f"/leagues/{league}/results/",
-            {"season": season},
-            season_dir / "results.json",
-            overwrite,
-            delay,
-        )
-        for view in views:
-            collect_file(
-                client,
+        calls = [
+            (
+                f"/leagues/{league}/teams/",
+                {"season": season},
+                season_dir / "teams.json",
+            ),
+            (
+                f"/leagues/{league}/results/",
+                {"season": season},
+                season_dir / "results.json",
+            ),
+        ]
+        calls.extend(
+            (
                 f"/leagues/{league}/table/",
                 {"season": season, "view": view},
                 season_dir / f"table_{view}.json",
-                overwrite,
-                delay,
             )
+            for view in views
+        )
+        for url, params, out_path in calls:
+            if not collect_file(client, url, params, out_path, overwrite, delay):
+                failed += 1
+    return failed
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -230,8 +233,10 @@ def main(argv: list[str] | None = None) -> int:
     views = args.view or DEFAULT_VIEWS
 
     with build_client() as client:
-        collect_league(client, args.league, seasons, views, args.overwrite, args.delay)
-    return 0
+        failed = collect_league(client, args.league, seasons, views, args.overwrite, args.delay)
+    if failed:
+        print(f"collect_raw_data: {failed} endpoint(s) failed for {args.league}")
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

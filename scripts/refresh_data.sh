@@ -4,10 +4,11 @@
 #
 #   1. collect_all_leagues.py --active-only --overwrite   results + tables for live seasons
 #   2. fetch_fixtures.py --overwrite                     upcoming fixtures + model_predictions
-#   3. validate_raw_data.py  (one league per run)        raw-data findings
-#   4. build_all_leagues.py                              Postgres rebuild + analysis, all leagues
-#   5. build_dashboard.py                                all-league HTML dashboard
-#   6. generate_ml_artifacts.sh                          dataset, gated model, predictions
+#   3. fetch_fixture_details.py                          per-match detail cache
+#   4. validate_raw_data.py  (one league per run)        raw-data findings
+#   5. build_all_leagues.py                              Postgres rebuild + analysis, all leagues
+#   6. build_dashboard.py                                all-league HTML dashboard
+#   7. generate_ml_artifacts.sh                          dataset, gated model, predictions
 #
 # Driven by the "FootballDataRefresh" Windows scheduled task (install_task.ps1),
 # which wakes this distro through wsl.exe. Also runnable by hand:
@@ -37,6 +38,9 @@ LATEST_LINK="$LOG_DIR/refresh_latest.log"
 LOCK_FILE="$LOG_DIR/.refresh.lock"
 STAMP_FILE="$LOG_DIR/.last_success_date"
 BASELINE_FILE="$LOG_DIR/.validation_baseline.json"
+VALIDATION_STATUS="$LOG_DIR/.validation_status.json"
+SUMMARY_FILE="$LOG_DIR/refresh_summary.json"
+STAGE_TSV="$LOG_DIR/.stage_results.tsv"
 VALIDATION_DIR="data/validation"
 BY_LEAGUE="$VALIDATION_DIR/by-league"
 CANONICAL_REPORT="$VALIDATION_DIR/poc_validation_report.json"
@@ -183,6 +187,7 @@ rule
 
 # ------------------------------------------------------------- stage runner
 STAGE_NAMES=(); STAGE_RESULTS=(); STAGE_SECONDS=()
+: > "$STAGE_TSV"
 
 run_stage() {
     local name="$1"; shift
@@ -203,6 +208,7 @@ run_stage() {
     else
         STAGE_RESULTS+=("failed(exit $code)"); say "  [FAILED exit $code] $name ($((t1 - t0))s)"
     fi
+    printf '%s\t%s\t%s\n' "$name" "${STAGE_RESULTS[-1]}" "$((t1 - t0))" >> "$STAGE_TSV"
 }
 
 # ------------------------------------------------------------------- stage 1
@@ -214,7 +220,11 @@ run_stage "fetch fixtures" \
     "$PYTHON" backend/scripts/fetch_fixtures.py --overwrite
 
 # ------------------------------------------------------------------- stage 3
-# validate_raw_data.py takes a single --league and always writes to the same
+run_stage "fetch fixture details" \
+    "$PYTHON" backend/scripts/fetch_fixture_details.py --overwrite
+
+# ------------------------------------------------------------------- stage 4
+# validate_raw_data.py takes a single --league and writes to the same
 # hardcoded report path (validate_raw_data.py:50-51), so a loop over leagues
 # would leave only the last report behind. Run one league at a time and archive
 # each report under by-league/ before the next run overwrites it.
@@ -229,7 +239,7 @@ validate_all_leagues() {
     mkdir -p "$BY_LEAGUE"
     local tally; tally="$(mktemp)"
     : > "$tally"
-    local league s args seasons
+    local league s args seasons league_failed=0
     while read -r league; do
         [ -n "$league" ] || continue
         mapfile -t seasons < <("$PYTHON" -c "import os,re,sys
@@ -246,14 +256,17 @@ except Exception: pass" "data/raw/$league" 2>/dev/null || true)
         "$PYTHON" backend/scripts/validate_raw_data.py --league "$league" "${args[@]}" >/dev/null 2>&1
         vcode=$?
         set -e
-        # Archive the report only when the validator exited 0 AND the report it
-        # wrote is actually scoped to this league. The report path is hardcoded,
-        # so a crashed or failed run would otherwise leave the previous league's
-        # report in place and silently mislabel it under this league's name,
-        # poisoning the baseline and hiding a real regression.
-        if [ "$vcode" -eq 0 ] && [ -f "$CANONICAL_REPORT" ] && "$PYTHON" -c "import json,sys
+        # Archive only when the report is actually scoped to this league. The
+        # path is hardcoded, so a crashed run could leave the previous league's
+        # report behind and silently mislabel it. A non-zero validator exit
+        # means errors were found; the report is still trustworthy and the
+        # baseline decides whether those errors are new.
+        if [ -f "$CANONICAL_REPORT" ] && "$PYTHON" -c "import json,sys
 try: sys.exit(0 if json.load(open(sys.argv[1])).get('scope',{}).get('league')==sys.argv[2] else 1)
 except Exception: sys.exit(1)" "$CANONICAL_REPORT" "$league"; then
+            if [ "$vcode" -ne 0 ]; then
+                say "  $league: validator reported errors (exit $vcode)"
+            fi
             cp -f "$CANONICAL_REPORT" "$BY_LEAGUE/$league.json"
             "$PYTHON" -c "import json,sys
 try:
@@ -263,89 +276,39 @@ except Exception: print('%s - -' % sys.argv[2])" "$BY_LEAGUE/$league.json" "$lea
         else
             say "  $league: validator exit $vcode or report scope mismatch; not archived"
             printf '%s - -\n' "$league" >> "$tally"
+            league_failed=$((league_failed + 1))
         fi
     done < <("$PYTHON" -c "import json,sys
 c=json.load(open(sys.argv[1]))
 print('\\n'.join(sorted(k for k,v in c.items() if int(v.get('teams',0))>0)))" "$CATALOG" 2>/dev/null || true)
 
-    # validate_raw_data.py always exits 0, even when it reports errors (main()
-    # returns 0 unconditionally), so the finding counts are the only signal.
-    "$PYTHON" - "$tally" "$BASELINE_FILE" << 'PY'
-import json, os, sys
-
-tally_path, baseline_path = sys.argv[1], sys.argv[2]
-current = {}
-missing = []
-with open(tally_path) as fh:
-    for line in fh:
-        parts = line.split()
-        if len(parts) != 3:
-            continue
-        league = parts[0]
-        # "-" marks a league whose validator run could not be trusted, so it is
-        # recorded as "no data" rather than as zero errors.
-        if "-" in (parts[1], parts[2]):
-            current[league] = None
-            missing.append(league)
-        else:
-            current[league] = (int(parts[1]), int(parts[2]))
-
-scored = {k: v for k, v in current.items() if v is not None}
-total_e = sum(v[0] for v in scored.values())
-total_w = sum(v[1] for v in scored.values())
-print("  leagues requested: %d  scored: %d  errors: %d  warnings: %d"
-      % (len(current), len(scored), total_e, total_w))
-if missing:
-    print("  note: no usable report for %d league(s): %s"
-          % (len(missing), ", ".join(missing)))
-
-baseline = {}
-if os.path.exists(baseline_path):
-    try:
-        with open(baseline_path) as fh:
-            raw = json.load(fh).get("counts", {})
-        baseline = {k: (None if None in v else tuple(v)) for k, v in raw.items()}
-    except Exception:
-        baseline = {}
-
-if not baseline:
-    print("  no baseline yet; recording this run's counts for future comparison")
-else:
-    worsened = [(k, baseline[k][0], scored[k][0]) for k in sorted(scored)
-                if baseline.get(k) is not None and scored[k][0] > baseline[k][0]]
-    improved = [k for k in sorted(scored)
-                if baseline.get(k) is not None and scored[k][0] < baseline[k][0]]
-    if worsened:
-        print("  WARNING: error count increased for %d league(s):" % len(worsened))
-        for league, before, after in worsened:
-            print("    %s: %d -> %d" % (league, before, after))
-    if improved:
-        print("  note: error count decreased for %d league(s)" % len(improved))
-    if not worsened and not improved:
-        print("  error counts unchanged since the last run")
-
-os.makedirs(os.path.dirname(baseline_path) or ".", exist_ok=True)
-with open(baseline_path, "w") as fh:
-    json.dump({"counts": {k: list(v) for k, v in current.items()},
-               "totals": {"errors": total_e, "warnings": total_w}}, fh, indent=2)
-print("  baseline written to %s" % baseline_path)
-PY
+    # validate_raw_data.py exits 1 when it finds errors; the baseline decides
+    # whether those errors are a new regression or part of the known backlog.
+    "$PYTHON" backend/scripts/validation_baseline.py \
+        --tally "$tally" --baseline "$BASELINE_FILE" --status "$VALIDATION_STATUS"
     rm -f "$tally"
+    blocked="$("$PYTHON" -c "import json,sys
+print('1' if json.load(open(sys.argv[1])).get('blocking') else '0')" "$VALIDATION_STATUS")"
+    if [ "$blocked" -ne 0 ] || [ "$league_failed" -ne 0 ]; then
+        say "  validation regressed or produced unusable reports; refusing to publish."
+        return 1
+    fi
+    return 0
 }
 
 run_stage "validate raw (per league)" validate_all_leagues
 
-# ------------------------------------------------------------------- stage 4
+# ------------------------------------------------------------------- stage 5
 # Full rebuild: 00_reset.sql drops the schema on the first league, then every
 # league is loaded and analysed. Expensive (~20-35 min) but self-healing.
 run_stage "build database + analysis (all leagues)" \
-    "$PYTHON" backend/scripts/build_all_leagues.py
+    "$PYTHON" backend/scripts/build_all_leagues.py --reset-local
 
-# ------------------------------------------------------------------- stage 5
+# ------------------------------------------------------------------- stage 6
 run_stage "build dashboard" \
     "$PYTHON" backend/scripts/build_dashboard.py
 
-# ------------------------------------------------------------------- stage 6
+# ------------------------------------------------------------------- stage 7
 run_stage "generate ML artifacts" \
     bash scripts/generate_ml_artifacts.sh
 
@@ -360,6 +323,28 @@ for i in "${!STAGE_NAMES[@]}"; do
     case "${STAGE_RESULTS[$i]}" in failed*) overall=1 ;; esac
 done
 rule
+
+"$PYTHON" - "$STAGE_TSV" "$SUMMARY_FILE" "$today" "$overall" << 'PY'
+import json
+import sys
+
+tsv_path, out_path, today, overall = sys.argv[1:]
+stages = []
+with open(tsv_path, encoding="utf-8") as fh:
+    for line in fh:
+        parts = line.rstrip("\n").split("\t")
+        if len(parts) == 3:
+            stages.append({"name": parts[0], "result": parts[1], "seconds": int(parts[2])})
+payload = {
+    "date": today,
+    "overall": "ok" if overall == "0" else "failed",
+    "stage_count": len(stages),
+    "stages": stages,
+}
+with open(out_path, "w", encoding="utf-8") as fh:
+    json.dump(payload, fh, indent=2)
+print(f"stage summary: {out_path} ({payload['overall']}, {len(stages)} stages)")
+PY
 
 if [ "$DRY_RUN" -eq 1 ]; then
     say "DRY RUN complete; nothing was executed and no stamp was written."

@@ -4,7 +4,9 @@ import { useApi } from "../hooks/useApi.js";
 import { Empty, ErrorBox, Skeleton } from "../components/State.jsx";
 import { FilterSelects, KpiTile, MiniCompare, RankTable } from "../components/DashboardWidgets.jsx";
 import { TableShell } from "../components/ui/index.js";
-import { intParam, useParamsPatch } from "../lib/searchParams.js";
+import { enumParam, useParamsPatch } from "../lib/searchParams.js";
+import { asArray, asRecord } from "../lib/shape.js";
+import { safeImageUrl } from "../lib/safeUrl.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const N_OPTIONS = [5, 10, 20];
@@ -20,23 +22,33 @@ export default function TeamKpi() {
   const { slug } = useParams();
   const [params, patch] = useParamsPatch();
   const { t, plainDay } = useFormatters();
-  const league = params.get("league") || "premier";
+  const rawLeague = params.get("league") || "premier";
   const season = params.get("season") || "";
-  const n = intParam(params, "n", 5);
+  const n = Number(enumParam(params, "n", N_OPTIONS.map(String), "5"));
 
   const leagues = useApi(() => api.listLeagues(), []);
+  const leagueSlugs = asArray(leagues.data)
+    .map((item) => item?.slug)
+    .filter((value) => typeof value === "string");
+  const league = leagueSlugs.length
+    ? enumParam(params, "league", leagueSlugs, "premier")
+    : rawLeague;
   const seasons = useApi(() => api.leagueSeasons(league), [league]);
   const { data, loading, error } = useApi(
     () => api.teamKpi(slug, { league, season, n }),
     [slug, league, season, n],
   );
+  const lastMatches = asArray(asRecord(data).last_matches);
+  const groups = asArray(asRecord(data).groups);
+  const table = asArray(asRecord(data).table);
+  const logo = safeImageUrl(asRecord(data).logo_url);
 
   const leagueFields = [
     {
       key: "league",
       labelKey: "common.league",
       value: league,
-      options: (leagues.data || []).map((item) => ({ value: item.slug, label: item.name })),
+      options: leagueSlugs.map((value, i) => ({ value, label: asArray(leagues.data)[i]?.name || value })),
       onChange: (value) => patch({ league: value, season: "" }),
     },
     {
@@ -69,7 +81,7 @@ export default function TeamKpi() {
         <div>
           <h2>
             {data?.team_name || slug}
-            {data?.logo_url && <img src={data.logo_url} alt="" className="dash-logo" decoding="async" />}
+            {logo && <img src={logo} alt="" className="dash-logo" decoding="async" width={40} height={40} />}
           </h2>
           <p>{t("dash.kpiSummary", { league: data?.league_name || league, season: data?.season || season })}</p>
         </div>
@@ -91,11 +103,11 @@ export default function TeamKpi() {
           <div className="dash-panels dash-panels-split">
             <section className="dash-panel">
               <h3>{t("dash.lastGames", { n: data.n })}</h3>
-              {data.last_matches.length === 0 ? (
+              {lastMatches.length === 0 ? (
                 <p className="dash-empty">{t("dash.noMatches")}</p>
               ) : (
                 <ul className="dash-match-list">
-                  {data.last_matches.map((game, i) => (
+                  {lastMatches.map((game, i) => (
                     <li key={`${game.date}-${i}`}>
                       <span className="dash-match-date">{plainDay(game.date)}</span>
                       <span className="dash-match-opponent">
@@ -108,15 +120,15 @@ export default function TeamKpi() {
                 </ul>
               )}
             </section>
-            <MiniCompare games={data.last_matches} metric="goals_for" titleKey="dash.goalsFor" />
-            <MiniCompare games={data.last_matches} metric="goals_against" titleKey="dash.goalsAgainst" />
+            <MiniCompare games={lastMatches} metric="goals_for" titleKey="dash.goalsFor" />
+            <MiniCompare games={lastMatches} metric="goals_against" titleKey="dash.goalsAgainst" />
           </div>
 
-          {data.groups.map((group) => (
+          {groups.map((group) => (
             <section className="dash-panel dash-group" key={group.key}>
               <h3>{t(`kpi.group.${group.key}`)}</h3>
               <div className="dash-tile-grid">
-                {group.tiles.map((tile) => (
+                {asArray(group.tiles).map((tile) => (
                   <KpiTile tile={tile} key={tile.key} />
                 ))}
               </div>
@@ -125,11 +137,11 @@ export default function TeamKpi() {
 
           <section className="dash-panel">
             <h3>{t("dash.leagueTable")}</h3>
-            {data.table.length === 0 ? (
+            {table.length === 0 ? (
               <p className="dash-empty">{t("dash.noData")}</p>
             ) : (
               <TableShell className="dash-table-wrap" label={t("dash.rankingTitle")}>
-                <RankTable rows={data.table} columns={TABLE_COLUMNS} />
+                <RankTable rows={table} columns={TABLE_COLUMNS} />
               </TableShell>
             )}
             <p className="dash-note">{t("dash.proxyNote")}</p>

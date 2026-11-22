@@ -141,6 +141,19 @@ def summarize_predictions(payload: dict) -> list[dict]:
     return rows
 
 
+def prune_stale_files(output_dir: Path, scope: set[str], keep: set[str]) -> list[Path]:
+    """Delete league dumps not kept from a refresh. Empty scope means all leagues."""
+    removed: list[Path] = []
+    for path in sorted(output_dir.glob("*.json")):
+        if path.name == "manifest.json" or path.name in keep:
+            continue
+        if scope and path.name not in scope:
+            continue
+        path.unlink()
+        removed.append(path)
+    return removed
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         prog="fetch_fixtures",
@@ -189,6 +202,8 @@ def main(argv: list[str] | None = None) -> int:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest: dict = {"written": [], "empty": [], "failed": []}
+    keep: set[str] = set()
+    scope = {f"{league}.json" for league in slugs}
 
     with build_client() as client:
         for league in slugs:
@@ -199,16 +214,22 @@ def main(argv: list[str] | None = None) -> int:
             if out_path.exists() and not args.overwrite:
                 log.info("SKIP  %s (already exists)", out_path.relative_to(ROOT_DIR))
                 manifest["written"].append(league)
+                keep.add(out_path.name)
                 continue
 
             payload = get_json(client, url)
             if payload is None:
                 manifest["failed"].append(league)
+                if out_path.exists():
+                    keep.add(out_path.name)
                 continue
 
             count = payload.get("count", len(payload.get("matches") or []))
             if not count:
                 log.info("EMPTY %s (no upcoming fixtures)", league)
+                if out_path.exists():
+                    out_path.unlink()
+                    log.info("PRUNE %s (no upcoming fixtures)", out_path.name)
                 manifest["empty"].append(league)
                 continue
 
@@ -217,6 +238,7 @@ def main(argv: list[str] | None = None) -> int:
                 encoding="utf-8",
             )
             manifest["written"].append(league)
+            keep.add(out_path.name)
             summary = summarize_predictions(payload)
             log.info("OK    %s (%d fixtures) -> %s", league, count, out_path.relative_to(ROOT_DIR))
             for row in summary:
@@ -226,6 +248,9 @@ def main(argv: list[str] | None = None) -> int:
                     f"[{row['status']}]  P(home)={row['home']}  P(away)={row['away']}  "
                     f"O2.5={row['over_2_5']}"
                 )
+
+    for path in prune_stale_files(OUTPUT_DIR, set() if args.league is None else scope, keep):
+        log.info("PRUNE stale %s", path.name)
 
     manifest_path = OUTPUT_DIR / "manifest.json"
     manifest_path.write_text(

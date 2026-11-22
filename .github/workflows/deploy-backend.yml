@@ -82,6 +82,19 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Remember the running backend image
+        id: previous
+        continue-on-error: true
+        run: |
+          image="${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME"
+          if docker pull "$image:latest"; then
+            docker tag "$image:latest" "$image:previous"
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No previous latest image; rollback will not be possible."
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Compute image tag
         id: tag
         run: echo "date=$(date -u +%Y-%m-%d-%H%M)" >> "$GITHUB_OUTPUT"
@@ -107,7 +120,10 @@ jobs:
           curl -fsS -X POST "$RENDER_DEPLOY_HOOK"
 
       - name: Wait for the backend health check
+        id: health
+        continue-on-error: true
         run: |
+          sleep 30
           for attempt in $(seq 1 20); do
             if curl -fsS --max-time 10 https://football-data-analysis-latest.onrender.com/health; then
               echo "backend healthy"
@@ -116,4 +132,33 @@ jobs:
             sleep 15
           done
           echo "::error::Backend did not become healthy after deploy"
+          exit 1
+
+      - name: Roll back the previous backend image
+        if: ${{ steps.health.outcome == 'failure' && steps.previous.outputs.available == 'true' }}
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$RENDER_DEPLOY_HOOK" ]; then
+            echo "::error::Missing RENDER_DEPLOY_HOOK secret; cannot roll back"
+            exit 1
+          fi
+          image="${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME"
+          docker tag "$image:previous" "$image:latest"
+          docker push "$image:latest"
+          curl -fsS -X POST "$RENDER_DEPLOY_HOOK"
+          for attempt in $(seq 1 20); do
+            if curl -fsS --max-time 10 https://football-data-analysis-latest.onrender.com/health; then
+              echo "backend healthy again after rollback"
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::Backend still unhealthy after rollback"
+          exit 1
+
+      - name: Fail when the backend is unhealthy
+        if: ${{ !cancelled() && steps.health.outcome == 'failure' }}
+        run: |
+          echo "::error::Backend health check failed; deployment was not verified."
           exit 1

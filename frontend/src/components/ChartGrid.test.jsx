@@ -12,6 +12,14 @@ describe("ChartGrid", () => {
     const imgs = document.querySelectorAll(".chart-grid img");
     expect(imgs).toHaveLength(2);
     expect(imgs[0]).toHaveAttribute("src", "/api/v1/analysis/premier/charts/avg_goals.png");
+    expect(imgs[0]).toHaveAttribute("width", "640");
+    expect(imgs[0]).toHaveAttribute("height", "320");
+  });
+
+  it("ignores chart names that are not plain PNG files", () => {
+    render(<ChartGrid league="premier" charts={["../../secret", "avg_goals.png"]} />);
+
+    expect(document.querySelectorAll(".chart-grid img")).toHaveLength(1);
   });
 
   it("opens a full-screen lightbox when a chart is selected", () => {

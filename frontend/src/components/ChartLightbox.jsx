@@ -20,6 +20,16 @@ export default function ChartLightbox({ src, title, onClose }) {
   }, []);
 
   useEffect(() => {
+    const background = document.getElementById("root");
+    if (!background) return undefined;
+    const hadInert = background.hasAttribute("inert");
+    background.setAttribute("inert", "");
+    return () => {
+      if (!hadInert) background.removeAttribute("inert");
+    };
+  }, []);
+
+  useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") {
         onClose?.();
@@ -65,7 +75,7 @@ export default function ChartLightbox({ src, title, onClose }) {
             ×
           </button>
         </div>
-        <img src={src} alt={title} decoding="async" />
+        <img src={src} alt={title} width={1280} height={640} decoding="async" />
       </div>
     </div>
   );

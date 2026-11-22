@@ -18,7 +18,29 @@ describe("FormPills", () => {
     expect(pills).toHaveLength(2);
     expect(pills[0]).toHaveClass("pill", "W");
     expect(pills[0]).toHaveAttribute("title", "Arsenal 2-1 Chelsea");
+    expect(pills[0]).toHaveAttribute(
+      "aria-label",
+      "Win: Arsenal 2-1 Chelsea",
+    );
     expect(pills[1]).toHaveClass("pill", "D");
+    expect(pills[1]).toHaveAttribute(
+      "aria-label",
+      "Draw: Liverpool 1-1 Arsenal",
+    );
+  });
+
+  it("normalizes long result words to the W/D/L notation", () => {
+    render(
+      <FormPills
+        results={[{ team_result: "win", home_team: "A", home_score: 1, away_score: 0, away_team: "B" }]}
+      />,
+    );
+
+    expect(screen.getByText("W")).toHaveClass("pill", "W");
+    expect(screen.getByText("W")).toHaveAttribute(
+      "aria-label",
+      "Win: A 1-0 B",
+    );
   });
 
   it("renders an em dash when there are no results", () => {
@@ -27,7 +49,7 @@ describe("FormPills", () => {
   });
 
   it("renders an em dash when results are missing", () => {
-    render(<FormPills />);
+    render(<FormPills results={undefined} />);
     expect(screen.getByText("—")).toBeInTheDocument();
   });
 });

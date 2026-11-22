@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
+import { withRequestSignal } from "../lib/requestSignal.js";
 import { ApiError, api, request } from "./client.js";
 
 function mockFetch(response) {
@@ -84,6 +85,44 @@ describe("request", () => {
 
     const url = new URL(mockedFetch().mock.calls[0][0]);
     expect(url.pathname).toBe("/api/v1/health");
+  });
+
+  it("encodes path parameters so a slug cannot alter the route or query", async () => {
+    mockFetch(new Response(JSON.stringify({ ok: true }), { status: 200 }));
+
+    await api.league("a/b?x=1");
+
+    const url = new URL(mockedFetch().mock.calls[0][0]);
+    expect(url.pathname).toBe("/api/v1/leagues/a%2Fb%3Fx%3D1");
+    expect(url.search).toBe("");
+  });
+
+  it("passes a timeout signal to fetch on every request", async () => {
+    mockFetch(new Response(JSON.stringify({ ok: true }), { status: 200 }));
+
+    await api.health();
+
+    expect(mockedFetch().mock.calls[0][1].signal).toBeInstanceOf(AbortSignal);
+  });
+
+  it("honours the request signal bound by a loader", async () => {
+    mockFetch(new Response(JSON.stringify({ ok: true }), { status: 200 }));
+    const controller = new AbortController();
+
+    await withRequestSignal(controller.signal, () => api.health());
+    const signal = mockedFetch().mock.calls[0][1].signal;
+    expect(signal.aborted).toBe(false);
+
+    controller.abort();
+    expect(signal.aborted).toBe(true);
+  });
+
+  it("only builds URLs for chart names that are plain PNG files", () => {
+    expect(api.chartUrl("premier", "avg_goals.png")).toBe(
+      "/api/v1/analysis/premier/charts/avg_goals.png",
+    );
+    expect(api.chartUrl("premier", "../../secrets")).toBeNull();
+    expect(api.chartUrl("premier", "chart.svg")).toBeNull();
   });
 });
 

@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { NavLink, Navigate, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard.jsx";
-import Leagues from "./pages/Leagues.jsx";
-import LeagueDetail from "./pages/LeagueDetail.jsx";
-import Matches from "./pages/Matches.jsx";
-import Teams from "./pages/Teams.jsx";
-import TeamDetail from "./pages/TeamDetail.jsx";
-import MatchDetail from "./pages/MatchDetail.jsx";
-import FixtureDetail from "./pages/FixtureDetail.jsx";
-import TeamKpi from "./pages/TeamKpi.jsx";
-import ClubAnalysis from "./pages/ClubAnalysis.jsx";
+
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import { Loading } from "./components/State.jsx";
 import SettingsControls from "./i18n/SettingsControls.jsx";
 import { useI18n } from "./i18n/I18nProvider.jsx";
+
+const Dashboard = lazy(() => import("./pages/Dashboard.jsx"));
+const Leagues = lazy(() => import("./pages/Leagues.jsx"));
+const LeagueDetail = lazy(() => import("./pages/LeagueDetail.jsx"));
+const Teams = lazy(() => import("./pages/Teams.jsx"));
+const TeamDetail = lazy(() => import("./pages/TeamDetail.jsx"));
+const MatchDetail = lazy(() => import("./pages/MatchDetail.jsx"));
+const FixtureDetail = lazy(() => import("./pages/FixtureDetail.jsx"));
+const TeamKpi = lazy(() => import("./pages/TeamKpi.jsx"));
+const ClubAnalysis = lazy(() => import("./pages/ClubAnalysis.jsx"));
+const Matches = lazy(() => import("./pages/Matches.jsx"));
 
 export default function App() {
   const { t } = useI18n();
@@ -71,21 +75,23 @@ export default function App() {
       </header>
 
       <main className="content" id="main-content" tabIndex={-1}>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/leagues" element={<Leagues />} />
-          <Route path="/leagues/:slug" element={<LeagueDetail />} />
-          <Route path="/teams" element={<Teams />} />
-          <Route path="/teams/:slug" element={<TeamDetail />} />
-          <Route path="/teams/:slug/kpi" element={<TeamKpi />} />
-          <Route path="/matches" element={<Matches />} />
-          <Route path="/match/:id" element={<MatchDetail />} />
-          {/* Splat route: the trailing fixture id is the `date-home-vs-away`
-              segment of the upstream slug. */}
-          <Route path="/fixture/:league/*" element={<FixtureDetail />} />
-          <Route path="/club-analysis" element={<ClubAnalysis />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <ErrorBoundary>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/leagues" element={<Leagues />} />
+              <Route path="/leagues/:slug" element={<LeagueDetail />} />
+              <Route path="/teams" element={<Teams />} />
+              <Route path="/teams/:slug" element={<TeamDetail />} />
+              <Route path="/teams/:slug/kpi" element={<TeamKpi />} />
+              <Route path="/matches" element={<Matches />} />
+              <Route path="/match/:id" element={<MatchDetail />} />
+              <Route path="/fixture/:league/*" element={<FixtureDetail />} />
+              <Route path="/club-analysis" element={<ClubAnalysis />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </main>
     </div>
   );

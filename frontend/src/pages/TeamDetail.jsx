@@ -10,13 +10,13 @@ import MatchOutlook from "../components/MatchOutlook.jsx";
 import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 import { useParamsPatch } from "../lib/searchParams.js";
+import { asArray } from "../lib/shape.js";
+import { safeImageUrl } from "../lib/safeUrl.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const POSITION_COLOR = "var(--green)";
 const POINTS_COLOR = "var(--accent)";
 const WIN_COLOR = "var(--green)";
-/** Shared empty list, so `detail.data?.memberships || …` keeps one identity. */
-const NO_MEMBERSHIPS = [];
 const DRAW_COLOR = "var(--amber)";
 const LOSS_COLOR = "var(--red)";
 
@@ -94,7 +94,7 @@ export default function TeamDetail() {
   // A stable identity for "no memberships yet". An inline `|| []` allocated a new
   // array on every render, so each `memberships` dependency below compared unequal
   // each time and the memos and effects that list it recomputed unconditionally.
-  const memberships = detail.data?.memberships || NO_MEMBERSHIPS;
+  const memberships = asArray(detail.data?.memberships);
 
   const leagues = useMemo(() => {
     const seen = new Map();
@@ -133,6 +133,7 @@ export default function TeamDetail() {
   const onSeasonChange = (value) => patch({ season: value });
 
   const seasonMatches = memberships.filter((m) => m.league === league && m.season === season);
+  const logo = safeImageUrl(seasonMatches[0]?.logo_url);
   const apiName = seasonMatches[0]?.api_name || detail.data?.team?.canonical_name || slug;
 
   const form = useApi(
@@ -195,8 +196,8 @@ export default function TeamDetail() {
         title={
           <>
             {apiName}
-            {seasonMatches[0]?.logo_url && (
-              <img className="team-crest" src={seasonMatches[0].logo_url} alt="" width={28} height={28} decoding="async" />
+            {logo && (
+              <img className="team-crest" src={logo} alt="" width={28} height={28} decoding="async" />
             )}
           </>
         }

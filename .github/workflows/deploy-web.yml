@@ -52,6 +52,9 @@ jobs:
             exit 1
           fi
 
+      - name: Test worker
+        run: npm test --prefix worker
+
       - name: Verify BACKEND_SHARED_SECRET is configured
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -68,6 +71,10 @@ jobs:
       - name: Install frontend dependencies
         working-directory: frontend
         run: npm ci
+
+      - name: Check frontend
+        working-directory: frontend
+        run: npm run check
 
       - name: Build frontend
         working-directory: frontend

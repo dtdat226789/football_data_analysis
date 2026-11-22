@@ -4,6 +4,7 @@ import { ErrorBox, TableSkeleton } from "./State.jsx";
 import { TableShell } from "./ui/index.js";
 import { TeamLink } from "./TeamLink.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
+import { asArray } from "../lib/shape.js";
 
 /**
  * The finished-match table, shared by the matches page and a league's Matches tab.
@@ -28,7 +29,7 @@ import { useFormatters } from "../i18n/useFormatters.js";
 export default function MatchTable({ state, showLeague = false, emptyMessage, skeletonRows = 6 }) {
   const { t, plainDay } = useFormatters();
   const columns = showLeague ? 6 : 5;
-  const rows = state?.data?.matches || [];
+  const rows = asArray(state?.data?.matches);
 
   if (state?.error) return <ErrorBox error={state.error} />;
   if (!state?.data && !state?.loading) return null;

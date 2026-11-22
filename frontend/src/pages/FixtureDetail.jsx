@@ -8,7 +8,7 @@ import MatchOutlook from "../components/MatchOutlook.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
-import { safeHttpsUrl } from "../lib/safeUrl.js";
+import { safeHttpsUrl, safeImageUrl } from "../lib/safeUrl.js";
 
 /**
  * The model's full read on an unplayed fixture: goal totals, expected goals,
@@ -118,14 +118,15 @@ function PredictabilityPanel({ prediction }) {
 function TeamCard({ side, team, standings }) {
   const { t, pct, dec } = useFormatters();
   if (!team) return null;
+  const logo = safeImageUrl(team.logo);
   const venue = team.venue;
   return (
     <Card>
       <CardHeader
         title={
           <span className="detail-team-heading">
-            {team.logo ? (
-              <img className="team-crest" src={team.logo} alt="" width={22} height={22} decoding="async" />
+            {logo ? (
+              <img className="team-crest" src={logo} alt="" width={22} height={22} decoding="async" />
             ) : null}
             <TeamLink name={team.name} />
             <span className="detail-team-side">
@@ -218,6 +219,8 @@ export default function FixtureDetail() {
   const home = data.teams?.home;
   const away = data.teams?.away;
   const portalLink = safeHttpsUrl(data.kickoff?.portal_link);
+  const homeLogo = safeImageUrl(home?.logo);
+  const awayLogo = safeImageUrl(away?.logo);
 
   return (
     <div>
@@ -227,12 +230,12 @@ export default function FixtureDetail() {
       <PageHeader
         title={
           <>
-            {home?.logo ? (
-              <img className="team-crest" src={home.logo} alt="" width={24} height={24} decoding="async" />
+            {homeLogo ? (
+              <img className="team-crest" src={homeLogo} alt="" width={24} height={24} decoding="async" />
             ) : null}{" "}
             <TeamLink name={home?.name} /> {t("common.vs")} <TeamLink name={away?.name} />{" "}
-            {away?.logo ? (
-              <img className="team-crest" src={away.logo} alt="" width={24} height={24} decoding="async" />
+            {awayLogo ? (
+              <img className="team-crest" src={awayLogo} alt="" width={24} height={24} decoding="async" />
             ) : null}
           </>
         }

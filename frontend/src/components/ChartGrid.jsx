@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 
 import { api } from "../api/client.js";
 import { useFormatters } from "../i18n/useFormatters.js";
+import { isValidChartName } from "../lib/safeUrl.js";
 import ChartLightbox from "./ChartLightbox.jsx";
 
 export function chartCaption(name, t) {
@@ -17,11 +18,12 @@ export default function ChartGrid({ league, charts }) {
   const { t } = useFormatters();
   const [lightbox, setLightbox] = useState(null);
   const closeLightbox = useCallback(() => setLightbox(null), []);
+  const safeCharts = Array.isArray(charts) ? charts.filter(isValidChartName) : [];
 
   return (
     <>
       <div className="chart-grid">
-        {charts.map((c) => {
+        {safeCharts.map((c) => {
           const caption = chartCaption(c, t);
           return (
             <button
@@ -36,6 +38,8 @@ export default function ChartGrid({ league, charts }) {
               <img
                 src={api.chartUrl(league, c)}
                 alt=""
+                width={640}
+                height={320}
                 loading="lazy"
                 decoding="async"
               />

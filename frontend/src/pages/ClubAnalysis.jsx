@@ -4,7 +4,8 @@ import { useApi } from "../hooks/useApi.js";
 import { Empty, ErrorBox, Skeleton } from "../components/State.jsx";
 import { FilterSelects, KpiTile, LineTrend, RankTable } from "../components/DashboardWidgets.jsx";
 import { TableShell } from "../components/ui/index.js";
-import { useParamsPatch } from "../lib/searchParams.js";
+import { enumParam, useParamsPatch } from "../lib/searchParams.js";
+import { asArray, asRecord } from "../lib/shape.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 const RANKING_COLUMNS = [
@@ -17,22 +18,33 @@ const RANKING_COLUMNS = [
 export default function ClubAnalysis() {
   const [params, patch] = useParamsPatch();
   const { t } = useFormatters();
-  const league = params.get("league") || "premier";
+  const rawLeague = params.get("league") || "premier";
   const season = params.get("season") || "";
   const team = params.get("team") || "";
 
   const leagues = useApi(() => api.listLeagues(), []);
+  const leagueSlugs = asArray(leagues.data)
+    .map((item) => item?.slug)
+    .filter((value) => typeof value === "string");
+  const league = leagueSlugs.length
+    ? enumParam(params, "league", leagueSlugs, "premier")
+    : rawLeague;
   const { data, loading, error } = useApi(
     () => api.clubAnalysis({ league, season, team }),
     [league, season, team],
   );
+  const seasons = asArray(asRecord(data).seasons);
+  const teams = asArray(asRecord(data).teams);
+  const kpis = asArray(asRecord(data).kpis);
+  const ranking = asArray(asRecord(data).ranking);
+  const timeline = asArray(asRecord(data).timeline);
 
   const fields = [
     {
       key: "league",
       labelKey: "common.league",
       value: league,
-      options: (leagues.data || []).map((item) => ({ value: item.slug, label: item.name })),
+      options: leagueSlugs.map((value, i) => ({ value, label: asArray(leagues.data)[i]?.name || value })),
       onChange: (value) => patch({ league: value, season: "", team: "" }),
     },
     {
@@ -41,7 +53,7 @@ export default function ClubAnalysis() {
       value: season,
       options: [
         { value: "", label: t("dash.latestComplete") },
-        ...(data?.seasons || []).map((item) => ({ value: item.season, label: item.season })),
+        ...seasons.map((item) => ({ value: item.season, label: item.season })),
       ],
       onChange: (value) => patch({ season: value, team: "" }),
     },
@@ -51,7 +63,7 @@ export default function ClubAnalysis() {
       value: team,
       options: [
         { value: "", label: t("dash.autoTeam") },
-        ...(data?.teams || []).map((item) => ({ value: item.slug, label: item.name })),
+        ...teams.map((item) => ({ value: item.slug, label: item.name })),
       ],
       onChange: (value) => patch({ team: value }),
     },
@@ -80,7 +92,7 @@ export default function ClubAnalysis() {
       {data && (
         <>
           <div className="dash-kpi-grid">
-            {data.kpis.map((tile) => (
+            {kpis.map((tile) => (
               <KpiTile tile={tile} key={tile.key} />
             ))}
           </div>
@@ -88,15 +100,15 @@ export default function ClubAnalysis() {
           <div className="dash-panels dash-panels-split">
             <section className="dash-panel">
               <h3>{t("dash.trendTitle")}</h3>
-              <LineTrend data={data.timeline} label={t("kpi.goalsPerGame")} />
+              <LineTrend data={timeline} label={t("kpi.goalsPerGame")} />
             </section>
             <section className="dash-panel">
               <h3>{t("dash.rankingTitle")}</h3>
-              {data.ranking.length === 0 ? (
+              {ranking.length === 0 ? (
                 <p className="dash-empty">{t("dash.noData")}</p>
               ) : (
                 <TableShell className="dash-table-wrap" label={t("dash.rankingTitle")}>
-                  <RankTable rows={data.ranking} columns={RANKING_COLUMNS} />
+                  <RankTable rows={ranking} columns={RANKING_COLUMNS} />
                 </TableShell>
               )}
             </section>

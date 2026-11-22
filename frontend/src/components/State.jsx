@@ -3,13 +3,21 @@ import { useFormatters } from "../i18n/useFormatters.js";
 /** @param {{ label?: string }} props Absent falls back to the loading line. */
 export function Loading({ label }) {
   const { t } = useFormatters();
-  return <div className="loader">{label || t("common.loading")}</div>;
+  return (
+    <div className="loader" role="status" aria-live="polite">
+      {label || t("common.loading")}
+    </div>
+  );
 }
 
 /** @param {{ error?: string }} props Absent or blank falls back to a generic line. */
 export function ErrorBox({ error }) {
   const { t } = useFormatters();
-  return <div className="error-box">{error || t("common.error")}</div>;
+  return (
+    <div className="error-box" role="alert">
+      {error || t("common.error")}
+    </div>
+  );
 }
 
 export function Empty({ children }) {
