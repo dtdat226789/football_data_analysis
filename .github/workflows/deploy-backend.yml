@@ -99,6 +99,9 @@ jobs:
         id: tag
         run: echo "date=$(date -u +%Y-%m-%d-%H%M)" >> "$GITHUB_OUTPUT"
 
+      - name: Ensure build-context directories exist
+        run: mkdir -p data/raw/fixtures data/analysis
+
       - name: Build and push backend image
         uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
         with:
