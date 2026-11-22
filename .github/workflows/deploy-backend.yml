@@ -102,6 +102,52 @@ jobs:
       - name: Ensure build-context directories exist
         run: mkdir -p data/raw/fixtures data/analysis
 
+      - name: Check upstream API key
+        env:
+          FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
+        run: |
+          key="$(printf '%s' "$FOOTBALL_CHARTS_API_KEY" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+          if [ -z "$key" ]; then
+            echo "::error::Missing FOOTBALL_CHARTS_API_KEY secret"
+            exit 1
+          fi
+          code="$(curl -sS -o "$RUNNER_TEMP/leagues.json" -w '%{http_code}' \
+            -H "Authorization: Bearer ${key}" \
+            https://footballcharts-backend.onrender.com/api/v1/leagues/ || true)"
+          echo "Upstream /leagues/ responded HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::Upstream API key rejected (HTTP $code). Re-set the FOOTBALL_CHARTS_API_KEY secret to the raw key."
+            exit 1
+          fi
+
+      - name: Collect upcoming fixtures
+        env:
+          FOOTBALL_CHARTS_API_KEY: ${{ secrets.FOOTBALL_CHARTS_API_KEY }}
+        run: |
+          export FOOTBALL_CHARTS_API_KEY="$(printf '%s' "$FOOTBALL_CHARTS_API_KEY" | tr -d '\r\n' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+          python backend/scripts/fetch_fixtures.py --overwrite
+          python backend/scripts/fetch_fixture_details.py --overwrite
+
+      - name: Verify fixtures are in the build context
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("data/raw/fixtures")
+          files = [p for p in root.glob("*.json") if p.name != "manifest.json"]
+          if not files:
+              raise SystemExit("No fixture files were collected; refusing to build an empty fixtures image.")
+          manifest = json.loads((root / "manifest.json").read_text())
+          failed = manifest.get("failed") or []
+          if failed:
+              raise SystemExit(f"Fixture fetch failed for {len(failed)} league(s): {failed[:5]}")
+          rows = sum(len(json.loads(p.read_text()).get("matches") or []) for p in files)
+          if rows == 0:
+              raise SystemExit("Fixture files contain no matches; refusing to build.")
+          print(f"fixtures: {len(files)} leagues, {rows} matches")
+          PY
+
       - name: Build and push backend image
         uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
         with:
