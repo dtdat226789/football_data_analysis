@@ -5,6 +5,7 @@ import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { FormPills } from "../components/FormPills.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
+import Countdown from "../components/Countdown.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -242,6 +243,7 @@ export default function FixtureDetail() {
         subtitle={
           <>
             {kickoffDay(data.match_date, data.kickoff?.time)} {kickoffTime(data.match_date, data.kickoff?.time)}
+            <Countdown date={data.match_date} time={data.kickoff?.time} />
             {data.matchday ? ` · ${t("page.fixture.matchdayLine", { n: data.matchday })}` : ""}
             {data.season ? ` · ${data.season}` : ""}
             {data.status ? ` · ${data.status}` : ""}

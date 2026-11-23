@@ -9,6 +9,7 @@ import { ErrorBox, ListSkeleton } from "./State.jsx";
 import { Badge, Card, CardHeader } from "./ui/index.js";
 import { TeamLink } from "./TeamLink.jsx";
 import MatchOutlook from "./MatchOutlook.jsx";
+import Countdown from "./Countdown.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
 /** How many fixtures a page holds when the host page does not say otherwise. */
@@ -289,7 +290,9 @@ export default function UpcomingFixtures({
                   >
                     <div className="teams">
                       <span className="event-time">
-                        {fixtureTimeLine(m)} · {m.league_name || m.league}
+                        {fixtureTimeLine(m)}
+                        <Countdown date={m.match_date} time={m.time} />
+                        {" · "}{m.league_name || m.league}
                       </span>
                       <span>
                         <TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} />

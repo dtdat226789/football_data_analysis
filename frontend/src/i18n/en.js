@@ -174,7 +174,19 @@ export const en = {
   "page.league.charts": "Charts",
   "page.league.chartsHint": "Select a chart to view it full screen.",
   "chart.viewFull": "View {name} full screen",
+  "chart.viewImage": "View image",
   "chart.donut": "Distribution chart",
+  "analysis.chart.interactive": "Interactive chart: {title}",
+  "analysis.chart.snapshot": "Built from the latest analysis snapshot.",
+  "analysis.chart.axis.season": "season",
+  "analysis.chart.axis.goalsPerMatch": "total goals per match",
+  "analysis.chart.series.matches": "Matches",
+  "analysis.chart.series.home": "Home",
+  "analysis.chart.series.away": "Away",
+  "analysis.chart.series.points": "Points",
+  "analysis.chart.unit.matches": "matches",
+  "analysis.chart.unit.goalsPerMatch": "goals/match",
+  "analysis.chart.unit.points": "points",
 
   "analysis.finding.outcomeSplit": "Outcome split across all seasons",
   "analysis.finding.comebackWins": "Comeback wins",
@@ -289,6 +301,8 @@ export const en = {
   "dash.trendLabel": "{label} by season",
   "dash.proxyNote":
     "Goals-based proxy metrics: xG, shots, PPDA and player data are not collected by this project.",
+  "dash.ratingNote":
+    "Club rating is a relative proxy for this league and season, not an absolute measure of strength.",
   "kpi.table.team": "Team",
   "kpi.table.xpts": "xPts",
   "kpi.table.goals": "Goals",
@@ -308,9 +322,12 @@ export const en = {
   "kpi.goalsAgainstPerGame": "Goals against / game",
   "kpi.awayGoalsAgainstPerGame": "Away goals against / game",
   "kpi.expectedPoints": "Expected points",
+  "kpi.clubRating": "Club rating",
+  "kpi.rating": "Rating",
   "kpi.unit.perGame": "/ game",
   "kpi.unit.percent": "%",
   "kpi.unit.points": "pts",
+  "kpi.unit.rating": "/ 100",
 
   "page.match.noData": "No match data.",
   "page.match.back": "Back to matches",
@@ -371,6 +388,10 @@ export const en = {
   "fixture.detail": "detail",
   "fixture.today": "Today",
   "fixture.tomorrow": "Tomorrow",
+
+  "countdown.daysHours": "{days}d {hours}h",
+  "countdown.hoursMinutes": "{hours}h {minutes}m",
+  "countdown.aria": "Time until kickoff at {time}",
 
   "pred.confModel": "Model confidence",
   "pred.asOf": "as of",

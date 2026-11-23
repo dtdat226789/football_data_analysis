@@ -95,12 +95,14 @@ logs/
 data/analysis/
 
 # =========================
-# Per-league validation reports (scripts/refresh_data.sh)
+# Validation reports (validators + scripts/refresh_data.sh)
 # =========================
-# The refresh job writes one report per league under by-league/, and the ETL
-# writes one skipped-matches dump per league under skipped_matches/; both are
-# regenerable and noisy (90+ files rewritten per run). The canonical
-# single-league report at the parent level stays tracked.
+# The validators rewrite the canonical reports, the refresh job writes one
+# report per league under by-league/, and the ETL writes one skipped-matches
+# dump per league under skipped_matches/. All are regenerable and noisy, so
+# keep only the generator code and the baseline under logs/ tracked.
+data/validation/*.json
+data/validation/*.md
 data/validation/by-league/
 data/validation/skipped_matches/
 

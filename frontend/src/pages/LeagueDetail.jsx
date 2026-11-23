@@ -213,7 +213,7 @@ function AnalysisTab({ league, leagueName }) {
           <p className="muted section-hint">
             {t("page.league.chartsHint")}
           </p>
-          <ChartGrid league={league} charts={charts} />
+          <ChartGrid league={league} charts={charts} reports={reports} />
         </section>
       )}
     </div>

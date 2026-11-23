@@ -40,6 +40,8 @@ describe("TeamKpi", () => {
     expect(screen.getByRole("heading", { name: "Last 5 games" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "League table" })).toBeInTheDocument();
     expect(screen.getByText("79.21")).toBeInTheDocument();
+    expect(screen.getByRole("columnheader", { name: "Rating" })).toBeInTheDocument();
+    expect(screen.getAllByText("82.6").length).toBeGreaterThan(0);
     expect(api.teamKpi).toHaveBeenCalledWith("arsenal", { league: "premier", season: "", n: 5 });
   });
 

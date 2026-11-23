@@ -173,7 +173,19 @@ export const vi = {
   "page.league.charts": "Biểu đồ",
   "page.league.chartsHint": "Chọn một biểu đồ để xem toàn màn hình.",
   "chart.viewFull": "Xem {name} toàn màn hình",
+  "chart.viewImage": "Xem ảnh",
   "chart.donut": "Biểu đồ phân bố",
+  "analysis.chart.interactive": "Biểu đồ tương tác: {title}",
+  "analysis.chart.snapshot": "Được tạo từ bản phân tích mới nhất.",
+  "analysis.chart.axis.season": "mùa giải",
+  "analysis.chart.axis.goalsPerMatch": "tổng bàn thắng mỗi trận",
+  "analysis.chart.series.matches": "Số trận",
+  "analysis.chart.series.home": "Chủ nhà",
+  "analysis.chart.series.away": "Khách",
+  "analysis.chart.series.points": "Điểm",
+  "analysis.chart.unit.matches": "trận",
+  "analysis.chart.unit.goalsPerMatch": "bàn/trận",
+  "analysis.chart.unit.points": "điểm",
 
   "analysis.finding.outcomeSplit": "Phân bố kết quả qua các mùa giải",
   "analysis.finding.comebackWins": "Các trận lội ngược dòng",
@@ -288,6 +300,8 @@ export const vi = {
   "dash.trendLabel": "{label} theo mùa",
   "dash.proxyNote":
     "Chỉ số thay thế dựa trên bàn thắng: dự án không thu thập xG, cú sút, PPDA hay dữ liệu cầu thủ.",
+  "dash.ratingNote":
+    "Xếp hạng CLB là chỉ số tương đối cho giải và mùa này, không phải thước đo sức mạnh tuyệt đối.",
   "kpi.table.team": "Đội",
   "kpi.table.xpts": "xPts",
   "kpi.table.goals": "Bàn thắng",
@@ -307,9 +321,12 @@ export const vi = {
   "kpi.goalsAgainstPerGame": "Bàn thua / trận",
   "kpi.awayGoalsAgainstPerGame": "Bàn thua sân khách / trận",
   "kpi.expectedPoints": "Điểm kỳ vọng",
+  "kpi.clubRating": "Xếp hạng CLB",
+  "kpi.rating": "Xếp hạng",
   "kpi.unit.perGame": "/ trận",
   "kpi.unit.percent": "%",
   "kpi.unit.points": "điểm",
+  "kpi.unit.rating": "/ 100",
 
   "page.match.noData": "Không có dữ liệu trận đấu.",
   "page.match.back": "Quay lại danh sách trận đấu",
@@ -370,6 +387,10 @@ export const vi = {
   "fixture.detail": "chi tiết",
   "fixture.today": "Hôm nay",
   "fixture.tomorrow": "Ngày mai",
+
+  "countdown.daysHours": "{days} ngày {hours} giờ",
+  "countdown.hoursMinutes": "{hours} giờ {minutes} phút",
+  "countdown.aria": "Thời gian đến giờ khai cuộc lúc {time}",
 
   "pred.confModel": "Độ tin cậy mô hình",
   "pred.asOf": "tính đến",

@@ -123,6 +123,20 @@ describe("LeagueDetail", () => {
     expect(screen.getByText("avg goals")).toBeInTheDocument();
   });
 
+  it("renders interactive charts from the analysis reports", async () => {
+    api.analysis.mockResolvedValue({
+      ...analysisBundle,
+      charts: ["goals_analysis_distribution.png"],
+    });
+    renderDetail();
+
+    fireEvent.click(await screen.findByRole("button", { name: "Analysis" }));
+
+    expect(
+      await screen.findByRole("img", { name: /Interactive chart: goals analysis distribution/ }),
+    ).toBeInTheDocument();
+  });
+
   it("shows upcoming fixtures with predictions and recent results on the matches tab", async () => {
     renderDetail();
 

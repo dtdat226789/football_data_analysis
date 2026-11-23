@@ -12,6 +12,14 @@ describe("dashboard widgets", () => {
     expect(screen.getByText("#3 in league")).toBeInTheDocument();
   });
 
+  it("shows the club rating with its scale and league rank", () => {
+    renderPage(<KpiTile tile={{ key: "clubRating", value: 82.6, rank: 2, rank_total: 20 }} />);
+    expect(screen.getByText("Club rating")).toBeInTheDocument();
+    expect(screen.getByText("82.6")).toBeInTheDocument();
+    expect(screen.getByText("/ 100")).toBeInTheDocument();
+    expect(screen.getByText("#2 in league")).toBeInTheDocument();
+  });
+
   it("uses a dash when a KPI has no value or rank", () => {
     renderPage(<KpiTile tile={{ key: "cleanSheetPct", value: null, rank: null, rank_total: 0 }} />);
     expect(screen.getByText("—")).toBeInTheDocument();

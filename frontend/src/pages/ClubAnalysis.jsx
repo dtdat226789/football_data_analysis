@@ -10,6 +10,7 @@ import { useFormatters } from "../i18n/useFormatters.js";
 
 const RANKING_COLUMNS = [
   { key: "label", labelKey: "kpi.table.team" },
+  { key: "rating", labelKey: "kpi.rating", numeric: true },
   { key: "played", labelKey: "table.p", numeric: true },
   { key: "goals", labelKey: "kpi.table.goals", numeric: true },
   { key: "goals_per_game", labelKey: "kpi.goalsPerGame", numeric: true },
@@ -120,6 +121,7 @@ export default function ClubAnalysis() {
             </Link>
           )}
           <p className="dash-note">{t("dash.proxyNote")}</p>
+          <p className="dash-note">{t("dash.ratingNote")}</p>
           <p className="dash-attribution">{data.attribution}</p>
         </>
       )}

@@ -180,6 +180,29 @@ export const analysisBundle = {
         { module: "matches_analysis", size_kb: 42.5, sections: ["overall", "home_away"] },
       ],
     },
+    goals_analysis: {
+      goals_distribution: {
+        n_matches: 380,
+        max_goals: 6,
+        buckets: [
+          { goals: 0, count: 18, pct: 4.7 },
+          { goals: 1, count: 62, pct: 16.3 },
+          { goals: 2, count: 96, pct: 25.3 },
+          { goals: 3, count: 88, pct: 23.2 },
+        ],
+      },
+      goals_per_season: [
+        { season: "2023-2024", avg_home: 1.51, avg_away: 1.33, avg_goals: 2.84 },
+        { season: "2024-2025", avg_home: 1.58, avg_away: 1.22, avg_goals: 2.8 },
+      ],
+    },
+    teams_analysis: {
+      teams: [
+        { team: "Arsenal", points: 84 },
+        { team: "Manchester City", points: 82 },
+        { team: "Liverpool", points: 79 },
+      ],
+    },
     season_trends: {
       champions: [{ season: "2024-2025", champion: "Arsenal", champion_pts: 85, margin_pts: 3 }],
     },
@@ -543,6 +566,12 @@ export const teamKpi = {
   league_name: "Premier League",
   season: "2024-2025",
   n: 5,
+  club_rating: {
+    score: 82.6,
+    rank: 2,
+    rank_total: 20,
+    signals: { points_per_game: 0.8, goal_difference_per_game: 0.7, expected_points_per_game: 0.9, last_5_points_rate: 0.6 },
+  },
   attribution: "Data by football-charts.com",
   last_matches: [
     { date: "2025-01-18", opponent: "Chelsea", venue: "home", score: "2–1", result: "W", points: 3, goals_for: 2, goals_against: 1, clean_sheet: false },
@@ -556,8 +585,8 @@ export const teamKpi = {
     { key: "defence", tiles: [kpiTile("goalsAgainstPerGame", 0.8), kpiTile("awayGoalsAgainstPerGame", 1.0)] },
   ],
   table: [
-    { team: "Liverpool", label: "LIV", position: 1, points: 84, expected_points: 79.21, is_selected: false },
-    { team: "Arsenal", label: "ARS", position: 2, points: 74, expected_points: 76.4, is_selected: true },
+    { team: "Liverpool", label: "LIV", position: 1, points: 84, expected_points: 79.21, rating: 88.4, is_selected: false },
+    { team: "Arsenal", label: "ARS", position: 2, points: 74, expected_points: 76.4, rating: 82.6, is_selected: true },
   ],
 };
 
@@ -576,6 +605,7 @@ export const clubAnalysis = {
     { id: 2, name: "Liverpool", slug: "liverpool" },
   ],
   kpis: [
+    { key: "clubRating", value: 82.6, rank: 2, rank_total: 20 },
     { key: "totalGoals", value: 70 },
     { key: "goalsPerGame", value: 1.84 },
     { key: "goalsAgainstPerGame", value: 0.76 },
@@ -586,7 +616,7 @@ export const clubAnalysis = {
     { season: "2024-2025", value: 1.84 },
   ],
   ranking: [
-    { team: "Arsenal", label: "ARS", slug: "arsenal", played: 38, goals: 70, goals_per_game: 1.84, is_selected: true },
-    { team: "Liverpool", label: "LIV", slug: "liverpool", played: 38, goals: 86, goals_per_game: 2.26, is_selected: false },
+    { team: "Arsenal", label: "ARS", slug: "arsenal", played: 38, goals: 70, goals_per_game: 1.84, rating: 82.6, is_selected: true },
+    { team: "Liverpool", label: "LIV", slug: "liverpool", played: 38, goals: 86, goals_per_game: 2.26, rating: 88.4, is_selected: false },
   ],
 };

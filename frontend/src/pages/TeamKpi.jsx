@@ -14,6 +14,7 @@ const N_OPTIONS = [5, 10, 20];
 const TABLE_COLUMNS = [
   { key: "position", labelKey: "table.pos", numeric: true },
   { key: "label", labelKey: "kpi.table.team" },
+  { key: "rating", labelKey: "kpi.rating", numeric: true },
   { key: "points", labelKey: "table.pts", numeric: true },
   { key: "expected_points", labelKey: "kpi.table.xpts", numeric: true },
 ];
@@ -145,6 +146,7 @@ export default function TeamKpi() {
               </TableShell>
             )}
             <p className="dash-note">{t("dash.proxyNote")}</p>
+            <p className="dash-note">{t("dash.ratingNote")}</p>
           </section>
           <p className="dash-attribution">{data.attribution}</p>
         </>

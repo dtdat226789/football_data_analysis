@@ -7,6 +7,7 @@ import { FormPills } from "../components/FormPills.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BarList, Donut, StatCard } from "../components/Charts.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
+import Countdown from "../components/Countdown.jsx";
 import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
 import { leagueLabel, leagueNameMap } from "../lib/leagues.js";
 import { useParamsPatch } from "../lib/searchParams.js";
@@ -293,6 +294,7 @@ export default function TeamDetail() {
                   <div className="teams">
                     <span className="detail-subtle">
                       {kickoffDay(m.match_date, m.time)} {kickoffTime(m.match_date, m.time)}
+                      <Countdown date={m.match_date} time={m.time} />
                     </span>
                     <span><TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} /></span>
                   </div>

@@ -92,6 +92,11 @@ def test_build_team_kpi_groups_ranks_and_table():
     assert [m["opponent"] for m in payload["last_matches"]] == ["Beta FC", "Beta FC"]
     assert payload["last_matches"][0]["result"] == "W"
     assert payload["table"][0]["expected_points"] == 3.8
+    assert payload["table"][0]["rating"] == 100.0
+    assert payload["table"][1]["rating"] == 0.0
+    assert payload["club_rating"]["score"] == 100.0
+    assert payload["club_rating"]["rank"] == 1
+    assert payload["club_rating"]["rank_total"] == 2
     assert payload["table"][0]["is_selected"] is True
 
 
@@ -100,6 +105,7 @@ def test_build_team_kpi_handles_one_game_and_empty_data():
     empty = kpi.build_team_kpi([], [], 9, 5)
     assert empty["last_matches"] == []
     assert empty["table"] == []
+    assert empty["club_rating"] is None
     assert all(tile["value"] is None for group in empty["groups"] for tile in group["tiles"])
 
 
@@ -110,15 +116,20 @@ def test_build_club_payload_cards_timeline_and_ranking():
     ]
     payload = kpi.build_club_payload(ROWS, [{"season": "2024-2025"}], teams, 1, "2024-2025")
     assert [card["key"] for card in payload["kpis"]] == [
+        "clubRating",
         "totalGoals",
         "goalsPerGame",
         "goalsAgainstPerGame",
         "expectedPoints",
     ]
-    assert payload["kpis"][0]["value"] == 5.0
-    assert payload["kpis"][3]["value"] == 3.8
+    assert payload["kpis"][0]["value"] == 100.0
+    assert payload["kpis"][0]["rank"] == 1
+    assert payload["kpis"][0]["rank_total"] == 2
+    assert payload["kpis"][1]["value"] == 5.0
+    assert payload["kpis"][4]["value"] == 3.8
     assert payload["timeline"] == [{"season": "2024-2025", "value": 2.5}]
     assert [row["team"] for row in payload["ranking"]] == ["Alpha", "Beta FC"]
+    assert [row["rating"] for row in payload["ranking"]] == [100.0, 0.0]
     assert payload["ranking"][0]["is_selected"] is True
     assert payload["team"]["slug"] == "alpha"
     assert payload["attribution"] == kpi.ATTRIBUTION
@@ -126,7 +137,8 @@ def test_build_club_payload_cards_timeline_and_ranking():
 
 def test_build_club_payload_without_rows_is_empty():
     payload = kpi.build_club_payload([], [], [], -1, "2024-2025")
-    assert payload["kpis"][0]["value"] is None
+    assert payload["kpis"][0] == {"key": "clubRating", "value": None, "rank": None, "rank_total": 0}
+    assert payload["kpis"][1]["value"] is None
     assert payload["timeline"] == []
     assert payload["ranking"] == []
     assert payload["team"] == {"slug": None, "name": None}

@@ -35,6 +35,9 @@ describe("ClubAnalysis", () => {
     expect(await screen.findByRole("heading", { name: /Club Analysis/ })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: /Goals \/ game by season/ })).toBeInTheDocument();
     expect(screen.getByText("Team goals ranking")).toBeInTheDocument();
+    expect(screen.getByText("Club rating")).toBeInTheDocument();
+    expect(screen.getByRole("columnheader", { name: "Rating" })).toBeInTheDocument();
+    expect(screen.getAllByText("82.6").length).toBeGreaterThan(0);
     expect(screen.getAllByText("ARS").length).toBeGreaterThan(0);
     expect(api.clubAnalysis).toHaveBeenCalledWith({ league: "premier", season: "", team: "" });
   });

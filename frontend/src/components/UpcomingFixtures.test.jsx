@@ -33,6 +33,32 @@ describe("UpcomingFixtures", () => {
     );
   });
 
+  it("shows a countdown only for fixtures that have not kicked off", async () => {
+    const nowSpy = vi.spyOn(Date, "now").mockReturnValue(Date.parse("2026-02-01T14:00:00Z"));
+    try {
+      renderPage(<UpcomingFixtures />);
+      expect(await screen.findByText("Arsenal")).toBeInTheDocument();
+
+      expect(
+        screen.getByRole("timer", { name: "Time until kickoff at 23:00" }),
+      ).toHaveTextContent("2h 0m");
+    } finally {
+      nowSpy.mockRestore();
+    }
+  });
+
+  it("hides the countdown once the fixture has started", async () => {
+    const nowSpy = vi.spyOn(Date, "now").mockReturnValue(Date.parse("2026-02-03T00:00:00Z"));
+    try {
+      renderPage(<UpcomingFixtures />);
+      expect(await screen.findByText("Arsenal")).toBeInTheDocument();
+
+      expect(screen.queryByRole("timer")).not.toBeInTheDocument();
+    } finally {
+      nowSpy.mockRestore();
+    }
+  });
+
   it("accepts a known confidence filter and drops a hand-edited one", async () => {
     renderPage(<UpcomingFixtures />, { route: "/?conf=0.6" });
     await waitFor(() => expect(api.fixtures).toHaveBeenCalled());

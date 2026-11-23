@@ -17,6 +17,7 @@ from fastapi import APIRouter, HTTPException
 
 from .. import common
 from ..deps import ensure_season, fetched_cursor, require_league, resolve_team_id
+from ..rating import club_ratings
 
 router = APIRouter(tags=["kpi"])
 
@@ -223,6 +224,7 @@ def build_team_kpi(
     n: int,
 ) -> dict[str, Any]:
     """Assemble the KPI dashboard payload from standings rows and match rows."""
+    ratings = club_ratings(rows)
     acc = _accumulators(rows)
     for match in matches:
         _apply_match(acc, match)
@@ -239,6 +241,7 @@ def build_team_kpi(
             "position": row.get("position"),
             "points": row.get("points") or 0,
             "expected_points": (row.get("metrics") or {}).get("expected_points"),
+            "rating": (ratings.get(row["team_id"]) or {}).get("score"),
             "is_selected": row["team_id"] == team_id,
         }
         for row in rows
@@ -246,6 +249,7 @@ def build_team_kpi(
 
     tiles = {tile["key"]: tile for tile in _tiles(acc, team_id)}
     return {
+        "club_rating": ratings.get(team_id),
         "last_matches": last_matches,
         "groups": [
             {"key": key, "tiles": [tiles[tile_key] for tile_key in tile_keys]}
@@ -265,6 +269,8 @@ def build_club_payload(
     """Season KPI cards, a goals-per-game timeline and a league-wide ranking."""
     season_rows = [r for r in rows if r["season"] == season]
     selected = next((r for r in season_rows if r["team_id"] == team_id), None)
+    ratings = club_ratings(season_rows)
+    rating = ratings.get(team_id)
 
     def metric(row: dict[str, Any] | None, name: str) -> float | None:
         if row is None:
@@ -280,8 +286,16 @@ def build_club_payload(
         return None
 
     kpis = [
-        {"key": key, "value": _round(metric(selected, key))}
-        for key in ("totalGoals", "goalsPerGame", "goalsAgainstPerGame", "expectedPoints")
+        {
+            "key": "clubRating",
+            "value": rating["score"] if rating else None,
+            "rank": rating["rank"] if rating else None,
+            "rank_total": rating["rank_total"] if rating else 0,
+        },
+        *[
+            {"key": key, "value": _round(metric(selected, key))}
+            for key in ("totalGoals", "goalsPerGame", "goalsAgainstPerGame", "expectedPoints")
+        ],
     ]
 
     season_order = [s["season"] for s in seasons]
@@ -305,6 +319,7 @@ def build_club_payload(
             "played": row.get("played") or 0,
             "goals": row.get("goals_for") or 0,
             "goals_per_game": _rate(row.get("goals_for") or 0, row.get("played")),
+            "rating": (ratings.get(row["team_id"]) or {}).get("score"),
             "is_selected": row["team_id"] == team_id,
         }
         for row in season_rows

@@ -4,6 +4,7 @@ import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import MatchOutlook from "../components/MatchOutlook.jsx";
+import Countdown from "../components/Countdown.jsx";
 import { Badge, Card, CardHeader, PageHeader } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
 import { asArray, asRecord } from "../lib/shape.js";
@@ -189,6 +190,7 @@ export default function Dashboard() {
                   <div className="teams">
                     <span className="event-time">
                       {kickoffDay(m.match_date, m.time)} {kickoffTime(m.match_date, m.time)}
+                      <Countdown date={m.match_date} time={m.time} />
                     </span>
                     <span>
                       <TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} />

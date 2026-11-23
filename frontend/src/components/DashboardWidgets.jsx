@@ -8,6 +8,7 @@ import { useFormatters } from "../i18n/useFormatters.js";
  */
 
 const UNIT_KEYS = {
+  clubRating: "kpi.unit.rating",
   goalsPerGame: "kpi.unit.perGame",
   last5GoalsPerGame: "kpi.unit.perGame",
   awayGoalsPerGame: "kpi.unit.perGame",
