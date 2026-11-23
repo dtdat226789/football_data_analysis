@@ -19,6 +19,299 @@ export const leagueDetail = {
   ],
 };
 
+/** A representative slice of the derived projection menu, for rendering tests. */
+export const fixtureProjections = [
+  {
+    "key": "ft.outcome.home",
+    "family": "outcome",
+    "label": "Home",
+    "scope": "full_time",
+    "line": null,
+    "selection": "home",
+    "probability": 0.5483,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.outcome.draw",
+    "family": "outcome",
+    "label": "Draw",
+    "scope": "full_time",
+    "line": null,
+    "selection": "draw",
+    "probability": 0.2925,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.outcome.away",
+    "family": "outcome",
+    "label": "Away",
+    "scope": "full_time",
+    "line": null,
+    "selection": "away",
+    "probability": 0.1592,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.paired_outcome.home_or_draw",
+    "family": "paired_outcome",
+    "label": "Home or draw",
+    "scope": "full_time",
+    "line": null,
+    "selection": "home_or_draw",
+    "probability": 0.8408,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.paired_outcome.home_or_away",
+    "family": "paired_outcome",
+    "label": "Home or away",
+    "scope": "full_time",
+    "line": null,
+    "selection": "home_or_away",
+    "probability": 0.7076,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.goal_totals.over_1.5",
+    "family": "goal_totals",
+    "label": "2+ goals",
+    "scope": "full_time",
+    "line": 1.5,
+    "selection": "over",
+    "probability": 0.7943,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.goal_totals.under_3.5",
+    "family": "goal_totals",
+    "label": "3 or fewer goals",
+    "scope": "full_time",
+    "line": 3.5,
+    "selection": "under",
+    "probability": 0.7009,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.both_score.yes",
+    "family": "both_score",
+    "label": "Both score: yes",
+    "scope": "full_time",
+    "line": null,
+    "selection": "yes",
+    "probability": 0.543,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.goal_margin.0.5_home",
+    "family": "goal_margin",
+    "label": "Home draws or wins",
+    "scope": "full_time",
+    "line": 0.5,
+    "selection": "home",
+    "probability": 0.8408,
+    "provenance": "exact",
+    "promotable": true,
+    "refund": 0.0
+  },
+  {
+    "key": "ft.goal_margin.-0.25_home",
+    "family": "goal_margin",
+    "label": "Home margin -0.25",
+    "scope": "full_time",
+    "line": -0.25,
+    "selection": "home",
+    "probability": 0.5483,
+    "provenance": "exact",
+    "promotable": false,
+    "refund": 0.1462
+  },
+  {
+    "key": "ft.team_total.home.over_1.5",
+    "family": "team_total",
+    "label": "Home 2+ goals",
+    "scope": "full_time",
+    "line": 1.5,
+    "selection": "home",
+    "probability": 0.543,
+    "provenance": "exact",
+    "promotable": false
+  },
+  {
+    "key": "ft.exact_score.1-1",
+    "family": "exact_score",
+    "label": "1-1",
+    "scope": "full_time",
+    "line": null,
+    "selection": "home_away",
+    "probability": 0.1406,
+    "provenance": "exact",
+    "promotable": false
+  },
+  {
+    "key": "half_full.home.home",
+    "family": "half_full",
+    "label": "Home/Home",
+    "scope": "half_to_full",
+    "line": null,
+    "selection": "home_home",
+    "probability": 0.2034,
+    "provenance": "estimated",
+    "promotable": true
+  },
+  {
+    "key": "ht.outcome.home",
+    "family": "outcome",
+    "label": "Home",
+    "scope": "half_time",
+    "line": null,
+    "selection": "home",
+    "probability": 0.3709,
+    "provenance": "estimated",
+    "promotable": true
+  },
+  {
+    "key": "ht.goal_totals.under_2.5",
+    "family": "goal_totals",
+    "label": "2 or fewer goals",
+    "scope": "half_time",
+    "line": 2.5,
+    "selection": "under",
+    "probability": 0.9233,
+    "provenance": "estimated",
+    "promotable": true
+  }
+];
+
+export const fixtureHighlights = [
+  {
+    "key": "ft.goal_margin.0.5_home",
+    "family": "goal_margin",
+    "label": "Home draws or wins",
+    "scope": "full_time",
+    "line": 0.5,
+    "selection": "home",
+    "probability": 0.8408,
+    "provenance": "exact",
+    "promotable": true,
+    "refund": 0.0
+  },
+  {
+    "key": "ft.paired_outcome.home_or_draw",
+    "family": "paired_outcome",
+    "label": "Home or draw",
+    "scope": "full_time",
+    "line": null,
+    "selection": "home_or_draw",
+    "probability": 0.8408,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.goal_totals.over_1.5",
+    "family": "goal_totals",
+    "label": "2+ goals",
+    "scope": "full_time",
+    "line": 1.5,
+    "selection": "over",
+    "probability": 0.7943,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.paired_outcome.home_or_away",
+    "family": "paired_outcome",
+    "label": "Home or away",
+    "scope": "full_time",
+    "line": null,
+    "selection": "home_or_away",
+    "probability": 0.7076,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ft.goal_totals.under_3.5",
+    "family": "goal_totals",
+    "label": "3 or fewer goals",
+    "scope": "full_time",
+    "line": 3.5,
+    "selection": "under",
+    "probability": 0.7009,
+    "provenance": "exact",
+    "promotable": true
+  },
+  {
+    "key": "ht.goal_totals.under_2.5",
+    "family": "goal_totals",
+    "label": "2 or fewer goals",
+    "scope": "half_time",
+    "line": 2.5,
+    "selection": "under",
+    "probability": 0.9233,
+    "provenance": "estimated",
+    "promotable": true
+  }
+];
+
+export const fixtureGoalLines = [
+  {
+    "line": "over_0.5",
+    "scope": "full_time",
+    "threshold": "0.5",
+    "raw": 0.93,
+    "calibrated": 0.935
+  },
+  {
+    "line": "over_1.5",
+    "scope": "full_time",
+    "threshold": "1.5",
+    "raw": 0.82,
+    "calibrated": 0.828
+  },
+  {
+    "line": "over_2.5",
+    "scope": "full_time",
+    "threshold": "2.5",
+    "raw": 0.61,
+    "calibrated": 0.619
+  },
+  {
+    "line": "over_3.5",
+    "scope": "full_time",
+    "threshold": "3.5",
+    "raw": 0.3,
+    "calibrated": null
+  },
+  {
+    "line": "over_4.5",
+    "scope": "full_time",
+    "threshold": "4.5",
+    "raw": 0.12,
+    "calibrated": null
+  },
+  {
+    "line": "ht_over_0.5",
+    "scope": "half_time",
+    "threshold": "0.5",
+    "raw": 0.62,
+    "calibrated": 0.63
+  },
+  {
+    "line": "ht_over_1.5",
+    "scope": "half_time",
+    "threshold": "1.5",
+    "raw": 0.26,
+    "calibrated": null
+  }
+];
+
 export const upcomingFixtures = {
   count: 2,
   total: 2,
@@ -50,6 +343,7 @@ export const upcomingFixtures = {
       predictions: {
         home: 0.58, away: 0.18, over_1_5: 0.82, over_2_5: 0.61,
         confidence: 0.58, data_through: "2026-01-29",
+        highlights: fixtureHighlights,
       },
     },
     {
@@ -65,6 +359,10 @@ export const upcomingFixtures = {
       predictions: {
         home: 0.44, away: 0.29, over_1_5: 0.8, over_2_5: 0.57,
         confidence: 0.44, data_through: "2026-01-29",
+        highlights: [
+          { key: "ft.goal_totals.over_1.5", family: "goal_totals", label: "2+ goals", scope: "full_time", line: 1.5, selection: "over", probability: 0.8, provenance: "exact", promotable: true },
+          { key: "ft.paired_outcome.home_or_draw", family: "paired_outcome", label: "Home or draw", scope: "full_time", line: null, selection: "home_or_draw", probability: 0.71, provenance: "exact", promotable: true },
+        ],
       },
     },
   ],
@@ -526,8 +824,12 @@ export const fixtureDetail = {
       over_1_5: 0.82, over_2_5: 0.61, over_3_5: 0.3,
       expected_home_goals: 1.82, expected_away_goals: 0.94,
       confidence: 0.58, computed_at: "2026-01-30T09:00:00+00:00", data_through: "2026-01-29",
+      highlights: fixtureHighlights,
     },
     probabilities: { home: 0.58, draw: 0.24, away: 0.18 },
+    projections: fixtureProjections,
+    highlights: fixtureHighlights,
+    lines: fixtureGoalLines,
     expected_goals: { home: 1.82, away: 0.94, half_time_total: 0.98 },
     ratings: { home: { attack: 0.42, defence: 0.31 }, away: { attack: -0.12, defence: -0.08 } },
     effective_matches: { home: 34.6, away: 15.6 },

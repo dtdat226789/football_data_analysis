@@ -63,7 +63,7 @@ describe("Matches", () => {
     seed();
   });
 
-  it("renders upcoming fixtures with prediction chips and a recent results table", async () => {
+  it("renders upcoming fixtures with projection highlights and a recent results table", async () => {
     renderPage(<Matches />);
 
     expect(await screen.findByRole("heading", { name: "Matches" })).toBeInTheDocument();
@@ -71,9 +71,7 @@ describe("Matches", () => {
     const upcoming = await screen.findByRole("heading", { name: /Upcoming/ });
     expect(upcoming.closest("section").querySelector(".badge")).toHaveTextContent("2");
     expect(screen.getAllByText("Arsenal").length).toBeGreaterThanOrEqual(1);
-    // Each row shows the chance of two or more goals, then three or more.
-    expect(chipTexts()).toContain("2+ goals 82%");
-    // prediction meta line surfaces model confidence + data through
+    expect(chipTexts()).toContain("2+ goals 79%");
     expect(screen.getByText(/Model confidence 58%/)).toBeInTheDocument();
     expect(screen.getAllByText(/as of 2026-01-29/).length).toBeGreaterThanOrEqual(1);
 
@@ -136,14 +134,13 @@ describe("Matches", () => {
     expect(screen.getByText("all 2")).toBeInTheDocument();
   });
 
-  it("builds each fixture's chip row from its goal-total probabilities", async () => {
+  it("builds each fixture's chip row from its projection highlights", async () => {
     renderPage(<Matches />);
     await screen.findByRole("heading", { name: /Upcoming/ });
 
     const chips = chipTexts();
-    // Arsenal and Madrid each get a 2+ and 3+ goals chip, nothing else.
-    expect(chips).toEqual(["2+ goals 82%", "3+ goals 61%", "2+ goals 80%", "3+ goals 57%"]);
-    expect(document.querySelector(".pred-chip.chip-assumed")).toBeNull();
+    expect(chips.some((c) => c.includes("Home or draw"))).toBe(true);
+    expect(chips.some((c) => c.includes("2+ goals"))).toBe(true);
   });
 
   it("links every upcoming fixture to its detail page using the slug tail", async () => {

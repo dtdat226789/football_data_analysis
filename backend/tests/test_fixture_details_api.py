@@ -333,6 +333,207 @@ def test_draw_null_when_probabilities_missing():
     assert fixtures._probability_triple({"home": 0.5})["draw"] is None
 
 
+def test_goal_lines_carry_raw_and_calibrated(client):
+    lines = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["lines"]
+    by_line = {row["line"]: row for row in lines}
+    assert set(by_line) == {
+        "over_0.5", "over_1.5", "over_2.5", "ht_over_0.5", "ht_over_1.5",
+    }
+    assert by_line["over_2.5"]["raw"] == 0.5348
+    assert by_line["over_2.5"]["calibrated"] == 0.5609
+    # A line the model did not calibrate keeps a null rather than borrowing raw.
+    assert by_line["over_0.5"]["calibrated"] is None
+    assert by_line["ht_over_0.5"]["scope"] == "half_time"
+    assert by_line["over_1.5"]["scope"] == "full_time"
+    assert [row["line"] for row in lines][:3] == ["over_0.5", "over_1.5", "over_2.5"]
+
+
+def test_detail_serves_the_whole_derived_projection_menu(client):
+    """dc_v2 publishes none of these; they are derived from its goal parameters."""
+    pred = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]
+    families = {row["family"] for row in pred["projections"]}
+    assert {
+        "outcome", "paired_outcome", "goal_totals", "both_score",
+        "goal_margin", "team_total", "exact_score", "half_full",
+    } <= families
+    keys = {row["key"] for row in pred["projections"]}
+    assert "ft.goal_margin.-0.5_home" in keys
+    assert any(key.startswith("ft.exact_score.") for key in keys)
+
+
+def test_projection_rows_carry_provenance_and_are_tagged_by_scope(client):
+    rows = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["projections"]
+    for row in rows:
+        assert row["provenance"] in ("exact", "estimated")
+        assert row["scope"] in ("full_time", "half_time", "half_to_full")
+        assert 0.0 <= row["probability"] <= 1.0
+    assert all(row["provenance"] == "exact" for row in rows if row["scope"] == "full_time")
+    assert all(row["provenance"] == "estimated" for row in rows if row["scope"] != "full_time")
+
+
+def test_detail_highlights_respect_threshold_ceiling_and_cap(client):
+    highlights = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["highlights"]
+    assert 0 < len(highlights) <= 6
+    for row in highlights:
+        assert 0.6 <= row["probability"] <= 0.95
+        assert row["promotable"] is True
+
+
+def test_list_feed_carries_only_the_highlights(client):
+    """The merged feed must not carry the full projection table on every row."""
+    listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
+    assert "projections" not in listed["predictions"]
+    assert "lines" not in listed["predictions"]
+    assert 0 < len(listed["predictions"]["highlights"]) <= 6
+
+
+def test_highlights_agree_with_the_detail_projection_table(client):
+    body = client.get(f"/api/v1/fixtures/primera1/{FUTURE_TAIL}").json()
+    pred = body["predictability"]
+    listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
+    assert pred["highlights"] == listed["predictions"]["highlights"]
+    by_key = {row["key"]: row for row in pred["projections"]}
+    for row in pred["highlights"]:
+        assert by_key[row["key"]]["probability"] == row["probability"]
+
+
+def test_projection_query_returns_only_that_projections_explanation(client):
+    """The point of the query: one projection's arithmetic, not the whole fixture."""
+    response = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": "ft.outcome.home"}
+    )
+    body = response.json()
+    assert response.status_code == 200
+    assert body["league"] == "primera1"
+    assert body["match_id"] == TAIL
+    assert body["projection_key"] == "ft.outcome.home"
+    assert "predictability" not in body
+    detail = body["projection"]
+    assert detail["family"] == "outcome"
+    assert detail["outcomes"]["refund"] == 0.0
+    assert detail["outcomes"]["win"] + detail["outcomes"]["lose"] == pytest.approx(1.0, abs=0.001)
+    assert detail["successful_cells"] > 0
+    assert detail["grid_cells"] == 81
+    assert all(0.0 <= cell["probability"] <= 1.0 for cell in detail["cells"])
+
+
+def test_projection_explanation_reproduces_the_published_probability(client):
+    """The explanation must add up to the number the highlight and table show."""
+    pred = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]
+    for row in pred["projections"]:
+        detail = client.get(
+            f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": row["key"]}
+        ).json()["projection"]
+        if detail is None:
+            continue
+        outcomes = detail["outcomes"]
+        assert outcomes["win"] == pytest.approx(row["probability"], abs=0.0002), row["key"]
+        if isinstance(row.get("refund"), (int, float)) and row["refund"] > 0:
+            assert outcomes["refund"] == pytest.approx(row["refund"], abs=0.0002), row["key"]
+
+
+def test_quarter_line_explains_the_half_share_split(client):
+    rows = {
+        row["key"]: row
+        for row in client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["projections"]
+    }
+    key = next(
+        k for k in rows
+        if k.startswith("ft.goal_margin.") and k.endswith("_home") and rows[k].get("line") == -0.25
+    )
+    detail = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": key}
+    ).json()["projection"]
+    assert detail["outcomes"]["refund"] > 0
+    split = [c for c in detail["cells"] if "+" in c["outcome"]]
+    assert len(split) == 9
+    assert {c["outcome"] for c in split} == {"refund+lose"}
+    assert all(c["home_goals"] == c["away_goals"] for c in split)
+    assert split[0]["share"] == pytest.approx(
+        split[0]["probability"] / 2 / detail["outcomes"]["refund"], abs=0.001
+    )
+    assert sum(c["share"] for c in split) == pytest.approx(1.0, abs=0.01)
+
+
+def test_projection_cells_only_ever_cover_the_counting_sides(client):
+    detail = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": "ft.goal_totals.over_2.5"}
+    ).json()["projection"]
+    for cell in detail["cells"]:
+        home, away = (int(part) for part in cell["score"].split("-"))
+        assert home + away > 2.5
+    assert detail["successful_cells"] == len(detail["cells"])
+
+
+def test_half_time_full_time_projection_explains_its_factors(client):
+    keys = [
+        row["key"]
+        for row in client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()["predictability"]["projections"]
+        if row["family"] == "half_full"
+    ]
+    assert keys
+    detail = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": keys[0]}
+    ).json()["projection"]
+    assert detail["factors"]["half_time"]["home"] > 0
+    assert detail["factors"]["full_time"]["home"] > 0
+    assert detail["cells"] == []
+
+
+def test_unknown_projection_key_is_a_404(client):
+    response = client.get(
+        f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": "ft.outcome.nope"}
+    )
+    assert response.status_code == 404
+    assert "ft.outcome.nope" in response.json()["detail"]
+
+
+def test_projection_explanation_without_a_model_block_is_a_404(tmp_path, monkeypatch):
+    """A fixture with no prediction has no projections, so no key can resolve."""
+    directory = tmp_path / "fixtures"
+    directory.mkdir()
+    (directory / "primera1.json").write_text(
+        json.dumps({"league": "primera1", "matches": [{**FIXTURE, "model_predictions": {}}]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(fixtures, "FIXTURES_DIR", directory)
+    with TestClient(app) as client:
+        response = client.get(
+            f"/api/v1/fixtures/primera1/{TAIL}", params={"projection": "ft.outcome.home"}
+        )
+    assert response.status_code == 404
+
+
+def test_detail_route_without_a_projection_query_is_unchanged(client):
+    body = client.get(f"/api/v1/fixtures/primera1/{TAIL}").json()
+    assert "projection" not in body
+    assert "projection_key" not in body
+    assert body["predictability"]["projections"]
+
+
+def test_projection_menu_and_highlights_are_empty_without_lambdas(tmp_path, monkeypatch):
+    """No invented zeros: a block without goal expectations serves no projections."""
+    block = json.loads(json.dumps(DC_V2))
+    del block["raw"]["expected_home_goals"]
+    del block["raw"]["expected_away_goals"]
+    directory = tmp_path / "fixtures"
+    directory.mkdir()
+    (directory / "primera1.json").write_text(
+        json.dumps({"league": "primera1", "matches": [
+            {**FUTURE_FIXTURE, "model_predictions": {"dc_v2": block}},
+        ]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(fixtures, "FIXTURES_DIR", directory)
+    with TestClient(app) as client:
+        pred = client.get(f"/api/v1/fixtures/primera1/{FUTURE_TAIL}").json()["predictability"]
+        listed = client.get("/api/v1/fixtures", params={"league": "primera1"}).json()["matches"][0]
+    assert pred["projections"] == []
+    assert pred["highlights"] == []
+    assert pred["raw"]["home"] == 0.2846
+    assert listed["predictions"]["highlights"] == []
+
+
 def test_summary_matches_the_list_feed(client):
     """A detail view must never disagree with the row it was opened from."""
     detail = client.get(f"/api/v1/fixtures/primera1/{FUTURE_TAIL}").json()

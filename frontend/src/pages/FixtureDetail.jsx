@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, Skeleton } from "../components/State.jsx";
 import { FormPills } from "../components/FormPills.jsx";
 import MatchInsights from "../components/MatchInsights.jsx";
-import MatchOutlook from "../components/MatchOutlook.jsx";
+import ProjectionDetail from "../components/ProjectionDetail.jsx";
+import ProjectionHighlights from "../components/ProjectionHighlights.jsx";
+import ProjectionTable from "../components/ProjectionTable.jsx";
 import Countdown from "../components/Countdown.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
 import { BackLink, Badge, Card, CardHeader, PageHeader, TableShell } from "../components/ui/index.js";
@@ -16,7 +19,7 @@ import { safeHttpsUrl, safeImageUrl } from "../lib/safeUrl.js";
  * and the gates/ratings/sample-size metadata that says how much to trust the
  * number.
  */
-function PredictabilityPanel({ prediction }) {
+function PredictabilityPanel({ prediction, onSelectProjection }) {
   const { t, dec } = useFormatters();
   if (!prediction) return null;
   const goals = prediction.expected_goals || {};
@@ -37,10 +40,11 @@ function PredictabilityPanel({ prediction }) {
         }
       />
 
-      <MatchOutlook
+      <ProjectionHighlights
         predictions={prediction.summary}
         confidence={prediction.summary?.confidence}
         dataThrough={prediction.data_through}
+        onSelect={onSelectProjection}
       />
 
       <TableShell>
@@ -108,6 +112,45 @@ function PredictabilityPanel({ prediction }) {
               <th scope="row">{t("predictability.computed")}</th>
               <td className="muted">{prediction.computed_at || "—"}</td>
             </tr>
+          </tbody>
+        </table>
+      </TableShell>
+    </Card>
+  );
+}
+
+/** Every goal line the model quoted, uncalibrated beside calibrated. */
+function GoalLinesPanel({ lines }) {
+  const { t, pct } = useFormatters();
+  if (!Array.isArray(lines) || !lines.length) return null;
+  return (
+    <Card>
+      <CardHeader title={t("predictability.goalLines")} />
+      <TableShell>
+        <table className="data">
+          <thead>
+            <tr>
+              <th>{t("predictability.col.scope")}</th>
+              <th>{t("predictability.col.line")}</th>
+              <th className="num">{t("predictability.col.raw")}</th>
+              <th className="num">{t("predictability.col.calibrated")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {lines.map((row) => (
+              <tr key={row.line}>
+                <td className="muted">
+                  {t(`projection.scope.${row.scope}`) || row.scope}
+                </td>
+                <td>
+                  {t("highlight.goalTotal.over", {
+                    n: Math.floor(Number(row.threshold)) + 1,
+                  })}
+                </td>
+                <td className="num">{pct(row.raw)}</td>
+                <td className="num">{pct(row.calibrated)}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </TableShell>
@@ -198,6 +241,9 @@ export default function FixtureDetail() {
     () => (league && matchId ? api.fixtureDetail(league, matchId) : null),
     [league, matchId],
   );
+  // One projection at a time: a highlight or table row hands over the row it
+  // was clicked on, and the dialog fetches only that row's explanation.
+  const [projection, setProjection] = useState(null);
 
   if (loading)
     return (
@@ -253,12 +299,23 @@ export default function FixtureDetail() {
 
       <div className="detail-stack">
         <div className="two-col">
-          <PredictabilityPanel prediction={data.predictability} />
+          <PredictabilityPanel
+            prediction={data.predictability}
+            onSelectProjection={setProjection}
+          />
           <div className="detail-side">
             <TeamCard side="home" team={home} standings={data.standings?.home} />
             <TeamCard side="away" team={away} standings={data.standings?.away} />
           </div>
         </div>
+
+        <GoalLinesPanel lines={data.predictability?.lines} />
+
+        <ProjectionTable
+          projections={data.predictability?.projections}
+          highlights={data.predictability?.highlights}
+          onSelect={setProjection}
+        />
 
         {/* Reused verbatim: the endpoint returns these two sections in exactly the
             shape /matches/{api_id}/insights uses. */}
@@ -330,6 +387,15 @@ export default function FixtureDetail() {
           </TableShell>
         </Card>
       </div>
+
+      {projection && (
+        <ProjectionDetail
+          league={league}
+          matchId={data.match_id || matchId}
+          projection={projection}
+          onClose={() => setProjection(null)}
+        />
+      )}
     </div>
   );
 }

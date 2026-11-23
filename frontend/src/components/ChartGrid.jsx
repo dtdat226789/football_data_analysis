@@ -46,6 +46,7 @@ export default function ChartGrid({ league, charts, reports = {} }) {
                     {t("chart.viewImage")}
                   </button>
                 </div>
+                <p className="caption chart-card-note">{t("analysis.chart.snapshotNote")}</p>
               </article>
             );
           }

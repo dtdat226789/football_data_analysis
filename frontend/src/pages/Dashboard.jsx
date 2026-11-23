@@ -3,7 +3,7 @@ import { api } from "../api/client.js";
 import { useApi } from "../hooks/useApi.js";
 import { ErrorBox, ListSkeleton, Skeleton } from "../components/State.jsx";
 import { TeamLink } from "../components/TeamLink.jsx";
-import MatchOutlook from "../components/MatchOutlook.jsx";
+import ProjectionHighlights from "../components/ProjectionHighlights.jsx";
 import Countdown from "../components/Countdown.jsx";
 import { Badge, Card, CardHeader, PageHeader } from "../components/ui/index.js";
 import { useFormatters } from "../i18n/useFormatters.js";
@@ -199,7 +199,7 @@ export default function Dashboard() {
                   <div className="event-time">
                     {m.league_name || m.league} · {m.country}
                   </div>
-                  <MatchOutlook
+                  <ProjectionHighlights
                     predictions={m.predictions}
                     compact
                     confidence={m.predictions?.confidence}

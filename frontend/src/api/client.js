@@ -69,6 +69,10 @@ export const api = {
   // matchId is the trailing `date-home-vs-away` slug segment, or the full
   // upstream slug when the caller has it; the route accepts either.
   fixtureDetail: (league, matchId) => request(`/fixtures/${segment(league)}/${segment(matchId)}`),
+  // The mechanism behind one derived projection: how it is counted and which
+  // scorelines count for it. Same route as fixtureDetail, narrowed by query.
+  fixtureProjection: (league, matchId, projectionKey) =>
+    request(`/fixtures/${segment(league)}/${segment(matchId)}`, { projection: projectionKey }),
   teams: ({ limit, offset, q } = /** @type {{ limit?: number, offset?: number, q?: string }} */ ({})) =>
     request("/teams", { limit, offset, q }),
   team: (slug) => request(`/teams/${segment(slug)}`),

@@ -8,7 +8,7 @@ import { asArray, asNumber, asRecord } from "../lib/shape.js";
 import { ErrorBox, ListSkeleton } from "./State.jsx";
 import { Badge, Card, CardHeader } from "./ui/index.js";
 import { TeamLink } from "./TeamLink.jsx";
-import MatchOutlook from "./MatchOutlook.jsx";
+import ProjectionHighlights from "./ProjectionHighlights.jsx";
 import Countdown from "./Countdown.jsx";
 import { useFormatters } from "../i18n/useFormatters.js";
 
@@ -298,7 +298,7 @@ export default function UpcomingFixtures({
                         <TeamLink name={m.home_team} /> {t("common.vs")} <TeamLink name={m.away_team} />
                       </span>
                     </div>
-                    <MatchOutlook
+                    <ProjectionHighlights
                       predictions={m.predictions}
                       compact
                       confidence={m.predictions?.confidence}

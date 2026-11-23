@@ -22,11 +22,15 @@ and `detail_collected` reports whether the richer /matches/{slug}/ payload from
 backend/scripts/fetch_fixture_details.py is on disk.
 
 Predictions are presented as plain model statistics: expected goals, goal-total
-probabilities and the model's own confidence.
+probabilities and the model's own confidence. `projections` is the full set of
+outcome probabilities derived from the dc_v2 goal parameters, and `highlights`
+is the short, decisive subset shown in the list feed. Both are built in
+apps/projections.py and tagged by whether they are exact or estimated.
 """
 from __future__ import annotations
 
 import json
+import re
 from datetime import date
 from functools import lru_cache
 from pathlib import Path
@@ -36,6 +40,7 @@ from fastapi import APIRouter, HTTPException, Query
 
 from .. import common
 from ..deps import fetched_cursor, norm_pagination, require_league, resolve_team_id
+from ..projections import projection_detail, projections_from_prediction
 from .matches import build_pre_match, check_date_window, head_to_head
 from .teams import _form_result
 
@@ -48,6 +53,10 @@ MAX_LIMIT = 200
 
 FORM_LIMIT = 5
 H2H_LIMIT = 10
+
+# Goal lines the dc_v2 model reports, e.g. `over_2.5` and `ht_over_1.5`. The
+# prefix marks the scope; the remainder is the line the projection is quoted at.
+_GOAL_LINE = re.compile(r"^(ht_)?over_(\d+(?:\.\d+)?)$")
 
 
 def details_dir() -> Path:
@@ -127,18 +136,20 @@ def _first_number(*sources: dict, key: str) -> float | None:
     return None
 
 
-def _prediction_summary(match: dict) -> dict:
+def _prediction_summary(match: dict, highlights: list | None = None) -> dict:
     """Compact dc_v2 prediction summary for a fixture.
 
     Carries the plain model statistics a reader can interpret directly: the
     home/away split, goal-total probabilities, expected goals and the model's
-    confidence. Calibrated probabilities win when present, but most fixture
-    dumps publish only the raw block, so falling back to it keeps the list from
-    rendering an empty prediction where the model did produce numbers.
+    confidence. `highlights` is the short list of decisive derived projections
+    shown alongside them; callers that already derived them pass them in rather
+    than deriving them twice.
     """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     calibrated = preds.get("calibrated") or {}
     raw = preds.get("raw") or {}
+    if highlights is None:
+        highlights = projections_from_prediction(preds)["highlights"]
     home = _first_number(calibrated, raw, key="home")
     away = _first_number(calibrated, raw, key="away")
     sides = [p for p in (home, away) if isinstance(p, (int, float))]
@@ -150,6 +161,7 @@ def _prediction_summary(match: dict) -> dict:
         "over_3_5": _first_number(calibrated, raw, key="over_3.5"),
         "expected_home_goals": raw.get("expected_home_goals"),
         "expected_away_goals": raw.get("expected_away_goals"),
+        "highlights": highlights,
         "confidence": round(max(sides), 4) if sides else None,
         "computed_at": preds.get("computed_at"),
         "data_through": preds.get("data_through"),
@@ -289,31 +301,64 @@ def _probability_triple(calibrated: dict) -> dict:
     return {"home": home, "draw": draw, "away": away}
 
 
+def _goal_lines(raw: dict, calibrated: dict) -> list[dict]:
+    """Every over/under line the model quoted, full time and half time.
+
+    Both blocks are walked so the table can show the uncalibrated and calibrated
+    read of the same line side by side.
+    """
+    lines: list[dict] = []
+    for source, block in (("raw", raw), ("calibrated", calibrated)):
+        for key, value in block.items():
+            matched = _GOAL_LINE.match(key or "")
+            if not matched or not isinstance(value, (int, float)):
+                continue
+            entry = next((row for row in lines if row["line"] == key), None)
+            if entry is None:
+                lines.append({
+                    "line": key,
+                    "scope": "half_time" if matched.group(1) else "full_time",
+                    "threshold": matched.group(2),
+                    "raw": None,
+                    "calibrated": None,
+                })
+                entry = lines[-1]
+            entry[source] = value
+    lines.sort(key=lambda row: (row["scope"] != "full_time", float(row["threshold"])))
+    return lines
+
+
 def predictability(match: dict) -> dict | None:
     """The full dc_v2 block for a fixture, not just the compact summary.
 
     `summary` is the same object the list feed renders, so a detail view and a
-    row in /fixtures never disagree about the headline numbers.
+    row in /fixtures never disagree about the headline numbers. `projections`
+    is the full derived set and `highlights` the decisive subset, both omitted
+    rather than faked when the block carries no usable goal parameters.
     """
     preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
     if not preds:
         return None
     raw = preds.get("raw") or {}
     calibrated = preds.get("calibrated") or {}
+    derived = projections_from_prediction(preds)
     return {
         "model": preds.get("model"),
         # xi is a constant placeholder across every collected block and is not
-        # the correction that generated the published probabilities. Kept for
-        # reference only.
+        # the correction that generated the published probabilities — the real
+        # one is recovered from the published goal-total lines.
         "xi": preds.get("xi"),
         "sigma": preds.get("sigma"),
-        "summary": _prediction_summary(match),
+        "summary": _prediction_summary(match, highlights=derived["highlights"]),
         "probabilities": _probability_triple(calibrated),
         "expected_goals": {
             "home": raw.get("expected_home_goals"),
             "away": raw.get("expected_away_goals"),
             "half_time_total": raw.get("expected_ht_goals"),
         },
+        "lines": _goal_lines(raw, calibrated),
+        "projections": derived["projections"],
+        "highlights": derived["highlights"],
         "ratings": preds.get("ratings") or {},
         "effective_matches": preds.get("effective_matches") or {},
         "gates": preds.get("gates") or {},
@@ -718,8 +763,28 @@ def league_fixtures(league: str) -> dict:
     return payload
 
 
+def _projection_explanation(match: dict, key: str) -> dict | None:
+    """The mechanism behind one derived projection, or None when it has none.
+
+    A projection row is a single number; this is what produces it — how it is
+    counted across win/refund/lose and which scorelines in the goal grid count
+    for it. Served per projection rather than for all of them because explaining
+    every row would dwarf the fixture it belongs to.
+
+    A key the fixture does not have is a 404, not a null: the caller asked for
+    something that was never there. A null is reserved for a projection that
+    does exist but whose number the grid cannot rebuild.
+    """
+    preds = (match.get("model_predictions") or {}).get("dc_v2") or {}
+    rows = {row.get("key"): row for row in projections_from_prediction(preds)["projections"]}
+    row = rows.get(key)
+    if row is None:
+        raise HTTPException(status_code=404, detail=f"projection '{key}' not found")
+    return projection_detail(preds.get("raw") or {}, row)
+
+
 @router.get("/fixtures/{league}/{match_id:path}")
-def fixture_detail(league: str, match_id: str) -> dict:
+def fixture_detail(league: str, match_id: str, projection: str | None = None) -> dict:
     """Everything known about one upcoming fixture, before it is played.
 
     Layered so the page degrades instead of erroring: the fixture row, the
@@ -728,6 +793,9 @@ def fixture_detail(league: str, match_id: str) -> dict:
     from the analytics database. The database sections are only meaningful once
     the fixture is inside a collected season, which `season`/`matchday` report
     so a caller can tell derived data from assumed data.
+
+    Passing `projection=<key>` returns only the explanation for that one derived
+    projection, so a reader can open a highlight without refetching the page.
     """
     require_league(league)
     fixture = find_fixture(league, match_id)
@@ -737,6 +805,18 @@ def fixture_detail(league: str, match_id: str) -> dict:
         )
 
     slug = fixture.get("slug") or ""
+
+    if projection is not None:
+        # An explanation is a pure function of the prediction block, so nothing
+        # else on the page is needed and the detail file read would be wasted.
+        return {
+            "league": league,
+            "league_name": common.league_name(league),
+            "match_id": slug_tail(slug) or match_id,
+            "slug": slug,
+            "projection_key": projection,
+            "projection": _projection_explanation(fixture, projection),
+        }
 
     detail = _load_detail(league, slug)
     # A collected payload is the richer copy of the same fixture: prefer it for
