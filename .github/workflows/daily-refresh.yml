@@ -36,7 +36,7 @@ permissions:
 env:
   PYTHON_VERSION: "3.12"
   IMAGE_NAME: football_data_analysis
-  PG_IMAGE: postgres:16
+  PG_IMAGE: postgres:18
   # Ephemeral build database. The pipeline never talks to Neon until the
   # publish step, so a slow/failed rebuild cannot corrupt production.
   LOCAL_DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/football
