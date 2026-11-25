@@ -204,6 +204,21 @@ alongside the pre-match feature row and a head-to-head list.
   forecast would be misleading.
 - Re-run after retraining to keep the artifact in sync with the model id.
 
+## Current model status
+
+The artifacts produced by the gated pipeline currently select
+`match_result_majority-v1.1.0` (`DummyClassifier`): neither candidate cleared
+the dev gate, so `train.py` falls back to the constant majority predictor. It
+predicts `HOME_WIN` for every row; holdout accuracy is 0.426 and recall for
+`DRAW` and `AWAY_WIN` is zero. `baseline_gate.passed: true` in
+`evaluation_report.json` only means the selected model did not lose to that
+baseline — it is not evidence of predictive skill.
+
+`backfill_predictions.py` records `is_baseline` and `baseline_warning` in
+`match_predictions.json`; the API forwards them and the match-detail page shows
+a `majority baseline` badge, so the confidence values are read as class
+frequencies rather than forecasts.
+
 ## Next steps (out of scope for this step)
 
 - better classifiers / feature engineering (H2H, opponent strength, home/away

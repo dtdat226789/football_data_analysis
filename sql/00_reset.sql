@@ -16,6 +16,7 @@ DROP TABLE IF EXISTS
     matches,
     projections,
     raw_payloads,
+    schema_migrations,
     seasons,
     standings,
     team_aliases,

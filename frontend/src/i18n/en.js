@@ -508,6 +508,7 @@ export const en = {
   "insights.modelView": "Model view",
   "insights.inSample": "in-sample",
   "insights.outOfSample": "out-of-sample",
+  "insights.baseline": "majority baseline",
   "insights.predicted": "Predicted",
   "insights.actual": "Actual",
   "insights.model": "Model",

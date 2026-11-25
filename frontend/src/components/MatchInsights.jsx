@@ -82,6 +82,7 @@ export function ModelPanel({ model }) {
         ) : (
           <span className="badge green">{t("insights.outOfSample")}</span>
         )}
+        {meta.is_baseline && <span className="badge amber">{t("insights.baseline")}</span>}
       </h3>
 
       <div className="prob-list">
@@ -141,6 +142,11 @@ export function ModelPanel({ model }) {
       {model.in_sample && meta.in_sample_warning && (
         <p className="muted insight-warning">
           {meta.in_sample_warning}
+        </p>
+      )}
+      {meta.is_baseline && meta.baseline_warning && (
+        <p className="muted insight-warning">
+          {meta.baseline_warning}
         </p>
       )}
     </section>

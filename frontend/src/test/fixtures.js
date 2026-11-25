@@ -717,6 +717,8 @@ export const matchInsights = {
       feature_version: "1.1.0",
       holdout_seasons: ["2025-2026"],
       in_sample_warning: "Training-season rows are in-sample: the model was fitted on them.",
+      is_baseline: false,
+      baseline_warning: null,
     },
   },
   head_to_head: {

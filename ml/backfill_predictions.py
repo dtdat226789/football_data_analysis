@@ -33,8 +33,32 @@ DATASETS_DIR = ROOT / "ml" / "datasets"
 DATASET_JSON = DATASETS_DIR / "match_result_dataset.json"
 PREDICTIONS_JSON = DATASETS_DIR / "match_predictions.json"
 
+BASELINE_WARNING = (
+    "This is a majority-class baseline, not a trained predictor: it always "
+    "predicts the most common result, so its confidence values are class "
+    "frequencies rather than forecasts."
+)
 
-def build_payload(rows: list[dict], model_id: str, holdout_seasons: list[str]) -> dict:
+
+def is_baseline(model_id: str, meta: dict) -> bool:
+    if meta.get("classifier") == "DummyClassifier":
+        return True
+    try:
+        selected = model_store.load_selected()
+    except FileNotFoundError:
+        return False
+    return selected.get("model_id") == model_id and selected.get("selected_by") in {
+        "forced_baseline",
+        "baseline_gate_fallback",
+    }
+
+
+def build_payload(
+    rows: list[dict],
+    model_id: str,
+    holdout_seasons: list[str],
+    baseline: bool = False,
+) -> dict:
     predictions = score_rows(rows, model_id)
     if len(predictions) != len(rows):
         raise ValueError(
@@ -64,6 +88,8 @@ def build_payload(rows: list[dict], model_id: str, holdout_seasons: list[str]) -
             "so their confidence is optimistic. Only holdout_seasons are "
             "out-of-sample."
         ),
+        "is_baseline": baseline,
+        "baseline_warning": BASELINE_WARNING if baseline else None,
         "n_matches": len(matches),
         "matches": matches,
     }
@@ -85,18 +111,23 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     model_id = resolve_model_id(args.model_id)
-    meta_path = model_store._id_path(model_id, "meta.json")
-    if not meta_path.exists():
+    try:
+        meta = model_store.load_meta(model_id)
+    except FileNotFoundError:
         print(f"error: no metadata for {model_id}; run 'python3 -m ml.train' first")
         return 1
-    meta = json.loads(meta_path.read_text())
 
     rows = load_dataset(args.dataset)
     if not rows:
         print("error: dataset is empty")
         return 1
 
-    payload = build_payload(rows, model_id, meta.get("holdout_seasons") or [])
+    payload = build_payload(
+        rows,
+        model_id,
+        meta.get("holdout_seasons") or [],
+        baseline=is_baseline(model_id, meta),
+    )
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(payload, indent=2) + "\n")
 

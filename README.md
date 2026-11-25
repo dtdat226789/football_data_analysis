@@ -78,8 +78,9 @@ The schema lives in `sql/` as ordered parts, `00_reset.sql` through
 `migrate.py` records a `0001_baseline` version from the idempotent 01/02/04/06
 files, then applies any later `sql/migrations/*.sql` exactly once. Destructive
 resets are opt-in via `--reset-local`, which refuses any DSN whose host is not
-`localhost`, `127.0.0.1` or `[::1]`. ETL validation and reconciliation steps
-still run after schema setup.
+`localhost`, `127.0.0.1` or `[::1]`. The reset also clears `schema_migrations`,
+so the baseline and any later migrations are replayed from scratch. ETL
+validation and reconciliation steps still run after schema setup.
 
 ```bash
 python3 backend/scripts/build_league_config.py     # once: refresh league catalog
@@ -173,6 +174,21 @@ promoted only when it beats the constant majority baseline on dev log-loss *and*
 accuracy; the holdout can veto a regression, in which case the majority baseline
 is promoted and the prediction artifact is regenerated from it.
 
+`bash scripts/check_build_artifacts.sh` verifies that every generated file the
+Docker image needs is present and valid before a build; both deploy workflows run
+it, and it reports the regeneration commands when something is missing.
+
+The currently selected model is a majority-class baseline (`DummyClassifier`):
+it always predicts `HOME_WIN`, with holdout accuracy 0.426 and zero recall for
+draws and away wins. The promotion gate is a safety floor that prevents shipping
+a weaker model, not evidence of predictive skill; match-detail predictions from
+such a model are badged `majority baseline`, and their confidence is a class
+frequency, not a forecast.
+
+Fixture lists show the upstream Football Charts Dixon-Coles predictions
+(`dc_v2`/`dc_base`); the local classifier powers match-detail insights only.
+These are separate models and are not comparable as one.
+
 ## Frontend
 
 React 18 + Vite SPA with routes for the dashboard, leagues, teams, matches,
@@ -225,7 +241,9 @@ the client IP; `CF-Connecting-IP` and `X-Forwarded-For` from callers are ignored
 
 If a secret may have leaked (including through a committed or world-readable
 `.env`), treat it as compromised. Rotation is an operator action — code cannot
-revoke credentials:
+revoke credentials. A `.env` that has been world-readable (mode `777` on a WSL
+mount, for example) is an exposure: rotate the credentials below before relying
+on it in production.
 
 1. **Football Charts API key** — revoke/issue a key in the provider dashboard,
    update the `FOOTBALL_CHARTS_API_KEY` GitHub Actions secret and the local
@@ -238,7 +256,11 @@ revoke credentials:
    `openssl rand -hex 32`, set `WORKER_SHARED_SECRET` in Render and
    `wrangler secret put BACKEND_SHARED_SECRET` together, then redeploy both.
 4. Keep `.env` at mode `600` (`icacls` on Windows if the mount ignores chmod),
-   never commit it, and verify with `git check-ignore -v .env`.
+   never commit it, and verify with `git check-ignore -v .env`. Check permissions
+   with `stat -c '%a' .env` (expect `600`); on a 9p/DrvFs mount where `chmod` is
+   ignored, use `icacls.exe 'E:\path\to\.env'` instead and remove access for
+   other users. Confirm Git does not track it with `git ls-files --error-unmatch .env`
+   (which should fail).
 
 ## Daily refresh
 
@@ -263,9 +285,9 @@ removes it.
 Both `deploy-backend.yml` and `daily-refresh.yml` tag the running `latest` image
 as `previous`, poll `/health` after the Render deploy hook, and restore `previous`
 to `latest` plus re-trigger the hook if the new image never becomes healthy.
-`render.yaml` is the service blueprint template; replace the Docker Hub username
-placeholder once, keep `DATABASE_URL` and `WORKER_SHARED_SECRET` in Render's
-secret UI (`sync: false`), and set `healthCheckPath: /health`.
+`render.yaml` is the service blueprint template pointing at the `tdat48` Docker
+Hub image; keep `DATABASE_URL` and `WORKER_SHARED_SECRET` in Render's secret UI
+(`sync: false`), and set `healthCheckPath: /health`.
 
 ## Tests
 
@@ -304,6 +326,8 @@ cd frontend && npm ci && npm run check && npm run build && cd ..
 ruff check . && python3 -m pytest -q
 npm test --prefix worker
 npx wrangler@4.165.0 deploy --dry-run
+git check-ignore -v .env
+bash scripts/check_build_artifacts.sh
 ```
 
 The Wrangler dry run needs no credentials and validates the Worker bundle,

@@ -506,6 +506,7 @@ export const vi = {
   "insights.modelView": "Góc nhìn của mô hình",
   "insights.inSample": "trong mẫu",
   "insights.outOfSample": "ngoài mẫu",
+  "insights.baseline": "mô hình cơ sở đa số",
   "insights.predicted": "Dự đoán",
   "insights.actual": "Thực tế",
   "insights.model": "Mô hình",

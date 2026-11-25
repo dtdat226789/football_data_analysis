@@ -90,6 +90,24 @@ describe("MatchDetail insights", () => {
     expect(screen.getByText("correct")).toBeInTheDocument();
   });
 
+  it("badges a majority baseline and explains its confidence values", async () => {
+    api.matchInsights.mockResolvedValue({
+      ...matchInsights,
+      model: {
+        ...matchInsights.model,
+        meta: {
+          ...matchInsights.model.meta,
+          is_baseline: true,
+          baseline_warning: "always predicts the most common result",
+        },
+      },
+    });
+    renderMatch();
+
+    expect(await screen.findByText("majority baseline")).toBeInTheDocument();
+    expect(screen.getByText(/always predicts the most common result/)).toBeInTheDocument();
+  });
+
   it("badges holdout rows as out-of-sample and omits the warning", async () => {
     api.matchInsights.mockResolvedValue({
       ...matchInsights,

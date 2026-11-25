@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "backend/**"
+      - "backend/requirements-api.txt"
       - "ml/**"
       - "sql/**"
       - "scripts/generate_ml_artifacts.sh"
@@ -147,6 +148,9 @@ jobs:
               raise SystemExit("Fixture files contain no matches; refusing to build.")
           print(f"fixtures: {len(files)} leagues, {rows} matches")
           PY
+
+      - name: Check build artifacts
+        run: bash scripts/check_build_artifacts.sh
 
       - name: Build and push backend image
         uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6

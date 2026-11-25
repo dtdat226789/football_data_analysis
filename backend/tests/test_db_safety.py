@@ -1,6 +1,9 @@
 """Tests for non-destructive database safety helpers."""
 from __future__ import annotations
 
+import re
+from pathlib import Path
+
 import pytest
 
 from scripts.build_database import is_local_database
@@ -31,3 +34,11 @@ def test_compare_counts_reports_data_loss():
         {"matches": 9, "teams": 20, "seasons": 1},
     )
     assert issues == ["matches: 10 -> 9", "seasons: 3 -> 1"]
+
+
+def test_reset_drops_the_migration_ledger():
+    path = Path(__file__).resolve().parents[2] / "sql" / "00_reset.sql"
+    block = re.search(r"DROP TABLE IF EXISTS(.*?)CASCADE;", path.read_text(), re.S)
+    assert block is not None
+    names = {line.strip().rstrip(",") for line in block.group(1).splitlines() if line.strip()}
+    assert "schema_migrations" in names

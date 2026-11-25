@@ -319,6 +319,8 @@ def _predictions_meta() -> dict | None:
         "feature_version": payload.get("feature_version"),
         "holdout_seasons": payload.get("holdout_seasons"),
         "in_sample_warning": payload.get("in_sample_warning"),
+        "is_baseline": bool(payload.get("is_baseline")),
+        "baseline_warning": payload.get("baseline_warning"),
     }
 
 

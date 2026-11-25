@@ -158,6 +158,8 @@ def test_artifact_is_parsed_once_and_shared_by_index_and_meta(tmp_path, monkeypa
                 "feature_version": "1.1.0",
                 "holdout_seasons": ["2025-2026"],
                 "in_sample_warning": "w",
+                "is_baseline": True,
+                "baseline_warning": "baseline",
                 "matches": {"7": {"raw": {}, "calibrated": {}}},
             }
         )
@@ -169,6 +171,8 @@ def test_artifact_is_parsed_once_and_shared_by_index_and_meta(tmp_path, monkeypa
         "feature_version": "1.1.0",
         "holdout_seasons": ["2025-2026"],
         "in_sample_warning": "w",
+        "is_baseline": True,
+        "baseline_warning": "baseline",
     }
 
     reads: list[Path] = []

@@ -68,6 +68,37 @@ def test_payload_carries_model_and_honesty_metadata():
     assert "in-sample" in payload["in_sample_warning"]
 
 
+def test_payload_marks_baseline_predictions():
+    payload = bp.build_payload(
+        [_row(1, "2025-2026")], "m-1", ["2025-2026"], baseline=True
+    )
+    assert payload["is_baseline"] is True
+    assert "majority-class baseline" in payload["baseline_warning"]
+
+
+def test_payload_defaults_to_non_baseline():
+    payload = bp.build_payload([_row(1, "2025-2026")], "m-1", ["2025-2026"])
+    assert payload["is_baseline"] is False
+    assert payload["baseline_warning"] is None
+
+
+def test_is_baseline_from_meta_or_selection(monkeypatch):
+    monkeypatch.setattr(
+        bp.model_store,
+        "load_selected",
+        lambda: {"model_id": "m-1", "selected_by": "forced_baseline"},
+    )
+    assert bp.is_baseline("m-1", {"classifier": "LogisticRegression"}) is True
+    assert bp.is_baseline("m-2", {"classifier": "LogisticRegression"}) is False
+    assert bp.is_baseline("m-1", {"classifier": "DummyClassifier"}) is True
+
+    def missing_selected():
+        raise FileNotFoundError
+
+    monkeypatch.setattr(bp.model_store, "load_selected", missing_selected)
+    assert bp.is_baseline("m-1", {"classifier": "HistGradientBoostingClassifier"}) is False
+
+
 def test_actual_result_is_recorded_alongside_the_prediction():
     payload = bp.build_payload([_row(1, "2025-2026")], "m-1", ["2025-2026"])
     entry = payload["matches"]["1"]
