@@ -74,13 +74,13 @@ port the Vite dev server proxies `/api` and `/health` to.
 ## Build the database
 
 The schema lives in `sql/` as ordered parts, `00_reset.sql` through
-`06_index_tuning.sql`. `build_database.py` now applies migrations by default:
+`06_index_tuning.sql`. `build_database.py` applies migrations on every run:
 `migrate.py` records a `0001_baseline` version from the idempotent 01/02/04/06
 files, then applies any later `sql/migrations/*.sql` exactly once. Destructive
 resets are opt-in via `--reset-local`, which refuses any DSN whose host is not
 `localhost`, `127.0.0.1` or `[::1]`. The reset also clears `schema_migrations`,
-so the baseline and any later migrations are replayed from scratch. ETL
-validation and reconciliation steps still run after schema setup.
+so the baseline and any later migrations are replayed before the ETL steps.
+ETL validation and reconciliation still run after schema setup.
 
 ```bash
 python3 backend/scripts/build_league_config.py     # once: refresh league catalog
@@ -292,7 +292,7 @@ Hub image; keep `DATABASE_URL` and `WORKER_SHARED_SECRET` in Render's secret UI
 ## Tests
 
 ```bash
-python3 -m pytest -q                 # 679 tests; live-API tests skip without a key
+python3 -m pytest -q                 # 802 tests; live-API tests skip without a key
 npm test --prefix worker             # node:test
 cd frontend && npm test              # vitest
 ```
@@ -315,9 +315,11 @@ unreachable.
 - **frontend** — `npm ci`, then `npm run lint`, `npm run typecheck`,
   `npm test`, `npm run build`.
 
-`deploy-backend.yml` watches backend/Dockerfile/ML changes and ships an image
-with freshly generated prediction artifacts without waiting for the daily data
-rebuild. `deploy-web.yml` watches only frontend/worker assets.
+`deploy-backend.yml` watches backend/Dockerfile/ML changes, runs ruff and the
+full pytest suite, then ships an image with freshly generated prediction
+artifacts without waiting for the daily data rebuild. `daily-refresh.yml` also
+builds the sample database and runs pytest before it publishes to Neon or
+redeploys. `deploy-web.yml` watches only frontend/worker assets.
 
 ## Release checklist
 

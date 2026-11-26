@@ -94,11 +94,11 @@ def main(argv: list[str] | None = None) -> int:
     python = sys.executable
     if args.reset_local:
         reset_database()
-    else:
-        code = subprocess.run([python, str(SCRIPTS / "migrate.py")]).returncode
-        if code != 0:
-            print(f"FAILED: migrate.py (exit {code})")
-            return 1
+
+    code = subprocess.run([python, str(SCRIPTS / "migrate.py")]).returncode
+    if code != 0:
+        print(f"FAILED: migrate.py (exit {code})")
+        return 1
 
     for script in STEPS:
         code = run(python, script, league)

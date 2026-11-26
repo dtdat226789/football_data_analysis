@@ -112,6 +112,17 @@ jobs:
             exit 1
           fi
 
+      - name: Build database from committed sample data
+        env:
+          DATABASE_URL: ${{ env.LOCAL_DATABASE_URL }}
+        run: python backend/scripts/build_database.py
+
+      - name: Test backend and pipeline
+        env:
+          DATABASE_URL: ${{ env.LOCAL_DATABASE_URL }}
+          FOOTBALL_CHARTS_API_KEY: ""
+        run: python -m pytest -q
+
       - name: Backup Neon before publishing
         env:
           DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}

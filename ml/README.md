@@ -207,10 +207,12 @@ alongside the pre-match feature row and a head-to-head list.
 ## Current model status
 
 The artifacts produced by the gated pipeline currently select
-`match_result_majority-v1.1.0` (`DummyClassifier`): neither candidate cleared
-the dev gate, so `train.py` falls back to the constant majority predictor. It
-predicts `HOME_WIN` for every row; holdout accuracy is 0.426 and recall for
-`DRAW` and `AWAY_WIN` is zero. `baseline_gate.passed: true` in
+`match_result_majority-v1.1.0` (`DummyClassifier`). Logistic regression did
+clear the dev gate (log-loss 1.0143 vs 1.0797; accuracy 0.4684 vs 0.4079), but
+the 2025-2026 holdout vetoed it, so `generate_ml_artifacts.sh` re-ran training
+with `--force-baseline` and promoted the constant majority predictor as a safety
+floor. It predicts `HOME_WIN` for every row; holdout accuracy is 0.426 and
+recall for `DRAW` and `AWAY_WIN` is zero. `baseline_gate.passed: true` in
 `evaluation_report.json` only means the selected model did not lose to that
 baseline — it is not evidence of predictive skill.
 

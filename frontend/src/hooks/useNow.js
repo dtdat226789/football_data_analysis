@@ -10,9 +10,9 @@ function tick() {
 }
 
 function subscribe(listener) {
+  snapshot = Date.now();
   listeners.add(listener);
   if (timer === null) {
-    snapshot = Date.now();
     timer = setInterval(tick, 1000);
   }
   return () => {
